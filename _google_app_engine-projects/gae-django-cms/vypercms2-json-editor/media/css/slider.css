@@ -1,0 +1,15 @@
+.flashNews {position:relative;width:334px;height:206px;margin-bottom:0px;overflow:hidden;border:1px solid #B6CAE3;text-align:left;font:normal 12px/1.6em simsun, Verdana, Lucida, Arial, Helvetica, sans-serif;color:#353535;}
+.flashNews .bg {position:absolute;left:0;bottom:0;width:334px;height:40px;background:#000000;filter:alpha(opacity=39);-moz-opacity:0.39;opacity:0.39;}
+.flashNews h3 {text-align:center;position:absolute;top:170px;width:330px;height:18px;line-height:18px;z-index:2;margin:0;padding:0;}
+.flashNews h3 a {font-size:14px;font-weight:600;color:#FFFFFF;}
+.flashNews h3 a:hover {color:#F20000;}
+.flashNews p {position:absolute;left:10px;top:170px;width:334px;height:20px;line-height:20px;;z-index:2;margin:0;padding:0;}
+.flashNews p a {color:#FFFFFF;}
+.flashNews p a:hover {color:#F20000;}
+.flashNews ul {position:absolute;right:0;bottom:0;padding-left:47px;_padding-left:46px;z-index:2;_background:none;}
+.flashNews ul li {float:left;width:15px;height:18px;line-height:18px;text-align:center;margin-left:1px;background:#666;}
+.flashNews ul li a {display:block;width:15px;height:18px;font-size:10px;font-family:Tahoma;font-weight:bold;color:#FFFFFF;margin:0;padding:0;}
+.flashNews ul li a:hover, .flashNews ul li a.sel {color:#F20000;margin:0;padding:0;}
+
+#SwitchNav li a:hover, #SwitchNav li a.sel {color:#F20000;margin:0;padding:0;}
+#SwitchTitle h3 {BACKGROUND:none;}

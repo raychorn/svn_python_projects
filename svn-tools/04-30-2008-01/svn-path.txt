@@ -1,0 +1,1 @@
+https://svn.dyn-o-saur.com:8443/svn/repo1

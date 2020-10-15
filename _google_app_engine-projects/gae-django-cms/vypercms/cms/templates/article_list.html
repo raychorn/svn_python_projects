@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Article list" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Article list" %}</h1>
+<ul>
+{% for each in articles %}
+  <li>[{{ each.cate.name }}]<a href="{% url cms.views.show_article keyid=each.key.id %}" target="_blank">{{ each.title }}</a> {% if user.is_authenticated %}<a href="{% url cms.views.edit_article each.key.id %}">{% trans "Edit" %}</a> <a href="{% url cms.views.delete_article each.key.id %}" onclick="return p_del();" target="_del">{% trans "Delete" %}</a>{% endif %}</li>
+{% endfor %}
+</ul>
+
+{{ articles|length }}
+
+{% endblock %}

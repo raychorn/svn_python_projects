@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}{% trans 'Loading ...' %}{% endblock %}
+
+{% block content %}
+<h1>{% trans 'Loading ...' %}</h1>
+<a href="{% if url %}{{ url }}{% else %}/{% endif %}" id="auto">{% trans 'Click to view it' %}</a>
+
+<script type="text/javascript">
+function autoclick(){
+    var lnk = document.getElementById("auto");
+    lnk.click();
+}
+autoclick();
+</script>
+<br/><br/><br/>
+<script language="javascript" type="text/javascript">
+    window.location="{{ url }}";
+</script>
+<form name=form1 method="get" action="{{ url }}">
+</form>
+<script language="javascript" type="text/javascript">
+//document.forms[0].submit();
+document.form1.submit();
+</script>
+
+{% endblock %}

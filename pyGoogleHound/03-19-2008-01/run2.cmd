@@ -1,0 +1,1 @@
+pyNewsParser.py > test.txt

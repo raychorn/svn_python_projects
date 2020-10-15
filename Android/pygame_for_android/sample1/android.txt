@@ -1,0 +1,3 @@
+title=sample1
+author=Ray C Horn
+orientation=portrait

@@ -1,0 +1,21 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+{% extends "blog/blog_base.html"%}
+
+{% block "browsertitle" %}
+Preview Comment
+{% endblock %}
+
+
+{% block "contentbody" %}
+<div class="comments_preview">
+<span class='subtitle'>Comment Preview</span>
+{% include "comments/comment_display.html" %}
+</div>
+
+<div class="add_comment">
+<span class='subtitle'>Correct or Change Comment</span>
+<form action="../post/" method="post">
+{% include "comments/comment_form_fields.html" %}
+</form>
+</div>
+{% endblock %}

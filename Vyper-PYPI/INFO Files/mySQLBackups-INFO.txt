@@ -1,0 +1,55 @@
+Metadata-Version: 1.0
+Name: mySQLBackups
+Version: 1.0
+Author: Ray C Horn
+Author-email: raychorn at hotmail com
+Maintainer: Ray C Horn
+Maintainer-email: raychorn at hotmail com
+Home-page: http://python2.near-by.info/index.php?option=com_user&view=login
+Download-url: http://python2.near-by.info/index.php?option=com_docman&task=doc_download&gid=11&&Itemid=71
+Summary: mySQLBackups automated the process of backing-up the contents of a mySQL Database from a local or remote server.
+License: GPL Limited to Educational Uses Only.  Cannot be used for any commercial purpose whatsoever.
+Description: mySQLBackups automated the process of backing-up the contents of a mySQL Database from a local or remote server.
+Usage:
+--username=?                        ... username for the host account.
+--binpath=?                         ... path to mySQL binaries.
+--verbose                           ... output more stuff.
+--freq=?                            ... how often (seconds) should the progpath be executed.
+--destpath=?                        ... path to backups.
+--host=?                            ... host address (127.0.0.1 by default).
+--password=?                        ... password for the host user account.
+--help                              ... displays this help text.
+--maxbackups=?                      ... how many backups should be retained.
+
+see also: http://python2.near-by.info
+        
+Disclaimer: The author of this program makes no warranty as to the suitability
+of this program for any purpose whatsoever nor is there any warranty to as to
+whether this program will be able to properly handle your specific needs.
+        
+(c). Copyright 2007-2008, Ray C Horn (raychorn@hotmail.com) and Hierarchical
+Applications Limited, Inc., All Rights Reserved.
+        
+This software package and all contents contained herein may not be used for any
+commercial purpose whatsoever however it may be used for educational purposes so
+long as the end-goal or end-product is of a non-commercial purpose and there was
+never any intent to use this package to generate any income of any kind.
+        
+You may not redistribute this package without prior written permission from the
+author.
+Keywords: python, mysql
+Platform: Windows, Python 2.5.2
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: Free For Educational Use
+Classifier: License :: Free For Home Use
+Classifier: License :: Free for non-commercial use
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Microsoft :: Windows :: Windows NT/2000
+Classifier: Programming Language :: Python
+

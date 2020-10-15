@@ -1,0 +1,24 @@
+<div class="rbroundbox">
+	<div class="rbtop"><div></div></div>
+		<div class="rbcontent">
+			<form name="login_form" method="post" action="/login/" enctype="application/x-www-form-urlencoded">
+				<table width="100%">
+					<tr>
+						<td><span class="form_prompts">Username:</span></td>
+						<td><input type="Text" name="username" value="" size="32" maxlength="64"></td>
+					</tr>
+					<tr>
+						<td><span class="form_prompts">Password:</span></td>
+						<td><input type="Password" name="password" value="" size="32" maxlength="64"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><select name="endpoint" onchange="toks = this.options[this.selectedIndex].value.split(';'); alert('[' + this.options[this.selectedIndex].value + ']\n' + '1.[' + toks[0] + ']' + '2.[' + toks[toks.length-1] + ']');">{{ options_for_endpoint }}</select></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="Submit" name="submit" value="[Login]"></td>
+					</tr>
+				</table>
+			</form>
+		</div><!-- /rbcontent -->
+	<div class="rbbot"><div></div></div>
+</div><!-- /rbroundbox -->

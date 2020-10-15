@@ -1,0 +1,64 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+
+
+{% extends "blog/tools/tools_base.html" %}
+{% load prefab_tags %}
+
+{% block extrahead %}
+<script type="text/javascript" src="{% setting 'ADMIN_MEDIA_PREFIX' %}js/core.js"></script>
+<script type="text/javascript" src="{% setting 'ADMIN_MEDIA_PREFIX' %}js/urlify.js"></script>
+<script type="text/javascript" src="{% setting 'ADMIN_MEDIA_PREFIX' %}js/admin/RelatedObjectLookups.js"></script>
+{% endblock %}
+
+{% block "browsertitle" %}{% if object %}{{ object.headline }}{% else %}New Entry{% endif %}{% endblock %}
+
+{% block path %} &rsaquo; <a href="{% setting 'BLOG_ROOT' %}tools/entry/">Entries</a> &rsaquo; Edit entry{% endblock %}
+
+{% block content %}
+<table cellspacing="0">
+<tr>
+
+<td class="entry_form">
+<div class="entry_form">
+<table cellspacing="0" cellpadding="0" class="entry_form">
+<form enctype="multipart/form-data" method="post" action="." name="change_entry">
+{% for field in form %}
+<tr>
+<th>{{ field.label_tag }}</th>
+
+<td>
+{% if field.errors %}<div class="form_errors">{{ field.errors }}</div>{% endif %}
+{% ifequal field.name 'image' %}
+<div class="form_current_image">Currently: <a href="{% setting 'SITE_ROOT' %}media/public/{{ current_image }}">{{ current_image }}</a></div>
+{% endifequal %}
+{{ field }}{% ifequal field.name 'tags' %}{#<a href="{% setting 'SITE_ROOT' %}admin/blog/tag/add/" class="add-another" id="add_id_tags" onclick="return showAddAnotherPopup(this);"><img src="{% setting 'ADMIN_MEDIA_PREFIX' %}img/admin/icon_addlink.gif" width="10" height="10" alt="Add Another"/></a>#}{% endifequal %}{% ifequal field.name 'pub_date' %}&nbsp;<a href="#" class="form_link" onclick='javascript: document.change_entry.pub_date.value = new Date().getISODate() + " " + new Date().getHourMinuteSecond();'>Now</a>{% endifequal %}
+{% if field.help_text %}<div class="form_help_text">{{ field.help_text }}</div>{% endif %}
+
+</td>	
+</tr>
+{% endfor %}
+<tr><td colspan="2" style="text-align: right;">
+<input type="submit" name="preview" value="save and preview" />&nbsp;&nbsp;<input type="submit" name="close" value="save and close" />
+</td></tr>
+</form>
+</table>
+
+{# slug autofill scripts follow #}
+<script type="text/javascript">document.getElementById("id_headline").focus();</script>
+<script type="text/javascript">
+document.getElementById("id_slug").onchange = function() { this._changed = true; };document.getElementById("id_headline").onkeyup = function() { var e = document.getElementById("id_slug"); if(!e._changed) { e.value = URLify(document.getElementById("id_headline").value, 120);} }; 
+</script>
+</div>
+</td>
+
+<td class="entry_preview">
+{% if preview %}
+<div class="entry_preview"> 
+{% include "blog/includes/post.html" %}
+</div>
+{% endif %}
+</td>
+
+</tr>
+</table>
+{% endblock %}

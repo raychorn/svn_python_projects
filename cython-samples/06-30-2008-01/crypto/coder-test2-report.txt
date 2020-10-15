@@ -1,0 +1,56 @@
+_plain=abcdefghijklmnopqrstuvwxyz
+x=בגדהוזחטיךכלםמןנסעףפץצקרשת
+xx=בגדהוזחטיךכלםמןנסעףפץצקרשת
+speedTest1
+speedTest2
+Done !
+(ioTimeAnalysis) :: Category: "speedTest1" = (0.254999876022)
+(ioTimeAnalysis) :: Category: "speedTest2" = (1.33400011063)
+
+
+Time spent doing I/O :: (1.58899998665)
+None
+         158 function calls in 1.697 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.004    0.004    1.697    1.697 {execfile}
+        1    0.058    0.058    1.694    1.694 coder-test2.py:3(<module>)
+        1    1.590    1.590    1.590    1.590 coder-test2.py:17(main)
+        1    0.015    0.015    0.041    0.041 _psyco.py:3(importPsycoIfPossible)
+        1    0.002    0.002    0.025    0.025 __init__.py:16(<module>)
+        1    0.001    0.001    0.012    0.012 support.py:9(<module>)
+        1    0.011    0.011    0.012    0.012 kdictproxy.py:5(<module>)
+        1    0.011    0.011    0.011    0.011 core.py:18(<module>)
+        1    0.003    0.003    0.003    0.003 ioTimeAnalysis.py:1(<module>)
+        1    0.002    0.002    0.002    0.002 _psyco.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 coder.py:1(encode)
+        7    0.000    0.000    0.000    0.000 support.py:170(patch)
+       52    0.000    0.000    0.000    0.000 {chr}
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+       28    0.000    0.000    0.000    0.000 {ord}
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+       14    0.000    0.000    0.000    0.000 {setattr}
+       14    0.000    0.000    0.000    0.000 {getattr}
+        1    0.000    0.000    0.000    0.000 core.py:117(bind)
+        1    0.000    0.000    0.000    0.000 {coder.encode}
+        1    0.000    0.000    0.000    0.000 os.py:442(has_key)
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        3    0.000    0.000    0.000    0.000 __init__.py:1(<module>)
+        4    0.000    0.000    0.000    0.000 {isinstance}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.proxycode}
+        1    0.000    0.000    0.000    0.000 coder.py:1(<module>)
+        2    0.000    0.000    0.000    0.000 {hasattr}
+        2    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 support.py:102(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 support.py:74(PythonFrame)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 support.py:70(Frame)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

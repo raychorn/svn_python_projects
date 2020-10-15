@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}{{ cur_categories.name }}-{% trans "Categories Articles" %}{% endblock %}
+
+{% block extra-head %}
+  <META content="{{ cur_categories.name }},{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Keywords>
+  <META content="{{ cur_categories.name }},{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Description>    
+{% endblock %} 
+
+{% block content %}
+<div id="main_content_browse" class="yui-g">{% trans "Browse" %} &gt; <A title="{% trans 'Home' %}" href="/">{% trans "Home" %}</A>
+ / {{ cur_categories.name|safe }} {% trans "Categories Articles" %}</div>
+<H1 class="art_title">[{{ cur_categories.name|safe }}] {% trans "Categories Articles" %} <A title="{% trans 'RSS Feed' %}" href="{% url cms.views.rsslatest cate_id=cur_categories.key.id %}" target="_blank"><IMG title="{% trans 'RSS Feed' %}" style="VERTICAL-ALIGN: middle" src="/media/images/rss.gif"></A></H1>
+
+<DIV style="CLEAR: both"></DIV>
+<ul id="cate_atr_list">
+{% for each in article_list %}
+  <li><a href="{% url cms.views.show_article keyid=each.key.id %}" title="{{ each.title }}" target="_blank">{{ each.title }}</a></li>
+{% endfor %}
+</ul>
+<DIV style="CLEAR: both"></DIV>
+<DIV style="TEXT-ALIGN: center;margin: 10px;">
+{% for i in all_pages %}
+{% ifnotequal i cur_page %}<a href="{% url cms.views.show_categories keyid=cur_categories.key.id page=i %}">{{ i }}</a> {% else %}[{{ i }}]{% endifnotequal %} 
+{% endfor %}
+</DIV>
+<DIV style="CLEAR: both"></DIV>
+{% if cate_bot_ad %}<DIV id="main_content_bot_ad">{{ cate_bot_ad|safe }}</DIV>{% endif %}
+<DIV style="CLEAR: both"></DIV>
+
+<div class="yui-g">
+	<div id="main_content_cate_left" class="yui-u first">
+		<H1>{{ random_cate_arts.0.cate.name|safe }}</H1>
+		<UL>
+		{% for each in random_cate_arts %}<LI><A title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}">{{ each.title }}</A></LI>
+		{% endfor %}
+		</UL>
+	</div>
+	<div id="main_content_cate_right" class="yui-u">
+		<H1>{{ random_cate_arts2.0.cate.name|safe }}</H1>
+		<UL>
+		{% for each in random_cate_arts2 %}<LI><A title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}">{{ each.title }}</A></LI>
+		{% endfor %}
+		</UL>
+	</div>
+</div>
+
+{% endblock %}

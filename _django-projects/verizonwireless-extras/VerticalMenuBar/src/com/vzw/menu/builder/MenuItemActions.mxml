@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" 
+	creationComplete="onCreationComplete()">
+	<mx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			import mx.controls.PopUpMenuButton;
+			import vyperlogix.utils.ObjectUtils;
+			import vyperlogix.controls.Alert.AlertPopUp;
+			import vyperlogix.utils.StringUtils;
+
+            [Embed(source="assets/icons/admin/edit-script.gif")]
+            [Bindable]
+            public var adminEditIcon:Class;
+            
+            public var parentSelector:String; // this is the getter by which the parent is known...
+
+			private function onCreationComplete():void {
+				var popup:PopUpMenuButton = new PopUpMenuButton();
+				popup.x = 0;
+				popup.y = 0;
+				popup.styleName = 'AdminPopupButton';
+				popup.id = popup.name = 'popup';
+				popup.width = 12;
+				this.addChild(popup);
+			}
+		]]>
+	</mx:Script>
+</mx:Canvas>

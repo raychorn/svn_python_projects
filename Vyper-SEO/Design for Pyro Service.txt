@@ -1,0 +1,2 @@
+Pyro NameServer that authenticates to a MySQL Database tied to www.pypi.info.
+

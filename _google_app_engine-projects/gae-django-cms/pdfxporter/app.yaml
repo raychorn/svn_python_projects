@@ -1,0 +1,72 @@
+﻿application: charts-demo
+version: 251
+runtime: python
+api_version: 1
+skip_files: |
+ ^(.*/)?(
+ (app\.yaml)|
+ (app\.yml)|
+ (index\.yaml)|
+ (index\.yml)|
+ (#.*#)|
+ (.*~)|
+ (.*\.py[co])|
+ (.*\.bat)|
+ (.*\.txt)|
+ (.*/RCS/.*)|
+ (\..*)|
+ (.*/\.svn/.*)|
+ (.*/Thumbs\.db)|
+ )$
+
+default_expiration: '3650d'
+
+builtins:
+- datastore_admin: on
+
+handlers:
+- url: /_ah/queue/hothandler/.*
+  script: hothandler.py
+  login: admin
+
+- url: /_ah/queue/emailhandler/.*
+  script: emailhandler.py
+  login: admin
+
+- url: /_ah/queue/phpemailhandler/.*
+  script: phpemailhandler.py
+  login: admin
+
+- url: /media
+  static_dir: _generated_media
+  secure: optional
+
+- url: /media/.*
+  script: secureZipServe.py
+  
+- url: /favicon.ico
+  static_files: media/images/favicon.ico
+  upload: media/images/favicon.ico
+  mime_type: image/x-icon 
+
+- url: /js/.*
+  script: secureZipServe.py
+
+- url: /js2/.*
+  script: secureZipServe.py
+
+- url: /static/.*
+  script: secureZipServe.py
+  
+- url: /crossdomain.xml
+  static_files: media/xml/crossdomain.xml
+  upload: media/xml/crossdomain.xml
+  mime_type: text/xml 
+
+- url: /stats.*
+  script: $PYTHON_LIB/google/appengine/ext/appstats/ui.py
+  login: admin
+  
+- url: /.*
+  script: common/appenginepatch/main.py
+  secure: optional

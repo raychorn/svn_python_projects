@@ -1,0 +1,112 @@
+#site_body blockquote {
+	background: #333333; font-size: small; padding: 0.5em; margin: 0.3em; padding-right: 0.8em; padding-left: 0.7em; border-left: #757080 solid 4px;
+}
+
+#site_body {
+	color: #999; line-height: 1.5em; margin-top: 0px; font-size: 10px;
+}
+
+#site_body > .content,
+#site_body > .screencasts {
+	margin: 0px 0px 0px 0px; background-color: #0b0b0b; padding: 0px 0px 0px 0px;
+}
+
+#site_body li.quote blockquote {
+	width: 90%; font-size: 12px; color: #ccc; background-color: transparent; letter-spacing: 1px; margin: 0px; border: none; padding: 0px; height: auto;
+}
+
+#site_body > .content .highlights {
+	margin: 0; margin-top: 0.4em; padding: 0; margin-left: 25px;
+}
+
+#site_body .columns {
+	display: block; text-align: justify; width: 800px;
+}
+
+#site_body .description {
+	position: relative; float: left; display: block; top: -20px; padding: 0; margin: 0; width: 435px; margin-right: 1.6em;
+}
+
+#site_footer {
+	text-align: center; clear: both; font-size: 11px; height: 6.5em;
+}
+
+#site_footer .holder {
+	width: 900px; display: block; margin: 0 auto; max-width: 900px; text-align: left;
+}
+
+#site_footer .block {
+	display: block; padding-left: 10px; float: left; padding: 0; margin: 0; text-align: justify; padding-bottom: 10px; width: 280px; margin-bottom: 5px; padding-right: 10px;
+}
+
+#site_footer .last {
+	margin-left: 0em; float: right; padding-left: 0; border-right: none;
+}
+
+#site_footer .block p {
+	margin: 0; margin-top: 8px; color: #888; padding: 0; font-size: 10px;
+}
+
+#site_footer .block h6 {
+	padding: 0; font-size: 1.0em; margin-bottom: 1.35em; margin: 0;
+}
+
+#footer_container {
+	border-left:1px solid #000000; background:#FFFFFF none repeat scroll 0 0; margin-bottom:-52px; border-right:1px solid #000000; margin-right:130px; margin-left:130px; min-height:100%;
+}
+
+#footer_left {
+	float:left; margin-left:-129px; left:-1px; width:130px; position:relative; z-index:100;
+}
+
+#footer_right {
+	width:130px; float:right; color:#000000; margin-right:-129px; left:1px; position:relative;
+}
+
+#footer_center {
+	float:left; color:#000000; position:relative; margin:0 -1px; z-index:1; width:100%;
+}
+
+#site_footer .first {
+	padding-left: 0; margin-left: -10px;
+}
+
+#site_body img {
+	border: 1px solid gray; padding: 2px;
+}
+
+#site_body > .content .highlights li {
+	margin-bottom: 1em;
+}
+
+#site_body .end_of_columns {
+	clear: both;
+}
+
+#site_footer a {
+	color: cyan;
+}
+
+#site_footer .legal {
+	width: 294px;
+}
+
+body { 
+	quotes: "\201C" "\201D" "\2018" "\2019"; 
+}
+
+#site_body > .content .first_content_element {
+	margin-top: 0;
+}
+
+#site_body > .content .last_content_element {
+	margin-bottom: 1.5em;
+}
+
+#site_header {
+	height: 0px;
+}
+
+q:before { content: "\201C" }
+q:after  { content: "\201D" }
+

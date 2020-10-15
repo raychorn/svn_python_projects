@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}Vyper Accelerator v{{version}}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+var requiredMajorVersion = 10;
+var requiredMinorVersion = 1;
+var requiredRevision = 0;
+</script>
+<script language="JavaScript1.2" type="text/javascript">
+var hasReqestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+</script>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block include-css %}'/static/css.css'{% endblock %}
+
+{% block container %}
+<div class="align-left">
+	<form id="loginform" name="loginform" action="/rest/login/" enctype="application/x-www-form-urlencoded" method="post" target="_top">
+		<table width="100%">
+		   <tr>
+			  <td width="10%" align="left">
+				 <b>Email Address: (this is your User Name)</b>
+			  </td>
+			  <td width="*" align="left">
+			 <input name="username" id="username" type="text"/>
+			  </td>
+		   </tr>
+		   <tr>
+			  <td width="20%">
+				 <b>Password:</b>
+			  </td>
+			  <td width="*">
+			 <input name="password" id="password" type="password"/>
+			  </td>
+		   </tr>
+		   <tr>
+			  <td width="*" colspan="2" align="center">
+			 <input name="submit" id="submit" type="submit" value="Login"/>
+			  </td>
+		   </tr>
+		</table>
+	</form>
+	<p><a href="/" target="_top">Home</a></p>
+</div>
+
+<noscript>
+<table id="messageTable">
+<tr>
+	<td>
+	</td>
+</tr>
+</table>
+</noscript>
+
+<div id="messages">
+<p align="left">{{ message }}</p>
+</div>
+
+<div id="warning3" class="align-center">
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+
+For Release 1.0:
+
+Per Widget clipping
+Specified renderer interface
+Customizable mouse cursors
+renderer plugin interface
+integrate a real font library
+
+General:
+add functional clip stack
+add modes for event wait and event poll 
+add modes for "immediate" and "deferred" drawing
+make a menu that goes inside a Frame window 
+make tree widget themeable
+make a ticker-tape widget
+make a toolbar widget
+dockable toolbars
+show currently active window
+customizable frame behaviour (moving, resizing)
+improved console functionality
+Refactoring to remove Base::CalcSize()
+renderer plugin interface
+
+Other Renderers:
+implement a Xlib renderer
+implement a Frame Buffer renderer
+D3D renderer

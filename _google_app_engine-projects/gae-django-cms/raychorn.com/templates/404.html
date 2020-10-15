@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Page not found{% endblock %}
+
+{% block menu-links %}[<a href="/" target="_top">Home</a>]{% endblock %}
+
+{% block content %}
+<font color="red" style="font-weight:bold">The page you requested could <U>NOT</U> be found.</font><br/><br/>
+<font size="-1" face="Verdana, Geneva, sans-serif">
+{{ HTTP_HOST }}<br/><br/>
+{% autoescape off %}
+{{ details }}
+{% endautoescape %}
+</font>
+{% endblock %}

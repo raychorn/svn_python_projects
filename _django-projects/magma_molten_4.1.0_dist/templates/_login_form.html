@@ -1,0 +1,28 @@
+<h2>Login to MOLTEN</h2>
+<form action="/contact/login/" method="post">
+	<input value="480" id="contact_time" name="contact_time" type="hidden">
+<table id="login_form" align="center">
+	<tbody><tr>
+		<td class="prompt">Email:</td>
+		<td><input id="email" name="email" style="width: 200px;" type="text" value="{{ username }}"></td>
+	</tr>
+	<tr>
+		<td class="prompt">Password:</td>
+		<td><input id="password" name="password" style="width: 200px;" type="password" value="{{ password }}"></td>
+	</tr>
+	<tr>
+		<td class="prompt"></td>
+		<td class="small gray">
+			<input id="remember_me" name="remember_me" value="1" type="checkbox" {{ remember_me_checked }}>Remember Me?<br>
+			<a href="/contact/forgot_password/" target="_top">Forgot Your Password?</a> | 
+			<a href="/contact/signup/" target="_top">Sign Up</a><br>
+			<a href="/contact/status_form/" target="_top">Check Registration Status</a> | <a href="/FAQ/" onclick="window.open(this.href,'Molten FAQ','height=500,width=700,scrollbars=1');return false;">FAQ</a> |
+			<a href="mailto:molten_feedback@magma-da.com">Report Problems</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="prompt"></td>
+		<td><input name="commit" value="Login" type="submit"></td>
+	</tr>
+</tbody></table>
+</form>

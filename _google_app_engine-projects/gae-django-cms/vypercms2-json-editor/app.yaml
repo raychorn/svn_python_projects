@@ -1,0 +1,42 @@
+application: vypercms
+version: 1
+runtime: python
+api_version: 1
+skip_files: |
+ ^(.*/)?(
+ (app\.yaml)|
+ (app\.yml)|
+ (index\.yaml)|
+ (index\.yml)|
+ (#.*#)|
+ (.*~)|
+ (.*\.py[co])|
+ (.*\.bat)|
+ (.*/RCS/.*)|
+ (\..*)|
+ (.*/\.svn/.*)|
+ (.*/Thumbs\.db)|
+ )$
+
+default_expiration: '3650d'
+
+handlers:
+- url: /favicon.ico
+  static_files: media/images/favicon.ico
+  upload: media/images/favicon.ico
+  mime_type: image/x-icon 
+
+- url: /tinymce/.*
+  script: $PYTHON_LIB/google/appengine/ext/zipserve
+
+- url: /remote_api
+  script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
+  login: admin
+
+- url: /media
+  static_dir: media
+
+- url: /.*
+  script: common/appenginepatch/main.py
+  secure: optional 
+

@@ -1,0 +1,7 @@
+key=(SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall)
+root=(Key(Key(<PyHKEY object at 0x00A850C0>, subkey='Uninstall'), mode=983103))
+root.__class__=(<class 'lib.winreg.Key'>)
+len(root.values)=(0)
+root.__class__=(<class 'lib.winreg.Key'>)
+root.values=(Values(<PyHKEY object at 0x00A850C0>))
+root.values.__class__=(<class 'lib.winreg.Values'>)

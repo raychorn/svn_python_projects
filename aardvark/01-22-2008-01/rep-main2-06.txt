@@ -1,0 +1,28 @@
+
+Z:\python projects\aardvark>if . == profile. goto profiler 
+
+Z:\python projects\aardvark>if . == 2. goto phase2 
+
+Z:\python projects\aardvark>main2.py --profile --psyco=bind --input=Bigtest.txt 
+_property_dict=({'1': {'18': 4L, '31': 1L, '27': 3L, '17': 2L}})
+
+_handlers=({'1': {'18': <function handle_property at 0x00B64470>, '31': <function handle_property at 0x00B64470>, '27': <function handle_property at 0x00B64470>, '17': <function handle_property at 0x00B64470>}})
+
+insertUniqueComputers().2 :: _sql=(TRUNCATE TABLE computers; BULK INSERT computers FROM 'Z:\python projects\aardvark\etl_unique_computers.csv' WITH (DATAFILETYPE = 'char', FIELDTERMINATOR = '	', ROWTERMINATOR = '
+');)
+
+Processed 86642 unique hosts.
+
+Time spent doing I/O :: (6.21799993515), _ioBeginTime=([1193180113.1159999, 1193180258.3099999, 1193180260.3570001]), _ioEndTime=([1193180113.444, 1193180259.8099999, 1193180264.747])
+         3 function calls in 151.712 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  151.712  151.712 <string>:1(<module>)
+        1  151.712  151.712  151.712  151.712 main2.py:193(main)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+Z:\python projects\aardvark>goto end 

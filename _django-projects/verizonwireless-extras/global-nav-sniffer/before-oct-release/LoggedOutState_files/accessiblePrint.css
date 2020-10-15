@@ -1,0 +1,48 @@
+/* THIS STYLESHEET FILE MUST 
+GO AFTER ALL OTHER STYLESHEETS */
+
+/* DEPRECATED STYLES */
+#pageContainer, #pageContainerStore  {width:100% !important;padding:0 !important;margin: 0 !important;}
+#globalNavLinks, #loginContainer, #udmContainer, #udm, #menuPosition, #navigation, #zip, #leftSidebar, #alt-leftSidebar , .boxTabs, #wayfinderNav, #featureFinderContainer, #features, #gn_outside, #gn {display:none !important;}
+#masthead { width:100%; height:98px;}
+#pageTitle {margin-left: -5px;border:0;width:100%;height:70px;}
+#minicart {display:block !important;}
+#mainContent, #alt-mainContent, #mainContentAlt, #full-mainContent {width:100% !important;margin:0;border:0;float:none !important;color: black;background: transparent none;}
+.right {float:right !important;padding-right:15px;}
+table tr, td {background: transparent !important;}
+table {clear:both;}
+.gray, .blackButton, .red, .redButton {border: 1px solid black;background:white;text-decoration: none;color: black;font-size: 8pt !important;font-family: arial,sans-serif !important;padding:0; }
+.hidden {position:absolute;left:0px;top:-500px;width:1px;height:1px;overflow:hidden;}
+.tdWhite, .tdGray {background:#999;width:1px;height:1px;padding:0;}
+.pageTitleImg {background:none;}
+.pageTitleImg .pageHeadline {color:#000;}
+.pageTitleImg .primaryHeadline {color:#000;}
+/* GLOBAL NAV STYLES */
+html, body, table, tr, th, td, li, div, a, .disclaimerText, .legalDisclaimerText {background:white !important;color:black !important;font-size: 9pt !important;font-family: arial,sans-serif !important;}
+#skipto, #globalNav, .globalNavContent, #headerLinks, #searchFormNew {display:none !important;} /* Turn these off */
+#location {float:none;}
+/* Page & Header Widths*/
+body {text-align:left; overflow:visible !important;}
+html {overflow:visible !important;}
+#pageWrapper {width:95% !important;padding:0 !important;margin: 0 !important;background: none; text-align:left;}
+#bodyWrapper {width:98% !important;padding:0 !important;margin: 0 !important;background: none; text-align:left;}
+#bodyContainer {width:98% !important;padding:0 !important;margin: 0 !important;background: none; text-align:left;}
+#left580 .textArea, #left365, #right365, #left580, #left285, #right285, #right420, .left240, .center240, .right240, .noGradient, .gradient24, .gradient100 {float:none !important;margin-bottom:10px !important;padding:5px !important;border:1px solid #333;width:95% !important;}
+#right150, #left150 {display:none;}
+.noGradient, .gradient24, .gradient100 {border:none !important;}
+/* Ts&Cs */
+.disclaimerContainer {margin-bottom:40px !important;padding:5px !important;border:none;width:95% !important;clear:both !important;}
+.disclaimerTextBox {overflow:visible;border:none;}
+/* Fonts, Links */
+#pageWrapper p {line-height:12pt;}
+h1.pageTitle {font:bold 13pt arial,sans-serif;}
+h1.columnHeading, h1.level1Heading240, h1.level1Heading285, h1.level1Heading365, h1.level1Heading580 {text-transform:uppercase;float:none !important;font:bold 10pt arial,sans-serif !important;}
+h2 {font:bold 9pt arial,sans-serif !important;}
+h3 {font:normal 9pt arial,sans-serif !important;}
+a:link, a:visited {color: black !important;background:transparent !important;text-decoration:underline !important;}
+/* Images */
+#logoNew {display:block;}
+img {border:1px solid white !important;}
+.redButton, .blackButton, .charcoalLine {display:none;}
+/* Footer */
+#footer {display: none !important;}

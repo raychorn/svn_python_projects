@@ -1,0 +1,24 @@
+Key Name:          HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\7-Zip
+Class Name:        <NO CLASS>
+Last Write Time:   11/26/2007 - 2:31 PM
+Value 0
+  Name:            DisplayName
+  Type:            REG_SZ
+  Data:            7-Zip 4.53 beta
+
+Value 1
+  Name:            UninstallString
+  Type:            REG_SZ
+  Data:            "C:\Program Files\7-Zip\Uninstall.exe"
+
+Value 2
+  Name:            NoModify
+  Type:            REG_DWORD
+  Data:            0x1
+
+Value 3
+  Name:            NoRepair
+  Type:            REG_DWORD
+  Data:            0x1
+
+# Note the value for the UninstallString is key where the Add or Remove Program Strings are concerned.  When this value is missing there is no entry for the installed program.

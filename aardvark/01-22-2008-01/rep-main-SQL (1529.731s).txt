@@ -1,0 +1,47 @@
+
+Z:\python projects\aardvark>if o. == . goto end 
+
+Z:\python projects\aardvark>if o. == 1v. goto method1v 
+
+Z:\python projects\aardvark>if o. == 1np. goto method1np 
+
+Z:\python projects\aardvark>if o. == 2. goto method2 
+
+Z:\python projects\aardvark>if o. == o. goto output 
+
+Z:\python projects\aardvark>main.py --profile --psyco --output=Bigtest 
+Using Output Method
+_cols=(['computerid', 'resultstext', 'sequence', 'id', 'siteid'])
+num Rows = (499831)
+         25 function calls in 1529.731 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000 1529.731 1529.731 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:48(normalize_encoding)
+        1    0.000    0.000    0.001    0.001 __init__.py:70(search_function)
+        1    0.000    0.000    0.000    0.000 codecs.py:77(__new__)
+        1 1529.731 1529.731 1529.731 1529.731 main.py:245(output)
+        1    0.000    0.000    0.000    0.000 string_escape.py:10(Codec)
+        1    0.000    0.000    0.000    0.000 string_escape.py:15(IncrementalEncoder)
+        1    0.000    0.000    0.000    0.000 string_escape.py:19(IncrementalDecoder)
+        1    0.000    0.000    0.000    0.000 string_escape.py:23(StreamWriter)
+        1    0.000    0.000    0.000    0.000 string_escape.py:26(StreamReader)
+        1    0.000    0.000    0.000    0.000 string_escape.py:29(getregentry)
+        1    0.000    0.000    0.000    0.000 string_escape.py:7(<module>)
+        1    0.000    0.000    0.000    0.000 {__import__}
+        1    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E1E7E18}
+        1    0.000    0.000    0.000    0.000 {isinstance}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        3    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.globals}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.locals}
+
+
+
+Z:\python projects\aardvark>goto end 

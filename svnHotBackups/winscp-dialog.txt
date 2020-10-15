@@ -1,0 +1,70 @@
+root@amazon-svn.vyperlogix.com
+
+winscp "root@amazon-svn.vyperlogix.com"
+
+response --> "Active session: [1] root@amazon-svn.vyperlogix.com"
+
+############################################################################
+lpwd
+lcd "J:\@Vyper Logix Corp\@Projects\python\@lib"
+lpwd
+pwd
+cd /root/python/libs
+pwd
+lls
+put "vyperlogix_2_5_5.zip"
+lcd ..
+lcd dist_2.7.0
+lls
+put "vyperlogix_2_7_0.zip"
+ls
+exit
+############################################################################
+
+lpwd
+
+response --> "J:\@Vyper Logix Corp\@Projects\python\@lib"
+
+lcd "J:\@Vyper Logix Corp\@Projects\python\@lib"
+
+lpwd
+
+response --> "J:\@Vyper Logix Corp\@Projects\python\@lib"
+
+pwd
+
+response --> "/root/python/libs"
+
+cd /root/python/libs
+
+response --> None
+
+pwd
+
+response --> "/root/python/libs"
+
+lls
+11/04/2011  10:20 AM    <DIR>          ..
+11/04/2011  10:20 AM         3,142,177 vyperlogix_2_5_5.zip
+
+put "vyperlogix_2_5_5.zip"
+
+lcd ..
+
+response --> None
+
+lcd dist_2.7.0
+
+response --> None
+
+lls
+11/04/2011  10:20 AM    <DIR>          ..
+11/04/2011  10:20 AM         3,112,827 vyperlogix_2_7_0.zip
+
+put "vyperlogix_2_7_0.zip"
+
+ls
+-rw-r--r--   1 root     root       3142177 Nov  4 10:20:17 2011 vyperlogix_2_5_5.zip
+-rw-r--r--   1 root     root       3112885 Nov  4  9:29:37 2011 vyperlogix_2_7_0.zip
+drwxr-xr-x   4 root     root          4096 Jul 28 19:28:00 2011 ..
+drwxr-xr-x   2 root     root          4096 Nov  4 10:45:22 2011 .

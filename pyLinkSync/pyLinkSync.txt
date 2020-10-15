@@ -1,0 +1,7 @@
+Syncs Links from all installed browsers and makes all links available to all installed browsers.
+
+Click the "End of Day" function to capture all the links and migrate them to a USB drive or shove them off to SSH server for storage.
+
+Click the "Start of Day" function to install all the links from USB drive or SSH server.
+
+Sell as part of the service space on an SSH server (NEarby-info).

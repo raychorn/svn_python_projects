@@ -1,0 +1,8 @@
+#sudo su
+
+cd ~
+ls-la .ssh
+mkdir -p .ssh
+cp /home/vagrant/.ssh/authorized_keys ~/.ssh/authorized_keys
+
+chmod 0644 ~/.ssh/authorized_keys

@@ -1,0 +1,1393 @@
+2013-07-31 16:03:21,042 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-07-31 16:23:59,049 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-07-31 19:11:00,480 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-07-31 19:11:31,533 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-07-31 19:14:20,051 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 12:57:12,390 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 12:57:12,395 INFO BEGIN PUSH.
+2013-08-01 12:58:30,921 INFO BEGIN PUSH.
+2013-08-01 13:00:17,073 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 13:00:17,078 INFO BEGIN PUSH.
+2013-08-01 13:45:41,426 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 13:45:41,433 INFO BEGIN PUSH.
+2013-08-01 13:45:41,437 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 160, in GET
+    sftp = paramiko.ParamikoSFTP(__ip__,__port__,__username__,callback=None,auto_close=False,logPath=None)
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\@lib\12-13-2011-01\vyperlogix\paramiko\__init__.py", line 48, in __init__
+    if (os.path.exists(logPath)) and (os.path.isdir(logPath)):
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\genericpath.py", line 18, in exists
+    os.stat(path)
+TypeError: coercing to Unicode: need string or buffer, NoneType found
+2013-08-01 13:46:43,927 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 13:46:43,937 INFO BEGIN PUSH.
+2013-08-01 13:47:59,999 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 13:48:00,003 INFO BEGIN PUSH.
+2013-08-01 13:49:34,687 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 13:49:34,710 INFO BEGIN PUSH.
+2013-08-01 13:57:32,348 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 13:57:32,352 INFO BEGIN PUSH.
+2013-08-01 14:33:18,934 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 14:33:18,938 INFO BEGIN PUSH.
+2013-08-01 15:22:31,413 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 15:22:31,421 INFO BEGIN PUSH.
+2013-08-01 15:22:38,138 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 160, in GET
+    __re__ = re.compile(r".*\sgit\W\scommand\snot\sfound", re.MULTILINE)
+NameError: global name 're' is not defined
+2013-08-01 15:24:11,792 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 15:24:11,798 INFO BEGIN PUSH.
+2013-08-01 15:24:18,384 INFO bash: git: command not found
+2013-08-01 15:24:18,384 INFO 
+2013-08-01 15:25:21,907 INFO BEGIN PUSH.
+2013-08-01 15:25:28,259 INFO bash: git: command not found
+2013-08-01 15:25:28,260 INFO 
+2013-08-01 15:28:41,711 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 15:28:41,717 INFO BEGIN PUSH.
+2013-08-01 15:28:48,203 INFO bash: git: command not found
+2013-08-01 15:29:48,125 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 15:29:48,131 INFO BEGIN PUSH.
+2013-08-01 15:31:14,605 INFO bash: git: command not found
+2013-08-01 15:31:14,605 INFO 
+2013-08-01 15:41:47,010 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 15:41:47,032 INFO BEGIN PUSH.
+2013-08-01 15:42:07,875 INFO bash: git: command not found
+2013-08-01 15:42:07,885 INFO 
+2013-08-01 15:42:15,095 INFO Reading package lists... 0%
+2013-08-01 15:42:15,096 INFO Reading package lists... 100%
+2013-08-01 15:42:15,101 INFO Reading package lists... Done
+2013-08-01 15:42:15,104 INFO 
+2013-08-01 15:42:15,134 INFO Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree
+2013-08-01 15:42:15,134 INFO Reading state information... 0%Reading state information... 1%
+2013-08-01 15:42:15,135 INFO Reading state information... Done
+2013-08-01 15:42:15,137 INFO 
+2013-08-01 15:42:15,138 INFO E:
+2013-08-01 15:42:15,138 INFO Unable to locate package git
+2013-08-01 15:42:15,226 INFO bash: git: command not found
+2013-08-01 15:43:02,226 ERROR Failed to install git or it cannot be used.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 172, in GET
+    raise CannotUseGitException('Cannot use Git, cannot install or it is missing.')
+CannotUseGitException: Cannot use Git, cannot install or it is missing.
+2013-08-01 17:52:36,095 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 17:52:36,099 INFO BEGIN PUSH.
+2013-08-01 17:52:43,479 INFO bash: git: command not found
+2013-08-01 17:52:43,480 INFO 
+2013-08-01 17:56:53,128 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 17:56:53,153 INFO BEGIN PUSH.
+2013-08-01 17:57:01,664 INFO bash: git: command not found
+2013-08-01 17:57:01,665 INFO 
+2013-08-01 19:15:03,207 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 19:15:03,220 INFO BEGIN PUSH.
+2013-08-01 19:15:10,976 INFO bash: git: command not found
+2013-08-01 19:15:10,976 INFO 
+2013-08-01 19:16:03,065 INFO make_noninteractive_installer --> "c:\users\hornra\appdata\local\temp\tmpi90loj".
+2013-08-01 19:26:23,967 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 19:26:23,973 INFO BEGIN PUSH.
+2013-08-01 19:26:30,905 INFO bash: git: command not found
+2013-08-01 19:26:30,910 INFO 
+2013-08-01 19:26:30,923 INFO make_noninteractive_installer --> "c:\users\hornra\appdata\local\temp\tmpxu55ff".
+2013-08-01 19:33:08,726 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 19:33:08,730 INFO BEGIN PUSH.
+2013-08-01 19:33:15,634 INFO bash: git: command not found
+2013-08-01 19:33:15,641 INFO 
+2013-08-01 19:33:15,651 INFO make_noninteractive_installer --> "c:\users\hornra\appdata\local\temp\tmplg8s8g".
+2013-08-01 19:38:26,989 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 19:38:26,992 INFO BEGIN PUSH.
+2013-08-01 19:38:33,892 INFO bash: git: command not found
+2013-08-01 19:38:33,894 INFO 
+2013-08-01 19:38:33,904 INFO make_noninteractive_installer --> "c:\users\hornra\appdata\local\temp\tmp3el9ad".
+2013-08-01 19:44:41,484 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 19:44:41,496 INFO BEGIN PUSH.
+2013-08-01 19:44:48,467 INFO bash: git: command not found
+2013-08-01 19:44:48,467 INFO 
+2013-08-01 19:44:48,477 INFO make_noninteractive_installer --> "c:\users\hornra\appdata\local\temp\tmpwmeilc".
+2013-08-01 19:46:40,470 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 19:46:40,473 INFO BEGIN PUSH.
+2013-08-01 19:46:47,289 INFO bash: git: command not found
+2013-08-01 19:46:47,290 INFO 
+2013-08-01 19:46:47,302 INFO make_noninteractive_installer --> "c:\users\hornra\appdata\local\temp\tmpvfwhug".
+2013-08-01 19:46:47,358 INFO remote make_noninteractive_installer --> "install-git-noninteractive.sh".
+2013-08-01 19:48:35,721 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-01 19:48:35,742 INFO BEGIN PUSH.
+2013-08-01 19:48:42,604 INFO bash: git: command not found
+2013-08-01 19:48:42,605 INFO 
+2013-08-01 19:48:42,615 INFO make_noninteractive_installer --> "c:\users\hornra\appdata\local\temp\tmpeu54x6".
+2013-08-01 19:48:42,664 INFO remote make_noninteractive_installer --> "install-git-noninteractive.sh".
+2013-08-02 18:14:40,051 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-02 18:14:40,092 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 16:33:14,700 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 16:33:14,711 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 16:41:50,746 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 16:41:50,746 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 16:41:50,749 INFO BEGIN PUSH.
+2013-08-05 16:41:50,749 INFO BEGIN PUSH.
+2013-08-05 16:41:58,486 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-05 16:41:58,486 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-05 16:41:58,493 INFO 
+2013-08-05 16:41:58,493 INFO 
+2013-08-05 16:48:32,163 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 16:48:32,174 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 16:49:17,174 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 16:49:17,174 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 16:49:17,184 INFO BEGIN PUSH.
+2013-08-05 16:49:17,184 INFO BEGIN PUSH.
+2013-08-05 16:49:24,727 INFO ls: cannot access /root/bin2/zip2github.sh
+2013-08-05 16:49:24,727 INFO ls: cannot access /root/bin2/zip2github.sh
+2013-08-05 16:49:24,729 INFO : No such file or directory
+2013-08-05 16:49:24,729 INFO : No such file or directory
+2013-08-05 16:49:24,730 INFO 
+2013-08-05 16:49:24,730 INFO 
+2013-08-05 16:57:53,980 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 16:57:53,996 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 17:15:17,105 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:15:17,105 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:15:17,109 INFO BEGIN PUSH.
+2013-08-05 17:15:17,109 INFO BEGIN PUSH.
+2013-08-05 17:15:24,125 INFO ls: cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 17:15:24,125 INFO ls: cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 17:15:24,125 INFO 
+2013-08-05 17:15:24,125 INFO 
+2013-08-05 17:16:18,161 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:16:18,174 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 17:16:31,624 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:16:31,624 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:16:31,627 INFO BEGIN PUSH.
+2013-08-05 17:16:31,627 INFO BEGIN PUSH.
+2013-08-05 17:16:38,615 INFO ls:
+2013-08-05 17:16:38,615 INFO ls:
+2013-08-05 17:16:38,618 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 17:16:38,618 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 17:16:38,618 INFO : No such file or directory
+2013-08-05 17:16:38,618 INFO : No such file or directory
+2013-08-05 17:16:38,621 INFO 
+2013-08-05 17:16:38,621 INFO 
+2013-08-05 17:16:38,621 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 175, in GET
+    responses = utils.handle_command(sftp,cmd,regex=__re__,log_all_callback=log_all_from)
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\utils.py", line 89, in handle_command
+    matches = [__re__.search(resp) for r in responses]
+NameError: global name '__re__' is not defined
+2013-08-05 17:16:38,621 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 175, in GET
+    responses = utils.handle_command(sftp,cmd,regex=__re__,log_all_callback=log_all_from)
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\utils.py", line 89, in handle_command
+    matches = [__re__.search(resp) for r in responses]
+NameError: global name '__re__' is not defined
+2013-08-05 17:16:54,216 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:16:54,232 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 17:17:17,038 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:17:17,038 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:17:17,043 INFO BEGIN PUSH.
+2013-08-05 17:17:17,043 INFO BEGIN PUSH.
+2013-08-05 17:17:24,242 INFO ls:
+2013-08-05 17:17:24,242 INFO ls:
+2013-08-05 17:17:24,243 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 17:17:24,243 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 17:17:24,244 INFO : No such file or directory
+2013-08-05 17:17:24,244 INFO : No such file or directory
+2013-08-05 17:17:24,246 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 175, in GET
+    responses = utils.handle_command(sftp,cmd,regex=__re__,log_all_callback=log_all_from)
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\utils.py", line 89, in handle_command
+    matches = [__re__.search(r) for r in responses]
+NameError: global name '__re__' is not defined
+2013-08-05 17:17:24,246 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 175, in GET
+    responses = utils.handle_command(sftp,cmd,regex=__re__,log_all_callback=log_all_from)
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\utils.py", line 89, in handle_command
+    matches = [__re__.search(r) for r in responses]
+NameError: global name '__re__' is not defined
+2013-08-05 17:17:49,506 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:17:49,517 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 17:17:54,674 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:17:54,674 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:17:54,686 INFO BEGIN PUSH.
+2013-08-05 17:17:54,686 INFO BEGIN PUSH.
+2013-08-05 17:18:01,822 INFO ls:
+2013-08-05 17:18:01,822 INFO ls:
+2013-08-05 17:18:01,829 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 17:18:01,829 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 17:18:01,831 INFO : No such file or directory
+2013-08-05 17:18:01,831 INFO : No such file or directory
+2013-08-05 17:18:01,832 INFO 
+2013-08-05 17:18:01,832 INFO 
+2013-08-05 17:29:48,112 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:29:48,122 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 17:51:38,387 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:51:38,387 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:51:38,390 INFO BEGIN PUSH.
+2013-08-05 17:51:38,390 INFO BEGIN PUSH.
+2013-08-05 17:51:46,368 INFO ls:
+2013-08-05 17:51:46,368 INFO ls:
+2013-08-05 17:51:46,369 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 17:51:46,369 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 17:51:46,371 INFO : No such file or directory
+2013-08-05 17:51:46,371 INFO : No such file or directory
+2013-08-05 17:51:46,372 INFO 
+2013-08-05 17:51:46,372 INFO 
+2013-08-05 17:59:39,140 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 17:59:39,153 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 18:01:16,407 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:01:16,407 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:01:16,410 INFO BEGIN PUSH.
+2013-08-05 18:01:16,410 INFO BEGIN PUSH.
+2013-08-05 18:01:23,601 INFO ls:
+2013-08-05 18:01:23,601 INFO ls:
+2013-08-05 18:01:23,602 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 18:01:23,602 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 18:01:23,604 INFO : No such file or directory
+2013-08-05 18:01:23,604 INFO : No such file or directory
+2013-08-05 18:01:23,604 INFO 
+2013-08-05 18:01:23,604 INFO 
+2013-08-05 18:02:23,618 INFO -rwxr-xr-x 1 root root 2281 Aug  5 18:01 /root/bin2/zip2github.sh
+2013-08-05 18:02:23,618 INFO -rwxr-xr-x 1 root root 2281 Aug  5 18:01 /root/bin2/zip2github.sh
+2013-08-05 18:09:10,542 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:09:10,553 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 18:09:50,381 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:09:50,381 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:09:50,384 INFO BEGIN PUSH.
+2013-08-05 18:09:50,384 INFO BEGIN PUSH.
+2013-08-05 18:09:57,757 INFO ls:
+2013-08-05 18:09:57,757 INFO ls:
+2013-08-05 18:09:57,757 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 18:09:57,757 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 18:09:57,759 INFO : No such file or directory
+2013-08-05 18:09:57,759 INFO : No such file or directory
+2013-08-05 18:11:50,967 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:11:50,986 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 18:12:04,961 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:12:04,973 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 18:12:09,871 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:12:09,871 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:12:09,875 INFO BEGIN PUSH.
+2013-08-05 18:12:09,875 INFO BEGIN PUSH.
+2013-08-05 18:12:17,181 INFO ls: cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 18:12:17,181 INFO ls: cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 18:30:52,535 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:30:52,546 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 18:35:30,549 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:35:30,549 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:35:30,571 INFO BEGIN PUSH.
+2013-08-05 18:35:30,571 INFO BEGIN PUSH.
+2013-08-05 18:35:37,595 INFO -rwxr-xr-x 1 root root 2281 Aug  5 18:12 /root/bin2/zip2github.sh
+2013-08-05 18:35:37,595 INFO -rwxr-xr-x 1 root root 2281 Aug  5 18:12 /root/bin2/zip2github.sh
+2013-08-05 18:35:37,596 INFO 
+2013-08-05 18:35:37,596 INFO 
+2013-08-05 18:38:48,000 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:38:48,010 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 18:38:59,012 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:38:59,012 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:38:59,016 INFO BEGIN PUSH.
+2013-08-05 18:38:59,016 INFO BEGIN PUSH.
+2013-08-05 18:39:06,131 INFO ls:
+2013-08-05 18:39:06,131 INFO ls:
+2013-08-05 18:39:06,134 INFO cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 18:39:06,134 INFO cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 18:39:06,134 INFO 
+2013-08-05 18:39:06,134 INFO 
+2013-08-05 18:43:58,648 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:43:58,677 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 18:44:47,470 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:44:47,470 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:44:47,474 INFO BEGIN PUSH.
+2013-08-05 18:44:47,474 INFO BEGIN PUSH.
+2013-08-05 18:44:54,654 INFO ls:
+2013-08-05 18:44:54,654 INFO ls:
+2013-08-05 18:44:54,654 INFO cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 18:44:54,654 INFO cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 18:49:48,801 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:49:48,815 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 18:54:11,875 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:54:11,875 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 18:54:11,878 INFO BEGIN PUSH.
+2013-08-05 18:54:11,878 INFO BEGIN PUSH.
+2013-08-05 18:54:19,210 INFO ls: cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 18:54:19,210 INFO ls: cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 19:00:04,374 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:00:04,385 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 19:00:43,076 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:00:43,076 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:00:43,079 INFO BEGIN PUSH.
+2013-08-05 19:00:43,079 INFO BEGIN PUSH.
+2013-08-05 19:00:50,088 INFO ls: cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 19:00:50,088 INFO ls: cannot access /root/bin2/zip2github.sh: No such file or directory
+2013-08-05 19:00:50,091 INFO 
+2013-08-05 19:00:50,091 INFO 
+2013-08-05 19:11:08,144 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:11:08,158 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 19:11:41,496 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:11:41,509 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 19:15:11,849 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:15:11,849 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:15:11,852 INFO BEGIN PUSH.
+2013-08-05 19:15:11,852 INFO BEGIN PUSH.
+2013-08-05 19:15:20,729 INFO ls:
+2013-08-05 19:15:20,729 INFO ls:
+2013-08-05 19:15:20,730 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 19:15:20,730 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 19:15:20,733 INFO : No such file or directory
+2013-08-05 19:15:20,733 INFO : No such file or directory
+2013-08-05 19:15:20,733 INFO 
+2013-08-05 19:15:20,733 INFO 
+2013-08-05 19:15:26,538 ERROR Failed to install something or it cannot be used because the exception could not be raised due to a programming error.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 194, in GET
+    cmd = 'stat -c "%a %n" %s' % (__command__)
+ValueError: unsupported format character 'a' (0x61) at index 10
+2013-08-05 19:15:26,538 ERROR Failed to install something or it cannot be used because the exception could not be raised due to a programming error.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 194, in GET
+    cmd = 'stat -c "%a %n" %s' % (__command__)
+ValueError: unsupported format character 'a' (0x61) at index 10
+2013-08-05 19:16:43,711 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:16:43,723 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 19:17:06,841 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:17:06,841 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:17:06,848 INFO BEGIN PUSH.
+2013-08-05 19:17:06,848 INFO BEGIN PUSH.
+2013-08-05 19:17:14,023 INFO ls:
+2013-08-05 19:17:14,023 INFO ls:
+2013-08-05 19:17:14,023 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 19:17:14,023 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 19:17:14,025 INFO : No such file or directory
+2013-08-05 19:17:14,025 INFO : No such file or directory
+2013-08-05 19:17:14,025 INFO 
+2013-08-05 19:17:14,025 INFO 
+2013-08-05 19:17:24,213 INFO 755 /root/bin2/zip2github.sh
+2013-08-05 19:17:24,213 INFO 755 /root/bin2/zip2github.sh
+2013-08-05 19:17:24,213 INFO 
+2013-08-05 19:17:24,213 INFO 
+2013-08-05 19:29:03,809 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:29:03,819 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 19:41:21,198 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:41:21,198 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:41:21,201 INFO BEGIN PUSH.
+2013-08-05 19:41:21,201 INFO BEGIN PUSH.
+2013-08-05 19:41:28,618 INFO ls:
+2013-08-05 19:41:28,618 INFO ls:
+2013-08-05 19:41:28,618 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 19:41:28,618 INFO cannot access /root/bin2/zip2github.sh
+2013-08-05 19:41:28,619 INFO : No such file or directory
+2013-08-05 19:41:28,619 INFO : No such file or directory
+2013-08-05 19:41:30,813 INFO 755 /root/bin2/zip2github.sh
+2013-08-05 19:41:30,813 INFO 755 /root/bin2/zip2github.sh
+2013-08-05 19:41:30,815 INFO 
+2013-08-05 19:41:30,815 INFO 
+2013-08-05 19:41:30,819 INFO Not designed to work with Windows at this time since this part of the system was designed to work with Linux...
+2013-08-05 19:41:30,819 INFO Not designed to work with Windows at this time since this part of the system was designed to work with Linux...
+2013-08-05 19:45:17,157 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:45:17,165 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 19:45:23,443 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:45:23,443 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:45:23,447 INFO BEGIN PUSH.
+2013-08-05 19:45:23,447 INFO BEGIN PUSH.
+2013-08-05 19:45:30,904 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-05 19:45:30,904 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-05 19:49:16,921 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:49:16,933 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 19:49:25,859 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:49:25,859 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:49:25,865 INFO BEGIN PUSH.
+2013-08-05 19:49:25,865 INFO BEGIN PUSH.
+2013-08-05 19:49:36,576 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-05 19:49:36,576 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-05 19:54:59,638 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:54:59,648 INFO githubManagerServer 1.0.1 started !!!
+2013-08-05 19:55:18,400 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:55:18,400 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-05 19:55:18,404 INFO BEGIN PUSH.
+2013-08-05 19:55:18,404 INFO BEGIN PUSH.
+2013-08-05 19:55:45,546 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-05 19:55:45,546 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-05 19:55:45,608 INFO 755 /root/bin/zip2github.sh
+2013-08-05 19:55:45,608 INFO 755 /root/bin/zip2github.sh
+2013-08-05 19:55:45,713 INFO Not designed to work with Windows at this time since this part of the system was designed to work with Linux...
+2013-08-05 19:55:45,713 INFO Not designed to work with Windows at this time since this part of the system was designed to work with Linux...
+2013-08-06 09:38:29,043 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 09:38:29,053 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 09:49:00,630 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 09:49:00,630 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 09:54:37,289 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 09:54:37,299 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 09:56:32,029 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 09:56:32,029 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 09:57:42,858 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 09:57:42,871 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 10:17:36,417 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:17:36,427 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 10:48:30,204 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:48:30,204 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:52:10,625 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:52:10,635 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 10:54:05,279 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:54:05,290 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 10:54:17,604 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:54:17,604 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:55:03,290 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:55:03,302 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 10:55:05,834 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 10:55:05,834 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 11:03:11,697 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 11:03:11,706 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 12:14:30,114 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:14:30,114 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:14:30,119 INFO BEGIN PUSH.
+2013-08-06 12:14:30,119 INFO BEGIN PUSH.
+2013-08-06 12:21:38,088 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:21:38,099 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 12:33:22,928 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:33:22,928 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:33:22,931 INFO BEGIN PUSH.
+2013-08-06 12:33:22,931 INFO BEGIN PUSH.
+2013-08-06 12:34:00,654 INFO BEGIN PUSH.
+2013-08-06 12:34:00,654 INFO BEGIN PUSH.
+2013-08-06 12:35:06,160 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:35:06,171 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 12:39:30,619 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:39:30,619 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:39:30,624 INFO BEGIN PUSH.
+2013-08-06 12:39:30,624 INFO BEGIN PUSH.
+2013-08-06 12:46:57,142 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:46:57,153 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 12:50:01,799 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:50:01,799 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 12:50:01,802 INFO BEGIN PUSH.
+2013-08-06 12:50:01,802 INFO BEGIN PUSH.
+2013-08-06 13:17:21,681 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 13:28:25,390 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 13:49:09,431 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 13:54:40,089 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:37:03,956 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:37:03,979 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 14:37:50,119 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:37:50,252 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 14:38:21,029 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:38:21,065 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 14:39:28,522 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:40:47,282 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 14:41:35,282 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:43:16,233 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:43:16,272 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 14:44:07,588 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:44:07,588 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:44:07,594 INFO BEGIN PUSH.
+2013-08-06 14:44:07,594 INFO BEGIN PUSH.
+2013-08-06 14:46:55,762 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:46:55,805 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 14:47:10,187 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:47:10,187 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:47:10,191 INFO BEGIN PUSH.
+2013-08-06 14:47:10,191 INFO BEGIN PUSH.
+2013-08-06 14:47:10,193 INFO __githubuser__=Ruby-Python-Bridge (v2), __githubpassword__=raychorn
+2013-08-06 14:47:10,193 INFO __githubuser__=Ruby-Python-Bridge (v2), __githubpassword__=raychorn
+2013-08-06 14:49:42,793 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:49:42,832 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 14:50:35,848 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:50:35,848 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:50:35,852 INFO BEGIN PUSH.
+2013-08-06 14:50:35,852 INFO BEGIN PUSH.
+2013-08-06 14:50:35,854 INFO __githubuser__=raychorn, __githubpassword__=peekab00
+2013-08-06 14:50:35,854 INFO __githubuser__=raychorn, __githubpassword__=peekab00
+2013-08-06 14:52:20,977 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 14:52:21,016 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 15:57:33,226 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 15:57:33,226 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 15:57:33,232 INFO BEGIN PUSH.
+2013-08-06 15:57:33,232 INFO BEGIN PUSH.
+2013-08-06 15:57:33,233 INFO __githubuser__=raychorn
+2013-08-06 15:57:33,233 INFO __githubuser__=raychorn
+2013-08-06 15:57:33,244 INFO __githubpassword__=peekab00
+2013-08-06 15:57:33,244 INFO __githubpassword__=peekab00
+2013-08-06 15:57:33,244 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-06 15:57:33,244 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-06 15:57:33,246 INFO __ip__=127.0.0.1
+2013-08-06 15:57:33,246 INFO __ip__=127.0.0.1
+2013-08-06 15:57:33,246 INFO __port__=12222
+2013-08-06 15:57:33,246 INFO __port__=12222
+2013-08-06 15:57:33,246 INFO __username__=root
+2013-08-06 15:57:33,246 INFO __username__=root
+2013-08-06 15:59:52,891 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 15:59:52,931 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 16:28:58,822 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 16:28:58,822 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 16:28:58,825 INFO BEGIN PUSH.
+2013-08-06 16:28:58,825 INFO BEGIN PUSH.
+2013-08-06 16:28:58,828 INFO __githubuser__=raychorn
+2013-08-06 16:28:58,828 INFO __githubuser__=raychorn
+2013-08-06 16:28:58,842 INFO __githubpassword__=peekab00
+2013-08-06 16:28:58,842 INFO __githubpassword__=peekab00
+2013-08-06 16:28:58,842 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-06 16:28:58,842 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-06 16:28:58,844 INFO __ip__=127.0.0.1
+2013-08-06 16:28:58,844 INFO __ip__=127.0.0.1
+2013-08-06 16:28:58,845 INFO __port__=12222
+2013-08-06 16:28:58,845 INFO __port__=12222
+2013-08-06 16:28:58,845 INFO __username__=root
+2013-08-06 16:28:58,845 INFO __username__=root
+2013-08-06 16:29:48,420 INFO BEGIN PUSH.
+2013-08-06 16:29:48,420 INFO BEGIN PUSH.
+2013-08-06 16:29:48,421 INFO __githubuser__=raychorn
+2013-08-06 16:29:48,421 INFO __githubuser__=raychorn
+2013-08-06 16:29:48,423 INFO __githubpassword__=peekab00
+2013-08-06 16:29:48,423 INFO __githubpassword__=peekab00
+2013-08-06 16:29:48,424 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-06 16:29:48,424 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-06 16:29:48,426 INFO __ip__=127.0.0.1
+2013-08-06 16:29:48,426 INFO __ip__=127.0.0.1
+2013-08-06 16:29:48,427 INFO __port__=12222
+2013-08-06 16:29:48,427 INFO __port__=12222
+2013-08-06 16:29:48,427 INFO __username__=root
+2013-08-06 16:29:48,427 INFO __username__=root
+2013-08-06 16:29:59,704 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 16:29:59,742 INFO githubManagerServer 1.0.1 started !!!
+2013-08-06 16:30:08,950 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 16:30:08,950 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-06 16:30:08,963 INFO BEGIN PUSH.
+2013-08-06 16:30:08,963 INFO BEGIN PUSH.
+2013-08-06 16:30:08,963 INFO __githubuser__=raychorn
+2013-08-06 16:30:08,963 INFO __githubuser__=raychorn
+2013-08-06 16:30:08,983 INFO __githubpassword__=peekab00
+2013-08-06 16:30:08,983 INFO __githubpassword__=peekab00
+2013-08-06 16:30:08,984 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-06 16:30:08,984 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-06 16:30:08,984 INFO __ip__=127.0.0.1
+2013-08-06 16:30:08,984 INFO __ip__=127.0.0.1
+2013-08-06 16:30:08,986 INFO __port__=12222
+2013-08-06 16:30:08,986 INFO __port__=12222
+2013-08-06 16:30:08,986 INFO __username__=root
+2013-08-06 16:30:08,986 INFO __username__=root
+2013-08-06 16:52:57,653 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:03:26,769 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:04:13,058 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:04:13,101 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:05:29,871 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:05:29,921 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:09:09,094 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:09:09,094 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:09:09,098 INFO BEGIN PUSH.
+2013-08-07 09:09:09,098 INFO BEGIN PUSH.
+2013-08-07 09:09:09,148 INFO __githubuser__=raychorn
+2013-08-07 09:09:09,148 INFO __githubuser__=raychorn
+2013-08-07 09:09:09,260 INFO __githubpassword__=peekab00
+2013-08-07 09:09:09,260 INFO __githubpassword__=peekab00
+2013-08-07 09:09:09,267 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:09:09,267 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:09:09,269 INFO __ip__=127.0.0.1
+2013-08-07 09:09:09,269 INFO __ip__=127.0.0.1
+2013-08-07 09:09:09,269 INFO __port__=12222
+2013-08-07 09:09:09,269 INFO __port__=12222
+2013-08-07 09:09:09,270 INFO __username__=root
+2013-08-07 09:09:09,270 INFO __username__=root
+2013-08-07 09:09:10,983 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 220, in GET
+    socks_proxy_off()
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 325, in socks_proxy_off
+    socks._defaultproxy = __default_proxy_before__
+NameError: global name '__default_proxy_before__' is not defined
+2013-08-07 09:09:10,983 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 220, in GET
+    socks_proxy_off()
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 325, in socks_proxy_off
+    socks._defaultproxy = __default_proxy_before__
+NameError: global name '__default_proxy_before__' is not defined
+2013-08-07 09:10:06,094 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:10:06,134 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:11:30,661 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:11:30,661 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:11:30,664 INFO BEGIN PUSH.
+2013-08-07 09:11:30,664 INFO BEGIN PUSH.
+2013-08-07 09:11:30,665 INFO __githubuser__=raychorn
+2013-08-07 09:11:30,665 INFO __githubuser__=raychorn
+2013-08-07 09:11:30,700 INFO __githubpassword__=peekab00
+2013-08-07 09:11:30,700 INFO __githubpassword__=peekab00
+2013-08-07 09:11:30,701 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:11:30,701 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:11:30,703 INFO __ip__=127.0.0.1
+2013-08-07 09:11:30,703 INFO __ip__=127.0.0.1
+2013-08-07 09:11:30,703 INFO __port__=12222
+2013-08-07 09:11:30,703 INFO __port__=12222
+2013-08-07 09:11:30,704 INFO __username__=root
+2013-08-07 09:11:30,704 INFO __username__=root
+2013-08-07 09:11:32,361 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 220, in GET
+    socks_proxy_off()
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 327, in socks_proxy_off
+    socks._defaultproxy = __default_proxy_before__
+NameError: global name '__default_proxy_before__' is not defined
+2013-08-07 09:11:32,361 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 220, in GET
+    socks_proxy_off()
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 327, in socks_proxy_off
+    socks._defaultproxy = __default_proxy_before__
+NameError: global name '__default_proxy_before__' is not defined
+2013-08-07 09:12:33,167 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:18:33,451 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:19:10,753 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:19:10,801 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:22:06,793 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:22:06,869 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:29:52,990 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:29:52,990 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:29:53,006 INFO BEGIN PUSH.
+2013-08-07 09:29:53,006 INFO BEGIN PUSH.
+2013-08-07 09:29:53,006 INFO __githubuser__=raychorn
+2013-08-07 09:29:53,006 INFO __githubuser__=raychorn
+2013-08-07 09:29:53,026 INFO __githubpassword__=peekab00
+2013-08-07 09:29:53,026 INFO __githubpassword__=peekab00
+2013-08-07 09:29:53,026 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:29:53,026 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:29:53,028 INFO __ip__=127.0.0.1
+2013-08-07 09:29:53,028 INFO __ip__=127.0.0.1
+2013-08-07 09:29:53,029 INFO __port__=12222
+2013-08-07 09:29:53,029 INFO __port__=12222
+2013-08-07 09:29:53,029 INFO __username__=root
+2013-08-07 09:29:53,029 INFO __username__=root
+2013-08-07 09:29:54,598 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 222, in GET
+    socks_proxy_off(__proxy__)
+NameError: global name '__proxy__' is not defined
+2013-08-07 09:29:54,598 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 222, in GET
+    socks_proxy_off(__proxy__)
+NameError: global name '__proxy__' is not defined
+2013-08-07 09:32:16,023 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:32:16,076 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:32:22,878 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:32:22,878 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:32:22,884 INFO BEGIN PUSH.
+2013-08-07 09:32:22,884 INFO BEGIN PUSH.
+2013-08-07 09:32:22,887 INFO __githubuser__=raychorn
+2013-08-07 09:32:22,887 INFO __githubuser__=raychorn
+2013-08-07 09:32:22,911 INFO __githubpassword__=peekab00
+2013-08-07 09:32:22,911 INFO __githubpassword__=peekab00
+2013-08-07 09:32:22,913 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:32:22,913 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:32:22,914 INFO __ip__=127.0.0.1
+2013-08-07 09:32:22,914 INFO __ip__=127.0.0.1
+2013-08-07 09:32:22,915 INFO __port__=12222
+2013-08-07 09:32:22,915 INFO __port__=12222
+2013-08-07 09:32:22,917 INFO __username__=root
+2013-08-07 09:32:22,917 INFO __username__=root
+2013-08-07 09:33:38,368 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:33:38,434 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:33:50,437 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:33:50,437 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:33:50,444 INFO BEGIN PUSH.
+2013-08-07 09:33:50,444 INFO BEGIN PUSH.
+2013-08-07 09:33:50,444 INFO __githubuser__=raychorn
+2013-08-07 09:33:50,444 INFO __githubuser__=raychorn
+2013-08-07 09:33:50,476 INFO __githubpassword__=peekab00
+2013-08-07 09:33:50,476 INFO __githubpassword__=peekab00
+2013-08-07 09:33:50,476 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:33:50,476 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:33:50,477 INFO __ip__=127.0.0.1
+2013-08-07 09:33:50,477 INFO __ip__=127.0.0.1
+2013-08-07 09:33:50,479 INFO __port__=12222
+2013-08-07 09:33:50,479 INFO __port__=12222
+2013-08-07 09:33:50,480 INFO __username__=root
+2013-08-07 09:33:50,480 INFO __username__=root
+2013-08-07 09:35:20,193 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:39:04,461 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:39:10,480 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:39:10,480 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:39:10,486 INFO BEGIN PUSH.
+2013-08-07 09:39:10,486 INFO BEGIN PUSH.
+2013-08-07 09:39:10,486 INFO __githubuser__=raychorn
+2013-08-07 09:39:10,486 INFO __githubuser__=raychorn
+2013-08-07 09:39:10,526 INFO __githubpassword__=peekab00
+2013-08-07 09:39:10,526 INFO __githubpassword__=peekab00
+2013-08-07 09:39:10,526 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:39:10,526 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:39:10,529 INFO __ip__=127.0.0.1
+2013-08-07 09:39:10,529 INFO __ip__=127.0.0.1
+2013-08-07 09:39:10,529 INFO __port__=12222
+2013-08-07 09:39:10,529 INFO __port__=12222
+2013-08-07 09:39:10,530 INFO __username__=root
+2013-08-07 09:39:10,530 INFO __username__=root
+2013-08-07 09:44:28,127 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:44:28,213 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 09:48:46,799 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:48:46,799 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 09:48:46,803 INFO BEGIN PUSH.
+2013-08-07 09:48:46,803 INFO BEGIN PUSH.
+2013-08-07 09:48:46,805 INFO __githubuser__=raychorn
+2013-08-07 09:48:46,805 INFO __githubuser__=raychorn
+2013-08-07 09:48:46,834 INFO __githubpassword__=peekab00
+2013-08-07 09:48:46,834 INFO __githubpassword__=peekab00
+2013-08-07 09:48:46,835 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:48:46,835 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 09:48:46,842 INFO __ip__=127.0.0.1
+2013-08-07 09:48:46,842 INFO __ip__=127.0.0.1
+2013-08-07 09:48:46,844 INFO __port__=12222
+2013-08-07 09:48:46,844 INFO __port__=12222
+2013-08-07 09:48:46,845 INFO __username__=root
+2013-08-07 09:48:46,845 INFO __username__=root
+2013-08-07 09:50:09,086 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-07 09:50:09,086 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-07 10:09:03,661 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:09:03,709 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 10:09:42,746 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:09:42,746 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:09:42,750 INFO BEGIN PUSH.
+2013-08-07 10:09:42,750 INFO BEGIN PUSH.
+2013-08-07 10:09:42,750 INFO __githubuser__=raychorn
+2013-08-07 10:09:42,750 INFO __githubuser__=raychorn
+2013-08-07 10:09:42,773 INFO __githubpassword__=peekab00
+2013-08-07 10:09:42,773 INFO __githubpassword__=peekab00
+2013-08-07 10:09:42,773 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 10:09:42,773 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 10:09:42,775 INFO __ip__=127.0.0.1
+2013-08-07 10:09:42,775 INFO __ip__=127.0.0.1
+2013-08-07 10:09:42,775 INFO __port__=12222
+2013-08-07 10:09:42,775 INFO __port__=12222
+2013-08-07 10:09:42,776 INFO __username__=root
+2013-08-07 10:09:42,776 INFO __username__=root
+2013-08-07 10:12:14,115 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:12:14,167 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 10:12:19,838 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:12:19,838 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:12:19,848 INFO BEGIN PUSH.
+2013-08-07 10:12:19,848 INFO BEGIN PUSH.
+2013-08-07 10:12:19,848 INFO __githubuser__=raychorn
+2013-08-07 10:12:19,848 INFO __githubuser__=raychorn
+2013-08-07 10:12:19,875 INFO __githubpassword__=peekab00
+2013-08-07 10:12:19,875 INFO __githubpassword__=peekab00
+2013-08-07 10:12:19,877 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 10:12:19,877 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 10:12:19,878 INFO __ip__=127.0.0.1
+2013-08-07 10:12:19,878 INFO __ip__=127.0.0.1
+2013-08-07 10:12:19,878 INFO __port__=12222
+2013-08-07 10:12:19,878 INFO __port__=12222
+2013-08-07 10:12:19,880 INFO __username__=root
+2013-08-07 10:12:19,880 INFO __username__=root
+2013-08-07 10:12:21,520 INFO Proxy going off.
+2013-08-07 10:12:21,520 INFO Proxy going off.
+2013-08-07 10:12:52,888 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:12:52,927 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 10:14:33,484 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:14:33,484 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:14:33,490 INFO BEGIN PUSH.
+2013-08-07 10:14:33,490 INFO BEGIN PUSH.
+2013-08-07 10:14:33,499 INFO __githubuser__=raychorn
+2013-08-07 10:14:33,499 INFO __githubuser__=raychorn
+2013-08-07 10:14:33,522 INFO __githubpassword__=peekab00
+2013-08-07 10:14:33,522 INFO __githubpassword__=peekab00
+2013-08-07 10:14:33,523 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 10:14:33,523 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 10:14:33,529 INFO __ip__=127.0.0.1
+2013-08-07 10:14:33,529 INFO __ip__=127.0.0.1
+2013-08-07 10:14:33,529 INFO __port__=12222
+2013-08-07 10:14:33,529 INFO __port__=12222
+2013-08-07 10:14:33,530 INFO __username__=root
+2013-08-07 10:14:33,530 INFO __username__=root
+2013-08-07 10:14:35,086 INFO Proxy going off.
+2013-08-07 10:14:35,086 INFO Proxy going off.
+2013-08-07 10:16:37,375 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:16:37,394 INFO githubManagerServer 1.0.1 started !!!
+2013-08-07 10:17:33,730 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:17:33,730 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-07 10:17:33,733 INFO BEGIN PUSH.
+2013-08-07 10:17:33,733 INFO BEGIN PUSH.
+2013-08-07 10:17:33,734 INFO __githubuser__=raychorn
+2013-08-07 10:17:33,734 INFO __githubuser__=raychorn
+2013-08-07 10:17:33,756 INFO __githubpassword__=peekab00
+2013-08-07 10:17:33,756 INFO __githubpassword__=peekab00
+2013-08-07 10:17:33,756 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 10:17:33,756 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-07 10:17:33,757 INFO __ip__=127.0.0.1
+2013-08-07 10:17:33,757 INFO __ip__=127.0.0.1
+2013-08-07 10:17:33,757 INFO __port__=12222
+2013-08-07 10:17:33,757 INFO __port__=12222
+2013-08-07 10:17:33,759 INFO __username__=root
+2013-08-07 10:17:33,759 INFO __username__=root
+2013-08-08 09:47:08,701 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 09:47:08,723 INFO BEGIN PUSH.
+2013-08-08 09:47:08,743 INFO __githubuser__=raychorn
+2013-08-08 09:47:08,900 INFO __githubpassword__=peekab00
+2013-08-08 09:47:08,901 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 09:47:08,901 INFO __ip__=127.0.0.1
+2013-08-08 09:47:08,903 INFO __port__=12222
+2013-08-08 09:47:08,904 INFO __username__=root
+2013-08-08 09:48:08,030 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 09:48:08,056 INFO BEGIN PUSH.
+2013-08-08 09:48:08,058 INFO __githubuser__=raychorn
+2013-08-08 09:48:08,062 INFO __githubpassword__=peekab00
+2013-08-08 09:48:08,063 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 09:48:08,065 INFO __ip__=127.0.0.1
+2013-08-08 09:48:08,065 INFO __port__=12222
+2013-08-08 09:48:08,066 INFO __username__=root
+2013-08-08 09:51:35,325 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 10:10:38,953 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 10:13:15,082 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 10:18:13,094 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 10:32:08,339 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 10:55:29,815 WARNING UNDEFINED COMMAND.
+2013-08-08 10:55:47,051 INFO BEGIN PUSH.
+2013-08-08 10:55:47,052 INFO __githubuser__=raychorn
+2013-08-08 10:55:47,058 INFO __githubpassword__=peekab00
+2013-08-08 10:55:47,059 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 10:55:47,059 INFO __ip__=127.0.0.1
+2013-08-08 10:55:47,061 INFO __port__=12222
+2013-08-08 10:55:47,062 INFO __username__=root
+2013-08-08 11:01:37,875 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 11:01:37,881 INFO BEGIN PUSH.
+2013-08-08 11:01:37,882 INFO __githubuser__=raychorn
+2013-08-08 11:01:37,888 INFO __githubpassword__=peekab00
+2013-08-08 11:01:37,890 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 11:01:37,891 INFO __ip__=127.0.0.1
+2013-08-08 11:01:37,891 INFO __port__=12222
+2013-08-08 11:01:37,894 INFO __username__=root
+2013-08-08 11:14:51,167 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 11:14:51,171 INFO BEGIN PUSH.
+2013-08-08 11:14:51,171 INFO __githubuser__=raychorn
+2013-08-08 11:14:51,176 INFO __githubpassword__=peekab00
+2013-08-08 11:14:51,177 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 11:14:51,177 INFO __ip__=127.0.0.1
+2013-08-08 11:14:51,177 INFO __port__=12222
+2013-08-08 11:14:51,177 INFO __username__=root
+2013-08-08 11:16:08,677 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 11:16:08,684 INFO BEGIN PUSH.
+2013-08-08 11:16:08,684 INFO __githubuser__=raychorn
+2013-08-08 11:16:08,690 INFO __githubpassword__=peekab00
+2013-08-08 11:16:08,691 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 11:16:08,691 INFO __ip__=127.0.0.1
+2013-08-08 11:16:08,693 INFO __port__=12222
+2013-08-08 11:16:08,693 INFO __username__=root
+2013-08-08 11:16:36,540 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 11:16:36,546 INFO BEGIN PUSH.
+2013-08-08 11:16:36,546 INFO __githubuser__=raychorn
+2013-08-08 11:16:36,552 INFO __githubpassword__=peekab00
+2013-08-08 11:16:36,553 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 11:16:36,555 INFO __ip__=127.0.0.1
+2013-08-08 11:16:36,555 INFO __port__=12222
+2013-08-08 11:16:36,556 INFO __username__=root
+2013-08-08 11:19:30,023 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 11:19:30,028 INFO BEGIN PUSH.
+2013-08-08 11:19:30,028 INFO __githubuser__=raychorn
+2013-08-08 11:19:30,032 INFO __githubpassword__=peekab00
+2013-08-08 11:19:30,032 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 11:19:30,033 INFO __ip__=127.0.0.1
+2013-08-08 11:19:30,033 INFO __port__=12222
+2013-08-08 11:19:30,035 INFO __username__=root
+2013-08-08 11:20:04,483 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-08 11:20:04,483 INFO 
+2013-08-08 11:20:04,535 INFO 755 /root/bin/zip2github.sh
+2013-08-08 11:20:04,536 INFO 
+2013-08-08 12:09:48,887 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 12:09:48,891 INFO BEGIN PUSH.
+2013-08-08 12:09:48,894 INFO __githubuser__=raychorn
+2013-08-08 12:09:48,900 INFO __githubpassword__=peekab00
+2013-08-08 12:09:48,901 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 12:09:48,903 INFO __ip__=127.0.0.1
+2013-08-08 12:09:48,904 INFO __port__=12222
+2013-08-08 12:09:48,905 INFO __username__=root
+2013-08-08 12:09:55,796 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-08 12:09:55,796 INFO 
+2013-08-08 12:09:55,839 INFO 755 /root/bin/zip2github.sh
+2013-08-08 12:19:38,236 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 12:19:38,243 INFO BEGIN PUSH.
+2013-08-08 12:19:38,243 INFO __githubuser__=raychorn
+2013-08-08 12:19:38,247 INFO __githubpassword__=peekab00
+2013-08-08 12:19:38,249 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 12:19:38,250 INFO __ip__=127.0.0.1
+2013-08-08 12:19:38,250 INFO __port__=12222
+2013-08-08 12:19:38,250 INFO __username__=fakeuser1
+2013-08-08 12:19:45,533 INFO -rwxr-xr-x 1 root root 2281 Aug  2 12:50 /root/bin/zip2github.sh
+2013-08-08 12:19:45,535 INFO 
+2013-08-08 12:19:45,608 INFO 755 /root/bin/zip2github.sh
+2013-08-08 13:11:59,598 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 13:11:59,604 INFO BEGIN PUSH.
+2013-08-08 13:11:59,605 INFO __githubuser__=raychorn
+2013-08-08 13:11:59,609 INFO __githubpassword__=peekab00
+2013-08-08 13:11:59,611 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 13:11:59,611 INFO __ip__=127.0.0.1
+2013-08-08 13:11:59,612 INFO __port__=12222
+2013-08-08 13:11:59,614 INFO __username__=fakeuser1
+2013-08-08 13:12:06,982 INFO -rwxr-xr-x 1 root root 2419 Aug  8 12:34 /root/bin/zip2github.sh
+2013-08-08 13:12:06,983 INFO 
+2013-08-08 13:12:07,046 INFO 755 /root/bin/zip2github.sh
+2013-08-08 13:12:07,049 INFO 
+2013-08-08 13:12:07,051 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 243, in GET
+    sf = __sftp__.stat(f)
+UnboundLocalError: local variable '__sftp__' referenced before assignment
+2013-08-08 13:12:56,548 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 13:12:56,553 INFO BEGIN PUSH.
+2013-08-08 13:12:56,555 INFO __githubuser__=raychorn
+2013-08-08 13:12:56,561 INFO __githubpassword__=peekab00
+2013-08-08 13:12:56,562 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 13:12:56,562 INFO __ip__=127.0.0.1
+2013-08-08 13:12:56,563 INFO __port__=12222
+2013-08-08 13:12:56,565 INFO __username__=fakeuser1
+2013-08-08 13:13:03,888 INFO -rwxr-xr-x 1 root root 2419 Aug  8 12:34 /root/bin/zip2github.sh
+2013-08-08 13:13:03,890 INFO 
+2013-08-08 13:13:03,940 INFO 755 /root/bin/zip2github.sh
+2013-08-08 13:13:03,940 INFO 
+2013-08-08 13:13:03,946 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 244, in GET
+    sf = __sftp__.stat(f)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\paramiko-1.10.1-py2.7.egg\paramiko\sftp_client.py", line 337, in stat
+    t, msg = self._request(CMD_STAT, path)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\paramiko-1.10.1-py2.7.egg\paramiko\sftp_client.py", line 689, in _request
+    return self._read_response(num)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\paramiko-1.10.1-py2.7.egg\paramiko\sftp_client.py", line 736, in _read_response
+    self._convert_status(msg)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\paramiko-1.10.1-py2.7.egg\paramiko\sftp_client.py", line 762, in _convert_status
+    raise IOError(errno.ENOENT, text)
+IOError: [Errno 2] No such file
+2013-08-08 13:59:57,260 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 13:59:57,266 INFO BEGIN PUSH.
+2013-08-08 13:59:57,267 INFO __githubuser__=raychorn
+2013-08-08 13:59:57,275 INFO __githubpassword__=peekab00
+2013-08-08 13:59:57,276 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 13:59:57,276 INFO __ip__=127.0.0.1
+2013-08-08 13:59:57,278 INFO __port__=12222
+2013-08-08 13:59:57,279 INFO __username__=fakeuser1
+2013-08-08 14:00:04,928 INFO -rwxr-xr-x 1 root root 2419 Aug  8 12:34 /root/bin/zip2github.sh
+2013-08-08 14:00:04,930 INFO 
+2013-08-08 14:28:52,687 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 14:28:52,690 INFO BEGIN PUSH.
+2013-08-08 14:28:52,690 INFO __githubuser__=raychorn
+2013-08-08 14:28:52,694 INFO __githubpassword__=peekab00
+2013-08-08 14:28:52,694 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 14:28:52,696 INFO __ip__=127.0.0.1
+2013-08-08 14:28:52,697 INFO __port__=12222
+2013-08-08 14:28:52,697 INFO __username__=fakeuser1
+2013-08-08 14:28:59,986 INFO -rwxr-xr-x 1 root root 2419 Aug  8 12:34 /root/bin/zip2github.sh
+2013-08-08 14:29:06,538 INFO 755 /root/bin/zip2github.sh
+2013-08-08 14:29:06,663 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 252, in GET
+    __sftp__.put(f, './%s' % (os.path.basename(f)), callback=__callback__)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\paramiko-1.10.1-py2.7.egg\paramiko\sftp_client.py", line 615, in put
+    return self.putfo(fl, remotepath, os.stat(localpath).st_size, callback, confirm)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\paramiko-1.10.1-py2.7.egg\paramiko\sftp_client.py", line 573, in putfo
+    callback(size, file_size)
+TypeError: __callback__() takes exactly 1 argument (2 given)
+2013-08-08 14:30:39,618 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 14:30:39,622 INFO BEGIN PUSH.
+2013-08-08 14:30:39,624 INFO __githubuser__=raychorn
+2013-08-08 14:30:39,631 INFO __githubpassword__=peekab00
+2013-08-08 14:30:39,631 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 14:30:39,632 INFO __ip__=127.0.0.1
+2013-08-08 14:30:39,634 INFO __port__=12222
+2013-08-08 14:30:39,634 INFO __username__=fakeuser1
+2013-08-08 14:30:46,888 INFO -rwxr-xr-x 1 root root 2419 Aug  8 12:34 /root/bin/zip2github.sh
+2013-08-08 14:30:46,888 INFO 
+2013-08-08 14:30:53,394 INFO 755 /root/bin/zip2github.sh
+2013-08-08 14:30:53,394 INFO 
+2013-08-08 15:07:02,940 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-08 15:07:02,944 INFO BEGIN PUSH.
+2013-08-08 15:07:02,944 INFO __githubuser__=raychorn
+2013-08-08 15:07:02,950 INFO __githubpassword__=peekab00
+2013-08-08 15:07:02,953 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-08 15:07:02,953 INFO __ip__=127.0.0.1
+2013-08-08 15:07:02,954 INFO __port__=12222
+2013-08-08 15:07:02,956 INFO __username__=fakeuser1
+2013-08-08 15:07:10,434 INFO -rwxr-xr-x 1 root root 2419 Aug  8 12:34 /root/bin/zip2github.sh
+2013-08-08 15:07:10,434 INFO 
+2013-08-08 15:07:17,098 INFO 755 /root/bin/zip2github.sh
+2013-08-08 15:07:17,098 INFO 
+2013-08-09 12:18:34,653 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 12:18:34,667 INFO BEGIN PUSH.
+2013-08-09 12:18:34,716 INFO __githubuser__=raychorn
+2013-08-09 12:18:34,789 INFO __githubpassword__=peekab00
+2013-08-09 12:18:34,789 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 12:18:34,792 INFO __ip__=127.0.0.1
+2013-08-09 12:18:34,792 INFO __port__=12222
+2013-08-09 12:18:34,792 INFO __username__=fakeuser1
+2013-08-09 12:25:03,171 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 12:25:03,178 INFO BEGIN PUSH.
+2013-08-09 12:25:03,180 INFO __githubuser__=raychorn
+2013-08-09 12:25:03,184 INFO __githubpassword__=peekab00
+2013-08-09 12:25:03,186 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 12:25:03,187 INFO __ip__=127.0.0.1
+2013-08-09 12:25:03,187 INFO __port__=12222
+2013-08-09 12:25:03,188 INFO __username__=fakeuser1
+2013-08-09 12:27:21,190 INFO BEGIN PUSH.
+2013-08-09 12:27:21,190 INFO __githubuser__=raychorn
+2013-08-09 12:27:21,190 INFO __githubpassword__=peekab00
+2013-08-09 12:27:21,191 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 12:27:21,191 INFO __ip__=127.0.0.1
+2013-08-09 12:27:21,193 INFO __port__=12222
+2013-08-09 12:27:21,193 INFO __username__=fakeuser1
+2013-08-09 12:29:55,339 INFO BEGIN PUSH.
+2013-08-09 12:29:55,341 INFO __githubuser__=raychorn
+2013-08-09 12:29:55,342 INFO __githubpassword__=peekab00
+2013-08-09 12:29:55,342 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 12:29:55,344 INFO __ip__=127.0.0.1
+2013-08-09 12:29:55,344 INFO __port__=12222
+2013-08-09 12:29:55,345 INFO __username__=fakeuser1
+2013-08-09 12:34:55,835 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 12:34:55,841 INFO BEGIN PUSH.
+2013-08-09 12:34:55,842 INFO __githubuser__=raychorn
+2013-08-09 12:34:55,848 INFO __githubpassword__=peekab00
+2013-08-09 12:34:55,848 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 12:34:55,848 INFO __ip__=127.0.0.1
+2013-08-09 12:34:55,849 INFO __port__=12222
+2013-08-09 12:34:55,851 INFO __username__=fakeuser1
+2013-08-09 12:36:02,888 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 12:36:02,894 INFO BEGIN PUSH.
+2013-08-09 12:36:02,894 INFO __githubuser__=raychorn
+2013-08-09 12:36:02,900 INFO __githubpassword__=peekab00
+2013-08-09 12:36:02,901 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 12:36:02,901 INFO __ip__=127.0.0.1
+2013-08-09 12:36:02,901 INFO __port__=12222
+2013-08-09 12:36:02,901 INFO __username__=fakeuser1
+2013-08-09 12:37:19,256 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 12:37:19,267 INFO BEGIN PUSH.
+2013-08-09 12:37:19,278 INFO __githubuser__=raychorn
+2013-08-09 12:37:19,282 INFO __githubpassword__=peekab00
+2013-08-09 12:37:19,282 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 12:37:19,282 INFO __ip__=127.0.0.1
+2013-08-09 12:37:19,283 INFO __port__=12222
+2013-08-09 12:37:19,285 INFO __username__=fakeuser1
+2013-08-09 12:44:07,746 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 12:44:07,756 INFO BEGIN PUSH.
+2013-08-09 12:44:07,759 INFO __githubuser__=raychorn
+2013-08-09 12:44:07,773 INFO __githubpassword__=peekab00
+2013-08-09 12:44:07,773 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 12:44:07,775 INFO __ip__=127.0.0.1
+2013-08-09 12:44:07,775 INFO __port__=12222
+2013-08-09 12:44:07,776 INFO __username__=fakeuser1
+2013-08-09 13:21:59,928 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 13:21:59,934 INFO BEGIN PUSH.
+2013-08-09 13:21:59,936 INFO __githubuser__=raychorn
+2013-08-09 13:21:59,940 INFO __githubpassword__=peekab00
+2013-08-09 13:21:59,944 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 13:21:59,946 INFO __ip__=127.0.0.1
+2013-08-09 13:21:59,947 INFO __port__=12222
+2013-08-09 13:21:59,951 INFO __username__=fakeuser1
+2013-08-09 13:22:08,443 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 13:22:08,443 INFO 
+2013-08-09 13:22:15,546 INFO 755 /root/bin/zip2github.sh
+2013-08-09 13:22:15,548 INFO 
+2013-08-09 13:22:15,665 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 258, in GET
+    __fp__ = '/'.join([f for f in fp.split('/') if (len(f) > 0)])
+NameError: global name 'fp' is not defined
+2013-08-09 13:26:51,960 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 13:26:51,969 INFO BEGIN PUSH.
+2013-08-09 13:26:51,971 INFO __githubuser__=raychorn
+2013-08-09 13:26:51,977 INFO __githubpassword__=peekab00
+2013-08-09 13:26:51,979 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 13:26:51,980 INFO __ip__=127.0.0.1
+2013-08-09 13:26:51,980 INFO __port__=12222
+2013-08-09 13:26:51,983 INFO __username__=fakeuser1
+2013-08-09 13:27:00,647 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 13:27:08,444 INFO 755 /root/bin/zip2github.sh
+2013-08-09 13:45:09,634 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 13:45:09,638 INFO BEGIN PUSH.
+2013-08-09 13:45:09,640 INFO __githubuser__=raychorn
+2013-08-09 13:45:09,645 INFO __githubpassword__=peekab00
+2013-08-09 13:45:09,647 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 13:45:09,648 INFO __ip__=127.0.0.1
+2013-08-09 13:45:09,650 INFO __port__=12222
+2013-08-09 13:45:09,651 INFO __username__=fakeuser1
+2013-08-09 13:56:36,114 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 13:56:36,119 INFO BEGIN PUSH.
+2013-08-09 13:56:36,121 INFO __githubuser__=raychorn
+2013-08-09 13:56:36,128 INFO __githubpassword__=peekab00
+2013-08-09 13:56:36,131 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 13:56:36,132 INFO __ip__=127.0.0.1
+2013-08-09 13:56:36,134 INFO __port__=12222
+2013-08-09 13:56:36,134 INFO __username__=fakeuser1
+2013-08-09 14:13:03,846 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 14:13:03,858 INFO BEGIN PUSH.
+2013-08-09 14:13:03,858 INFO __githubuser__=raychorn
+2013-08-09 14:13:03,865 INFO __githubpassword__=peekab00
+2013-08-09 14:13:03,865 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 14:13:03,867 INFO __ip__=127.0.0.1
+2013-08-09 14:13:03,868 INFO __port__=12222
+2013-08-09 14:13:03,869 INFO __username__=fakeuser1
+2013-08-09 14:57:28,388 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 14:57:28,391 INFO BEGIN PUSH.
+2013-08-09 14:57:28,391 INFO __githubuser__=raychorn
+2013-08-09 14:57:28,411 INFO __githubpassword__=peekab00
+2013-08-09 14:57:28,411 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 14:57:28,411 INFO __ip__=127.0.0.1
+2013-08-09 14:57:28,411 INFO __port__=12222
+2013-08-09 14:57:28,413 INFO __username__=fakeuser1
+2013-08-09 15:31:43,933 INFO BEGIN PUSH.
+2013-08-09 15:31:43,934 INFO __githubuser__=raychorn
+2013-08-09 15:31:43,938 INFO __githubpassword__=peekab00
+2013-08-09 15:31:43,940 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 15:31:43,943 INFO __ip__=127.0.0.1
+2013-08-09 15:31:43,944 INFO __port__=12222
+2013-08-09 15:31:43,944 INFO __username__=fakeuser1
+2013-08-09 15:32:44,336 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 15:32:44,344 INFO BEGIN PUSH.
+2013-08-09 15:32:44,345 INFO __githubuser__=raychorn
+2013-08-09 15:32:44,358 INFO __githubpassword__=peekab00
+2013-08-09 15:32:44,358 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 15:32:44,359 INFO __ip__=127.0.0.1
+2013-08-09 15:32:44,361 INFO __port__=12222
+2013-08-09 15:32:44,361 INFO __username__=fakeuser1
+2013-08-09 15:36:13,101 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 15:36:13,105 INFO BEGIN PUSH.
+2013-08-09 15:36:13,107 INFO __githubuser__=raychorn
+2013-08-09 15:36:13,131 INFO __githubpassword__=peekab00
+2013-08-09 15:36:13,131 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 15:36:13,132 INFO __ip__=127.0.0.1
+2013-08-09 15:36:13,134 INFO __port__=12222
+2013-08-09 15:36:13,134 INFO __username__=fakeuser1
+2013-08-09 15:37:17,198 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 15:37:17,203 INFO BEGIN PUSH.
+2013-08-09 15:37:17,203 INFO __githubuser__=raychorn
+2013-08-09 15:37:17,209 INFO __githubpassword__=peekab00
+2013-08-09 15:37:17,210 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 15:37:17,210 INFO __ip__=127.0.0.1
+2013-08-09 15:37:17,211 INFO __port__=12222
+2013-08-09 15:37:17,213 INFO __username__=fakeuser1
+2013-08-09 15:37:44,364 INFO BEGIN PUSH.
+2013-08-09 15:37:44,375 INFO __githubuser__=raychorn
+2013-08-09 15:37:44,375 INFO __githubpassword__=peekab00
+2013-08-09 15:37:44,377 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 15:37:44,378 INFO __ip__=127.0.0.1
+2013-08-09 15:37:44,378 INFO __port__=12222
+2013-08-09 15:37:44,378 INFO __username__=fakeuser1
+2013-08-09 15:39:41,207 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 15:39:41,211 INFO BEGIN PUSH.
+2013-08-09 15:39:41,213 INFO __githubuser__=raychorn
+2013-08-09 15:39:41,217 INFO __githubpassword__=peekab00
+2013-08-09 15:39:41,217 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 15:39:41,217 INFO __ip__=127.0.0.1
+2013-08-09 15:39:41,217 INFO __port__=12222
+2013-08-09 15:39:41,219 INFO __username__=fakeuser1
+2013-08-09 15:57:27,391 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 15:57:27,394 INFO BEGIN PUSH.
+2013-08-09 15:57:27,404 INFO __githubuser__=raychorn
+2013-08-09 15:57:27,408 INFO __githubpassword__=peekab00
+2013-08-09 15:57:27,410 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 15:57:27,411 INFO __ip__=127.0.0.1
+2013-08-09 15:57:27,411 INFO __port__=12222
+2013-08-09 15:57:27,413 INFO __username__=fakeuser1
+2013-08-09 16:06:44,244 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 16:06:44,249 INFO BEGIN PUSH.
+2013-08-09 16:06:44,250 INFO __githubuser__=raychorn
+2013-08-09 16:06:44,255 INFO __githubpassword__=peekab00
+2013-08-09 16:06:44,256 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 16:06:44,256 INFO __ip__=127.0.0.1
+2013-08-09 16:06:44,257 INFO __port__=12222
+2013-08-09 16:06:44,263 INFO __username__=fakeuser1
+2013-08-09 16:06:58,509 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 16:06:58,509 INFO 
+2013-08-09 16:07:05,539 INFO 755 /root/bin/zip2github.sh
+2013-08-09 16:07:05,539 INFO 
+2013-08-09 16:15:24,443 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 257, in GET
+    __github__.github_user_repos_create(__repo_name__)
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\pyGitHubProxyMagic.py", line 21, in github_user_repos_create
+    r = requests.get(normalize_uri(self.uri)+'github/%s/%s/get/user/repos/create/%s' % (self.username,self.password,name))
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\requests\api.py", line 49, in get
+    return request('get', url, **kwargs)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\requests\api.py", line 38, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\requests\sessions.py", line 262, in request
+    resp = self.send(prep, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\requests\sessions.py", line 357, in send
+    r = adapter.send(request, **kwargs)
+  File "j:\Python27(Stackless)-09-05-2011\Python27\lib\site-packages\requests\adapters.py", line 159, in send
+    raise ConnectionError(e)
+ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9909): Max retries exceeded with url: /github/raychorn/peekab00/get/user/repos/create/Ruby-Python-Bridge%20(v2) (Caused by <class 'socket.error'>: [Errno 10054] An existing connection was forcibly closed by the remote host)
+2013-08-09 16:19:04,078 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 16:19:04,084 INFO BEGIN PUSH.
+2013-08-09 16:19:04,085 INFO __githubuser__=raychorn
+2013-08-09 16:19:04,091 INFO __githubpassword__=peekab00
+2013-08-09 16:19:04,091 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 16:19:04,092 INFO __ip__=127.0.0.1
+2013-08-09 16:19:04,092 INFO __port__=12222
+2013-08-09 16:19:04,094 INFO __username__=fakeuser1
+2013-08-09 16:19:51,476 INFO BEGIN PUSH.
+2013-08-09 16:19:51,477 INFO __githubuser__=raychorn
+2013-08-09 16:19:51,479 INFO __githubpassword__=peekab00
+2013-08-09 16:19:51,480 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 16:19:51,480 INFO __ip__=127.0.0.1
+2013-08-09 16:19:51,482 INFO __port__=12222
+2013-08-09 16:19:51,483 INFO __username__=fakeuser1
+2013-08-09 16:22:00,197 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 16:22:00,217 INFO BEGIN PUSH.
+2013-08-09 16:22:00,220 INFO __githubuser__=raychorn
+2013-08-09 16:22:00,226 INFO __githubpassword__=peekab00
+2013-08-09 16:22:00,227 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 16:22:00,229 INFO __ip__=127.0.0.1
+2013-08-09 16:22:00,230 INFO __port__=12222
+2013-08-09 16:22:00,230 INFO __username__=fakeuser1
+2013-08-09 16:53:33,657 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 16:53:33,660 INFO BEGIN PUSH.
+2013-08-09 16:53:33,660 INFO __githubuser__=raychorn
+2013-08-09 16:53:33,664 INFO __githubpassword__=peekab00
+2013-08-09 16:53:33,664 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 16:53:33,664 INFO __ip__=127.0.0.1
+2013-08-09 16:53:33,665 INFO __port__=12222
+2013-08-09 16:53:33,665 INFO __username__=fakeuser1
+2013-08-09 16:56:04,025 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 16:56:10,769 INFO 755 /root/bin/zip2github.sh
+2013-08-09 16:56:10,770 INFO 
+2013-08-09 17:41:58,082 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 17:41:58,086 INFO BEGIN PUSH.
+2013-08-09 17:41:58,088 INFO __githubuser__=raychorn
+2013-08-09 17:41:58,092 INFO __githubpassword__=peekab00
+2013-08-09 17:41:58,092 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 17:41:58,095 INFO __ip__=127.0.0.1
+2013-08-09 17:41:58,095 INFO __port__=12222
+2013-08-09 17:41:58,095 INFO __username__=fakeuser1
+2013-08-09 17:42:12,497 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 17:42:12,499 INFO 
+2013-08-09 17:42:18,941 INFO 755 /root/bin/zip2github.sh
+2013-08-09 17:42:18,943 INFO 
+2013-08-09 17:51:12,375 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 17:51:12,378 INFO BEGIN PUSH.
+2013-08-09 17:51:12,380 INFO __githubuser__=raychorn
+2013-08-09 17:51:12,385 INFO __githubpassword__=peekab00
+2013-08-09 17:51:12,385 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 17:51:12,388 INFO __ip__=127.0.0.1
+2013-08-09 17:51:12,388 INFO __port__=12222
+2013-08-09 17:51:12,388 INFO __username__=fakeuser1
+2013-08-09 17:51:26,351 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 17:51:26,352 INFO 
+2013-08-09 17:51:32,878 INFO 755 /root/bin/zip2github.sh
+2013-08-09 17:51:32,878 INFO 
+2013-08-09 17:54:58,566 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 17:54:58,572 INFO BEGIN PUSH.
+2013-08-09 17:54:58,573 INFO __githubuser__=raychorn
+2013-08-09 17:54:58,579 INFO __githubpassword__=peekab00
+2013-08-09 17:54:58,581 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 17:54:58,582 INFO __ip__=127.0.0.1
+2013-08-09 17:54:58,582 INFO __port__=12222
+2013-08-09 17:54:58,584 INFO __username__=fakeuser1
+2013-08-09 17:58:58,976 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 17:58:58,976 INFO 
+2013-08-09 17:59:05,700 INFO 755 /root/bin/zip2github.sh
+2013-08-09 17:59:05,703 INFO 
+2013-08-09 18:00:27,039 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 18:00:27,049 INFO BEGIN PUSH.
+2013-08-09 18:00:27,049 INFO __githubuser__=raychorn
+2013-08-09 18:00:27,053 INFO __githubpassword__=peekab00
+2013-08-09 18:00:27,055 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 18:00:27,055 INFO __ip__=127.0.0.1
+2013-08-09 18:00:27,055 INFO __port__=12222
+2013-08-09 18:00:27,056 INFO __username__=fakeuser1
+2013-08-09 18:00:39,934 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 18:00:39,936 INFO 
+2013-08-09 18:00:46,470 INFO 755 /root/bin/zip2github.sh
+2013-08-09 18:00:46,471 INFO 
+2013-08-09 18:22:16,956 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 18:22:16,960 INFO BEGIN PUSH.
+2013-08-09 18:22:16,961 INFO __githubuser__=raychorn
+2013-08-09 18:22:16,973 INFO __githubpassword__=peekab00
+2013-08-09 18:22:16,973 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 18:22:16,974 INFO __ip__=127.0.0.1
+2013-08-09 18:22:16,979 INFO __port__=12222
+2013-08-09 18:22:16,983 INFO __username__=fakeuser1
+2013-08-09 18:22:29,766 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 18:22:29,766 INFO 
+2013-08-09 18:22:36,214 INFO 755 /root/bin/zip2github.sh
+2013-08-09 18:22:36,217 INFO 
+2013-08-09 18:22:36,219 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 261, in GET
+    if (__normalized_repo_name__ not in [repo.repo__name for r in __available__.available]):
+NameError: global name 'repo' is not defined
+2013-08-09 18:25:03,789 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-09 18:25:03,792 INFO BEGIN PUSH.
+2013-08-09 18:25:03,793 INFO __githubuser__=raychorn
+2013-08-09 18:25:03,802 INFO __githubpassword__=peekab00
+2013-08-09 18:25:03,802 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-09 18:25:03,803 INFO __ip__=127.0.0.1
+2013-08-09 18:25:03,805 INFO __port__=12222
+2013-08-09 18:25:03,805 INFO __username__=fakeuser1
+2013-08-09 18:25:16,348 INFO -rwxr-xr-x 1 root root 4804 Aug  9 10:35 /root/bin/zip2github.sh
+2013-08-09 18:25:16,349 INFO 
+2013-08-09 18:25:23,117 INFO 755 /root/bin/zip2github.sh
+2013-08-09 18:25:23,118 INFO 
+2013-08-13 10:25:52,326 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 10:25:52,335 INFO BEGIN PUSH.
+2013-08-13 10:41:07,670 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 10:41:07,673 INFO BEGIN PUSH.
+2013-08-13 10:48:21,877 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 10:48:21,887 INFO BEGIN PUSH.
+2013-08-13 10:52:06,506 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 10:52:06,510 INFO BEGIN PUSH.
+2013-08-13 11:12:12,026 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 11:12:12,030 INFO BEGIN PUSH.
+2013-08-13 11:12:12,036 INFO __githubuser__=raychorn
+2013-08-13 11:12:12,055 INFO __githubpassword__=peekab00
+2013-08-13 11:12:12,055 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-13 11:12:12,056 INFO __ip__=127.0.0.1
+2013-08-13 11:12:12,059 INFO __port__=12222
+2013-08-13 11:12:12,059 INFO __username__=fakeuser1
+2013-08-13 11:12:27,476 INFO -rwxr-xr-x 1 root root 4810 Aug  9 18:43 /root/bin/zip2github.sh
+2013-08-13 11:12:34,644 INFO 755 /root/bin/zip2github.sh
+2013-08-13 11:12:34,910 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 302, in GET
+    cmd = '%s -u=%s -e="%s" -d="/%s" %s -g="git@github.com:%s/%s"' % (__command__,__username__,__email__,__fp__,' '.join(get_remotes_from(__remotes__)),__githubuser__,__normalized_repo_name__)
+UnboundLocalError: local variable '__fp__' referenced before assignment
+2013-08-13 11:17:52,131 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 11:17:52,138 INFO BEGIN PUSH.
+2013-08-13 11:17:52,148 INFO __githubuser__=raychorn
+2013-08-13 11:17:52,173 INFO __githubpassword__=peekab00
+2013-08-13 11:17:52,194 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-13 11:17:52,196 INFO __ip__=127.0.0.1
+2013-08-13 11:17:52,197 INFO __port__=12222
+2013-08-13 11:17:52,200 INFO __username__=fakeuser1
+2013-08-13 11:18:05,964 INFO -rwxr-xr-x 1 root root 4810 Aug  9 18:43 /root/bin/zip2github.sh
+2013-08-13 11:18:05,990 INFO 
+2013-08-13 11:18:13,226 INFO 755 /root/bin/zip2github.sh
+2013-08-13 11:18:13,229 INFO 
+2013-08-13 11:18:13,355 ERROR Failed to handle the ip address, port and username correctly during development.
+Traceback (most recent call last):
+  File "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py\githubManagerServer.py", line 302, in GET
+    cmd = '%s -u=%s -e="%s" -d="/%s" %s -g="git@github.com:%s/%s"' % (__command__,__username__,__email__,__fp__,' '.join(get_remotes_from(__remotes__)),__githubuser__,__normalized_repo_name__)
+UnboundLocalError: local variable '__fp__' referenced before assignment
+2013-08-13 11:20:27,503 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 11:20:27,509 INFO BEGIN PUSH.
+2013-08-13 11:20:27,515 INFO __githubuser__=raychorn
+2013-08-13 11:20:27,529 INFO __githubpassword__=peekab00
+2013-08-13 11:20:27,532 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-13 11:20:27,532 INFO __ip__=127.0.0.1
+2013-08-13 11:20:27,533 INFO __port__=12222
+2013-08-13 11:20:27,535 INFO __username__=fakeuser1
+2013-08-13 11:20:40,755 INFO -rwxr-xr-x 1 root root 4810 Aug  9 18:43 /root/bin/zip2github.sh
+2013-08-13 11:20:47,835 INFO 755 /root/bin/zip2github.sh
+2013-08-13 11:20:47,835 INFO 
+2013-08-13 11:23:52,730 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 11:23:52,734 INFO BEGIN PUSH.
+2013-08-13 11:23:52,742 INFO __githubuser__=raychorn
+2013-08-13 11:23:52,763 INFO __githubpassword__=peekab00
+2013-08-13 11:23:52,766 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-13 11:23:52,766 INFO __ip__=127.0.0.1
+2013-08-13 11:23:52,767 INFO __port__=12222
+2013-08-13 11:23:52,769 INFO __username__=fakeuser1
+2013-08-13 11:24:06,943 INFO -rwxr-xr-x 1 root root 4810 Aug  9 18:43 /root/bin/zip2github.sh
+2013-08-13 11:24:06,944 INFO 
+2013-08-13 11:24:13,989 INFO 755 /root/bin/zip2github.sh
+2013-08-13 11:24:13,992 INFO 
+2013-08-13 11:25:47,335 INFO Changing to directory "j:\@Vyper Logix Corp\@Projects\python-projects\_django-projects\githubManager-Server\web.py".
+2013-08-13 11:25:47,342 INFO BEGIN PUSH.
+2013-08-13 11:25:47,352 INFO __githubuser__=raychorn
+2013-08-13 11:25:47,375 INFO __githubpassword__=peekab00
+2013-08-13 11:25:47,377 INFO __repo_name__=Ruby-Python-Bridge (v2)
+2013-08-13 11:25:47,382 INFO __ip__=127.0.0.1
+2013-08-13 11:25:47,384 INFO __port__=12222
+2013-08-13 11:25:47,384 INFO __username__=fakeuser1
+2013-08-13 11:26:01,058 INFO -rwxr-xr-x 1 root root 4810 Aug  9 18:43 /root/bin/zip2github.sh
+2013-08-13 11:26:01,062 INFO 
+2013-08-13 11:26:08,240 INFO 755 /root/bin/zip2github.sh

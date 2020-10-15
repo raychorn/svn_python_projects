@@ -1,0 +1,43 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+
+
+{% load prefab_tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>{% block "browsertitle" %}{% endblock %} - Blogmaker tools
+</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% setting 'BLOG_MEDIA_PREFIX' %}css/blogmaker_tools.css" />
+{% block extrastyle %}
+{% endblock %}
+
+{% block extrahead %}
+{% endblock %}
+
+</head>
+<body marginwidth='0' marginheight='0' >
+
+<div class="tools_header">
+<table cellspacing="0" cellpadding="0" border="0" class="tools_header">
+<tr>
+<td class="tools_title">Blogmaker tools</td>
+<td class="tools_links"><a href="{% setting 'BLOG_ROOT' %}tools">Tools index</a> / <a href="{% setting 'SITE_ROOT' %}admin/blog/entry">Entries</a> / <a href="{% setting 'SITE_ROOT' %}admin/blog/tag">Tags</a> / <a href="{% setting 'SITE_ROOT' %}admin">Main admin page</a></td>
+</tr>
+</table>
+</div>
+
+<div class="tools_path"><a href="{% setting 'BLOG_ROOT' %}tools/">Tools home</a>{% block path %}{% endblock %}</div>
+
+<div class="tools_content">
+{% block content %}
+{% endblock %}
+</div>
+
+</body>
+</html>

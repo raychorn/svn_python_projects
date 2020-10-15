@@ -1,0 +1,374 @@
+/********************************
+ * Page Layout
+ ********************************/
+
+body,pre {margin:0;padding:0;font-family:arial;font-size:12px;line-height:130%;}
+
+#container {width:100%;border-collapse:collapse}
+#main {width:76%;background:#fff url({{ IMAGES_URL }}main_border_right.jpg) 100% 100px repeat-y;
+	   padding:10px 30px 10px 20px}
+#sidebar {background:#AEA7A1 url({{ IMAGES_URL }}sidebar_top.gif) repeat-x;padding-top:0px;
+		  font-size:11px;font-family:verdana;}
+#footer {margin-top:10px;padding-top:10px;border-top:1px solid #a8998c;clear:left;}
+
+/* Header */
+
+#header {width:100%;margin-top:0px;position:relative;}
+#login {position:absolute;left:50%;width:48%;top:27px;text-align:right;}
+/* Holly Hack - Hides from IE5-mac and FF \*/
+* html #login {left:49%;}
+/* End hide from IE5-mac */
+#header img {padding-left:20px;}
+#logo a:hover {background:transparent;}
+#nav {padding-bottom:0px;
+	  background:url({{ IMAGES_URL }}header/red_nav_bar.gif) bottom repeat-x;
+	  margin-bottom:0;margin-left:0;padding-left:20px;height:45px;
+	  }
+#nav li {list-style:none;float:left;height:18px;width:111px;
+		 background:#A8998c url({{ IMAGES_URL }}header/nav_back.gif) no-repeat;
+		 font-family:arial;font-size:14px;color:#fff;font-weight:bold;text-align:center;
+		 padding:3px 0px;margin:0px 5px}
+#nav li.selected {background:#E8112D url({{ IMAGES_URL }}header/nav_back_selected.gif) no-repeat;}
+#nav li a{color:#fff;text-decoration:none;display:block;}
+#nav li a:hover {background:transparent;}
+
+/********************************
+ * Fonts and Headers
+********************************/
+
+a {color:#0000FF;}
+a:hover {color:#fff;background:#0000FF;text-decoration:none;}
+img:hover {background-color:#fff;}
+#sidebar img:hover {background-color:#AEA7A1;cursor:hand;cursor:pointer;}
+#sidebar2 img:hover {background-color:#AEA7A1;cursor:hand;cursor:pointer;}
+
+.small_margin{margin:2px 0px;}
+/* Holly Hack - Hides from IE5-mac and FF \*/
+* html .small_margin  {margin-bottom:0}
+/* End hide from IE5-mac */
+
+h1 {font-family:Georgia;color:#E8112D;font-weight:normal;font-size:24px;
+	margin-top:0;line-height:100%;}
+h1 img {float:right;}
+h2, h2 span.title {font-family:arial;font-size:15px;}
+
+h2.gray {position:relative;background-color:#a8998c;color:#fff;padding:5px 10px 6px 10px;margin:0}
+
+h2.gray span, h3.gray span 
+{position:absolute;right:5px;
+ width:49%;top:2px;
+ text-align:right;}
+h2 span.title {color:#fff;position:relative;padding-left:3px;top:-0px;}
+h3.gray {position:relative;background-color:#a8998c;color:#fff;padding:2px 10px 2px 10px;margin:0}
+
+#comments_title {padding-left:20px;position:relative;width:auto;text-align:auto;font-family:arial;font-size:15px;}
+
+h3.gray span 
+{position:absolute;right:5px;
+ width:49%;top:1px;
+ text-align:right;}
+
+/* Holly Hack - Hides from IE5-mac and FF \*/
+* html h2.gray span  {right:33px;top:4px;}
+* html h3.gray span  {top:2px;right:3px;}
+/* End hide from IE5-mac */
+
+
+h2.buried_header {margin-top:20px;}
+h2 span {font-size:11px;}
+
+h3 {font-family:verdana;font-size:12px;}
+.small {font-size:11px;}
+.gray {color:#666;}
+
+img {border:0;}
+
+.bold {font-weight:bold;}
+
+/********************************
+ * Tables
+ ********************************/
+
+.collapsed {border-collapse:collapse;}
+
+th {text-align:left;}
+
+.listing {width:100%;border-collapse:collapse;}
+.listing th {border-bottom:1px solid #a8998c;padding:5px;padding-right:10px;}
+.listing td {padding:5px;}
+
+.shaded, .shaded tr {background-color:#efefef;}
+
+/********************************
+ * Forms
+ ********************************/
+.form {width:100%}
+.form td {font-weight:bold;padding-bottom:8px;}
+.multi {float:left;padding-right:20px;}
+.full_width {width:99%;}
+.form_spacer {padding:0 5px;}
+.text_area {height:120px;width:99%;}
+.text_field {width:99%;}
+.hidden_field {display: none;}
+
+/********************************
+ * Lists
+ ********************************/
+
+#sidebar ul{list-style:none;margin:20px 0px;padding:0;}
+#sidebar li{padding:10px;font-size:12px;font-weight:bold;font-family:arial;}
+#sidebar li.selected{background-color:#E8112D;width:70%;color:#fff;}
+
+#sidebar .list li {font-weight:normal;padding-left:0;font-family:verdana;font-size:11px;
+				   padding:5px;width:90%;}
+#sidebar .list li.shaded {background:#C7C7C7;}
+#sidebar .list li div {font-size:10px;color:#666;}
+#sidebar .list li div a{text-decoration:none;}
+
+#sidebar .list li div.list-action {float:right;font-weight:normal;font-family:verdana;font-size:11px;margin:0px;padding:0px;}
+#sidebar .list li.slim {padding:1px;margin:1px;}
+
+/********************************
+ * Pages
+ ********************************/
+
+/* overall */
+#toolbar {text-align:right;border-bottom:1px solid #a8998c;margin-bottom:10px;padding-bottom:10px;}
+
+/* attachments */
+#attachments {width:100%;border-collapse:collapse;}
+#attachments td {padding:3px;}
+.attachment_icon {width:16px;padding:7px;padding-left:15px;}
+.attachment_name a {font-weight:bold;}
+.attachment_name div, .attachment_uploader {color:#666;}
+.attachment_name div {font-size:11px;}
+#upload_form {padding-bottom:15px}
+.private {margin-left:20px;}
+
+/* comments */
+#comment_form_body {width:100%;}
+.comment_container {width:100%;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #a8998c;}
+.comment_container div {padding-bottom:10px;}
+.comment_container p {margin:0;}
+#add_comment_form {padding-bottom:15px;}
+
+/* home */
+.subject {font-weight:bold;}
+.news_date {text-align:right;}
+
+.search {margin:10px auto;width:400px}
+.search_term_field {width:300px;}
+
+#solutions_container {width:100%;border-top:1px solid #a8998c;margin-top:10px;}
+#solutions_container {padding-top:10px;}
+
+#solutions_container .right {padding-left:10px;}
+#solutions_container .left {border-right:1px solid #a8998c;}
+#solutions_container ul {list-style:none;margin-left:0;padding-left:0;width:70%;}
+#solutions_container li {padding: 5px;font-weight:bold;}
+
+/* marketing message */
+
+#marketing {
+
+}
+
+
+/* cases */
+.case_number {width:50px;}
+#solutions_container li {padding: 5px;font-weight:bold;}
+.case_line td {font-size:11px;}
+td.case_header_container {padding:0;}
+
+#status_filter,#account_filter, #weekly_notes {
+	background:#fff;
+/*	margin-top:-179px;*/
+	font-weight:normal;
+	border:1px solid #ccc;
+	position: absolute;
+	top: -10000;left: 0;
+}
+
+#account_filter{
+	margin-left:0px;
+	margin-top:0px;
+	position: absolute;
+	top: 0;left: 0;
+}
+
+.status_shown {
+	border: 1px solid #ccc;
+	border-width:1px 1px 0px 1px;
+	background-color:red;
+	color:#fff;
+	padding:3px;
+	text-decoration:none;
+}
+
+#status_col {
+	width:70px;
+}
+
+#status_link, #account_link, #weekly_notes_link {
+	font-size:10px;
+	position:relative;
+}
+
+.listing th {
+	vertical-align:top;
+}
+
+#show_more, #hide_more {
+	text-align:center;
+	font-weight:bold;
+	padding-top:10px;
+}
+
+/* cases/new */
+
+#case_subject {
+	font-size: 18px;
+	padding: 2px;
+}
+
+#suggestions_box {
+	color: gray;
+	font-family: Georgia;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.suggestions_results {
+	font-weight: bold;
+	color: red;
+}
+
+/* case detail */
+#case_additional_information table {width:70%;border-collapse:collapse;}
+.prompt {text-align:right;font-weight:bold;width:30%;padding:3px 10px 3px 0px;}
+.edit_or_create {
+	border: 1px solid #ccc;
+	padding: 20px;
+	width: 300px;
+	margin: 0 auto;
+}
+.edit_or_create td {
+	text-align:center;
+}
+
+/* case_report/_save_report_as */
+
+div.save_report {
+  padding: 1em;
+	background:#fff;
+	margin-top:1px;
+	font-weight:normal;
+	border:1px solid #ccc;
+}
+
+/* case_watchers/account */
+
+.update_subscriptions_button {
+	text-align:center;
+	margin: 10px 0px;
+}
+
+/* solutions */
+/*.search_solutions {margin:10px auto;width:530px}*/
+.search_solutions {margin:0px 0px}
+.solution_category {padding-right:10px;margin-bottom:10px;}
+a.top_level_category {font-weight:bold;font-size:13px;}
+#rating {list-style:none;margin-left:0;padding-bottom:0px;padding-left:0;}
+#rating li{float:left;padding-right:20px;padding-left:0;}
+#total_votes {clear:left;margin-top:10px;}
+.solution_category span {font-size:11px;display:block;margin-bottom:10px;}
+.solution_category span a {margin-right:10px;}
+
+/* soutions search */
+.solution_search_result {width:95%;margin-bottom:20px;}
+.solution_search_result a{font-weight:bold;font-size:13px;}
+.solution_search_result span {color:#666;}
+.solution_search_result span a {color:#FF00FF;font-weight:normal;}
+.solution_search_result span a:hover {color:#fff;}
+.highlight {background:yellow;}
+
+/* User Login */
+body.blank {background:#efefef;}
+#login_container {border:10px solid #a8998c;padding:10px;
+				  margin:5% auto;width:60%;background:#fff;}
+#login_form {
+		margin:0 auto;}
+#login_form .prompt {width:20%;text-align:right;}
+#login_form td {text-align:left;padding:5px;}
+#blank_container {padding:30px 0;margin:0 auto;text-align:center;}
+
+/* articles */
+.article_container {padding-top:20px;width:60%;}
+
+/* admin articles */
+.article_field {height:300px;width:90%;}
+
+/* Pages */
+
+.pages {clear:left;text-align:center; font: 11px Arial, Helvetica, sans-serif; padding-top: 20px; padding-bottom: 10px; margin: 0px; }
+.pages a, .pageList .this_page {padding: 2px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none;}
+.pages a:visited {padding: 2px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none;}
+.pages .break {padding: 2px 6px; border: none; background: #fff; text-decoration: none;}
+.pages .end {padding: 2px 6px; border: solid 2px #ddd; background: #fff;}
+.pages .this_page {padding: 2px 6px; border-color: #999; font-weight: bold; font-size: 13px; vertical-align: top; background: #fff;}
+.pages a:hover {color: #fff; background: #0063DC; border-color: #036; text-decoration: none;}
+.pages .ranking {display: block; margin-top: 0.5em; font-weight: bold;}
+.pages .ranking a {padding: 0; border: 0; background: transparent;}
+.pages .ranking a:hover {text-decoration: underline; color: #f60; background: transparent;}
+
+/* Flash Messages */
+#warning, #notice, #warning_login_form, #notice_login_form{font-family:'Trebuchet MS';
+		font-size:15px;letter-spacing: -1px;
+		line-height:110%;color:#000;font-weight:bold;
+		background-color:#efefef;margin-right:0px;padding:5px;margin-bottom:10px}
+#notice{background-color:#efefef;color:#000}
+#warning, #notice span {padding-left:15px}
+#warning_login_form, #notice_login_form{background-color:transparent;margin-top:10px;}
+
+#shutdown_login_form{font-family:'Trebuchet MS';text-align: left;border:5px solid #a8998c;
+		font-size:15px;letter-spacing: -1px;
+		line-height:110%;color:#000;font-weight:bold;
+		background-color:#efefef;margin-right:0px;padding:5px;margin-bottom:10px}
+/*********************************
+ * Generated Styles
+ */
+
+.fieldWithErrors>input, .fieldWithErrors>textarea {
+	background-color: #ffff80
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 0px 5px 5px 5px;
+  margin-bottom: 20px;
+}
+
+#errorExplanation h2 {
+  text-align: center;
+  font-weight: bold;	
+  font-size: 14px;
+  padding: 3px;
+  background-color: red;
+  color: #fff;
+  letter-spacing:1px
+}
+
+#errorExplanation p {
+  margin-bottom: 0;
+  padding: 5px;
+  font-size: 13px;font-weight: bold;
+}
+
+#errorExplanation ul li {
+  margin-left: 20px;
+  font-size: 11px;
+  line-height: 25px;
+  list-style: square;
+}
+

@@ -1,0 +1,168 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pyui.theme</title>
+<style type="text/css"><!--
+TT { font-family: lucidatypewriter, lucida console, courier }
+--></style></head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pyui.html"><font color="#ffffff">pyui</font></a>.theme</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/ninja/projects/pyui/pyui/theme.py">c:\ninja\projects\pyui\pyui\theme.py</a></font></td></tr></table>
+    <p><tt>Pyui&nbsp;Themes.<br>
+Themes&nbsp;are&nbsp;a&nbsp;method&nbsp;of&nbsp;customizing&nbsp;the&nbsp;drawing&nbsp;of&nbsp;widgets&nbsp;in&nbsp;a&nbsp;pyui&nbsp;GUI.<br>
+&nbsp;<br>
+This&nbsp;modules&nbsp;keeps&nbsp;NO&nbsp;state&nbsp;for&nbsp;the&nbsp;drable&nbsp;objects&nbsp;-&nbsp;it&nbsp;just&nbsp;draws&nbsp;them&nbsp;on&nbsp;demand<br>
+from&nbsp;the&nbsp;widgets&nbsp;themselves&nbsp;which&nbsp;hold&nbsp;all&nbsp;the&nbsp;state.<br>
+&nbsp;<br>
+The&nbsp;constants&nbsp;for&nbsp;the&nbsp;theme&nbsp;objects&nbsp;live&nbsp;in&nbsp;pyui/locals.py</tt></p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pyui.locals.html">pyui.locals</a><br>
+</td><td width="25%" valign=top><a href="pyui.html">pyui</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="pyui.theme.html#dataTheme">dataTheme</a>
+</font></dt></dl>
+ 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="dataTheme">class <strong>dataTheme</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Theme&nbsp;objects&nbsp;(like&nbsp;buttons)&nbsp;are&nbsp;drawn&nbsp;through&nbsp;methods&nbsp;for&nbsp;each&nbsp;type&nbsp;of&nbsp;widget.<br>
+It&nbsp;returns&nbsp;the&nbsp;rect&nbsp;that&nbsp;the&nbsp;object&nbsp;draw&nbsp;fit&nbsp;into.<br>
+&nbsp;<br>
+The&nbsp;rect&nbsp;passed&nbsp;in&nbsp;should&nbsp;always&nbsp;be&nbsp;in&nbsp;window&nbsp;coordinates.<br>
+&nbsp;<br>
+Each&nbsp;theme&nbsp;has&nbsp;a&nbsp;3&nbsp;"BACK"&nbsp;fills.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="dataTheme-__init__"><strong>__init__</strong></a>(self, renderer, w, h)</dt></dl>
+
+<dl><dt><a name="dataTheme-draw3DRect"><strong>draw3DRect</strong></a>(self, rect, color, reverse)</dt><dd><tt>Draw&nbsp;a&nbsp;3D&nbsp;rectangle&nbsp;to&nbsp;the&nbsp;screen&nbsp;or&nbsp;a&nbsp;surface.&nbsp;Defaults&nbsp;to&nbsp;the&nbsp;screen.<br>
+(internal)</tt></dd></dl>
+
+<dl><dt><a name="dataTheme-drawBack1"><strong>drawBack1</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawBack2"><strong>drawBack2</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawBack3"><strong>drawBack3</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawButton"><strong>drawButton</strong></a>(self, rect, title, hasFocus, status, enabled)</dt><dd><tt>Options&nbsp;are:&nbsp;&nbsp;button&nbsp;title&nbsp;and&nbsp;the&nbsp;up/down&nbsp;status.<br>
+status&nbsp;==&nbsp;0:&nbsp;normal<br>
+status&nbsp;==&nbsp;1:&nbsp;rollover<br>
+status&nbsp;==&nbsp;2:&nbsp;down</tt></dd></dl>
+
+<dl><dt><a name="dataTheme-drawCheckBox"><strong>drawCheckBox</strong></a>(self, rect, text, checkState)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawEdit"><strong>drawEdit</strong></a>(self, rect, text, hasFocus, caretPos, selectPos)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawFrame"><strong>drawFrame</strong></a>(self, rect, title)</dt><dd><tt>Draw&nbsp;frame&nbsp;objects.<br>
+Frame&nbsp;objects&nbsp;are&nbsp;complex&nbsp;multi-part&nbsp;widgets.&nbsp;In&nbsp;order&nbsp;to&nbsp;allow&nbsp;the&nbsp;theme&nbsp;some&nbsp;flexibility&nbsp;of&nbsp;how&nbsp;to<br>
+position&nbsp;and&nbsp;draw&nbsp;various&nbsp;interactive&nbsp;frame&nbsp;elements,&nbsp;the&nbsp;<a href="#dataTheme-drawFrame">drawFrame</a>()&nbsp;method&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;hit<br>
+regions.&nbsp;Each&nbsp;element&nbsp;is&nbsp;a&nbsp;tuple&nbsp;consisting&nbsp;of&nbsp;a&nbsp;(region&nbsp;Id,&nbsp;rect).&nbsp;Region&nbsp;IDs&nbsp;are&nbsp;defined&nbsp;in&nbsp;locals.py.<br>
+The&nbsp;hit&nbsp;list&nbsp;is&nbsp;in&nbsp;top&nbsp;to&nbsp;bottom&nbsp;order&nbsp;for&nbsp;easier&nbsp;iteration.</tt></dd></dl>
+
+<dl><dt><a name="dataTheme-drawGradient"><strong>drawGradient</strong></a>(self, rect, vertical, c1, c2)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawImageButton"><strong>drawImageButton</strong></a>(self, rect, filename, title, hasFocus, status)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawLabel"><strong>drawLabel</strong></a>(self, rect, title, color)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawListBoxItem"><strong>drawListBoxItem</strong></a>(self, rect, title, selected, color)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawMenu"><strong>drawMenu</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawMenuBar"><strong>drawMenuBar</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawMenuBarItem"><strong>drawMenuBarItem</strong></a>(self, rect, title, selected)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawMenuItem"><strong>drawMenuItem</strong></a>(self, rect, title, selected, icon<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawOutlineRect"><strong>drawOutlineRect</strong></a>(self, rect, color, thick<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawScrollBar"><strong>drawScrollBar</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawScrollButtonDown"><strong>drawScrollButtonDown</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawScrollButtonUp"><strong>drawScrollButtonUp</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawSliderBar"><strong>drawSliderBar</strong></a>(self, rect, range, position, BARWIDTH<font color="#909090">=8</font>)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawSplitter"><strong>drawSplitter</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawTabHeader"><strong>drawTabHeader</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawTabItem"><strong>drawTabItem</strong></a>(self, rect, title, active)</dt></dl>
+
+<dl><dt><a name="dataTheme-drawToolTip"><strong>drawToolTip</strong></a>(self, text, rect)</dt></dl>
+
+<dl><dt><a name="dataTheme-getBgColor"><strong>getBgColor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-getColorKey"><strong>getColorKey</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-getFgColor"><strong>getFgColor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-getFrameBorderBottom"><strong>getFrameBorderBottom</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-getFrameBorderLeft"><strong>getFrameBorderLeft</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-getFrameBorderRight"><strong>getFrameBorderRight</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-getFrameBorderTop"><strong>getFrameBorderTop</strong></a>(self)</dt><dd><tt>###&nbsp;Information&nbsp;about&nbsp;the&nbsp;theme..</tt></dd></dl>
+
+<dl><dt><a name="dataTheme-getTabsHeight"><strong>getTabsHeight</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-getThemeConstant"><strong>getThemeConstant</strong></a>(self, constantID)</dt><dd><tt>Gets&nbsp;a&nbsp;theme&nbsp;constant.</tt></dd></dl>
+
+<dl><dt><a name="dataTheme-setArrowCursor"><strong>setArrowCursor</strong></a>(self)</dt><dd><tt>###&nbsp;mouse&nbsp;cursor&nbsp;functions</tt></dd></dl>
+
+<dl><dt><a name="dataTheme-setButtonCursor"><strong>setButtonCursor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-setResizeCursor"><strong>setResizeCursor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-setWaitCursor"><strong>setWaitCursor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="dataTheme-shadeBorder"><strong>shadeBorder</strong></a>(self, rect, d, reverse)</dt><dd><tt>Draw&nbsp;a&nbsp;3D&nbsp;rectangle&nbsp;to&nbsp;the&nbsp;screen&nbsp;or&nbsp;a&nbsp;surface.&nbsp;Defaults&nbsp;to&nbsp;the&nbsp;screen.<br>
+(internal)</tt></dd></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = 'Theme objects (like buttons) are drawn through m...nates.<font color="#c040c0">\n\n</font>    Each theme has a 3 "BACK" fills.<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.theme'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>emptyRect</strong> = [0, 0, 0, 0]<dd><tt>list()&nbsp;-&gt;&nbsp;new&nbsp;list<br>
+list(sequence)&nbsp;-&gt;&nbsp;new&nbsp;list&nbsp;initialized&nbsp;from&nbsp;sequence's&nbsp;items</tt></dl>
+
+</td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><strong>__file__</strong> = r'.\pyui\theme.pyc'<br>
+<strong>__name__</strong> = 'pyui.theme'</td></tr></table>
+</body></html>

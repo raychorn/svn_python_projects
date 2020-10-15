@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Delete redirect" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Delete redirect" %}</h1>
+<a href="{% url cms.views.list_redirect %}">{% trans "Back to listing" %}</a>
+
+<p>{% trans "Do you really want to delete " %} {{ object.value }}:{{ object.redirto }}?
+
+<form action="" method="post">
+  <input type="submit" name="delete" value="{% trans 'Delete' %}" />
+</form>
+</p>
+
+{% endblock %}

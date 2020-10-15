@@ -1,0 +1,31 @@
+v0.9.5 2008-05-02
+* Upgraded release branch bzr format to allow tagging
+* Added ReleaseNotes.txt - tried to include a little history as well
+* switch to setuptools for egg creation (bug #224280)
+* Use date14 as a serial in the version of __init__.py
+* removed TODO file as pertinent info has been moved into launchpad bugs
+* pep8 cleanup of odict
+* override odict.items() in pyax.sobject.batch to allow pprint (bug #148125)
+  - add new test case to query_test to ensure that pprint works on batches
+* Added search method to connection (bug #225344)
+  - add necessary classes and methods to beatbox
+  - create batchdict class with additional property that sums each batch for a total count 
+* removed tests/cleanup.py - now included in run_all_tests.py
+* Explicit support for salesforce API security token (bug #224405)
+* Added initial support for calling Apex web services (bug #222186)
+  - Rework beatbox to support this alternate kind of call on related endpoint
+  - tests for basic Apex web service calls against provided apex class
+* Added queryAll call (bug #224330)
+  - expanded query_test to test queryAll 
+* Added undelete call (bug #224331)
+  - added delete_test to explicitly test delete and undelete 
+* Fix for bug #217954 : update to API version 12.0
+* fix for bug #217958: create procedure fails if any new object fields specified have a value of "None"
+
+v0.9.4 2008-04-08
+* fixed testInvalidSession - wasn't testing for real situation
+* remove extraneous print statement from queryMore method
+* fit a force_http property into Context object for SOAP message debugging
+
+v0.9.3 2008-02-22
+* Added support for AssignmentRuleHeader via the context object 

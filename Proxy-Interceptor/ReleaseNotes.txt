@@ -1,0 +1,16 @@
+Release Notes:
+
+Proxy Interceptor 0.0.1:
+
+Wraps a remote web service with a pure proxy capable of intercepting incoming requests that are handled with a defined workflow that ends with the original web service thus returning the intended payload as-if
+the intended web service had been hit originally.
+
+Use Cases:
+
+OpenStack
+
+Allows OpenStack web services to become more useful by allowing workflows to be triggered for specific web services such as automation for DNS activity via Designate or other automation for other OpenStack
+web services.
+
+
+Copyright 2013-2014, Vyper Logix Corp, All Rights Reserved.

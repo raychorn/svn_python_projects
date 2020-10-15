@@ -1,0 +1,113 @@
+Factorial program using Stackless.
+5! = 120
+         5 function calls in 0.000 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 factorial.py:10(call)
+        1    0.000    0.000    0.000    0.000 factorial.py:15(factorial)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {method 'receive' of 'channel' objects}
+
+
+1000! / 998! = 999000
+         8 function calls in 0.010 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.010    0.010 <string>:1(<module>)
+        2    0.000    0.000    0.010    0.005 factorial.py:10(call)
+        2    0.000    0.000    0.010    0.005 factorial.py:15(factorial)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.010    0.005    0.010    0.005 {method 'receive' of 'channel' objects}
+
+
+10000! / 9998! = 99990000
+         8 function calls in 0.234 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.234    0.234 <string>:1(<module>)
+        2    0.000    0.000    0.234    0.117 factorial.py:10(call)
+        2    0.000    0.000    0.234    0.117 factorial.py:15(factorial)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.234    0.117    0.234    0.117 {method 'receive' of 'channel' objects}
+
+
+(ioTimeAnalysis) :: Category: "10000! / 9998!" = (0.240000009537)
+(ioTimeAnalysis) :: Category: "5!" = (0.0)
+(ioTimeAnalysis) :: Category: "1000! / 998!" = (0.018000125885)
+
+
+Time spent doing I/O :: (0.258000135422)
+Factorial program using generators.
+5! = 120
+         9 function calls in 0.000 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 generators_factorial_2.py:13(factorial)
+        6    0.000    0.000    0.000    0.000 generators_factorial_2.py:5(_factorial)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+1000! / 998! = 999000
+         2004 function calls in 0.002 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.002    0.002 <string>:1(<module>)
+        2    0.001    0.000    0.002    0.001 generators_factorial_2.py:13(factorial)
+     2000    0.002    0.000    0.002    0.000 generators_factorial_2.py:5(_factorial)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+10000! / 9998! = 99990000
+         20004 function calls in 0.135 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.135    0.135 <string>:1(<module>)
+        2    0.007    0.003    0.134    0.067 generators_factorial_2.py:13(factorial)
+    20000    0.128    0.000    0.128    0.000 generators_factorial_2.py:5(_factorial)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+(ioTimeAnalysis) :: Category: "10000! / 9998!" = (0.132999897003)
+(ioTimeAnalysis) :: Category: "5!" = (0.0)
+(ioTimeAnalysis) :: Category: "1000! / 998!" = (0.00200009346008)
+
+
+Time spent doing I/O :: (0.134999990463)
+Factorial program using Ruby.
+             user     system      total        real
+5!     5! = 
+120
+  0.000000   0.000000   0.000000 (  0.000000)
+             user     system      total        real
+1000! / 998!1000! / 998! = 
+999000
+  0.016000   0.000000   0.016000 (  0.010002)
+             user     system      total        real
+10000! / 9998!10000! / 9998! = 
+99990000
+  0.421000   0.062000   0.483000 (  0.555111)
+Factorial program using Ruby.
+             user     system      total        real
+5!     5! = 
+120
+  0.000000   0.000000   0.000000 (  0.000000)
+             user     system      total        real
+1000! / 998!1000! / 998! = 
+999000
+  0.000000   0.000000   0.000000 (  0.003000)
+             user     system      total        real
+10000! / 9998!

@@ -1,0 +1,22 @@
+* Use current wxPython Template as the basis for the wxBuilder application.
+
+* Version 1.0.0 Feaatures:
+
+*    On-par with FarPy GUIE.
+
+*    Supports a single Dialog.
+
+*    Drag-n-drop for each widget.
+
+*    Use Properties Editor for properties editing.
+
+*    Support for Vertical/Horizontal Sizers (Optional)
+
+*    Support for x,y coords (optional)
+
+*    Support for py2Exe via shelled command to do the build.
+
+*    Ship c:\python25 folder tree via SVN hosted at near-by.info with auto updates when wxBuilder starts.
+
+*    Ship Vyper Logix Egg via the c:\python25 SVN repo.
+

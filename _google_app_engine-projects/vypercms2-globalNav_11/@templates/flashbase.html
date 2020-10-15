@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}VyperCMS v2.0.1{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	function onLoadSWFObject2(){
+	    var s=generate_flash_content(10,0,0,'http://media.vyperlogix.com/gae/vyperlogixcorp/static/swf/SwfLoader/SwfLoader.swf?swf={% block swf-id %}{% endblock %}&width=800&height=500&bgcolor={% block bgcolor %}{% endblock %}',800,500,'flashGames','flashGames','{% block bgcolor-name %}{% endblock %}','http://www.vyperlogix.com',__logo__,'21st Century Innovation with Vyper Logix Corp.'); 
+	    var c = document.getElementById('flashContainer2');
+	    if (c) {
+			c.innerHTML = s;
+			RightClick.init('flashGames','flashContainer2');
+	    }
+	}
+</script>
+{% endblock %}
+
+{% block onNoFlashInstalled %}
+	var c = document.getElementById('flashContainer2');
+	if (c) {
+		c.style.display = 'inline';
+		c.innerHTML = '<B>Sorry but your browser cannot handle Flash at this time...</B>';
+	}
+{% endblock %}
+
+{% block onLoadSWFObject %}
+	onLoadSWFObject2();
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block navigation %}
+{% endblock %}
+
+{% block navigation-flash %} style="display:none;"{% endblock %}
+
+{% block page_content %}
+<div id="column_l">
+{% block page-contents %}{% endblock %}
+	<div id="flashContainer2">
+	</div>
+</div>
+{% endblock %}

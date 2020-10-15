@@ -1,0 +1,354 @@
+'''
+$Author: partho.bhowmick@hp.com $
+$Date: 2013-07-02 10:27:37 -0500 (Tue, 02 Jul 2013) $
+$Header: https://svn02.atlanta.hp.com/local/ic4vc-dev/server/trunk/src/engines/hponeview.py 5580 2013-07-02 15:27:37Z partho.bhowmick@hp.com $
+$Id: hponeview.py 5580 2013-07-02 15:27:37Z partho.bhowmick@hp.com $
+$Revision: 5580 $
+'''
+#Author(s):Partho Bhowmick, Yanfei Shi
+
+import requests
+import json
+import time
+
+from util import exceptions
+
+from logging import getLogger
+log = getLogger(__name__)
+
+class oneview:
+    def __init__(self, username='Administrator', password='Compaq123', baseurl='16.83.121.90', verify=True):
+        #log.verbose( 'HPOneView(%s, ****, %s)', username, host )
+        self.username=username
+        self.password=password
+        self.baseurl = baseurl 
+        self.verify = verify
+        self.headers = {'Content-Type':'application/json',
+                        'Accept':'application/json'}
+        self.server_profile={}
+        self.connections={}
+        self.interconnect={}
+        self.interconnect_stats={}
+        self.network={}
+        self.uplink={}
+        self.server_hardware_uri=''
+        self.enclosure_uri=''
+        self.server_hardware={}
+        self.enclosure={}
+        self.login(username,password)
+
+    def hponeview_vcm(self,datacollector):
+        try:
+            physFuncMap = {'VIRT-NIC1':'a', 'VIRT-NIC2':'b', 'VIRT-NIC3':'c', 'VIRT-NIC4':'d' };
+            vc={}
+            profile=self.get_server_profile()
+            enclosure=self.get_enclosure(self.enclosure_uri)
+
+            enclosures={}
+            externalStorage={}
+            externalSwitches={}
+
+            connections=self.get_connections()
+            hostConnections={}
+            interconnect_uris=set()
+            network_uris={}
+            #server_hardware=self.get_server_hardware(
+            for conn in profile['connections']:
+                hostConnections[connections[conn['mac']]['connectionInstanceId']]=connections[conn['mac']]
+                interconnect_uris.add(conn['interconnectUri'])
+                #network_uris[connections[conn['mac']]['connectionInstanceId']]=conn['networkUri']
+            for uri in interconnect_uris:
+                interconnect=self.get_interconnect(uri)
+                enclosureName=enclosure['name']
+                enclosureId=enclosure['uuid']
+                bay=interconnect['ports'][0]['bayNumber']
+                log.debug('Module %s in Enclosure %s bay %s',interconnect['interconnectId'],enclosure['uuid'],bay)
+
+                m['id']=interconnect['interconnectId']
+                m['bay']=bay
+                m['enclosureId']=enclosureId
+
+                c['bay']=bay
+                c['powerState']=interconnect['powerStatus']
+                c['ipaddress']=interconnect['interconnectIp']
+                c['serialNumber']=interconnect['serailNumber']
+                c['productName']=interconnect['productName']
+                c['fwrev']=interconnect['firmwareVersion']
+                c['rackName']=enclosure['rackName']
+                c['partNumber']=interconnect['partNumber']
+
+                c['powerState']=interconnect['powerStatus']
+                c['commonAttrs']['overallStatus']=interconnect['status']
+
+                m['commonIoModuleAttrs']=c
+
+                m['uplinks']=[]
+                m['networks']=[]
+                m['fabrics']=[]
+                uplinks={}
+
+                for conn in hostConnections:
+                    if conn['interconnectUri']==interconnect['uri'] and conn['connectionInstanceType']=='Ethernet':
+                        networkUri=conn['networkResourceUri']
+                        n=self.get_ether_network(networkUri)
+                        log.debug('    Network: %s, %s', n['name'] , n['uri'])
+                        vc_network = {'id':n['uri'], 'uplinkVLANId': n['vlanId'],
+                                      'maxPortSpeed': conn['connectionBandwidth']['maximum'],
+                                      'preferredPortSpeed': conn['connectionBandwidth']['typical'],
+                                      'displayName': n['name'], 'downlinks': [],
+                                      'portlinks': []}     
+                        port={}
+                        log.debug('     Downlink SubPort:%s',conn['interconnectSubPort'])
+                        port['id']=conn['interconnectSubPort']
+                        port['macAddress']=conn['macaddress'].lower()
+                        server_hardware=self.get_server_hardware(profile['serverHardwareUri'])
+                        for device in server_hardware['portMap']['deviceSlots']:
+                            for p in device['physicalPorts']:
+                                if p['interconnectUri']==interconnect['uri'] and p['interconnectPort']==conn['interconnectPort'] and p['portNumber']==conn['interconnectSubPort']:
+                                    port['physicalPortMapping']=p
+                                    break
+                        port['physicalPortMapping']['portType'] = 'subport'
+                        port['speedGb']=10
+                        #need to figure out how to get this speed from vcenter
+                        vc_network['downlinks'].append(port)
+                    for port in interconnect['ports']:
+                        if port['portType']=='Uplink' and port['associatedUplinkSetObjectId']:
+                            uplink=self.get_uplink(port['associatedUplinkSetObjectId'])
+                        if n['uri'] in uplink['networkUris']:
+                            log.debug('     Uplink: %s', port['associatedUplinkSetObjectId'])
+                            vc_network.setdefault('portlinks',[]).append(port['associatedUplinkSetObjectId'])
+                            uplink={'id':port['associatedUplinkSetObjectId'], 
+                                    'uplinkType': 'network',
+                                    'remoteChassisId':port['neighbor']['remoteChassisId'], 
+                                    'remotePortId':port['neighbor']['remotePortId'],
+                                    'connectorType': port['connectorType'],
+                                    'linkStatus': port['portStatus'],
+                                    'opSpeed': 1000,#need to figure out how to get this
+                                    'portLabel': port['portName']}
+                        if port['neighbor']['remoteChassisId']!='':
+                            switch_id=port['neighbor']['remoteChassisId']
+                            port_id=port['portId']
+                            sw={}
+                            sw['id']=switch_id
+                            sw['remote-chassis-id'] = switch_id          
+                            sw['remote-system-desc'] = port['neighbor']['remoteSystemDescription']            
+                            sw['remote-system-name'] = port['neighbor']['remoteSystemName']
+                            sw['remote-system-capabilities'] = port['neighbor']['remoteSystemCapabilities']            
+
+                            # NGC specific as java can't handle hyphenated properties
+                            sw['remote_chassis_id'] = switch_id          
+                            sw['remote_system_desc'] = port['neighbor']['remoteSystemDescription']            
+                            sw['remote_system_name'] = port['neighbor']['remoteSystemName']
+                            sw['remote_system_capabilities'] =port['neighbor']['remoteSystemCapabilities']            
+
+                            sw['ports'] = []
+
+                            p = {}
+                            p['id'] = port_id
+                            p['remote-port-id'] = port['neighbor']['portremotePortId']
+                            p['remote-port-desc'] = port['neighbor']['remotePortDescription']
+                            # NGC specific as java can't handle hyphenated properties
+                            p['remote_port_id'] = port['neighbor']['portremotePortId']
+                            p['remote_port_desc'] = port['neighbor']['remotePortDescription']
+
+                            externalSwitches.setdefault(switch_id, sw)['ports'].append(p)                                                   
+
+                m['networks'].append(vc_network)
+
+                m['uplinks']=uplinks.values()
+                m['uplinks'].sort(lambda a, b : cmp(a['id'], b['id']))
+                m['networks'].sort(lambda a, b : cmp(a['displayName'], b['displayName']))
+
+                enclosure = {'enclosureType':vcm['enclosureType'], 'id': enclosureId, 'enclosureName': enclosureName,
+                             'allVcModuleG1s': []}
+                if len(m['uplinks']) or len(m['networks']) or len(m['fabrics']) :             
+                    enclosures.setdefault(enclosureId, enclosure )['allVcModuleG1s'].append(m)            
+                enclosures[enclosureId]['allVcModuleG1s'].sort(lambda a, b : cmp(a['id'], b['id']))
+
+            vc['enclosures'] = enclosures.values()
+            vc['enclosures'].sort(lambda a, b : cmp(a['id'], b['id'])) 
+
+            vc['externalSwitches'] = externalSwitches.values()
+            for es in vc['externalSwitches'] :
+                es['ports'].sort(lambda a, b : cmp(a['id'], b['id']))
+
+            vc['externalStorage'] = externalStorage.values()
+
+            return vc   
+
+        except Exception, details :
+            f = exceptions.formattedException(details=details)
+            log.exception("Failed to get VCM data from HP Oneview as follows: %s"%(f))
+        return None
+
+    @staticmethod
+    def hponeview_telemetry(vcm):
+        try:
+            if not vcm:return
+    
+            module_stats={}
+            for e in vcm.get('enclosures',[]):
+                for m in e.get('allVcModuleG1s',[]):
+                    module_stats[m['id']]=self.get_interconnect_stats(m['id'])
+    
+            for e in vcm.get('enclosures', []) :
+                for m in e.get('allVcModuleG1s', []) :
+                        # Uplink Telemetry
+                    for u in m.get('uplinks', []) :
+                        for port in module_stats[m['id']]:
+                            if port['portName']== u['portLabel']:
+                                telemetry = {}
+                                telemetry['tx_kbps'] = port['advancedStatistics']['transmitKilobitsPerSec'].split(':')[:12]
+                                telemetry['rx_kbps'] = port['advancedStatistics']['receiveKilobytesPerSec'].split(':')[:12]                                                                                   
+                                log.debug('Telemetry raw tx: "%s"', port['advancedStatistics']['transmitKilobitsPerSec'])
+                                log.debug('Telemetry tx: "%s"', str(telemetry['tx_kbps']))
+                                log.debug('Telemetry raw rx: "%s"', port['advancedStatistics']['receiveKilobytesPerSec'])
+                                log.debug('Telemetry rx: "%s"', str(telemetry['rx_kbps']))
+    
+                                telemetry['properties'] = {}
+                                telemetry['properties']['port_telemetry_period'] = module_stats[m['id']]['moduleStatistics']['portTelemetryPeriod']
+                                telemetry['properties']['port_telemetry_entry_count'] = module_stats[m['id']]['moduleStatistics']['portTelemetryEntryCount']
+                                u['telemetry'] = telemetry
+                                log.debug("Telemetry uplink id: %s period: %s count: %s", u['id'], u['telemetry']['properties']['port_telemetry_period'], u['telemetry']['properties']['port_telemetry_entry_count'])
+        except :
+            log.exception("Error Organizing HP Oneview Telemetry")
+
+    def login(self, username=None, password=None):
+        log.debug('hponeviewNetwork.login()')
+        relurl = '/rest/login-sessions'
+        fuapi={}
+        fuapi['userName']=username if(username) else self.username
+        fuapi['password']=password if (password) else self.password
+        r = requests.post("https://%s%s" % (self.baseurl, relurl), 
+                          verify=self.verify,  data=json.dumps(fuapi),
+                          headers= self.headers)
+        self.last_response = r.content
+        if (r.status_code == 200):
+            d = json.loads(r.content)
+            if len(d['sessionID']) > 0: 
+                self.session = d['sessionID']
+                self.headers['auth'] = self.session
+                self.networks = {'ethernet':{}, #ethernet networks
+                                 'fc':{} #fiber channel networks
+                                 }
+                self.connection_templates = {}
+                return True
+            else:
+                self.session = None
+        else:
+            r.raise_for_status()
+        return False    
+
+    def get_enclosure(self,uri,refresh=True):
+        log.debug('hponeviewNetwork.get_enclosure()')
+        if (not refresh):
+            return self.enclosure
+        relurl=uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                         verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.enclosure=r.json()
+            return self.enclosure
+        else:
+            r.raise_for_status()
+
+    def get_server_hardware(self,uri,refresh=True):
+        log.debug('HPOneView.get_server_hardware()')
+        if (not refresh):
+            return self.server_hardware
+        relurl=uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                         verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.server_hardware=r.json()
+            return self.server_hardware
+        else:
+            r.raise_for_status
+
+    def get_connections(self,refresh=True):
+        log.debug('hponeviewNetwork.get_connections()')
+        if (not refresh):
+            return self.connections
+        relurl='/rest/connections'
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                         verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            members=r.json()['members']
+            for conn in members:
+                id = conn['connectionInstanceId']
+                self.connection_templates[id] = conn
+
+            return self.connections
+        else:
+            r.raise_for_status()
+
+    def get_interconnect(self,uri,refresh=True):
+        log.debug('hponeviewNetwork.get_interconnect()')
+        if (not refresh):
+            return self.interconnect
+        relurl=uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                         verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.interconnect=r.json()
+            return self.interconnect
+        else:
+            r.raise_for_status()
+
+    def get_interconnect_stats(self,id,refresh=True):
+        log.debug('hponeview.get_interconnect_stats()')
+        if (not refresh):
+            return self.interconnect_stats
+
+        relurl='/rest/interconnects/'+id+'/statistics'
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                         verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.interconnect_stats = r.json()
+            return self.interconnect_stats
+        else:
+            r.raise_for_status()  
+
+    def get_uplink(self,id,refresh=True):
+        log.debug('hponeviewNetwork.get_uplink()')
+        if (not refresh):
+            return self.uplink
+
+        relurl='/rest/uplink-sets/'+id
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                         verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.uplink=r.json()
+            return self.uplink
+        else:
+            r.raise_for_status()
+
+    def get_server_profile(self,refresh=True):
+        log.debug('hponeviewNetwork.get_server_profile()')
+        if (not refresh):
+            return self.server_profile
+        relurl = '/rest/server-profiles'
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                         verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.server_profile=r.json()
+            self.server_hardware_uri=self.server_profile['serverHardwareUri']
+            self.enclosure_uri=self.server_profile['enclosureUri']
+            return self.server_profile
+        else:
+            r.raise_for_status()
+
+    def get_ethernet_network(self,uri,refresh=True):
+        log.debug('hponeviewNetwork.get_ethernet_network()')
+        if (not refresh): 
+            return self.network
+        relurl = uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                         verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.network=r.json()
+            return self.network
+        else:
+            r.raise_for_status()
+
+

@@ -1,0 +1,164 @@
+<HTML><HEAD><TITLE>LUXDOC</TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<B>LUX - AN EMBEDDABLE AND EXTENSIBLE SCRIPTING SYSTEM BASED ON LUA</B>
+<P>
+This document describes:
+<P>
+<UL><LI><B>Lux</B> - standalone builds
+<LI><B>TcLux</B> - an extension for Tcl
+<LI><B>PyLux</B> - an extension for Python
+<LI><B>PerLux</B> - an extension for Perl
+<LI><B>RubyLux</B> - an extension for Ruby</UL>
+<HR SIZE=1>
+<B>LUX STANDALONE</B>
+<P>
+The standalone version has been built in a number of configurations:
+<UL><LI><B>lux</B> - dynamic link, complete system
+<LI><B>luxd</B> - dynamic link, complete system, with -DLUA_DEBUG
+<LI><B>luxm</B> - dynamic link, minimal build (no support libs)
+<LI><B>luxr</B> - dynamic link, no lexer / parser / code generator
+<LI><B>luxs</B> - static link, complete system</UL>
+Only "lux", "luxr", and possibly "luxs" are intended for general use.
+The "luxm" executable will not run, it acts as baseline for size comparisons.
+The "luxd" build is intended to help debugging the lux system itself.
+<P>
+The main program is defined in "mlux.c", which gets expanded to "lux.c"
+during the build.  This is an equivalent version, but with all Lux-related
+includes merged into a single source file (the "onesrc.tcl" script does this).
+Similarly, the Lux core is defined in "mluxsys.c", which gets expanded to
+"luxsys.c" during the build.  This represents the main code, and incorporates
+all of Lua 4.0 with a few minor modifications.
+<P>
+The logic which defines the startup process for standalone use is in
+"run.lua", which is compiled with "luac" and then converted into a C array
+datastructure by 'examples/bin2c.lua'.
+A similar approach is used for "preload.lua", but this script gets
+incorporated into all Lux configurations, not just the standalone one.
+In its current form, this script defines functions to decode zip archives.
+<P>
+The code in "mlux.c" does the following:
+<OL><LI>initialize Lux, this also executes a compiled-in "preload" script
+<LI>set the global "argv0" to C's "argv[0]", i.e. the program name
+<LI>set up an "argv" vector with all command-line arguments
+<LI>execute the embedded script (generated from "run.lua", etc)</OL>
+The "run.lua" script is very small:
+<OL><LI>look for a zip archive at the end of the executable
+<LI>try to fetch/evaluate the code stored as an entry called "boot.lux"
+<LI>else, look for a first arg and move it off argv into an "argv1" global
+<LI>if the arg is a zip archive, fetch its "boot.lux" script and run that
+<LI>lastly, open the arg as script file (source or compiled), and run it
+<LI>if no args are specified, display the version string on stdout</OL>
+<BR>
+The result of all this, is that a zip archive can be tagged onto the end of a
+standalone executable (any one of them), and if it is properly constructed,
+it will get control very early on.
+This also works for shared libraries, but in that case an explicit attempt
+to run the boot script must be made, e.g. in Tcl:
+<PRE>    % load ./tclux.so
+    % tclux gs dostring {lux.ZipBoot('./tclux.so')}</PRE>
+<BR>
+Alternately, the script to run can be specified as command-line argument,
+with as special case that if a zip archive is specified, the "boot.lux"
+script in it will get control (it has to be present).
+<P>
+Finally, a "scripted document" approach can be used, by creating a file which
+starts off as shell script - followed by a zip archive with the bootstrap.
+On Unix, the following will create such a runnable scripted document:
+<PRE>    $ echo '#!/usr/bin/env lux' &gt;myapp
+    $ cat myapp.zip &gt;&gt;myapp
+    $ chmod +x myapp</PRE>
+On Win32, you'll need to also create a "myapp.bat" file, containing just:
+<PRE>    @lux myapp</PRE>
+This will make the scripted document "runnable" / "double-clickable".
+<P>
+Some points to keep in mind: if you use the "luxr" runtime (which is a few
+Kb smaller), make sure the scripts you put into the archive are pre-compiled
+by "luac".
+And if you don't, be careful to store scripts with only LF's as
+line endings, since the extracted files do not get converted according to
+the different ways Windows and Macintosh treat line endings.
+<P>
+<HR SIZE=1>
+<B>LUX IN TCL</B>
+<P>
+TcLux lets you run Lux/Lua scripts from Tcl.
+The wrapper source is "tclux.c", it will eventually be merged into "luxsys.c".
+<P>
+TcLux defines a single <B>tclux</B> command, which takes a format string plus a
+variable number of arguments.
+Each character in the format string describes one argument, the size of the
+format string must correspond to the number of remaining arguments.
+The types currently defined are:
+<UL><LI><B>i</B> - pass next arg as integer to Lux
+<LI><B>d</B> - pass next arg as double to Lux
+<LI><B>b</B> - pass next arg as bytearray to Lux
+<LI><B>s</B> - pass next arg as string to Lux
+<LI><B>g</B> - next arg is name of global var, pass its current value
+<LI><B>r</B> - next arg is a reference, pass the object it refers to
+<LI><B>c</B> - next arg is a Tcl callback, pass it through as Lua function
+<LI><B>p</B> - pass the raw <I>Tcl_Obj*</I> as userdata to Lux</UL>
+Some examples to illustrate how this can be used:
+<DL><DL><DT>tclux gs print {Hello Lux!}<DD><I>calls global "print" function with a single string argument</I>
+<DT>tclux gsc setglobal tcl eval<DD><I>set global "tcl" to contain a very useful callback into Tcl</I>
+<DT>tclux gs tcl {puts "Hello Tcl!"}<DD><I>calls "tcl" with a string argument (with the definition above, this will call back into Tcl)</I>
+<DT>tclux gs dostring {tcl('puts "Hello Tcl!"')}<DD><I>another way to do the same</I>
+<DT>tclux gs dostring {tcl('set','result','Hello Tcl!')}<DD><I>returns a value from Lux back to Tcl</I></DL></DL>
+The <B>"r"</B> (reference) mechanism is useful during callbacks, because TcLux
+sets up references for tables and userdata, and then passes those references.
+In the callback, you can then use those references to call <I>back</I> (yes, it
+gets confusing!) into Lux, e.g. to extract individual values as needed.
+Note that references do not remain valid after the callback returns.
+<HR SIZE=1>
+<B>LUX IN PYTHON</B>
+<P>
+PyLux lets you run Lux/Lua scripts from Python.
+The wrapper source is "pylux.c", it will eventually be merged into "luxsys.c".
+<P>
+PyLux defines a <B>pylux</B> module with a single <B>eval</B> command, which
+takes a format string plus a variable number of arguments.
+Each character in the format string describes one argument, the size of the
+format string must correspond to the number of remaining arguments.
+The types currently defined are:
+<UL><LI><B>v</B> - pass next arg as integer/double/string to Lux
+<LI><B>g</B> - next arg is name of global var, pass its current value
+<LI><B>r</B> - next arg is a reference, pass the object it refers to
+<LI><B>c</B> - next arg is a Python callback, pass it through as Lua function
+<LI><B>p</B> - pass the raw <I>PyObject*</I> as userdata to Lux</UL>
+Some examples to illustrate how this can be used:
+<DL><DL><DT>pylux.eval('gs','print','Hello Lux!')<DD><I>calls global "print" function with a single string argument</I></DL></DL>
+<I>(More examples will be added, see 'examples/pydemo.py' for now...)</I>
+<P>
+The <B>"r"</B> (reference) mechanism is useful during callbacks, because PyLux
+sets up references for tables and userdata, and then passes those references.
+In the callback, you can then use those references to call <I>back</I> (yes, it
+gets confusing!) into Lux, e.g. to extract individual values as needed.
+Note that references do not remain valid after the callback returns.
+<HR SIZE=1>
+<B>LUX IN PERL</B>
+<P>
+PerLux lets you run Lux/Lua scripts from Perl.
+The wrapper source is "perlux.c", it will eventually be merged into "luxsys.c".
+<P>
+This interface is still limited to string-only evaluation, e.g.:
+<PRE>    perlux::eval("print('Hello Lux!')");</PRE>
+<I>A better interface, similar to TcLux and PyLux, will be implemented.</I>
+<HR SIZE=1>
+<B>LUX IN RUBY</B>
+<P>
+RubyLux lets you run Lux/Lua scripts from Ruby.
+The wrapper source is "rubylux.c", it will eventually be merged into "luxsys.c".
+<P>
+This interface is still limited to string-only evaluation, e.g.:
+<PRE>    Rubylux.eval("print('Hello Lux!')");</PRE>
+<I>A better interface, similar to TcLux and PyLux, will be implemented.</I>
+<HR SIZE=1>
+<BR>
+<B>This Lux project is work-in-progress by</B>
+<P>
+-- Jean-Claude Wippler &lt;jcw@equi4.com&gt;
+<PRE>   Mission Impossible 5oftware Team
+   <A HREF="http://www.equi4.com/lux/">http://www.equi4.com/lux/</A></PRE>
+<BR>
+
+<HR SIZE=1><FONT SIZE=-1>Mon Feb 19 19:25:27 PST 2001</FONT>
+</BODY></HTML>

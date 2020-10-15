@@ -1,0 +1,1 @@
+* Implement the code to auto-rename the tables via T-SQL.

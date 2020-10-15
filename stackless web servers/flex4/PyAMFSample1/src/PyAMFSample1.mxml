@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx" 
+					   width="1024" height="768" creationComplete="init()">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.utils.ArrayUtil;
+			
+			[Bindable] 
+			private var contactCollection:ArrayCollection;
+			
+			private var connection:NetConnection;
+			private var gateway:String = "http://localhost:8080/gateway/";
+			
+			private function init():void
+			{
+				connection = new NetConnection();
+				connection.connect(gateway);
+				getEcho();
+			}
+			
+			//Load this function every action like create/update/remove, so that it gets all the contacts
+			private function getEcho():void
+			{
+				connection.call("echo",
+					new Responder(onResult, onFault));
+			}
+			
+			private function onResult(data:Object):void
+			{
+				contactCollection = new ArrayCollection( ArrayUtil.toArray(data) );
+			}
+			
+			private function onFault(data:Object):void
+			{
+				Alert.show( "Service Error" );
+			}
+			
+		]]>
+	</fx:Script>
+	<mx:VBox width="100%" height="100%">
+		<mx:ApplicationControlBar width="100%">
+			<mx:Label text="Flex Contact Manager" fontSize="18" fontWeight="bold" />
+			<mx:Spacer width="100%" />
+			<mx:Button label="Refresh"/>
+			<mx:Button label="Remove"/>
+		</mx:ApplicationControlBar>
+		
+		<mx:HDividedBox width="100%" height="100%">
+			<mx:Panel title="Contact Details" width="100%" height="100%" layout="horizontal" cornerRadius="10">
+				<mx:Form width="100%" height="100%" cornerRadius="10">
+					<mx:FormHeading label="Contact Information" />
+					<mx:FormItem label="ID:" width="100%">
+						<mx:Label text="" />
+					</mx:FormItem>
+					
+					<mx:FormItem label="First Name: " width="100%" required="true">
+						<mx:TextInput id="txt_fname" text="" width="100%" />
+					</mx:FormItem>
+					
+					<mx:FormItem label="Last Name: " width="100%" required="true">
+						<mx:TextInput id="txt_lname" text="" width="100%" />
+					</mx:FormItem>
+					
+					<mx:FormItem label="Email : " width="100%" required="true">
+						<mx:TextInput id="txt_email" text="" width="100%" />
+					</mx:FormItem>
+					
+					<mx:FormItem label="URL: " width="100%" required="true">
+						<mx:TextInput id="txt_url" text="" width="100%" />
+					</mx:FormItem>
+					
+					<mx:FormItem label="" direction="horizontal" width="100%">
+						<mx:Button label="Clear"/>
+						<mx:Button label="Save"/>
+					</mx:FormItem>
+				</mx:Form>
+			</mx:Panel>
+			
+			<mx:Panel title="Contacts" width="100%" height="100%" layout="vertical" alpha="1.0">
+				<mx:DataGrid id="dg_contacts" width="100%" height="100%">
+					<mx:columns>
+						<mx:DataGridColumn headerText="ID" dataField="id" width="50" />
+						<mx:DataGridColumn headerText="First Name" dataField="contact_fname" />
+						<mx:DataGridColumn headerText="Last" dataField="contact_lname" />
+						<mx:DataGridColumn headerText="Email" dataField="contact_email" />
+						<mx:DataGridColumn headerText="URL" dataField="contact_url" />
+					</mx:columns>
+				</mx:DataGrid>
+			</mx:Panel>
+		</mx:HDividedBox>
+	</mx:VBox>
+</s:WindowedApplication>

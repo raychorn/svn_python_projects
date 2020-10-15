@@ -1,0 +1,220 @@
+<Release Number=3.11.0>
+  - add notes from the next release here.
+</Release>
+<Release Number=3.11.0>
+  - A wish from Dan to change it to the old version numbering system
+  - New File __init__.py
+  - New File drHtmlBrowser.py for displaying html content, when run a file.
+  - new preferences: intelligent Backspace Key for each filetype
+      (if it is on, it jumps back the indentation setting, for example 4 spaces, else it jumps back 1 space as expected.
+  - some fixes in font adjustment (AB)
+  - fixed bug in sourcebrowser.
+  - applied patch from Cedric Delfosse (Ctrl-q as default for exiting DrPython), thanks.
+  - some fixes in drscriptmenu und drscriptdialog (there were sometimes a mess, when editing the drscriptmenu afterwards).
+  - fixed storing of the size of the Drpython frame (also remembers now the restore frame size, if it was maximized before, and the maximize state.).
+  - Changed the close behaviour (jumps to the tab right instead of the tab left before).
+  - improved OnComment and UnComment (remembers the exact cursor position).
+  - Goto Line shows the line now in the middle of the edit window (patch: [ 1366679 ])
+  - simplified all openfile operations with OpenOrSwitchToFile and improve AlreadyFileOpen.
+  - OnReload also remembers the old cursor postion and jumps back to it.
+  - Some fixes in OnRun (patch [ 1367222 ]).
+  - Changed some Titles of DrPython Error for easier bug reporting and tracking.
+  - fixed bug in reloadocumentsmenu.
+  - remove trailing whitespaces can now adjusted for the different filetypes in the preferences dialog.
+  - when switching documents, the state of view whitespace/linendings is taken with to the new switched tab.
+  - changed some menu accellerators, which were doubled in one menu.
+  - added a redirect to file for stdout and stderr, for easier bug tracking and reporting.
+  - some fixes in drprompt.py (AB) also patch: [ 1366679 ]
+  - changed some default styles (AB).
+  - #bug reported and patch supplied by Tiziano Mueller, which itself was supplied by a user, 25. Feb. 2008, thanks.
+      when switching tabs, with ctrl-(shift)-tab, the new active tab was not set properly.
+  - changed behaviour when find forward and backward, so the active found text is not displayed on the very top or bottom,
+      but there are about 5 lines lower/higher visible.
+  - fixed bug in search backward, when in the mean time text was added or deleted.
+</Release>
+<Release Number=165>
+(FS) ... Franz Steinhauesler
+(AB) ... Antonio Barbosa
+noteable in this release:
+  - changed directory structure:
+    drplugins and drscript dir is by default in preferences, but can be choosen to be somewhere else
+    the structure of the data files:
+    - prefsdir (preferences.dat, default.idx and drscript.dat)
+      - "dat" (drpython.panel.sizes.dat, ...)
+      - "shortcuts" (shortcuts.dat, stcshortcuts.dat, drscript.shortcuts.dat)
+      - "plugins" (default.idx, the list of plugins loaded at startup)
+        - "dat" (Plugins data and remembered state files)
+        - "shortcuts" (plugin shortcut files)
+        - "preferences" (plugin preferences files)
+    please check your paths, if you update to version 165.
+  - new project member (António Barbosa) abbreviated with AB. (contributed already a good fix, see below)
+      (António Barbosa) is abbreviated with AB in changelog:
+  - AB: Sourcebrowser with textfield for fast search.
+  - AB: Sourcebrowser option: display source browser icons, default on (saves space, when turned on).
+  - cleanup and removed some unnecessary code
+  - removed simple/advanced mode.
+(until) 07. Apr. 2007:
+  - added notes.txt
+  - little text display bug in drToolBarDialog (AB).
+  - fix in StyleDialog (AB).
+  - changed some default shortcuts to be more userfriendly (AB).
+  - Added update function for users changing from 1.64 to 1.65 because of new directory structure (FS).
+  - implemented new simple export/import preferences of drPyhton (AB).
+  - changed some default preferences settings to be more userfriendly (AB).
+(until) 23. Mar. 2007:
+  - removed simple/advanced mode.
+  - changed by AB: moved Generel Tab in Preferences to first tab.
+  - fix by AB: (eliminate the call of initializing drScriptMenu twice.
+  - fix by AB: on linux, output of prompt didn't appear (evt_idle do not work if the control has no focus; used a timer instead).
+  - fix by AB: in drPrefsDialog.py: removed |wx.DD_NEW_DIR_BUTTON because the style wx.DD_DEFAULT_STYLE already includes  wx.DD_NEW_DIR_BUTTON
+  - used sometimes 'u' to open text files with universal newline support (eliminates some problems with different lineendings (dos and linux))
+25. Feb. 2007 - 01. Mar. 2007:
+  - thanks antonio for testing.
+  - plugins tested under windows and linux, wxpython unicode wxPython 2.8.1.1 and above for DrPython 1.65:
+    (only listed plugins, I have in my local plugin directory; still some are missing in this list)
+  - scrolledmessagedialog called with Showmessage only.
+  - revert: revert changes "== None",  "!= None" to the former "is None" and "is not None" (many people said, this is not ok)
+  - cleanup: run pychecker over all files, removed unneeded variables or names, unneeded import, fixed one or two bugs directly
+             detected by pychecker.
+  - cleanup: replaces the three lines in drscrolledmessage with a single ShowMessage.
+  - changed: procedure of assigning userpreferences- und pluginsdir (take care, if drpyhton is started with --preferencesbasepath),
+             and some other fixes with writing userpreferencesdirectory.dat and preferences.dat, handling of userpreferencesdirectory.
+  - changed: split default.idx files for getting plugins. It should now work for both linux and windows for the same default.idx file.
+  - fixed: always save and restore the current working directory (os.chdir and os.getcwd)
+  - added: textfield and preference for defaultdirectory and store this in preferences.dat (I have changed it before unawared)
+  - fixed: added fix by AB in EncodeTextWith(text, encoding), which caused problems with unicode in prompt (thanks Antonio).
+  - removed: unnecessary print statements in code.
+  - added tools directory for miscellanous stuff
+  - run pyflakes and corrected/optimized some code.
+24. Feb. 2007:
+  - removed default directory in preferences
+  - added user preferences dir: a file with the preferences dir will be created in the home folder
+  - used plugin dir (was ignored until now)
+  - used drscripts dir (was ignored until now); if a script is inside that dir,
+      only relative path- and filename is stored, else the whole filename and path is stored
+  - run pychecker on changed files
+      * removed unneeded variables
+      * detected a few bugs with pychecker
+  - all files should be now with unix lineendings, spaces as indentation and trailing whitespaces are removed now.
+  - new project member (António Barbosa) abbreviated with AB.
+  - AB: fixed problem with PyDeadObjectError, when soure browser was closed by right click on the tab and choose close,
+      and then try to reopen Sourcebrowser (drSourceBrowser.py).
+  - cleanup the code, shortened to make it more clearly-presented:
+      * for example in if no parenthises are needed if (a > b): => if a > b:
+      * compare if string is empty: if len(teststring) > 0: => if teststring:
+      * long lines breaked sometimes
+      * self.scriptcount = self.scriptcount + 1 => self.scriptcount += 1
+      * MessageDialog replaced by MessageBox (fewer lines)
+  - is there a small bug in wxPython 2.8.1.1 compared to 2.6?:
+      The edit script dialog was not fully visible anymore (no ok and cancel buttons)
+      removed the setsize function therefore.
+  - restriced trimtrailing whitespace only to python files.
+  - removed unnecessary print statements.
+  - drtext and drRegularExpressionDialog.py small bug fixed (which I checked in before)
+  - while parenthesis removed: while (x < y): => while x < y:
+  - AB: changed: in drpluginsdialog: (setnotindex) to keep old selection, which is not in index yet.
+</Release>
+<Release Number=164>
+  - applied patch from Steffen (ssteidte), thanks:
+    The following small changes to drpython.py(w) provide the ability to give the names of files to edit as command line arguments.
+  - applied patch from Knut Gerwens in CheckSyntax (drpython.py), many thanks.
+      there was former a problem using unicode version of wxPython with encoding cookie
+  - Patch by Knut Gerwens in drAboutDialog.py: added import of wx.lib.stattext,
+     replaced all occurences of 'wx.StaticText' with 'wx.lib.stattext.GenStaticText'
+     because wx.StaticText displayed some lines truncated when wxPython is run with wxGTK
+  - Set first notebook tab of drAboutDialog to white Background.
+  - added again menu entries: Edit => copy, cut, paste.
+  - fixed bug in editing drscript menu (File: drScriptDialog.py) (shortcuts didn't fit anymore)
+  - extended Encoding Error message in drEncoding.py to give users a hint what to do (Knut Gerwens)
+  - fixed some issues with not valid directory in PyDocAll and OnPyDocCurrent.
+  - fixed bug in OnIndentRegion in drpyhton.py setModEventMask to SetModEventMask.
+  - fixed bug in 'Save All Documents"
+  - added test.but
+  - changed runinterminal script (runs only on linux)
+  - fixed bug in drNotebook.py (caused traceback in drSidePanel)
+  - fixed error in drFileDialog.py (unicode string was not converted in string) and defaultencoding is now also used for linux.
+  - renamed variable type to type_ in drFileDialog.py (type is a reserved keyword)
+  - fixed annoying problem with unicode (added setdefaultencoding and wx.SetDefaultPyEncoding if a default encoding is set.
+      (in drpython.py and if you change the encoding in drPrefsDialog.py).
+      hack in linux reload(sys) otherwise, the setdefaultencoding is not available.
+  - fixed bug in promptDir in DrPython.py: if dialog was cancelled, a traceback appeared (dir was not set).
+  - AB: fixed bug in prompt with unicode: thanks!
+  - split of default.idx (should work with lf and crlf now).
+  - scrolledmessagedialog called with Showmessage only.
+</Release>
+<Release Number=163>
+(Franz Steinhaeusler)
+- I know there is much to do for linux, I'm looking for a project member (tester or even better bug fixer)
+  for linux. I will request to sourceforge project help in the next few days/weeks anyway for that.
+  There are some or many dialogs with bad layout, so not all texts are displayed, sizers are not fitting,
+  crashes ...
+  If you have interest please send me a mail or post into one of the foren.
+  But nevertheless interesting, whether it runs on linux or are there some critical errors, and possible bug fixes?
+  Best to send me whole files with an annotation, on what drpython release base you made your changes.
+  With minmerge, that should be no problem, that I integrate them.
+- 1.63 experimental; for careful people, please stay at 1.62 for the time being, for
+    the other, please test
+- plugin patches are also welcome
+- there should be more menu icons visible.
+- drpopup: icons in context menu (changes are older then one year)
+- applied tab2spaces (for all py files in drpython, because it is python "standard")
+- test and helper files added:
+    dr.bat and d.bat
+    drpython_wx26.pyw (test for older wxpython version)
+    drpython_wx26_debug.pyw (test for older wxpython version and traceback output to file)
+    drpython_wx26.py (test for older wxpython version)
+    and 2 bat files
+    if you use on of these, please rename then, adapt them to your needs and make a link to them.
+    (because, this files will be overwritten in a newer version).
+- encoding problems
+  There was a problem in unicode build (for example german umlauts), that files are stored with 0 bytes.
+  This is REALLY bad. I hope, this is resolved now (GetDefaultEncoding added).
+  If there is still an error, the file will not be stored. you could copy/paste it to another editor.
+  But I hope, this will never happen.
+  applied also for decoding files.
+- some "selfish" hacks integrated, which I want resolve in newer versions
+  1) trim trailing whitespace only for python files, not for other files (I use the editor also in the company)
+     Later, I want to add trim trailing whitespace to the file types
+  2) removed copy/cut/paste from edit menu. For my keyboard macro plugin, otherwise, the keystrokes
+     will not be recognised. Every people should know this commands by heart, anyway. :)
+  3) I laid the ctr-right mouse click to my doclist plugin.
+- drfiledialog sort "case insenstive".
+- standard file dialog is standard again, not the drfiledialog (some people mourned about that).
+- a bug in drNotebook.py fixed (bug report was also longer time ago).
+- minimum panel size for source browser was restricted to 25 (unnecessary). put the value to 1.
+    thanks for user request, Peter
+- menu printer setup was not working, fixed.
+- small fix in drPrompt.py
+- new "hidden" feature: ctrl-right mouseclick should show the about dialog.
+- small patch in drscripmenu.py
+- workaround by Dunderhead, thanks. (self.txtPromptArray[i]._waitforoutput('>>>'), freezes on linux).
+- small changes in RemoveTrailingWhitespace with status text output.
+</Release>
+<Release Number=162>
+(assisted for Dan by Franz Steinhaeusler)
+should be running with wxPython 2.7 and 2.8 (Position is now a function; this caused a startup error)
+added patch from Jean-Pierre MANDON for drToolBarDialog - thanks; there were some errors for plugin icons.
+</Release>
+<Release Number=161>
+Removing the buggy debugger for now.
+Focus is set in each tab when switching documents.
+The focus is set to the current document when a program ends.
+(BugReport/Feature-Request, Thanks schmolch)
+Added code for Save A Copy (Thanks Stewart Midwinter)
+SourceBrowser autorefresh is saved again.
+Changed the location of the mode dialog bitmaps.
+</Release>
+<Release Number=160>
+"Toronto Edition"
+
+Huge Thanks to Greg Wilson, Tim Smith, Patrick Smith, and Laurie MacDougall.
+
+new features:
+
+graphical debugger
+import all
+user modes (beginner, advanced)
+pydoc browser
+
+plus other fixes and ui tweaks.
+</Release>

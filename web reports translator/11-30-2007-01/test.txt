@@ -1,0 +1,439 @@
+(main) :: fname=(Z:\@myFiles\#BigFix Inc\Zack's Web Reports\contentReports\MSpatches-flex.beswrpt)
+(main) :: doc=(<xml.dom.minidom.Document instance at 0x00B89E90>)
+(main) :: Proof of concept is minimally functional thus proving that a Web Reports HTML file can indeed be parsed.
+
+(main) :: All that remains is the task of walking the nodes, pulling out elements and converting them into a representation that can be easily understood by Flex3.
+
+(xml.dom.minidom.Document) (<xml.dom.minidom.Document instance at 0x00B89E90>).
+	(xml.dom.minidom.Element) (<DOM Element: BESWebReport at 0xb90968>).
+BEGIN_ELEMENT:
+
+"BESWebReport"
+END_ELEMENT!
+
+
+		(xml.dom.minidom.Text) (<DOM Text node "
+ ">).
+BEGIN_TEXT:
+
+"
+ "
+END_TEXT!
+
+
+		(xml.dom.minidom.Element) (<DOM Element: Name at 0xb90be8>).
+BEGIN_ELEMENT:
+
+"Name"
+END_ELEMENT!
+
+
+			(xml.dom.minidom.Text) (<DOM Text node "Microsoft ...">).
+BEGIN_TEXT:
+
+"Microsoft Patch Report"
+END_TEXT!
+
+
+		(xml.dom.minidom.Text) (<DOM Text node "
+ ">).
+BEGIN_TEXT:
+
+"
+ "
+END_TEXT!
+
+
+		(xml.dom.minidom.Element) (<DOM Element: Description at 0xb90df0>).
+BEGIN_ELEMENT:
+
+"Description"
+END_ELEMENT!
+
+
+			(xml.dom.minidom.Text) (<DOM Text node "This repor...">).
+BEGIN_TEXT:
+
+"This report gathers the depolyment status of Microsoft Patches, creates a table summerizing patch deployment details (source release date, computers patched, etc.) and makes a graph displaying the 10 most recent patching totals."
+END_TEXT!
+
+
+		(xml.dom.minidom.Text) (<DOM Text node " 
+ ">).
+BEGIN_TEXT:
+
+" 
+ "
+END_TEXT!
+
+
+		(xml.dom.minidom.Element) (<DOM Element: Type at 0xb90e90>).
+BEGIN_ELEMENT:
+
+"Type"
+END_ELEMENT!
+
+
+			(xml.dom.minidom.Text) (<DOM Text node "CustomRepo...">).
+BEGIN_TEXT:
+
+"CustomReport"
+END_TEXT!
+
+
+		(xml.dom.minidom.Text) (<DOM Text node " 
+ ">).
+BEGIN_TEXT:
+
+" 
+ "
+END_TEXT!
+
+
+		(xml.dom.minidom.Element) (<DOM Element: Category at 0xb90f30>).
+BEGIN_ELEMENT:
+
+"Category"
+END_ELEMENT!
+
+
+			(xml.dom.minidom.Text) (<DOM Text node "Enterprise...">).
+BEGIN_TEXT:
+
+"Enterprise Security Report"
+END_TEXT!
+
+
+		(xml.dom.minidom.Text) (<DOM Text node " 
+ ">).
+BEGIN_TEXT:
+
+" 
+ "
+END_TEXT!
+
+
+		(xml.dom.minidom.Element) (<DOM Element: Source at 0xb90fd0>).
+BEGIN_ELEMENT:
+
+"Source"
+END_ELEMENT!
+
+
+			(xml.dom.minidom.Text) (<DOM Text node "BigFix Inc...">).
+BEGIN_TEXT:
+
+"BigFix Inc."
+END_TEXT!
+
+
+		(xml.dom.minidom.Text) (<DOM Text node " 
+ ">).
+BEGIN_TEXT:
+
+" 
+ "
+END_TEXT!
+
+
+		(xml.dom.minidom.Element) (<DOM Element: Data at 0xb950a8>).
+BEGIN_ELEMENT:
+
+"Data"
+END_ELEMENT!
+
+
+			(xml.dom.minidom.Text) (<DOM Text node "
+ 	">).
+BEGIN_TEXT:
+
+"
+ 	"
+END_TEXT!
+
+
+			(xml.dom.minidom.CDATASection) (<DOM CDATASection node "
+ 	 <!-- C...">).
+BEGIN_TEXT:
+
+"
+ 	 <!-- Created by zak_kus@bigfix.com
+			
+			last update: 4/5/07
+			
+			-->
+			
+			<STYLE> 
+			
+				table
+				{
+			   margin: 0;
+				 font-size: 12; 
+			  }
+				th
+				{
+				 font-size:12; 
+				 font-family:Arial; 
+				 background-color: #eaeaea;
+				 border: 1px solid #cccccc;
+				 margin: 0;
+				 padding: 6px 20px 1px 0;
+				 text-align: center;
+			
+				}
+				td
+				{
+					border-bottom: 1px solid #cccccc;
+					margin: 0;
+				  padding: 6px 20px 1px 0;
+				}
+				h3
+				{
+					margin: 0;
+					padding: 5px 6px 7px;
+					color: #fff;
+					font: bold 13px / 14px Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+					background-color: #376495;
+					border-style: none;
+					display: block; 
+			
+				}
+				.wr_evenRow
+					{
+					  background-color: #ffffff;
+					}
+				
+				.wr_oddRow
+					{
+					  background-color: #dddddd;
+					}	
+			
+				/* Sortable tables */
+				table.sortable a.sortheader
+					{
+				    color: black;
+				    text-decoration: underline;
+				   	
+					}
+					
+				table.sortable span.sortarrow, img
+					{
+				    color: black;
+				    text-decoration: none;
+				    border-width: 0px;
+					}
+			
+			</STYLE>
+	 	<SCRIPT src="http://support.bigfix.com/download/bes/customreports/stylesheets/swfobject.js" language="JavaScript" type="text/javascript"></SCRIPT>
+		<SCRIPT src="http://support.bigfix.com/download/bes/customreports/stylesheets/RelevanceToFlex.js" language="JavaScript" type="text/javascript"></SCRIPT>	
+			
+			<div id="Loader">Loading... <p></div>
+			<div id="resultsDiv" style="display:none">
+			
+					<div id='ChartSpace' style='display:none'>You need to install/upgrade your Flash Player to version 9<a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">Download Flash Player from Adobe</a></div>
+			
+			
+				<div id="PatchesDataGrid">You need to install/upgrade your Flash Player to version 9<a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">Download Flash Player from Adobe</a></div>
+			</div>
+				
+			<script type="text/javascript">
+			
+			
+			
+			
+			var patches;
+			var chart_space = document.getElementById('ChartSpace');
+			<?Relevance javascript array "patches" of  ((first 8 of name of it & "|" & applicable computer count of it as string &  "|" & number of results whose (exists last became relevant of it AND exists last became nonrelevant of it and last became relevant of it < last became nonrelevant of it) of it as string & "|" & category of it & "|" & (if (exists results whose (exists last became nonrelevant of it) of it) then (((date (local time zone) of it) as string & "|" & ((now - it)/day) as string) of (minimum of last became nonrelevants of results of it) ) else "n/a-!-n/a" )) of  fixlets whose (name of it starts with "MS" AND name of it does not contain "CORRUPT" AND exists last became nonrelevants of results of it) of bes site whose (name of it = "Enterprise Security" )) ?>
+			if(patches == undefined )
+			{
+				resultsDiv.innerHTML = 'There was a problem displaying results.</a>';			
+			}else{
+			patches.sort(sortNumber);
+
+				
+				
+			
+				
+				// global pointer to my chart space
+				var OWCVERSION;
+				var series 			= ["category","Patched","Unpatched"];
+				var tableSeries = ["category", "Patch Name" ,"Patched","Unpatched","Total Computers","Patched Ratio","Category","Source Release Date"];
+	
+				var top35ChartData	= new Array();	
+				
+				var allPatchInfo 		= new Array();		
+				var previousPatchname = "";
+				var currentRelevantTotal=0;
+				var currentNonRelevantTotal=0;
+				var category="";
+				var releaseDate="";
+				var numDays="";
+					
+				for (var i=0;i<patches.length;i++)
+					{
+						var current = patches[i];
+						var currentPatchname = current.substring(0,8);
+						if (i==0) {
+							previousPatchname = currentPatchname;
+						}
+						
+					
+					 if (previousPatchname == currentPatchname) {
+					 	var info = current.split("|");
+						currentRelevantTotal += (info[1] * 1);
+					  currentNonRelevantTotal += (info[2] * 1);
+					  category = info[3];
+						releaseDate= info[4];
+						numDays = info[5];
+					} else {
+					    var temp = (previousPatchname + "|" + currentRelevantTotal + "|" + currentNonRelevantTotal  + "|" + category  + "|" + releaseDate+ "|" + numDays);   
+					    allPatchInfo.push(temp);
+						  currentRelevantTotal=0;
+					    currentNonRelevantTotal=0; 
+					    
+					    var info = current.split("|");
+							currentRelevantTotal += (info[1] * 1);
+					  	currentNonRelevantTotal += (info[2] * 1);
+					  	category = info[3];
+							releaseDate= info[4];
+							numDays = info[5];
+					    previousPatchname = currentPatchname;
+					
+					 }
+					
+					}
+								 
+					for (var i=0;i<allPatchInfo.length;i++)
+					{
+						
+		
+						var patched = 0;
+						var unpatched = 0;
+						var dataArr = allPatchInfo[i].split("|");
+						var patchname = dataArr[0];
+						var	unpatched = dataArr[1];
+						var	patched = dataArr[2];
+						var category = dataArr[3];
+						var releaseDate= dataArr[4];
+						var numDays = dataArr[5];
+						var	total = patched * 1 + unpatched *1;
+						var rowStyle;
+						var percent;
+						
+						if (total == 0) {
+							percent = "n/a";
+						} else {
+						  percent = (Math.round((patched * 100 / total)*100))/100;
+						}
+						
+					
+					
+						allPatchInfo[i] = patchname + "|" + patchname + "|" + patched  + "|" + unpatched  + "|" + total + "|"   + percent+ "%|" + category+ "|"  + releaseDate; 
+						if(i<35){
+							top35ChartData[i] = patchname + "|" + patched  + "|" + unpatched  ;
+							
+						}
+					}
+						 
+				
+
+				flexGraph();
+				makeDataGrid();
+				Loader.style.display = "none";
+				resultsDiv.style.display = "";
+			}
+						
+			
+			function makeDataGrid(){
+				var soCT = new SWFObject("http://support.bigfix.com/download/bes/customreports/DataGrid.swf", "dataGrid", "100%", "100%", 9);		
+				for(i=1; i< tableSeries.length; i++){
+					soCT.addVariable("yLabel" + (i-1), tableSeries[i]);		// sets the display name. 
+				}
+				//soCT.addVariable("title",(getTotal(virusFoundArr)+" Total Viruses Found" ));
+				soCT.addVariable("chartDataFunction", "DataGridData"); 		// passes data into flex		
+				soCT.write('PatchesDataGrid');
+			}
+	
+			// function that populates the graph with data
+			function DataGridData() {
+				chartData = relevanceToFlexArray(allPatchInfo, "|", tableSeries);
+			  return chartData;
+			}
+							
+			// Function that creates a flex graph space and sets its parameters
+			function flexGraph(){
+				
+				var soCT = new SWFObject("http://support.bigfix.com/download/bes/customreports/CategoryColumnChart.swf", "columnChart", "100%", 500, 9);
+				for(i=1; i< series.length; i++){
+					soCT.addVariable("yLabel" + (i-1), series[i]);		// sets the display name. 
+				}
+				soCT.addVariable("chartDataFunction", "CTData"); 		// passes data into flex
+				soCT.addVariable("categoryName", "Patch Names");				 	// sets category display name
+				soCT.addVariable("color1", "0xff0000");							// sets colors
+				soCT.addVariable("color0", "0x0000ff");
+				soCT.write('ChartSpace');
+				chart_space.style.display = '';
+			}
+			
+			// function that populates the graph with data
+			function CTData() {		
+				top35ChartData = relevanceToFlexArray(top35ChartData, "|", series);
+			  return top35ChartData;
+			}
+
+			
+				
+				function sortNumber(a, b)
+				{
+					var item1 = a.replace(/MS/,"");
+							item1 = item1.replace(/\-/,"");
+							item1 = item1.replace(/\|.*/,"");
+							item1 = item1.replace(/\,.*/,"");
+							
+					var item2 = b.replace(/MS/,"");
+						  item2 = item2.replace(/\-/,"");
+						  item2 = item2.replace(/\|.*/,"");
+						  item2 = item2.replace(/\,.*/,"");
+					
+					if(item1.charAt(0) == 9 ){
+						item1 = "19"+item1;
+					}else{
+						item1 = "20"+item1;
+					}
+					
+					if(item2.charAt(0) == 9 ){
+						item2 = "19"+item2;
+					}else
+						{
+							item2 = "20"+item2;
+						}
+					return item2 - item1;
+				}
+				
+				
+			
+			
+			</script>
+			
+  "
+END_TEXT!
+
+
+			(xml.dom.minidom.Text) (<DOM Text node "
+ ">).
+BEGIN_TEXT:
+
+"
+ "
+END_TEXT!
+
+
+		(xml.dom.minidom.Text) (<DOM Text node "
+">).
+BEGIN_TEXT:
+
+"
+"
+END_TEXT!
+
+

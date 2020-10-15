@@ -1,0 +1,5 @@
+include *
+recursive-include bitmaps *
+recursive-include examples *
+recursive-include documentation *
+prune build

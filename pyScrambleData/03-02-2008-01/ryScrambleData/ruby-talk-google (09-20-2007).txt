@@ -1,0 +1,17 @@
+I am new to Ruby and I could use some expert advice as to how I can make this code run faster.
+
+def scramble(fname)
+    f = File.new(fname, "rb")
+    _fname = fname + ".scrambled"
+    begin
+        File.exist?(_fname) if File.delete(_fname)
+    rescue
+    end
+    ff = File.new(_fname, "wb+")
+    for l in f
+        l.each_byte{|c| ff.write((c | 0x80).chr) }
+    end
+    f.close()
+    ff.close()
+end
+

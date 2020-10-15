@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:mccune="dougmccune.controls.VerticalMenuBar.*"
+	creationComplete="onCreationComplete();"
+	xmlns:vzwControls="com.vzw.controls.*"
+	width="100%" height="100%" 
+	>
+	<mx:Style source="styles.css"/>
+    <mx:Script>
+        <![CDATA[
+        	import com.vzw.menu.builder.WmsAPI;
+        	import com.vzw.menu.builder.events.MenuChangedEvent;
+        	import com.vzw.menu.builder.MenuController;
+        	import mx.utils.UIDUtil;
+        	import mx.events.FlexEvent;
+        	import com.vzw.controls.MenuNameRenamePopUp;
+        	import com.vzw.controls.MenuNamePopUp;
+        	import mx.events.CloseEvent;
+        	import mx.managers.SystemManager;
+        	import vyperlogix.utils.CookieUtils;
+        	import mx.controls.PopUpButton;
+        	import mx.events.IndexChangedEvent;
+        	import adobe.serialization.json.JSONEncoder;
+        	import com.vzw.CSSStyleDeclaration2;
+        	import flash.utils.describeType;
+        	import vyperlogix.utils.EzObjectExplainer;
+        	import vyperlogix.utils.CSSUtils;
+        	import com.probertson.utils.GZIPEncoder;
+        	import vyperlogix.utils.StringUtils;
+        	import adobe.utils.IntUtil;
+        	import mx.rpc.events.FaultEvent;
+        	import mx.messaging.AbstractConsumer;
+        	import mx.controls.Menu;
+        	import mx.managers.PopUpManager;
+        	import com.vzw.controls.BusyPopUp;
+        	import mx.messaging.messages.HTTPRequestMessage;
+        	import vyperlogix.utils.URLUtils;
+        	import vyperlogix.controls.ToolTips.HTMLToolTip;
+        	import mx.managers.ToolTipManager;
+        	import mx.utils.ObjectUtil;
+        	import vyperlogix.utils.ObjectUtils;
+        	import mx.utils.ObjectProxy;
+        	import vyperlogix.controls.Alert.AlertPopUp;
+        	import mx.rpc.events.ResultEvent;
+        	import vyperlogix.utils.EzHTTPService;
+        	import mx.events.ItemClickEvent;
+            import mx.events.MenuEvent;
+            import mx.controls.Alert;
+            import mx.collections.*;
+			import mx.core.IFlexDisplayObject;
+
+            [Bindable]
+            public var _debug_menuBar:Boolean = false;
+            
+            [Bindable]
+            public var _debug_menuBarItem:Boolean = false;
+            
+            [Bindable]
+            public var _debug_menuBarFlyout:Boolean = false;
+            
+            [Bindable]
+            public var _debug_menuBarFlyoutItem:Boolean = false;
+            
+            [Bindable]
+            public var menuBarCollection:XMLListCollection;
+            
+            [Bindable]
+            private var menubarXML:XMLList =
+                <>
+                    <menuitem label="Menu1&trade;" align="right" handCursor="true">
+                        <menuitem label="MenuItem 1-A"/>
+                        <menuitem label="MenuItem 1-B"/>
+                    </menuitem>
+                    <menuitem label="Menu2" align="right" handCursor="true">
+                        <menuitem label="MenuItem 2-A"/>
+                        <menuitem type="separator" />
+                        <menuitem label="MenuItem 2-B">
+                            <menuitem label="SubMenuItem 2-B-A"/>
+                            <menuitem label="SubMenuItem 2-B-B"/>
+                        </menuitem>
+                    </menuitem>
+                    <menuitem label="Menu3" align="left" handCursor="true">
+                        <menuitem label="MenuItem 3-A"/>
+                        <menuitem type="separator" />
+                        <menuitem label="MenuItem 3-B">
+                            <menuitem label="SubMenuItem 3-B-A"/>
+                            <menuitem label="SubMenuItem 3-B-B"/>
+                        </menuitem>
+                    </menuitem>
+                    <menuitem label="Menu4" align="left" handCursor="true">
+                        <menuitem label="MenuItem 4-A" >
+                            <menuitem label="SubMenuItem 4-A-A"/>
+                            <menuitem label="SubMenuItem 4-A-B"/>
+                        </menuitem>
+                        <menuitem label="MenuItem 4-B" >
+                            <menuitem label="SubMenuItem 4-B-A"/>
+                            <menuitem label="SubMenuItem 4-B-B"/>
+                        </menuitem>
+                        <menuitem label="MenuItem 4-C"/>
+                    </menuitem>
+                </>;
+
+            private function menuHandler(event:MenuEvent):void  {
+                Alert.show("Label: " + event.item.@label + "\n" + "Data: " + event.item.@data, "Clicked menu item");
+            }
+
+			private function cookies_complete():void {
+				//AlertPopUp.infoNoOkay(CookieUtils.cookieStr,'DEBUG: Cookies.');
+			}
+			
+            private function onCreationComplete():void {
+            	MenuController.parent = this;
+            	MenuController.callback = this.show_AdminOptions;
+                menuBarCollection = new XMLListCollection(menubarXML);
+                ToolTipManager.toolTipClass = HTMLToolTip;
+                
+                CookieUtils.debugger = this.debugger;
+                CookieUtils.wait_for_browser_cookies(this.cookies_complete);
+
+				WmsAPI.initialize(Application.application);
+				MenuController.initialize_control_panel(this.control_panel_container);
+				MenuController.initialize(this);
+				MenuController.getMenuCount(this);
+            	MenuController._currentTargetMenuBar = this.smartMenuBar1;
+            }
+            
+            private function onMouseOver_smartMenuBarTest(event:MouseEvent):void {
+            	try {
+    	        	var obj:* = event.target;
+	            	obj.dispatchEvent(new MouseEvent(MouseEvent.MOUSE_DOWN));
+					this.debugger.text = '(MouseEvent.MOUSE_DOWN) sent.' + '\n' + this.debugger.text; 
+            	} catch (e:Error) {}
+            }
+            
+            private function onResultMenuXML2(event:ResultEvent):void {
+            	var s:String;
+				var response:*;
+				var ba:ByteArray;
+				var num:int;
+				var num2:int;
+				var num3:int;
+				var t:String;
+				try {
+					response = event.result.getItemAt(0);
+					s = StringUtils.fromHexBytesString(response);
+					ba = new ByteArray();
+					ba.writeObject(s);
+		        	var i:int = -1;
+				} catch (err:Error) {
+					var stackTrace1:String = err.getStackTrace();
+					AlertPopUp.errorNoOkay(this.className + ' :: 1.0\n' + err.message + '\n' + StringUtils.ellipsis(stackTrace1,1024),'ERROR');
+				}
+            	this.enabled = true;
+            }
+            
+            private function onResultMenuXML(event:ResultEvent):void {
+				var response:*;
+				var metaField:String = '';
+				var dataField:String = '';
+				var metadata:Object = {};
+				try {
+					response = event.result.getItemAt(0);
+					response = (response is ObjectProxy) ? response.valueOf() : response;
+					response = ObjectUtils.unpack(response,ObjectUtils.criteria_unpack_isSomeKindOfObjectProxy);
+					metaField = response.metaField;
+					dataField = response.dataField;
+					metadata = ObjectUtils.collector(response[metaField]);
+					response = ObjectUtils.processor(response[dataField],ObjectUtils.urlDecode);
+				} catch (err:Error) {
+					var stackTrace1:String = err.getStackTrace();
+					AlertPopUp.errorNoOkay(this.className + ' :: 1.1\n' + err.message + '\n' + StringUtils.ellipsis(stackTrace1,1024),'ERROR');
+				}
+				try {
+	            	MenuController._currentTargetMenuBar.dataProvider = response;
+	            	MenuController._currentTargetMenuBar.metaProvider = metadata;
+	            	MenuController._currentTargetMenuBar.metaField = metaField;
+	            	MenuController._currentTargetMenuBar.dataField = dataField;
+	            	if (MenuController._isAdminMode) {
+						MenuController._currentTargetMenuBar.isAdminMode = MenuController._isAdminMode;
+	            	}
+						            	
+	            	var aMessage:HTTPRequestMessage = event.token.message as HTTPRequestMessage;
+	            	var url:String = aMessage.url;
+	            	var protocol:String = URLUtils.protocol(url);
+	            	var domain:String = URLUtils.domain(url);
+	            	MenuController._currentTargetMenuBar.urlPrefix = protocol + "//" + domain;
+	            	
+	            	MenuController._currentTargetMenuBar.reloadMenus();
+				} catch (e:Error) {
+					var stackTrace2:String = e.getStackTrace();
+					AlertPopUp.errorNoOkay(this.className + ' :: 2.0\n' + e.message.toString() + '\n' + StringUtils.ellipsis(stackTrace2,1024),'ERROR');
+				} finally {
+	            	this.enabled = true;
+					MenuController._isAdminEnabled = true;
+				}
+            }
+            
+ 			public function show_AdminOptions():void {
+ 				MenuController.callback = MenuController.dummy;
+ 				if (this.cbAdmin2.selected) {
+ 					this.handle_cbAdmin(this.cbAdmin2);
+ 				}
+ 			}
+ 			            
+            private function handle_RPCFault(event:FaultEvent):void {
+            	this.enabled = true;
+				AlertPopUp.errorNoOkay(this.className + ' :: 3.0\n' + event.fault.toString() + '\n','ERROR - ' + event.fault.faultCode);
+            }
+            
+            private function handle_RPC(url:String):void {
+            	this.enabled = false;
+				var url:String = url;
+				MenuController.ezREST.faultCallBack = this.handle_RPCFault;
+            	MenuController.ezREST.send(url, this.onResultMenuXML);
+            }
+
+            private function onClick_btn1(event:MouseEvent):void {
+            	this.enabled = false;
+				var url:String = MenuController.urlPrefix + '/rest/getMenuXML3/';
+            	MenuController.ezREST.send(url, this.onResultMenuXML);
+            }
+            
+            private function onClick_btn2(event:MouseEvent):void {
+            	this.enabled = false;
+				var url:String = MenuController.urlPrefix + '/rest/getMenuXML2/';
+            	MenuController.ezREST.send(url, this.onResultMenuXML);
+            }
+            
+			private function checkJavaScriptReady():Boolean {
+			    var isReady:Boolean = ExternalInterface.call("isReady");
+			    return isReady;
+			}
+			
+            private function onClick_btn2xml(event:MouseEvent):void {
+            	var btn:Button = event.currentTarget as Button;
+            	var i:Number = new Number(btn.id.substr(btn.id.length-1,1));
+            	MenuController._currentTargetMenuBar = null;
+            	if ( (i >= 1) && (i <= 2) ) {
+	            	MenuController._currentTargetMenuBar = this['smartMenuBar'+i];
+            	}
+            	if (MenuController._currentTargetMenuBar) {
+	            	this.enabled = false;
+					var url:String = MenuController.urlPrefix + '/rest/getMenuXML3/xml/';
+	            	MenuController.ezREST.send(url, this.onResultMenuXML);
+            	} else {
+            		AlertPopUp.errorNoOkay('Cannot Process without knowing which smartMenuBar to use...','ERROR');
+            	}
+			}
+			
+            private function onClick_btnXmlLoggedIn(event:MouseEvent):void {
+            	this.enabled = false;
+				var url:String = MenuController.urlPrefix + '/rest/getMenuXML/logged-in/';
+            	MenuController.ezREST.send(url, this.onResultMenuXML);
+			}
+			
+            private function onClick_btnXmlLoggedOut(event:MouseEvent):void {
+            	this.enabled = false;
+				var url:String = MenuController.urlPrefix + '/rest/getMenuXML/logged-out/';
+            	MenuController.ezREST.send(url, this.onResultMenuXML);
+			}
+			
+            private function onClick_btn2json(event:MouseEvent):void {
+            	var btn:Button = event.currentTarget as Button;
+            	var i:Number = new Number(btn.id.substr(btn.id.length-1,1));
+            	MenuController._currentTargetMenuBar = null;
+            	if ( (i >= 1) && (i <= 2) ) {
+	            	MenuController._currentTargetMenuBar = this['smartMenuBar'+i];
+            	}
+            	if (MenuController._currentTargetMenuBar) {
+	            	this.enabled = false;
+					var url:String = MenuController.urlPrefix + '/rest/getMenuXML3/json/';
+	            	MenuController.ezREST.send(url, MenuController.onResultMenuJSON, MenuController.ezREST.jsonResultType);
+            	} else {
+            		AlertPopUp.errorNoOkay('Cannot Process without knowing which smartMenuBar to use...','ERROR');
+            	}
+			}
+			
+            private function onClick_btnJsonLoggedIn(event:MouseEvent):void {
+            	this.enabled = false;
+				var url:String = MenuController.urlPrefix + '/rest/getMenuXML/logged-in/json/';
+            	MenuController.ezREST.send(url, MenuController.onResultMenuJSON, MenuController.ezREST.jsonResultType);
+			}
+			
+            private function onClick_btnJsonLoggedOut(event:MouseEvent):void {
+            	this.enabled = false;
+				var url:String = MenuController.urlPrefix + '/rest/getMenuXML/logged-out/json/';
+            	MenuController.ezREST.send(url, MenuController.onResultMenuJSON, MenuController.ezREST.jsonResultType);
+			}
+			
+            private function onResultMenuJSON2(event:ResultEvent):void {
+				var response:*;
+				try {
+					response = event.result.getItemAt(0);
+					response = (response is ObjectProxy) ? response.valueOf() : response;
+					if (response.success == true) {
+						AlertPopUp.infoNoOkay('Success, JSON file has been saved.\nRetrieve it using "' + response.url + '".','INFO');
+					} else {
+						AlertPopUp.errorNoOkay('Failure, JSON file has NOT been saved.','ERROR');
+					}
+				} catch (err:Error) {
+					var stackTrace1:String = err.getStackTrace();
+					AlertPopUp.errorNoOkay(this.className + ' :: 1. ' + err.message + '\n' + StringUtils.ellipsis(stackTrace1,1024),'ERROR');
+				} finally {
+	            	this.enabled = true;
+				}
+            }
+            
+			private function cssLoaderCallback(value:*):void {
+				this.enabled = false;
+				var url:String = MenuController.urlPrefix + '/rest/save/file/' + StringUtils.dumpAsHexBytesString('/static/styles.json') + '/' + StringUtils.dumpAsHexBytesString(value);
+            	MenuController.ezREST.send(url, this.onResultMenuJSON2, MenuController.ezREST.jsonResultType);
+			}
+
+			private function onClick_btncss2json(event:MouseEvent):void {
+            	this.enabled = false;
+				CSSUtils.loadStylesAsJSON(MenuController.urlPrefix + '/static/styles.css',this.cssLoaderCallback);
+			}
+			
+			private function cssSimpleLoaderCallback(value:*):void {
+				this.enabled = true;
+				var ez:EzObjectExplainer = new EzObjectExplainer(value)
+				AlertPopUp.infoNoOkay('CSS Loader is done !\n' + ez.explainThisWay(),'cssSimpleLoaderCallback');
+			}
+
+			private function onClick_btncssgn(event:MouseEvent):void {
+            	this.enabled = false;
+				CSSUtils.loadStyles(MenuController.urlPrefix + '/rest/global-nav/globalnav.css',this.cssSimpleLoaderCallback);
+			}
+			
+	        private function receivedFromJavaScript(value:String):void {
+            	this.enabled = true;
+	        	AlertPopUp.infoNoOkay('(' + value + ')','receivedFromJavaScript says: ');
+	        }
+
+            private function onClick_btn2x(event:MouseEvent):void {
+            	if (this.checkJavaScriptReady()) {
+	            	this.enabled = false;
+	            	ExternalInterface.addCallback("sendToActionScript", this.receivedFromJavaScript);
+	            	//var s:* = ExternalInterface.call('get_data',{'command':'AJAX','url':'http://127.0.0.1:8888/rest/getMenuXML3/json/text/'});
+	            	var s:* = ExternalInterface.call('test',{'command':'AJAX','url':'http://127.0.0.1:8888/rest/getMenuXML3/xml/'});
+		        	//AlertPopUp.infoNoOkay('s=(' + s + ')','JavaScript says:');
+            	} else {
+		        	AlertPopUp.errorNoOkay('Not Ready Yet!','JavaScript says:');
+            	}
+            }
+
+            private var _menuStateBtn_menu:Menu;
+
+            private function onClick_MenuStateBtn(event:MenuEvent):void {
+                var label:String = event.item.label;        
+                var url:String = event.item.url;        
+                var btn:PopUpButton = this.getChildByName("btn_menuState") as PopUpButton;
+                if (btn) {
+	                btn.label = label;
+	                btn.close();
+	                this._menuStateBtn_menu.selectedIndex = event.index;
+	                if (url != null) {
+	                	this.handle_RPC(url);
+	                }
+                }
+            }
+            
+            private function debugger_onCreationComplete():void {
+            }
+            
+            private function onChange_accord(event:IndexChangedEvent):void {
+            	if (event.newIndex == 0) {
+	            	MenuController._currentTargetMenuBar = this.smartMenuBar1;
+            	} else if (event.newIndex == 1) {
+	            	MenuController._currentTargetMenuBar = this.smartMenuBar2;
+            	}
+            }
+            
+            private function handle_cbAdmin(cb:CheckBox):void {
+            	var isAdminMode:Boolean = false;
+            	var num:Number = new Number(cb.id.substr(cb.id.length-1,1));
+            	num = 2;
+            	var cb2:CheckBox = this['cbAdmin'+num];
+            	cb2.selected = true;
+				if (this.cbAdmin2.selected) {
+	            	isAdminMode = MenuController.AdminMode;
+            	}
+            	MenuController._currentTargetMenuBar = this.smartMenuBar1;
+            	//MenuController._currentTargetMenuBar.isAdminMode = MenuController._isAdminMode = isAdminMode;
+            }
+            
+            private function onChange_cbAdmin(event:Event):void {
+            	var cb:CheckBox = event.currentTarget as CheckBox;
+            	this.handle_cbAdmin(cb);
+            }
+            
+            private function get_debug_levels():Object {
+            	return {	'SmartMenuBar':this._debug_menuBar,
+            				'SmartMenuBarItem':this._debug_menuBarItem,
+            				'SmartMenuBarFlyout':this._debug_menuBarFlyout,
+            				'SmartMenuBarFlyoutItem':this._debug_menuBarFlyoutItem
+            			};
+            }
+            
+            private function onChange_cbDebugMenuBar(event:Event):void {
+            	var cb:CheckBox = event.currentTarget as CheckBox;
+            	this._debug_menuBar = cb.selected;
+            	MenuController._currentTargetMenuBar.debugLevel = this.get_debug_levels();
+            }
+            
+            private function onChange_cbDebugMenuBarItem(event:Event):void {
+            	var cb:CheckBox = event.currentTarget as CheckBox;
+            	this._debug_menuBarItem = cb.selected;
+            	MenuController._currentTargetMenuBar.debugLevel = this.get_debug_levels();
+            }
+            
+            private function onChange_cbDebugMenuBarFlyout(event:Event):void {
+            	var cb:CheckBox = event.currentTarget as CheckBox;
+            	this._debug_menuBarFlyout = cb.selected;
+            	MenuController._currentTargetMenuBar.debugLevel = this.get_debug_levels();
+            }
+            
+            private function onChange_cbDebugMenuBarFlyoutItem(event:Event):void {
+            	var cb:CheckBox = event.currentTarget as CheckBox;
+            	this._debug_menuBarFlyoutItem = cb.selected;
+            	MenuController._currentTargetMenuBar.debugLevel = this.get_debug_levels();
+            }
+         ]]>
+    </mx:Script>
+
+    <mx:Accordion id="accord" width="100%" height="100%" change="onChange_accord(event)">
+        <mx:Canvas label="(*)" width="100%" height="100%">
+			<mx:VBox id="vbox11" width="100%" height="100%" paddingLeft="0" paddingTop="0" paddingBottom="0" paddingRight="30">
+			    <mx:Panel id="vbox2_panel21" title="Admin Demo" width="100%" height="100%">
+				    <mx:HBox id="control_panel_container" width="100%" horizontalAlign="left">
+					    <mx:Button label="(xml3)" id="btn2xml1" click="onClick_btn2xml(event)"/>
+					    <mx:Button label="(json)" id="btn2json1" click="onClick_btn2json(event)"/>
+					    <mx:Button label="(css-gn)" id="btncssgn1" click="onClick_btncssgn(event)"/>
+					    <mx:VRule height="100%"/>
+				    </mx:HBox>
+				    <mx:HBox width="100%">
+					    <mx:CheckBox id="cbAdmin2" label="Admin (icons)" enabled="false" selected="true" click="onChange_cbAdmin(event)"/>
+					    <mx:Spacer width="1"/>
+					    <mx:VRule height="20"/>
+					    <mx:Spacer width="1"/>
+					    <mx:RadioButton id="rbLoggedOut" groupName="LoggedState" label="Logged-Out" enabled="false" selected="{MenuController._currentSelectedMenu.state == 'logged-out'}"/>
+					    <mx:RadioButton id="rbLoggedIn" groupName="LoggedState" label="Logged-In" enabled="false" selected="{MenuController._currentSelectedMenu.state == 'logged-in'}"/>
+					    <mx:VRule height="20"/>
+					    <mx:Label id="debug_options_label" text="Debug Options:"/>
+					    <mx:CheckBox id="cbDebugMenuBar" label="Menu Bar" enabled="{(MenuController._currentSelectedMenu.name is String) ? true : false}" selected="{this._debug_menuBar}" click="onChange_cbDebugMenuBar(event)"/>
+					    <mx:CheckBox id="cbDebugMenuBarItem" label="Menu Bar Item" enabled="{(MenuController._currentSelectedMenu.name is String) ? true : false}" selected="{this._debug_menuBarItem}" click="onChange_cbDebugMenuBarItem(event)"/>
+					    <mx:CheckBox id="cbDebugMenuBarFlyout" label="Menu Bar Flyout" enabled="{(MenuController._currentSelectedMenu.name is String) ? true : false}" selected="{this._debug_menuBarFlyout}" click="onChange_cbDebugMenuBarFlyout(event)"/>
+					    <mx:CheckBox id="cbDebugMenuBarFlyoutItem" label="Menu Bar Flyout Item" enabled="{(MenuController._currentSelectedMenu.name is String) ? true : false}" selected="{this._debug_menuBarFlyoutItem}" click="onChange_cbDebugMenuBarFlyoutItem(event)"/>
+					    <mx:VRule height="20"/>
+				    </mx:HBox>
+			    	<mx:HBox width="100%" height="100%">
+					    <vzwControls:SmartMenuBar id="smartMenuBar1" width="100%" height="35" debugger="{this.debugger}" myParent="{this}"/> <!--  isAdminMode="{this.cbAdmin.toggle}" -->
+			    	</mx:HBox>
+			    </mx:Panel>
+		    </mx:VBox>
+        </mx:Canvas>
+        <mx:Canvas label="(1)" width="100%" height="100%">
+			<mx:VBox id="vbox1" width="100%" height="100%" paddingLeft="0" paddingTop="0" paddingBottom="0" paddingRight="30">
+			    <mx:Panel id="vbox2_panel2" title="SmartMenuBar Control" width="100%" height="100%">
+				    <mx:HBox width="100%">
+					    <mx:Button label="(xml2)" id="btn2" click="onClick_btn2(event)"/>
+					    <mx:Button label="(xml3)" id="btn1" click="onClick_btn1(event)"/>
+					    <!--
+					    <mx:PopUpButton label="Menu State" id="btn_menuState" name="btn_menuState" creationComplete="onCreationCompleteMenuStateBtn()"/>
+					    -->
+					    <mx:Button label="(x)" id="btn2x" click="onClick_btn2x(event)"/>
+					    <mx:Button label="(xml3)" id="btn2xml2" click="onClick_btn2xml(event)"/>
+					    <mx:Button label="(json)" id="btn2json2" click="onClick_btn2json(event)"/>
+					    <mx:Button label="(css2json)" id="btncss2json" click="onClick_btncss2json(event)"/>
+					    <mx:Button label="(css-gn)" id="btncssgn" click="onClick_btncssgn(event)"/>
+					    <mx:Button label="(xml [logged-in])" id="btnXmlLoggedIn" click="onClick_btnXmlLoggedIn(event)"/>
+					    <mx:Button label="(json [logged-in])" id="btnJsonLoggedIn" click="onClick_btnJsonLoggedIn(event)"/>
+					    <mx:Button label="(xml [logged-out])" id="btnXmlLoggedOut" click="onClick_btnXmlLoggedOut(event)"/>
+					    <mx:Button label="(json [logged-out])" id="btnJsonLoggedOut" click="onClick_btnJsonLoggedOut(event)"/>
+				    </mx:HBox>
+			    	<mx:HBox width="100%" height="100%">
+					    <vzwControls:SmartMenuBar id="smartMenuBar2" width="100%" height="35" debugger="{this.debugger}"/>
+			    	</mx:HBox>
+			    </mx:Panel>
+		    </mx:VBox>
+        </mx:Canvas>
+        <mx:Canvas label="(2)" width="100%" height="100%">
+			<mx:VBox id="vbox2" width="100%" height="100%" paddingLeft="10" paddingTop="0" paddingBottom="30" paddingRight="15">
+			    <mx:Panel title="ZetMenuBar Control" width="100%" height="100%" paddingBottom="0" paddingLeft="0" paddingRight="0" paddingTop="0">
+			       <mx:MenuBar labelField="@label" itemClick="menuHandler(event);" dataProvider="{this.menuBarCollection}" width="100%" mouseOver="onMouseOver_smartMenuBarTest(event)" /> 
+			    </mx:Panel>
+	
+			    <mx:Panel id="vbox2_panel1" title="SmartMenuBar Test" width="100%" height="100">
+			       <vzwControls:SmartMenuBarTest id="smartMenuBarTest" labelField="@label" alignField="@align" debugger="{this.debugger}" itemClick="menuHandler(event);" mouseOver="onMouseOver_smartMenuBarTest(event)" dataProvider="{menuBarCollection}" width="100%" />
+			    </mx:Panel>
+			    
+			    <mx:Panel title="Normal MenuBar Control" width="100%" height="100%" paddingBottom="0" paddingLeft="0" paddingRight="0" paddingTop="0">
+			       <mx:MenuBar labelField="@label" itemClick="menuHandler(event);" dataProvider="{this.menuBarCollection}" width="100%" mouseOver="onMouseOver_smartMenuBarTest(event)" /> 
+			    </mx:Panel>
+	
+			    <mx:Panel id="vbox2_panel3" title="Vertical MenuBar Control" width="100%" height="115">
+					<mx:HBox width="100%" height="100%">
+						<mccune:VerticalMenuBar height="100%" direction="right" labelField="@label" itemClick="menuHandler(event);" dataProvider="{menuBarCollection}" mouseOver="onMouseOver_smartMenuBarTest(event)" />
+				        <mx:Spacer width="100%" />
+				        <mccune:VerticalMenuBar height="100%" direction="left" labelField="@label" itemClick="menuHandler(event);"  dataProvider="{menuBarCollection}" mouseOver="onMouseOver_smartMenuBarTest(event)" />
+					</mx:HBox>
+			    </mx:Panel>
+		    </mx:VBox>
+        </mx:Canvas>
+    </mx:Accordion>
+    <mx:TextArea id="debugger" width="100%" height="150" creationComplete="debugger_onCreationComplete()"/>
+</mx:Application>

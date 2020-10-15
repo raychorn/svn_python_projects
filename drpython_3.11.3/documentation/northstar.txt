@@ -1,0 +1,53 @@
+================
+ North Star
+================
+
+.. _Help: help.html
+
+Back to Help_
+
+.. _Top:
+
+.. image:: NorthStarLogoSmall_top.gif 
+
+`North Star <http://www.northstarteens.org/>`_ is a center for 
+self-directed learners. Kids who choose not to go to school and pursue 
+their own studies come here to learn about an impressive variety of 
+topics. Classes are offered in diverse subjects such as:
+
+- philosophy
+- rhetoric
+- number theory
+- physics
+- programming
+- history
+- tidal pool biology
+- crochet
+- Shakespeare
+- war and peace
+- music ensemble
+- theater
+- botany
+- disability and the media
+- supreme court cases
+- business
+- photography
+- writing
+- art
+- and more!
+
+The school is small, with one full time teacher/staff member, a private army
+of college volunteers, and a host of passionate students.
+
+If you, dear user, would take a moment to think of the children, those 
+plucky little folks, and donate some tax-deductable moolah to a truly 
+wonderful cause, you can help a cutting edge "un-school" survive, and 
+make what was hell for most of us (high school and middle school) heaven
+for these kids (and eventually more by serving as a model).
+
+`Please Donate to North Star <http://sourceforge.net/donate/index.php?group_id=83074>`_
+
+If you are interested or just want to know more, please contact me via
+e-mail: drpython@bluebottle.com or contact North Star directly via 
+email: info@northstarteens.org or via phone (Massachusetts, USA): 
+*(413) 582-0193*.

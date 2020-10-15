@@ -1,0 +1,81 @@
+#site_body img {
+	border: 0;
+}
+
+#site_body {
+	color: #e0e0e0;
+	font-size: 14pt;
+}
+
+#site_body a {
+	color: #ff89e2;
+	text-decoration: none;
+}
+
+#site_body a:visited {
+	color: #eba4ff;
+}
+
+#site_body a:hover {
+	color: #ffbfef;
+	text-decoration: underline;
+}
+
+#site_body h1,
+#site_body h2,
+#site_body h3 {
+	color: white;
+	margin: 0;
+	padding: 0;
+	margin-top: 0.8em;
+	margin-bottom: 0.5em;
+}
+
+#site_body h1 {
+	font-size: 27pt;
+}
+
+#site_body h2 {
+	font-size: 20pt;
+	font-weight: normal;
+}
+
+#site_body dt {
+	color: white;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+#site_body dd {
+	margin-bottom: 0.5em;
+}
+
+#site_body dd > p:first-child {
+	margin-top: 0;
+}
+
+#site_body dd > p:last-child {
+	margin-bottom: 0;
+}
+
+#site_body > ul.navigation {
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0 23px 0 23px;
+	height: 34px;
+	background-image: url(site_body_navigation_bg.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+#site_body > .navigation li {
+	float: left;
+}
+
+#site_body > div:last-child {
+	background-repeat: no-repeat;
+	background-image: url(site_body_footer_bg.png);
+	padding-bottom: 37px;
+	background-position: bottom left;
+}

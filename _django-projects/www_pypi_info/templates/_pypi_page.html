@@ -1,0 +1,42 @@
+<link href="/static/css/pypi_table_styles.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/static/jqGrid/js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="/static/jqGrid/js/jquery.timers.js"></script>
+<center><h3><BIG>PYPI API Demo</BIG></h3></center>
+<hr width="80%" color="#FFFF00" />
+<br/>
+<br/>
+<table id="pypi_table" width="100%" bgcolor="#FF6">
+	<tr>
+    	<td width="50%" valign="top">
+        	{{ page_content }}
+        </td>
+    	<td width="50%" valign="top">
+        	<!--<BIG>(Package List will Refresh once per minute)</BIG> --><BR/>
+            <div id="activity_indicator" style="display:none;"><img src="/static/busy/indicator.gif"/>&nbsp;<span id="activity_message"></span></div>
+            <div id="rss_list" style="display:none;"></div>
+        </td>
+    </tr>
+</table>
+<script language="javascript" type="text/javascript">
+	function cb_rss(data) {
+		$("#rss_list").toggle();
+		$("#activity_indicator").toggle();
+		$("#rss_list").html(data);
+	}
+	function reload_rss() {
+		$("#activity_indicator").toggle();
+		$("#activity_message").html('<BIG>Loading the Latest Package Updates...<BIG>');
+		jQuery.get( '/pypi-rss/', [], cb_rss, 'text');
+	}
+	function _reload_rss() {
+		$("#rss_list").toggle();
+		reload_rss();
+	}
+	
+	//var times = 10000;
+	//$(document).everyTime(60000, function(i) {
+	//  _reload_rss();
+	//}, times);
+	
+	reload_rss();
+</script>

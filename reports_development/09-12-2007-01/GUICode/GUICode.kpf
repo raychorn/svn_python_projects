@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project kpf_version="4" id="5981188f-7bb4-4cd0-be67-b2a48e390aea" name="GUICode.kpf">
+<file url="lib/__init__.py" idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/lib" id="334a4a29-0a23-427d-9f9b-03fd1d76c831" name="__init__.py">
+</file>
+<file url="lib/UnObscurePhrase.py" idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/lib" id="a79143ee-bb99-4e00-89b2-0d93c8a3051f" name="UnObscurePhrase.py">
+</file>
+<file url="lib/ObscurePhraseTest.py" idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/lib" id="bee148d7-e4bf-47d9-9a65-76f42b63405a" name="ObscurePhraseTest.py">
+</file>
+<file url="lib/ObscurePhrase.py" idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/lib" id="f3cc9fa9-6ce8-4630-9275-bf1bbac96736" name="ObscurePhrase.py">
+</file>
+<file url="lib/interrogate.py" idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/lib" id="76afb278-1386-454d-8428-2e001775bc45" name="interrogate.py">
+</file>
+<file url="lib/GeneratePasswordBase64.py" idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/lib" id="8c6bf4ee-df0d-4b0d-ac8c-12bc355ef4bb" name="GeneratePasswordBase64.py">
+</file>
+<file url="lib/dbConnections.py" idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/lib" id="92a4a09a-20d7-4d47-aad4-c138806c8f14" name="dbConnections.py">
+</file>
+<file url="lib/MetadataFactory.py" idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/lib" id="cc35a73b-0547-4094-b4f6-6566238e2786" name="MetadataFactory.py">
+</file>
+<preference-set idref="5981188f-7bb4-4cd0-be67-b2a48e390aea">
+  <boolean id="import_live">1</boolean>
+</preference-set>
+<preference-set idref="5981188f-7bb4-4cd0-be67-b2a48e390aea/openGUI.py">
+  <string id="lastInvocation">default</string>
+<preference-set id="Invocations">
+<preference-set id="default">
+  <string id="postparams"></string>
+  <string id="language">Python</string>
+  <string id="getparams"></string>
+  <boolean id="use-console">0</boolean>
+  <string relative="path" id="filename">openGUI.py</string>
+  <string id="mpostparams"></string>
+  <boolean id="show-dialog">1</boolean>
+  <string id="request-method">GET</string>
+  <string id="params"></string>
+  <string id="executable-params"></string>
+  <string id="posttype">application/x-www-form-urlencoded</string>
+  <string id="documentRoot"></string>
+  <string id="cookieparams"></string>
+  <string id="userEnvironment"></string>
+  <boolean id="sim-cgi">0</boolean>
+  <string id="cwd"></string>
+  <string id="userCGIEnvironment"></string>
+</preference-set>
+</preference-set>
+</preference-set>
+</project>

@@ -1,0 +1,1 @@
+The files from the admin_media/media folder have been moved into the media.zip that has been placed in the root folder.

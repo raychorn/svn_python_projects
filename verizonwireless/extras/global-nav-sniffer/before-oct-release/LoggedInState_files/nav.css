@@ -1,0 +1,189 @@
+/* A few general main nav styles */
+body {margin:0;padding:0;background:#e5e5e5;text-align:center;font:normal 0.75em arial,sans-serif;}
+#container {width:760px;margin:0 auto;text-align:left;}
+p.skipto {position:absolute;top:-100em;}
+fieldset, form, img {border:0;}
+a:link {color:#339;}
+a:visited {color:#66f;}
+img {border:0;}
+
+#gn_header_outside {text-align:center;width:100%;}
+#gn_header_inside {width:760px;padding:0;margin:0;font:normal 11px arial,sans-serif;}
+#gn_header_outside #gn_header_inside {margin:0 auto;text-align:left;}
+
+#gn_header_logo {float:left;display:inline;width:171px;height:60px;margin:15px 0px 20px 30px;}
+#gn_header_links {float:right;text-align:right;display:inline;list-style-type:none;list-style-position:inside;padding:0;margin:8px 10px 15px 0px;}
+#gn_header_links li {float:left;padding:0px 8px 0px 8px;margin:0;border-left:1px solid silver;line-height:16px;font:normal 12px arial,sans-serif;}
+#gn_header_links li a.cart {display:block;background:url(../images/icon_cart.gif) no-repeat 0px 2px;padding:0px 0px 0px 20px;}
+#gn_header_search {float:right;text-align:right;display:inline;width:544px;padding:0;margin:0px 10px 15px 0px;}
+#gn_header_search fieldset {border:0;padding:0;margin:0;}
+#gn_header_search legend {display:none;}
+#gn_header_location {float:right;text-align:right;display:inline;width:544px;margin:0px 10px 0px 0px;font:normal 11px arial,sans-serif;}
+
+#gn_outside {background:url(../images/off_red.gif) repeat-x;text-align:center;width:100%;}
+#gn {height:35px;width:760px;}
+#gn_outside #gn {margin:0 auto;text-align:left;}
+
+#gn div ul, #gn div ul li ul {display:block;width:180px;overflow:hidden;list-style-type:none;list-style-position:outside;padding:0;margin:0;}
+#gn div ul li, #gn div ul li ul li {display:block;width:180px;overflow:hidden;vertical-align:bottom;padding:0;margin:0;background:transparent;}
+
+#gn h2 {display:block;float:left;padding:0 1px 0 0;margin:0;height:35px;line-height:35px;background:url(../images/divider.gif) no-repeat top right;}
+#gn h2 a:link, #gn h2 a:visited {display:block;float:left;background:url(../images/off_red.gif) repeat-x;font:bold 13px arial,sans-serif;color:#fff;text-decoration:none;padding:0 10px 0 10px;height:35px;line-height:35px;}
+#gn h2 a:hover, #gn h2 a:active, #gn h2 a:focus, #gn h2 a.gn_active, #gn h2 a.gn_selected  {background:url(../images/over_red.gif) repeat-x;color:#fff;text-decoration:none;} 
+#gn h2 span {display:block;float:left;cursor:pointer;cursor:hand;}
+#gn h2 span.gn_left_end {padding:0 0 0 1px;margin:0;height:35px;line-height:35px;background:url(../images/divider.gif) no-repeat top left;}
+#gn h2 img {display:block;float:left;height:35px;width:1px;overflow:hidden;}
+#gn sup {line-height:0px;vertical-align:text-top;}
+
+#gn div.gn_dd {position:absolute;left:-1000em;z-index:500;background:url(../../nda/images/gn/s.gif);width:180px;}
+#gn div.gn_dd ul li a:link, #gn div.gn_dd ul li a:visited {display:block;font:bold 12px arial,sans-serif;color:#fff;text-decoration:none;padding:4px 10px 4px 10px;background:#000;}/*border-bottom:1px solid #333;*/
+#gn div.gn_dd ul li a:hover, #gn div.gn_dd ul li a:active, #gn div.gn_dd ul li a:focus {text-decoration:none;}
+#gn div.gn_dd ul li ul {position:absolute;z-index:500;margin-left:180px;top:0;width:0;overflow:hidden;left:-1000em;visibility:hidden;}
+#gn div.gn_dd ul li ul li a:link, #gn div.gn_dd ul li ul li a:visited {font:normal 11px arial,sans-serif;padding-left:1.65em;text-indent:-0.5em;background:#333;}/*border-bottom:1px solid #4D4D4D;*/
+#gn div.gn_dd ul li ul li a:hover, #gn div.gn_dd ul li ul li a:active, #gn div.gn_dd ul li ul li a:focus {text-decoration:none;background:#990000;}
+
+#gn div.gn_dd ul li ul li a:link.newWindow, 
+#gn div.gn_dd ul li ul li a:visited.newWindow, 
+#gn div.gn_dd ul li ul li a:hover.newWindow, 
+#gn div.gn_dd ul li ul li a:active.newWindow, 
+#gn div.gn_dd ul li ul li a:focus.newWindow {background-image: url(../images/gn/promos/newwindow.gif); background-position: 99% 45%; background-repeat: no-repeat;}
+
+
+/* promo menu images */
+#gn li.ph_mobile { background-image:url(../images/gn/promos/ph_mobile.jpg);}
+#gn li.ph_pdas { background-image:url(../images/gn/promos/ph_pdas.jpg);}
+#gn li.ph_blackberrys { background-image:url(../images/gn/promos/ph_blackberrys.jpg);}
+#gn li.ph_push { background-image:url(../images/gn/promos/ph_push.jpg);}
+#gn li.ph_wireless { background-image:url(../images/gn/promos/ph_wireless.jpg);}
+#gn li.ph_special { background-image:url(../images/gn/promos/ph_special.jpg);}
+#gn li.ph_gift { background-image:url(../images/gn/promos/ph_gift.jpg);}
+#gn li.ph_accessories { background-image:url(../images/gn/promos/ph_accessories.jpg);}
+
+#gn li.pl_voice { background-image:url(../images/gn/promos/pl_voice.jpg);}
+#gn li.pl_voice_data { background-image:url(../images/gn/promos/pl_voice_data.jpg);}
+#gn li.pl_wireless { background-image:url(../images/gn/promos/pl_wireless.jpg);}
+#gn li.pl_business { background-image:url(../images/gn/promos/pl_business.jpg);}
+#gn li.pl_international { background-image:url(../images/gn/promos/pl_international.jpg);}
+#gn li.pl_transfer { background-image:url(../images/gn/promos/pl_transfer.jpg);}
+#gn li.pl_coverage { background-image:url(../images/gn/promos/pl_coverage.jpg);}
+
+#gn li.bu_business { background-image:url(../images/gn/promos/bu_business.jpg);}
+#gn li.bu_business_solutions { background-image:url(../images/gn/promos/bu_business_solutions.jpg);}
+#gn li.bu_customer { background-image:url(../images/gn/promos/bu_customer.jpg);}
+#gn li.bu_global { background-image:url(../images/gn/promos/bu_global.jpg);}
+#gn li.bu_government { background-image:url(../images/gn/promos/bu_government.jpg);}
+#gn li.bu_phones { background-image:url(../images/gn/promos/bu_phones.jpg);}
+#gn li.bu_wireless { background-image:url(../images/gn/promos/bu_wireless.jpg);}
+#gn li.bu_wireless_internet { background-image:url(../images/gn/promos/bu_wireless_internet.jpg);}
+#gn li.bu_products_services { background-image:url(../images/gn/promos/bu_products_services.jpg);}
+#gn li.bu_small_business { background-image:url(../images/gn/promos/bu_small_business.jpg);}
+
+#gn li.fe_games { background-image:url(../images/gn/promos/fe_games.jpg);}
+#gn li.fe_mobile { background-image:url(../images/gn/promos/fe_mobile.jpg);}
+#gn li.fe_mobile_web { background-image:url(../images/gn/promos/fe_mobile_web.jpg);}
+#gn li.fe_music { background-image:url(../images/gn/promos/fe_music.jpg);}
+#gn li.fe_ringback { background-image:url(../images/gn/promos/fe_ringback.jpg);}
+#gn li.fe_ringtones { background-image:url(../images/gn/promos/fe_ringtones.jpg);}
+#gn li.fe_tools { background-image:url(../images/gn/promos/fe_tools.jpg);}
+#gn li.fe_video { background-image:url(../images/gn/promos/fe_video.jpg);}
+#gn li.fe_wallpapers { background-image:url(../images/gn/promos/fe_wallpapers.jpg);}
+
+#gn li.me_mobile { background-image:url(../images/gn/promos/me_mobile.jpg);}
+#gn li.me_mobile_email { background-image:url(../images/gn/promos/me_mobile_email.jpg);}
+#gn li.me_picture { background-image:url(../images/gn/promos/me_picture.jpg);}
+#gn li.me_text { background-image:url(../images/gn/promos/me_text.jpg);}
+#gn li.me_text_alerts { background-image:url(../images/gn/promos/me_text_alerts.jpg);}
+
+#gn div ul li ul li.promo {margin:0;padding:0;background-repeat:no-repeat;background-position:1px 0px;border-bottom:1px solid #4D4D4D;color:#fff;font:normal 11px arial,sans-serif;}
+#gn div ul li ul li.promo strong {display:block;font-size:12px;}
+#gn div ul li ul li.promo p {padding:74px 10px 4px 10px;margin:0;}
+#gn div ul li ul li.blank p {padding:4px 10px 4px 10px;margin:0;}
+
+/* added from prev version of nav.css */
+/* These styles handle the CSS shadow. */
+#pb1 {height:1%;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;}
+#pb2 {height:1%;border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;}
+#pb3 {height:1%;border-left:1px solid #d6d6d6;border-right:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;}
+#pb4 {height:1%;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;}
+
+#pb1_1 {height:1%;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;}
+#pb2_1 {height:1%;border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;}
+#pb3_1 {height:1%;border-left:1px solid #d6d6d6;border-right:1px solid #d6d6d6;}
+#pb4_1 {height:1%;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;}
+
+/* These styles handle the header. */
+
+#header {background:transparent none repeat scroll 0%;margin:0pt auto;text-align:left;width:760px;}
+#header1 {background:transparent url(../images/gn/lob_bg.gif) repeat-x scroll center bottom;height:120px;position:relative;width:100%;}
+#headerSpacer {clear:both;height:8px;overflow:hidden;}
+#logoNew {float:left;width:171px;height:60px;margin:16px 0px 0px 30px;}
+#logoNew1 {left:10px;
+position:absolute;
+top:18px;}
+#mainnav1 {
+margin:0 auto;
+position:relative;
+text-align:left;
+width:760px;
+}
+.companyName {
+-x-system-font:none;
+float:right;
+font-family:arial,sans-serif;
+font-size:11px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+}
+#lob {padding:0; position:absolute; left:200px; top:66px;}
+ul#headerLinks {float:right;text-align:right;display:inline;list-style-type:none;list-style-position:outside;padding:0;margin:8px 10px 10px 0px;}
+ul#headerLinks li {float:left;padding:0px 5px;margin:0;border-left:1px solid silver;line-height:16px;font:normal 1em arial,sans-serif;}
+ul#headerLinks li.firstLink {border-left:none;}
+ul#headerLinks li.firstLinkSpanish {background:url(/images_b2c/shared/nav/nuevo.gif) no-repeat left 4px;padding-left: 45px;}
+ul#headerLinks li img.cartInfo {width:16px;height:16px;float:left;display:block;}
+ul#headerLinks li.endLink {padding-right:0px;}
+#rule {float:right;width:500px;background:url(../images/gn/img_gradient_rule.gif) no-repeat;height:1px;overflow:hidden;margin:5px 0px 10px 0px;}
+
+#searchFormNew {padding:0; position:absolute; right:3px; _right:3px; top:70px; text-align:right;}
+#searchFormNew fieldset {border:0;padding:0;margin:0;}
+#searchFormNew legend {display:none;}
+#searchFormNew button.redButton {display:block;float:right;margin:0 0 0 5px;}
+#searchFormNew input {display:block;float:right;margin-top:2px; width:130px;}
+
+
+/* this button is added to match with IS login page search button size.
+added as a seperate style not to impact other buttons in MYA */
+button.searchButton {background:transparent none repeat scroll 0%;color:#FFFFFF;cursor:pointer;border:medium none;padding:0pt;}
+button.searchButton span {display:block;font-family:arial,sans-serif;font-size:0.95em;font-weight:bold;height:21px;line-height:22px;white-space:nowrap;
+background:transparent url(../images/button_red_right.gif) no-repeat scroll right top;
+}
+button.searchButton span span {padding:0pt 15px;
+background:transparent url(../images/button_red_left.gif) no-repeat scroll left top;
+}
+#location {float:right;text-align:right;display:inline;width:539px;margin:15px 20px 0px 0px;font:normal .9em arial,sans-serif;}
+#location_header{
+-x-system-font:none;
+float:right;
+font-family:arial,sans-serif;
+font-size:11px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:0 10px 0 5px;
+text-align:right;
+}
+/* addjustments added for spanish links */
+#gn_phones {width:148px;}
+#gn_plans {width:40px;}
+#gn_features {width:148px;}
+#gn_messaging {width:74px;}
+#gn_business {width:60px;}
+#gn_support {width:55px;}
+#gn_myaccount {width:87px;}
+#gn h2 div.gn_left_end {float:left;width:1px;margin:0;height:35px;line-height:35px;background:url(../images/divider.gif) no-repeat top left;}

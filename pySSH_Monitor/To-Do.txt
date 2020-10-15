@@ -1,0 +1,7 @@
+# To-Do:
+
+# Make an object for sshUtils.py
+
+# handle the close function better.
+
+# Roll cerialize into oodb for faster pickling actions.  Make this a low-level choice...

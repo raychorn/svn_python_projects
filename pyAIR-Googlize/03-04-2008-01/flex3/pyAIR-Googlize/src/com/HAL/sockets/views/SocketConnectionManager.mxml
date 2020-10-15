@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%"
+	initialize="onInit()"
+	>
+	<mx:Script>
+		<![CDATA[
+			import com.HAL.utils.StringUtils;
+			import com.HAL.controls.OnlineStatusCanvas;
+			import com.HAL.sockets.events.ConnectionRetryEvent;
+			import com.HAL.sockets.events.ConnectionClosedEvent;
+			import com.HAL.sockets.events.IOErrorHandledEvent;
+			import com.HAL.sockets.events.ConnectionEstablishedEvent;
+			import com.HAL.sockets.events.DataReceivedEvent;
+			import mx.collections.ArrayCollection;
+			import com.HAL.sockets.events.ConnectionTimeoutEvent;
+			import com.HAL.sockets.XMLSocketConnector;
+			import com.HAL.sockets.events.CloseHandlerEvent;
+			import com.HAL.sockets.events.ConnectHandlerEvent;
+			import com.HAL.sockets.events.DataHandlerEvent;
+			import com.HAL.sockets.events.ErrorHandlerEvent;
+			import com.HAL.sockets.events.IOErrorHandlerEvent;
+			import com.HAL.sockets.events.ProgressHandlerEvent;
+			import com.HAL.sockets.events.SecurityErrorHandlerEvent;
+			import com.HAL.sockets.utils.SocketValuesBag;
+			
+			import flash.events.TimerEvent;
+			import flash.utils.Timer;
+			
+			[Event(name="connectionTimeout", type="com.HAL.sockets.events.ConnectionTimeoutEvent")]
+			[Event(name="dataReceived", type="com.HAL.sockets.events.DataReceivedEvent")]
+			[Event(name="connectionEstablished", type="com.HAL.sockets.events.ConnectionEstablishedEvent")]
+			[Event(name="ioErrorHandled", type="com.HAL.sockets.events.IOErrorHandledEvent")]
+			[Event(name="connectionClosed", type="com.HAL.sockets.events.ConnectionClosedEvent")]
+			[Event(name="connectionRetry", type="com.HAL.sockets.events.ConnectionRetryEvent")]
+
+			private var socketsConnection:XMLSocketConnector;
+			private var _port:uint = 55555;
+			private var _isConnected:Boolean = false;
+			private var _timerPeriodMs:int = 250;
+			private var _timer:Timer;
+			private var _missedServerCount:int = 0;
+			private var _terminateConnectionCommand:uint = 999;
+			private var _terminateConnection:String;
+			
+			private var _onlineStatusCanvas:OnlineStatusCanvas;
+			
+			public function set onlineStatusCanvas(statusCanvas:OnlineStatusCanvas):void {
+				this._onlineStatusCanvas = statusCanvas;
+			}
+			
+			public function get onlineStatusCanvas():OnlineStatusCanvas {
+				return this._onlineStatusCanvas;
+			}
+			
+			public function set terminateConnectionCommand(command:uint):void {
+				this._terminateConnectionCommand = command;
+				this._terminateConnection = '<command value="' + command.toString() + '"></command>';
+			}
+			
+			public function get terminateConnectionCommand():uint {
+				return this._terminateConnectionCommand;
+			}
+			
+			public function set port(port:uint):void {
+				if (port) {
+					this._port = port;
+				}
+			}
+			
+			public function get port():uint {
+				return this._port;
+			}
+			
+			public function get isConnected():Boolean {
+				return this._isConnected;  
+			}
+			
+			public function set timerPeriodMs(delay:uint):void {
+				this._timerPeriodMs = delay;
+			}
+			
+			public function get timerPeriodMs():uint {
+				return this._timerPeriodMs;
+			}
+			
+			public function get missedServerCount():int {
+				return this._missedServerCount;
+			}
+			
+			private function makeIntoCommand(value:String):String {
+				return '<command value="' + value + '"></command>';
+			}
+			
+			public function set terminateConnection(value:String):void {
+				this._terminateConnection = this.makeIntoCommand(value);
+			}
+			
+			public function get terminateConnection():String {
+				return this._terminateConnection;
+			}
+
+			private function removeTimer():void {
+				if (this._timer) {
+					this._timer.stop();
+					this._timer.removeEventListener(TimerEvent.TIMER, onTimerEvent);
+					this._timer = null;
+				}
+			}
+			
+			private function onTimerEvent(event:TimerEvent):void {
+				if (this._isConnected == false) {
+					this.dispatchEvent(new ConnectionRetryEvent(ConnectionRetryEvent.TYPE_CONNECTION_RETRY,event))
+					this.makeConnection();
+					this._missedServerCount += 1;
+					if (this._missedServerCount > (5/(this._timerPeriodMs/1000))) {
+						this.removeTimer();
+						this.parentApplication.enabled = false;
+						this.dispatchEvent(new ConnectionTimeoutEvent(ConnectionTimeoutEvent.TYPE_CONNECTION_TIMEOUT,event))
+					}
+				} else {
+					this.removeTimer();
+				}
+			}
+
+			private function onInit():void {
+				this._isConnected = false;
+				
+				this._timer = new Timer(this._timerPeriodMs);
+				this._timer.addEventListener(TimerEvent.TIMER, onTimerEvent);
+				this._timer.start();
+				
+				this.btn_1.enabled = false;
+				this.terminateConnectionCommand = this._terminateConnectionCommand;
+			}
+		
+			private function reportThisEvent(event:*, reason:String):void {
+				var s:String;
+				try {
+					s = event.evnt.toString();
+				} catch (err:Error) {
+					s = event.toString();
+				}
+				if (event is ConnectHandlerEvent) {
+					var cEvent:ConnectHandlerEvent = ConnectHandlerEvent(event);
+					s += ' (' + cEvent.type + ')';
+				} else {
+					if (event is DataHandlerEvent) {
+						var dEvent:DataHandlerEvent = DataHandlerEvent(event);
+						s += ' (' + StringUtils.reportCharCodes(dEvent.evnt.data,StringUtils.dummyReportFunc,translateChar) + ')';
+					}
+				}
+				this.text.htmlText += reason + ' :: [' + s + ']<br>';
+			}
+		
+			private function onCloseHandlerEvent(event:CloseHandlerEvent):void {
+				this.reportThisEvent(event,'CloseHandlerEvent');
+				this.dispatchEvent(new ConnectionClosedEvent(ConnectionClosedEvent.TYPE_CONNECTION_CLOSED, event));
+			}
+					
+			private function onConnectHandlerEvent(event:ConnectHandlerEvent):void {
+				this.reportThisEvent(event,'ConnectHandlerEvent');
+				this._isConnected = true;
+				this.removeTimer();
+				this.btn_1.enabled = true;
+				this.btn_connection.enabled = false;
+				this.btn_disconnection.enabled = true;
+				this.dispatchEvent(new ConnectionEstablishedEvent(ConnectionEstablishedEvent.TYPE_CONNECTION_ESTABLISHED, event));
+			}
+
+			private function objectAsString(obj:Object):String {
+				var sResult:String = '';
+				for (var name:String in obj) {
+					sResult += name + '=' + obj[name];
+				}
+				return sResult;
+			}
+			
+			private function getObjectsFromNode(node:XMLNode,obj:Object):void {
+				if (node) {
+					obj['name'] = node.localName;
+					obj['attributes'] = '(' + this.objectAsString(node.attributes) + ')';
+					obj['value'] = node.nodeValue;
+					obj['type'] = node.nodeType;
+					if (node.hasChildNodes()) {
+						var children:Array = [];
+						var aChild:Object;
+						var aNode:XMLNode;
+						var hasValidChildren:Boolean = true;
+						if ( (node.childNodes.length == 1) && (node.nodeValue == null) ) {
+							var pNode:XMLNode = XMLNode(node.childNodes[0]);
+							if ( (pNode.childNodes.length == 0) && (pNode.localName == null) ) {
+								obj['value'] = pNode.nodeValue;
+								obj['attributes'] += '(' + this.objectAsString(pNode.attributes) + ')';
+								obj['attributes'] = String(obj['attributes']).replace(')(','');
+								hasValidChildren = false;
+							}
+						}
+						if (hasValidChildren) {
+							for (var n:int = 0; n < node.childNodes.length; n++) {
+								aNode = node.childNodes[n];
+								aChild = {};
+								this.getObjectsFromNode(aNode,aChild);
+								children.push(aChild);
+							}
+						}
+						obj['children'] = children;
+					}
+				}
+			}
+			
+			private function onDataHandlerEvent(event:DataHandlerEvent):void {
+				var data:Object = {}
+				var doc:XMLDocument = new XMLDocument();
+				doc.parseXML(event.evnt.data);
+				this.getObjectsFromNode(doc.firstChild,data);
+				try { this.onlineStatusCanvas.signalResponseFromServer(); } catch (err:Error) { }
+				this.reportThisEvent(event,'DataHandlerEvent');
+				this.dispatchEvent(new DataReceivedEvent(DataReceivedEvent.TYPE_DATA_RECEIVED,data))
+			}
+
+			private function onIOErrorHandlerEvent(event:IOErrorHandlerEvent):void {
+				this.reportThisEvent(event,'IOErrorHandlerEvent');
+				this.btn_1.enabled = false;
+				this._isConnected = false;
+				this.dispatchEvent(new IOErrorHandledEvent(IOErrorHandledEvent.TYPE_IOERROR_HANDLED, event));
+			}
+					
+			private function onProgressHandlerEvent(event:ProgressHandlerEvent):void {
+				this.reportThisEvent(event,'ProgressHandlerEvent');
+			}
+			
+			private function onSecurityErrorHandlerEvent(event:SecurityErrorHandlerEvent):void {
+				this.reportThisEvent(event,'SecurityErrorHandlerEvent');
+			}
+					
+			private function onErrorHandlerEvent(event:ErrorHandlerEvent):void {
+				this.reportThisEvent(event,'ErrorHandlerEvent');
+			}
+			
+			private function makeConnection():void {
+				this.socketsConnection = new XMLSocketConnector('127.0.0.1', this._port);
+				this.socketsConnection.useEncryptionCustom = true;
+				this.socketsConnection.addEventListener(CloseHandlerEvent.TYPE_CLOSE_HANDLER, onCloseHandlerEvent);
+				this.socketsConnection.addEventListener(ConnectHandlerEvent.TYPE_CONNECT_HANDLER, onConnectHandlerEvent);
+				this.socketsConnection.addEventListener(DataHandlerEvent.TYPE_DATA_HANDLER, onDataHandlerEvent);
+				this.socketsConnection.addEventListener(IOErrorHandlerEvent.TYPE_IOERROR_HANDLER, onIOErrorHandlerEvent);
+				this.socketsConnection.addEventListener(ProgressHandlerEvent.TYPE_PROGRESS_HANDLER, onProgressHandlerEvent);
+				this.socketsConnection.addEventListener(SecurityErrorHandlerEvent.TYPE_SECURITY_ERROR_HANDLER, onSecurityErrorHandlerEvent);
+				this.socketsConnection.addEventListener(ErrorHandlerEvent.TYPE_ERROR_HANDLER, onErrorHandlerEvent);
+			}
+					
+			public function sendRawDataToSocket(data:*):void {
+				this.onlineStatusCanvas.beginCommunication();
+				this.socketsConnection.send(data);
+				this.text.htmlText += '(sendRawDataToSocket) :: [' + data.toString() + ']<br>';
+			}
+
+			private function translateChar(ch:String):String {
+				return ch.replace('<','&lt;').replace('>','&gt;');
+			}
+			
+			public function sendCommandToSocket(data:*):void {
+				var s:String = '<command value="' + data + '"></command>'
+				this.onlineStatusCanvas.beginCommunication();
+				this.socketsConnection.send(s);
+				this.text.htmlText += '(sendCommandToSocket) :: s.length=(' + s.length + '), [' + StringUtils.reportCharCodes(s,StringUtils.dummyReportFunc,translateChar) + ']<br>';
+			}
+			
+			public function sendCommandToSocketWithArgs(data:*,...args):void {
+				var n:uint = args.length
+				var s:String = '<command value="' + data + '">'
+				if (n > 0) {
+					for (var i:int=0; i < n; i++) {
+						s += '<arg value="' + args[i] + '"></arg>';
+					}
+				}
+				s += '</command>';
+				this.onlineStatusCanvas.beginCommunication();
+				this.socketsConnection.send(s);
+				this.text.htmlText += '(sendCommandToSocketWithArgs) :: [' + s + ']<br>';
+			}
+			
+			private function onClick_btn1():void {
+				this.onlineStatusCanvas.beginCommunication();
+				this.sendCommandToSocket('some data');
+			}
+					
+			public function onClosing():void {
+				this.sendRawDataToSocket(this.terminateConnection);
+			}
+					
+			private function onClick_connectionBtn():void {
+				this.btn_disconnection.enabled = true;
+				this.makeConnection();
+				this.btn_connection.enabled = false;
+			}
+			
+			private function onClick_disconnectionBtn():void {
+				this.btn_disconnection.enabled = false;
+				this.btn_connection.enabled = true;
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%">
+		<mx:HBox x="50" y="0" width="100%">
+			<mx:Button label="Connect Me !" id="btn_connection" click="onClick_connectionBtn()"/>
+			<mx:Button label="Click Me !" id="btn_1" click="onClick_btn1()"/>
+			<mx:Button label="Disconnect Me !" id="btn_disconnection" enabled="false" click="onClick_disconnectionBtn()"/>
+		</mx:HBox>
+		<mx:TextArea width="100%" height="100%" id="text"/>
+	</mx:VBox>
+</mx:Canvas>

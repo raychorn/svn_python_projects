@@ -1,0 +1,35 @@
+#header, #sidebar, #footer_links, #magma_locations, #rating, #print_icon,
+#toggle_additional_info, #attachments_button, #comments_button {
+	display: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.listing {
+	width: 100%;
+}
+
+.listing th {
+	text-align: left;
+}
+
+h1 a {
+	display: none;
+}
+
+#case_additional_information, #case_additional_information table {
+	display:block;
+}
+
+#case_additional_information table {
+	width: 100%;
+}
+
+#case_additional_information table td {
+	padding-right: 20px;
+}
+
+.prompt {
+	font-weight: bold;
+}

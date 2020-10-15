@@ -1,0 +1,1 @@
+rubyscript2exe uninstall.rb

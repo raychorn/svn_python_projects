@@ -1,0 +1,43 @@
+<style>
+	#error_message {
+		color: red;
+		font-weight: bold;
+		background-color: white;
+	}
+</style>
+
+<div{{ STYLES }}>
+{% block content %}
+
+<h1>Vyper-CMS&trade; Login</h1>
+<p>You may Login to build and maintain your FREE Vyper-CMS&trade; Web Site or <a href="/user/register/">Register to get your FREE Vyper-CMS&trade; Web Site</a>.</p>
+{% if form.has_errors %}
+    <p id="error_message">Your username and password didn't match. Please try again.</p>
+{% endif %}
+<div id="error_message">{{ ERROR_MESSAGE }}</div>
+
+<form method="post" action="{{ FORM_ACTION }}" enctype="application/x-www-form-urlencoded">
+<table width="100%">
+<tr>
+	<td colspan="3">You are about Login to a Secure SSL Site.  If you encounter any browser related issues in connection with our self-signed SSL Cert you may, if you are using FireFox 3.0.x, <a href="http://www.vyperlogix.com/data/certs/cacert.der" target="_blank" title="Install our CA Cert">click here</a> or <a href="http://www.vyperlogix.com/data/firefox/addons/remember_certificate_exception-0.8.0-fx.xpi" target="_blank" title="Install this FireFox Extension to by-pass SSL problems.">click here</a> to resolve those issues.  We use self-signed SSL Certs to reduce our operating expenses however we do want your private information to remain private.</td>
+</tr>
+<tr><td width="20%"><label for="id_username">Username:</label></td><td width="20%">{{ form.username }}</td><td width="*" align="left"><small>(Use your valid Internet Email Address)</small></td></tr>
+<tr><td width="20%"><label for="id_password">Password:</label></td><td width="20%">{{ form.password }}</td><td width="*" align="left"><small>(Use Upper and lower case with special characters)</small></td></tr>
+<tr><td colspan="2" width="50%">{{ CAPTCHA }}</td><td width="*" valign="top"><input id="id_btn_login" type="submit" value="Login" onclick="onclick_login();" />
+&nbsp;|&nbsp;<a href="/user/forgot-password/" title="Retrieve your Password. (A New Password will be emailed to you.)">Retrieve your Password</a>&nbsp;(<small>A New Password will be emailed to you.</small>)</td></tr>
+</table>
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{% endblock %}
+</div>
+<script language="javascript" type="text/javascript">
+	var o_btn = document.getElementById('id_password');
+	if (o_btn) {
+		o_btn.keydown(function(event){
+			if (event.keyCode == 13) { 
+				_onclick_login();
+			};
+		});
+	}
+</script>

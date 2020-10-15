@@ -1,0 +1,123 @@
+<link rel="stylesheet" type="text/css" href="/static/js/jquery/popup/popup.css" />
+
+<script language="javascript" type="text/javascript">
+//SETTING UP OUR POPUP
+//0 means disabled; 1 means enabled;
+var popupStatus = 0;
+
+//loading popup with jQuery magic!
+function loadPopup(){
+	//loads popup only if it is disabled
+	if(popupStatus==0){
+		$("#backgroundPopup").css({
+			"opacity": "0.7"
+		});
+		$("#backgroundPopup").fadeIn("slow");
+		$("#popupContact").fadeIn("slow");
+		popupStatus = 1;
+	}
+}
+
+//disabling popup with jQuery magic!
+function disablePopup(){
+	//disables popup only if it is enabled
+	if(popupStatus==1){
+		$("#backgroundPopup").fadeOut("slow");
+		$("#popupContact").fadeOut("slow");
+		popupStatus = 0;
+	}
+}
+
+//centering popup
+function centerPopup(){
+	//request data for centering
+	var windowWidth = document.documentElement.clientWidth;
+	var windowHeight = document.documentElement.clientHeight;
+	var popupHeight = $("#popupContact").height();
+	var popupWidth = $("#popupContact").width();
+	//centering
+	$("#popupContact").css({
+		"position": "absolute",
+		"top": windowHeight/2-popupHeight/2,
+		"left": windowWidth/2-popupWidth/2
+	});
+	//only need force for IE6
+	
+	$("#backgroundPopup").css({
+		"height": windowHeight
+	});
+	
+}
+
+function init_popup() {
+	//LOADING POPUP
+	//Click the button event!
+	$("#button").click(function(){
+		//centering with css
+		centerPopup();
+		//load popup
+		loadPopup();
+	});
+				
+	//CLOSING POPUP
+	//Click the x event!
+	$("#popupContactClose").click(function(){
+		disablePopup();
+	});
+	//Click out event!
+	$("#backgroundPopup").click(function(){
+		disablePopup();
+	});
+	//Press Escape event!
+	$(document).keypress(function(e){
+		if(e.keyCode==27 && popupStatus==1){
+			disablePopup();
+		}
+	});
+}
+</script>
+<table width="100%">
+	<tr>
+    	<td align="left">
+        	<BIG>Time to craft the content for your site.<br/></BIG>
+            <p>You will notice an icon that looks like <img src="/static/images/icons/edit-mark.png" width="32" border="0"/>, click on it to edit the content in the area where this icon has been placed.</p>
+            <p>There is one <img src="/static/images/icons/edit-mark.png" width="32" border="0"/> icon for the header and another for footer of your site.  You may replace the content for your header and footer by clicking on the <img src="/static/images/icons/edit-mark.png" width="32" border="0"/> icon.</p>
+            <p>The remaining pages of content will appear within the center area of the site between the header and footer.</p>
+            <p>There are two kinds of Pages you may add to your site.  One kind of Page is tied to the Menu Bar, the other is not.</p>
+            <p>When you add a Page that is tied to the Menu Bar a button will be added to your Menu Bar.  There will always be 3 buttons on your Menu Bar by default; the Home button, the Login button and Register button.</p>
+            <p>The other Page type allows you to added Content Pages your visitors will access by clicking on a link that leads to one of these pages.</p>
+            <p>When you see an icon that looks like <img src="/static/images/icons/add-mark.png" width="32" border="0"/> you may click it to Add a page to your site.</p>
+            <p>When you see an icon that looks like <img src="/static/images/icons/edit-mark.png" width="32" border="0"/> you may click it to Change the current page from being a Page that is tied to the Menu Bar to one that is not or vice-versa.  You may click the <img src="/static/images/icons/edit-mark.png" width="32" border="0"/> icon to remove a Menu Bar Button from the Menu Bar and vice-versa.</p>
+            <p>When you click the "Edit Site" button you will be shown a pop-up window with the aforementioned icons that allow you to edit your site's content.</p>
+            <p>When you click the "View Site" button you will be shown your site just as those who visit your site will be shown.</p>
+            <p>Enjoy...</p>
+        </td>
+    </tr>
+    <tr>
+    	<td align="center">
+            <div id="button"><input type="submit" value="Press me please!" /></div>
+        	<table width="50%" align="center">
+                <tr>
+                    <td width="50%" align="center"><input type="button" value="Edit Site" onclick="window.location.href = '/vyper-cms/content/edit/';"/></td>
+                    <td width="50%" align="center"><input type="button" value="View Site" onclick="window.location.href = '/vyper-cms/content/view/';"/></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<div id="popupContact"> 
+    <a id="popupContactClose">x</a> 
+    <h1>Title of our cool popup, yay!</h1> 
+    <p id="contactArea"> 
+        Here we have a simple but interesting sample of our new stuning and smooth popup. As you can see jQuery and CSS does it easy...
+        <br/><br/> 
+        We can use it for popup-forms and more... just experiment!
+        <br/><br/> 
+        Press ESCAPE, Click on X (right-top) or Click Out from the popup to close the popup!
+        <br/><br/> 
+    </p> 
+</div> 
+<div id="backgroundPopup"></div> 
+<script language="javascript" type="text/javascript">
+	init_popup();
+</script>

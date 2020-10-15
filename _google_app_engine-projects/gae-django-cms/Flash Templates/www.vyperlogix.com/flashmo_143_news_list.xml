@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+	<item>
+		<title>News Item One</title>
+		<url>http://www.flashmo.com</url>
+		<target>_parent</target>
+		<description>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc quis sem nec tellus blandit tincidunt. Duis vitae velit sed dui malesuada dignissim. Donec mollis aliquet ligula. Maecenas adipiscing elementum ipsum. Pellentesque vitae magna.
+		</description>
+	</item>
+	<item>
+		<title>News Item Two</title>
+		<url>http://www.flashmo.com/store</url>
+		<target>_self</target>
+		<description>
+Aliquam sagittis molestie sapien. Nulla tellus risus, tincidunt vitae, sagittis vel, interdum at, erat. Duis vitae velit. Ut ultricies. Fusce sollicitudin nisl a lectus. Pellentesque odio.
+		</description>
+	</item>
+	<item>
+		<title>News Item Three</title>
+		<url>http://www.flashmo.com/slideshow</url>
+		<target>_parent</target>
+		<description>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc quis sem nec tellus blandit tincidunt. Duis vitae velit sed dui malesuada dignissim. Donec mollis aliquet ligula.
+		</description>
+	</item>
+	<item>
+		<title>News Item Four</title>
+		<url>http://www.flashmo.com/donate</url>
+		<target>_blank</target>
+		<description>
+In hac habitasse platea dictumst. Aenean cursus. Maecenas aliquam, ligula id egestas suscipit, nisi sapien dignissim nibh, ac vestibulum lorem urna in neque. 
+Aenean eget tortor eget ipsum aliquet porta. Vestibulum quis pede non urna venenatis vehicula. Praesent vel diam.
+Curabitur nec odio. Phasellus tincidunt, tortor lacinia blandit commodo, nunc augue mattis eros, ut convallis est augue vel orci.
+		</description>
+	</item>
+	<item>
+		<title>News Item Five</title>
+		<url>http://www.flashmo.com/contact</url>
+		<target>_parent</target>
+		<description>
+		Praesent varius egestas velit. Donec a massa ut pede pulvinar vulputate. Nulla et augue. Sed eu nunc quis pede tristique suscipit. Nam sit amet justo vel libero tincidunt dignissim. Cras magna velit, pellentesque mattis, faucibus vitae, feugiat vitae, sapien.
+		</description>
+	</item>
+	<item>
+		<title>News Item Six</title>
+		<url>http://www.flashmo.com</url>
+		<target>_parent</target>
+		<description>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc quis sem nec tellus blandit tincidunt. Duis vitae velit sed dui malesuada dignissim. Donec mollis aliquet ligula. Maecenas adipiscing elementum ipsum. Pellentesque vitae magna.
+		</description>
+	</item>
+	<item>
+		<title>News Item Seven</title>
+		<url>http://www.flashmo.com/store</url>
+		<target>_self</target>
+		<description>
+		Nullam pede purus, tempor a, imperdiet in, porttitor at, nulla. Aliquam elit risus, volutpat quis, mattis ac, elementum eget, mauris. In hac habitasse platea dictumst. Aenean cursus. Maecenas aliquam, ligula id egestas suscipit, nisi sapien dignissim nibh, ac vestibulum lorem urna in neque. 
+		</description>
+	</item>
+	<item>
+		<title>News Item Eight</title>
+		<url>http://www.flashmo.com/slideshow</url>
+		<target>_parent</target>
+		<description>
+		Praesent vel diam. Cras sed leo tempor neque placerat pretium. Curabitur nec odio. Phasellus tincidunt, tortor lacinia blandit commodo, nunc augue mattis eros, ut convallis est augue vel orci.
+		</description>
+	</item>
+	<item>
+		<title>News Item Nine</title>
+		<url>http://www.flashmo.com/donate</url>
+		<target>_blank</target>
+		<description>
+Suspendisse potenti. Ut sed pede. Nullam vitae tellus. Sed ultrices. Curabitur velit tellus, placerat et, dapibus varius, aliquet quis, purus. Aliquam sagittis molestie sapien. 
+Nulla tellus risus, tincidunt vitae, sagittis vel, interdum at, erat. Duis vitae velit.
+		</description>
+	</item>
+	<item>
+		<title>News Item Ten</title>
+		<url>http://www.flashmo.com/contact</url>
+		<target>_parent</target>
+		<description>
+		Praesent varius egestas velit. Donec a massa ut pede pulvinar vulputate. Nulla et augue. Sed eu nunc quis pede tristique suscipit. Nam sit amet justo vel libero tincidunt dignissim.
+		</description>
+	</item>
+</items>

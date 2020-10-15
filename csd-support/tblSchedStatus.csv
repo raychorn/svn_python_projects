@@ -1,0 +1,319 @@
+statusid,officeid,schedstatus,schedgroup,isdefault,hold,processbilling,processpay,credit,interpOption,bgcolor,fgcolor,active
+5,2,UNFILLED,UNFILLED,True,True,False,False,False,False,#CC0000,#FFFFFF,True
+6,2,CREDIT,OTHER,False,True,False,True,True,False,#000099,#FFFFFF,False
+7,2,PENDING,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+9,2,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+10,2,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+11,2,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+12,2,CANCELED UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+13,2,COMPLETED,COMPLETED,False,False,True,True,False,True,#000099,#FFFFFF,True
+15,2,CANCEL WEATHER,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+16,2,CANCEL NO CHARGE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+18,2,TERP NO SHOW,CANCEL_NC,False,False,False,False,True,False,#663300,#FFFFFF,True
+19,2,UNABLE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+20,2,CANCELED UPON CONFIRMATION,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+22,2,FILLED,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+25,2,TERP CANCEL,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+26,2,AGENCY HOLD,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+27,2,TERP HOLD,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+29,2,UNFILLED/CM,UNFILLED,False,True,False,False,False,False,#990099,#FFFFFF,True
+30,2,UNABLE/GM,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+31,2,UNABLE/ER,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+68,4,SERVICE,PENDING,True,True,False,False,False,False,#FFCC00,#000000,False
+69,4,CREDIT,OTHER,False,True,False,False,False,False,#000099,#FFFFFF,False
+70,4,PENDING,PENDING,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+71,4,UNAVAILABLE,PENDING,False,True,False,False,False,False,#CC0000,#FFFFFF,False
+72,4,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+73,4,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+74,4,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+75,4,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+76,4,COMPLETED,COMPLETED,False,False,True,True,False,True,#000099,#FFFFFF,True
+77,4,OBSERVATION,COMPLETED,False,True,False,False,False,False,#000099,#FFFFFF,True
+78,4,CANCEL WEATHER,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+79,4,CANCEL NO CHARGE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+80,4,UNABLE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+81,4,TERP NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+82,4,NO SERVICE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,False
+83,4,CANCELED UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+86,9,FILLED,PENDING,False,True,False,False,False,False,#FFE500,#000000,True
+88,9,UNFILLED,UNFILLED,True,True,False,False,False,False,#CC0066,#FFFFFF,True
+89,9,UNABLE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+90,9,CONFIRMED,PENDING,False,True,False,False,False,False,#008F00,#FFFFFF,True
+91,9,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+92,9,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+93,9,CANCELED UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+94,9,COMPLETED,COMPLETED,False,False,True,True,False,False,#000099,#FFFFFF,True
+95,9,ADJ-NO BILL,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,False
+96,9,CANCEL LESS-PB,CANCEL_NC,False,True,False,False,False,False,#663300,#FFFFFF,True
+97,9,NS PREBILL,CANCEL_NC,False,True,False,False,False,False,#663300,#FFFFFF,False
+98,10,SERVICE,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+99,10,CREDIT,OTHER,False,False,False,False,True,False,#000099,#FFFFFF,True
+100,10,PENDING,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+101,10,UNAVAILABLE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+102,10,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+103,10,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+104,10,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+105,10,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+106,10,COMPLETED,COMPLETED,False,True,True,True,False,True,#000099,#FFFFFF,True
+107,10,OBSERVATIONS,COMPLETED,False,True,False,False,False,False,#000099,#FFFFFF,True
+108,10,CANCEL WEATHER,CANCEL_BILL,False,False,False,True,False,False,#663300,#FFFFFF,True
+109,10,CANCEL-NO CHRG,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+110,10,DECLINED,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+111,10,INTERP-NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+112,10,NO SERVICE,UNFILLED,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+113,10,CUA,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+114,10,CONFIRMED W/BUS,PENDING,False,True,False,False,False,False,#008F00,#FFFFFF,True
+115,10,DOUBLE  BOOKED,CANCEL_NC,False,False,False,True,False,False,#663300,#FFFFFF,True
+116,10,PAY INTERPRETER,CANCEL_NC,False,False,False,True,False,False,#663300,#FFFFFF,True
+135,6,UNFILLED,UNFILLED,True,True,False,False,False,False,,#FFFFFF,True
+136,6,CREDIT,OTHER,False,False,False,True,True,False,,#FFFFFF,True
+137,6,PENDING,PENDING,False,True,False,False,False,False,,#FFFFFF,True
+138,6,CONFIRMED,PENDING,False,True,False,False,False,True,,#FFFFFF,True
+139,6,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,,#FFFFFF,True
+140,6,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,True,,#FFFFFF,True
+141,6,COMPLETED,COMPLETED,False,True,True,True,False,True,,#FFFFFF,True
+142,6,UNABLE,UNFILLED,False,False,False,False,False,False,,#FFFFFF,True
+143,6,CUC,CANCEL_NC,False,False,False,False,False,False,,#FFFFFF,True
+144,6,FILLED,PENDING,False,True,False,False,False,False,,#FFFFFF,True
+145,6,INTERP/CX'L,UNFILLED,False,False,False,False,False,False,,#FFFFFF,True
+146,6,AGENCY HOLD,PENDING,False,True,False,False,False,False,,#FFFFFF,True
+147,6,CLIENT NO SHOW,CANCEL_BILL,False,False,True,True,False,False,,#FFFFFF,True
+148,13,SERVICE,PENDING,True,True,False,False,False,False,#FFCC00,#000000,True
+149,13,CREDIT,OTHER,False,False,True,True,True,False,#000099,#FFFFFF,True
+150,13,PENDING,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+151,13,UNAVAILABLE,UNFILLED,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+152,13,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+153,13,CANCEL MORE/24 H,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+154,13,CANCEL LESS/24 H,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+155,13,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+156,13,COMPLETED,COMPLETED,False,True,True,True,False,True,#000099,#FFFFFF,True
+157,13,OBSERVATIONS,COMPLETED,False,False,True,True,False,False,#000099,#FFFFFF,True
+158,13,CANCEL-WEATHER,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+159,13,CANCEL-NO CHRG,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+160,13,DECLINED,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+161,13,INTERP NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+162,13,NO SERVICE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+163,13,CANCEL UPON ARIV,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+164,13,CANCEL LESS/48 H,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+165,13,CANCEL MORE/48 H,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+166,5,SERVICE,PENDING,True,True,False,False,False,False,#FFCC00,#000000,False
+171,5,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+172,5,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+173,5,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+174,5,COMPLETED,COMPLETED,False,False,True,True,False,True,#000099,#FFFFFF,True
+176,5,CANCEL WEATHER,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+177,5,CANCEL NO CHARGE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+179,5,TERP NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+180,5,NO SERVICE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,False
+181,5,CANCELED UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+182,5,CANCEL LESS/48 HRS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,False
+183,5,CANCEL MORE/48 HRS,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,False
+184,7,SERVICE,PENDING,True,True,False,False,False,False,#FFCC00,#000000,True
+185,7,CREDIT,OTHER,False,False,True,True,True,False,#000099,#FFFFFF,True
+186,7,PENDING,PENDING,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+187,7,UNAVAILABLE,UNFILLED,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+188,7,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+189,7,CANCEL MORE/24HRS,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+190,7,CANCEL LESS/24 HRS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+191,7,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+192,7,COMPLETED,COMPLETED,False,True,True,True,False,True,#000099,#FFFFFF,True
+193,7,OBSERVATIONS,COMPLETED,False,False,True,True,False,False,#000099,#FFFFFF,True
+194,7,CANCEL- WEATHER,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+195,7,CANCEL-NO CHRG,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+196,7,DECLINED,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+197,7,INTERP-NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+198,7,NO SERVICE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+199,7,CANCEL UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+200,7,UNFILLED,UNFILLED,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+201,7,FILLED,PENDING,False,True,False,False,False,False,#008F00,#FFFFFF,True
+206,8,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+207,8,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+208,8,COMPLETED,COMPLETED,False,False,True,True,False,False,#000099,#FFFFFF,True
+209,8,CONFIRMED,PENDING,False,True,False,False,False,False,#008F00,#FFFFFF,True
+210,8,CREDIT,OTHER,False,False,True,False,True,False,#000099,#FFFFFF,False
+211,8,NO SHOW,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+212,8,PENDING,PENDING,True,True,False,False,False,False,#FFCC00,#000000,True
+213,8,SERVICE,PENDING,False,True,False,False,False,False,#FFCC00,#000000,False
+214,8,UNAVAILABLE,UNFILLED,False,True,False,False,False,False,#CC0000,#FFFFFF,False
+215,9,TERP CANCEL,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+217,6,NO SERVICE,UNFILLED,False,True,False,False,False,False,,#FFFFFF,True
+218,6,ERROR,CANCEL_NC,True,True,False,False,False,False,,#FFFFFF,True
+219,2,UNFILLED/NM,UNFILLED,False,True,False,False,False,False,#809FFF,#000000,True
+220,2,UNFILLED/SM,UNFILLED,False,True,False,False,False,False,#FF8000,#000000,True
+222,6,AWAITING INVOICE,COMPLETED,False,True,True,True,False,True,,#FFFFFF,True
+223,13,CLOSED,CANCEL_NC,False,True,False,False,False,False,#663300,#FFFFFF,True
+224,13,DUPLICATE,CANCEL_NC,False,True,False,False,False,False,#663300,#FFFFFF,True
+225,6,INTRP NO SHOW,CANCEL_NC,False,True,False,False,False,False,,#FFFFFF,True
+226,2,CSD NO/SO DAK,OTHER,False,False,False,False,False,False,#663300,#FFFFFF,False
+227,6,INTERP LATE,CANCEL_NC,False,True,False,False,False,False,,#FFFFFF,True
+228,5,CONFIRMED,PENDING,False,True,False,False,False,False,#008F00,#FFFFFF,True
+229,5,UNFILLED,UNFILLED,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+240,9,GAVE BACK,OTHER,False,False,False,False,False,True,,,False
+241,9,VOLUNTEER,PENDING,False,True,False,False,False,False,,,False
+243,15,SERVICE,PENDING,True,True,False,False,False,False,#FFCC00,#000000,True
+244,15,CREDIT,OTHER,False,True,False,False,True,False,#000099,#FFFFFF,True
+245,15,PENDING,PENDING,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+246,15,UNAVAILABLE,PENDING,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+247,15,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+248,15,CANCEL MORE/24HRS,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+249,15,CANCEL LESS/24 HRS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+250,15,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+251,15,COMPLETED,COMPLETED,False,True,True,True,False,True,#000099,#FFFFFF,True
+252,15,OBSERVATIONS,COMPLETED,False,True,False,False,False,False,#000099,#FFFFFF,True
+253,15,CANCEL- WEATHER,CANCEL_NC,False,True,False,False,False,False,#663300,#FFFFFF,True
+254,15,CANCEL-NO CHRG,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+255,15,DECLINED,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+256,15,INTERP-NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+257,15,NO SERVICE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+258,15,CANCEL UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+259,15,CANCEL LESS/48 HRS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+260,15,CANCEL MORE/48 HRS,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+263,2,DELETE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+264,5,TEST,OTHER,False,False,False,False,False,False,,,False
+265,9,COMPLETED NB,CANCEL_NC,False,True,False,False,False,True,,,False
+266,9,PTO,OTHER,False,True,False,False,False,False,,,False
+267,9,CANCELLED 48,CANCEL_BILL,False,False,True,False,False,False,,,False
+268,9,E-TIME,OTHER,False,True,False,False,False,False,,,False
+269,9,SAME DAY PENDING,PENDING,False,True,False,False,False,False,,,False
+270,9,SAME DAY ACCEPT,PENDING,True,True,False,False,False,False,,,False
+271,9,SAME DAY,PENDING,False,True,False,False,False,False,,,True
+272,9,VRS CONFIRMED,PENDING,False,True,False,False,False,False,#9966FF,#FFFFFF,True
+273,9,NO SHOW NB,CANCEL_NC,False,True,False,True,False,True,,,False
+275,9,< COMPLETED,COMPLETED,False,True,True,True,False,True,,,False
+276,2,TERP BILL,CANCEL_BILL,False,True,False,True,False,False,#663300,#FFFFFF,True
+277,4,UNFILLED,UNFILLED,False,True,False,False,False,False,#FFCC00,#000000,True
+279,4,FILLED,PENDING,False,True,False,False,False,False,,,True
+281,4,TERP CANCEL,UNFILLED,False,False,False,False,False,False,,,True
+282,4,TERP BILL,CANCEL_BILL,False,True,False,True,False,False,,,True
+283,4,AGENCY HOLD,PENDING,False,True,False,False,False,False,,,True
+284,4,TERP HOLD,PENDING,False,True,False,False,False,False,,,True
+285,4,CANCEL LESS-PB,CANCEL_NC,False,True,False,False,False,False,,,True
+286,10,AGENCY HOLD,PENDING,False,True,False,False,False,False,,,True
+287,10,CANCEL PRE-BILL,CANCEL_NC,False,False,False,False,False,False,,,True
+288,5,AGENCY HOLD,PENDING,False,True,False,False,False,False,,,True
+289,5,FILLED,PENDING,False,True,False,False,False,False,,,True
+290,5,OBSERVATION,COMPLETED,False,True,False,False,False,False,,,True
+291,5,PENDING,PENDING,False,True,False,False,False,False,,,True
+292,5,TERP BILL,CANCEL_BILL,False,True,False,True,False,False,,,True
+293,5,TERP CANCEL,UNFILLED,False,False,False,False,False,False,,,True
+294,5,TERP HOLD,PENDING,False,True,False,False,False,False,,,True
+296,5,UNABLE,UNFILLED,False,False,False,False,False,False,,,True
+297,5,CANCELED UPON CONFIRMATION,CANCEL_NC,False,False,False,False,False,False,,,True
+298,5,CANCEL LESS-PB,CANCEL_NC,False,True,False,False,False,False,,,True
+299,8,AGENCY HOLD,PENDING,False,True,False,False,False,False,,,True
+300,8,CANCEL LESS-PB,CANCEL_NC,False,False,False,False,False,False,,,True
+301,8,CANCEL WEATHER,CANCEL_NC,False,False,False,False,False,False,,,True
+302,8,CANCELED UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,False,,,True
+303,8,CANCELED UPON CONFIRMATION,CANCEL_NC,False,False,False,False,False,False,,,True
+304,8,FILLED,PENDING,False,True,False,False,False,False,,,True
+305,8,OBSERVATION,COMPLETED,False,True,False,False,False,False,,,True
+306,8,TERP BILL,CANCEL_BILL,False,False,False,True,False,False,,,True
+307,8,TERP CANCEL,UNFILLED,False,False,False,False,False,False,,,True
+308,8,TERP HOLD,PENDING,False,True,False,False,False,False,,,True
+309,8,TERP NO SHOW,CANCEL_NC,False,False,False,False,False,False,,,True
+310,8,UNABLE,UNFILLED,False,False,False,False,False,False,,,True
+311,8,UNFILLED,UNFILLED,False,True,False,False,False,False,,,True
+312,4,UNFILLED/RC,UNFILLED,False,True,False,False,False,False,#6600CC,#FFFFFF,True
+313,4,UNFILLED/AB,UNFILLED,False,True,False,False,False,False,#993300,#FFFFFF,True
+314,2,CANCEL LESS-PB,CANCEL_NC,False,True,False,False,False,False,#663300,#FFFFFF,True
+315,2,OBSERVATION,COMPLETED,False,True,False,False,False,False,,,True
+316,9,AGENCY HOLD,PENDING,False,True,False,False,False,False,,,True
+317,9,CANCEL WEATHER,CANCEL_NC,False,False,False,False,False,False,,,True
+318,9,CANCELED UPON CONFIRMATION,CANCEL_NC,False,False,False,False,False,False,,,True
+319,9,OBSERVATION,COMPLETED,False,True,False,False,False,False,,,True
+320,9,PENDING,PENDING,False,True,False,False,False,False,,,True
+321,9,TERP BILL,CANCEL_BILL,False,True,False,True,False,False,,,True
+322,9,TERP HOLD,PENDING,False,True,False,False,False,False,,,True
+323,9,TERP NO SHOW,CANCEL_NC,False,False,False,False,False,False,,,True
+325,4,UNABLE/ER,UNFILLED,False,False,False,False,False,False,,,True
+326,9,UNABLE/GM,UNFILLED,False,False,False,False,False,False,,,True
+327,9,UNABLE/ER,UNFILLED,False,False,False,False,False,False,,,True
+329,5,UNABLE/ER,UNFILLED,False,False,False,False,False,False,,,True
+332,4,DELETE,CANCEL_NC,False,False,False,False,False,False,,,True
+333,4,SAME DAY,PENDING,False,True,False,False,False,False,,,True
+336,9,NO SHOW,CANCEL_BILL,False,False,True,True,False,False,,,True
+337,9,DELETE,CANCEL_NC,False,False,False,False,False,False,,,True
+338,9,CANCEL NO CHARGE,CANCEL_NC,False,False,False,False,False,False,,,True
+339,5,DELETE,CANCEL_NC,False,False,False,False,False,False,,,True
+340,5,SAME DAY,PENDING,False,True,False,False,False,False,,,True
+341,8,DELETE,CANCEL_NC,False,False,False,False,False,False,,,True
+342,8,CANCEL NO CHARGE,CANCEL_NC,False,False,False,False,False,False,,,True
+343,8,SAME DAY,PENDING,False,True,False,False,False,False,,,True
+344,16,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#663300,#FFFFFF,True
+345,16,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+346,16,PENDING,PENDING,True,True,False,False,False,True,#FFCC00,#000000,True
+347,16,COMPLETED,COMPLETED,False,False,True,True,False,True,#000099,#FFFFFF,True
+348,16,AGENCY HOLD,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+349,16,CANCEL NO CHARGE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+350,16,CANCEL/ARRIVAL,CANCEL_BILL,False,False,True,True,False,True,#663300,#FFFFFF,True
+351,16,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+352,16,DELETE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+353,16,FILLED,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+354,16,OBSERVATION,COMPLETED,False,True,False,False,False,False,,,True
+356,16,TERP BILL,CANCEL_BILL,False,True,False,True,False,False,#663300,#FFFFFF,True
+357,16,TERP CANCEL,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+358,16,TERP HOLD,PENDING,False,True,False,False,False,False,#FFCC00,#000000,True
+359,16,TERP NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+360,16,UNABLE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+361,16,UNABLE/ER,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+362,16,UNFILLED,UNFILLED,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+363,4,BILLING HOLD,,False,True,False,False,False,False,,,True
+364,16,BILLING HOLD,,False,True,False,False,False,False,,,True
+365,5,BILLING HOLD,,False,True,False,False,False,False,,,True
+366,8,BILLING HOLD,,False,True,False,False,False,False,,,True
+367,2,BILLING HOLD,,False,True,False,False,False,False,,,True
+368,9,BILLING HOLD,,False,True,False,False,False,False,,,True
+369,5,VOLUNTEER,,False,True,False,False,False,False,,,True
+370,18,PENDING,PENDING,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+371,18,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+372,18,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+373,18,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+374,18,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+375,18,COMPLETED,COMPLETED,False,False,True,True,False,True,#000099,#FFFFFF,True
+376,18,OBSERVATION,COMPLETED,False,True,False,False,False,False,#000099,#FFFFFF,True
+377,18,CANCEL WEATHER,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+378,18,CANCEL NO CHARGE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+379,18,UNABLE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+380,18,TERP NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+381,18,CANCELED UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+382,18,UNFILLED,UNFILLED,False,True,False,False,False,False,#FFCC00,#000000,True
+383,18,FILLED,PENDING,False,True,False,False,False,False,,,True
+384,18,TERP CANCEL,UNFILLED,False,False,False,False,False,False,,,True
+385,18,TERP BILL,CANCEL_BILL,False,True,False,True,False,False,,,True
+386,18,AGENCY HOLD,PENDING,False,True,False,False,False,False,,,True
+387,18,TERP HOLD,PENDING,False,True,False,False,False,False,,,True
+388,18,CANCEL PRE-BILL,CANCEL_NC,False,True,False,False,False,False,,,True
+389,18,UNFILLED/RC,UNFILLED,False,True,False,False,False,False,#6600CC,#FFFFFF,True
+390,18,UNFILLED/AB,UNFILLED,False,True,False,False,False,False,#993300,#FFFFFF,True
+391,18,UNABLE/ER,UNFILLED,False,False,False,False,False,False,,,True
+392,18,DELETE,CANCEL_NC,False,False,False,False,False,False,,,True
+393,18,SAME DAY,PENDING,False,True,False,False,False,False,,,True
+394,18,BILLING HOLD,,False,True,False,False,False,False,,,True
+395,16,TERP BILL CSD,,False,True,False,True,False,False,,,True
+396,16,TERP BILL LSS,,False,True,False,True,False,False,,,True
+397,17,PENDING,PENDING,False,True,False,False,False,False,#CC0000,#FFFFFF,True
+398,17,CONFIRMED,PENDING,False,True,False,False,False,True,#008F00,#FFFFFF,True
+399,17,CANCEL MORE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+400,17,CANCEL LESS,CANCEL_BILL,False,False,True,True,False,False,#000099,#FFFFFF,True
+401,17,NO SHOW,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+402,17,COMPLETED,COMPLETED,False,False,True,True,False,True,#000099,#FFFFFF,True
+403,17,OBSERVATION,COMPLETED,False,True,False,False,False,False,#000099,#FFFFFF,True
+404,17,CANCEL WEATHER,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+405,17,CANCEL NO CHARGE,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+406,17,UNABLE,UNFILLED,False,False,False,False,False,False,#663300,#FFFFFF,True
+407,17,TERP NO SHOW,CANCEL_NC,False,False,False,False,False,False,#663300,#FFFFFF,True
+408,17,CANCELED UPON ARRIVAL,CANCEL_BILL,False,False,True,True,False,True,#000099,#FFFFFF,True
+409,17,UNFILLED,UNFILLED,False,True,False,False,False,False,#FFCC00,#000000,True
+410,17,FILLED,PENDING,False,True,False,False,False,False,,,True
+411,17,TERP CANCEL,UNFILLED,False,False,False,False,False,False,,,True
+412,17,TERP BILL,CANCEL_BILL,False,True,False,True,False,False,,,True
+413,17,AGENCY HOLD,PENDING,False,True,False,False,False,False,,,True
+414,17,TERP HOLD,PENDING,False,True,False,False,False,False,,,True
+415,17,CANCEL LESS-PB,CANCEL_NC,False,True,False,False,False,False,,,True
+416,17,UNFILLED/RC,UNFILLED,False,True,False,False,False,False,#6600CC,#FFFFFF,True
+417,17,UNFILLED/AB,UNFILLED,False,True,False,False,False,False,#993300,#FFFFFF,True
+418,17,UNABLE/ER,UNFILLED,False,False,False,False,False,False,,,True
+419,17,DELETE,CANCEL_NC,False,False,False,False,False,False,,,True
+420,17,SAME DAY,PENDING,False,True,False,False,False,False,,,True
+421,17,BILLING HOLD,,False,True,False,False,False,False,,,True
+422,16,90 DAYS CLOSED,,False,True,False,False,False,False,,,True

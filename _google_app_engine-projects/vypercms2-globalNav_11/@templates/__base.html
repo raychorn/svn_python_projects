@@ -1,0 +1,135 @@
+{% load currenttimetag %}
+{% get_current_time "%Y-%M-%d %I:%M %p" as my_current_time %}
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
+    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
+    lang="{% firstof LANGUAGE_CODE 'en' %}">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}{% endblock %} &copy;Vyper Logix Corp., All Rights Reserved. ({{ my_current_time }})</title>
+    {% block css %}
+      <!--[if IE]>
+      <![endif]-->
+    {% endblock %}
+
+    <script src="http://media.vyperlogix.com/gae/vyperlogixcorp/js/dynamic.js" language="javascript" type="text/javascript"></script>
+    {% block js %}
+    {% endblock %}
+
+    <script language="javascript" type="text/javascript">
+	try {include_css({% block include-css %}{% endblock %});} catch (e) {}
+
+	var _timer1 = -1;
+	var __counter__ = 0;
+	var __begin__ = 0;
+	var __logo__ = 'http://media.vyperlogix.com/gae/vyperlogixcorp/static/images/splash-image-VLC-03-25-2010.png';
+	function debug_init() {
+	    var c = document.getElementById('__debug');
+	    if (c) {
+		c.value = '';
+	    }
+	}
+	function debug_write(s) {
+	    var c = document.getElementById('__debug');
+	    if (c) {
+		c.value = s+'\n' + c.value;
+	    }
+	}
+	function signalStop() {
+	    clearInterval(_timer1);
+	    _timer1 = -1;
+	    debug_write('STOP !');
+	}
+	function checkForFlash() {
+	    var c = document.getElementById('flashContainer');
+	    if (c) {
+		var d = new Date();
+		__counter__ = d.getTime() - __begin__;
+		if (__counter__ > 5000) {
+		    onNoFlashInstalled();
+		    //signalStop();
+		}
+		debug_write(d.getTime()+' :: __counter__='+__counter__);
+	    }
+	}
+	{% block more-javascript %}{% endblock %}
+	function onLoadSWFObject(){
+	    var s=generate_flash_content(10,0,0,'http://media.vyperlogix.com/gae/vyperlogixcorp/static/swf/SwfLoader/SwfLoader.swf?swf=2F7374617469632F7377662F776F726C646D61702D76332D666C61736838612E737766&width=180&height=190&c=flashContainer',260,260,'worldmap_v3_flash8a','worldmap_v3_flash8a','white','http://www.vyperlogix.com',__logo__,'21st Century Innovation with Vyper Logix Corp.'); 
+	    var c = document.getElementById('flashContainer');
+	    if (c) {
+		c.innerHTML = s;
+		RightClick.init('worldmap_v3_flash8a','flashContainer');
+		debug_init();
+		var d = new Date();
+		__begin__ = d.getTime();
+		//_timer1 = setInterval('checkForFlash()',1000);
+	    }
+	    {% block onLoadSWFObject %}{% endblock %}
+	    {% block onDocumentReady %}{% endblock %}
+	}
+	function onNoFlashInstalled() {
+	    var c = document.getElementById('flashContainer');
+	    if (c) {
+		c.style.display = 'inline';
+		c.innerHTML = ''; // <img src="'+__logo__+'"/>
+	    }
+	    {% block onNoFlashInstalled %}{% endblock %}
+	}
+	onDocumentReady = function () {
+	    var ie  = !!(window.attachEvent && !window.opera);
+	    var wk  = /webkit\/(\d+)/i.test(navigator.userAgent) && (RegExp.$1 < 525);
+	    if (ie) {
+		    var c = document.getElementById('container');
+		    if (c) {
+			c.innerHTML = '<p>You can <a href="http://www.google.com/chrome" target="_blank">download Google Chrome</a> or <a href="http://www.mozilla.com/en-US/products/firefox/" target="_blank">download Mozilla FireFox</a></p><p>Come back with one of the supported browsers...</p>';
+		    }
+		    alert('This site is best viewed using Google Chrome or Mozilla FireFox 3.x however you are using IE so stop it !');
+	    }
+	    include_js('http://media.vyperlogix.com/gae/vyperlogixcorp/js/browser-detect.js',function(){ include_js('http://media.vyperlogix.com/gae/vyperlogixcorp/js/flash_detect_min.js',function(){ if (FlashDetect.installed) { debug_write('+++ FlashDetect.revisionStr='+FlashDetect.revisionStr+', FlashDetect.raw='+FlashDetect.raw+', FlashDetect.major='+FlashDetect.major+', FlashDetect.minor='+FlashDetect.minor+', BrowserDetect.browser='+BrowserDetect.browser+', BrowserDetect.version='+BrowserDetect.version+', BrowserDetect.OS='+BrowserDetect.OS); include_js('http://media.vyperlogix.com/gae/vyperlogixcorp/js/swfObject.js',function(){ include_js('http://media.vyperlogix.com/gae/vyperlogixcorp/js/rightClick.js',onLoadSWFObject) }); } else { onNoFlashInstalled() } }); });
+	    var dC = document.getElementById('__debugContainer');
+	    if ( (dC) && (window.location.href.indexOf('127.0.0.1') > -1) ) {
+		dC.style.display = 'inline';
+	    }
+	};
+	include_js('http://media.vyperlogix.com/gae/vyperlogixcorp/js/jquery/jquery-ui-1.7.2.custom/js/jquery-1.4.2.min.js', function(){ $(document).ready(function(){ onDocumentReady(); }); });
+    </script>
+
+    {% block extra-head %}{% endblock %}
+  </head>
+
+<body>
+  <div id="wrapper">
+    <div id="wrapperi">
+      <div id="wrapperj">
+        <h1 id="header">
+	  <table width="100%">
+	    <tr>
+	      <td>
+		<div id="flashContainer" style="padding-top: 10px; display:inline;"></div>
+	      </td>
+	      <td>
+		<img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/images/3Dtext/VLC-header.png" border="0"/><BR/><img src="/static/vlc-20/images/3Dtext/VLS-Innovation.png" border="0"/>
+	      </td>
+	    </tr>
+	  </table>
+	</h1>
+
+        <div id="left">{% block left-content %}{% endblock %}</div>
+
+        <div id="right">{% block right-content %}{% endblock %}</div>
+
+        <div class="clear"></div>
+
+        <div id="footer"><div id="footeri">
+	    <p style="font-size:13px">&copy;Vyper Logix Corp., All Rights Reserved., Powered by VyperCMS v2.0 Content Management System for the Google Cloud!</p>
+	</div></div>
+      </div>
+    </div>
+  </div>
+<div id="__debugContainer" style="font-size: 10px; display:none;"><textarea id="__debug" rows="10" cols="80" readonly></textarea></div>
+</body>
+</html>

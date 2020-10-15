@@ -1,0 +1,9 @@
+Data Migration Tools
+
+Migrate data from one SQL Server to Another.
+
+Use SQLAlchemy and reverse-engineer the data models.
+
+* Identify differences between the data models and resolve them.
+* Identify data differences and resolve them.  Ignore Users and other selected tables that don't matter.
+

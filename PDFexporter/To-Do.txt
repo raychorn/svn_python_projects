@@ -1,0 +1,49 @@
+# Hold Product Key in suspense after it has been sent to the user until the Order Id can be validated.  This keeps the user from making multiple requests.
+
+# Log Feedback to a database.
+
+# Encrypt all responses to better security.
+
+# Double-check the Order ID and do some validation.
+
+
+
+# Code Save-As to export as .csv. (v1.1)
+
+# Code simple export to .CSV without parsing the data. (v1.1)
+
+# Let people know they can train the parser.
+
+# Code hooks to make people pay to export their data using a parsing template.
+
+# Charge $1.00 per PDF file when using the parsing template.
+
+# Add Social Networking (Chat, IM, Email with Email Client)
+
+# Build a simple web presence for PDFxporter 1.0
+
+# Code the Export-As function to save the text as a glob of text.
+
+# Code a Registration System to collect User data before people can export data from their PDF.
+
+# Code Reg Now Registration before people can read/open their PDF.
+
+# ? How do I know they have registered ?
+
+# Build a Registration validation system at webfaction using Django - URL is issued from Python to determine whether or not the user has registered.
+
+# Use a UUID for each customer.  Tie UUID to Order Number.  Allow UUID to be in-use once at a time - use a datetime that decays from 20 minutes - clear upon application shutdown.
+
+# Number from customer mixed into UUID encoded as HEX digit pairs given back to customer and put into Registry in several places.
+
+# Upon start-up the Registry is searched and values compared and checked with the database at site5 to validate - response is given as yes/no.
+
+# Temporary Product Key grants access for 30 days pending the official Product Key that unlocks the current version.
+
+# Product Key is encoded with a time-span (30 days or 0 days for perpetual) and a version number and the Order Id.
+
+# Allow users to change their minds per their Order-ID as often as they wish - take the latest record as the final one.
+
+# PAD File.
+
+# Make Icon.

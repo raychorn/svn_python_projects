@@ -1,0 +1,6 @@
+### in cron.yaml
+cron:
+- description: ensure hot handler
+  url: /_ah/queue/hothandler/start
+  schedule: every 1 hours
+

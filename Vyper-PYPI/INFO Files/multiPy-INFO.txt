@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: multiPy
+Version: 1.0
+Author: Ray C Horn
+Author-email: raychorn at hotmail com
+Maintainer: Ray C Horn
+Maintainer-email: raychorn at hotmail com
+Home-page: http://python2.near-by.info/
+Summary: multiPy - Multi-version Python for Windows XP and Windows Vista.
+License: GPL restricted to non-commercial educational use only.
+
+

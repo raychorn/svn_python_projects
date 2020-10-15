@@ -1,0 +1,70 @@
+<p>
+<script type="text/javascript">// <![CDATA[
+function callback_validate_sitename(data) {
+	try {
+		i = parseInt(data);
+	} catch (e) { i = 0; }
+	if (i == 0) {
+		$('#site_name').css("border","solid #ff0000 2px");
+		$('#site_name').attr('title', 'Site Name is INVALID because it is being used by someone else or it is empty.  Better change the Site Name...');
+		$('#btn_site_name_submit').attr('disabled', true);
+	} else {
+		$('#site_name').css("border","solid #000000 2px");
+		$('#site_name').attr('title', 'Site Name is valid because it is NOT being used by anyone else.  YOU are good to go !');
+		$('#btn_site_name_submit').attr('disabled', false);
+	}
+}
+function validate_site_name(obj) {
+	if (obj.val().length == 0) {
+		return callback_validate_sitename('0');
+	}
+	jQuery.get( '/vyper-cms/domain/validate-sitename/'+escape(obj.val())+'/', [], callback_validate_sitename, 'text');
+	$('#domain_name').attr('value', '');
+	$.ajax({
+	 type: "POST",
+	 url: "/vyper-cms/domain/domainname/",
+	 data: $("#domain_name").serialize(),
+	 timeout: 2000,
+	 error: function (XMLHttpRequest, textStatus, errorThrown) {
+	  $.prompt('Error when saving the domain name.',{ show:'slideDown' });
+	 },
+	});
+}
+function callback_validate_domainname(data) {
+	try {
+		i = parseInt(data);
+	} catch (e) { i = 0; }
+	if (i == 0) {
+		$('#domain_name').css("border","solid #ff0000 2px");
+		$('#domain_name').attr('title', 'Domain Name is INVALID because it is being used by someone else or it is empty.  Better change the Domain Name...');
+		$('#btn_domain_name_submit').attr('disabled', true);
+	} else {
+		$('#domain_name').css("border","solid #000000 2px");
+		$('#domain_name').attr('title', 'Domain Name is valid because it is NOT being used by anyone else.  YOU are good to go !');
+		$('#btn_domain_name_submit').attr('disabled', false);
+	}
+}
+function validate_domain_name(obj) {
+	if (obj.val().length == 0) {
+		return callback_validate_domainname('0');
+	}
+	jQuery.get( '/vyper-cms/domain/validate-domainname/'+escape(obj.val())+'/', [], callback_validate_domainname, 'text');
+	$('#site_name').attr('value', '');
+	$.ajax({
+	 type: "POST",
+	 url: "/vyper-cms/domain/sitename/",
+	 data: $("#site_name").serialize(),
+	 timeout: 2000,
+	 error: function (XMLHttpRequest, textStatus, errorThrown) {
+	  $.prompt('Error when saving the site name.',{ show:'slideDown' });
+	 },
+	});
+}
+// ]]></script>
+</p>
+<h1>Site Domain Setup</h1>
+<p class="errorBg">{{ ERROR_MSG }}</p>
+<h2>Option #1 - Use VyperLogix.Com</h2>
+<form action="/vyper-cms/domain/sitename/" enctype="application/x-www-form-urlencoded" method="post"> Enter the Name of your Site:&nbsp;<input id="site_name" style="text-align:right;" onkeyup="validate_site_name($('#site_name'));" name="site-name" type="text" value="{{ SITE_NAME }}" />.VyperLogix.Com<br />&nbsp;<input id="btn_site_name_submit" title="Save the Site Name." onclick="this.disabled=true;" name="btn_submit" type="submit" value="Save Site Name" /> </form>
+<h2>Option #2 - Use Your Domain</h2>
+<form action="/vyper-cms/domain/domainname/" enctype="application/x-www-form-urlencoded" method="post"> Enter your Domain Name:&nbsp;<input id="domain_name" onkeyup="validate_domain_name($('#domain_name'));" name="domain-name" type="text" value="{{ DOMAIN_NAME }}" /><br />&nbsp;<input id="btn_domain_name_submit" title="Save the Domain Name." onclick="this.disabled=true;" name="btn_submit" type="submit" value="Save Domain Name" />&nbsp;Don't have a Domain Name but want to buy one?  Visit <a href="http://www.EzCheapSites.Com" target="_blank">EzCheapSites.Com</a> !<br /><br /> All you have to do is make your Domain Name point to <strong>{{ IP_ADDRESS }}</strong> by setting a CNAME Record for this purpose.&nbsp;Our helpful Support Staff can help you with this when you buy your domain from <a href="http://www.EzCheapSites.Com" target="_blank">EzCheapSites.Com</a>. </form>

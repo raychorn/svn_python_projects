@@ -1,0 +1,35 @@
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: white;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+.oneColLiqCtrHdr #container {
+	width: 90%; 
+	background: white;
+	margin: 0 auto;
+	border: 0px solid #000000;
+	text-align: left;
+}
+.oneColLiqCtrHdr #header {
+	background: white; 
+	padding: 0 10px 0 20px;
+}
+.oneColLiqCtrHdr #header h1 {
+	margin: 0;
+	padding: 10px 0;
+}
+.oneColLiqCtrHdr #mainContent {
+	padding: 0 20px;
+	background: white;
+}
+.oneColLiqCtrHdr #footer { 
+	padding: 0 10px;
+	background: white;
+} 
+.oneColLiqCtrHdr #footer p {
+	margin: 0;
+	padding: 10px 0;
+}

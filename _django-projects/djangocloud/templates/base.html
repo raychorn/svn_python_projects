@@ -1,0 +1,238 @@
+{% load currenttimetag %}
+{% get_current_time "%Y-%M-%d %I:%M %p" as my_current_time %}
+{% get_current_time "%Y" as my_current_year %}
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
+    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
+    lang="{% firstof LANGUAGE_CODE 'en' %}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}{% endblock %} &copy;DjangoCloud {{ air_id }} v{{version}}, All Rights Reserved. ({{ my_current_time }})</title>
+    {% block css %}
+      <!--[if IE]>
+      <![endif]-->
+    {% endblock %}
+<link rel="icon" 
+      type="image/png" 
+      href="/static/images/VyperLogixCorp-icon(60x57).png" />
+
+	<script type="text/javascript" src="/static/js/dynamic.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/labelify/jquery.labelify-passwords.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery.validate/jquery.validate.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery.validate/additional-methods.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery-validate.password/jquery.validate.password.js"></script>
+	<script type="text/javascript" src="/static/js/00_constants.js"></script>
+	<script type="text/javascript" src="/static/js/01_objectExplainer.js"></script>
+	<script type="text/javascript" src="/static/js/02_AnchorPosition.js"></script>
+    {% block js %}
+    {% endblock %}
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-9863220-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+ 
+	<script type="text/javascript">
+		var __default_options__ = {html:'',options:{minWidth:700,minHeight:500,width:700,height:500,modal:true}};
+		var ___options___ = {
+			'/':__default_options__
+		};
+		var ___pageSelector___ = null;
+
+		$(document).ready(function() {
+			include_css('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/start/jquery-ui.css');
+			include_css('/static/js/jquery/jquery-validate.password/jquery.validate.password.css');
+			
+			try {
+				include_css({% block include-css %}{% endblock %});
+			} catch (e) {}
+			var href_tokens = window.location.href.split('/');
+			___pageSelector___ = href_tokens[href_tokens.length-1];
+			___pageSelector___ = (___pageSelector___.length == 0) ? '/' : ___pageSelector___;
+			//var options = ___options___[___pageSelector___];
+
+			var __icons__ = [
+				'<a href="http://www.vyperlogix.com" target="_top"><img src="/static/images/VyperLogixCorp-icon(60x57).png" height="101" /></a>',
+				'<a href="http://www.djangoproject.com" target="_top"><img src="/static/images/django-icon.png" height="101" /></a>'
+			];
+			var __iconNum__ = __icons__.length-1;
+			var __iconElement__ = $("#logo");
+			function change_site_icon() {
+				if (__iconElement__) {
+					__iconElement__.html(__icons__[__iconNum__]);
+					__iconNum__++;
+					if (__iconNum__ > __icons__.length-1) {
+						__iconNum__ = 0;
+					}
+					setTimeout(function(){change_site_icon();},5000);
+				}
+			}
+{% if url == 'index.html' %}
+			if (__icons__.length > 1) {
+				setTimeout(function(){change_site_icon();},5000);
+			}
+{% else %}
+			$("#logo").hide();
+{% endif %}
+			$("#popUpDialog").hide();
+			$("#popUpDialog").dialog({
+				autoOpen: false,
+				minWidth:600, 
+				minHeight:200, 
+				width:600, 
+				height:500
+			});
+
+			function change_login_href() {
+				if (window.location.href.indexOf('/?Go=+++++Login+++++') > -1) {
+					window.location.href = '/';
+				} else {
+					setTimeout(function(){change_login_href();},250);
+				}
+			}
+			setTimeout(function(){change_login_href();},250);
+
+			/* */
+			//$('body').append('<div id="ajaxBusy"><img src="/static/activity/ajax-loader.gif" border="0" /></div>');
+			$('#ajaxBusy').css({
+				display:"none",
+				margin:"0px",
+				paddingLeft:"0px",
+				paddingRight:"0px",
+				paddingTop:"0px",
+				paddingBottom:"0px",
+				position: "absolute",
+				top: "40px",
+				left: "0px",
+				width:"auto"
+			});
+			$(document).ajaxStart(function(){ 
+				var pos = $('#btn_logout').position();
+				$('#ajaxBusy').css({"left":(pos.left-70)+"px"});
+				$('#ajaxBusy').show(); 
+			}).ajaxStop(function(){ 
+				$('#ajaxBusy').hide();
+			});
+  		});
+		
+	function onclick_logout() {
+		$("#div_logout_button").hide();
+		//$("#ajaxBusy").show();
+		window.location.href = '/logout/user/';
+	}
+	
+	function onclick_applications() {
+		//$("#ajaxBusy").show();
+		window.location.href = 'applications.html';
+	}
+	
+	function not_yet_implemented() {
+		alert('Not Yet Implemented !!!\nCheck back again for more...');
+	}
+
+    </script>
+
+    {% block extra-head %}{% endblock %}
+  </head>
+
+<body>
+<header>
+	<div>
+      <table id="navigation_content_holder" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+        <td valign="top" align="left">
+            <div id="logo">
+                <a href="http://www.vyperlogix.com" target="_top"><img src="/static/images/VyperLogixCorp-icon(60x57).png" height="101" /></a>
+            </div>
+        
+            <!--start of navigation_holder-->
+            <div style="padding-left:0px;">
+                <div id="navigation"> 
+                  <span class="navigation"><a id="anchor_navbar_home" href="/?GO=HOME">HOME</a> </span>     
+{% if IS_LOGGED_IN %}
+                      <span class="navigation">
+{% if url != 'applications.html' %}
+                        <a id="anchor_navbar_applications" href="#" onclick="onclick_applications();">APPS</a> 
+{% endif %}
+                    </span>
+{% endif %}
+                </div>
+          </div>
+        </td>
+        <td width="*" valign="top" align="right">
+{% if IS_NOT_LOGGED_IN %}
+            <div>
+                <span><input name="Login" type="button" value="Login" class="main_button_wide_orange" onclick="onclick_request_login_dialog();" /></span>
+                <span style="display:none;"><input name="Register" type="button" value="Register" class="main_button" onclick="onclick_request_register_dialog();" /></span>
+            </div>
+{% endif %}
+{% if IS_LOGGED_IN %}
+            <div id="div_logout_button">
+                <span><input id="btn_logout" name="Logout" type="button" value="Logout" class="main_button_wide_orange" onclick="onclick_logout();" /></span>
+            </div>
+{% endif %}
+        </td>
+        </tr>
+        <tr>
+        	<td bgcolor="white">
+<div id="div_ERROR" style="color:#F00;">{{ ERROR }}</div>
+            </td>
+        </tr>
+      </table>
+	  	<div id="ajaxBusy"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+	</div>
+    
+    <div style="clear: both"></div>
+</header>
+<div id="popUpDialog" title="???" style="display:none;">
+	<p id="popup_dialog_content"></p>
+</div>
+<div>{% block container %}{% endblock %}</div>
+<div style="clear: both;"></div>
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="footer_content_holder">
+  <tr>
+    <td>
+    <div class="footer_left_box">
+    <div class="footer_font">&copy;&nbsp;{{ my_current_year }} DjangoCloud&trade;&nbsp;<a href="http://www.vyperlogix.com" target="_top">VyperLogix.Com</a>, All rights reserved.</div>
+    </div>
+    
+     <div class="footer_right_box">
+    <div class="footer_font">
+{% if IS_NOT_HIDDEN %}
+            <a href="#" onclick="not_yet_implemented();">Terms of Use</a>&#32;&#32; &#124; &#32;&#32; 
+            <a href="#" onclick="not_yet_implemented();">Privacy Policy</a>&#32;&#32; &#124; &#32;&#32;
+{% endif %}
+{% if IS_NOT_HIDDEN %}
+            <a href="#" onclick="not_yet_implemented();">Site Map</a>&#32;&#32; &#124; &#32;&#32;
+{% endif %}
+{% if IS_NOT_HIDDEN %}
+        	<a href="/contact.html">Contact </a>
+{% endif %}
+{% if IS_NOT_HIDDEN %}
+            <br/><br/>
+            <a href="#" onclick="not_yet_implemented();"><img src="/static/images/facebook.png" width="32" height="32" border="0" /></a>
+             <a href="#" onclick="not_yet_implemented();"><img src="/static/images/twitter.png" width="32" height="32" border="0" /></a>
+             <a href="#" onclick="not_yet_implemented();"><img src="/static/images/youtube.png" width="32" height="32" border="0" /></a>
+            </div>
+{% endif %}
+    </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

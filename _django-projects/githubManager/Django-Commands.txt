@@ -1,0 +1,10 @@
+python manage.py syncdb
+
+python manage.py dumpdata
+
+python manage2.py runserver --proxy=127.0.0.1:8888 --noreload --settings=settings 127.0.0.1:8088
+
+python manage2.py runserver --noreload --settings=settings 127.0.0.1:8088
+
+# http://127.0.0.1:9999/heatmaps/
+

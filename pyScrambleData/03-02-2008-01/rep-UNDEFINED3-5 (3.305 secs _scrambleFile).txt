@@ -1,0 +1,41 @@
+         1610 function calls in 3.305 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.004    0.004    3.306    3.306 {execfile}
+        1    0.012    0.012    3.302    3.302 ScrambleData.py:2(<module>)
+        1    3.267    3.267    3.267    3.267 ScrambleData.py:6(scrambleFile)
+        1    0.002    0.002    0.018    0.018 __init__.py:16(<module>)
+        1    0.008    0.008    0.008    0.008 core.py:18(<module>)
+        1    0.001    0.001    0.008    0.008 support.py:9(<module>)
+        1    0.007    0.007    0.007    0.007 kdictproxy.py:5(<module>)
+        1    0.001    0.001    0.005    0.005 scramblelib.py:2(<module>)
+        2    0.001    0.000    0.003    0.001 {method 'join' of 'str' objects}
+      257    0.001    0.000    0.002    0.000 scramblelib.py:7(<genexpr>)
+     1024    0.001    0.000    0.001    0.000 {chr}
+      257    0.001    0.000    0.001    0.000 scramblelib.py:9(<genexpr>)
+        7    0.000    0.000    0.000    0.000 support.py:170(patch)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+        1    0.000    0.000    0.000    0.000 core.py:117(bind)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+       14    0.000    0.000    0.000    0.000 {setattr}
+       14    0.000    0.000    0.000    0.000 {getattr}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.proxycode}
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        2    0.000    0.000    0.000    0.000 {hasattr}
+        2    0.000    0.000    0.000    0.000 {isinstance}
+        2    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 {strop.maketrans}
+        2    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 support.py:102(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 support.py:74(PythonFrame)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 support.py:70(Frame)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

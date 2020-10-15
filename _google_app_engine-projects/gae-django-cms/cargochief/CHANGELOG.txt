@@ -1,0 +1,95 @@
+/*!
+ * VyperBlog(tm) v1.0.0
+ * http://www.vyperlogix.com/
+ *
+ * Copyright 2010, Vyper Logix Corp.
+ * Licensed under the GNU General Public License version 3 (GPLv3).
+ * http://www.opensource.org/licenses/gpl-3.0.html
+ *
+ * Date: Sun Jun 13 22:00:04 2010 -0700
+ */
+
+CHANGE LOG:
+
+Version 0.4+ (planned - subject to change without notice...)
+  * Added Chrome Frame Support for IE.
+  * Added Social Media Support via addthis.com
+  * Shopping Storefront with Shopping Cart and payment processing options using PayPal and Google Checkout.
+  * CRM (Customer Relationship Management) with options to connect to your SalesForce Org.
+  * Social Networking Support - like MySpace (Users can make their own customized pages).
+  * Social Networking Support - like FaceBook (Users can write on each others Walls).
+  * Social Networking Support - like Twitter (Users can post to each others Walls and the common Timeline).
+  * Social Networking Support - Chatting with Friends and others using XMPP.
+  * Inactivity logout - users are automatically logged-out on the lack of activity (20 minutes).
+  * Upload Files for Specific Users.
+
+Version 0.30
+  * Added FaceBook Share buttons to all relevant pages and content managed by this platform.
+  * Added more to the site Admin interface.
+  * Added support for Google Webmaster Tool.
+  * Added support to place content from external RSS feeds into the sitemap.xml file.
+  * Added Syndication links to the top-line menu for the site.
+
+  * Added support for Google Analytics.
+
+Version 0.29
+  * Added FaceBook Like buttons to all relevant pages and content managed by this platform.
+  * Added FaceBook Comments for all Blog Posts
+  * Added FaceBook Sponsor's Page to promote the cause or Profile of your choice.
+  * Added support for Blog Comments.
+  * Added support for RSS Feed for Blog Posts. (SEO friendly links)
+
+Version 0.28
+  * Added switch/case tag for Django.
+  * Enhanced security for Secure-Site(tm); provides better protection from hackers and others who use bots.
+  * Enhanced Browser detection to include Android WebKit browsers as one of the supported browsers.
+  * Added support for SSL for all User Management Forms using Secure SSL Cross-Domain AJAX.
+  * Right-Click menu has been disabled for added security from hackers and crackers.
+  * Added support for Google Webmaster Tools via sitemap.xml. (SEO friendly links !)
+  * Added prettier error messages that are all dressed-up.
+  * Cleaned-up 404 processing to always slide users back into the site rather than some kind of useless 404 message.
+  * Added logging of invalid usage to capture IP addresses for later use as part of a DDoS protection layer.
+
+Version 0.27
+	* Fixed an issue related to the FaceBook JavaScript SDK and a bug that exists when performing a logout.
+	* Cleaned-up delivery of JavaScript to allow all browsers play rather than just the really juicy browsers.
+	* Added Browser detection and handling to ensure all known current browsers are supported.
+	* Added Security Disclaimer for MSIE since MSIE is known to have Security Issues.
+	* Added materials in the /about/ Django Applet to support using this platform.
+	* Beginning to build PayPal Support. (More about this in a future release.)
+
+Version 0.26 
+	* Fixed some issues related to the need to bust the browser's cache when logging out.
+	* Added VyperBlog Admin Control Panel with remote Desktop version.
+	* Added LRU Cache to reduce the number of AJAX round-trips to/from the server.
+	* Added FaceBook Authentication - cannot perform Admin functions using FaceBook login, however.
+	* Added ability to publish a FaceBook App - all you need to do is register your site as a FaceBook app via http://www.facebook.com/developers/.
+	* Added full integration with FaceBook in the form of a Django Applet through which you can build any FaceBook App with ease.
+	* Added debugging harness for the FaceBook API with focus on login and logout - this allows you to develop facebook apps locally.
+
+Version 0.25 
+	* Fixed some bugs that have crept-in over the past several development cycles.
+	* Added Site Feedback.
+
+Version 0.24 
+	* Fixed an issue with requests to resend the Registration Activation Notice after the Activation has been performed.
+	* Completed Self-Help Kiosk to allow users to reset their passwords.
+	
+Version 0.23 (not published)
+	* Fixed an issue with emails not being sent for new Registrations.
+	* Added Self-Help Kiosk to allow users to reset their passwords and retrieve their Registration Emails.
+
+Version 0.22 (not published)
+	* Fixed an issue with the cron job to allow it to execute via the Google App Engine.
+	
+Version 0.21
+	* Fixed an issue with the Registration Form, it now works as it should.
+	* Cleaned-up the Login/Register/Logout interactions and GUI.
+	
+Version 0.2
+
+	* Optimized delivery of JS files to make the process a bit more efficient.
+	* Added User Account (Login/Register) functions.
+	* Fixed an issue with the AJAX Activity Icon, it now works as it should.
+
+	

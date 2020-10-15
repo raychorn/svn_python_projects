@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" creationComplete="onInit()" closing="onClosing()"
+	xmlns:sockets="com.HAL.sockets.*" 
+	width="800" height="600" 
+	xmlns:socketViews="com.HAL.sockets.views.*" 
+	xmlns:controls="com.HAL.controls.*" 
+	xmlns:navigators="com.HAL.controls.navigators.*" 
+	xmlns:views="com.HAL.views.*">
+	<mx:states>
+		<mx:State name="FolderNavigatorState">
+			<mx:AddChild relativeTo="{list_Archives}" position="before">
+				<navigators:FolderNavigatorCanvas id="folderNavigator" width="98%" height="{this.height*0.33}" creationComplete="onCreationCompleteFolderNavigatorCanvas()"/>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="FolderBrowserState">
+			<mx:AddChild relativeTo="{canvas01}" position="after">
+				<mx:Canvas id="canvas02" label="File Browser" width="100%" height="100%"> <!--  backgroundColor="#ffffff" borderColor="#0000ff" borderStyle="outset" -->
+					<mx:VBox width="100%" height="100%">
+						<mx:HBox width="100%">
+							<mx:VBox>
+								<mx:Label id="fileBrowserTitle1" text="{(this._current_action.length > 0) ? this._current_action : ''}"/>
+								<mx:Label id="fileBrowserTitle1a" text="{(this._current_action.length > 0) ? this._current_action2 : ''}"/>
+								<mx:Label id="fileBrowserTitle2" text="into '{unescape(this.fileList1.directory.url)}'."/>
+							</mx:VBox>
+						</mx:HBox>
+						<mx:HBox id="hboxFileList1" width="100%" height="95%">
+							<mx:VBox height="100%">
+								<mx:FileSystemList id="fileList1" height="95%" enumerationMode="{FileSystemEnumerationMode.DIRECTORIES_ONLY}" change="onChangeFileSystemList(event)" creationComplete="onCreationCompleteFileSystemList()"/>
+							</mx:VBox>
+							<mx:VBox>
+								<mx:HBox>
+									<mx:Button id="btn_navigateHome" toolTip="Click this button to navigate to the home folder, this is the folder you began with." click="onClickNavigateHomeButton()" icon="@Embed(source='assets/images/navigateHome.gif')"/>
+									<mx:Button id="btn_navigateUp" toolTip="Click this button to navigate to the parent folder for the currently selected folder." click="onClickNavigateUpButton()" upIcon="@Embed(source='assets/images/navigateUp.gif')" overIcon="@Embed(source='assets/images/navigateUp.gif')" disabledIcon="@Embed(source='assets/images/navigateUpDisabled.gif')"/>
+									<mx:Button id="btn_navigateNew" toolTip="Click this button to create a new folder in the currently selected folder." click="onClickNavigateNewButton()" upIcon="@Embed(source='assets/images/navigateNew.gif')" overIcon="@Embed(source='assets/images/navigateNew.gif')" disabledIcon="@Embed(source='assets/images/navigateNewDisabled.gif')"/>
+									<mx:Button id="btn_deleteFolder" scaleX="0.5" scaleY="0.5" enabled="false" toolTip="Click this button to delete the currently selected file or folder." buttonDown="onClickDeleteItemButton()" click="onClickDeleteItemButton()" upIcon="@Embed(source='assets/images/delete_folder.gif')" overIcon="@Embed(source='assets/images/delete_folder.gif')" disabledIcon="@Embed(source='assets/images/delete_folder_disabled.gif')"/>
+								</mx:HBox>
+								<mx:Button id="btn_acceptFile" label="Export the Package" click="onClickAcceptFileButton()" toolTip="Click this button to export the package '{this.current_package_name}' into the current desintation folder '{this.fileList1.directory.nativePath}'."/>
+								<mx:Button id="btn_cancelFolderBrowser" label="Cancel" click="onClickCancelFolderBrowserButton()" toolTip="Click this button to Return to the Archives/Packages List."/>
+							</mx:VBox>
+						</mx:HBox>
+					</mx:VBox>
+				</mx:Canvas>
+			</mx:AddChild>
+			<mx:SetProperty target="{logoSWF}" name="alpha" value="0.5"/>
+		</mx:State>
+		<mx:State name="PackageBuildState">
+			<mx:AddChild relativeTo="{canvas01}" position="after">
+				<views:PackageBuilderCanvas id="packageBuilder" width="100%" height="100%" label="Package Builder" currentFolder="{this._current_folder}" creationComplete="onCreationCompletePackageBuilderCanvas()"/>
+			</mx:AddChild>
+			<mx:SetProperty target="{this.viewStack1}" name="width" value="100%"/>
+			<mx:SetProperty target="{logoSWF}" name="alpha" value="0.5"/>
+		</mx:State>
+		<mx:State name="ArchivesListClickedState">
+			<mx:SetProperty target="{this.hbox_list1}" name="width" value="100%"/>
+		</mx:State>
+		<mx:State name="ArchiveBuildState">
+			<mx:AddChild relativeTo="{canvas01}" position="after">
+				<views:ArchiveBuilderCanvas id="archiveBuilder" width="100%" height="100%" label="Archive Builder" currentFolder="{this._current_folder}" creationComplete="onCreationCompleteArchiveBuilderCanvas()"/>
+			</mx:AddChild>
+			<mx:SetProperty target="{this.viewStack1}" name="width" value="100%"/>
+			<mx:SetProperty target="{logoSWF}" name="alpha" value="0.5"/>
+		</mx:State>
+	</mx:states>
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.FileSystemEnumerationMode;
+		]]>
+	</mx:Script>
+	<mx:Style source="styles.css"/>
+	<mx:Script source="misc.as"/>
+	<!--
+	To-Do:
+	
+	DONE	1). Make green/red lights via single 2-state light to show when Application is online.
+	WORKING	2). Work on Package operations. (Export done., Remove, Add Needed)
+	WORKING 3). Work on Package Browser to allow exported packaged to be viewed/manipulated.
+				Add functions to allow the folder tree to be browsed via the archive list.
+	WORKING 4). Add dbhash database to track settings such as the home folder and GUI placement, etc.
+	DONE    5). Return only validated Archive and Package names from Python.
+	DONE    6). Package Builder - collect files into Packages.
+	WORKING 7). ADD Packages to Archives.
+	DEBUG   8). List Archives for new folder based on action from Folder Browser.
+	WORKING 9). Allow Packages to be edited.
+	WORKING 9a). Add GridList for files going into a new package.
+	WORKING 9b). Track file date in cache for determining whether a file is a package or not.
+	WORKING 10). Package Builder becomes Package Editor.
+	WORKING 11). Package File Naming Collisions - handle in client only. At the point where the package is being requested to be built.
+	WORKING 12). Archive Template to be used when adding packages to a New Archive.
+	
+	LIMITS:
+	
+		TRIAL
+		
+			Files per Package = 5 (DONE)
+			Packages total = 5    (DONE)
+			Archives total = 1
+	-->
+	<mx:ApplicationControlBar id="appBar" x="0" y="0" width="100%" dock="true">
+		<mx:MenuBar id="menuBar" labelField="@label" dataProvider="{this.menuBarCollection}" itemClick="onItemClickMenuBar(event)" creationComplete="onCreationCompleteAppMenuBar()"/>
+		<mx:HBox width="100%" horizontalAlign="center">
+			<mx:Label styleName="ApplicationTitleBarLabel" text="EzPackager v1.0 (The Fusion of Python 2.5.1 and Adobe AIR) {LicenseUtils.licenseLevel}"/>
+		</mx:HBox>
+		<controls:OnlineStatusCanvas id="onlineStatusIndicator" width="30" height="30" creationComplete="onCreationCompleteOnlineStatusCanvas()"/>
+	</mx:ApplicationControlBar>
+	<mx:VBox width="100%" height="99%">
+		<mx:TitleWindow id="winMain" width="100%" height="100%" layout="absolute" headerHeight="0">
+			<!-- +++ Make sure to make this visible before shipping ! -->
+			<mx:SWFLoader visible="false" x="300" y="100" id="logoSWF" scaleContent="true" autoLoad="true" showBusyCursor="true" maintainAspectRatio="true" source="@Embed(source='assets/flash/ezpackagerlogo1.swf')" width="100%" height="100%"/>
+			<mx:VBox width="100%" height="100%">
+				<mx:TabBar id="tabBar1" width="100%" dataProvider="viewStack1" styleName="Canvas01"/>
+				<mx:ViewStack id="viewStack1" width="25%" height="100%" change="onChangeViewStack1(event)">
+					<mx:Canvas id="canvas01" label="Archive Browser on ({this.current_archive_name}::{this.current_package_name})" width="100%" height="100%" styleName="Canvas01">
+						<mx:HDividedBox id="hdiv01" width="100%" height="100%" borderStyle="none" dividerRelease="onDividerReleaseHDividedBox(event)" childAdd="onChildAddHDividedBox1(event)" childRemove="onChildRemoveHDividedBox1(event)" creationComplete="onCreationCompleteHDividedBox1()">
+							<mx:HBox id="hbox_list1" width="100%" minWidth="145" height="100%">
+								<mx:VBox width="100%" height="100%" borderStyle="outset" borderColor="#000000" cornerRadius="10" horizontalAlign="center" verticalAlign="middle">
+									<mx:HBox width="100%" horizontalAlign="center" borderStyle="outset" borderColor="#000000">
+										<mx:HBox width="80%" horizontalAlign="center" toolTip="Click any of these Archives to display the Archive Contents.">
+											<mx:Label text="Archives and Packages"/>
+										</mx:HBox>
+										<mx:HBox width="20%" horizontalAlign="right" verticalAlign="middle">
+											<navigators:FolderNavigatorButton id="archivesFolderNavigator" width="21" height="21" creationComplete="onCreationCompleteFolderNavigatorButton()"/>
+										</mx:HBox>
+									</mx:HBox>
+									<mx:List id="list_Archives" width="100%" height="100%" borderStyle="none" backgroundColor="#FFFFFF" styleName="ListInFocus" change="onChangeArchiveList(event)" labelField="item" labelFunction="labelForArchiveList" mouseOver="onMouseOverArchiveList(event)" click="onClickArchiveList()"/>
+								</mx:VBox>
+							</mx:HBox>
+						</mx:HDividedBox>
+					</mx:Canvas>
+				</mx:ViewStack>
+			</mx:VBox>
+		</mx:TitleWindow>
+		<mx:Panel id="socketsManagerPanel" width="100%" height="0" headerHeight="0" visible="false">
+			<mx:VBox width="100%" verticalAlign="top">
+				<socketViews:SocketConnectionManager id="socketsManager" label="Debug View" width="100%" height="100%" creationComplete="onCreationCompleteSocketsManager()"/>
+			</mx:VBox>
+		</mx:Panel>
+	</mx:VBox>
+</mx:WindowedApplication>

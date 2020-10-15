@@ -1,0 +1,223 @@
+-----------------------------------------------------
+
+(since DrPython 1.63)
+
+(FS) ... Franz Steinhauesler
+(AB) ... Antonio Barbosa
+
+-----------------------------------------------------
+When Updating to wxPython 2.8 your previous stored shortcuts may not work anymore.
+-----------------------------------------------------
+
+For that Antonio has written a shortcuts update script
+located in tools/convert_drkeys.py
+
+
+-----------------------------------------------------
+Changed file and directory structure in DrPyhton 1.65.
+-----------------------------------------------------
+
+Example for users switched from DrPython 1.64 and before to 1.65:
+Please copy your files, that it fits your personal directories.
+A example is shown below:
+
+<preferencesdir>:
+  preferences.dat
+  drscript.dat
+  default.idx
+
+<preferencesdir>/dat
+  recent_files.log
+  findreplacedialog.sizeandposition.dat
+  filedialog.sizeandposition.dat
+  drpython.panel.sizes.dat
+  drpython.sizeandposition.dat
+  preferencesdialog.sizeandposition.dat
+  shortcutsdialog.sizeandposition.dat
+  plugindialog.sizeandposition.dat
+  dynamicdrscriptdialog.sizeandposition.dat
+  openimportedmoduledialog.sizeandposition.dat
+  popupmenudialog.sizeandposition.dat
+  popupmenu.dat
+  drscriptdialog.sizeandposition.dat
+  bookmarksdialog.sizeandposition.dat
+  bookmarks.dat
+  toolbardialog.sizeandposition.dat
+  toolbar.dat
+  toolbar.custom.icons.dat
+  .separator.favorite.colours.dat
+  documentation.bookmarks.dat
+  windowsize.dat
+
+<preferencesdir>/shortcuts
+  stcshortcuts.dat
+  shortcuts.dat
+  drscript.shortcuts.dat
+
+<preferencesdir>/plugins
+  default.idx
+  
+<preferencesdir>/plugins/preferences
+  SearchInFiles.preferences.dat
+  Sessions.preferences.dat
+  CodeMarksPlus.preferences.dat
+  CodeCompletion.preferences.dat
+  CleanUpFile.preferences.dat
+  Pycheck.preferences.dat
+  FindAutoComplete.preferences.dat
+  CopyCutPasteExtend.preferences.dat
+  CTags.preferences.dat
+  ToDoList.preferences.dat
+  abbreviations.preferences.dat
+  DocList.preferences.dat
+  CTags.preferences_company.dat
+  CTags.preferences_home.dat
+  FindFiles.preferences.dat
+  FindAll.preferences.dat
+  keyboardmacros.preferences.dat
+
+<preferencesdir>/plugins/shortcuts
+  FindAutoComplete.shortcuts.dat
+  FindFiles.shortcuts.dat
+  FullScreen.shortcuts.dat
+  GetLine.shortcuts.dat
+  IncrementalSearch.shortcuts.dat
+  InsertMenu.shortcuts.dat
+  KeyBoardMacros.shortcuts.dat
+  ListShortCuts.shortcuts.dat
+  myProject.shortcuts.dat
+  PositionMarker.shortcuts.dat
+  PyCheckerSupport.shortcuts.dat
+  QuickMarker.shortcuts.dat
+  RedirectOutput.shortcuts.dat
+  RunFromBuffer.shortcuts.dat
+  RunTab1.shortcuts.dat
+  ScrollFunctions.shortcuts.dat
+  SearchInFiles.shortcuts.dat
+  SessionsLight.shortcuts.dat
+  ShellMenu.shortcuts.dat
+  ShowLineinBrowser.shortcuts.dat
+  Switcheroo.shortcuts.dat
+  TracebackMenu.shortcuts.dat
+  Abbreviations.shortcuts.dat
+  Bombs.shortcuts.dat
+  ChopMenu.shortcuts.dat
+  CleanUpFile.shortcuts.dat
+  CodeCompletion.shortcuts.dat
+  CodemarksPlus.shortcuts.dat
+  CompWord.shortcuts.dat
+  CopyCutPasteExtend.shortcuts.dat
+  CTags.shortcuts.dat
+  DocList.shortcuts.dat
+  EpyDoc.shortcuts.dat
+  FindAll.shortcuts.dat
+  
+ <preferencesdir>/plugins/dat
+  MultiClip.log
+  SearchInFilesHistory.log
+  searchinfiles.viewstcsizepos.dat
+  FindFilesHistory.log
+  searchinfiles.sizeposcolumn.dat
+  FindFilesSavedFiles.log
+  recent_sessions.log
+  myproject.log
+  DocList.sizepos.dat
+  FindFiles.sizepos.dat
+
+<preferencesdir>/plugins/dat/SessionsLight
+  recent_sessions.log
+  LastSession.ses
+  myzuhause.dsf
+  pycrust.dsf
+  Default.dsf
+
+<preferencesdir>/plugins/dat/abbreviations
+  abbreviations.txt
+ 
+-----------------------------------------------------------
+
+plugins (sorted by creators):
+    Daniel (first), enhanced by Franz:
+      - SearchInFiles:                         ok...linux...ok (5,4, 11)
+    Daniel:
+      - CodeCompletion:........................ok...linux...ok (7)
+      - DocumentationBookmarksMenu:............ok...linux...ok
+      - FindAll:...............................ok...linux...ok (1)
+      - FullScreen:............................ok...linux...ok
+      - InsertMenu:............................ok...linux...ok
+      - RedirectOutput:........................ok...linux...ok
+      - RunFromBuffer:.........................ok...linux...ok (2)
+      - ShellMenu:............................ ok...linux...ok
+      - Switcheroo:............................ok...linux...ok
+      - TracebackMenu:.........................ok...linux...ok
+    Franz:
+      - Abbreviations:.........................ok...linux...ok
+      - AutoSave:..............................ok...linux...ok
+      - Bombs:.................................ok...linux...ok (9)
+      - CleanUpFile:...........................ok...linux...ok
+      - CompWord:..............................ok...linux...ok
+      - CopyCutPasteExtend:....................ok...linux...ok
+      - CTags:.................................ok...linux...ok
+      - DocList:...............................ok...linux...ok (4)
+      - FindAutoComplete:......................ok...linux...ok (4) (10)
+      - FindFiles:.............................ok...linux...ok (4)
+      - GetLine:...............................ok...linux...ok
+      - IncrementalSearch:.....................ok...linux...ok
+      - KeyBoardMacros:........................ok...linux...ok (8)
+      - ListShortCuts:.........................ok...linux...ok
+      - PositionMarker:........................ok...linux...ok
+      - QuickMarker:...........................ok...linux...ok
+      - ScrollFunctions:.......................ok...linux...ok
+      - SessionsLight:.........................ok...linux...ok
+      - Startup:...............................ok...linux...ok
+    Antonio:
+      - CodeMarksPlus:.........................ok...linux...ok
+      - EpyDoc:................................ok.. Linux...(3)
+      - myProject:.............................ok...linux...ok
+      - RunTab1:...............................ok...linux...ok
+      - ShowLineinBrowser:.....................ok...linux...ok
+    other authors:
+      - bikeplugin:............................ok...linux...ok
+      - PyCheckerSupport:......................ok...linux...ok
+      - ToDoList:..............................ok...linux...ok (6)
+
+  more plugins:
+    
+  abandoned pugins and therefore hidden on sourceforge:
+    - Codemarks:        (will be replaced by CodeMarksPlus)
+    - Sessions:         (will be replaced by SessionsLight)
+    - ChopMenu:         (Dan already remove it); there are the functions in stc "Delete Line Left" and "Delete Line Right".
+    - ThemeMenu:        (outdated, could be "reanimated" probably)
+    - SimpleDebugger:   (outdated, could be "reanimated" probably)
+
+
+
+  NOTES:
+  (1) Worked ok but results were truncated. Now shows entire line. Seen on Linux: the marked line is sometimes
+        to long, it reaches up to the next line.
+  (2) RunFromBuffer saves script in a temp file.
+  (3) There are some differences on epydoc in linux. May be diferent versions (s?)
+  (4) could be improved by emulating windows behaviour on gtk with keystrokes (listctrl, listbox, combobox)
+  (5) almost ok sporadical errors (pydeadobject, list index out of range; on linux, only every second time
+  (6) should update itself, when changing the current document
+  (7) should or could improved enormous (like pycrust's autocomplete for instance)
+  (8) only when started automatically (must be in default.idx and if Sessionslight is also loaded, it should be
+        registered in default.idx BEFORE SessionsLight).
+  (9) some funny rest of background and little graphics bugs (also redraw problem(?)).
+  (10) doesn not work as expected (on windows, no problem) EVT_TEXT is fired 2 or more times.
+       It should be somehow suppressed (ask in the mailing list)?
+  (11) some problems on linux, but not easy to duplicate.
+
+  additional notes:
+    many other differences. I (FS) created for that a wiki page in wxPyhton wiki. (Differences gtk...)
+      for example also ComboBox.SetBackgroundColor is not working...
+
+
+  drscrips:
+
+===========================================================================================================
+
+-----------------------------------------------------
+Next one... (to be continued)
+-----------------------------------------------------
+ 

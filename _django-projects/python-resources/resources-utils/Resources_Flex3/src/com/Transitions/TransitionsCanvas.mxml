@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" initialize="onInit()">
+    <!-- Define the two view states, in addition to the base state.-->
+    <mx:states>
+        <mx:State name="One">
+            <mx:SetProperty target="{p1}" name="x" value="{(this.pm.width/2)+10}"/>
+            <mx:SetProperty target="{p1}" name="y" value="0"/>
+            <mx:SetProperty target="{p1}" name="width" value="{(this.pm.width/2)-20}"/>
+            <mx:SetProperty target="{p1}" name="height" value="{this.pm.height-10}"/>		<!-- swap p1 with p3 -->
+            <mx:SetProperty target="{p2}" name="x" value="0"/>
+            <mx:SetProperty target="{p2}" name="y" value="0"/>
+            <mx:SetProperty target="{p2}" name="width" value="{this.pm.width/2}"/>
+            <mx:SetProperty target="{p2}" name="height" value="{(this.pm.height/2)-10}"/>
+            <mx:SetProperty target="{p3}" name="x" value="0"/>
+            <mx:SetProperty target="{p3}" name="y" value="{(this.pm.height/2)+10}"/>
+            <mx:SetProperty target="{p3}" name="width" value="{this.pm.width/2}"/>
+            <mx:SetProperty target="{p3}" name="height" value="{(this.pm.height/2)-20}"/>
+        </mx:State>
+        <mx:State name="Two">
+            <mx:SetProperty target="{p2}" name="x" value="{(this.pm.width/2)+10}"/>			<!-- swap p2 with p3 -->
+            <mx:SetProperty target="{p2}" name="y" value="0"/>
+            <mx:SetProperty target="{p2}" name="width" value="{(this.pm.width/2)-20}"/>
+            <mx:SetProperty target="{p2}" name="height" value="{this.pm.height-10}"/>
+            <mx:SetProperty target="{p3}" name="x" value="0"/>
+            <mx:SetProperty target="{p3}" name="y" value="{(this.pm.height/2)+10}"/>
+            <mx:SetProperty target="{p3}" name="width" value="{this.pm.width/2}"/>
+            <mx:SetProperty target="{p3}" name="height" value="{(this.pm.height/2)-20}"/>
+        </mx:State>
+    </mx:states>
+
+    <!-- Define Transition array with one Transition object.-->
+    <mx:transitions>
+        <!-- Define a transition for changing from any state to any state.
+        -->
+        <mx:Transition id="myTransition" fromState="*" toState="*">
+            <!-- Define a Parallel effect as the top-level effect.-->
+            <mx:Parallel id="t1" targets="{[p1,p2,p3]}">
+                <!-- Define a Move and Resize effect.-->
+                <mx:Move  duration="400"/>
+                <mx:Resize duration="400"/>
+            </mx:Parallel>
+        </mx:Transition>
+    </mx:transitions>
+
+	<mx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			import com.utils.ArrayCollectionUtils;
+			import mx.collections.ArrayCollection;
+			import mx.events.ChildExistenceChangedEvent;
+			import mx.events.StateChangeEvent;
+			
+			private var _deferredScaleOptions:Object = {};
+			
+			public function set_deferredScaleOption(stateName:String, option:Object):void {
+				var stateObj:Object;
+				if (option != null) {
+					for (var s:String in option) {
+						if (this._deferredScaleOptions[stateName] == null) {
+							this._deferredScaleOptions[stateName] = {};
+						}
+						stateObj = this._deferredScaleOptions[stateName];
+						stateObj[s] = option[s];
+						stateObj.isUsed = false;
+					}
+				}
+			}
+			
+			public function get_deferredScaleOption(stateName:String, selector:String):Object {
+				var stateObj:Object;
+				stateObj = this._deferredScaleOptions[stateName];
+				return stateObj[selector];
+			}
+			
+			private function handleScalingFactors():void {
+				var toks:Array;
+				var panel:Panel;
+				var ac:ArrayCollection = new ArrayCollection(this.pm.getChildren());
+				var i:int;
+				var child:*;
+				var stateSelector:String = ((this.currentState == null) || (this.currentState == '') ? 'default' : this.currentState);
+				var stateObj:Object = this._deferredScaleOptions[stateSelector];
+				if (stateObj) {
+					if (stateObj.isUsed == false) {
+						for (var s:String in stateObj) {
+							toks = s.split('_');
+							i = ArrayCollectionUtils.findIndexOfItem(ac,'id',toks[0]);
+							if (i > -1) {
+								panel = Panel(ac.getItemAt(i));
+								child = panel.getChildAt(0);
+								switch (toks[toks.length-1]) {
+									case 'x':
+										child.scaleX = Number(stateObj[s]);
+									break;
+		
+									case 'y':
+										child.scaleY = Number(stateObj[s]);
+									break;
+
+									case 'percentWidth':
+										child.width = 0;
+										child.percentWidth = Number(stateObj[s]);
+									break;
+
+									case 'percentHeight':
+										child.height = 0;
+										child.percentHeight = Number(stateObj[s]);
+									break;
+								}
+							}
+						}
+						stateObj.isUsed = true;
+					}
+				}
+			}
+			
+			private function autoScalePanelChild():void {
+				var i:int;
+				var panel:Panel;
+				var child:*;
+				var pSize:Point;
+				var cSize:Point;
+				var scaleFactor:Point;
+				var ac:ArrayCollection = new ArrayCollection(this.pm.getChildren());
+				for (i = 0; i < ac.length; i++) {
+					panel = Panel(ac.getItemAt(i));
+					child = panel.getChildAt(0);
+					pSize = new Point(panel.width,panel.height);
+					cSize = new Point(child.width,child.height);
+					if (cSize > pSize) {
+						scaleFactor = new Point(cSize.x/pSize.x,cSize.y/pSize.y);
+						panel.scaleX = scaleFactor.x;
+						panel.scaleY = scaleFactor.y;
+					}
+				}
+			}
+			
+			private function onStateChange(event:StateChangeEvent):void {
+	//			this.autoScalePanelChild();
+	//			this.handleScalingFactors();
+			}
+			
+			private function onCreationComplete(event:FlexEvent):void {
+	//			this.autoScalePanelChild();
+	//			this.handleScalingFactors();
+			}
+			
+			private function onInit():void {
+				this.addEventListener(StateChangeEvent.CURRENT_STATE_CHANGE, onStateChange);
+				this.addEventListener(FlexEvent.CREATION_COMPLETE, onCreationComplete);
+			}
+		]]>
+	</mx:Script>
+    <!-- Define the Canvas container holdig the three Panel containers.-->
+    <mx:Canvas id="pm" width="100%" height="100%">
+        <mx:Panel id="p1" title="One ({((this.currentState == null) || (this.currentState == '') ? 'default' : this.currentState)})" x="0" y="0" width="{this.pm.width/2}" height="{(this.pm.height/2)}" click="currentState='One'">
+            <mx:Label fontSize="24" text="One"/>
+        </mx:Panel>
+        
+        <mx:Panel id="p2" title="Two ({((this.currentState == null) || (this.currentState == '') ? 'default' : this.currentState)})" x="0" y="{(this.pm.height/2)+10}" width="{this.pm.width/2}" height="{(this.pm.height/2)-20}" click="currentState='Two'">
+            <mx:Label fontSize="24" text="Two"/>
+        </mx:Panel>
+        
+        <mx:Panel id="p3" title="Three ({((this.currentState == null) || (this.currentState == '') ? 'default' : this.currentState)})" x="{this.pm.width/2+10}" y="0" width="{(this.pm.width/2)-20}" height="{this.pm.height-10}" click="currentState=''">
+            <mx:Label fontSize="24" text="Three"/>
+        </mx:Panel>
+    </mx:Canvas>
+</mx:Canvas>

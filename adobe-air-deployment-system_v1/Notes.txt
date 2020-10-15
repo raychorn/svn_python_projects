@@ -1,0 +1,33 @@
+My code can be packaged to detect if Adobe AIR Runtime is or is not installed.
+
+If Adobe AIR Runtime is not installed then pop-up a dialog that tells the user where they can go to get the missing package - also pop-up a browser window, if possible.
+
+If Adobe AIR Runtime is installed then attempt to install the AIR App and the Server.
+
+After Air App has installed then start the server and launch the Air App.
+
+If Air App cannot make a connection then display some info to tell the user how to start the Socket Server.
+
+
+Alternative(s):
+
+If Adobe AIR Runtime is not installed then Launch browser to a URL that detects if the AIR Runtime is not installed and installs it.
+
+
+Design:
+
+1). Detect and Install the Adobe AIR Runtime
+
+2). Detect and Install the AIR App using a custom installation process.
+
+3). Launch the AIR App via the Server that starts the AIR App before starting the Socket Server.
+
+
+Reasons for embedding the Adobe AIR Runtime in the installer:
+
+* Need to have the correct version of the runtime with the correct version of the Air App.
+
+
+Reasons for downloading the Adobe AIR Runtime during the installer session:
+
+* Need to make the installer as small as possible.

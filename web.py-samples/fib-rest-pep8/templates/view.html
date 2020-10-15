@@ -1,0 +1,8 @@
+$def with (items)
+
+<ul id="menu">
+    <li><a href="/">Home</a></li>
+</ul>
+<BR/>
+$for item in items:
+    $:render.item(item)

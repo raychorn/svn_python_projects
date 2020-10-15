@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" 
+	width="300" height="90">
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+
+			public function dismissPopUp():void {
+				PopUpManager.removePopUp(this);
+			}
+			
+			private function onClickCloseButton():void {
+				this.dismissPopUp();
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox x="0" y="0" width="100%" verticalAlign="middle">
+		<mx:Text id="labelText" width="100%"/>
+		<mx:HBox width="100%" horizontalAlign="left">
+			<mx:Button id="btn_close" label="OK" click="onClickCloseButton()"/>
+		</mx:HBox>
+	</mx:VBox>
+</mx:Panel>

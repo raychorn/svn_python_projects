@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" initialize="_onInitialize()" creationComplete="onInit()" closing="onClosing()"
+	xmlns:sockets="com.HAL.sockets.*" 
+	width="800" height="600" 
+	xmlns:socketViews="com.HAL.sockets.views.*" 
+	xmlns:controls="com.HAL.controls.*" 
+	xmlns:views="com.HAL.views.*">
+	<mx:Style source="PyAIRGooglize.css"/>
+	<mx:Script source="miscCode.as"/>
+	<mx:Script source="misc.as"/>
+	<mx:ApplicationControlBar id="appBar" x="0" y="0" width="100%" dock="true">
+		<mx:MenuBar id="menuBar" labelField="@label" dataProvider="{this.menuBarCollection}" itemClick="onItemClickMenuBar(event)" creationComplete="onCreationCompleteAppMenuBar()"/>
+		<mx:HBox width="100%" horizontalAlign="center">
+			<mx:Label styleName="ApplicationTitleBarLabel" text="pyAIR Demo v1.0"/>
+		</mx:HBox>
+		<controls:OnlineStatusCanvas id="onlineStatusIndicator" width="30" height="30" creationComplete="onCreationCompleteOnlineStatusCanvas()"/>
+	</mx:ApplicationControlBar>
+	<mx:VBox width="100%" height="99%">
+		<mx:TitleWindow id="winMain" width="100%" height="100%" layout="absolute" headerHeight="0">
+			<mx:VBox width="100%" height="100%">
+				<mx:TabBar id="tabBar1" width="100%" dataProvider="viewStack1" styleName="Canvas01"/>
+				<mx:ViewStack id="viewStack1" width="100%" height="100%">
+					<mx:Canvas id="canvas01" label="pyAIR Demo" width="100%" height="100%" styleName="Canvas01">
+						<mx:VBox id="vbox01" enabled="false" width="100%" height="100%">
+							<mx:HBox width="100%" horizontalAlign="center">
+								<mx:Button id="btnExecuteCode" label="Get Python Version" toolTip="Click this button to get the Python version." click="onClickGetPythonVersionButton()"/>
+							</mx:HBox>
+							<mx:TextArea id="pythonCode" editable="false" width="100%" height="100%" toolTip="Responses from the Python Server goes here." creationComplete="onCreationCompletePythonCode()"/>
+						</mx:VBox>
+					</mx:Canvas>
+				</mx:ViewStack>
+			</mx:VBox>
+		</mx:TitleWindow>
+		<mx:Panel id="socketsManagerPanel" width="100%" height="0" headerHeight="0" visible="false">
+			<mx:VBox width="100%" verticalAlign="top">
+				<socketViews:SocketConnectionManager id="socketsManager" label="Debug View" width="100%" height="100%" creationComplete="onCreationCompleteSocketsManager()"/>
+			</mx:VBox>
+		</mx:Panel>
+	</mx:VBox>
+</mx:WindowedApplication>

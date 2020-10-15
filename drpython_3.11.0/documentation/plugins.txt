@@ -1,0 +1,758 @@
+================
+ Plugins
+================
+
+.. _Help: help.html
+
+Back to Help_
+
+.. _Top:
+
+.. contents::
+
+Plugins provide a method of adding functionality to DrPython.
+
+Installing a Plugin
+====================
+
+Note:
+
+- Plugins are not loaded on install.
+- Some plugins cannot be indexed. They can only be loaded at program startup.
+
+You have two options for installing a plugin. 
+
+Use the Wizard
+---------------
+
+Select Install Plugin from the Configure Plugins Menu
+(Under Options). You can either download from a mirror,
+or select a downloaded plugin to install from local media.
+
+When installing, you will be asked to select which plugins 
+are:
+
+- **Loaded By Default** (These plugins will be loaded at 
+  startup. They are placed in the default index [default.idx].)
+- **Loaded From Index** (If supported (only supported plugins
+  will be listed here), these plugins are indexed. You can 
+  then select them from the options submenu "Load Plugin(s)
+  From Index".)
+
+Install From Py
+----------------
+
+If you are making your own plugin, or have the plugin files
+availible in unzipped format, simply locate the main plugin
+file (``PluginName.py``), and DrPython will do the rest. 
+
+Configuring a Plugin
+=====================
+
+You can (via Options:Configure Plugins) edit the Plugin 
+Source, or Create/Edit/Delete Index Files, which are simply
+lists of plugins to load when activated.
+
+You can edit Plugin Preferences via the Plugin Preferences
+menu.
+
+You can edit shortcuts or add items to the pop up menu or
+toolbar via the standard dialogs, for all plugins which 
+support each feature.
+
+All changes to a plugin's source take effect the next time 
+DrPython loads. Shortcuts, Preferences, etc are either 
+immediate, or effective upon reload depending on the plugin.
+
+If a plugin is not loaded, you can still edit shortcuts and
+the pop up menu, but you will be unable to access the plugin
+functions unless the plugin is loaded. 
+
+Uninstalling a Plugin
+======================
+
+Simply fire up the Uninstall Wizard.
+
+Creating a Plugin
+==================
+
+NOTE: If you write your own plugin, please note that you can
+access the entire DrPython application (via the DrFrame 
+instance). This means a plugin can make stuff not work right,
+or can access an internal function that may be changed in a 
+future release. If you are adding a new component (such as a
+new menu item, and a new dialog), you should be fine.
+
+Naming Convention
+------------------
+
+If you want to distribute your plugin named *PluginName*,
+make sure that:
+
+1. All needed files are in a zip file: 
+   *PluginName*-*Version*.zip
+2. The main plugin file is named: *PluginName*.py
+3. The install script, if any, is named *PluginName*.py.install
+4. The index file, if any, is named: *PluginName*.idx
+
+The first thing you need to do is import the relevant 
+wxWidgets modules (usually just "wx").
+
+.. code-block:: Python
+
+  import wx
+  
+Next, you need to define the "Plugin" function.
+
+.. code-block:: Python
+
+  def Plugin(DrFrame):
+
+DrFrame is the variable for the DrFrame in the DrPython 
+program. It is the same variable as in DrScript.
+
+Now you can add something to the interface simply by using the
+underlying code in DrPython. To bind a function to an event,
+there are two ways. Let's take a look at the following code. 
+
+.. code-block:: Python
+
+  #Example Plugin
+
+  import wx
+
+  def Plugin(DrFrame):
+
+      idum = DrFrame.GetNewId()
+
+      DrFrame.viewmenu.Append(idum, "Lookit!"," I said Lookit!")
+
+      def exampleFunction(event):
+          DrFrame.ShowPrompt()
+          DrFrame.txtPrompt.SetText("I'm looking.... Now what?")
+
+      DrFrame.Bind(wx.EVT_MENU, exampleFunction, id=idum)
+
+      DrFrame.AddToPopUpMenu("Lookit!", exampleFunction, 0)
+
+      DrFrame.AddSeparatorToPopUpMenu(1)
+
+What this code does is the following. It adds an item to 
+the viewmenu (you can grab the menu names by looking in the
+DrPython source: ``drpython.py``). 
+DrFrame.GetNewId() makes sure a unique id number is 
+returned. (You only need an id number if the wx Component 
+you are adding requires one. You need one for menus).
+
+The second step to adding a menu is to use the DrFrame
+function. There are two necessary steps. The first is to 
+define a function. If this function is going to access 
+DrFrame, it must be defined within the Plugin function 
+(which is only called once, when the plugin is loaded).
+
+The function you add must take one argument, ``event``.
+You can name them whatever you want. For example, 
+``MenuEvent`` the second will hold the wx Menu Event.
+
+Next, you must use the wxPython method Bind() to bind
+that function to the component you want. Consult the 
+wxPython documentation for usage. Here is a brief summary 
+of Bind().
+
+| ``wxPythonWidget.Bind(wx.EVT_EVENTTYPE, Function, id=IdNumber)``
+| The idNumber argument is optional (recommended if the 
+  eventtype in question allows it, check the wxWidgets 
+  documentation for that info). ``wx.EVT_EVENTTYPE``
+  is the event type (wxWidgets documentation for a list).
+  Function is the function you are binding to the widget. 
+  
+Keyboard Shortcuts
+-------------------
+
+To Tell DrPython to let a user access a function from 
+keyboard shortcuts, the pop up menu, or the toolbar, you 
+have several options. You can specify each separately 
+(or choose only one or two methods), or you can specify all 
+at once.
+
+.. code-block:: Python
+
+  DrFrame.AddPluginFunction(NameOfTheCurrentPlugin, FunctionLabel, FunctionYouWantToAdd)
+
+Here is a brief code example.
+
+.. code-block:: Python
+
+  DrFrame.AddPluginShortcutFunction("SearchInFiles", "Find In Files", OnFindInFiles)
+
+This will let the user add the function OnFindInFiles to 
+keyboard shortcuts, the pop up menu, or the toolbar.
+
+For more info on what this means for each method, see below.
+
+To add a keyboard shortcut, you have two options. You can 
+simply use "AddKeyEvent". It takes the following arguments.
+
+.. code-block:: Python
+
+  DrFrame.AddKeyEvent(FunctionYouWantToAdd, Keycode, Control, Shift, Alt, Meta)
+
+The default for all modifier keys (Control, Shift, Alt, Meta) is 0 (do not use).
+
+Keycodes can be tricky. For both lowercase and uppercase, 
+use the Python function ``ord()`` plus the uppercase letter. 
+Add Shift=1 if you want to use uppercase.
+
+**Target**: Uppercase 'A'
+
+.. code-block:: Python
+
+  DrFrame.AddKeyEvent(FunctionYouWantToAdd, ord('A'), 0, 1)
+
+**Target**: Lowercase 'a'
+
+.. code-block:: Python
+
+  DrFrame.AddKeyEvent(FunctionYouWantToAdd, ord('A'))
+
+This will make the shortcut set in stone.
+
+If you want to let the user configure the shortcut:
+
+.. code-block:: Python
+
+  DrFrame.AddPluginShortcutFunction(NameOfTheCurrentPlugin, FunctionLabel, FunctionYouWantToAdd)
+
+For example:
+
+.. code-block:: Python
+
+  #Example Plugin
+  #This file is called "examplenumber2.py"
+
+  import wx
+
+  def Plugin(DrFrame):
+
+      idum = DrFrame.GetNewId()
+
+      DrFrame.viewmenu.Append(idum, "Lookit!", " I said Lookit!")
+
+      def exampleFunction(event):
+          DrFrame.ShowMessage("I'm Looking Already!", "Result:")
+
+      DrFrame.Bind(wx.EVT_MENU, exampleFunction, id=idum)
+
+      DrFrame.AddPluginShortcutFunction("examplenumber2", "Example Function", exampleFunction)
+
+Now, you can open the customize shortcuts dialog, and select 
+the "examplenumber2" plugin, to set the shortcut for the 
+function "exampleFunction" you just added.
+
+Note the use of the ShowMessage function.
+
+Show message calls the drScrolledMessageDialog. 
+DrFrame.ShowMessage(message, title) The 
+drScrolledMessageDialog automatically displays a traceback if
+one exists. 
+
+Pop up menu
+------------
+
+To allow the user to add to the pop up menu, use
+``AddPluginPopUpMenuFunction``.
+
+.. code-block:: Python
+
+  AddPluginPopUpMenuFunction(NameOfTheCurrentPlugin, FunctionLabel, FunctionYouWantToAdd)
+
+The NameOfTheCurrentPlugin is straightforward.
+
+This will allow the user to, via the PopUpMenu Dialog, add 
+a Plugin Function to the PopUpMenu (with the label 
+*FunctionLabel*).
+
+Notes: If you uninstall the plugin, you have to manually 
+remove the item from the PopUpMenu list via the PopUpMenu 
+Dialog.
+
+Each Plugin Item on the PopUpMenu is only loaded if that 
+plugin is loaded. So if the plugin is loaded via index, 
+when you load the plugin, the relevant item will show up on 
+the PopUpMenu. Even if the plugin is not loaded, the item is
+on the PopUpMenu List.
+
+Toolbar
+--------
+
+To allow the user to add to the ToolBar, use 
+``AddPluginToolBarFunction``.
+
+.. code-block:: Python
+
+  AddPluginToolBarFunction(FunctionLabel, FunctionYouWantToAdd)
+
+This will allow the user to, via the Customize ToolBar Dialog,
+add a Plugin Function to the ToolBar (with the label 
+*FunctionLabel*).
+
+Notes: If you uninstall the plugin, you have to manually 
+remove the item from the ToolBar list via the ToolBar Dialog.
+
+Each Plugin Item on the ToolBar will be loaded no matter what,
+so be sure to remove the entry if you remove the plugin (if 
+not, nothing will happen when you click the button.)
+
+To set icons, you have two options. One is to write an 
+install script that installs the icons onto the user's 
+harddrive, and then adds entries for each icon into the 
+custom icon data file in the user's DrPython preferences 
+directory.
+
+The other is to let the user set the icons manually.
+
+To add entries, you can either do so manually, or use the 
+following built in functions. 
+
+.. code-block:: Python
+
+  AddPluginIcon(Label, LocationOf16x16File, LocationOf24x24File)
+
+.. code-block:: Python
+
+  RemovePluginIcon(Label)
+  
+Here is an example.
+
+.. code-block:: Python
+
+  plugindir = DrFrame.GetPluginsDirectory()
+  DrFrame.AddPluginIcon("Find In Files", "", plugindir + "/bitmaps/24/Find In Files.png")
+  
+Assuming you have copied the icon file to the proper location
+(in this case, in the plugin directory 
+``plugindir/bitmaps/24/``), this will add an entry into the 
+user's custom icon data file, so that if they have their 
+toolbar set to 24x24, and they add the Find In Files item, 
+it will display the "Find In Files.png" icon. This function 
+is best called in a ``.install`` script.
+
+``RemovePluginIcon`` is best called in the ``Uninstall``
+function, and removes the entry in question from the custom 
+icon data file.
+
+.. code-block:: Python
+
+  DrFrame.RemovePluginIcon("Find In Files")
+
+Note: ``AddPluginIcon`` will overwrite any entries in the 
+custom icon data file with the same label.
+
+Preferences
+------------
+
+If the you want to set and load preferences in your plugin,
+all you have to do to edit those preferences is define a
+function.
+
+.. code-block:: Python
+
+  def OnPreferences(DrFrame):
+
+This function will be called (with DrFrame as the argument)
+from the Options menu. You can make your own Preferences 
+Dialog, and have it launched from this function.
+
+About Dialog
+-------------
+
+If you want to have an About dialog, or a Help dialog, use:
+
+.. code-block:: Python
+
+  def OnAbout(DrFrame):
+
+.. code-block:: Python
+
+  def OnHelp(DrFrame):
+
+This function will be called (with DrFrame as the argument) 
+from the Help menu. You can make your own Dialog, and have it
+launched from this function. 
+
+DrFrame Events
+---------------
+
+DrPython defines a few wxPython events you can use in your
+plugins.  They are:
+
+EVT_DRPY_DOCUMENT_CHANGED
+  (Posted whenever the active document is changed).
+
+EVT_DRPY_FILE_OPENING
+  (Posted at the start of DrFrame.OpenFile).
+
+EVT_DRPY_FILE_OPENED
+  (Posted at the end of DrFrame.OpenFile).
+
+EVT_DRPY_FILE_SAVING
+  (Posted at the start of DrFrame.SaveFile).
+
+EVT_DRPY_FILE_SAVED
+  (Posted at the end of DrFrame.SaveFile).
+
+EVT_DRPY_FILE_CLOSING
+  (Posted at the start of DrFrame.OnClose).
+
+EVT_DRPY_FILE_CLOSED
+  (Posted at the end of DrFrame.OnClose).
+
+EVT_DRPY_NEW
+  (Posted at the end of DrFrame.OnNew).
+
+EVT_DRPY_NEW_PROMPT
+  (Posted at the end of DrFrame.OnNewPrompt).
+
+Usage is as below:
+
+.. code-block:: Python
+
+  DrFrame.PBind(DrFrame.EVT_DRPY_FILE_OPENED, CustomFunction)
+
+That's it.  Just bind the event to DrFrame.  By default, 
+no argument is passed to the function.  (There is no need to
+call event.Skip()).
+
+You can change this as follows:
+
+.. code-block:: Python
+
+  DrFrame.PBind(DrFrame.EVT_DRPY_FILE_OPENED, CustomFunction, None)
+
+This will result in CustomFunction(None).
+
+(The last argument is a tuple of arguments to pass to the
+function.)
+
+**IMPORTANT:  You MUST Unbind the event if the function is a
+member of a deleted object.**
+
+For example:
+If you have:
+
+.. code-block:: Python
+
+  DrFrame.PBind(DrFrame.EVT_DRPY_NEW, MyPanel.OnButtonPress, None)
+
+and you want to call
+
+.. code-block:: Python
+
+  DrFrame.ClosePanel(MyPanel.Position, MyPanel.Index)
+
+You MUST call ``DrFrame.PUnbind((DrFrame.EVT_DRPY_NEW, MyPanel.OnButtonPress)``
+first.
+
+DrFrame.PUnbind takes the same arguments as PBind, except you
+do not need the optional arguments bit.
+
+**Note: If a plugin runs code in OnNew, it is highly 
+recommended that the plugin is loaded by default, rather than
+via an index. Otherwise things can be a bit complicated if 
+multuiple documents are open when the plugin is loaded 
+(you can always handle this in your plugin code, however).**
+
+Adding to Panels
+-----------------
+
+Want to write a panel to access from the main window? Here
+is what the code looks like for the creation of a Panel.
+
+.. code-block:: Python
+
+  if self.SourceBrowser is None:
+      target, i = self.mainpanel.GetTargetNotebookPage(self.prefs.sourcebrowserpanel, "Source Browser")
+      self.SourceBrowser = drSourceBrowserPanel(target, -1, self.prefs.sourcebrowserpanel, i)
+      target.SetPanel(self.SourceBrowser)
+      self.mainpanel.ShowPanel(self.prefs.sourcebrowserpanel, i)
+  else:
+      if not self.mainpanel.IsVisible(self.SourceBrowser.Position, self.SourceBrowser.Index):
+          self.SourceBrowser.Browse()
+      self.mainpanel.TogglePanel(self.SourceBrowser.Position, self.SourceBrowser.Index)
+
+So there are four steps to creating a side panel:
+
+Get the Target Notebook Page itself, and its index,
+
+- Create the Panel.
+- Set the Notebook page's Panel
+- Tell DrPython to Show the Panel.
+
+There are several important things to note:
+
+1. ``GetTargetNotebookPage`` takes two arguments, the
+   position (0 = Left, 1 = Right), and (optionally) the tab
+   text for the target notebook.
+
+2. ``GetTargetNotebookPage`` returns the page itself 
+   (the parent of the Panel you create), and the index. 
+   The Index and the Position (Left, Right) are how you 
+   access that specific panel. In this case, the last two 
+   arguments to ``drSourceBrowserPanel`` are the position and 
+   the index.
+
+3. You need to call the target sash window's .SetPanel method
+   to ensure the Panel you create is sized properly.
+
+4. You need to call ``ShowPanel`` after newly creating
+   a panel.
+
+5. You have two options for toggling a panel.
+
+   A. Simply call TogglePanel(Position, Index).
+   
+   B. Call ``ShowPanel(Position, Index, ShowThePanel=True)``.
+      (ShowThePanel is a boolean, enabled by default.).
+      
+   If you choose B, you can use ``IsVisible(Position, Index)``
+   to determine if the Panel is showing. In this case, if the
+   panel is going to be shown, DrPython refreshes the Source
+   Browser.
+
+Here is the code for destroying the Panel.
+
+.. code-block:: Python
+
+  def OnbtnClose(self, event):
+      self.parent.PUnbind(self.parent.EVT_DRPY_DOCUMENT_CHANGED, self.OnbtnRefresh)
+      self.parent.txtDocument.SourceBrowser = None
+      self.panelparent.ClosePanel(self.Position, self.Index)
+
+``ClosePanel(Position, Index)`` will destroy the panel 
+completely, so any code after it will cause issues. This makes
+calling ``ClosePanel`` from code that gets called more than
+one (like ``wx.EVT_SIZE``) a bad idea.
+
+Also note that the SourceBrowser variable is set to None here.
+Closing a Panel does not automatically do this, so if you are
+using the value of variable holding the Panel in your code,
+be sure to set it to None before destroying the Panel itself.
+
+The full code can be found in the SourceBrowser code in the
+DrPython Core. 
+
+Install/Uninstall Scripts
+==========================
+
+DrPython provides a method for automatic install script
+execution.
+
+If you have a plugin named ``example.py``, a file named 
+``example.py.install`` in the same directory will be 
+automatically run on install.
+
+Install Script
+---------------
+
+An install script is especially useful if you have files 
+you want to install to a specific location on the user's 
+hard drive (eg, bitmaps for the toolbar).
+
+Here is an example.
+
+.. code-block:: Python
+
+  #Example Plugin Install Script
+  #This file is called "example.py.install"
+
+  import wx, shutil, os, os.path
+
+  def Install(DrFrame):
+      d = wx.MessageDialog(DrFrame, "This will install some bitmaps for the Example plugin.\nAre you sure you want to proceed?",
+          "Install Search In Files",
+          wx.YES_NO | wx.ICON_QUESTION)
+      answer = d.ShowModal()
+      d.Destroy()
+      if (answer == wx.ID_YES):
+          cwd = os.getcwd()
+          plugindir = DrFrame.GetPluginsDirectory()
+          if not os.path.exists(plugindir + "/bitmaps"):
+              os.mkdir(plugindir + "/bitmaps")
+          if not os.path.exists(plugindir + "/bitmaps/16"):
+              os.mkdir(plugindir + "/bitmaps/16")
+          if not os.path.exists(plugindir + "/bitmaps/24"):
+              os.mkdir(plugindir + "/bitmaps/24")
+
+          shutil.copyfile(cwd + "/bitmaps/16/Example.png", plugindir + "/bitmaps/16/Example.png")
+          shutil.copyfile(cwd + "/bitmaps/24/Example.png", plugindir + "/bitmaps/24/Example.png")
+
+          DrFrame.AddPluginIcon("Example", plugindir + "/bitmaps/16/Example.png", plugindir + "/bitmaps/24/Example.png")
+
+      return True
+    
+Note the return statement. This determines the behaviour 
+after your plugin install script exits. If you return ``True``,
+DrPython will continue to install the plugin. This is good 
+if you just want to install some bitmaps, but otherwise want 
+DrPython to handle the rest.
+
+Returning ``False`` will tell DrPython to halt the 
+installation. This is good if you want to let the user cancel,
+or if you want to manually install the plugin yourself. 
+Also note ``GetPluginsDirectory()``. This returns the user 
+directory where plugins are stored once they are installed.
+
+Uninstall Script
+-----------------
+
+If you want specific behaviour on uninstall, write a method 
+in your plugin file called ``UnInstall``. 
+
+.. code-block:: Python
+
+  #Example Plugin
+
+  import wx, os, os.path
+
+  def UnInstall(DrFrame):
+      plugindir = DrFrame.GetPluginsDirectory()
+      if os.path.exists(plugindir + "/bitmaps/16/Example.png"):
+          os.remove(plugindir + "/bitmaps/16/Example.png")
+      if os.path.exists(plugindir + "/bitmaps/24/Example.png"):
+          os.remove(plugindir + "/bitmaps/24/Example.png")
+
+      DrFrame.RemovePluginIcon("Example")
+
+      return True
+
+  def Plugin(DrFrame):
+      yadda yadda yadda...
+
+Again, note the return. ``UnInstall`` must take a DrFrame as
+the only argument. If this function returns ``True``,
+DrPython will continue with the rest of the uninstall process.
+If the function returns ``False``, DrPython will halt the 
+uninstall.
+
+Useful Methods
+===============
+
+Here are a few useful methods, and what they do:
+(They are all members of DrFrame)
+
+.. code-block:: Python
+
+  Ask(question, title='DrPython')
+
+Asks a yes or no question, with an optional title.
+Returns True if the user selects 'Yes',
+False otherwise.
+
+.. code-block:: Python
+
+  Execute(command, statustext='')
+
+Executes a raw command in the prompt, displaying optional
+statustext.
+
+.. code-block:: Python
+
+  ExecutePython()
+
+Runs the python interpreter in the prompt.
+
+.. code-block:: Python
+
+  ExecuteWithPython(command, statustext='', pythonargs='')
+
+Executes a command as an argument to python in the prompt, 
+displaying optional statustext, and using optional additional
+arguments to the python interpreter (in addition to those set
+in preferences).
+
+.. code-block:: Python
+
+  GetActiveSTC()
+
+Returns the active Styled Text Control (Document or Prompt).
+
+.. code-block:: Python
+
+  GetAlreadyOpen()
+
+Returns a tuple of the filenames of each open Document.
+
+.. code-block:: Python
+
+  GetNewId()
+
+Returns a new wx Id, making sure the value is not anywhere 
+near constants used by drpython.
+
+.. code-block:: Python
+
+  GetPluginsDirectory()
+
+Returns the directory where the user's plugins are stored.
+
+.. code-block:: Python
+
+  GetPluginMenuLabel(plugin, functionlabel, menulabel='')
+
+You must first add the shortcuts with 
+(DrFrame.AddPluginFunction or 
+DrFrame.AddPluginShortcutFunction). Then use 
+DrFrame.LoadShortcuts(plugin). When this function is called,
+it will return a properly formatted menu label that includes 
+the corresponding shortcut.
+
+'plugin' is the name of the plugin.  'functionlabel' is the label given in 'AddPluginFunction'.
+'menulabel' (optional) lets you specify a specific label to append the shortcut to
+(like adding '...' or and Ampersand).
+
+.. code-block:: Python
+
+  GetPreference(pref, key=None)
+
+Returns the value of preference 'pref', using the optional 
+key 'key'. pref should be a string. key should be either a
+string or an integer as appropriate.
+
+.. code-block:: Python
+
+  GetPreferencesDirectory()
+
+Returns the directory where the user's preferences, shortcuts,
+pop up menu, toolbar settings, etc, are stored.
+
+.. code-block:: Python
+
+  LoadPluginShortcuts(plugin)
+
+If this is called within a plugin, it will load the shortcuts
+(useful if you need to get the shortcuts to display in the
+menu).
+
+Otherwise, it is automatically called during plugin 
+initialization.
+
+It can only be called once for each plugin.
+
+.. code-block:: Python
+
+  ShowMessage(msg, title='DrPython')
+
+Shows a message, with an optional title.  If there are any 
+tracebacks to be had, shows them too.
+
+.. code-block:: Python
+
+  ShowPrompt(Visible=True)
+
+Either shows or hides the prompt.
+
+.. code-block:: Python
+
+  ViewURLInBrowser(url)
+
+Shows the url in the default browser specified in preferences.

@@ -1,0 +1,359 @@
+{% extends 'base2.html' %}
+{% block title %}Entrance{% endblock %}
+
+{% block extra-head %}
+<style type="text/css">
+<!--
+body {
+	font-size: 20px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+span {
+	color: cyan;
+}
+
+#bd h1 {
+	color: cyan;
+}
+
+#bd p {
+	color:yellow;
+}
+
+.important span {
+	color: red;
+	font-weight: bold;
+}
+
+.fineprint { 
+font-size: 11px; 
+color: red; 
+}
+
+#bd a:link { color: lime; }
+
+.extraHeight { height: 50px; }
+
+-->
+</style>
+{% endblock %}
+
+{% block js %}
+<script language="javascript" type="text/javascript">
+include_js('/static/js/isAlpha.js',function(){});
+include_js('/static/js/isNumeric.js',function(){});
+include_js('/static/js/isAlphaNumeric.js',function(){});
+include_js('/static/js/milliseconds.js',function(){});
+include_js('/static/js/yyyy.js',function(){});
+include_js('/static/js/removeWhiteSpace.js',function(){});
+
+var __debug_buffer = [];
+function debugOut(obj,str) {
+    if (window.location.toString().indexOf('127.0.0.1') > -1) {
+	var t = milliseconds();
+	__debug_buffer.splice(0,0,t+' :: '+str);
+	if (__debug_buffer.length > 1000) {
+	    __debug_buffer.pop();
+	}
+	try { obj.html(__debug_buffer.join('<BR/>')) } catch (e) {}
+    }
+}
+</script>
+{% endblock %}
+
+{% block document-ready %}
+var __validation = {};
+var __is_usa = false;
+$('#toolbar-account').show();
+$('#country_code').change(function () {
+	var selectedIndex = $(this).attr('selectedIndex');
+	var options = $(this).attr('options');
+	__is_usa = (options[selectedIndex].text == 'United States');
+	if (__is_usa) {
+	    $('#location_id').mask("99999");
+	} else {
+	    $('#location_id').unmask();
+	}
+    })
+    .change();
+var _yy = yyyy();
+var _yyMax = (_yy-18);
+var _r = (_yy-18-90)+':'+_yyMax;
+$("#birthdate").datepicker({ 
+    changeYear: true,
+    autoSize: true,
+    changeMonth: true,
+    dateFormat: 'mm/dd/yy',
+    yearRange:_r, 
+    closeText: 'X',
+    onSelect: function(selectedDate) {
+	doValidateBirthDateNow();
+    },
+    onClose: function(dateText, inst) {
+	doValidateBirthDateNow();
+    }
+});
+$("#birthdate").attr('readonly',true);
+$("#birthdate").val('');
+function doValidateBirthDateNow() {
+    __validation['birthdate'] = null;
+    var v = $("#birthdate").val();
+    if (v.length > 0) {
+	$("#birthdate").css({
+	    "background-color": 'lime'
+	});
+	$("#validBirthDate").attr('src','/static/js/jquery/validateemail/validYes.png');
+    } else {
+	__validation['birthdate'] = true;
+	$("#birthdate").css({
+	    "background-color": '#F30'
+	});
+	$("#validBirthDate").attr('src','/static/js/jquery/validateemail/validNo.png');
+    }
+    doValidationHandling();
+}
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+    return pattern.test(emailAddress);
+}
+function doValidateEmailNow() {
+    __validation['email'] = null;
+    var v = $("#email").val();
+    debugOut($("#debugger"),'(doValidateEmailNow.1) v='+v);
+    var b = isValidEmailAddress(v);
+    debugOut($("#debugger"),'(doValidateEmailNow.2) b='+b);
+    if(b) {
+	$("#email").css({
+	    "background-color": 'lime'
+	});
+	$("#validEmail").attr('src','/static/js/jquery/validateemail/validYes.png');
+    } else {
+	__validation['email'] = true;
+	$("#email").css({
+	    "background-color": '#F30'
+	});
+	$("#validEmail").attr('src','/static/js/jquery/validateemail/validNo.png');
+    }
+    doValidationHandling();
+}
+$("#email").keyup(function(){
+    doValidateEmailNow();
+});
+$("#email").blur(function(){
+    doValidateEmailNow();
+});
+function normalize_zipCode(zip) {
+    if (__is_usa) {
+	debugOut($("#debugger"),'(normalize_zipCode.1) zip='+zip);
+	zip = zip.alphaNumeric();
+	debugOut($("#debugger"),'(normalize_zipCode.2) zip='+zip);
+    }
+    return zip
+}
+function doValidateZipCode() {
+    var t = milliseconds();
+    var v = $('#location_id').val();
+    debugOut($("#debugger"),'(doValidateZipCode.1) v='+v+', v.length='+v.length);
+    __validation['location_id'] = null;
+    v = normalize_zipCode(v);
+    debugOut($("#debugger"),'(doValidateZipCode.2) v='+v+', v.length='+v.length);
+    if(v.length > 0) {
+	$("#location_id").css({
+	    "background-color": 'lime'
+	});
+	$("#validZipCode").attr('src','/static/js/jquery/validateemail/validYes.png');
+    } else {
+	__validation['location_id'] = true;
+	$("#location_id").css({
+	    "background-color": '#F30'
+	});
+	$("#validZipCode").attr('src','/static/js/jquery/validateemail/validNo.png');
+    }
+    doValidationHandling();
+}
+$('#location_id').keyup(function(){
+    doValidateZipCode();
+});
+$('#location_id').blur(function(){
+    doValidateZipCode();
+    var val = $(this).val();
+    $(this).everyTime(250,function(i) {
+	var v = $('#location_id').val();
+	debugOut($("#debugger"),'(location_id.everyTime.1) i='+i+', val='+val+', v='+v);
+	if (val != v) {
+	    $('#location_id').stopTime();
+	    debugOut($("#debugger"),'(location_id.everyTime.2) i='+i);
+	    doValidateZipCode();
+	}
+	if ( (i == 20) || ( (val.length == 0) && (v.length == 0) ) ) {
+	    debugOut($("#debugger"),'(location_id.everyTime.3) i='+i);
+	    $('#location_id').stopTime();
+	}
+    });
+});
+function doValidateDisplayName() {
+    var t = milliseconds();
+    var v = $('#username').val().removeWhiteSpace;
+    debugOut($("#debugger"),'(doValidateDisplayName.1) v='+v+', v.length='+v.length);
+    __validation['username'] = null;
+    if(v.length > 5) {
+	$("#username").css({
+	    "background-color": 'lime'
+	});
+	$("#validDisplayName").attr('src','/static/js/jquery/validateemail/validYes.png');
+    } else {
+	__validation['username'] = true;
+	$("#username").css({
+	    "background-color": '#F30'
+	});
+	$("#validDisplayName").attr('src','/static/js/jquery/validateemail/validNo.png');
+    }
+    doValidationHandling();
+}
+$('#username').keyup(function(){
+    doValidateDisplayName();
+});
+$('#username').blur(function(){
+    doValidateDisplayName();
+    var val = $(this).val();
+    $(this).everyTime(250,function(i) {
+	var v = $('#username').val();
+	debugOut($("#debugger"),'(username.everyTime.1) i='+i+', val='+val+', v='+v);
+	if (val != v) {
+	    $('#username').stopTime();
+	    debugOut($("#debugger"),'(username.everyTime.2) i='+i);
+	    doValidateDisplayName();
+	}
+	if ( (i == 20) || ( (val.length == 0) && (v.length == 0) ) ) {
+	    debugOut($("#debugger"),'(username.everyTime.3) i='+i);
+	    $('#username').stopTime();
+	}
+    });
+});
+function doValidateSeekingNow() {
+    var m = $("#seeking-men").attr('checked');
+    var w = $("#seeking-women").attr('checked');
+    if ((!m) && (!w)) {
+	__validation['seeking'] = true;
+	$("#validSeeking").attr('src','/static/js/jquery/validateemail/validNo.png');
+    } else if (m || w) {
+	__validation['seeking'] = null;
+	$("#validSeeking").attr('src','/static/js/jquery/validateemail/validYes.png');
+    }
+    doValidationHandling();
+}
+function doAllValidations() {
+    doValidateSeekingNow();
+    doValidateEmailNow();
+    doValidateZipCode();
+    doValidateBirthDateNow();
+    doValidateDisplayName();
+}
+$("#seeking-men").keyup(function(){
+    doAllValidations();
+});
+$("#seeking-men").click(function(){
+    doAllValidations();
+});
+$("#seeking-women").keyup(function(){
+    doAllValidations();
+});
+$("#seeking-women").click(function(){
+    doAllValidations();
+});
+function doValidationHandling() {
+    var n;
+    var cnt = 0;
+    $("#btnRegister").removeAttr("disabled");
+    for (n in __validation) {
+	debugOut($("#debugger"),'(doValidationHandling.1) n='+n+', __validation['+n+']='+__validation[n]);
+	if (__validation[n]) {
+	    cnt++;
+	}
+    }
+    debugOut($("#debugger"),'(doValidationHandling.2) cnt='+cnt);
+    if (cnt > 0) {
+	$("#btnRegister").attr("disabled","disabled");
+    }
+}
+doAllValidations();
+doValidationHandling();
+{% endblock %}
+
+{% block onunload %}
+//alert('onUnload !');
+{% endblock %}
+
+{% block container %}
+<form name="registrationForm" action="/register-user/" enctype="application/x-www-form-urlencoded" method="post">
+<table id="register-user-table" width="550px" border="0">
+    <tr class="extraHeight">
+    	<td align="center" colspan="3"><span><a href="/login.html" target="_top">Login</a> or Register in One Easy Step!</span></td>
+    </tr>
+	<tr>
+    	<td align="right"><span><NOBR>I am a:</NOBR></span></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    	<td align="left" width="*"><SELECT NAME="gender">
+<OPTION VALUE="MAN">Man
+<OPTION VALUE="WOMAN">Woman
+</SELECT></td>
+    </tr>
+    <tr class="extraHeight">
+    	<td align="right"><span><NOBR>Seeking:</NOBR></span></td>
+        <td></td>
+    	<td align="left" width="*"><INPUT TYPE="checkbox" id="seeking-men" NAME="seeking" VALUE="MAN">&nbsp;<span>Men</span>&nbsp;&nbsp;<INPUT TYPE="checkbox" id="seeking-women" NAME="seeking" VALUE="WOMAN">&nbsp;<span>Women</span>&nbsp;&nbsp;<img id="validSeeking"/></td>
+    </tr>
+    <tr class="extraHeight">
+    	<td align="right"><span><NOBR>Country:</NOBR></span></td>
+        <td></td>
+    	<td align="left" width="*">__country_code__</td>
+    </tr>
+    <tr class="extraHeight">
+    	<td align="right"><span><NOBR>Zip Code:</NOBR></span></td>
+        <td></td>
+    	<td align="left" width="*">
+        	<INPUT TYPE="text" id="location_id" NAME="location_id">&nbsp;&nbsp;<img id="validZipCode"/>
+        </td>
+    </tr>
+    <tr class="extraHeight">
+    	<td align="right"><span><NOBR>Birth Date:</NOBR></span></td>
+        <td></td>
+    	<td align="left" width="*"><input type="text" id="birthdate" name="birthdate">&nbsp;&nbsp;<img id="validBirthDate"/></td>
+    </tr>
+    <tr class="extraHeight">
+    	<td align="right"><span><NOBR>Email:</NOBR></span></td>
+        <td></td>
+    	<td align="left" width="*" class="important"><NOBR>
+<INPUT TYPE="text" id="email" NAME="email">&nbsp;&nbsp;<img id="validEmail"/>&nbsp;&nbsp;
+<span class="fineprint">This is where your password will be sent and will not be shared with anyone without your permission.</span></NOBR>
+        </td>
+    </tr>
+    <tr class="extraHeight">
+    	<td align="right"><span><NOBR>&nbsp;&nbsp;Display Name:</NOBR></span></td>
+        <td></td>
+    	<td align="left" width="*" class="important"><NOBR>
+<INPUT TYPE="text" id="username" NAME="username">&nbsp;&nbsp;<img id="validDisplayName"/>&nbsp;&nbsp;
+<span class="fineprint">This appears on your Profile and must be composed of more than 5 non-whitespace characters.</span></NOBR>
+        </td>
+    </tr>
+    <tr class="extraHeight">
+    	<td align="right"></td>
+        <td></td>
+    	<td align="left" width="*">
+  <p class="text">By submitting this form you certify you are 18 years old or older for your specific location based on your local laws and regulations, you agree to our&nbsp;<a
+  href="/terms.html" target="_blank">terms &amp; conditions</a>,&nbsp;<a
+  href="/privacy.html" target="_blank">privacy policy</a> 
+  and to receive email account updates, your password and special offers  targeted to your interests, sent to you by DoFriends.Com.</p>
+        </td>
+    </tr>
+    <tr class="extraHeight">
+    	<td align="right"></td>
+        <td></td>
+    	<td align="left" width="*"><NOBR><input id="btnRegister" type="button" value="Register"/>&nbsp;&nbsp;<input id="btnLogin" type="button" value="Login"/></NOBR></td>
+    </tr>
+</table>
+<input type="hidden" value="{{ uuid }}" />
+</form>
+<div id="debugger"></div>
+{% endblock %}

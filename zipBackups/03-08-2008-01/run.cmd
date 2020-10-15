@@ -1,0 +1,1 @@
+zipBackups --zip=svn.zip --verbose

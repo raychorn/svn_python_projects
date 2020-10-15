@@ -1,0 +1,276 @@
+         138935 function calls (107289 primitive calls) in 0.729 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.026    0.026    0.729    0.729 utils.py:1(<module>)
+        1    0.032    0.032    0.522    0.522 utils.py:26(main_proc)
+        1    0.004    0.004    0.282    0.282 utils.py:72(store_in_bucket_recursive)
+36032/5513    0.240    0.000    0.248    0.000 utils.py:81(merge)
+        1    0.000    0.000    0.199    0.199 _utils.py:1037(readFileFrom)
+        1    0.198    0.198    0.198    0.198 {method 'readlines' of 'file' objects}
+        6    0.003    0.000    0.181    0.030 __init__.py:19(<module>)
+        1    0.018    0.018    0.177    0.177 _utils.py:1(<module>)
+        1    0.015    0.015    0.153    0.153 lists.py:1(<module>)
+        1    0.012    0.012    0.073    0.073 CooperativeClass.py:5(<module>)
+        1    0.030    0.030    0.065    0.065 __init__.py:24(<module>)
+        1    0.023    0.023    0.061    0.061 inspect.py:25(<module>)
+        1    0.011    0.011    0.035    0.035 threading.py:1(<module>)
+     5513    0.025    0.000    0.030    0.000 utils.py:74(packit)
+        1    0.023    0.023    0.024    0.024 collections.py:1(<module>)
+        1    0.011    0.011    0.022    0.022 tokenize.py:23(<module>)
+       17    0.000    0.000    0.016    0.001 re.py:188(compile)
+       17    0.000    0.000    0.016    0.001 re.py:226(_compile)
+       17    0.000    0.000    0.015    0.001 sre_compile.py:496(compile)
+        1    0.013    0.013    0.013    0.013 dis.py:1(<module>)
+        7    0.000    0.000    0.011    0.002 {map}
+       17    0.000    0.000    0.008    0.000 sre_compile.py:481(_code)
+   363/17    0.002    0.000    0.007    0.000 sre_compile.py:33(_compile)
+       17    0.000    0.000    0.007    0.000 sre_parse.py:676(parse)
+   102/17    0.000    0.000    0.007    0.000 sre_parse.py:302(_parse_sub)
+   164/19    0.002    0.000    0.007    0.000 sre_parse.py:380(_parse)
+        1    0.006    0.006    0.006    0.006 {ujson.dumps}
+     5513    0.006    0.000    0.006    0.000 {method 'split' of 'unicode' objects}
+    36042    0.004    0.000    0.004    0.000 {method 'iteritems' of 'dict' objects}
+        1    0.000    0.000    0.004    0.004 platform.py:10(<module>)
+    32443    0.004    0.000    0.004    0.000 {isinstance}
+      147    0.000    0.000    0.004    0.000 sre_compile.py:179(_compile_charset)
+      147    0.002    0.000    0.003    0.000 sre_compile.py:208(_optimize_charset)
+        1    0.003    0.003    0.003    0.003 {ujson.loads}
+        6    0.002    0.000    0.003    0.000 collections.py:282(namedtuple)
+     1090    0.000    0.000    0.002    0.000 sre_parse.py:202(get)
+       17    0.000    0.000    0.001    0.000 sre_compile.py:362(_compile_info)
+     1644    0.001    0.000    0.001    0.000 sre_parse.py:131(__getitem__)
+     1330    0.001    0.000    0.001    0.000 sre_parse.py:183(__next)
+  528/184    0.001    0.000    0.001    0.000 sre_parse.py:141(getwidth)
+        1    0.001    0.001    0.001    0.001 Enum.py:19(<module>)
+       25    0.001    0.000    0.001    0.000 sre_compile.py:259(_mk_bitmap)
+     4755    0.001    0.000    0.001    0.000 {method 'append' of 'list' objects}
+5306/5099    0.001    0.000    0.001    0.000 {len}
+        9    0.000    0.000    0.001    0.000 CooperativeClass.py:12(__init__)
+       52    0.000    0.000    0.001    0.000 {setattr}
+     1006    0.000    0.000    0.001    0.000 sre_parse.py:196(match)
+       52    0.000    0.000    0.001    0.000 CooperativeClass.py:15(__setattr__)
+       40    0.000    0.000    0.000    0.000 CooperativeClass.py:7(second_arg)
+       40    0.000    0.000    0.000    0.000 inspect.py:803(getargspec)
+      167    0.000    0.000    0.000    0.000 sre_compile.py:355(_simple)
+        1    0.000    0.000    0.000    0.000 {open}
+      781    0.000    0.000    0.000    0.000 sre_parse.py:127(__len__)
+      520    0.000    0.000    0.000    0.000 sre_parse.py:139(append)
+        1    0.000    0.000    0.000    0.000 TailRecursive.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 heapq.py:31(<module>)
+        1    0.000    0.000    0.000    0.000 warnings.py:45(filterwarnings)
+        5    0.000    0.000    0.000    0.000 Enum.py:43(__new__)
+        1    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+       40    0.000    0.000    0.000    0.000 inspect.py:743(getargs)
+        1    0.000    0.000    0.000    0.000 opcode.py:5(<module>)
+      816    0.000    0.000    0.000    0.000 {min}
+        3    0.000    0.000    0.000    0.000 lists.py:214(__init__)
+      363    0.000    0.000    0.000    0.000 sre_parse.py:91(__init__)
+        2    0.000    0.000    0.000    0.000 lists.py:234(fromDict)
+       30    0.000    0.000    0.000    0.000 {all}
+      102    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E234E88}
+        1    0.000    0.000    0.000    0.000 Enum.py:181(EnumInstance)
+       97    0.000    0.000    0.000    0.000 sre_parse.py:258(_escape)
+       33    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+       54    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 lists.py:260(asDict)
+        1    0.000    0.000    0.000    0.000 lists.py:55(asDict)
+      244    0.000    0.000    0.000    0.000 collections.py:323(<genexpr>)
+       23    0.000    0.000    0.000    0.000 lists.py:315(__setitem__)
+      448    0.000    0.000    0.000    0.000 {ord}
+        1    0.000    0.000    0.000    0.000 threading.py:1088(__init__)
+        1    0.000    0.000    0.000    0.000 _utils.py:84(hasVyperLogixLibraryLoaded)
+        1    0.000    0.000    0.000    0.000 _utils.py:77(hasVyperLogixLibraryLoadedIn)
+        1    0.000    0.000    0.000    0.000 {method 'close' of 'file' objects}
+      256    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 _utils.py:67(__hasVyperLogixLibraryLoadedIn__)
+       58    0.000    0.000    0.000    0.000 sre_parse.py:226(_class_escape)
+        1    0.000    0.000    0.000    0.000 threading.py:654(__init__)
+       67    0.000    0.000    0.000    0.000 sre_parse.py:73(opengroup)
+       16    0.000    0.000    0.000    0.000 Enum.py:192(__new__)
+       67    0.000    0.000    0.000    0.000 sre_parse.py:84(closegroup)
+       92    0.000    0.000    0.000    0.000 inspect.py:142(isfunction)
+       17    0.000    0.000    0.000    0.000 {_sre.compile}
+        1    0.000    0.000    0.000    0.000 token.py:3(<module>)
+        1    0.000    0.000    0.000    0.000 genericpath.py:15(exists)
+      393    0.000    0.000    0.000    0.000 sre_compile.py:25(_identityfunction)
+       30    0.000    0.000    0.000    0.000 collections.py:349(<genexpr>)
+       17    0.000    0.000    0.000    0.000 sre_parse.py:179(__init__)
+        1    0.000    0.000    0.000    0.000 {nt.stat}
+      167    0.000    0.000    0.000    0.000 sre_parse.py:135(__setitem__)
+        1    0.000    0.000    0.000    0.000 ObjectTypeName.py:38(typeClassName)
+      115    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+      119    0.000    0.000    0.000    0.000 opcode.py:27(def_op)
+        1    0.000    0.000    0.000    0.000 ntpath.py:466(abspath)
+       23    0.000    0.000    0.000    0.000 lists.py:345(has_key)
+        1    0.000    0.000    0.000    0.000 threading.py:539(Event)
+        1    0.000    0.000    0.000    0.000 {eval}
+        1    0.000    0.000    0.000    0.000 threading.py:558(__init__)
+       40    0.000    0.000    0.000    0.000 <string>:8(__new__)
+        2    0.000    0.000    0.000    0.000 threading.py:241(Condition)
+       34    0.000    0.000    0.000    0.000 sre_compile.py:475(isstring)
+       54    0.000    0.000    0.000    0.000 {range}
+       30    0.000    0.000    0.000    0.000 collections.py:347(<genexpr>)
+       40    0.000    0.000    0.000    0.000 inspect.py:67(ismethod)
+        2    0.000    0.000    0.000    0.000 threading.py:259(__init__)
+       67    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+      214    0.000    0.000    0.000    0.000 {method 'isalnum' of 'str' objects}
+       19    0.000    0.000    0.000    0.000 tokenize.py:44(group)
+       40    0.000    0.000    0.000    0.000 inspect.py:209(iscode)
+       69    0.000    0.000    0.000    0.000 lists.py:217(<lambda>)
+       94    0.000    0.000    0.000    0.000 {max}
+        6    0.000    0.000    0.000    0.000 {repr}
+        1    0.000    0.000    0.000    0.000 Enum.py:135(__new__)
+       18    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 ntpath.py:398(normpath)
+        1    0.000    0.000    0.000    0.000 atexit.py:6(<module>)
+       36    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+       52    0.000    0.000    0.000    0.000 {method 'has_key' of 'dict' objects}
+       17    0.000    0.000    0.000    0.000 lists.py:326(__delitem__)
+        1    0.000    0.000    0.000    0.000 threading.py:638(Thread)
+        1    0.000    0.000    0.000    0.000 keyword.py:11(<module>)
+        1    0.000    0.000    0.000    0.000 {dir}
+        1    0.000    0.000    0.000    0.000 lists.py:213(HashedLists)
+        4    0.000    0.000    0.000    0.000 Enum.py:107(__len__)
+        9    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {nt._getfullpathname}
+        1    0.000    0.000    0.000    0.000 threading.py:573(set)
+       29    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+       11    0.000    0.000    0.000    0.000 opcode.py:31(name_op)
+       16    0.000    0.000    0.000    0.000 __init__.py:74(isString)
+       17    0.000    0.000    0.000    0.000 sre_parse.py:68(__init__)
+       24    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        7    0.000    0.000    0.000    0.000 {hasattr}
+        6    0.000    0.000    0.000    0.000 lists.py:355(<genexpr>)
+        4    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 collections.py:26(OrderedDict)
+       30    0.000    0.000    0.000    0.000 {method '__contains__' of 'frozenset' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:1094(Logger)
+        1    0.000    0.000    0.000    0.000 <string>:1(Attribute)
+        6    0.000    0.000    0.000    0.000 lists.py:311(__getitem__)
+        1    0.000    0.000    0.000    0.000 __init__.py:1375(__init__)
+        1    0.000    0.000    0.000    0.000 weakref.py:47(__init__)
+        1    0.000    0.000    0.000    0.000 <string>:1(Traceback)
+        1    0.000    0.000    0.000    0.000 __init__.py:99(isDict)
+        1    0.000    0.000    0.000    0.000 <string>:1(ModuleInfo)
+        1    0.000    0.000    0.000    0.000 __init__.py:304(findInListSafely)
+        5    0.000    0.000    0.000    0.000 threading.py:58(__init__)
+        7    0.000    0.000    0.000    0.000 {sys._getframe}
+        1    0.000    0.000    0.000    0.000 threading.py:113(RLock)
+        1    0.000    0.000    0.000    0.000 <string>:1(ArgSpec)
+        1    0.000    0.000    0.000    0.000 tokenize.py:45(any)
+        6    0.000    0.000    0.000    0.000 opcode.py:35(jrel_op)
+        1    0.000    0.000    0.000    0.000 <string>:1(Arguments)
+        1    0.000    0.000    0.000    0.000 threading.py:399(notifyAll)
+        1    0.000    0.000    0.000    0.000 ntpath.py:42(normcase)
+        1    0.000    0.000    0.000    0.000 <string>:1(ArgInfo)
+        1    0.000    0.000    0.000    0.000 __init__.py:107(isList)
+        1    0.000    0.000    0.000    0.000 __init__.py:1109(__init__)
+       30    0.000    0.000    0.000    0.000 {method 'isdigit' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 opcode.py:39(jabs_op)
+        6    0.000    0.000    0.000    0.000 {locals}
+        8    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:299(callersName)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 threading.py:131(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'setter' of 'property' objects}
+       12    0.000    0.000    0.000    0.000 {_sre.getlower}
+        5    0.000    0.000    0.000    0.000 lists.py:348(keys)
+        1    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 __init__.py:646(Handler)
+       24    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        2    0.000    0.000    0.000    0.000 lists.py:31(isDict)
+        4    0.000    0.000    0.000    0.000 Enum.py:79(__iter__)
+        4    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 lists.py:354(iteritems)
+        1    0.000    0.000    0.000    0.000 threading.py:372(notify)
+        1    0.000    0.000    0.000    0.000 Enum.py:30(EnumMetaClass)
+        1    0.000    0.000    0.000    0.000 threading.py:254(_Condition)
+        4    0.000    0.000    0.000    0.000 {callable}
+        1    0.000    0.000    0.000    0.000 atexit.py:37(register)
+        1    0.000    0.000    0.000    0.000 Enum.py:209(name)
+        2    0.000    0.000    0.000    0.000 {method 'acquire' of 'thread.lock' objects}
+        6    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 os.py:440(has_key)
+        1    0.000    0.000    0.000    0.000 {method 'index' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 platform.py:365(_popen)
+        1    0.000    0.000    0.000    0.000 ObjectTypeName.py:21(<module>)
+        1    0.000    0.000    0.000    0.000 collections.py:381(Counter)
+        2    0.000    0.000    0.000    0.000 tokenize.py:46(maybe)
+        1    0.000    0.000    0.000    0.000 __init__.py:992(Manager)
+        1    0.000    0.000    0.000    0.000 {method 'insert' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:1383(LoggerAdapter)
+        1    0.000    0.000    0.000    0.000 threading.py:56(_Verbose)
+        1    0.000    0.000    0.000    0.000 threading.py:124(_RLock)
+        1    0.000    0.000    0.000    0.000 {any}
+        1    0.000    0.000    0.000    0.000 __init__.py:346(Formatter)
+        1    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 Enum.py:218(value)
+        1    0.000    0.000    0.000    0.000 threading.py:549(_Event)
+        1    0.000    0.000    0.000    0.000 _utils.py:9(DaysOfWeek)
+        1    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:24(Str)
+        1    0.000    0.000    0.000    0.000 threading.py:422(_Semaphore)
+        1    0.000    0.000    0.000    0.000 {globals}
+        1    0.000    0.000    0.000    0.000 __init__.py:573(Filterer)
+        2    0.000    0.000    0.000    0.000 lists.py:351(values)
+        1    0.000    0.000    0.000    0.000 lists.py:278(fileName)
+        1    0.000    0.000    0.000    0.000 UserDict.py:4(__init__)
+        1    0.000    0.000    0.000    0.000 __init__.py:881(FileHandler)
+        1    0.000    0.000    0.000    0.000 __init__.py:1671(NullHandler)
+        1    0.000    0.000    0.000    0.000 {issubclass}
+        1    0.000    0.000    0.000    0.000 CooperativeClass.py:11(_Cooperative)
+        1    0.000    0.000    0.000    0.000 threading.py:299(_is_owned)
+        1    0.000    0.000    0.000    0.000 threading.py:787(_set_ident)
+        1    0.000    0.000    0.000    0.000 __init__.py:182(_checkLevel)
+        1    0.000    0.000    0.000    0.000 lists.py:406(HashedFuzzyLists)
+        1    0.000    0.000    0.000    0.000 tokenize.py:145(TokenError)
+        1    0.000    0.000    0.000    0.000 __init__.py:494(BufferingFormatter)
+        1    0.000    0.000    0.000    0.000 __init__.py:810(StreamHandler)
+        1    0.000    0.000    0.000    0.000 __init__.py:945(PlaceHolder)
+        4    0.000    0.000    0.000    0.000 Enum.py:80(<genexpr>)
+        1    0.000    0.000    0.000    0.000 Enum.py:292(EnumLazy)
+        1    0.000    0.000    0.000    0.000 __init__.py:96(isSimpleDict)
+        1    0.000    0.000    0.000    0.000 ntpath.py:122(splitdrive)
+        1    0.000    0.000    0.000    0.000 threading.py:1056(_Timer)
+        1    0.000    0.000    0.000    0.000 lists.py:357(caseless)
+        1    0.000    0.000    0.000    0.000 lists.py:435(HashedOrderedList)
+        1    0.000    0.000    0.000    0.000 __init__.py:997(__init__)
+        1    0.000    0.000    0.000    0.000 lists.py:199(UnicodeMixin)
+        1    0.000    0.000    0.000    0.000 _utils.py:18(FileFolderSearchOptions)
+        1    0.000    0.000    0.000    0.000 tokenize.py:147(StopTokenizing)
+        1    0.000    0.000    0.000    0.000 lists.py:387(HashedLists2)
+        1    0.000    0.000    0.000    0.000 lists.py:423(HashedFuzzyLists2)
+        1    0.000    0.000    0.000    0.000 __init__.py:536(Filter)
+        8    0.000    0.000    0.000    0.000 _utils.py:478(_formatTimeStr)
+        1    0.000    0.000    0.000    0.000 threading.py:1126(_DummyThread)
+        1    0.000    0.000    0.000    0.000 __init__.py:230(LogRecord)
+        1    0.000    0.000    0.000    0.000 inspect.py:630(EndOfBlock)
+        1    0.000    0.000    0.000    0.000 lists.py:396(HashedUniqueLists)
+        1    0.000    0.000    0.000    0.000 lists.py:419(HashedFuzzySmartLists)
+        1    0.000    0.000    0.000    0.000 inspect.py:632(BlockFinder)
+        1    0.000    0.000    0.000    0.000 _utils.py:505(formatSalesForceDateTimeStr)
+        1    0.000    0.000    0.000    0.000 Enum.py:134(EnumLazyMetaClass)
+        1    0.000    0.000    0.000    0.000 __init__.py:390(__init__)
+        3    0.000    0.000    0.000    0.000 _utils.py:484(formatSalesForceTimeStr)
+        1    0.000    0.000    0.000    0.000 __init__.py:1369(RootLogger)
+        1    0.000    0.000    0.000    0.000 tokenize.py:178(Untokenizer)
+        1    0.000    0.000    0.000    0.000 threading.py:514(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 __init__.py:578(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'release' of 'thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 CooperativeClass.py:23(Cooperative)
+        1    0.000    0.000    0.000    0.000 threading.py:1086(_MainThread)
+        1    0.000    0.000    0.000    0.000 _utils.py:24(DeCamelCaseMethods)
+        1    0.000    0.000    0.000    0.000 Enum.py:227(classname)
+        1    0.000    0.000    0.000    0.000 utils.py:12(Methods)
+        2    0.000    0.000    0.000    0.000 {thread.get_ident}
+        1    0.000    0.000    0.000    0.000 Enum.py:289(Enum)
+        2    0.000    0.000    0.000    0.000 _utils.py:454(formatDate_MMDDYYYY_slashes)
+        1    0.000    0.000    0.000    0.000 threading.py:63(_note)
+        1    0.000    0.000    0.000    0.000 Enum.py:234(parent)
+        1    0.000    0.000    0.000    0.000 _utils.py:499(formatSalesForceDateStr)
+        1    0.000    0.000    0.000    0.000 threading.py:1095(_set_daemon)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

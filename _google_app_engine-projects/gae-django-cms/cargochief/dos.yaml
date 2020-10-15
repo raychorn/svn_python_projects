@@ -1,0 +1,4 @@
+blacklist:
+- subnet: 10.0.0.1
+  description: This is an invalid address but let's block it anyway.
+  

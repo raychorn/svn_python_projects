@@ -1,0 +1,28 @@
+{% if user.is_authenticated %}<div id="main_sider_admin">
+    		<H2>Admin</H2>
+    		{{ user.username }} !
+    		{% if user.is_superuser %}
+  <a href="/admin/">admin</a> |
+  <a href="{% url cms.views.list_globalvar %}">{% trans "Basic" %}</a> |
+  <a href="{% url cms.views.list_allad %}">{% trans "Ad" %}</a> |
+  <a href="{% url cms.views.list_redirect %}">{% trans "Redirect" %}</a> |
+  <a href="{% url cms.views.list_article %}">{% trans "new Top100" %}</a> |
+  <a href="{% url cms.views.emptymem %}">{% trans "flush Cache" %}</a> |
+  <a href="{% url cms.views.import_wp %}">{% trans "Import" %}</a> |
+  <a href="{% url cms.views.list_links %}">{% trans "Links" %}</a> |
+  <a href="{% url cms.views.list_comment %}">{% trans "Comments" %}</a> |
+  <a href="{% url cms.views.list_categories %}">{% trans "Categories" %}</a> |
+  <a href="{% url cms.views.settheme %}">{% trans "Set theme" %}</a> |<br/>
+{% endif %}
+{% trans "Author" %}:{{ user.first_name }}{{ user.last_name }} !
+  <a href="{% url cms.views.add_article %}">{% trans "add new" %}</a> |
+  <a href="{% url cms.views.list_my_article %}">{% trans "my articles" %}</a> |
+  <a href="/admin/password_change/">{% trans 'Change password' %}</a> |
+  <a href="{% url django.contrib.auth.views.logout %}">{% trans "Logged out" %}</a> |
+    	</div>{% endif %}
+    	{% if right_ad_top %}<div id="main_sider_top_ad">{{ right_ad_top|safe }}</div>{% endif %}
+    	{% if all_tags %}<div id="main_sider_tags">
+    		<H2>{% trans "Tag Cloud" %}</H2>
+    		{% for each in all_tags %}<a title="{{ each.tag }}" href="{% url cms.views.show_tag_arts_list tag=each.tag %}" style='font-size:{{ each.tagcount|add:"98" }}%;'>{{ each.tag }}</a>
+    		{% endfor %}
+    	</div>{% endif %}

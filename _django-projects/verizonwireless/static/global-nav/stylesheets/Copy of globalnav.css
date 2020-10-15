@@ -1,0 +1,280 @@
+global 
+{
+	/* External Graphic Assets */
+	
+	/* Menu Arrows*/
+	arrowRight: Embed(source="assets/graphics/icons.swf", symbol="arrowRight");
+	arrowLeft: Embed(source="assets/graphics/icons.swf", symbol="arrowLeft");
+	/* Separators */
+	categorySeparator: Embed(source="assets/graphics/icons.swf", symbol="categorySeparator");
+	menuItemSeparator: Embed(source="assets/graphics/icons.swf", symbol="menuItemSeparator");
+	/* Masking */
+	squareMask: Embed(source="assets/graphics/icons.swf", symbol="squareMask");
+	/* New web page window */	
+	mediaStore: Embed(source="assets/graphics/icons.swf", symbol="mediaStore");
+	
+	/* Main menu bar height */
+	menuBarHeight:30;
+	
+	
+	/* 
+	 * Effects
+	 * The following effect is for the fade-in
+	 * effect in milliseconds
+	 */
+	menuFadeInSpeed:0;		/* Integer Milliseconds */
+	menuFadeAlphaStart:0; 	/* Decimal */
+	menuFadeAlphaEnd:1;		/* Decimal */
+	menuFadeInStep:.005;		/* Decimal */
+	
+	menuFadeOutSpeed:0;		/* Integer Milliseconds */
+	menuFadeOutStep:.01;	/* Decimal */
+	
+	menuAppearDelay:50;		/* Menu will appear after X ms */
+	
+	
+	/* Menu Resize Width */
+	menuResizeWidthSpeed:0;
+	menuResizeWidthStep:1;
+	
+	/* Menu Resize Width */
+	menuResizeHeightSpeed:0;
+	menuResizeHeightStep:1;
+	
+	
+	/* Category Item fade in effect settings */
+	categoryFadeInSpeed:0;
+	categoryFadeStart:0;
+	categoryFadeEnd:1;
+	categoryFadeInStep:.05;
+
+	categoryFadeOutSpeed:0;
+	categoryFadeOutStep:.05;
+	
+	/* Menu item fade in effect settings */
+	menuItemFadeInSpeed:0;
+	menuItemFadeStart:0;
+	menuItemFadeEnd:1;
+	menuItemFadeInStep:.05;
+	
+	menuItemFadeOutSpeed:0;
+	menuItemFadeOutStep:.05;
+	
+	/* Menu item separator settings */
+	menuItemSeparatorHeight:1;
+	
+	/* Menu category width */
+	categoryWidth0:167;
+	categoryWidth1:60;
+	categoryWidth2:168;
+	categoryWidth3:94;
+	categoryWidth4:80;
+	categoryWidth5:75;
+	categoryWidth6:107;
+	
+	/* Category Menu width */
+	menuContainerWidth:220;
+	
+	
+	/* Category separator settings */
+	categorySeparatorHeight:30;
+	categorySeparatorWidth:1;
+	
+	/* Selectable menu item settings */
+	menuItemHeight:20;
+	
+	
+	
+	/* wipeInDuration:0;
+	initMaskWidth:0;
+	initMaskHeight:0;
+	maskStepWidth:10;
+	maskStepHeight:8; */
+	
+	/* Sub-Menu Text Field Settings */
+	smtfRightMargin:170;
+	smtfPaddingRight:40;
+	smtfPaddingLeft:5;
+	
+	/* SubMenuTitle Settings */
+	smtTitleFontFamily:ArialBold;
+	smtTitleFontSize:12;
+	smtTitleFontWeight:normal;
+	smtTitleFontColor:#FFFFFF;
+	smtTitleHeight:20;
+	
+	smtBodyFontFamily:ArialNormal;
+	smtBodyFontSize:12;
+	smtBodyFontWeight:normal;
+	smtBodyFontColor:#FFFFFF;
+	smtBodyHeight:15;
+	
+	/* Spacer Gap between 
+	   Sub-Menu Title and Menu items */
+	   
+	smtGap:5;
+	
+	/* Access Menu Data */
+	/* dataURL:"http://127.0.0.1/xmldata.xml";
+	dataType:"xml";
+	cacheBuster:"true"; */
+	
+	dataURL:"http://127.0.0.1/jsondata.json";
+	dataType:"json";
+	cacheBuster:true;
+	
+	
+}
+
+@font-face
+{
+	src: url('assets/fonts/ArialNormal.ttf');
+    fontFamily: ArialNormal;
+    advancedAntiAliasing: true;
+}
+
+
+@font-face
+{
+	src: url('assets/fonts/fff_freedom.ttf');
+    fontFamily: ArialBold;
+    advancedAntiAliasing: true;
+}
+
+
+
+HBox.MenuItem
+{
+	backgroundColor: #990101;
+	horizontalGap: 0;
+	backgroundAlpha: 1.0;
+	borderStyle: none;
+	verticalAlign:middle;
+	color: #FFFFFF;
+	paddingTop:0;
+	paddingRight:0;
+	paddingLeft:0;
+	paddingBottom:0;
+	fontFamily:"ArialNormal";
+	fontSize:10;
+	fontWeight:normal;
+}
+
+
+
+
+HBox.MenuBar
+{
+	alpha:1.0;
+	borderColor: #FFFFFF;
+	backgroundAlpha: 1.0;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalGap:0;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	height:30;
+}
+VBox.MenuContainer
+{
+	backgroundColor: #000000;
+	backgroundAlpha: 1.0;
+	horizontalAlign: left;
+	verticalAlign: top;
+	verticalGap: 0;
+}
+HBox.MenuItemSeparatorContainer
+{
+	horizontalGap: 0;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 10;
+	paddingRight: 10;
+}
+HBox.MenuItemSeparator
+{
+	backgroundSize: "100%";
+	borderStyle: none;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalAlign: top;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+}
+VBox.CategoryItemContainer
+{
+	backgroundAlpha: 1.0;
+	backgroundColor: #FE1B1B;
+	color: #FFFFFF;
+}
+HBox.CategoryItemTextFieldContainer
+{
+	backgroundColor: #990101;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	paddingTop: 7;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	fontFamily:"ArialNormal";
+	fontSize:12;
+	fontWeight:normal;
+	/*fontWeight:bold;*/
+}
+HBox.CategorySeparator
+{
+	backgroundSize: "100%";
+	borderStyle: none;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalAlign: top;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+}
+Label.CategoryItemTextfield
+{
+	paddingLeft: 10;
+}
+HBox.SubMenuTitle
+{
+	backgroundAlpha: 0.0;
+	backgroundColor: #FFFFFF;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	verticalAlign: middle;
+	paddingBottom: 0;
+	color: #FFFFFF;
+	borderThickness: 0;
+	borderStyle: none;
+	cornerRadius: 0;
+	borderColor: #FFFFFF;
+	horizontalAlign: left;
+	horizontalGap: 0;
+}
+Label.SubmenuTitleLabel
+{
+	color: #FFFFFF;
+	disabledColor: #FFFFFF;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	textAlign: left;
+	textDecoration: none;
+}
+Label.bigText
+{
+	fontFamily: ArialNormal;
+	fontSize: 12;
+}
+
+
+
+

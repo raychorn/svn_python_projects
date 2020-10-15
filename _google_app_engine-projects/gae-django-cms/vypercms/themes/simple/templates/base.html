@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"   
+ "http://www.w3.org/TR/html4/strict.dtd">  
+<html>  
+<head>  
+  <title>{% block title %}{% endblock %} - {{ site_name }}</title>  
+  <META http-equiv=content-type content="text/html; charset=utf-8">
+  <META content="MSHTML 6.00.6001.18023" name="GENERATOR">
+  <meta name="Author" contect="ego008@gmail.com http://gae-django-cms.appspot.com">
+  <link rel="stylesheet" href="/themes/simple/reset-fonts-grids.css" type="text/css">  
+  <link rel="stylesheet" href="/themes/simple/style.css" type="text/css"> 
+  {% if gg_verify %}
+  <meta name="verify-v1" content="{{ gg_verify|safe }}" >
+  {% else %}
+  <meta name="verify-v1" content="MnHcSlQH3x+Rva/ssKMINOEBQv6hTtYXPt1o6vYoWgg=" >
+  {% endif %}
+  {% block extra-head %}
+  <META content="{{ site_name }},{{ site_descr }},gae,cms,gae-django-cms,gae cms,GD-cms" name=Keywords>
+  <META content="{{ site_name }},{{ site_descr }},gae,cms,gae-django-cms,gae cms,GD-cms" name=Description>    
+  {% endblock %}
+</head>  
+<body>  
+<div id="doc2" class="yui-t5">
+	<div id="hd" role="banner">
+		<div id="head_top"></div>
+		<div class="clear"></div>
+		<div id="head_logo"><a href="/" title="{{ site_name }}"><IMG src="/themes/simple/images/logo.gif" alt="{{ site_name }}"></A></div>
+		<div id="head_top_ad">{{ top_ad|safe }}</div>
+		<div class="clear"></div>
+		<div id="head_nav">
+			<ul id="nav">
+				<LI><A title="{% trans 'RSS Feed' %}" href="{% url cms.views.rsslatest cate_id=0 %}" target="_blank"><IMG title="{% trans 'RSS Feed' %}" style="VERTICAL-ALIGN: middle" src="/media/images/rss.gif" alt="{% trans 'RSS Feed' %}"></A></LI>
+				<LI><a href="/" title="{{ site_name }}">{% trans "Home" %}</a></LI>
+				{% for each in nav_categories %}<LI><a title="{{ each.name|safe }}" href="{% url cms.views.show_categories keyid=each.key.id page=1 %}">{{ each.name|safe }}</a></LI>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div id="bd" role="main"> 
+		<div id="yui-main">
+			<div id="main_content" class="yui-b">{% block content %}
+				<div id="main_content_top" class="yui-g">
+					<div id="main_content_slider" class="yui-u first">
+						<!-- YOUR DATA GOES HERE -->  
+						main_content_slider
+					</div>
+					<div id="main_content_new" class="yui-u">
+						<!-- YOUR DATA GOES HERE --> 
+						main_content_new
+					</div>
+				</div>
+				<div id="main_content_top_ad" class="yui-g">
+					<!-- YOUR DATA GOES HERE --> 
+					main_content_top_ad
+				</div>
+				<div class="yui-g">
+					<div id="main_content_cate_left" class="yui-u first">
+						<!-- YOUR DATA GOES HERE -->  
+						main_content_cate_left
+					</div>
+					<div id="main_content_cate_right" class="yui-u">
+						<!-- YOUR DATA GOES HERE --> 
+						main_content_cate_right
+					</div>
+					<div class="clear"></div>
+					<div id="main_content_mid_ad" class="yui-g" >
+						<!-- YOUR DATA GOES HERE --> 
+						main_content_mid_ad 
+					</div>
+					<div class="clear"></div>
+					<div id="main_content_cate_left" class="yui-u first">  
+						<!-- YOUR DATA GOES HERE -->  
+						main_content_cate_left
+					</div>
+					<div id="main_content_cate_right" class="yui-u">
+						<!-- YOUR DATA GOES HERE -->
+						main_content_cate_right
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div id="main_content_bot_ad" class="yui-g">
+					<!-- YOUR DATA GOES HERE --> 
+					666 main_content_bot_ad
+				</div>
+			{% endblock %}</div>
+		</div>  
+    <div id="main_sider" class="yui-b">
+    	<!-- YOUR NAVIGATION GOES HERE -->
+    	{% include "main_sider.html" %}     	
+    </div>
+  </div>  
+  <div id="ft" role="contentinfo">
+  	&copy; copyright {{ site_name }} {% if footer_text %} . {{ footer_text|safe }}{% endif %} . 
+{% if user.is_authenticated %}<script language=javascript src="/media/js/other.js"></script>{% else %}&nbsp;&nbsp;<a href="{% url django.contrib.auth.views.login %}">{% trans "Log in" %}</a>{% ifequal reg_user '1' %} or <a href="{% url registration.views.register %}">{% trans "Register" %}</a>{% endifequal %}{% endif %}
+<br/>
+Powered by <a href="http://code.google.com/p/gae-django-cms/" target="_blank">GD-cms</a> 
+&
+<a href="http://code.google.com/appengine/" target="_blank">Google App Engine</a>
+&
+<a href="http://code.google.com/p/app-engine-patch/" target="_blank">app-engine-patch</a>
+  </div>   
+</div>  
+
+{% if site_statistic %}
+{{ site_statistic|safe }}
+{% else %}
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9711985-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+{% endif %}
+
+</body>  
+</html>  

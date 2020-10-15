@@ -1,0 +1,52 @@
+pyax
+(that's "pie-axe," not "pee-yaks," "puh-yaks" or other nonsense)
+
+IMPORTANT!
+This project is nearing the end of its overhaul. 
+
+Specifically:
+
+1) it's been renamed pyax
+2) it's been moved to use Simon Fell's beatbox (which, in turn, uses xmltramp) 
+   instead of SOAPpy (which has been abandoned)
+3) it has been updated to Apex API 12.0. 
+4) heavy refactoring to make it more PEP8 sane, except where we refer to Apex 
+   calls/objects in their standard style
+5) it's been moved to launchpad.net: https://launchpad.net/pyax
+6) it is now licensed under GPLv2 rather than the BSD license due to the 
+   change to beatbox/xmltramp
+
+So... If you're looking to use this project, I suggest, at present, that you 
+get the latest on the release branch from https://launchpad.net/pyax
+
+--Kevin Shuk
+surf@canonical.com
+surf@surfous.com
+
+Requirements:
+
+Python 2.4.x or 2.5.x
+NOTE: dependence on pytz (world timezone definitions for python) has been 
+eliminated, but may still be desired in development work using pyax 
+
+
+Installation:
+
+(Assumes that user's shell is bash. Modify commands for setting environment 
+vars accordingly if using another shell)
+
+1) in bin, run "run_all_tests" (this runs against the copy in the source tree)
+
+	$ cd .../pyax/bin
+    $ ./run_all_tests
+    
+2) Install pyax somwhere in your PYTHONPATH:
+ 
+    $ python setup.py install [--prefix=<DIR IN PYATHONPATH>]
+
+3) Use it! Some examples on operations with pyax are in demo script, demo.py
+   in the tests directory. Also demo can be run:
+   
+ 	$ cd .../pyax/bin
+    $ ./demo
+

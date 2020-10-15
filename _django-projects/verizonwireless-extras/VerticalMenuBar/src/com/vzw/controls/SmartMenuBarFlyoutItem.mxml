@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" 
+	styleName="SmartMenuBarFlyoutItem" 
+	creationComplete="onCreationComplete()"
+	minWidth="100" 
+	xmlns:controls="com.vzw.controls.*">
+	<mx:states>
+		<mx:State name="{this.LeftAlignedState}">
+			<mx:AddChild relativeTo="{this.item_label}" position="before">
+				<mx:VBox height="100%" paddingLeft="5" paddingTop="{this.height / 2}">
+					<mx:Image autoLoad="true" source="{this.flyoutLeftIcon}"/>
+				</mx:VBox>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="{this.LeftAlignedNominalState}">
+			<mx:AddChild relativeTo="{this.item_label}" position="before">
+				<mx:Spacer width="8"/>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="{this.RightAlignedState}">
+			<mx:AddChild relativeTo="{this.container}" position="lastChild">
+				<mx:VBox height="100%" paddingLeft="10" paddingRight="0" paddingTop="{this.height / 2}">
+					<mx:Image autoLoad="true" source="{this.flyoutRightIcon}"/>
+				</mx:VBox>
+			</mx:AddChild>
+		</mx:State>
+	</mx:states>
+	<mx:Script>
+		<![CDATA[
+			import com.vzw.menu.builder.MenuController;
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			import vyperlogix.controls.Alert.AlertPopUp;
+			import vyperlogix.utils.CSSUtils;
+			import vyperlogix.utils.StringUtils;
+			import mx.controls.TextArea;
+
+            [Bindable]
+			public var LeftAlignedState:String = 'LeftAligned';
+			
+            [Bindable]
+			public var RightAlignedState:String = 'RightAligned';
+			
+            [Bindable]
+			public var LeftAlignedNominalState:String = 'LeftAlignedNominal';
+			
+            [Bindable]
+			public var RightAlignedNominalState:String = 'RightAlignedNominal';
+			
+            [Bindable]
+			public var AdminState:String = 'AdminIcons';
+			
+            [Bindable]
+			public var AdminIconsState:String = 'AdminIcons';
+			
+            [Bindable]
+			private var _label:String;
+
+			private var _uuid:String;
+			
+			private var _isDebugger:Boolean;
+			private var _debugger:TextArea;
+
+			private var _debug_level:Object = {};
+
+			private var _isAdminMode:Boolean;
+
+			private var _priorState:String;
+
+			private var _hasSubMenu:Boolean = false;
+
+			private var _alignment:String = '';
+
+			private var _dataProvider:Object = {};
+
+			private var _myParent:DisplayObject;
+
+            [Embed(source="assets/images/icons/flyout-left-white.jpg")]
+            [Bindable]
+            public var flyoutLeftIcon:Class;
+
+            [Embed(source="assets/images/icons/flyout-right-white.jpg")]
+            [Bindable]
+            public var flyoutRightIcon:Class;
+
+			public function set dataProvider(dataProvider:*):void {
+				if (this._dataProvider != dataProvider) {
+					this._dataProvider = dataProvider;
+				}
+			}
+			
+			public function get dataProvider():Object {
+				return this._dataProvider;
+			}
+			
+			public function set myParent(myParent:DisplayObject):void {
+				this._myParent = myParent;
+			}
+			
+			public function get myParent():DisplayObject {
+				return this._myParent;
+			}
+
+			override public function set label(aLabel:String):void {
+				if (aLabel != this._label) {
+					this._label = aLabel;
+				}
+			}
+			
+			override public function get label():String {
+				return this._label;
+			}
+			
+			public function set uuid(uuid:String):void {
+				if (this._uuid != uuid) {
+					this._uuid = uuid;
+				}
+			}
+			
+			public function get uuid():String {
+				return this._uuid;
+			}
+			
+			public function set alignment(alignment:String):void {
+				if (this._alignment != alignment) {
+					this._alignment = alignment;
+					this.currentState = alignment; // +++ Check to see what the admin mode is... ?!?;
+				}
+			}
+			
+			public function get alignment():String {
+				return this._alignment;
+			}
+
+			public function set debugger(debugger:TextArea):void {
+				this._debugger = debugger;
+			}
+			
+			public function get debugger():TextArea {
+				return this._debugger;
+			}
+			
+			public function set isDebugger(isDebugger:Boolean):void {
+				this._isDebugger = isDebugger;
+			}
+			
+			public function get isDebugger():Boolean {
+				return this._isDebugger;
+			}
+			
+			public function set debugLevel(debug_level:Object):void {
+				this._debug_level = debug_level;
+				if (debug_level[this.className]) {
+					this.isDebugger = debug_level[this.className] == true;
+				}
+			}
+			
+			public function get debugLevel():Object {
+				return this._debug_level;
+			}
+			
+			public function set isAdminMode(isAdminMode:Boolean):void {
+				if (this._isAdminMode != isAdminMode) {
+					if (this._isAdminMode == MenuController.AdminMode) {
+						this._priorState = this.currentState;
+					}
+					this._isAdminMode = MenuController.AdminMode;
+				}
+				if (this.isDebugger) {
+					this._debugger.text = this.className + '1. this._isAdminMode=' + this._isAdminMode + ', this.hasSubMenu=' + this.hasSubMenu + ', currentState=' + this.currentState + ', this._priorState=' + this._priorState + '\n' + this._debugger.text 
+				}
+			}
+			
+			public function get isAdminMode():Boolean {
+				return this._isAdminMode;
+			}
+			
+			public function set hasSubMenu(hasSubMenu:Boolean):void {
+				if (this._hasSubMenu != hasSubMenu) {
+					this._hasSubMenu = hasSubMenu;
+					if (this.isAdminMode) {
+					} else {
+						this.currentState = this.alignment;
+					}
+					if (this.isDebugger) {
+						this._debugger.text = this.className + '2. this.isAdminMode=' + this.isAdminMode + ', this.hasSubMenu=' + this.hasSubMenu + ', currentState=' + this.currentState + ', this._priorState=' + this._priorState + '\n' + this._debugger.text 
+					}
+				}
+			}
+			
+			public function get hasSubMenu():Boolean {
+				return this._hasSubMenu;
+			}
+			
+			private function onCreationComplete():void {
+				var height:Number;
+				var styleName:String;
+				if ( (this.height == 0) || (isNaN(this.height)) ) {
+					styleName = this.styleName as String;
+					height = CSSUtils.getStyleProperty(styleName,'height');
+					this.height = height;
+				}
+				if (this.width == 0) {
+					styleName = this.styleName as String;
+					height = CSSUtils.getStyleProperty(styleName,'width');
+					this.width = width;
+				}
+				if (isNaN(this.percentWidth)) {
+					this.percentWidth = 100;
+				}
+				if (isNaN(this.percentHeight)) {
+					this.percentHeight = 100;
+				}
+				if (this.isDebugger) {
+					this._debugger.text = this.className + ' label=' + this._label + '\n' + this._debugger.text 
+					this._debugger.text = this.className + ' htmlText=' + this.item_label.htmlText + '\n' + this._debugger.text 
+					this._debugger.text = this.className + ' percentHeight=' + this.percentHeight + ', percentWidth=' + this.percentWidth + ', height=' + this.height + ', width=' + this.width + '\n' + this._debugger.text 
+					this._debugger.text = this.className + ' explicitHeight=' + this.explicitHeight + ', explicitWidth=' + this.explicitWidth + '\n' + this._debugger.text 
+					this._debugger.text = this.className + ' explicitMinHeight=' + this.explicitMinHeight + ', explicitMinWidth=' + this.explicitMinWidth + '\n' + this._debugger.text 
+					this._debugger.text = this.className + ' explicitMaxHeight=' + this.explicitMaxHeight + ', explicitMaxWidth=' + this.explicitMaxWidth + '\n' + this._debugger.text 
+					this._debugger.text = this.className + StringUtils.repeatedChars('=',40) + '\n' + this._debugger.text 
+				}
+			}
+			
+			private function onCreationComplete_label():void {
+				if (this.isDebugger) {
+					this._debugger.text = this.className + ' label=' + this._label + '\n' + this._debugger.text 
+					this._debugger.text = this.className + StringUtils.repeatedChars('=',40) + '\n' + this._debugger.text 
+				}
+			}
+			
+		]]>
+	</mx:Script>
+	<mx:HBox x="0" y="0" width="100%" height="100%" id="container">
+		<mx:Label id="item_label" name="label" styleName="SmartMenuBarFlyoutItemLabel" width="100%" height="100%" htmlText="{this._label}" creationComplete="onCreationComplete_label()"/>
+	</mx:HBox>
+</mx:Canvas>

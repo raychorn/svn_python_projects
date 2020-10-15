@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AJAX Debug Document</title>
+<script type="text/javascript" language="javascript1.5" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+<script type="text/javascript" language="javascript1.5">
+	function send_data(data) {
+		var request = $.ajax({
+		  url: "http://192.168.1.10:9999/image/save",
+		  type: "POST",
+		  data: '{ "data" : "12345" }',
+		  dataType: "json"
+		});
+		request.done(function( msg ) {
+		  alert( 'DONE: ' + msg );
+		});
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( 'FAILED: ' + textStatus );
+		});
+	}
+	 
+	$(document).ready(function(e) {
+        alert('!!!');
+		send_data();
+    });
+</script>
+</body>
+</html>

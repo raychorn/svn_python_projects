@@ -1,0 +1,297 @@
+
+Z:\python projects\aardvark>if bcp. == . goto Bigtest 
+
+Z:\python projects\aardvark>if bcp. == test. goto Bigtest2 
+
+Z:\python projects\aardvark>if bcp. == input. goto Bigtest3 
+
+Z:\python projects\aardvark>if bcp. == bcp. goto Bigtest4 
+
+Z:\python projects\aardvark>python -m cProfile -s cumulative bcp.py --bcp=Bigtest.txt 
+(main_bcp).1
+(determineNextUsableFileNumber) :: _fname=(Bigtest0.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=49598), (_fileName=Bigtest.txt), (_fname=Bigtest0.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest1.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=79816), (_fileName=Bigtest.txt), (_fname=Bigtest1.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest2.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=109803), (_fileName=Bigtest.txt), (_fname=Bigtest2.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest3.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=157597), (_fileName=Bigtest.txt), (_fname=Bigtest3.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest4.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=185499), (_fileName=Bigtest.txt), (_fname=Bigtest4.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest5.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=227908), (_fileName=Bigtest.txt), (_fname=Bigtest5.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest6.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=244805), (_fileName=Bigtest.txt), (_fname=Bigtest6.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest7.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=294272), (_fileName=Bigtest.txt), (_fname=Bigtest7.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest8.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=346657), (_fileName=Bigtest.txt), (_fname=Bigtest8.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest9.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=420023), (_fileName=Bigtest.txt), (_fname=Bigtest9.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest10.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=429361), (_fileName=Bigtest.txt), (_fname=Bigtest10.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest11.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=435183), (_fileName=Bigtest.txt), (_fname=Bigtest11.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest12.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=443570), (_fileName=Bigtest.txt), (_fname=Bigtest12.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest13.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=449220), (_fileName=Bigtest.txt), (_fname=Bigtest13.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest14.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=455819), (_fileName=Bigtest.txt), (_fname=Bigtest14.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest15.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=465027), (_fileName=Bigtest.txt), (_fname=Bigtest15.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest16.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=470585), (_fileName=Bigtest.txt), (_fname=Bigtest16.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest17.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=480252), (_fileName=Bigtest.txt), (_fname=Bigtest17.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest18.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=485619), (_fileName=Bigtest.txt), (_fname=Bigtest18.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest19.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=494602), (_fileName=Bigtest.txt), (_fname=Bigtest19.txt)
+(determineNextUsableFileNumber) :: _fname=(Bigtest20.txt)
+(writeDataToFile.processRows).1 :: (_rowCount=499831), (_fileName=Bigtest.txt), (_fname=Bigtest20.txt)
+(main_bcp.processRows).2 :: (_rowCount=499831)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest12.txt)" = (12.4219999313)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest7.txt)" = (12.8129999638)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest19.txt)" = (12.2969999313)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest3.txt)" = (12.5)
+(ioTimeAnalysis) :: Category: "main_bcp.processRows (WinProcesses.getProcessMemoryUsageForHandle)" = (3.0659968853)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest2.txt)" = (13.1410000324)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest16.txt)" = (12.3599998951)
+(ioTimeAnalysis) :: Category: "main_bcp.processRows (WinProcesses.closeProcessHandle)" = (0.0160000324249)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest8.txt)" = (12.7030000687)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest6.txt)" = (13.0939998627)
+(ioTimeAnalysis) :: Category: "exec_and_process_sql (execute)" = (197.797999859)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest11.txt)" = (12.2970001698)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest0.txt)" = (14.6100001335)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest15.txt)" = (12.7339999676)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest10.txt)" = (12.5469999313)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest1.txt)" = (12.9530000687)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest9.txt)" = (12.6879999638)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest4.txt)" = (12.75)
+(ioTimeAnalysis) :: Category: "main_bcp.processRows (WinProcesses.init)" = (0.18799996376)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest18.txt)" = (12.2969999313)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest14.txt)" = (12.375)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest5.txt)" = (12.8439998627)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest17.txt)" = (12.625)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest13.txt)" = (12.3589999676)
+(ioTimeAnalysis) :: Category: "writeDataToFile.processRows (Bigtest20.txt)" = (10.75)
+(ioTimeAnalysis) :: Category: "exec_and_process_sql (_callback)" = (0.0)
+(main_bcp.processRows) :: Time spent doing I/O :: (466.226996422)
+         3768 function calls (3683 primitive calls) in 1881.916 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.007    0.007 1881.916 1881.916 {execfile}
+        1    0.010    0.010 1881.908 1881.908 bcp.py:1(<module>)
+        1 1881.803 1881.803 1881.866 1881.866 bcp.py:391(main_bcp)
+       23    0.000    0.000    0.063    0.003 __init__.py:1303(warning)
+    46/23    0.000    0.000    0.063    0.003 {apply}
+       23    0.000    0.000    0.063    0.003 __init__.py:987(warning)
+       23    0.000    0.000    0.063    0.003 __init__.py:1088(_log)
+       23    0.000    0.000    0.059    0.003 __init__.py:1103(handle)
+       23    0.000    0.000    0.059    0.003 __init__.py:1132(callHandlers)
+       23    0.000    0.000    0.059    0.003 __init__.py:642(handle)
+       23    0.000    0.000    0.058    0.003 __init__.py:733(emit)
+       23    0.057    0.002    0.057    0.002 {method 'write' of 'file' objects}
+        1    0.016    0.016    0.016    0.016 WinProcesses.py:1(<module>)
+        1    0.002    0.002    0.006    0.006 decimal.py:116(<module>)
+        1    0.002    0.002    0.006    0.006 __init__.py:16(<module>)
+        1    0.003    0.003    0.003    0.003 __init__.py:27(<module>)
+        1    0.001    0.001    0.002    0.002 support.py:9(<module>)
+        1    0.000    0.000    0.002    0.002 re.py:178(compile)
+        1    0.000    0.000    0.002    0.002 re.py:219(_compile)
+        1    0.000    0.000    0.002    0.002 sre_compile.py:501(compile)
+       23    0.000    0.000    0.002    0.000 __init__.py:1058(findCaller)
+        1    0.002    0.002    0.002    0.002 threading.py:1(<module>)
+        1    0.002    0.002    0.002    0.002 kdictproxy.py:5(<module>)
+        1    0.002    0.002    0.002    0.002 core.py:18(<module>)
+       23    0.000    0.000    0.001    0.000 __init__.py:1075(makeRecord)
+        1    0.000    0.000    0.001    0.001 sre_parse.py:669(parse)
+      9/1    0.000    0.000    0.001    0.001 sre_parse.py:307(_parse_sub)
+     10/1    0.000    0.000    0.001    0.001 sre_parse.py:385(_parse)
+       23    0.001    0.000    0.001    0.000 __init__.py:216(__init__)
+        1    0.000    0.000    0.001    0.001 sre_compile.py:486(_code)
+       92    0.000    0.000    0.001    0.000 support.py:86(__getattr__)
+     19/1    0.000    0.000    0.001    0.001 sre_compile.py:38(_compile)
+       69    0.000    0.000    0.001    0.000 support.py:149(embedframe)
+      133    0.000    0.000    0.000    0.000 sre_parse.py:207(get)
+       23    0.000    0.000    0.000    0.000 __init__.py:71(<lambda>)
+       23    0.000    0.000    0.000    0.000 __init__.py:619(format)
+      158    0.000    0.000    0.000    0.000 sre_parse.py:188(__next)
+        1    0.000    0.000    0.000    0.000 win32con.py:2(<module>)
+       23    0.000    0.000    0.000    0.000 support.py:155(_getframe)
+       23    0.000    0.000    0.000    0.000 __init__.py:405(format)
+       23    0.000    0.000    0.000    0.000 __init__.py:599(acquire)
+       23    0.000    0.000    0.000    0.000 __init__.py:606(release)
+       23    0.000    0.000    0.000    0.000 ntpath.py:198(basename)
+       24    0.000    0.000    0.000    0.000 threading.py:93(acquire)
+       23    0.000    0.000    0.000    0.000 __init__.py:1172(isEnabledFor)
+       24    0.000    0.000    0.000    0.000 threading.py:113(release)
+      122    0.000    0.000    0.000    0.000 {hasattr}
+       47    0.000    0.000    0.000    0.000 ntpath.py:38(normcase)
+        4    0.000    0.000    0.000    0.000 decimal.py:2254(__init__)
+       23    0.000    0.000    0.000    0.000 ntpath.py:158(split)
+        7    0.000    0.000    0.000    0.000 sre_compile.py:184(_compile_charset)
+       46    0.000    0.000    0.000    0.000 support.py:81(__init__)
+       23    0.000    0.000    0.000    0.000 ntpath.py:183(splitext)
+       23    0.000    0.000    0.000    0.000 __init__.py:1158(getEffectiveLevel)
+       69    0.000    0.000    0.000    0.000 {psyco._psyco.getframe}
+  476/467    0.000    0.000    0.000    0.000 {len}
+        3    0.000    0.000    0.000    0.000 decimal.py:516(__new__)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:367(_compile_info)
+       71    0.000    0.000    0.000    0.000 threading.py:695(currentThread)
+        7    0.000    0.000    0.000    0.000 sre_compile.py:213(_optimize_charset)
+     27/9    0.000    0.000    0.000    0.000 sre_parse.py:146(getwidth)
+       61    0.000    0.000    0.000    0.000 sre_parse.py:201(match)
+       23    0.000    0.000    0.000    0.000 __init__.py:138(getLevelName)
+        1    0.000    0.000    0.000    0.000 __init__.py:1204(basicConfig)
+       23    0.000    0.000    0.000    0.000 support.py:109(__init__)
+       23    0.000    0.000    0.000    0.000 __init__.py:271(getMessage)
+       69    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:715(__init__)
+        1    0.000    0.000    0.000    0.000 __init__.py:573(__init__)
+       23    0.000    0.000    0.000    0.000 __init__.py:727(flush)
+       75    0.000    0.000    0.000    0.000 {getattr}
+        3    0.000    0.000    0.000    0.000 decimal.py:438(getcontext)
+      192    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       47    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+       69    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+       46    0.000    0.000    0.000    0.000 __init__.py:542(filter)
+       23    0.000    0.000    0.000    0.000 string.py:349(find)
+       55    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+       15    0.000    0.000    0.000    0.000 copy.py:65(copy)
+        1    0.000    0.000    0.000    0.000 threading.py:633(__init__)
+       23    0.000    0.000    0.000    0.000 threading.py:576(getName)
+       23    0.000    0.000    0.000    0.000 ntpath.py:116(splitdrive)
+       48    0.000    0.000    0.000    0.000 threading.py:44(_note)
+       35    0.000    0.000    0.000    0.000 sre_parse.py:132(__len__)
+       95    0.000    0.000    0.000    0.000 {thread.get_ident}
+       23    0.000    0.000    0.000    0.000 support.py:116(__getattr__)
+       25    0.000    0.000    0.000    0.000 {max}
+        5    0.000    0.000    0.000    0.000 sre_parse.py:222(isname)
+       75    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 support.py:175(patch)
+        1    0.000    0.000    0.000    0.000 threading.py:392(__init__)
+       62    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:181(_acquireLock)
+       65    0.000    0.000    0.000    0.000 sre_parse.py:136(__getitem__)
+       58    0.000    0.000    0.000    0.000 {setattr}
+       25    0.000    0.000    0.000    0.000 {built-in method acquire}
+       19    0.000    0.000    0.000    0.000 sre_parse.py:144(append)
+        8    0.000    0.000    0.000    0.000 sre_compile.py:360(_simple)
+       24    0.000    0.000    0.000    0.000 {time.time}
+        8    0.000    0.000    0.000    0.000 sre_parse.py:140(__getslice__)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:78(opengroup)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        2    0.000    0.000    0.000    0.000 threading.py:76(RLock)
+       40    0.000    0.000    0.000    0.000 {min}
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+       23    0.000    0.000    0.000    0.000 {method 'flush' of 'file' objects}
+       30    0.000    0.000    0.000    0.000 {isinstance}
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 threading.py:152(Condition)
+        6    0.000    0.000    0.000    0.000 sre_parse.py:263(_escape)
+        1    0.000    0.000    0.000    0.000 core.py:121(bind)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:89(closegroup)
+       23    0.000    0.000    0.000    0.000 {nt.getpid}
+        5    0.000    0.000    0.000    0.000 decimal.py:2983(_isinfinity)
+       19    0.000    0.000    0.000    0.000 sre_parse.py:96(__init__)
+        2    0.000    0.000    0.000    0.000 threading.py:81(__init__)
+        2    0.000    0.000    0.000    0.000 decimal.py:2991(_isnan)
+        1    0.000    0.000    0.000    0.000 decimal.py:507(Decimal)
+        1    0.000    0.000    0.000    0.000 threading.py:157(__init__)
+        1    0.000    0.000    0.000    0.000 decimal.py:2234(Context)
+        1    0.000    0.000    0.000    0.000 traceback.py:1(<module>)
+       25    0.000    0.000    0.000    0.000 {built-in method release}
+        4    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        4    0.000    0.000    0.000    0.000 {psyco._psyco.locals}
+        1    0.000    0.000    0.000    0.000 __init__.py:193(_releaseLock)
+       22    0.000    0.000    0.000    0.000 sre_parse.py:216(isident)
+        1    0.000    0.000    0.000    0.000 __init__.py:590(createLock)
+        1    0.000    0.000    0.000    0.000 atexit.py:6(<module>)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.proxycode}
+       13    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:1186(__init__)
+        7    0.000    0.000    0.000    0.000 {psyco._psyco.globals}
+        1    0.000    0.000    0.000    0.000 sre_parse.py:184(__init__)
+        8    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:926(Logger)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:138(__setitem__)
+        5    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 WinProcesses.py:7(WinProcesses)
+       14    0.000    0.000    0.000    0.000 copy.py:100(_copy_immutable)
+        1    0.000    0.000    0.000    0.000 __init__.py:941(__init__)
+        4    0.000    0.000    0.000    0.000 threading.py:39(__init__)
+        2    0.000    0.000    0.000    0.000 sre_compile.py:480(isstring)
+       12    0.000    0.000    0.000    0.000 sre_compile.py:24(_identityfunction)
+        7    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:383(Thread)
+        1    0.000    0.000    0.000    0.000 {map}
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        1    0.000    0.000    0.000    0.000 __init__.py:564(Handler)
+        8    0.000    0.000    0.000    0.000 {ord}
+        1    0.000    0.000    0.000    0.000 atexit.py:37(register)
+        1    0.000    0.000    0.000    0.000 {_sre.compile}
+        1    0.000    0.000    0.000    0.000 __init__.py:1113(addHandler)
+        1    0.000    0.000    0.000    0.000 threading.py:155(_Condition)
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dictproxy' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:709(StreamHandler)
+        1    0.000    0.000    0.000    0.000 string.py:218(lower)
+        1    0.000    0.000    0.000    0.000 copy.py:112(_copy_with_constructor)
+        1    0.000    0.000    0.000    0.000 __init__.py:306(Formatter)
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 threading.py:79(_RLock)
+        2    0.000    0.000    0.000    0.000 __init__.py:350(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:271(_Semaphore)
+        1    0.000    0.000    0.000    0.000 __init__.py:838(Manager)
+        1    0.000    0.000    0.000    0.000 __init__.py:438(BufferingFormatter)
+        3    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E1E7E18}
+        1    0.000    0.000    0.000    0.000 threading.py:333(_Event)
+        1    0.000    0.000    0.000    0.000 __init__.py:517(Filterer)
+        2    0.000    0.000    0.000    0.000 __init__.py:522(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:204(LogRecord)
+        2    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 WinProcesses.py:8(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:602(_Timer)
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 decimal.py:2219(_ContextManager)
+        1    0.000    0.000    0.000    0.000 decimal.py:154(DecimalException)
+        1    0.000    0.000    0.000    0.000 decimal.py:2869(_WorkRep)
+        1    0.000    0.000    0.000    0.000 support.py:79(PythonFrame)
+        1    0.000    0.000    0.000    0.000 support.py:107(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 __init__.py:791(PlaceHolder)
+        1    0.000    0.000    0.000    0.000 threading.py:671(_DummyThread)
+        1    0.000    0.000    0.000    0.000 threading.py:37(_Verbose)
+        1    0.000    0.000    0.000    0.000 __init__.py:759(FileHandler)
+        1    0.000    0.000    0.000    0.000 {method 'insert' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 decimal.py:225(DivisionByZero)
+        1    0.000    0.000    0.000    0.000 threading.py:318(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 __init__.py:480(Filter)
+        1    0.000    0.000    0.000    0.000 decimal.py:254(DivisionUndefined)
+        1    0.000    0.000    0.000    0.000 __init__.py:843(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:631(_MainThread)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 decimal.py:214(ConversionSyntax)
+        1    0.000    0.000    0.000    0.000 decimal.py:190(InvalidOperation)
+        1    0.000    0.000    0.000    0.000 decimal.py:319(Overflow)
+        1    0.000    0.000    0.000    0.000 decimal.py:280(InvalidContext)
+        1    0.000    0.000    0.000    0.000 decimal.py:243(DivisionImpossible)
+        1    0.000    0.000    0.000    0.000 __init__.py:1180(RootLogger)
+        1    0.000    0.000    0.000    0.000 __init__.py:660(setFormatter)
+        1    0.000    0.000    0.000    0.000 decimal.py:357(Underflow)
+        1    0.000    0.000    0.000    0.000 support.py:75(Frame)
+        1    0.000    0.000    0.000    0.000 decimal.py:177(Clamped)
+        1    0.000    0.000    0.000    0.000 decimal.py:294(Rounded)
+        1    0.000    0.000    0.000    0.000 decimal.py:267(Inexact)
+        1    0.000    0.000    0.000    0.000 decimal.py:307(Subnormal)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:640(_set_daemon)
+
+
+
+Z:\python projects\aardvark>goto end 

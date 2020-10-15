@@ -1,0 +1,558 @@
+17:38:44.79  Logging started, 10/16/07                  %%%%%%%%%%%%%%%%%%%%
+17:38:44.79  profiler hooks busy, trying with the slower trace hooks     % %
+17:38:44.79  ActivePassiveProfiler: starting                           %%%%%
+17:38:44.83   ______
+        #1   |99.4 %|  active_start              ...psyco\profiler.py:281
+        #2   | 0.4 %|  get_property_map                       main.py:80
+        #3   | 0.1 %|  write                     ...s\psyco\logger.py:22
+17:38:45.04  tag function: __main__.handleFilePropertiesInstalledApps1     %
+17:38:45.05   ______
+        #1   |76.6 %|  active_start              ...psyco\profiler.py:281
+        #2   | 4.3 %|  appendComputerId                       main.py:192
+        #3   | 3.4 %|  handleAppsList                         main.py:274
+        #4   | 2.8 %|  main                                   main.py:352
+        #5   | 1.3 %|  getComputerId                          main.py:183
+        #6   | 0.9 %|  <module>                               main.py:1
+        #7   | 0.9 %|  handleFilePropertiesInstalledApps1             main.py:297
+        #8   | 0.3 %|  get_property_map                       main.py:80
+        #9   | 0.1 %|  <module>                              <string>:1
+        #10  | 0.1 %|  IncrementalDecoder        ...\string_escape.py:19
+17:38:45.25   ______
+        #1   |76.1 %|  active_start              ...psyco\profiler.py:281
+        #2   | 4.2 %|  appendComputerId                       main.py:192
+        #3   | 3.3 %|  handleAppsList                         main.py:274
+        #4   | 2.8 %|  main                                   main.py:352
+        #5   | 1.2 %|  getComputerId                          main.py:183
+        #6   | 0.9 %|  <module>                               main.py:1
+        #7   | 0.9 %|  handleFilePropertiesInstalledApps1             main.py:297
+        #8   | 0.5 %|  dumpcharges               ...s\psyco\logger.py:62
+        #9   | 0.3 %|  do_profile                ...psyco\profiler.py:322
+        #10  | 0.3 %|  get_property_map                       main.py:80
+17:38:45.46   ______
+        #1   |75.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 4.2 %|  appendComputerId                       main.py:192
+        #3   | 3.3 %|  handleAppsList                         main.py:274
+        #4   | 2.8 %|  main                                   main.py:352
+        #5   | 1.2 %|  getComputerId                          main.py:183
+        #6   | 1.1 %|  dumpcharges               ...s\psyco\logger.py:62
+        #7   | 0.9 %|  <module>                               main.py:1
+        #8   | 0.9 %|  handleFilePropertiesInstalledApps1             main.py:297
+        #9   | 0.5 %|  do_profile                ...psyco\profiler.py:322
+        #10  | 0.3 %|  get_property_map                       main.py:80
+17:38:45.66   ______
+        #1   |74.9 %|  active_start              ...psyco\profiler.py:281
+        #2   | 4.2 %|  appendComputerId                       main.py:192
+        #3   | 3.3 %|  handleAppsList                         main.py:274
+        #4   | 2.8 %|  main                                   main.py:352
+        #5   | 1.6 %|  dumpcharges               ...s\psyco\logger.py:62
+        #6   | 1.2 %|  getComputerId                          main.py:183
+        #7   | 0.9 %|  <module>                               main.py:1
+        #8   | 0.9 %|  handleFilePropertiesInstalledApps1             main.py:297
+        #9   | 0.8 %|  do_profile                ...psyco\profiler.py:322
+        #10  | 0.3 %|  get_property_map                       main.py:80
+17:38:45.88   ______
+        #1   |74.2 %|  active_start              ...psyco\profiler.py:281
+        #2   | 4.1 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  handleAppsList                         main.py:274
+        #4   | 2.7 %|  main                                   main.py:352
+        #5   | 2.2 %|  dumpcharges               ...s\psyco\logger.py:62
+        #6   | 1.2 %|  getComputerId                          main.py:183
+        #7   | 1.2 %|  do_profile                ...psyco\profiler.py:322
+        #8   | 0.9 %|  <module>                               main.py:1
+        #9   | 0.9 %|  handleFilePropertiesInstalledApps1             main.py:297
+        #10  | 0.3 %|  get_property_map                       main.py:80
+17:38:46.04   ______
+        #1   |73.3 %|  active_start              ...psyco\profiler.py:281
+        #2   | 4.1 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  handleAppsList                         main.py:274
+        #4   | 3.0 %|  dumpcharges               ...s\psyco\logger.py:62
+        #5   | 2.7 %|  main                                   main.py:352
+        #6   | 1.6 %|  do_profile                ...psyco\profiler.py:322
+        #7   | 1.2 %|  getComputerId                          main.py:183
+        #8   | 0.9 %|  <module>                               main.py:1
+        #9   | 0.9 %|  handleFilePropertiesInstalledApps1             main.py:297
+        #10  | 0.3 %|  get_property_map                       main.py:80
+17:38:46.25   ______
+        #1   |72.0 %|  active_start              ...psyco\profiler.py:281
+        #2   | 4.4 %|  dumpcharges               ...s\psyco\logger.py:62
+        #3   | 4.0 %|  appendComputerId                       main.py:192
+        #4   | 3.2 %|  handleAppsList                         main.py:274
+        #5   | 2.6 %|  main                                   main.py:352
+        #6   | 1.8 %|  do_profile                ...psyco\profiler.py:322
+        #7   | 1.2 %|  getComputerId                          main.py:183
+        #8   | 0.9 %|  <module>                               main.py:1
+17:38:46.46   ______
+        #1   |70.1 %|  active_start              ...psyco\profiler.py:281
+        #2   | 6.3 %|  dumpcharges               ...s\psyco\logger.py:62
+        #3   | 3.9 %|  appendComputerId                       main.py:192
+        #4   | 3.1 %|  handleAppsList                         main.py:274
+        #5   | 2.6 %|  main                                   main.py:352
+        #6   | 2.4 %|  do_profile                ...psyco\profiler.py:322
+        #7   | 1.2 %|  getComputerId                          main.py:183
+        #8   | 0.9 %|  <module>                               main.py:1
+17:38:46.66   ______
+        #1   |67.6 %|  active_start              ...psyco\profiler.py:281
+        #2   | 7.7 %|  dumpcharges               ...s\psyco\logger.py:62
+        #3   | 4.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 3.8 %|  appendComputerId                       main.py:192
+        #5   | 3.0 %|  handleAppsList                         main.py:274
+        #6   | 2.5 %|  main                                   main.py:352
+        #7   | 1.1 %|  getComputerId                          main.py:183
+        #8   | 0.8 %|  <module>                               main.py:1
+17:38:46.72  tag function: psyco.logger.dumpcharges                        %
+17:38:46.88   ______
+        #1   |63.9 %|  active_start              ...psyco\profiler.py:281
+        #2   | 7.4 %|  do_profile                ...psyco\profiler.py:322
+        #3   | 3.6 %|  appendComputerId                       main.py:192
+        #4   | 2.8 %|  handleAppsList                         main.py:274
+        #5   | 2.3 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.8 %|  <module>                               main.py:1
+17:38:47.04   ______
+        #1   |62.9 %|  active_start              ...psyco\profiler.py:281
+        #2   | 8.9 %|  do_profile                ...psyco\profiler.py:322
+        #3   | 3.5 %|  appendComputerId                       main.py:192
+        #4   | 2.8 %|  handleAppsList                         main.py:274
+        #5   | 2.3 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.8 %|  <module>                               main.py:1
+17:38:47.25   ______
+        #1   |62.9 %|  active_start              ...psyco\profiler.py:281
+        #2   | 8.9 %|  do_profile                ...psyco\profiler.py:322
+        #3   | 3.5 %|  appendComputerId                       main.py:192
+        #4   | 2.8 %|  handleAppsList                         main.py:274
+        #5   | 2.3 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.8 %|  <module>                               main.py:1
+17:38:47.27  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:38:47.46   ______
+        #1   |61.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.4 %|  appendComputerId                       main.py:192
+        #3   | 2.7 %|  handleAppsList                         main.py:274
+        #4   | 2.3 %|  main                                   main.py:352
+        #5   | 1.0 %|  getComputerId                          main.py:183
+        #6   | 0.8 %|  <module>                               main.py:1
+17:38:47.66   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:47.86   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:48.08   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:48.29   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:48.44   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:48.65   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:48.85   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:49.05   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:49.25   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:49.50   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:49.66   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:49.86   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:50.07   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:50.27   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:50.49   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:50.65   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:50.85   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:51.05   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:51.25   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:51.46   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:51.66   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:51.88   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:52.08   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:52.29   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:52.44   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:52.65   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:52.85   ______
+        #1   |59.5 %|  active_start              ...psyco\profiler.py:281
+        #2   | 3.3 %|  appendComputerId                       main.py:192
+        #3   | 3.2 %|  do_profile                ...psyco\profiler.py:322
+        #4   | 2.6 %|  handleAppsList                         main.py:274
+        #5   | 2.2 %|  main                                   main.py:352
+        #6   | 1.0 %|  getComputerId                          main.py:183
+        #7   | 0.7 %|  <module>                               main.py:1
+17:38:52.85  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:38:53.05   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:53.25   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:53.46   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:53.66   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:53.86   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:54.07   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:54.27   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:54.47   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:54.69   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:54.85   ______
+        #1   | 1.6 %|  active_start              ...psyco\profiler.py:281
+17:38:54.90  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:38:56.94  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:38:58.97  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:01.02  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:03.05  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:05.08  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:07.13  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:09.18  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:11.21  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:13.24  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:15.28  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:17.31  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:19.36  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:21.39  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:23.44  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:25.49  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:27.52  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:29.55  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:31.59  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:33.63  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:35.75  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:37.78  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:39.83  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:41.88  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:43.92  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:46.06  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:46.36  ActivePassiveProfiler: resetting stats                        %
+17:39:48.09  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:50.14  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:52.31  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:54.36  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:56.52  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:39:58.56  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:00.63  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:02.84  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:04.89  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:07.12  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:09.41  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:11.70  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:14.31  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:16.67  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:19.42  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:21.87  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:23.90  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:26.39  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:28.87  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:31.39  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:33.42  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:35.94  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:38.51  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:41.12  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:43.17  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:45.76  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:48.40  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:50.43  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:53.10  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:55.78  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:40:56.09  ActivePassiveProfiler: resetting stats                        %
+17:40:57.81  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:00.57  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:03.31  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:06.07  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:08.10  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:10.87  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:13.68  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:15.74  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:18.62  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:21.52  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:24.38  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:26.42  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:29.38  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:32.31  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:34.34  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:37.29  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:40.27  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:43.34  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:45.37  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:48.41  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:51.49  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:54.60  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:56.63  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:41:59.74  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:02.87  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:04.91  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:08.08  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:11.30  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:14.54  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:16.57  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:16.86  ActivePassiveProfiler: resetting stats                        %
+17:42:19.79  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:23.10  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:25.13  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:28.46  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:31.82  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:35.13  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:37.18  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:40.52  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:43.94  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:47.38  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:49.46  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:52.94  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:56.39  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:42:58.43  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:01.97  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:05.50  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:09.03  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:11.06  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:14.63  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:18.20  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:20.24  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:23.86  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:27.53  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:31.19  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:33.22  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:36.94  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:40.73  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:44.55  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:46.58  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:50.34  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:50.66  ActivePassiveProfiler: resetting stats                        %
+17:43:54.17  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:43:56.20  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:00.03  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:03.86  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:05.89  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:09.79  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:13.67  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:17.59  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:19.62  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:23.65  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:27.64  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:31.61  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:33.65  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:37.68  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:39.76  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:41.87  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:43.96  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:46.01  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:48.10  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:50.17  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:52.25  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:54.32  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:56.40  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:44:58.48  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:00.56  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:02.62  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:04.68  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:06.77  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:08.88  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:10.96  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:11.27  ActivePassiveProfiler: resetting stats                        %
+17:45:13.02  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:15.12  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:17.18  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:19.26  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:21.38  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:23.46  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:25.52  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:27.62  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:29.43  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:31.52  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:33.62  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:35.71  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:37.80  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:39.88  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:41.96  tag function: psyco.profiler.PassiveProfiler.do_profile       %
+17:45:42.74  tag function: __main__.ioTimeAnalysis                         %
+17:45:42.74  tag function: __main__.main                                   %
+17:45:46.01  tag function: __main__.run                                    %
+17:45:46.01  tag function: pstats.Stats                                    %
+17:45:46.01  tag function: pstats.<module>                                 %
+17:45:46.01  tag function: pstats.TupleComp                                %
+17:45:46.01  unsupported opcode 90 at <module>:3                         % %
+17:45:46.01  tag function: pstats.<module>                                 %
+17:45:46.01  tag function: __main__.Profile.print_stats                    %
+17:45:46.02  tag function: __main__.Profile.snapshot_stats                 %
+17:45:46.02  tag function: pstats.Stats.get_top_level_stats                %
+17:45:46.02  tag function: ntpath.split                                    %
+17:45:46.02  tag function: ntpath.basename                                 %
+17:45:46.02  tag function: pstats.func_strip_path                          %
+17:45:46.02  tag function: pstats.Stats.strip_dirs                         %
+17:45:46.02  tag function: pstats.Stats.sort_stats                         %
+17:45:46.02  tag function: pstats.TupleComp.compare                        %
+17:45:46.02  tag function: pstats.TupleComp.compare                        %
+17:45:46.02  tag function: pstats.Stats.print_line                         %
+17:45:46.02  memory usage: 250+ kb                                         %
+17:45:46.02  program exit, 10/16/07                     %%%%%%%%%%%%%%%%%%%%

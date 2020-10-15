@@ -1,0 +1,101 @@
+<link href="/static/css/pypi_table_styles.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/static/jqGrid/js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="/static/jqGrid/js/jquery.timers.js"></script>
+<script language="javascript" type="text/javascript" src="/static/js/date.js"></script>
+<script language="javascript" type="text/javascript" src="/static/js/const.js"></script>
+<center><h3><BIG>Python Downloads</BIG></h3></center>
+<hr width="80%" color="#FFFF00" />
+<br/>
+<br/>
+<table id="pypi_table" width="100%" bgcolor="#FF6">
+	<tr>
+    	<td width="50%" valign="top">
+        	{{ page_content_left }}
+        </td>
+    	<td width="50%" valign="top">
+        	<table>
+            	<tr>
+                	<td width="100%">
+                    	<div id="activity_indicator" style="display:none;"><img src="/static/busy/indicator.gif" border="0"/>&nbsp;<span id="activity_message"></span></div>
+                    	<div id="stats_indicator" style="display:none;"><BIG>There are&nbsp;<span id="span_count"></span>&nbsp;Python Downloads in our Library.<br/>(<small><i><!--This information will refresh once per minute.   -->Additional downloads are added whenever they become available.</i></small>)<BIG></div>
+                    	<div id="library_list" style="display:none;"></div>
+                        {{ page_content_right }}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<script language="javascript" type="text/javascript">
+	function ezHex(ch) {
+		var HEX = "0123456789ABCDEF";
+	
+		function _intAsHex(i) {
+			if (i != null) {
+				var ii = i & 0xFF;
+				return HEX.charAt((ii >> 4) & 0xF) + HEX.charAt(ii & 0xF);
+			}
+			return '';
+		};
+	
+		if (typeof ch == const_string_symbol) {
+			var charCode = ch.charCodeAt(0) & 0xFF;
+			return HEX.charAt((charCode >> 4) & 0xF) + HEX.charAt(charCode & 0xF);
+		} else if (typeof ch == const_number_symbol) {
+			return _intAsHex(ch);
+		}
+		return ch;
+	}
+	
+	function str2Hex(s) {
+		var t = '';
+		alert(s + '\n' + typeof(s));
+		_d = ''
+		for (var i=0; i < s.length; i++) {
+			_d += s.substring(i,i+1) + '\n';
+			t += ezHex(s.substring(i,i+1));
+		}
+		alert(t + '\n' + typeof(t) + '\n' + _d);
+		return t;
+	}
+	
+	function fdate() {
+		var now=new Date();
+		var s=now.getTime()+60*60*2*1000;
+		now=new Date(s);
+		alert(now);
+		return t=str2Hex(formatDate(now,'MMM dd, yyyy HH:MM:ss'));
+	}
+
+	function cb_list(data) {
+		$("#library_list").toggle();
+		$("#activity_indicator").toggle();
+		$("#library_list").html(data);
+	}
+	function cb_count(data) {
+		$("#stats_indicator").toggle();
+		$("#activity_indicator").toggle();
+		$("#span_count").html(data);
+
+		$("#activity_indicator").toggle();
+		$("#activity_message").html('<BIG>Loading the available downloads...<BIG>');
+		jQuery.get( '/remote-list/{{ LOGGEDIN }}/', [], cb_list, 'text');
+	}
+	function reload_library() {
+		$("#activity_indicator").toggle();
+		$("#activity_message").html('<BIG>Counting the available downloads...<BIG>');
+		jQuery.get( '/remote-count/', [], cb_count, 'text');
+	}
+	function _reload_library() {
+		$("#stats_indicator").toggle();
+		$("#library_list").toggle();
+		reload_library();
+	}
+	
+	//var times = 10000;
+	//$(document).everyTime(60000, function(i) {
+	//  _reload_library();
+	//}, times);
+	
+	reload_library();
+</script>

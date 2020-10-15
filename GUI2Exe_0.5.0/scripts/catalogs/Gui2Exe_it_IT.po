@@ -1,0 +1,2564 @@
+# Italian translation for gui2exe
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the gui2exe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gui2exe\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-10-08 16:55-0500\n"
+"PO-Revision-Date: 2008-10-14 13:58+0000\n"
+"Last-Translator: Infinity77 <andrea.gavana@gmail.com>\n"
+"Language-Team: Italian <it@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-10-14 23:56+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ..//BaseBuilderPanel.py:283
+#, python-format
+msgid "%(compiler)s options for: %(projectName)s (Created: %(creationDate)s)"
+msgstr ""
+"Opzioni %(compiler)s per il progetto %(projectName)s (Data di creazione: "
+"%(creationDate)s)"
+
+#: ..//Widgets.py:3028 ..//Widgets.py:3067 ..//Widgets.py:3097
+#, python-format
+msgid "%(dictionaryItems)d key/value pairs"
+msgstr "%(dictionaryItems)d coppie chiave/valore"
+
+#: ..//Widgets.py:3103
+#, python-format
+msgid "%(numberOfObjects)d ordered objects"
+msgstr "%(numberOfObjects)d oggetti ordinati"
+
+#: ..//GUI2Exe.py:273
+msgid "&About GUI2Exe..."
+msgstr "&A proposito di GUI2Exe..."
+
+#: ..//GUI2Exe.py:259
+msgid "&Binary dependencies"
+msgstr "Files &binary necessari"
+
+#: ..//GUI2Exe.py:250
+msgid "&Builds"
+msgstr "&Eseguibili"
+
+#: ..//GUI2Exe.py:254
+msgid "&Check setup script syntax"
+msgstr "&Controlla la sintassi del file di setup"
+
+#: ..//GUI2Exe.py:272
+msgid "&Contact the Author..."
+msgstr "&Contatta l'autore..."
+
+#: ..//GUI2Exe.py:231
+msgid "&Export setup file..."
+msgstr "Es&porta il file di setup..."
+
+#: ..//GUI2Exe.py:224
+msgid "&File"
+msgstr "&File"
+
+#: ..//GUI2Exe.py:263
+msgid "&Help"
+msgstr "&Aiuto"
+
+#: ..//GUI2Exe.py:247
+msgid "&Insert post compilation code..."
+msgstr "&Inserisci codice post-compilazione..."
+
+#: ..//GUI2Exe.py:258
+msgid "&Missing modules"
+msgstr "&Moduli mancanti"
+
+#: ..//GUI2Exe.py:225
+msgid "&New project..."
+msgstr "&Nuovo progetto..."
+
+#: ..//GUI2Exe.py:234 ..//GUI2Exe.py:490 ..//GUI2Exe.py:496 ..//GUI2Exe.py:502
+#: ..//GUI2Exe.py:508
+msgid "&Options"
+msgstr "&Opzioni"
+
+#: ..//GUI2Exe.py:233
+msgid "&Quit"
+msgstr "&Esci"
+
+#: ..//GUI2Exe.py:240
+msgid "&Recurse sub-dirs for data_files option"
+msgstr "Includi sotto-di&rectory per l'opzione data_files"
+
+#: ..//GUI2Exe.py:228
+msgid "&Save project"
+msgstr "&Salva Progetto"
+
+#: ..//GUI2Exe.py:229
+msgid "&Save project as..."
+msgstr "Salva il p&rogetto come..."
+
+#: ..//GUI2Exe.py:251
+msgid "&Test executable"
+msgstr "&Testa l'eseguibile"
+
+#: ..//GUI2Exe.py:268
+msgid "&Tips and tricks"
+msgstr "Consigli e &trucchi"
+
+#: ..//GUI2Exe.py:260 ..//GUI2Exe.py:347
+msgid "&View"
+msgstr "&Visualizza"
+
+#: ..//Widgets.py:3306
+msgid "0 key/value pairs"
+msgstr "0 coppie chiave/valore"
+
+#: ..//Constants.py:197
+msgid ""
+"A list of scripts specified as file names.\n"
+"\n"
+"Hit Ctrl+A to select one or more Python files."
+msgstr ""
+"Una lista di moduli specificati con il nome del file\n"
+"\n"
+"Premi Ctrl+A per selezionare uno o più files di Python"
+
+#: ..//GUI2Exe.py:1179
+msgid ""
+"A new version of GUI2Exe is available!\n"
+"\n"
+"Please go to "
+msgstr ""
+"Una versione aggiornata di GUI2Exe è disponibile!\n"
+"\n"
+"Per favore visita "
+
+#: ..//Constants.py:153
+msgid "A short description of your application."
+msgstr "Una breve descrizione della tua applicazione"
+
+#: ..//Widgets.py:3834
+msgid "Abort"
+msgstr "Interrompi"
+
+#: ..//GUI2Exe.py:299
+msgid "About"
+msgstr "Informazioni"
+
+#: ..//GUI2Exe.py:273
+msgid "About GUI2Exe and the Creator..."
+msgstr "Informazioni su GUI2Exe e il suo Autore..."
+
+#: ..//GUI2Exe.py:246
+msgid "Add &custom code..."
+msgstr "Aggiungi &codice personalizzato..."
+
+#: ..//Widgets.py:959
+msgid "Add Data Files"
+msgstr "Aggiungi Data Files"
+
+#: ..//Widgets.py:953
+msgid "Add Dll/Binary Files"
+msgstr "Aggiungi Dll/Files Binary"
+
+#: ..//Widgets.py:912
+msgid "Add Dylib/Frameworks"
+msgstr "Aggiungi Dylib/Frameworks"
+
+#: ..//Widgets.py:315 ..//Widgets.py:340
+msgid "Add Item(s)"
+msgstr "Aggiungi Elemento(i)"
+
+#: ..//Constants.py:238
+msgid ""
+"Add Plist dictionary key/value pairs or edit\n"
+"an existing PList configuration."
+msgstr ""
+"Permette l'aggiunta di dizionari in formato PList\n"
+"o la rielaborazione di configurazioni PList esistenti."
+
+#: ..//Widgets.py:947
+msgid "Add Python Modules"
+msgstr "Aggiungi Moduli Python"
+
+#: ..//Widgets.py:950
+msgid "Add Python Packages"
+msgstr "Aggiungi Pacchetti Python"
+
+#: ..//Widgets.py:537
+msgid "Add Python Script..."
+msgstr "Aggiungi Scripts di Python..."
+
+#: ..//Widgets.py:944
+msgid "Add Python Scripts"
+msgstr "Aggiungi Scripts di Python"
+
+#: ..//Widgets.py:915
+msgid "Add XC Data Models"
+msgstr "Aggiungi XC Data Models"
+
+#: ..//Constants.py:148
+msgid ""
+"Add a custom icon to your application.\n"
+"The icon will be shown in Windows Explorer.\n"
+"\n"
+"Hit Ctrl+A to add an item to the list and edit it."
+msgstr ""
+"Aggiungi un'icona personalizzata alla tua applicazione\n"
+"L'icona verrà visualizzata in Windows Explorer\n"
+"\n"
+"Premi Ctrl+A per aggiungere un elemento e modificarlo."
+
+#: ..//Constants.py:141
+msgid ""
+"Add a new list item by hitting Ctrl+A and click on the\n"
+"third list control column to select your Python Main\n"
+"Script. You can change the executable kind (windows or\n"
+"console) by clicking on the second list control column,\n"
+"and modify other property of your target class as well.<note>The other "
+"options currently available in py2exe, namely\n"
+"service, com_server and ctypes_com_server are currently\n"
+"not implemented in GUI2Exe."
+msgstr ""
+"Aggiungi un nuovo elemento alla lista premendo Ctrl+A and clicca sulla\n"
+"terza colonna della lista per selezionare il module Python principale.\n"
+"E' possibile modificare il tipo di eseguibile (windows o console)\n"
+"cliccando sulla seconda colonna della lista, nonché modificare altre\n"
+"proprietà della tua classe in Python.<note>Le altre opzioni disponibili in "
+"py2exe, tra\n"
+"cui service, com_service e ctypes_com_server sono\n"
+"al momento non implementate in GUI2Exe."
+
+#: ..//GUI2Exe.py:225
+msgid "Add a new project to the project tree"
+msgstr "Aggiunge un nuovo progetto all'albero dei progetti"
+
+#: ..//Constants.py:100
+msgid "Add a new tree item below the selected item"
+msgstr ""
+"Aggiunge un nuovo elemento all'albero, al di sotto dell'elemento selezionato"
+
+#: ..//Widgets.py:2820
+msgid "Add by Python code"
+msgstr "Aggiungi usando codice Python"
+
+#: ..//GUI2Exe.py:247
+msgid "Add custom code to be executed after the building process"
+msgstr ""
+"Aggiungi codice Python che sarà eseguito alla fine della compilazione"
+
+#: ..//GUI2Exe.py:246
+msgid "Add custom code to the setup script"
+msgstr "Aggiungi codice Python personalizzato al file di setup"
+
+#: ..//Widgets.py:1151
+msgid "Add items to the list"
+msgstr "Aggiungi elementi alla lista"
+
+#: ..//Constants.py:149
+msgid ""
+"Add one or more bitmaps as Windows resources,\n"
+"so that they get packaged in the executable.\n"
+"\n"
+"Hit Ctrl+A to add an item to the list and edit it."
+msgstr ""
+"Aggiunge uno o più files bitmap come risorse Windows,\n"
+"in modo che siano incluse nel file eseguibile.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un elemento e modificarlo."
+
+#: ..//Widgets.py:2825
+msgid "Add your key/value dictionary in Python code:"
+msgstr "Aggiungi una coppia chiave/valore come dizionario Python:"
+
+#: ..//Py2AppPanel.py:83
+msgid "Add/Edit"
+msgstr "Aggiungi/Modifica"
+
+#: ..//Constants.py:225
+msgid "Allow PYTHONPATH to effect the interpreter's environment."
+msgstr "Permetti che PYTHONPATH modifichi l'ambiente dell'interprete"
+
+#: ..//Constants.py:184
+msgid ""
+"Always 1 on Linux/unix. On Windows, governs whether to use\n"
+"the console executable, or the Windows subsystem executable."
+msgstr ""
+"Sempre uguale a 1 in Linux/Unix. In Windows, stabilisce se\n"
+"usare la consolle dell'eseguibile o quella di Windows."
+
+#: ..//Constants.py:202
+msgid ""
+"An optional list of binary files to exclude.\n"
+"\n"
+"Hit Ctrl+A to select one or more binary files."
+msgstr ""
+"Una lista opzionale di files binary da escludere.\n"
+"\n"
+"Premi Ctrl+A per selezionare uno o più files binary."
+
+#: ..//Constants.py:203
+msgid ""
+"An optional list of binary files to include.\n"
+"\n"
+"Hit Ctrl+A to select one or more binary files."
+msgstr ""
+"Una lista opzionale di files binary da includere.\n"
+"\n"
+"Premi Ctrl+A per selezionare uno o più files binary."
+
+#: ..//Constants.py:200
+msgid ""
+"An optional list of paths to be searched before sys.path.\n"
+"\n"
+"Hit Ctrl+A to select one or more directories."
+msgstr ""
+"Una lista opzionale di cartelle in cui cercare prima di sys.path.\n"
+"\n"
+"Premi Ctrl+A per selezionare una o più cartelle."
+
+#: ..//Constants.py:201
+msgid ""
+"An optional list of paths used to extend the hooks package.\n"
+"\n"
+"Hit Ctrl+A to select one or more directories."
+msgstr ""
+"Una lista opzionale di cartelle per estendere il pacchetto hooks.\n"
+"\n"
+"Premi Ctrl+A per selezionare una o più cartelle."
+
+#: ..//Widgets.py:2830
+msgid "Append"
+msgstr "Aggiungi"
+
+#: ..//cx_FreezePanel.py:93
+msgid "Append Script To Executable"
+msgstr "Aggiungi Lo Script All'Eseguibile"
+
+#: ..//cx_FreezePanel.py:94
+msgid "Append Script To Library"
+msgstr "Aggiungi Lo Script Alla Libreria"
+
+#: ..//Constants.py:99
+msgid "Append a new tree item to the selected item"
+msgstr "Appendi un nuovo elemento a quello selezionato"
+
+#: ..//Constants.py:204
+msgid ""
+"Arbitrary files to include in your distribution.\n"
+"\n"
+"Depending on the choice in the menu 'Options' ==>\n"
+"'Recurse sub-dirs for DATA files option' there are\n"
+"2 possibilities:\n"
+"\n"
+"- Choose multiple files at once;\n"
+"- Choose one or more directories: every file in them\n"
+"  will be added recursively.\n"
+"\n"
+"Hit Ctrl+A to select one or more data files."
+msgstr ""
+"Files arbitrari da includere nella tua applicazione.\n"
+"\n"
+"In funzione della scelta nel menu 'Opzioni'==>\n"
+"'Includi sotto-cartelle nell'opzione data_files'\n"
+"ci sono 2 possibilità:\n"
+"\n"
+"- Scegli più files in una volta sola;\n"
+"- Seleziona una o più cartelle: ogni file in queste\n"
+"  cartelle viene aggiunto in modo ricorsivo.\n"
+"\n"
+"Premi Ctrl+A per aggiungere uno o più data files."
+
+#: ..//ProjectTreeCtrl.py:297
+msgid "Are you sure you want to delete all the projects from your database?"
+msgstr "Sei sicuro di voler cancellare tutti i progetti dal database?"
+
+#: ..//ProjectTreeCtrl.py:275 ..//ProjectTreeCtrl.py:312
+msgid ""
+"Are you sure you want to delete the selected project(s) from your database?"
+msgstr "Sei sicuro di voler cancellare i progetti selezionati dal database?"
+
+#: ..//GUI2Exe.py:1185
+msgid "At present you have the latest version of GUI2Exe."
+msgstr "Al momento hai la versione più aggiornata di GUI2Exe."
+
+#: ..//GUI2Exe.py:1148
+msgid "Attempting to connect to the internet..."
+msgstr "Cerco di connettermi a internet..."
+
+#: ..//cx_FreezePanel.py:183
+msgid "Author"
+msgstr "Autore"
+
+#: ..//GUI2Exe.py:235
+msgid "AutoSaves your work every minute"
+msgstr "Salva automaticamente il tuo lavoro ogni minuto"
+
+#: ..//GUI2Exe.py:1071
+msgid "Binary"
+msgstr "binari"
+
+#: ..//Py2ExePanel.py:121
+msgid "Bitmap Path"
+msgstr "Percorso Bitmap"
+
+#: ..//Py2ExePanel.py:43
+msgid "Bitmap Resources"
+msgstr "Risorse Bitmap"
+
+#: ..//Constants.py:162
+msgid ""
+"Boolean value indicating if dependent files should be\n"
+"copied to the target directory or not."
+msgstr ""
+"Valore booleano che indica se i file dipendenti\n"
+"devono essere copiati nella cartella di distribuzione."
+
+#: ..//Constants.py:164
+msgid ""
+"Boolean value indicating if the script module should\n"
+"be appended to the shared library zipfile."
+msgstr ""
+"Valore booleano che indica se il modulo Python\n"
+"deve essere aggiunto alla libreria zipfile."
+
+#: ..//Constants.py:163
+msgid ""
+"Boolean value indicating if the script module should be\n"
+"appended to the executable itself."
+msgstr ""
+"Valore booleano che indica se il modulo Python\n"
+"deve essere aggiunto all'eseguibile stesso."
+
+#: ..//Widgets.py:1039
+msgid "Browse For Folders..."
+msgstr "Seleziona una o più cartelle..."
+
+#: ..//PyInstallerPanel.py:108
+msgid "Build Optimized"
+msgstr "Applica Ottimizzazione"
+
+#: ..//Constants.py:211
+msgid ""
+"Build optimized.\n"
+"\n"
+"PyInstaller will gather *.pyo files\n"
+"if it is run optimized."
+msgstr ""
+"Applica ottimizzazione.\n"
+"\n"
+"PyInstaller utilizza files *.pyo\n"
+"se si applica l'ottimizzazione."
+
+#: ..//Widgets.py:2494
+#, python-format
+msgid "Build output file %(filePath)s successfully saved"
+msgstr "File di output %(filePath)s salvato correttamente"
+
+#: ..//Widgets.py:2445
+#, python-format
+msgid ""
+"Build output text for %(projectName)s (%(compiler)s):\n"
+"Built on %(header)s"
+msgstr ""
+"Testo di output per il progetto %(projectName)s (%(compiler)s):\n"
+"Compilato il %(header)s"
+
+#: ..//Widgets.py:2513
+msgid "Build output text successfully copied to the clipboard"
+msgstr "L'output del compilatore é stato copiato nel clipboard"
+
+#: ..//ExecutableProperties.py:77
+msgid "Builder"
+msgstr "Compilatore"
+
+#: ..//Py2ExePanel.py:235
+msgid "Bundle Files"
+msgstr "Raggruppa Files"
+
+#: ..//Constants.py:218
+msgid ""
+"Bundle extension (default: '.app' for app, '.plugin'\n"
+"for plugins)."
+msgstr ""
+"Estensione dell'applicazione (default: '.app' per \n"
+"un'applicazione, '.plugin' per i plugins)."
+
+#: ..//Constants.py:133
+msgid ""
+"Bundling options for the final dist directory.\n"
+"\n"
+"- Level 3: default for py2exe. No pyd or dll is bundled in the exe\n"
+"  or in the zip-archive;\n"
+"- Level 2: includes the .pyd and .dll files into the zip-archive\n"
+"  or the executable;\n"
+"- Level 1: includes the .pyd and .dll files into the zip-archive\n"
+"  or the executable itself, and does the same for pythonXY.dll.<note>The "
+"Bundle Files option is currently not available on 64\n"
+"bit machines."
+msgstr ""
+"Opzioni di raggruppamento per la directory di distribuzione:\n"
+"\n"
+"- Livello 3: il default per py2exe. Nessun file pyd o dll é\n"
+"  aggiunto all'archivio zip;\n"
+"- Livello 2: i files pyd e dll sono inclusi nell'eseguibile\n"
+"  o nell'archivio zip;\n"
+"- Livello 1: i files pyd e dll sono inclusi nell'eseguibile\n"
+"  o nell'archivio zip, nonché il file PythonXY.dll<note>L'opzione Raggruppa "
+"Files non è al momento disponibile\n"
+"per le macchine a 64 bit."
+
+#: ..//Widgets.py:2071
+msgid "Busy"
+msgstr "Occupato"
+
+#: ..//Constants.py:134
+msgid ""
+"By activating this option in GUI2Exe, you can specify a name\n"
+"for the compressed zip file where py2exe will put all the\n"
+"bytecode-compiled Python modules. If you don't activate\n"
+"this option, or the zipfile name is empty, the default in GUI2Exe\n"
+"is to use zipfile=None. This means the compiled bytecode will be\n"
+"attached to the executable itself and no zip file will be created.<note>If "
+"you specify the Skip Archive option, zipfile can not be\n"
+"None."
+msgstr ""
+"Attivando questa opzione in GUI2Exe, puoi specificare\n"
+"un nome per l'archivio zip in cui py2exe inserirà i \n"
+"moduli Python compilati in byte-code. Se non attivi\n"
+"questa opzione, o sel il nome dell'archivio zip non\n"
+"è valido, il default in GUI2Exe è zipfile=None.\n"
+"Questo significa che i moduli Python compilati vengono\n"
+"aggiunti all'eseguibile e l'archivio zip non sarà creato.<note>Se specifichi "
+"l'opzione Escludi Archivio, zipfile non può\n"
+"essere None."
+
+#: ..//Constants.py:136
+msgid ""
+"By choosing this option, py2exe will copy\n"
+"the Python bytecode files directly into the dist\n"
+"directory (or in the excutable itself). No zipfile\n"
+"archive is used."
+msgstr ""
+"Scegliendo questa opzione, py2exe copia i \n"
+"moduli Python compilati in byte-code\n"
+"direttamente nella cartella di distribuzione\n"
+"(o nell'eseguibile stesso). Nessun archivio\n"
+"zipfile viene usato."
+
+#: ..//Constants.py:140
+msgid ""
+"By selecting a file for this option, your custom\n"
+"Python file can do things like installing a customized\n"
+"stdout blackhole. The custom boot script is executed\n"
+"during startup of the executable immediately after\n"
+"boot_common.py is executed."
+msgstr ""
+"Se selezioni uno script Python, questo\n"
+"tio permetterà di installare, per esempio,\n"
+"un stdout personalizzato. Questo file viene\n"
+"eseguito all'avviamento dell'eseguibile,\n"
+"subito dopo boot_common.py"
+
+#: ..//Process.py:214
+msgid "Byte-compiling Python files..."
+msgstr "Compilo i moduli Python in byte-code..."
+
+#: ..//Widgets.py:1707 ..//Widgets.py:1849 ..//Widgets.py:2411
+msgid "Cancel"
+msgstr "Annulla"
+
+#: ..//GUI2Exe.py:243
+msgid "Change &Python version..."
+msgstr "Cambia la version di &Python..."
+
+#: ..//GUI2Exe.py:270
+msgid "Check for &upgrade"
+msgstr "Controlla a&ggiornamenti"
+
+#: ..//GUI2Exe.py:270
+msgid "Check for a GUI2Exe upgrade"
+msgstr "Cerca possibili aggiornamenti alla versione corrente di GUI2Exe"
+
+#: ..//GUI2Exe.py:254
+msgid "Check the syntax of the auto-generated setup script"
+msgstr "Controlla la sintassi del file di setup auto-generato da GUI2Exe"
+
+#: ..//Widgets.py:1016
+msgid "Choose a data files directory:"
+msgstr "Scegli una cartella per i data files:"
+
+#: ..//Widgets.py:1980
+msgid "Choose one or more folders:"
+msgstr "Seleziona una o più cartelle:"
+
+#: ..//GUI2Exe.py:913
+msgid "Choose the PyInstaller location:"
+msgstr "Seleziona il percorso di PyInstaller:"
+
+#: ..//Widgets.py:3016
+msgid "Class          "
+msgstr "Classe          "
+
+#: ..//GUI2Exe.py:238
+msgid "Clea&n \"dist\" directory"
+msgstr "P&ulisci la cartella \"dist\""
+
+#: ..//GUI2Exe.py:508
+msgid "Clean \"dist\" directory"
+msgstr "Pulisci la cartella \"dist\""
+
+#: ..//GUI2Exe.py:238
+msgid "Clean the distribution folder at every compilation"
+msgstr "Pulisce la cartella di distribuzione \"dist\" ad ogni compilazione"
+
+#: ..//GUI2Exe.py:1695
+msgid "Cleaning the distribution folder..."
+msgstr "Pulisco la cartella di distribuzione..."
+
+#: ..//MessageWindow.py:153
+msgid "Clear History"
+msgstr "Cancella Cronologia"
+
+#: ..//Widgets.py:326
+msgid "Clear all"
+msgstr "Pulisci Tutto"
+
+#: ..//Widgets.py:3837
+msgid "Close"
+msgstr "Chiudi"
+
+#: ..//Constants.py:146
+msgid ""
+"Comma-separated list of DLLs to exclude.\n"
+"\n"
+"Hit Ctrl+A to add a new item in the list and edit it."
+msgstr ""
+"Una lista di files dll da escludere\n"
+"\n"
+"Premi Ctrl+A per aggiungere un elemento e modificarlo."
+
+#: ..//Constants.py:143 ..//Constants.py:232
+msgid ""
+"Comma-separated list of Python modules to exclude.\n"
+"\n"
+"Hit Ctrl+A to add a new item in the list and edit it.<note>The Includes "
+"option is stronger than the Excludes one.\n"
+"So, if a module is present in both Includes and Excludes,\n"
+"it will be included in your final distribution."
+msgstr ""
+"Una lista di moduli Python da escludere.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un nuovo elemento\n"
+"alla lista e modificarlo.<note>L'opzione Includes è più importante di quella "
+"Excludes.\n"
+"Quindi, se un modulo è presente sia in Includes che\n"
+"in Excludes, sarà incluso nell'eseguibile finale."
+
+#: ..//Constants.py:145
+msgid ""
+"Comma-separated list of Python modules to ignore\n"
+"if they are found during the building process.\n"
+"\n"
+"Hit Ctrl+A to add a new item in the list and edit it."
+msgstr ""
+"Una lista di moduli Python da ignorare\n"
+"se vengono trovati durante il process di\n"
+"compilazione.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un nuovo \n"
+"elemento alla lista e modificarlo."
+
+#: ..//Constants.py:142 ..//Constants.py:231
+msgid ""
+"Comma-separated list of Python modules to include.\n"
+"\n"
+"Hit Ctrl+A to add a new item in the list and edit it.<note>The Includes "
+"option is stronger than the Excludes one.\n"
+"So, if a module is present in both Includes and Excludes,\n"
+"it will be included in your final distribution."
+msgstr ""
+"Una lista di moduli Python da includere.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un nuovo elemento\n"
+"alla lista e modificarlo.<note>L'opzione Includes è più importante di quella "
+"Excludes.\n"
+"Quindi, se un modulo è presente sia in Includes che\n"
+"in Excludes, sarà incluso nell'eseguibile finale."
+
+#: ..//Constants.py:144 ..//Constants.py:233
+msgid ""
+"Comma-separated list of Python packages to include.\n"
+"\n"
+"Hit Ctrl+A to add a new item in the list and edit it."
+msgstr ""
+"Una lista di pacchetti Python da includere.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un nuovo \n"
+"elemento alla lista e modificarlo."
+
+#: ..//Constants.py:234
+msgid ""
+"Comma-separated list of frameworks or dylibs to\n"
+"exclude.\n"
+"\n"
+"Hit Ctrl+A to select one or more dylibs or frameworks."
+msgstr ""
+"Una lista di frameworks or dylibs Python da\n"
+"escludere.\n"
+"\n"
+"Premi Ctrl+A per selezionare uno o più dylibs\n"
+"e frameworks."
+
+#: ..//Constants.py:236
+msgid ""
+"Comma-separated list of frameworks or dylibs to\n"
+"include in your distribution.\n"
+"\n"
+"Hit Ctrl+A to select one or more dylibs or frameworks."
+msgstr ""
+"Una lista di frameworks or dylibs Python da\n"
+"includere nella distribuzione finale.\n"
+"\n"
+"Premi Ctrl+A per selezionare uno o più dylibs\n"
+"e frameworks."
+
+#: ..//Py2AppPanel.py:38 ..//Py2ExePanel.py:35 ..//PyInstallerPanel.py:39
+#: ..//bbFreezePanel.py:35 ..//cx_FreezePanel.py:35
+msgid "Common Options"
+msgstr "Opzioni comuni"
+
+#: ..//Py2ExePanel.py:57
+msgid "Company Name"
+msgstr "Nome compagnia"
+
+#: ..//GUI2Exe.py:1799
+msgid "Compilation killed by user"
+msgstr "Compilazione fermata dal'utente"
+
+#: ..//MessageWindow.py:46
+msgid "Compile"
+msgstr "Compila"
+
+#: ..//MessageWindow.py:36
+msgid "Compiler Messages"
+msgstr "Messaggi del Compiler"
+
+#: ..//GUI2Exe.py:267
+msgid "Compiler s&witches"
+msgstr "Op&zioni del Compiler"
+
+#: ..//Py2ExePanel.py:231 ..//bbFreezePanel.py:150 ..//cx_FreezePanel.py:211
+msgid "Compressed"
+msgstr "Compresso"
+
+#: ..//PyInstallerPanel.py:176
+msgid "Compression Level"
+msgstr "Livello di Compressione"
+
+#: ..//PyInstallerPanel.py:66
+msgid "Console Application"
+msgstr "Applicazione Console"
+
+#: ..//GUI2Exe.py:272
+msgid "Contact Andrea Gavana by e-mail"
+msgstr "Contatta Andrea Gavana via e-mail"
+
+#: ..//cx_FreezePanel.py:92
+msgid "Copy Dependent Files"
+msgstr "Copia Files Dipendenti"
+
+#: ..//ProjectTreeCtrl.py:254
+msgid "Copy to new project..."
+msgstr "Copia su un nuovo progetto..."
+
+#: ..//ProjectTreeCtrl.py:676
+msgid "Copying existing project configuration..."
+msgstr "Copio la configurazione del progetto esistente..."
+
+#: ..//Process.py:216
+msgid "Copying files..."
+msgstr "Copia dei file in corso..."
+
+#: ..//Py2ExePanel.py:57
+msgid "Copyrights"
+msgstr "Copyrights"
+
+#: ..//PyInstallerPanel.py:109 ..//bbFreezePanel.py:72
+#: ..//cx_FreezePanel.py:95
+msgid "Create Manifest File (MSW)"
+msgstr "Crea File di Manifesto (MSW)"
+
+#: ..//Constants.py:132
+msgid ""
+"Creates a compressed zip archive (zipfile).\n"
+"\n"
+"It can be either 0 or a positive number, the meaning of\n"
+"activating/deactivating the compression is as follows:\n"
+"\n"
+"- No Compression: the zipfile will be created using the\n"
+"  zipfile.ZIP_STORED Python option;\n"
+"- With Compression: the zipfile will be created using the\n"
+"  zipfile.ZIP_DEFLATED Python option.<note>If you specify the Skip Archive "
+"option, compression can not\n"
+"be activated (no zipfile to compress)."
+msgstr ""
+"Crea un archivio zip compresso (zipfile).\n"
+"\n"
+"Questa opzione può essere 0 o un numero positivo, e il\n"
+"significato del suo valore è specificato qui di seguito:\n"
+"\n"
+"- Senza Compressione: il file compresso viene creato usando\n"
+"  l'opzione: zipfile.ZIP_STORED di Python;\n"
+"- Con Compressione:  il file compresso viene creato usando\n"
+"  l'opzione: zipfile.ZIP_DEFLATED di Python.<note> Se specifichi l'opzione "
+"Ometti Achivio, la compressione\n"
+"non può essere attivata (zipfile non è creato)."
+
+#: ..//Constants.py:159 ..//Constants.py:175
+msgid "Creates a compressed zip file."
+msgstr "Crea un archivio zip compresso"
+
+#: ..//Constants.py:137
+msgid ""
+"Creates a file that instructs Windows on how to correctly\n"
+"render the widgets in your user interface. This file lives\n"
+"under 'other_resources' in py2exe."
+msgstr ""
+"Genera un file che istruisce Windows su come disegnare\n"
+"correttamente i controlli nella tua interfaccia utente. Questo\n"
+"file si trova in 'Altre Risorse' per py2exe."
+
+#: ..//GUI2Exe.py:1457
+msgid "Creating new project..."
+msgstr "Creo un nuovo progetto..."
+
+#: ..//Py2ExePanel.py:304
+msgid "Custom Boot Script"
+msgstr "Script di Inizializzazione"
+
+#: ..//Py2ExePanel.py:337
+msgid "Custom boot file is not a valid file."
+msgstr "Lo script di inizializzazione non è un file valido."
+
+#: ..//Py2ExePanel.py:39
+msgid "DLL Excludes"
+msgstr "DLL Escluse"
+
+#: ..//Widgets.py:1694
+msgid "DLL Name"
+msgstr "Nome DLL"
+
+#: ..//Py2ExePanel.py:110
+msgid "DLL Names"
+msgstr "Nomi DLL"
+
+#: ..//Widgets.py:1694
+msgid "DLL Path"
+msgstr "Percorso DLL"
+
+#: ..//PyInstallerPanel.py:43
+msgid "DLL/Binary Excludes"
+msgstr "DLL/File Binary Esclusi"
+
+#: ..//PyInstallerPanel.py:44
+msgid "DLL/Binary Includes"
+msgstr "DLL/File Binary Inclusi"
+
+#: ..//Py2ExePanel.py:41 ..//PyInstallerPanel.py:45
+msgid "Data Files"
+msgstr "Data Files"
+
+#: ..//DataBase.py:61
+msgid "Database file is corrupted: using backup file"
+msgstr "Il file di database è corrotto: uso il file di backup"
+
+#: ..//Constants.py:192
+msgid ""
+"Ddo not include encodings.<note>The default (on Python versions with unicode "
+"support)\n"
+"is now to include all encodings."
+msgstr ""
+"Non includere il modulo encodings.<note> Il default (per le versioni di "
+"Python che supportano unicode)\n"
+"è ora di includere tutti gli encodings."
+
+#: ..//GUI2Exe.py:237
+msgid "De&lete \"build\" directory"
+msgstr "Cance&lla la cartella \"build\""
+
+#: ..//PyInstallerPanel.py:60
+msgid "Debug"
+msgstr "Debug"
+
+#: ..//Constants.py:102
+msgid "Delete"
+msgstr "Elimina"
+
+#: ..//GUI2Exe.py:502
+msgid "Delete \"build\" directory"
+msgstr "Cancella la cartella \"build\""
+
+#: ..//ProjectTreeCtrl.py:221
+msgid "Delete all projects"
+msgstr "Elimina tutti i progetti"
+
+#: ..//ProjectTreeCtrl.py:244
+msgid "Delete project(s)"
+msgstr "Elimina progetto(i)"
+
+#: ..//Widgets.py:321
+msgid "Delete selected"
+msgstr "Cancella selezionato(i)"
+
+#: ..//GUI2Exe.py:237
+msgid "Delete the build folder at every compilation"
+msgstr "Elimina la cartella \"build\" ad ogni compilazione"
+
+#: ..//Constants.py:102
+msgid "Deletes the selected tree item (and everything below)"
+msgstr ""
+"Cancella l'elemento selezionato nell'albero (e tutti gli elementi al di "
+"sotto)"
+
+#: ..//Constants.py:223
+msgid "Depend on an existing installation of Python 2.4+."
+msgstr "Dipende da un'installazione esistente di Python 2.4+"
+
+#: ..//Constants.py:156
+msgid ""
+"Depends on the kind of executable you wish to build:\n"
+"\n"
+"- windows: builds an executable for a GUI-based application;\n"
+"- console: creates an executable for a console program\n"
+"  (i.e., no graphical interface stuff involved)."
+msgstr ""
+"Dipende dal tipo di eseguibile che vuoi compilare:\n"
+"\n"
+"- windows: compila un eseguibile che contiene un'interfaccia\n"
+"  utente;\n"
+"- console: crea un eseguibile per un programma console\n"
+"  (es., nessuna interfaccia utente è presente)."
+
+#: ..//cx_FreezePanel.py:179
+msgid "Description"
+msgstr "Descrizione"
+
+#: ..//Py2ExePanel.py:117
+msgid "Directory"
+msgstr "Cartella"
+
+#: ..//Widgets.py:835
+msgid "Directory Name"
+msgstr "Nome Cartella"
+
+#: ..//Constants.py:214
+msgid ""
+"Directory to put final built distributions in\n"
+"(default is dist)."
+msgstr ""
+"Cartella che conterrà la distribuzione finale\n"
+"dell'eseguibile (il default è 'dist')"
+
+#: ..//Widgets.py:1250
+msgid "Discard"
+msgstr "Abbandona"
+
+#: ..//Py2AppPanel.py:62 ..//Py2ExePanel.py:90 ..//bbFreezePanel.py:60
+#: ..//cx_FreezePanel.py:75
+msgid "Dist Directory"
+msgstr "Cartella di Distribuzione"
+
+#: ..//PyInstallerPanel.py:193
+msgid "Dist Directory Name"
+msgstr "Nome Cartella di Distribuzione"
+
+#: ..//Constants.py:222
+msgid ""
+"Do not change to the data directory (Contents/Resources).<note> This is "
+"forced for plugins."
+msgstr ""
+"Non muovere nella cartella di dati (Contenuti/Risorse).<note>Questa opzione "
+"è obbligatoria per i plugins."
+
+#: ..//Constants.py:221
+msgid "Do not strip debug and local symbols from output."
+msgstr "Non rimuovere i simboli locali e di debug"
+
+#: ..//Widgets.py:2822
+msgid "Double-click on one item in the tree control above:"
+msgstr "Fai doppio click su un elemento dell'albero:"
+
+#: ..//Constants.py:228
+msgid "Drop to pdb console after the module finding phase is complete."
+msgstr ""
+"Passa alla console pdb quando la fase di ricerca moduli è completata."
+
+#: ..//MessageWindow.py:45
+msgid "Dry Run"
+msgstr "Prova Generale"
+
+#: ..//Constants.py:101
+msgid "Duplicate"
+msgstr "Duplica"
+
+#: ..//Constants.py:101
+msgid "Duplicates the selected tree item"
+msgstr "Duplica l'elemento dell'albero selezionato"
+
+#: ..//Py2AppPanel.py:42
+msgid "Dylib/Frameworks Excludes"
+msgstr "Escludi Dylib/Frameworks"
+
+#: ..//Py2AppPanel.py:44
+msgid "Dylib/Frameworks Includes"
+msgstr "Includi Dylib/Frameworks"
+
+#: ..//Py2AppPanel.py:96 ..//Py2AppPanel.py:102
+msgid "Dylib/Frameworks Names"
+msgstr "Nomi Dylib/Frameworks"
+
+#: ..//GUI2Exe.py:249
+msgid "Edit preferences/settings"
+msgstr "Modifica preferenze e settaggi"
+
+#: ..//ProjectTreeCtrl.py:238
+msgid "Edit project name"
+msgstr "Modifica il nome del progetto"
+
+#: ..//Process.py:175
+#, python-format
+msgid "Elapsed time for the process: %02d:%02d:%02d"
+msgstr "Tempo utilizzato dal processo: %02d:%02d:%02d"
+
+#: ..//Py2AppPanel.py:406 ..//Py2ExePanel.py:411 ..//bbFreezePanel.py:265
+#: ..//cx_FreezePanel.py:385
+msgid "Empty dist_dir option. Using default value \"dist\""
+msgstr "L'opzione dist_dir è vuota. Uso il valore di default \"dist\""
+
+#: ..//cx_FreezePanel.py:390
+msgid "Empty targetName option. Using Python script name"
+msgstr "L'opzione targetName è vuota. Uso il nome dello script Python"
+
+#: ..//GUI2Exe.py:1094
+msgid "Enter a name for the new configuration:"
+msgstr "Inserisci il nome per la nuova configurazione:"
+
+#: ..//ProjectTreeCtrl.py:362 ..//ProjectTreeCtrl.py:662
+msgid "Enter a name for the new project:"
+msgstr "Inserisci il nome del nuovo progetto"
+
+#: ..//Widgets.py:1311
+msgid "Enter your custom code below and it will be inserted inside the\n"
+msgstr "Digita il tuo codice personalizzato che verrà inserito nel\n"
+
+#: ..//GUI2Exe.py:1426
+msgid "Error"
+msgstr "Errore"
+
+#: ..//MessageWindow.py:223
+msgid "Error Message"
+msgstr "Messaggio di Errore"
+
+#: ..//Widgets.py:3864
+msgid "Error Traceback:"
+msgstr "Traceback di Python:"
+
+#: ..//Widgets.py:3815
+msgid "Error/Crash Reporter"
+msgstr "Finestra di Errore/Crash"
+
+#: ..//Widgets.py:3860
+msgid "Error: Oh no, something bad happened!\n"
+msgstr "Errore: Oh no, è successo qualcosa di inaspettato!\n"
+
+#: ..//Py2AppPanel.py:41 ..//Py2ExePanel.py:38 ..//PyInstallerPanel.py:41
+#: ..//bbFreezePanel.py:37 ..//cx_FreezePanel.py:39
+msgid "Excludes"
+msgstr "Escludi"
+
+#: ..//Py2ExePanel.py:55 ..//bbFreezePanel.py:136 ..//cx_FreezePanel.py:197
+msgid "Exe Kind"
+msgstr "Tipo di Eseguibile"
+
+#: ..//Py2ExePanel.py:56 ..//PyInstallerPanel.py:174 ..//cx_FreezePanel.py:69
+msgid "Executable Name"
+msgstr "Nome dell'Eseguibile"
+
+#: ..//GUI2Exe.py:172
+msgid "Executable Properties"
+msgstr "Proprietà dell'Eseguibile"
+
+#: ..//GUI2Exe.py:1900
+msgid "Executable terminated with errors or warnings"
+msgstr "L'eseguibile ha generato messaggi di errore o di avviso"
+
+#: ..//GUI2Exe.py:233
+msgid "Exit GUI2Exe"
+msgstr "Esci da GUI2Exe"
+
+#: ..//GUI2Exe.py:231
+msgid "Export the Setup.py file"
+msgstr "Esporta il file Setup.py"
+
+#: ..//Widgets.py:2410
+msgid "Export to clipboard"
+msgstr "Esporta nel clipboard"
+
+#: ..//Py2AppPanel.py:211
+msgid "Extension"
+msgstr "Estensione"
+
+#: ..//GUI2Exe.py:662
+#, python-format
+msgid "File %(filePath)s successfully saved"
+msgstr "Il file %(filePath)s è stato salvato con successo"
+
+#: ..//PyInstallerPanel.py:96 ..//PyInstallerPanel.py:97
+#: ..//PyInstallerPanel.py:101
+msgid "File Name"
+msgstr "Nome File"
+
+#: ..//ExecutableProperties.py:77
+msgid "Files     "
+msgstr "Files     "
+
+#: ..//Py2AppPanel.py:109 ..//Py2ExePanel.py:117
+msgid "Files Path"
+msgstr "Percorso Files"
+
+#: ..//Widgets.py:1989
+msgid "Filter file extensions using wildcard separated by a comma:"
+msgstr ""
+"Filtra le estensioni dei file usando wildcards separate da una virgola:"
+
+#: ..//Process.py:222
+msgid "Filtering Dependencies..."
+msgstr "Filtro le dipendenze..."
+
+#: ..//Process.py:218
+msgid "Finding required modules..."
+msgstr "Cerco i moduli necessari..."
+
+#: ..//Constants.py:178
+msgid "Flag whether to create the included python interpreter."
+msgstr "Segnala se creare l'interprete di Python oppure no."
+
+#: ..//PyInstallerPanel.py:105
+msgid "Force Execpv"
+msgstr "Forza Execpv"
+
+#: ..//Constants.py:227
+msgid "Force application to run translated on i386."
+msgstr "Obbliga l'applicazione a girare tradotta su i386"
+
+#: ..//Constants.py:208
+msgid ""
+"Force execpv (Linux/Unix only).\n"
+"\n"
+"Ensures that LD_LIBRARY_PATH is set properly."
+msgstr ""
+"Forza execpv (solo Linux/Unix).\n"
+"\n"
+"Assicura che LD_LIBRARY_PATH sia settato correttamente."
+
+#: ..//Widgets.py:2424
+msgid "Full Build Output Dialog"
+msgstr "Finestra per l'Output di Compilazione"
+
+#: ..//GUI2Exe.py:265
+msgid "GUI2Exe &API"
+msgstr "&API di GUI2Exe"
+
+#: ..//GUI2Exe.py:264
+msgid "GUI2Exe &help"
+msgstr "A&iuto di GUI2Exe"
+
+#: ..//Widgets.py:2169
+msgid "GUI2Exe Busy Message"
+msgstr "Messaggio di Attesa per GUI2Exe"
+
+#: ..//Widgets.py:1229
+msgid "GUI2Exe Code Viewer"
+msgstr "Visualizzatore Codice per GUI2Exe"
+
+#: ..//Widgets.py:2610
+msgid "GUI2Exe Help Tip"
+msgstr "Suggerimento GUI2Exe"
+
+#: ..//Widgets.py:2562 ..//Widgets.py:2615
+#, python-format
+msgid "GUI2Exe Help Tip (%(compiler)s)"
+msgstr "Suggerimento GUI2Exe (%(compiler)s)"
+
+#: ..//Widgets.py:3577
+msgid "GUI2Exe Preferences dialog"
+msgstr "Dialogo di Preferenze per GUI2Exe"
+
+#: ..//GUI2Exe.py:168
+msgid "GUI2Exe Projects"
+msgstr "Progetti GUI2Exe"
+
+#: ..//GUI2Exe.py:202
+#, python-format
+msgid "GUI2Exe succesfully started at %(dateAndTime)s"
+msgstr "GUI2Exe inizializzato con successo il %(dateAndTime)s"
+
+#: ..//GUI2Exe.py:1147
+msgid "GUI2Exe: Check for upgrade"
+msgstr "GUI2Exe: Cerca aggiornamenti"
+
+#: ..//Py2AppPanel.py:358 ..//Py2ExePanel.py:356 ..//PyInstallerPanel.py:305
+#: ..//bbFreezePanel.py:217 ..//cx_FreezePanel.py:330
+#, python-format
+msgid "Generating \"%(projectName)s\" setup script..."
+msgstr "Creo il file di setup per \"%(projectName)s\"..."
+
+#: ..//PyInstallerPanel.py:38
+msgid "Hooks Extensions"
+msgstr "Estensioni Hooks"
+
+#: ..//Py2AppPanel.py:227 ..//PyInstallerPanel.py:180
+#: ..//cx_FreezePanel.py:263
+msgid "Icon File"
+msgstr "Icona"
+
+#: ..//Py2ExePanel.py:119
+msgid "Icon Path"
+msgstr "Percorso dell'Icona"
+
+#: ..//Py2ExePanel.py:42
+msgid "Icon Resources"
+msgstr "Risorse Icone"
+
+#: ..//Py2AppPanel.py:339 ..//PyInstallerPanel.py:280
+#: ..//cx_FreezePanel.py:311
+msgid "Icon file is not a valid file."
+msgstr "Il file icona non è un file valido."
+
+#: ..//Constants.py:216
+msgid "Icon file to use for your application."
+msgstr "Un file icona da applicare alla tua applicazione."
+
+#: ..//Py2ExePanel.py:119 ..//Py2ExePanel.py:121 ..//Py2ExePanel.py:123
+msgid "Id  "
+msgstr "Id  "
+
+#: ..//Constants.py:237
+msgid ""
+"If activated, it allows you to add/edit PList\n"
+"dictionary key/value pairs, or to remove it altogether."
+msgstr ""
+"Se attivato, ti permette di aggiungere/modificare un\n"
+"dizionario PList di coppie chiave/valore, o di cancellarlo."
+
+#: ..//Constants.py:135
+msgid ""
+"If you activate this switch, you will be able to\n"
+"specify the name the directory to put final built\n"
+"distributions in (the default is 'dist')."
+msgstr ""
+"Se attivi questa opzione, puoi specificare il nome\n"
+"della cartella finale di distribuzione. (il default è 'dist')."
+
+#: ..//Constants.py:186
+msgid ""
+"If you have UPX installed (detected by Configure), this will use\n"
+"it to compress your executable (and, on Windows, your dlls)"
+msgstr ""
+"Se hai installato UPX (rilevato da Configure) puoi usare questa\n"
+"opzione per comprimere l'eseguibile (e, in Windows, le dll)."
+
+#: ..//Py2ExePanel.py:40
+msgid "Ignores"
+msgstr "Ignora"
+
+#: ..//ProjectTreeCtrl.py:249
+msgid "Import from file..."
+msgstr "Importa da file..."
+
+#: ..//bbFreezePanel.py:71
+msgid "Include Python Interpreter"
+msgstr "Includi l'interprete di Python"
+
+#: ..//Constants.py:194
+msgid "Include TCL/TK in the deployment."
+msgstr "Includi TCL/Tk nella distribuzione."
+
+#: ..//PyInstallerPanel.py:83
+msgid "Include Tk"
+msgstr "Includi Tk"
+
+#: ..//Constants.py:226
+msgid "Include the system and user site-packages into sys.path."
+msgstr "Include site-packages di sistema e dell'utente in sys.path."
+
+#: ..//Py2AppPanel.py:39 ..//Py2ExePanel.py:36 ..//PyInstallerPanel.py:40
+#: ..//bbFreezePanel.py:36 ..//cx_FreezePanel.py:37
+msgid "Includes"
+msgstr "Includi"
+
+#: ..//Constants.py:217
+msgid "Info.plist template file."
+msgstr "File di template Info.plist"
+
+#: ..//Constants.py:154
+msgid "Information about the programmer."
+msgstr "Informazioni a proposito del programmatore."
+
+#: ..//cx_FreezePanel.py:266
+msgid "Initialization Script"
+msgstr "Script di Inizializzazione"
+
+#: ..//cx_FreezePanel.py:304
+msgid "Initialization file is not a valid file."
+msgstr "Lo script di inizializzazione non è un file valido."
+
+#: ..//Constants.py:150
+msgid ""
+"Insert a custom named resource into the executable.\n"
+"\n"
+"Hit Ctrl+A to add an item to the list and edit it."
+msgstr ""
+"Inserisci una risorsa personalizzata nell'eseguibile.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un elemento alla lista\n"
+"e modificarlo."
+
+#: ..//Py2AppPanel.py:482
+msgid "Invalid PList code encountered."
+msgstr "Codice PList invalido."
+
+#: ..//GUI2Exe.py:925
+msgid "Invalid PyInstaller path: no file named 'Build.py' has been found."
+msgstr ""
+"Il percorso per PyInstaller è invalido. Non sono riuscito a trovare il file "
+"'Build.py'."
+
+#: ..//Widgets.py:3210 ..//Widgets.py:3242
+msgid ""
+"Invalid Python code entered.\n"
+"\n"
+msgstr ""
+"Il codice Python inserito non è valido.\n"
+"\n"
+
+#: ..//Widgets.py:848
+msgid "Invalid folder name."
+msgstr "Il nome della cartella non è valido."
+
+#: ..//ProjectTreeCtrl.py:623
+msgid "Invalid or corrupted project file."
+msgstr "Il file di progetto sembra corrotto o non valido."
+
+#: ..//Widgets.py:3508
+msgid "Invalid or empty property name."
+msgstr "Il nome della proprietà non è valido."
+
+#: ..//GUI2Exe.py:1107
+msgid "Invalid perspective name!"
+msgstr "Il nome della prospettiva non è valido!"
+
+#: ..//ProjectTreeCtrl.py:425
+msgid "Invalid project name (empty string)."
+msgstr "Il nome del progetto non è valido (vuoto)."
+
+#: ..//GUI2Exe.py:1904
+#, python-format
+msgid ""
+"It appears that the executable generated errors in file:\n"
+"\n"
+"%(logFile)s\n"
+"\n"
+"Do you want to examine the tracebacks?"
+msgstr ""
+"Sembra che l'eseguibile abbia generato errori nel file:\n"
+"\n"
+"%(logFile)s\n"
+"\n"
+"Vuoi esaminare il traceback di Python?"
+
+#: ..//MessageWindow.py:47
+msgid "Kill"
+msgstr "Termina"
+
+#: ..//Widgets.py:3614
+msgid "Language:"
+msgstr "Lingua:"
+
+#: ..//Constants.py:169 ..//Constants.py:181
+msgid ""
+"List of names of modules to exclude.\n"
+"\n"
+"Hit Ctrl+A to add an item to the list and edit it."
+msgstr ""
+"Lista di moduli da escludere.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un elemento alla lista\n"
+"e modificarlo."
+
+#: ..//Constants.py:199
+msgid ""
+"List of names of modules to exclude.\n"
+"\n"
+"Hit Ctrl+A to select one or more Python modules."
+msgstr ""
+"Lista di moduli da escludere.\n"
+"\n"
+"Premi Ctrl+A per selezionare uno o più moduli Python."
+
+#: ..//Constants.py:168 ..//Constants.py:180
+msgid ""
+"List of names of modules to include.\n"
+"\n"
+"Hit Ctrl+A to add an item to the list and edit it."
+msgstr ""
+"Lista di moduli da includere.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un elemento alla lista\n"
+"e modificarlo."
+
+#: ..//Constants.py:198
+msgid ""
+"List of names of modules to include.\n"
+"\n"
+"Hit Ctrl+A to select one or more Python modules."
+msgstr ""
+"Lista di moduli da includere.\n"
+"\n"
+"Premi Ctrl+A per selezionare uno o più moduli Python."
+
+#: ..//Constants.py:170
+msgid ""
+"List of names of packages to include, including all\n"
+"of the package's submodules.\n"
+"\n"
+"Hit Ctrl+A to add an item to the list and edit it."
+msgstr ""
+"Lista di pacchetti Python da includere, compresi tutti i\n"
+"sotto-pacchetti.\n"
+"\n"
+"Premi Ctrl+A per aggiungere un elemento alla lista\n"
+"e modificarlo."
+
+#: ..//Constants.py:205
+msgid ""
+"List of names of packages to include.\n"
+"\n"
+"Hit Ctrl+A to select one or more Python packages."
+msgstr ""
+"Lista di pacchetti Python da includere.\n"
+"\n"
+"Premi Ctrl+A per selezionare uno o più pacchetti Python."
+
+#: ..//Constants.py:171
+msgid ""
+"List of paths to search for modules.\n"
+"\n"
+"Hit Ctrl+A to select one or more directories."
+msgstr ""
+"Lista di cartelle in cui cercare i moduli.\n"
+"\n"
+"Premi Ctrl+A per selezionare una o più cartelle."
+
+#: ..//GUI2Exe.py:226
+msgid "Load another GUI2Exe database file"
+msgstr "Carica un altro database per GUI2Exe"
+
+#: ..//ProjectTreeCtrl.py:234
+msgid "Load project(s)"
+msgstr "Carica progetto(i)"
+
+#: ..//Widgets.py:3538
+msgid "Locale Settings"
+msgstr "Impostazioni locali"
+
+#: ..//Widgets.py:1697
+msgid "Main Module"
+msgstr "Modulo Principale"
+
+#: ..//Widgets.py:1765
+msgid "Make sure you have the license if you distribute any of them, and\n"
+msgstr "Assicurati di avere la licenza se li distribuisci, e\n"
+
+#: ..//GUI2Exe.py:1426 ..//GUI2Exe.py:1429
+msgid "Message"
+msgstr "Messaggio"
+
+#: ..//GUI2Exe.py:179
+msgid "Messages And Actions"
+msgstr "Messaggi e Azioni"
+
+#: ..//ProjectTreeCtrl.py:42
+msgid "My Projects"
+msgstr "I Miei Progetti"
+
+#: ..//Constants.py:166
+msgid ""
+"Name of icon which should be included in the executable\n"
+"itself on Windows or placed in the target directory for\n"
+"other platforms."
+msgstr ""
+"Il nome dell'icona che sarà assegnata all'eseguibile in\n"
+"Windows o copiata nella cartella di distribuzione per gli\n"
+"altri sistemi operativi."
+
+#: ..//Constants.py:99
+msgid "New Child"
+msgstr "Nuovo Figlio"
+
+#: ..//Constants.py:100
+msgid "New Sibling"
+msgstr "Nuovo Elemento"
+
+#: ..//Widgets.py:815
+msgid "New data files"
+msgstr "Nuovo data file"
+
+#: ..//ProjectTreeCtrl.py:362 ..//ProjectTreeCtrl.py:662
+msgid "New project"
+msgstr "Nuovo progetto"
+
+#: ..//GUI2Exe.py:1470
+#, python-format
+msgid "New project \"%(projectName)s\" added"
+msgstr "Nuovo progetto \"%(projectName)s\" aggiunto"
+
+#: ..//ProjectTreeCtrl.py:217
+msgid "New project..."
+msgstr "Nuovo progetto..."
+
+#: ..//Widgets.py:3450
+msgid "New property dialog"
+msgstr "Finestra per la nuova proprietà"
+
+#: ..//Widgets.py:724
+msgid "New resources"
+msgstr "Nuove risorse"
+
+#: ..//cx_FreezePanel.py:50
+msgid "No Author"
+msgstr "Nessun Autore"
+
+#: ..//Widgets.py:881
+msgid "No Company"
+msgstr "Nessuna Compagnia"
+
+#: ..//Widgets.py:882
+msgid "No Copyrights"
+msgstr "Nessun Copyright"
+
+#: ..//cx_FreezePanel.py:49
+msgid "No Description"
+msgstr "Nessuna Descrizione"
+
+#: ..//Widgets.py:3204
+msgid "No Python code has been entered."
+msgstr "Non è stato inserito codice Python."
+
+#: ..//Py2ExePanel.py:323 ..//PyInstallerPanel.py:265
+msgid "No Python scripts have been added."
+msgstr "Nessuno script Python è stato aggiunto."
+
+#: ..//GUI2Exe.py:1002
+msgid "No SyntaxError detected in the automatically generated Setup.py file."
+msgstr ""
+"Nessun errore di sintassi (SyntaxError) è stato rilevato nello script di "
+"setup."
+
+#: ..//Widgets.py:1706 ..//Widgets.py:1848
+msgid "Ok"
+msgstr "OK"
+
+#: ..//Constants.py:165 ..//Constants.py:179 ..//Constants.py:196
+msgid ""
+"On Windows, it creates a manifest file that instructs\n"
+"Windows on how to correctly render the widgets in your\n"
+"user interface."
+msgstr ""
+"In Windows, crea un file di manifesto che istruisce il\n"
+"sistema operativo su come disegnare correttamente i\n"
+"controlli nella tua interfaccia utente."
+
+#: ..//PyInstallerPanel.py:68
+msgid "One Directory"
+msgstr "Singola Cartella"
+
+#: ..//PyInstallerPanel.py:62
+msgid "One File"
+msgstr "Singolo File"
+
+#: ..//GUI2Exe.py:1713
+msgid "One instance of the building process is already running."
+msgstr "Una istanza del processo di compilazione è già in corso."
+
+#: ..//GUI2Exe.py:265
+msgid "Opens the GUI2Exe API reference"
+msgstr "Mostra il manuale API di GUI2Exe"
+
+#: ..//GUI2Exe.py:264
+msgid "Opens the GUI2Exe help"
+msgstr "Apre l'aiuto per GUI2Exe"
+
+#: ..//Constants.py:131 ..//Constants.py:158 ..//Constants.py:174
+#: ..//Constants.py:215
+msgid ""
+"Optimization level for the compiled bytecode.\n"
+"\n"
+"0: No optimization on the compiled bytecode;\n"
+"1 (Python -O): Optimize the generated bytecode;\n"
+"2 (Python -OO): remove doc-strings in addition to the -O optimizations."
+msgstr ""
+"Livello di ottimizzazione per il codice compilato.\n"
+"\n"
+"0: Nessuna ottimizzazione nel codice compilato;\n"
+"1 (Python -O): ottimizza il codice generato;\n"
+"2 (Python -OO): rimuove le docstrings in aggiunta all'ottimizzazione -O."
+
+#: ..//Py2AppPanel.py:223 ..//Py2ExePanel.py:227 ..//bbFreezePanel.py:146
+#: ..//cx_FreezePanel.py:207
+msgid "Optimize"
+msgstr "Ottimizza"
+
+#: ..//Py2AppPanel.py:47 ..//Py2ExePanel.py:45 ..//PyInstallerPanel.py:46
+#: ..//bbFreezePanel.py:38 ..//cx_FreezePanel.py:40
+msgid "Other Options"
+msgstr "Altre Opzioni"
+
+#: ..//Py2ExePanel.py:44
+msgid "Other Resources"
+msgstr "Altre Risorse"
+
+#: ..//Constants.py:219
+msgid "Output module dependency graph."
+msgstr "Stampa il grafico di dipendenza tra moduli"
+
+#: ..//Py2AppPanel.py:80
+msgid "PList Code"
+msgstr "Codice PList"
+
+#: ..//Py2AppPanel.py:231
+msgid "PList File"
+msgstr "File PList"
+
+#: ..//Py2AppPanel.py:332
+msgid "PList file is not a valid file."
+msgstr "Il File PList non e valido"
+
+#: ..//Py2AppPanel.py:40 ..//Py2ExePanel.py:37 ..//cx_FreezePanel.py:38
+msgid "Packages"
+msgstr "Pacchetti"
+
+#: ..//PyInstallerPanel.py:42
+msgid "Packages (PKG)"
+msgstr "Pacchetti (PKG)"
+
+#: ..//PyInstallerPanel.py:88 ..//PyInstallerPanel.py:94
+#: ..//PyInstallerPanel.py:96 ..//PyInstallerPanel.py:97
+#: ..//PyInstallerPanel.py:101 ..//cx_FreezePanel.py:36
+msgid "Path"
+msgstr "Percorso"
+
+#: ..//PyInstallerPanel.py:37
+msgid "Path Extensions"
+msgstr "Estensione Percorsi"
+
+#: ..//Py2ExePanel.py:123
+msgid "Path/Value"
+msgstr "Percorso/Valore"
+
+#: ..//PyInstallerPanel.py:56 ..//PyInstallerPanel.py:58
+#: ..//cx_FreezePanel.py:90
+msgid "Paths"
+msgstr "Percorsi"
+
+#: ..//GUI2Exe.py:1096
+#, python-format
+msgid "Perspective %d"
+msgstr "Prospettiva %d"
+
+#: ..//Widgets.py:3195
+msgid "Please double-click on one of the tree items, to which the\n"
+msgstr "Fai doppio-click su uno degli elementi dell'albero, al quale il\n"
+
+#: ..//Widgets.py:834
+msgid "Please enter the name of the folder for py2exe:"
+msgstr "Inserisci il nome della cartella per py2exe:"
+
+#: ..//Widgets.py:3474
+msgid "Please insert the property name and select its type below:"
+msgstr "Inserisci il nome della proprietà e seleziona il suo tipo:"
+
+#: ..//ProjectTreeCtrl.py:587
+msgid "Please select a GUI2Exe project file..."
+msgstr "Seleziona un progetto GUI2Exe"
+
+#: ..//Widgets.py:793
+msgid "Please select one directory..."
+msgstr "Seleziona una cartella..."
+
+#: ..//Widgets.py:3280
+msgid "Please select one item in the tree."
+msgstr "Seleziona un elemento nell'albero."
+
+#: ..//GUI2Exe.py:876
+msgid "Please select the new Python executable ..."
+msgstr "Seleziona il nuovo eseguibile Python..."
+
+#: ..//GUI2Exe.py:302
+msgid "Preferences"
+msgstr "Preferenze"
+
+#: ..//GUI2Exe.py:249
+msgid "Preferences..."
+msgstr "Preferenze..."
+
+#: ..//Constants.py:190
+msgid "Produces a single directory deployment (default)."
+msgstr ""
+"Copia tutti i files in una singola cartella di distribuzione (default)."
+
+#: ..//Constants.py:189
+msgid "Produces a single file deployment."
+msgstr "Crea un singolo file eseguibile."
+
+#: ..//Py2ExePanel.py:58 ..//cx_FreezePanel.py:187
+msgid "Program Name"
+msgstr "Nome Programma"
+
+#: ..//GUI2Exe.py:1513
+#, python-format
+msgid "Project \"%(projectName)s\" successfully loaded"
+msgstr "Il progetto \"%(projectName)s\" è stato caricato correttamente"
+
+#: ..//ProjectTreeCtrl.py:689
+#, python-format
+msgid "Project %(existingProject)s succesfully copied to %(newProject)s"
+msgstr ""
+"Il progetto %(existingProject)s è stato copiato con successo in "
+"%(newProject)s"
+
+#: ..//GUI2Exe.py:702
+#, python-format
+msgid "Project %(projectName)s successfully exported to file %(filePath)s"
+msgstr ""
+"Ho esportato con successo il progetto %(projectName)s nel file %(filePath)s"
+
+#: ..//GUI2Exe.py:1992 ..//GUI2Exe.py:2006
+msgid "Project successfully updated from file."
+msgstr "Progetto correttamente aggiornato da file"
+
+#: ..//Widgets.py:3539
+msgid "Projects"
+msgstr "Progetti"
+
+#: ..//Widgets.py:3015
+msgid "Property List "
+msgstr "Lista Proprietà "
+
+#: ..//Widgets.py:3477
+msgid "Property Name:"
+msgstr "Nome Properità:"
+
+#: ..//Widgets.py:3479
+msgid "Property Type:"
+msgstr "Tipo Proprietà:"
+
+#: ..//Widgets.py:3486
+msgid "Property Value (optional)"
+msgstr "Valore proprietà (opzionale)"
+
+#: ..//Widgets.py:1738
+msgid "Py2Exe Binary Dependencies"
+msgstr "File Binari Necessari per Py2Exe"
+
+#: ..//Widgets.py:1741
+msgid "Py2Exe Missing Modules"
+msgstr "Moduli Mancanti per Py2Exe"
+
+#: ..//Widgets.py:883
+msgid "Py2Exe Sample File"
+msgstr "File di Py2Exe"
+
+#: ..//Widgets.py:1769
+msgid "Py2Exe thinks that these modules (and sub-modules) are missing.\n"
+msgstr ""
+"Py2Exe pensa che i seguenti moduli (e sotto-moduli) siano mancanti.\n"
+
+#: ..//Constants.py:230
+msgid ""
+"Py2app allows you to include one (or more) series of files\n"
+"that you are going to need to run your executable\n"
+"\n"
+"Depending on the choice in the menu 'Options' ==>\n"
+"'Recurse sub-dirs for DATA files option' there are\n"
+"2 possibilities:\n"
+"\n"
+"- Choose multiple files at once;\n"
+"- Choose one or more directories: every file in them\n"
+"  will be added recursively.\n"
+"\n"
+"Hit Ctrl+A to add data files to the list."
+msgstr ""
+"Py2app ti permette di includere una o più serie di files\n"
+"che ti serviranno per lanciare l'eseguibile.\n"
+"\n"
+"In funzione della scelta nel menu 'Opzioni' ==>\n"
+"'Includi sotto-directory per l'opzione data_files' ci sono\n"
+"2 possibilità:\n"
+"\n"
+"- Scegli uno o più file in una volta sola;\n"
+"- Seleziona una o più cartelle: ogni file in queste cartelle\n"
+"  sarà aggiunto ricorsivamente.\n"
+"\n"
+"Premi Ctrl+A per aggiungere data files alla lista."
+
+#: ..//Py2AppPanel.py:51
+#, python-format
+msgid "Py2app options for: %(projectName)s (Created: %(creationDate)s)"
+msgstr "Opzioni Py2app per: %(projectName)s (Creato: %(creationDate)s)"
+
+#: ..//Constants.py:147
+msgid ""
+"Py2exe allows you to include one (or more) series of files\n"
+"that you are going to need to run your executable\n"
+"\n"
+"Depending on the choice in the menu 'Options' ==>\n"
+"'Recurse sub-dirs for DATA files option' there are\n"
+"2 possibilities:\n"
+"\n"
+"- Choose multiple files at once;\n"
+"- Choose one or more directories: every file in them\n"
+"  will be added recursively.\n"
+"\n"
+"Hit Ctrl+A to add data files to the list."
+msgstr ""
+"Py2exe ti permette di includere una o più serie di files\n"
+"che ti serviranno per lanciare l'eseguibile.\n"
+"\n"
+"In funzione della scelta nel menu 'Opzioni' ==>\n"
+"'Includi sotto-directory per l'opzione data_files' ci sono\n"
+"2 possibilità:\n"
+"\n"
+"- Scegli uno o più file in una volta sola;\n"
+"- Seleziona una o più cartelle: ogni file in queste cartelle\n"
+"  sarà aggiunto ricorsivamente.\n"
+"\n"
+"Premi Ctrl+A per aggiungere data files alla lista."
+
+#: ..//Py2ExePanel.py:50
+#, python-format
+msgid "Py2exe options for: %(projectName)s (Created: %(creationDate)s)"
+msgstr "Opzioni Py2exe per: %(projectName)s (Creato: %(creationDate)s)"
+
+#: ..//PyInstallerPanel.py:51
+#, python-format
+msgid "PyInstaller options for: %(projectName)s (Created: %(creationDate)s)"
+msgstr "Opzioni PyInstaller per: %(projectName)s (Creato: %(creationDate)s)"
+
+#: ..//PyInstallerPanel.py:390
+msgid ""
+"PyInstaller path has not been set.\n"
+"\n"
+"Please set the PyInstaller"
+msgstr ""
+"Il percorso di PyInstaller non è stato selezionato.\n"
+"\n"
+"Per favore inserisci il percorso di PyInstaller."
+
+#: ..//Py2AppPanel.py:215 ..//Py2ExePanel.py:55 ..//bbFreezePanel.py:141
+#: ..//cx_FreezePanel.py:202
+msgid "Python Main Script"
+msgstr "Script di Python"
+
+#: ..//Py2AppPanel.py:90 ..//Py2AppPanel.py:99 ..//Py2ExePanel.py:101
+#: ..//Py2ExePanel.py:107 ..//Py2ExePanel.py:113 ..//PyInstallerPanel.py:88
+#: ..//PyInstallerPanel.py:91 ..//bbFreezePanel.py:66 ..//bbFreezePanel.py:69
+#: ..//cx_FreezePanel.py:81 ..//cx_FreezePanel.py:87
+msgid "Python Modules"
+msgstr "Moduli Python"
+
+#: ..//Py2AppPanel.py:93 ..//Py2ExePanel.py:104 ..//PyInstallerPanel.py:94
+#: ..//cx_FreezePanel.py:84
+msgid "Python Packages"
+msgstr "Pacchetti Python"
+
+#: ..//PyInstallerPanel.py:54
+msgid "Python Scripts"
+msgstr "Scripts di Python"
+
+#: ..//GUI2Exe.py:892
+#, python-format
+msgid "Python executable changed from %(oldVersion)s to %(newVersion)s"
+msgstr ""
+"L'eseguibile Python è stato cambiato da %(oldVersion)s a %(newVersion)s"
+
+#: ..//Py2AppPanel.py:325 ..//Py2ExePanel.py:330 ..//cx_FreezePanel.py:297
+msgid "Python main script is not a valid file."
+msgstr "Lo script di Python non è un file valido."
+
+#: ..//PyInstallerPanel.py:273
+#, python-format
+msgid ""
+"Python script:\n"
+"\n"
+"%(scriptName)s\n"
+"\n"
+"Is not a valid file."
+msgstr ""
+"Lo script di Python:\n"
+"\n"
+"%(scriptName)s\n"
+"\n"
+"Non è un file valido."
+
+#: ..//GUI2Exe.py:1426 ..//GUI2Exe.py:1433 ..//GUI2Exe.py:1443
+msgid "Question"
+msgstr "Domanda"
+
+#: ..//GUI2Exe.py:305
+msgid "Quit"
+msgstr "Esci"
+
+#: ..//GUI2Exe.py:240
+msgid "Recurse sub-directories for data_files option if checked"
+msgstr "Se selezionato, include le sotto-directory per l'opzione data_files"
+
+#: ..//GUI2Exe.py:490
+msgid "Recurse sub-dirs for data_files option"
+msgstr "Includi sotto-directory per l'opzione data_files"
+
+#: ..//Widgets.py:3540
+msgid "Reload opened projects at start-up"
+msgstr "Ricarica i progetti aperti allo start-up"
+
+#: ..//Widgets.py:3546
+msgid "Remember GUI2Exe window position on exit"
+msgstr "Ricorda la posizione della finestra GUI2Exe"
+
+#: ..//Widgets.py:3544
+msgid "Remember GUI2Exe window size on exit"
+msgstr "Ricorda le dimensioni della finestra GUI2Exe"
+
+#: ..//Widgets.py:3542
+msgid "Remember last used compiler for all projects"
+msgstr "Salva l'ultimo compilatore utilizzato per ogni progetto"
+
+#: ..//Py2AppPanel.py:85
+msgid "Remove"
+msgstr "Elimina"
+
+#: ..//Constants.py:239
+msgid "Remove existing PList code."
+msgstr "Rimuovi il codice PList esistente"
+
+#: ..//Widgets.py:1152
+msgid "Remove items from the list"
+msgstr "Rimuovi elementi dalla lista"
+
+#: ..//Widgets.py:3835
+msgid "Report Error"
+msgstr "Segnala Errore"
+
+#: ..//Py2AppPanel.py:45
+msgid "Resources"
+msgstr "Risorse"
+
+#: ..//GUI2Exe.py:1116
+#, python-format
+msgid "Restore GUI configuration: %s"
+msgstr "Ripristina l'interfaccia: %s"
+
+#: ..//GUI2Exe.py:296
+msgid "Restore original"
+msgstr "Ripristina l'originale"
+
+#: ..//GUI2Exe.py:262
+msgid "Restore original &GUI"
+msgstr "Ripristina l'interfaccia originale"
+
+#: ..//GUI2Exe.py:262
+msgid "Restore the original GUI appearance"
+msgstr "Ripristina l'interfaccia utente originale"
+
+#: ..//Process.py:235 ..//Process.py:240
+msgid "Running compilation steps..."
+msgstr "Lancio le fasi di compilazione..."
+
+#: ..//Widgets.py:1249
+msgid "Save"
+msgstr "Salva"
+
+#: ..//GUI2Exe.py:261
+msgid "Save &panes configuration..."
+msgstr "Salva configurazione &pannelli"
+
+#: ..//GUI2Exe.py:648 ..//GUI2Exe.py:687
+msgid "Save file as ..."
+msgstr "Salva come..."
+
+#: ..//Widgets.py:2480
+msgid "Save file as..."
+msgstr "Salva file come..."
+
+#: ..//GUI2Exe.py:261
+msgid "Save the current GUI panes configuration"
+msgstr "Salva la disposizione corrente dei pannelli"
+
+#: ..//GUI2Exe.py:229
+msgid "Save the current project to a file"
+msgstr "Salva il progetto in un file"
+
+#: ..//GUI2Exe.py:228
+msgid "Save the current project to database"
+msgstr "Salva il progetto nel database"
+
+#: ..//Widgets.py:2409
+msgid "Save to file..."
+msgstr "Salva su file..."
+
+#: ..//GUI2Exe.py:1095
+msgid "Saving panels configuration"
+msgstr "Salvo la configurazione dei pannelli"
+
+#: ..//PyInstallerPanel.py:47
+msgid "Scripts"
+msgstr "Scripts"
+
+#: ..//GUI2Exe.py:244
+msgid "Set P&yInstaller path..."
+msgstr "Seleziona il percorso per P&yInstaller"
+
+#: ..//GUI2Exe.py:244
+msgid "Sets the PyInstaller installation path"
+msgstr "Seleziona la cartella di installazione di PyInstaller"
+
+#: ..//Constants.py:183
+msgid ""
+"Setting to 1 gives you progress messages from the executable\n"
+"(for a console=0, these will be annoying MessageBoxes)."
+msgstr ""
+"Se selezionato, fornisce messaggi dall'eseguibile\n"
+"(se usato con console=0, i messaggi sono mostrati\n"
+"in ripetitive finestre)."
+
+#: ..//Process.py:172
+msgid "Setup file succesfully compiled"
+msgstr "Il file di setup è stato compilato con successo"
+
+#: ..//Py2AppPanel.py:448 ..//Py2ExePanel.py:479 ..//PyInstallerPanel.py:450
+#: ..//bbFreezePanel.py:293 ..//cx_FreezePanel.py:423
+#, python-format
+msgid "Setup script for \"%(projectName)s\" succesfully created"
+msgstr "Creazione del file di setup per \"%(projectName)s\" completata"
+
+#: ..//GUI2Exe.py:256
+msgid "Show &full build output"
+msgstr "Visuali&zza il rapporto del compilatore"
+
+#: ..//GUI2Exe.py:268
+msgid "Show compilation tips and tricks"
+msgstr "Visualizza suggerimenti e trucchi per la compilazione"
+
+#: ..//GUI2Exe.py:267
+msgid "Show compilers switches and common options"
+msgstr "Visualizza le opzioni per i compilatori e opzioni comuni"
+
+#: ..//GUI2Exe.py:241 ..//GUI2Exe.py:496
+msgid "Show t&ooltips"
+msgstr "Vis&ualizza suggerimenti"
+
+#: ..//Widgets.py:2863
+msgid "Simple PList editor for py2app"
+msgstr "Semplice editor per le PList di py2app"
+
+#: ..//ExecutableProperties.py:77
+msgid "Size (MB)   "
+msgstr "Dimensioni (MB)   "
+
+#: ..//Constants.py:229
+msgid "Skip macholib phase.<note>Your App will not be standalone."
+msgstr ""
+"Salta la fase di macholib.<note>La tua applicazione non sarà indipendente."
+
+#: ..//Process.py:220
+msgid "Skipping Python loaders/byte-compilation..."
+msgstr "Salto la compilazione dei Python loaders..."
+
+#: ..//GUI2Exe.py:1771
+#, python-format
+msgid "Starting compilation with Python executable: %(pythonExecutable)s"
+msgstr "Compilazione iniziata con l'eseguibile Python: %(pythonExecutable)s"
+
+#: ..//GUI2Exe.py:1846
+msgid "Starting compiled executable..."
+msgstr "Lancio l'eseguibile compilato..."
+
+#: ..//PyInstallerPanel.py:72
+msgid "Strip Executable"
+msgstr "Svuota Eseguibile"
+
+#: ..//Widgets.py:1697
+msgid "Sub-Module 1"
+msgstr "Sotto-Modulo 1"
+
+#: ..//Widgets.py:1698
+msgid "Sub-Module 2"
+msgstr "Sotto-Modulo 2"
+
+#: ..//Widgets.py:1698
+msgid "Sub-Module 3"
+msgstr "Sotto-Modulo 3"
+
+#: ..//GUI2Exe.py:226
+msgid "Switch project &database..."
+msgstr "Cambia il data&base dei progetti..."
+
+#: ..//GUI2Exe.py:1006
+#, python-format
+msgid "SyntaxError at line %d, column %d"
+msgstr "Errore di sintassi alla linea %d, colonna %d"
+
+#: ..//cx_FreezePanel.py:41
+msgid "Target Class"
+msgstr "Classe Obiettivo"
+
+#: ..//Py2ExePanel.py:46
+msgid "Target Classes"
+msgstr "Classi Obiettivo"
+
+#: ..//GUI2Exe.py:243
+msgid "Temporarily changes the Python version"
+msgstr "Cambia temporaneamente la versione di Python"
+
+#: ..//GUI2Exe.py:251
+msgid "Test the compiled file (if it exists)"
+msgstr "Testa l'eseguibile compilato (se esiste)"
+
+#: ..//GUI2Exe.py:1739
+msgid "The Dry-Run option is available only for Py2Exe."
+msgstr "L'opzione Dry-Run è disponibile solo per Py2Exe."
+
+#: ..//Constants.py:157 ..//Constants.py:173 ..//Constants.py:213
+msgid ""
+"The Python main script you want to convert\n"
+"to an executable."
+msgstr ""
+"Lo script principale di Python che\n"
+"vuoi convertire in eeguibile."
+
+#: ..//Constants.py:195
+msgid ""
+"The Zlib compression level to use.\n"
+"\n"
+"If 0, the zlib module is not required."
+msgstr ""
+"Il livello di compressione per zlib.\n"
+"\n"
+"Se è 0, il modulo zlib non è necessario."
+
+#: ..//GUI2Exe.py:1820
+msgid "The compiler has successfully built your executable.\n"
+msgstr "La fase di compilazione è terminata con successo.\n"
+
+#: ..//GUI2Exe.py:1773
+#, python-format
+msgid "The compiler selected is ==> %(compiler)s <=="
+msgstr "Il compilatore selezionato è ==> %(compiler)s <=="
+
+#: ..//Widgets.py:1401
+msgid ""
+"The current code has changed.\n"
+"Do you want to save changes?"
+msgstr ""
+"Il codice è stato cambiato.\n"
+"Vuoi salvare i cambiamenti?"
+
+#: ..//GUI2Exe.py:158
+msgid ""
+"The database file and its backup seem to be broken.\n"
+"\n"
+msgstr ""
+"Il file di database e il suo backup sembrano corrotti.\n"
+"\n"
+
+#: ..//Constants.py:161 ..//Constants.py:176
+msgid ""
+"The directory in which to place the target executable and\n"
+"any dependent files."
+msgstr ""
+"La cartella in cui copiare l'eseguibile e\n"
+"tutti i file dipendenti."
+
+#: ..//Constants.py:193
+msgid ""
+"The directory in which to place the target executable and\n"
+"any dependent files.<note>This is used only when 'onedir' is set to 1."
+msgstr ""
+"La cartella in cui copiare l'eseguibile e\n"
+"tutti i file dipendenti.<note>Questa opzione è usata solo se 'onedir' è 1."
+
+#: ..//Constants.py:185
+msgid ""
+"The executable and all shared libraries will be run through\n"
+"strip.<note>Note that cygwin's strip tends to render normal Win32\n"
+"dlls unusable."
+msgstr ""
+"L'eseguibile e tutte le librerie condivise vengono\n"
+"ripulite con strip.<note>Nota che lo strip in cygwin può rendere \n"
+"inutilizzabili le normali dll in Windows."
+
+#: ..//Constants.py:191
+msgid "The filename for the executable."
+msgstr "Il nome dell'eseguibile."
+
+#: ..//Constants.py:177
+msgid ""
+"The gui_only flag only has a meaning on Windows: If set, the\n"
+"executable created for this script will not open a console window."
+msgstr ""
+"L'opzione gui_only ha senso solo in Windows. Se Selezionata\n"
+"l'eseguibile generato non aprirà una finestra DOS."
+
+#: ..//Constants.py:167
+msgid ""
+"The name of the initialization script that will be executed\n"
+"before the actual script is executed; this script is used to\n"
+"set up the environment for the executable; if a name is given\n"
+"without an absolute path the names of files in the initscripts\n"
+"subdirectory of the cx_Freeze package is searched."
+msgstr ""
+"Il nome dello script di inizializzazione che viene\n"
+"eseguito prima dell'eseguibile. Questo script è usato\n"
+"per modificare l'ambiente dell'eseguibile. Se non viene\n"
+"specificato l'intero percorso per questo file, la\n"
+"sotto-cartella initscripts di cx_Freeze verrà utilizzata\n"
+"per cercare lo script."
+
+#: ..//Constants.py:160
+msgid ""
+"The name of the target executable; the default value is\n"
+"the name of the script with the extension exchanged with\n"
+"the extension for the base executable."
+msgstr ""
+"Il nome dell'eseguibile. I valore di default è\n"
+"il nome dello script Python in cui l'estensione\n"
+"viene modificata in funzione del sistema operativo\n"
+"in uso."
+
+#: ..//Constants.py:155
+msgid "The program name"
+msgstr "Il nome del programma."
+
+#: ..//ProjectTreeCtrl.py:430
+msgid "The project name you chose already exists."
+msgstr "Un progetto con lo stesso nome esiste già."
+
+#: ..//GUI2Exe.py:888
+msgid "The selected file is not a Python executable."
+msgstr "Il file selezionato non è un eseguibile Python"
+
+#: ..//Constants.py:220
+msgid ""
+"This command line switch instructs py2app to create a Python\n"
+"module cross reference and display it in the webbrowser.\n"
+"This allows to answer question why a certain module\n"
+"has been included, or if you can exlude a certain module\n"
+"and its dependencies."
+msgstr ""
+"Questa opzione forza py2app a creare una referenza\n"
+"incrociata tra i moduli Python e a visualizzarla in\n"
+"una finestra del browser. Questo ti permetterà di capire\n"
+"perchè un determinato modulo è stato incluso o se ti\n"
+"è possibile escludere un modulo e le sue dipendenze."
+
+#: ..//Constants.py:138
+msgid ""
+"This command line switch instructs py2exe to create a Python\n"
+"module cross reference and display it in the webbrowser.\n"
+"This allows to answer question why a certain module\n"
+"has been included, or if you can exlude a certain module\n"
+"and its dependencies."
+msgstr ""
+"Questa opzione forza py2exe a creare una referenza\n"
+"incrociata tra i moduli Python e a visualizzarla in\n"
+"una finestra del browser. Questo ti permetterà di capire\n"
+"perchè un determinato modulo è stato incluso o se ti\n"
+"è possibile escludere un modulo e le sue dipendenze."
+
+#: ..//Widgets.py:1308
+msgid "This is the Setup file as it comes out after the pre-processing\n"
+msgstr "Questo è il file di setup generato da GUI2Exe\n"
+
+#: ..//GUI2Exe.py:1199
+msgid ""
+"This is the about dialog of GUI2Exe.\n"
+"\n"
+msgstr ""
+"Questo è il dialogo informazioni di GUI2Exe.\n"
+"\n"
+
+#: ..//GUI2Exe.py:612 ..//GUI2Exe.py:1135
+msgid "This option has not been implemented yet."
+msgstr "Questa opzione non è al momento disponibile."
+
+#: ..//GUI2Exe.py:1057
+msgid "This option is available only for Py2Exe."
+msgstr "Questa opzione è disponibile solo per Py2Exe."
+
+#: ..//GUI2Exe.py:1826
+msgid ""
+"This project has never been compiled or its executable has been deleted."
+msgstr ""
+"Questo progetto non è mai stato compilato o il suo eseguibile è stato "
+"cancellato."
+
+#: ..//GUI2Exe.py:1032
+#, python-format
+msgid "This project has not been compiled with %(compiler)s yet."
+msgstr "Questo progetto non è stato compilato con %(compiler)s."
+
+#: ..//GUI2Exe.py:942 ..//GUI2Exe.py:1063
+msgid "This project has not been compiled yet."
+msgstr "Questo progetto non è stato ancora compilato."
+
+#: ..//ProjectTreeCtrl.py:611 ..//ProjectTreeCtrl.py:656
+msgid "This project has not been saved yet. Please save it and retry."
+msgstr "Il progetto non è stato ancora salvato. Per favore salva e riprova."
+
+#: ..//MessageWindow.py:36
+msgid "Time        "
+msgstr "Tempo        "
+
+#: ..//Constants.py:139
+msgid ""
+"To prevent unicode encoding error, py2exe now by default\n"
+"includes the codecs module and the encodings package.\n"
+"If you are sure your program never implicitely or explicitely\n"
+"has to convert between unicode and ascii strings this can be\n"
+"prevented by switching on this option in its associated\n"
+"check box in GUI2Exe."
+msgstr ""
+"Per prevenire errori di encodings mancanti, il default di\n"
+"py2exe è includere i moduli codecs e il pacchetto encodings.\n"
+"Se sei sicuro che la tua applicazione non usa, implicitamente\n"
+"o esplicitamente, caratteri unicode, puoi escludere questi\n"
+"moduli selezionando il checkbox in GUI2Exe."
+
+#: ..//GUI2Exe.py:1916
+msgid "Tracebacks in log file"
+msgstr "Errori nel file log"
+
+#: ..//Py2ExePanel.py:123
+msgid "Type"
+msgstr "Tipo"
+
+#: ..//PyInstallerPanel.py:81
+msgid "UPX Compression"
+msgstr "Compressione UPX"
+
+#: ..//GUI2Exe.py:1170
+msgid "Unable to connect to the internet."
+msgstr "Impossibile connettersi a internet."
+
+#: ..//Widgets.py:2516
+msgid "Unable to open the clipboard."
+msgstr "Impossibile aprire il clipboard."
+
+#: ..//PyInstallerPanel.py:106
+msgid "Unbuffered STDIO"
+msgstr "Unbuffered STDIO"
+
+#: ..//Constants.py:209
+msgid "Unbuffered STDIO (same as Python -u)."
+msgstr "Unbuffered STDIO (come Python -u)."
+
+#: ..//ProjectTreeCtrl.py:627
+msgid "Updating project from file..."
+msgstr "Aggiorno il progetto da file..."
+
+#: ..//GUI2Exe.py:235
+msgid "Use &AutoSave"
+msgstr "Usa &AutoSave"
+
+#: ..//PyInstallerPanel.py:107
+msgid "Use Site.py"
+msgstr "Usa Site.py"
+
+#: ..//Constants.py:224
+msgid "Use argv emulation.<note> This is disabled for plugins."
+msgstr ""
+"Usa emulazione argv.<note>Questa opzione è disabilitata per i plugins."
+
+#: ..//Widgets.py:3548
+msgid "Use last UI perspective at start-up"
+msgstr "Utilizza l'ultima prospettiva allo start-up"
+
+#: ..//Constants.py:210
+msgid ""
+"Use site.py.\n"
+"\n"
+"The opposite of Python -S.<note>Note that site.py must be in the "
+"executable's\n"
+"directory to be used."
+msgstr ""
+"Usa site.py.\n"
+"\n"
+"È l'opposto di Python -S.<note>Nota che site.py deve trovarsi nella\n"
+"cartella dell'eseguibile."
+
+#: ..//Widgets.py:3537
+msgid "User Interface"
+msgstr "Interfaccia Utente"
+
+#: ..//Widgets.py:3017
+msgid "Value"
+msgstr "Valore"
+
+#: ..//PyInstallerPanel.py:103
+msgid "Verbose Import"
+msgstr "Importa Verboso"
+
+#: ..//Constants.py:206
+msgid "Verbose imports (same as Python -v)."
+msgstr "Importa verboso (come Python -v)."
+
+#: ..//Py2ExePanel.py:56 ..//cx_FreezePanel.py:175
+msgid "Version"
+msgstr "Versione"
+
+#: ..//PyInstallerPanel.py:198
+msgid "Version File"
+msgstr "File di Versione"
+
+#: ..//PyInstallerPanel.py:286
+msgid "Version file is not a valid file."
+msgstr "Il file di versione non è valido."
+
+#: ..//GUI2Exe.py:253
+msgid "View &setup script"
+msgstr "Visualizza file di &setup"
+
+#: ..//GUI2Exe.py:253
+msgid "View the auto-generated setup script"
+msgstr "Visualizza il file di setup generato da GUI2Exe"
+
+#: ..//GUI2Exe.py:256
+msgid "View the full build output for the current compiler"
+msgstr "Visualizza l'output del compilatore"
+
+#: ..//GUI2Exe.py:1426 ..//GUI2Exe.py:1431
+msgid "Warning"
+msgstr "Attenzione"
+
+#: ..//PyInstallerPanel.py:104
+msgid "Warning Option"
+msgstr "Opzione Warning"
+
+#: ..//Constants.py:207
+msgid "Warning option (Python 2.1+)."
+msgstr "Opzione Warning (Python 2.1+)."
+
+#: ..//GUI2Exe.py:1335
+msgid ""
+"Warning: the selected page contains unsaved data.\n"
+"\n"
+"Do you wish to save this project?"
+msgstr ""
+"Attenzione: la pagina selezionata contiene dati non salvati.\n"
+"\n"
+"Vuoi salvare il progetto?"
+
+#: ..//GUI2Exe.py:1643
+msgid "Welcome to GUI2Exe"
+msgstr "Benvenuti in GUI2Exe"
+
+#: ..//GUI2Exe.py:259
+msgid "What the compiler says are the binary dependencies (py2exe only)"
+msgstr ""
+"Quali sono i file binari dipendenti secondo il compilatore (solo py2exe)"
+
+#: ..//GUI2Exe.py:258
+msgid "What the compiler thinks are the missing modules (py2exe only)"
+msgstr "I moduli mancanti secondo il compilatore (solo py2exe)"
+
+#: ..//Widgets.py:3609
+msgid "Window Transparency:"
+msgstr "Trasparenza Finestra"
+
+#: ..//Constants.py:187
+msgid "Windows NT family only. icon='myicon.ico' to use an icon file."
+msgstr ""
+"Solo la famiglia di Windows NT. icon='myicon.ico' per usare un file icona."
+
+#: ..//Constants.py:188
+msgid ""
+"Windows NT family only. version='myversion.txt'.<note>Use the PyInstaller "
+"Python file 'GrabVersion.py' to steal a\n"
+"version resource from an executable, and then edit the output to create\n"
+"your own. (The syntax of version resources is so arcane that I\n"
+"wouldn't attempt to write one from scratch)."
+msgstr ""
+"Solo la famiglia di Windows NT. version='myversion.txt'.<note>Puoi "
+"utilizzare il file Python 'GrabVersion.py' nella\n"
+"cartella PyInstaller per estrarre una versione da un eseguibile,\n"
+"e quindi modificarlo secondo i tuoi gusti. (Non cercare di scriverlo\n"
+"da solo, la sua sintassi è molto complessa)."
+
+#: ..//Py2AppPanel.py:43
+msgid "XC Data Models"
+msgstr "XC Data Models"
+
+#: ..//Py2AppPanel.py:105
+msgid "XC Data Models Names"
+msgstr "Nomi XC Data Models"
+
+#: ..//Widgets.py:2926
+msgid "You can edit the properties below or add new ones:"
+msgstr "Puoi modificare le proprietà qui di seguito o aggiungerne di nuove:"
+
+#: ..//Widgets.py:3596
+msgid "Your GUI2Exe preferences can be edited below:"
+msgstr "Le tue preferenze per GUI2Exe qui di seguito:"
+
+#: ..//Constants.py:152
+msgid "Your program version."
+msgstr "La versione del tuo programma."
+
+#: ..//bbFreezePanel.py:42
+#, python-format
+msgid "bbFreeze options for: %(projectName)s (Created: %(creationDate)s)"
+msgstr "Opzioni bbFreeze per: %(projectName)s (Creato: %(creationDate)s)"
+
+#: ..//cx_FreezePanel.py:51
+msgid "cx_Freeze Sample File"
+msgstr "File Esempio cx_Freeze"
+
+#: ..//cx_FreezePanel.py:45
+#, python-format
+msgid "cx_Freeze options for: %(projectName)s (Created: %(creationDate)s)"
+msgstr "Opzioni cx_Freeze per: %(projectName)s (Creato: %(creationDate)s)"
+
+#: ..//GUI2Exe.py:241
+msgid "show tooltips for the various compiler options"
+msgstr "visualizza suggerimenti per le varie opzioni dei compilatori"
+
+#: ..//GUI2Exe.py:320
+msgid "tooltips"
+msgstr "suggerimenti"
+
+#: ..//Constants.py:235
+msgid ""
+"xcdatamodels to be compiled and copied into\n"
+"Resources.\n"
+"\n"
+"Hit Ctrl+A to select one or more xcdatamodels."
+msgstr ""
+"xcdatamodels che sono compilati e copiati\n"
+"dentro Risorse."
+
+#: ..//Py2ExePanel.py:401
+msgid "zipfile does not have \".zip\" extension"
+msgstr "zipfile non ha l'estensione \".zip\""

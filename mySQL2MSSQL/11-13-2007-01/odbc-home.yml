@@ -1,0 +1,5 @@
+source:
+  connection_string = 'DRIVER={MySQL ODBC 3.51 Driver};SERVER=localhost;DATABASE=reports_development;CommandTimeout=0;UID=root;PWD=peekaboo'
+
+dest:
+  connection_string = 'DRIVER={SQL Server};SERVER=UNDEFINED2;DATABASE=reports_development;CommandTimeout=0;UID=sa;PWD=peekab00'

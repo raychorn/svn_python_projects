@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Downloading...</title>
+<script type="text/javascript" src="/static/lightwindow/javascript/prototype.js"></script>
+<script type="text/javascript" src="/static/lightwindow/javascript/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="/static/lightwindow/javascript/lightwindow.js"></script>
+<link rel="stylesheet" href="/static/lightwindow/css/lightwindow.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript">
+var timer_id = -1;
+</script>
+</head>
+<body onunload="if (timer_id > -1) { clearTimeout(timer_id); }">
+<a href="#" onclick="window.close();"><small>[Close Window]</small></a>
+<table width="100%" height="200"><tr><td align="center" valign="middle"><img src="/static/busy/pleasewait.gif"/></td></tr></table>
+<script language="javascript" type="text/javascript">
+myLightWindow = new lightwindow();
+myLightWindow.activateWindow({
+	href: '{{ URL }}', 
+	title: '{{ TITLE }}', 
+	author: 'www.VyperLogix.Com', 
+	top: 0,
+	left: 0,
+	height: 200,
+	width: 300
+});
+timer_id = setTimeout('window.close();', 60000)"
+</script>
+</body>
+</html>

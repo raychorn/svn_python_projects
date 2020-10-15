@@ -1,0 +1,23 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+
+
+{% extends "admin/base_site.html"%}
+{% load blog_extras %}
+{% block content %}
+<br />
+<p><a href="{% SITE_ROOT %}admin/blog/entry/{{ entry.id }}/">Admin page for entry</a></p>
+<p>Select the links for which you would like to post trackbacks:</p>
+<form id="trackback_form" action='{{ entry.get_absolute_url }}postTrackbacks/' method='POST'>
+<table>
+  <thead><th>Link</th><th>Try?</th><th>Status</th><th>As of</th><th>Message</th></thead>
+{% for tb in entry.trackbacks.all %}  <tr><th><label for="id_link{{ forloop.counter0 }}">{{ tb.link|urlizetrunc:"100" }}</label></th>
+    <td><input {% if tb.eligible %}checked="checked"{% else %}disabled="true"{% endif %} type="checkbox" name="link{{ forloop.counter0 }}" id="id_link{{ forloop.counter0 }}" />
+        <input type="hidden" name="id{{ forloop.counter0 }}" value="{{ tb.id }}" /></td>
+    <td><a href="{% SITE_ROOT %}admin/blog/trackbackstatus/{{ tb.id }}/">{{ tb.get_status_display }}</a></td><td>{{ tb.attempted|date:"Y-m-d H:i" }}</td><td>{{ tb.message|escape }}</td>
+  </tr>
+{% endfor %}
+</table>
+<input type="submit" value="Post trackbacks" />
+</form><br />
+<p>Status codes link to the admin page for the trackback. Use the admin page to edit the trackback link.</p>
+{% endblock %}

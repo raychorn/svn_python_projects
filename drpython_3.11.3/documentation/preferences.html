@@ -1,0 +1,818 @@
+<?xml version="1.0"  ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<meta name="generator" content="Docutils 0.3.8: http://docutils.sourceforge.net/" />
+<title>Preferences</title>
+<link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="preferences">
+<h1 class="title">Preferences</h1>
+<p>Back to <a class="reference" href="help.html">Help</a></p>
+<a class="target" id="top" name="top"></a><p>There are several things you need to know about how preferences
+behave.</p>
+<p>First is the file format. Preferences are stored in a markup
+text format. This means if new preferences are added in future
+versions, you will not need to change the format, or run some 
+utility on your preferences file.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first"><a name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#import-export" id="id17" name="id17">Import/Export</a></li>
+<li><a class="reference" href="#bookmarks" id="id18" name="id18">Bookmarks</a><ul>
+<li><a class="reference" href="#style" id="id19" name="id19">Style</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#document" id="id20" name="id20">Document</a><ul>
+<li><a class="reference" href="#show-line-numbers" id="id21" name="id21">Show Line Numbers</a></li>
+<li><a class="reference" href="#remove-trailing-whitespace" id="id22" name="id22">Remove Trailing Whitespace</a></li>
+<li><a class="reference" href="#autoindent" id="id23" name="id23">Autoindent</a></li>
+<li><a class="reference" href="#autoreload" id="id24" name="id24">AutoReload</a></li>
+<li><a class="reference" href="#update-indentation" id="id25" name="id25">Update Indentation</a></li>
+<li><a class="reference" href="#use-file-s-indentation" id="id26" name="id26">Use File's Indentation</a></li>
+<li><a class="reference" href="#use-tabs" id="id27" name="id27">Use Tabs</a></li>
+<li><a class="reference" href="#word-wrap" id="id28" name="id28">Word Wrap</a></li>
+<li><a class="reference" href="#whitespace-is-visible-on-startup" id="id29" name="id29">Whitespace is Visible on Startup</a></li>
+<li><a class="reference" href="#use-indentation-guides" id="id30" name="id30">Use Indentation Guides</a></li>
+<li><a class="reference" href="#long-line-indicator-column" id="id31" name="id31">Long Line Indicator Column</a></li>
+<li><a class="reference" href="#scroll-extra-page" id="id32" name="id32">Scroll Extra Page</a></li>
+<li><a class="reference" href="#highlight-current-line" id="id33" name="id33">Highlight Current Line</a></li>
+<li><a class="reference" href="#comment-mode" id="id34" name="id34">Comment Mode</a></li>
+<li><a class="reference" href="#default-syntax-highlighting" id="id35" name="id35">Default Syntax Highlighting</a></li>
+<li><a class="reference" href="#only-use-default-syntax-highlighting" id="id36" name="id36">Only Use Default Syntax Highlighting</a></li>
+<li><a class="reference" href="#id1" id="id37" name="id37">Style</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#documentation" id="id38" name="id38">Documentation</a><ul>
+<li><a class="reference" href="#browser" id="id39" name="id39">Browser</a></li>
+<li><a class="reference" href="#python-docs" id="id40" name="id40">Python Docs</a></li>
+<li><a class="reference" href="#wxwidgets-docs" id="id41" name="id41">wxWidgets Docs</a></li>
+<li><a class="reference" href="#regular-expression-howto" id="id42" name="id42">Regular Expression Howto</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#drag-and-drop" id="id43" name="id43">Drag and Drop</a><ul>
+<li><a class="reference" href="#drag-and-drop-mode" id="id44" name="id44">Drag and Drop Mode</a></li>
+<li><a class="reference" href="#drag-and-drop-text-mode" id="id45" name="id45">Drag and Drop Text Mode</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#drscript" id="id46" name="id46">DrScript</a><ul>
+<li><a class="reference" href="#default-directory" id="id47" name="id47">Default Directory</a></li>
+<li><a class="reference" href="#id2" id="id48" name="id48">Style</a></li>
+<li><a class="reference" href="#load-examples" id="id49" name="id49">Load Examples</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#file-dialog" id="id50" name="id50">File Dialog</a><ul>
+<li><a class="reference" href="#default-extension-py" id="id51" name="id51">Default Extension (&quot;.py&quot;)</a></li>
+<li><a class="reference" href="#use-wx-filedialog" id="id52" name="id52">Use wx.FileDialog</a></li>
+<li><a class="reference" href="#wildcard" id="id53" name="id53">Wildcard</a></li>
+<li><a class="reference" href="#constant-wildcard" id="id54" name="id54">Constant Wildcard</a></li>
+<li><a class="reference" href="#windows-shortcut-replace-table" id="id55" name="id55">Windows Shortcut Replace Table</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#file-types" id="id56" name="id56">File Types</a><ul>
+<li><a class="reference" href="#extensions" id="id57" name="id57">Extensions</a></li>
+<li><a class="reference" href="#comment-string" id="id58" name="id58">Comment String</a></li>
+<li><a class="reference" href="#id3" id="id59" name="id59">Use Tabs</a></li>
+<li><a class="reference" href="#id4" id="id60" name="id60">Word Wrap</a></li>
+<li><a class="reference" href="#folding" id="id61" name="id61">Folding</a></li>
+<li><a class="reference" href="#tab-width" id="id62" name="id62">Tab Width</a></li>
+<li><a class="reference" href="#line-ending-format" id="id63" name="id63">Line Ending Format</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#find-replace" id="id64" name="id64">Find/Replace</a><ul>
+<li><a class="reference" href="#regular-expression" id="id65" name="id65">Regular Expression</a></li>
+<li><a class="reference" href="#match-case" id="id66" name="id66">Match Case</a></li>
+<li><a class="reference" href="#find-backwards" id="id67" name="id67">Find Backwards</a></li>
+<li><a class="reference" href="#whole-word" id="id68" name="id68">Whole Word</a></li>
+<li><a class="reference" href="#in-selection" id="id69" name="id69">In Selection</a></li>
+<li><a class="reference" href="#from-cursor" id="id70" name="id70">From Cursor</a></li>
+<li><a class="reference" href="#prompt-on-replace" id="id71" name="id71">Prompt on Replace</a></li>
+<li><a class="reference" href="#auto-wrap" id="id72" name="id72">Auto Wrap</a></li>
+<li><a class="reference" href="#under-cursor" id="id73" name="id73">Under Cursor</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#general" id="id74" name="id74">General</a><ul>
+<li><a class="reference" href="#remember-window-size-and-position" id="id75" name="id75">Remember Window Size And Position</a></li>
+<li><a class="reference" href="#remember-dialog-sizes-and-positions" id="id76" name="id76">Remember Dialog Sizes and Positions</a></li>
+<li><a class="reference" href="#remember-panel-sizes" id="id77" name="id77">Remember Panel Sizes</a></li>
+<li><a class="reference" href="#auto-detect-encoding" id="id78" name="id78">Auto Detect Encoding</a></li>
+<li><a class="reference" href="#default-encoding" id="id79" name="id79">Default Encoding</a></li>
+<li><a class="reference" href="#save-on-run" id="id80" name="id80">Save On Run</a></li>
+<li><a class="reference" href="#check-syntax-on-save" id="id81" name="id81">Check Syntax On Save</a></li>
+<li><a class="reference" href="#check-syntax-only-on-extensions" id="id82" name="id82">Check Syntax: Only On Extensions</a></li>
+<li><a class="reference" href="#prompt-on-save-all" id="id83" name="id83">Prompt On Save All</a></li>
+<li><a class="reference" href="#double-click-to-close-tab" id="id84" name="id84">Double Click To Close Tab</a></li>
+<li><a class="reference" href="#max-number-of-recent-files" id="id85" name="id85">Max Number of Recent Files</a></li>
+<li><a class="reference" href="#view-line-endings-with-whitespace" id="id86" name="id86">View Line Endings With Whitespace</a></li>
+<li><a class="reference" href="#check-line-ending-format-on-open" id="id87" name="id87">Check Line Ending Format on Open</a></li>
+<li><a class="reference" href="#check-indentation-type-on-open" id="id88" name="id88">Check Indentation Type on Open</a></li>
+<li><a class="reference" href="#python-arguments" id="id89" name="id89">Python Arguments</a></li>
+<li><a class="reference" href="#icon-size" id="id90" name="id90">Icon Size</a></li>
+<li><a class="reference" href="#id5" id="id91" name="id91">Default Directory</a></li>
+<li><a class="reference" href="#enable-feedback" id="id92" name="id92">Enable Feedback</a></li>
+<li><a class="reference" href="#always-prompt-on-exit" id="id93" name="id93">Always Prompt On Exit</a></li>
+<li><a class="reference" href="#backup-file-on-save" id="id94" name="id94">Backup File On Save</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#plugins" id="id95" name="id95">Plugins</a><ul>
+<li><a class="reference" href="#id6" id="id96" name="id96">Default Directory</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#print" id="id97" name="id97">Print</a><ul>
+<li><a class="reference" href="#document-line-numbers" id="id98" name="id98">Document Line Numbers</a></li>
+<li><a class="reference" href="#prompt-line-numbers" id="id99" name="id99">Prompt Line Numbers</a></li>
+<li><a class="reference" href="#id7" id="id100" name="id100">Tab Width</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#prompt" id="id101" name="id101">Prompt</a><ul>
+<li><a class="reference" href="#line-number-margin-width" id="id102" name="id102">Line Number Margin Width</a></li>
+<li><a class="reference" href="#visible-by-default" id="id103" name="id103">Visible By Default</a></li>
+<li><a class="reference" href="#id8" id="id104" name="id104">Use Tabs</a></li>
+<li><a class="reference" href="#id9" id="id105" name="id105">Tab Width</a></li>
+<li><a class="reference" href="#id10" id="id106" name="id106">Line Ending Format</a></li>
+<li><a class="reference" href="#id11" id="id107" name="id107">Word Wrap</a></li>
+<li><a class="reference" href="#id12" id="id108" name="id108">Whitespace is Visible on Startup</a></li>
+<li><a class="reference" href="#id13" id="id109" name="id109">Scroll Extra Page</a></li>
+<li><a class="reference" href="#vertical-size" id="id110" name="id110">Vertical Size</a></li>
+<li><a class="reference" href="#id14" id="id111" name="id111">Style</a></li>
+<li><a class="reference" href="#startup-script" id="id112" name="id112">Startup Script</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#side-panels" id="id113" name="id113">Side Panels</a><ul>
+<li><a class="reference" href="#left-panel-size" id="id114" name="id114">Left Panel Size</a></li>
+<li><a class="reference" href="#right-panel-size" id="id115" name="id115">Right Panel Size</a></li>
+<li><a class="reference" href="#top-panel-size" id="id116" name="id116">Top Panel Size</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#source-browser" id="id117" name="id117">Source Browser</a><ul>
+<li><a class="reference" href="#position" id="id118" name="id118">Position</a></li>
+<li><a class="reference" href="#id15" id="id119" name="id119">Visible By Default</a></li>
+<li><a class="reference" href="#close-on-activate" id="id120" name="id120">Close On Activate</a></li>
+<li><a class="reference" href="#sorted-alphabetical" id="id121" name="id121">Sorted (Alphabetical)</a></li>
+<li><a class="reference" href="#id16" id="id122" name="id122">Style</a></li>
+<li><a class="reference" href="#auto-refresh-on-save" id="id123" name="id123">Auto Refresh on Save</a></li>
+<li><a class="reference" href="#auto-refresh" id="id124" name="id124">Auto Refresh</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="import-export">
+<h1><a class="toc-backref" href="#id17" name="import-export">Import/Export</a></h1>
+<p>At the bottom of the General Panel, there is an innocuous 
+little button titled &quot;Setup Preferences&quot;. This launches a 
+dialog that allows you to import/export:</p>
+<ul class="simple">
+<li>preferences, shortcuts, the pop up menu, the toolbar;</li>
+<li>plugins;</li>
+<li>drscripts;</li>
+<li>all of the above.</li>
+</ul>
+<p>This is to facilitate setting up a specific environment. 
+(Eg you can distribute SillyDefaults.zip, which includes the 
+preferences, plugins, and drscripts you want all recipients 
+to have installed.)</p>
+<p><strong>WARNING: Importing Will Overwrite!</strong></p>
+<p>DrPython will overwrite any duplicates on import. This means:</p>
+<ul class="simple">
+<li>Preferences will be overwritten.</li>
+<li>Ditto shortcuts, the pop up menu, and the toolbar.</li>
+<li>Which Plugins are loaded at startup, and any duplicates,
+will be overwritten.</li>
+<li>The drscript menu will be overwritten.</li>
+<li>Also, any duplicates will overwritten.</li>
+</ul>
+<p>After importing, you must restart DrPython to see the changes.</p>
+<p>When Exporting, DrPython will store drscripts in the 
+preferences directory (in the zip file). The directory 
+structure will mirror the menu. This means that when you 
+then import drscripts, they will be physically located in 
+your preferences directory, under 'drscripts'.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="bookmarks">
+<h1><a class="toc-backref" href="#id18" name="bookmarks">Bookmarks</a></h1>
+<p>This tells DrPython how the Edit Bookmarks Dialog should look.
+Also applies to Documentation Bookmarks.</p>
+<div class="section" id="style">
+<h2><a class="toc-backref" href="#id19" name="style">Style</a></h2>
+<p>This sets how the Edit Bookmarks Dialog appears (foreground 
+and background color, font, size, underline/bold/italics).</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="document">
+<h1><a class="toc-backref" href="#id20" name="document">Document</a></h1>
+<p>This is &quot;DrFrame.txtDocument&quot;. It is the text control that has
+the text of the currently open file.</p>
+<div class="section" id="show-line-numbers">
+<h2><a class="toc-backref" href="#id21" name="show-line-numbers">Show Line Numbers</a></h2>
+<p>Sets whether or not DrPython shows line numbers.</p>
+</div>
+<div class="section" id="remove-trailing-whitespace">
+<h2><a class="toc-backref" href="#id22" name="remove-trailing-whitespace">Remove Trailing Whitespace</a></h2>
+<p>Automatically removes trailing spaces and tabs from each line on save.</p>
+</div>
+<div class="section" id="autoindent">
+<h2><a class="toc-backref" href="#id23" name="autoindent">Autoindent</a></h2>
+<p>Chooses the auto indentation method:</p>
+<div class="line-block">
+<div class="line"><strong>None</strong>: Leave Well Enough Alone!</div>
+<div class="line"><strong>Normal</strong>:  Adds the number of tabs up to the first n
+on-whitespace character in the previous line on every 
+new line.</div>
+<div class="line"><strong>Context Sensitive</strong>:  Same as Normal, but adds an extra 
+indent after ':', and dedents after the following 
+statements: <tt class="docutils literal"><span class="pre">return</span></tt>, <tt class="docutils literal"><span class="pre">break</span></tt>, <tt class="docutils literal"><span class="pre">pass</span></tt>, <tt class="docutils literal"><span class="pre">continue</span></tt>,
+<tt class="docutils literal"><span class="pre">raise</span></tt>.</div>
+</div>
+</div>
+<div class="section" id="autoreload">
+<h2><a class="toc-backref" href="#id24" name="autoreload">AutoReload</a></h2>
+<p>Automatically check (OnActivation of DrPython) if any open 
+files have been modified by an outside source. It then 
+prompts the user to reload the file. If not, the modification
+time for the document (in program) is reset.</p>
+</div>
+<div class="section" id="update-indentation">
+<h2><a class="toc-backref" href="#id25" name="update-indentation">Update Indentation</a></h2>
+<p>Updates indentation type whenever the document is modified.
+Displays the type in the status bar. (-&gt;Type)</p>
+</div>
+<div class="section" id="use-file-s-indentation">
+<h2><a class="toc-backref" href="#id26" name="use-file-s-indentation">Use File's Indentation</a></h2>
+<p>If on, use the indentation type of the loaded file. 
+(Only runs on Open). In other words: if the default 
+indentation type is tabs but you load a file that uses 
+spaces, DrPython will use spaces for indentation for that 
+document, while still using tabs as the default for other 
+documents.</p>
+</div>
+<div class="section" id="use-tabs">
+<h2><a class="toc-backref" href="#id27" name="use-tabs">Use Tabs</a></h2>
+<p>If checked, uses tabs 't' when you hit the tab key, and for
+autoindent. If not, uses the number of spaces specified in 
+tabwidth.</p>
+</div>
+<div class="section" id="word-wrap">
+<h2><a class="toc-backref" href="#id28" name="word-wrap">Word Wrap</a></h2>
+<p>Does not show the horizontal scroolbar, and &quot;wraps&quot; lines 
+that are rather long around so they appear as more than one 
+line.</p>
+</div>
+<div class="section" id="whitespace-is-visible-on-startup">
+<h2><a class="toc-backref" href="#id29" name="whitespace-is-visible-on-startup">Whitespace is Visible on Startup</a></h2>
+<p>When DrPython starts up, automatically toggles whitespace 
+is visible.</p>
+</div>
+<div class="section" id="use-indentation-guides">
+<h2><a class="toc-backref" href="#id30" name="use-indentation-guides">Use Indentation Guides</a></h2>
+<p>This optionally draws vertical lines, visually connecting 
+levels of indentation.</p>
+</div>
+<div class="section" id="long-line-indicator-column">
+<h2><a class="toc-backref" href="#id31" name="long-line-indicator-column">Long Line Indicator Column</a></h2>
+<p>Set a column to indicate you have gone past a particular 
+position (79, for example). Using a negative number tells 
+DrPython to highlight the text past the specified position,
+instead of drawing a column. 0 tells DrPython not to draw 
+anything.</p>
+</div>
+<div class="section" id="scroll-extra-page">
+<h2><a class="toc-backref" href="#id32" name="scroll-extra-page">Scroll Extra Page</a></h2>
+<p>This tells DrPython to set the vertical scroll range to one 
+page more than the length of the current document.</p>
+</div>
+<div class="section" id="highlight-current-line">
+<h2><a class="toc-backref" href="#id33" name="highlight-current-line">Highlight Current Line</a></h2>
+<p>Highlights the current line using the Background from the 
+Caret Style.</p>
+</div>
+<div class="section" id="comment-mode">
+<h2><a class="toc-backref" href="#id34" name="comment-mode">Comment Mode</a></h2>
+<p>Sets where DrPython places the comment string. If Start of 
+Line, then at the start of every line in the selected region.
+If Start of Word, then at the start of the first word of 
+every line in the selected region.</p>
+</div>
+<div class="section" id="default-syntax-highlighting">
+<h2><a class="toc-backref" href="#id35" name="default-syntax-highlighting">Default Syntax Highlighting</a></h2>
+<p>Highlight text not recognized via extension THIS WAY.</p>
+</div>
+<div class="section" id="only-use-default-syntax-highlighting">
+<h2><a class="toc-backref" href="#id36" name="only-use-default-syntax-highlighting">Only Use Default Syntax Highlighting</a></h2>
+<p>Only use the syntax highlighting specified above, no 
+matter what extension a file has.</p>
+</div>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id37" name="id1">Style</a></h2>
+<p>This sets how different kinds of text appear (foreground 
+and background color, font, size, underline/bold/italics).
+You can choose to Not use styles at all, use them, or use 
+only &quot;Normal&quot; and &quot;Caret Foreground&quot;</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="documentation">
+<h1><a class="toc-backref" href="#id38" name="documentation">Documentation</a></h1>
+<p>This sets the behavior of the built in help, and external 
+documentation.</p>
+<div class="section" id="browser">
+<h2><a class="toc-backref" href="#id39" name="browser">Browser</a></h2>
+<p>The preferred browser for viewing the documentation. 
+(On Windows, the default is &quot;&lt;os.startfile&gt;&quot;, which uses the 
+default Windows browser).</p>
+</div>
+<div class="section" id="python-docs">
+<h2><a class="toc-backref" href="#id40" name="python-docs">Python Docs</a></h2>
+<p>The Official Python Documentation. Sets the location.</p>
+</div>
+<div class="section" id="wxwidgets-docs">
+<h2><a class="toc-backref" href="#id41" name="wxwidgets-docs">wxWidgets Docs</a></h2>
+<p>The wxWidgets Documentation. Sets the location.</p>
+</div>
+<div class="section" id="regular-expression-howto">
+<h2><a class="toc-backref" href="#id42" name="regular-expression-howto">Regular Expression Howto</a></h2>
+<p>A guide to regular expressions for Python programmers.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="drag-and-drop">
+<h1><a class="toc-backref" href="#id43" name="drag-and-drop">Drag and Drop</a></h1>
+<p>This sets the behaviour of drag and drop in DrPython.</p>
+<div class="section" id="drag-and-drop-mode">
+<h2><a class="toc-backref" href="#id44" name="drag-and-drop-mode">Drag and Drop Mode</a></h2>
+<dl class="docutils">
+<dt>This can be set to one of three values:</dt>
+<dd><dl class="first last docutils">
+<dt><strong>Drag: Files Only, Drop: Files and Text</strong></dt>
+<dd>Turns off Text Drag, but allows you to drag text 
+from outside of the program.</dd>
+<dt><strong>Drag: Files and Text, Drop: Files and Text</strong></dt>
+<dd>Turns on Text Drag and Drop</dd>
+<dt><strong>Drag and Drop Files Only</strong></dt>
+<dd>Completely Turns off Text Drag and Drop.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="drag-and-drop-text-mode">
+<h2><a class="toc-backref" href="#id45" name="drag-and-drop-text-mode">Drag and Drop Text Mode</a></h2>
+<p>Sets the whether Dragging and Dropping Text within DrPython 
+is by default a cut or a copy operation. The secondary 
+behaviour can be executed when the control key is down.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="drscript">
+<h1><a class="toc-backref" href="#id46" name="drscript">DrScript</a></h1>
+<p>This sets the behavior of Adding/Creating a Script.</p>
+<div class="section" id="default-directory">
+<h2><a class="toc-backref" href="#id47" name="default-directory">Default Directory</a></h2>
+<p>This tells DrPython what directory to set the Add/New Script
+Dialog to.</p>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id48" name="id2">Style</a></h2>
+<p>This sets how the Move/Rename Scripts Dialog appears 
+(foreground and background color, font, size, 
+underline/bold/italics).</p>
+</div>
+<div class="section" id="load-examples">
+<h2><a class="toc-backref" href="#id49" name="load-examples">Load Examples</a></h2>
+<p>Loads all example scripts from the DrPython program 
+directory, and places them in a submenu of DrScript. 
+Note that disabling this option will remove any Shortcuts 
+for these Scripts. (If you subsequently update DrScript 
+Shortcuts)</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="file-dialog">
+<h1><a class="toc-backref" href="#id50" name="file-dialog">File Dialog</a></h1>
+<p>This sets the behaviour of file dialogs in DrPython.</p>
+<div class="section" id="default-extension-py">
+<h2><a class="toc-backref" href="#id51" name="default-extension-py">Default Extension (&quot;.py&quot;)</a></h2>
+<p>If no extension is given, append '.py' onto the end.
+(Enabled by default).</p>
+</div>
+<div class="section" id="use-wx-filedialog">
+<h2><a class="toc-backref" href="#id52" name="use-wx-filedialog">Use wx.FileDialog</a></h2>
+<p>If you want to use the default wxPython File Dialog, 
+check this option. Only the wildcard preference will 
+be used in this case.</p>
+</div>
+<div class="section" id="wildcard">
+<h2><a class="toc-backref" href="#id53" name="wildcard">Wildcard</a></h2>
+<p>This is the string used by wxPython to determine what file
+types to show. The format is 
+<tt class="docutils literal"><span class="pre">DescriptionA|ExtensionPatternA1;ExtensionPatternA2|DescriptionB|ExtensionPatternB1;ExtensionPatternB2</span></tt></p>
+<p>'|' separates File Types. Here is an example:
+<tt class="docutils literal"><span class="pre">Python</span> <span class="pre">Files</span> <span class="pre">(*.py</span> <span class="pre">*.pyw)|*.py;*.pyw|All</span> <span class="pre">Files</span> <span class="pre">(*)|*</span></tt></p>
+<p>You can use the editor to add entries to the wildcard string.</p>
+<p>If all entries are removed, <tt class="docutils literal"><span class="pre">All</span> <span class="pre">Files</span> <span class="pre">(*)|*</span></tt> is 
+automatically set as the wildcard.</p>
+</div>
+<div class="section" id="constant-wildcard">
+<h2><a class="toc-backref" href="#id54" name="constant-wildcard">Constant Wildcard</a></h2>
+<p>You can set this in the wildcard editor. It is simply a 
+pattern (eg <tt class="docutils literal"><span class="pre">*.py</span></tt>) that is always visible, no matter 
+what file type is selected in the file dialog.</p>
+</div>
+<div class="section" id="windows-shortcut-replace-table">
+<h2><a class="toc-backref" href="#id55" name="windows-shortcut-replace-table">Windows Shortcut Replace Table</a></h2>
+<p>This is only needed/used on non-Windows systems.</p>
+<p>This contains info for replacing strings found in Windows
+shortcuts (*.lnk) with the correct paths. So for example,
+if your <tt class="docutils literal"><span class="pre">C:</span></tt> drive is mounted on <tt class="docutils literal"><span class="pre">/mnt/win_c</span></tt>,
+you could enter &quot;C&quot; for Windows Pattern, and &quot;/mnt/win_c&quot;
+for Replace String.</p>
+<p>The Replace Table uses regular expressions for the Windows
+Pattern, and two special characters for the Replace String.
+So the entry:</p>
+<div class="line-block">
+<div class="line"><tt class="docutils literal"><span class="pre">Windows</span> <span class="pre">Pattern:</span> <span class="pre">&quot;[A-D]&quot;</span></tt></div>
+<div class="line"><tt class="docutils literal"><span class="pre">Replace</span> <span class="pre">String:</span> <span class="pre">&quot;/mnt/win/&#64;&quot;</span></tt></div>
+</div>
+<p>would replace any drive A-D (eg <tt class="docutils literal"><span class="pre">C:</span></tt> with <tt class="docutils literal"><span class="pre">/mnt/win/c</span></tt>)
+with the lowercase matching string. If the Replace String 
+was <tt class="docutils literal"><span class="pre">/mnt/win_&amp;</span></tt>, it would yield <tt class="docutils literal"><span class="pre">/mnt/win_C</span></tt>.</p>
+<p>Any valid regular expression will work for the Windows Pattern.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="file-types">
+<h1><a class="toc-backref" href="#id56" name="file-types">File Types</a></h1>
+<p>These preferences apply to the document depending on which
+file type is active.</p>
+<div class="section" id="extensions">
+<h2><a class="toc-backref" href="#id57" name="extensions">Extensions</a></h2>
+<p>These are the file extensions that are recognized for each
+file type. Separate with commas (eg 'py,pyw,c,h').</p>
+</div>
+<div class="section" id="comment-string">
+<h2><a class="toc-backref" href="#id58" name="comment-string">Comment String</a></h2>
+<p>This is the string used to comment out selected regions of code.</p>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id59" name="id3">Use Tabs</a></h2>
+<p>If checked, uses tabs <tt class="docutils literal"><span class="pre">\t</span></tt> when you hit the tab key, and 
+for autoindent. If not, uses the number of spaces specified 
+in tabwidth.</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id60" name="id4">Word Wrap</a></h2>
+<p>Does not show the horizontal scroolbar, and &quot;wraps&quot; lines 
+that are rather long around so they appear as more than one 
+line.</p>
+</div>
+<div class="section" id="folding">
+<h2><a class="toc-backref" href="#id61" name="folding">Folding</a></h2>
+<p>Allows the document to &quot;Fold&quot;. This lets you hide or show 
+lines of a &quot;block&quot; (eg a class, function or an &quot;if&quot; 
+statement).</p>
+</div>
+<div class="section" id="tab-width">
+<h2><a class="toc-backref" href="#id62" name="tab-width">Tab Width</a></h2>
+<p>This tells DrPython how big to make tabs look (<tt class="docutils literal"><span class="pre">\t</span></tt>). 
+For example, 8 will make a single tab look like 8 spaces.</p>
+</div>
+<div class="section" id="line-ending-format">
+<h2><a class="toc-backref" href="#id63" name="line-ending-format">Line Ending Format</a></h2>
+<p>The default is UNIX (<tt class="docutils literal"><span class="pre">\n</span></tt>). You can also select Windows
+(<tt class="docutils literal"><span class="pre">\r\n</span></tt>) or Mac (<tt class="docutils literal"><span class="pre">\r</span></tt>).</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="find-replace">
+<h1><a class="toc-backref" href="#id64" name="find-replace">Find/Replace</a></h1>
+<p>Most of these are the defaults for the 
+Find/Replace/Switcheroo Dialogs. The last governs the 
+find/replace dialog behaviour.</p>
+<div class="section" id="regular-expression">
+<h2><a class="toc-backref" href="#id65" name="regular-expression">Regular Expression</a></h2>
+<p>Evaluates the search text as a regular expression. Only 
+searches forward.</p>
+</div>
+<div class="section" id="match-case">
+<h2><a class="toc-backref" href="#id66" name="match-case">Match Case</a></h2>
+<p>Case-Sensitive Search.</p>
+</div>
+<div class="section" id="find-backwards">
+<h2><a class="toc-backref" href="#id67" name="find-backwards">Find Backwards</a></h2>
+<p>Search from the end of the target text.</p>
+</div>
+<div class="section" id="whole-word">
+<h2><a class="toc-backref" href="#id68" name="whole-word">Whole Word</a></h2>
+<p>Only match whole words (whitespace on either side).</p>
+</div>
+<div class="section" id="in-selection">
+<h2><a class="toc-backref" href="#id69" name="in-selection">In Selection</a></h2>
+<p>If there is selected text, then only search within 
+the selected text.</p>
+</div>
+<div class="section" id="from-cursor">
+<h2><a class="toc-backref" href="#id70" name="from-cursor">From Cursor</a></h2>
+<p>Search from the current position in the document, rather
+than from the start.</p>
+</div>
+<div class="section" id="prompt-on-replace">
+<h2><a class="toc-backref" href="#id71" name="prompt-on-replace">Prompt on Replace</a></h2>
+<p>Prompt the user on each replace operation, and let the user
+decide whether or not to replace the target text, or skip it.</p>
+</div>
+<div class="section" id="auto-wrap">
+<h2><a class="toc-backref" href="#id72" name="auto-wrap">Auto Wrap</a></h2>
+<p>If on, when the start/end of the document is reached during
+find, automatically wrap around.</p>
+</div>
+<div class="section" id="under-cursor">
+<h2><a class="toc-backref" href="#id73" name="under-cursor">Under Cursor</a></h2>
+<p>The Find/Replace Dialog sets the word under the cursor as 
+the findtext if no text is selected.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="general">
+<h1><a class="toc-backref" href="#id74" name="general">General</a></h1>
+<p>These apply to the program as a whole.</p>
+<div class="section" id="remember-window-size-and-position">
+<h2><a class="toc-backref" href="#id75" name="remember-window-size-and-position">Remember Window Size And Position</a></h2>
+<p>Remembers the size and position of the DrPython window.</p>
+</div>
+<div class="section" id="remember-dialog-sizes-and-positions">
+<h2><a class="toc-backref" href="#id76" name="remember-dialog-sizes-and-positions">Remember Dialog Sizes and Positions</a></h2>
+<p>Remembers the sizes and positions of all main dialogs.</p>
+</div>
+<div class="section" id="remember-panel-sizes">
+<h2><a class="toc-backref" href="#id77" name="remember-panel-sizes">Remember Panel Sizes</a></h2>
+<p>Remembers the sizes of the prompt, and the left and right
+side panels.</p>
+</div>
+<div class="section" id="auto-detect-encoding">
+<h2><a class="toc-backref" href="#id78" name="auto-detect-encoding">Auto Detect Encoding</a></h2>
+<p>Automatically detects an encoding (for open/save documents) specified with a special comment.
+Also automatically detects Unicode, and encodes the Opening and 
+Saving of documents, saving the Prompt text, and sending 
+prompt text to the currently running program. (Only if 
+wxPython was built with Unicode Support).</p>
+</div>
+<div class="section" id="default-encoding">
+<h2><a class="toc-backref" href="#id79" name="default-encoding">Default Encoding</a></h2>
+<p>This is the encoding used by default. (If Auto Detect is 
+enabled, DrPython will try unicode first). You can manually
+enter an encoding, leave it blank to disable, or select 
+from the list of encodings: the default locale (if available),
+ascii, latin-1, utf-8, and utf-16. (Only if wxPython was 
+built with Unicode Support).</p>
+</div>
+<div class="section" id="save-on-run">
+<h2><a class="toc-backref" href="#id80" name="save-on-run">Save On Run</a></h2>
+<p>Automatically saves the current document before running.</p>
+</div>
+<div class="section" id="check-syntax-on-save">
+<h2><a class="toc-backref" href="#id81" name="check-syntax-on-save">Check Syntax On Save</a></h2>
+<p>Runs Check Syntax on a file after it has been saved. 
+Unlike running this from the menu, it does not provide any
+feedback if no errors are found.</p>
+</div>
+<div class="section" id="check-syntax-only-on-extensions">
+<h2><a class="toc-backref" href="#id82" name="check-syntax-only-on-extensions">Check Syntax: Only On Extensions</a></h2>
+<p>Restricts checking syntax on save to the exact extensions
+listed. The format is extensions only (no period), 
+separated by spaces (eg): <tt class="docutils literal"><span class="pre">py</span></tt> <tt class="docutils literal"><span class="pre">pyw</span></tt> <tt class="docutils literal"><span class="pre">python</span></tt> will 
+only run check syntax on save (if it is enabled) on files
+with the  extensions <tt class="docutils literal"><span class="pre">py</span></tt>, <tt class="docutils literal"><span class="pre">pyw</span></tt>, or <tt class="docutils literal"><span class="pre">python</span></tt>.</p>
+</div>
+<div class="section" id="prompt-on-save-all">
+<h2><a class="toc-backref" href="#id83" name="prompt-on-save-all">Prompt On Save All</a></h2>
+<p>Prompt before saving all modified documents.</p>
+</div>
+<div class="section" id="double-click-to-close-tab">
+<h2><a class="toc-backref" href="#id84" name="double-click-to-close-tab">Double Click To Close Tab</a></h2>
+<p>Clicking a tab in the notebook will close that tab.</p>
+</div>
+<div class="section" id="max-number-of-recent-files">
+<h2><a class="toc-backref" href="#id85" name="max-number-of-recent-files">Max Number of Recent Files</a></h2>
+<p>This tells DrPython how many recent files to keep track of.
+0 is the least you can enter, and will cause DrPython to 
+ignore recent files.</p>
+</div>
+<div class="section" id="view-line-endings-with-whitespace">
+<h2><a class="toc-backref" href="#id86" name="view-line-endings-with-whitespace">View Line Endings With Whitespace</a></h2>
+<p>View end of line characters when whitespace is visible.</p>
+</div>
+<div class="section" id="check-line-ending-format-on-open">
+<h2><a class="toc-backref" href="#id87" name="check-line-ending-format-on-open">Check Line Ending Format on Open</a></h2>
+<p>This tells DrPython to check to see if your default line
+ending is used as the line ending when you open a file.</p>
+</div>
+<div class="section" id="check-indentation-type-on-open">
+<h2><a class="toc-backref" href="#id88" name="check-indentation-type-on-open">Check Indentation Type on Open</a></h2>
+<p>This tells DrPython to check to see if your default 
+indentation type is being used in the opened file.</p>
+</div>
+<div class="section" id="python-arguments">
+<h2><a class="toc-backref" href="#id89" name="python-arguments">Python Arguments</a></h2>
+<p>This sends the given arguments directly to Python when you
+run a file, debug a file, or run the Python interpreter on
+its own. A common argument is <tt class="docutils literal"><span class="pre">-i</span></tt>. This will tell Python
+to switch to interactive mode after the current file has 
+finished running. More arguments can be found in the Python 
+documentation, or by typing <tt class="docutils literal"><span class="pre">python</span> <span class="pre">-h</span></tt> at the command 
+prompt.</p>
+</div>
+<div class="section" id="icon-size">
+<h2><a class="toc-backref" href="#id90" name="icon-size">Icon Size</a></h2>
+<p>This tells DrPython how big the toolbar needs to be. 
+Selecting 0 will (on restart) tell DrPython to not load the 
+ToolBar at all.</p>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id91" name="id5">Default Directory</a></h2>
+<p>This tells DrPython where to look for files initially.
+Once a file has been opened, DrPython sets the current 
+directory to the file's directory.</p>
+</div>
+<div class="section" id="enable-feedback">
+<h2><a class="toc-backref" href="#id92" name="enable-feedback">Enable Feedback</a></h2>
+<p>This allows pop up windows to tell you if operations were
+successful. (For example, successfully updated preferences).</p>
+</div>
+<div class="section" id="always-prompt-on-exit">
+<h2><a class="toc-backref" href="#id93" name="always-prompt-on-exit">Always Prompt On Exit</a></h2>
+<p>This tells DrPython to always ask if the user wants to exit,
+even if there is no current file, or the current file has 
+been saved.</p>
+</div>
+<div class="section" id="backup-file-on-save">
+<h2><a class="toc-backref" href="#id94" name="backup-file-on-save">Backup File On Save</a></h2>
+<p>Whenever you save a file, before DrPython writes to the file,
+it will make a renamed copy (the filename with .bak attached)
+in the same folder.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="plugins">
+<h1><a class="toc-backref" href="#id95" name="plugins">Plugins</a></h1>
+<p>These are the preferences for configuring plugins.</p>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id96" name="id6">Default Directory</a></h2>
+<p>The default directory for installing plugins and plugin 
+indexes.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="print">
+<h1><a class="toc-backref" href="#id97" name="print">Print</a></h1>
+<p>These are the preferences for printing.</p>
+<div class="section" id="document-line-numbers">
+<h2><a class="toc-backref" href="#id98" name="document-line-numbers">Document Line Numbers</a></h2>
+<p>This tells DrPython whether or not to print line numbers 
+when printing the current file.</p>
+</div>
+<div class="section" id="prompt-line-numbers">
+<h2><a class="toc-backref" href="#id99" name="prompt-line-numbers">Prompt Line Numbers</a></h2>
+<p>This tells DrPython whether or not to print line numbers 
+when printing the text of the prompt.</p>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id100" name="id7">Tab Width</a></h2>
+<p>This tells DrPython how big to make tabs look (<tt class="docutils literal"><span class="pre">\t</span></tt>) when 
+printing. For example, 5 will make a single tab look like 
+5 spaces.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="prompt">
+<h1><a class="toc-backref" href="#id101" name="prompt">Prompt</a></h1>
+<p>This is <tt class="docutils literal"><span class="pre">DrFrame.txtPrompt</span></tt>. It is the text control that 
+has the input and output of the currently running program.</p>
+<div class="section" id="line-number-margin-width">
+<h2><a class="toc-backref" href="#id102" name="line-number-margin-width">Line Number Margin Width</a></h2>
+<p>Sets the margin width in pixels for linenumbers.</p>
+</div>
+<div class="section" id="visible-by-default">
+<h2><a class="toc-backref" href="#id103" name="visible-by-default">Visible By Default</a></h2>
+<p>If True, tells DrPython to show the prompt by default for
+each document.</p>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id104" name="id8">Use Tabs</a></h2>
+<p>If checked, uses tabs <tt class="docutils literal"><span class="pre">\t</span></tt> when you hit the tab key. 
+If not, uses the number of spaces specified in tabwidth.</p>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id105" name="id9">Tab Width</a></h2>
+<p>This tells DrPython how big to make tabs look (<tt class="docutils literal"><span class="pre">\t</span></tt>).
+For example, 8 will make a single tab look like 8 spaces.</p>
+</div>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id106" name="id10">Line Ending Format</a></h2>
+<p>The default is UNIX (<tt class="docutils literal"><span class="pre">\n</span></tt>). You can also select Windows
+(<tt class="docutils literal"><span class="pre">\r\n</span></tt>) or Mac (<tt class="docutils literal"><span class="pre">\r</span></tt>).</p>
+</div>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id107" name="id11">Word Wrap</a></h2>
+<p>Does not show the horizontal scrollbar, and &quot;wraps&quot; lines 
+that are rather long around so they appear as more than 
+one line.</p>
+</div>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id108" name="id12">Whitespace is Visible on Startup</a></h2>
+<p>When DrPython starts up, automatically toggles whitespace 
+is visible.</p>
+</div>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id109" name="id13">Scroll Extra Page</a></h2>
+<p>This tells DrPython to set the vertical scroll range to 
+one page more than the length of the prompt.</p>
+</div>
+<div class="section" id="vertical-size">
+<h2><a class="toc-backref" href="#id110" name="vertical-size">Vertical Size</a></h2>
+<p>Sets the percentage size of the prompt vs the document 
+when the prompt is visible. 25% for the prompt means 75% 
+for the document.</p>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id111" name="id14">Style</a></h2>
+<p>This sets how different kinds of text appear (foreground 
+and background color, font, size, underline/bold/italics).</p>
+<p>You can choose to not use styles at all, use them, or use 
+only &quot;Normal&quot; and &quot;Caret Foreground&quot;.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="startup-script">
+<h2><a class="toc-backref" href="#id112" name="startup-script">Startup Script</a></h2>
+<p>This is a set of commands run in the prompt
+after launching the python interpreter.</p>
+<p>Simply leave it blank to disable.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="side-panels">
+<h1><a class="toc-backref" href="#id113" name="side-panels">Side Panels</a></h1>
+<p>This sets the defaults for the side panels.</p>
+<div class="section" id="left-panel-size">
+<h2><a class="toc-backref" href="#id114" name="left-panel-size">Left Panel Size</a></h2>
+<p>The default size (percentage of the total window) for the
+left panel.</p>
+</div>
+<div class="section" id="right-panel-size">
+<h2><a class="toc-backref" href="#id115" name="right-panel-size">Right Panel Size</a></h2>
+<p>The default size (percentage of the total window) for the 
+right panel.</p>
+</div>
+<div class="section" id="top-panel-size">
+<h2><a class="toc-backref" href="#id116" name="top-panel-size">Top Panel Size</a></h2>
+<p>The default size (percentage of the total window) for the 
+top panel.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="source-browser">
+<h1><a class="toc-backref" href="#id117" name="source-browser">Source Browser</a></h1>
+<p>This tells DrPython how the source browser looks and acts.</p>
+<div class="section" id="position">
+<h2><a class="toc-backref" href="#id118" name="position">Position</a></h2>
+<p>Have the Source Browser appear in a panel to the left, right or 
+top of the current document.</p>
+</div>
+<div class="section" id="id15">
+<h2><a class="toc-backref" href="#id119" name="id15">Visible By Default</a></h2>
+<p>If True, tells DrPython to show the source browser by default
+for each document.</p>
+</div>
+<div class="section" id="close-on-activate">
+<h2><a class="toc-backref" href="#id120" name="close-on-activate">Close On Activate</a></h2>
+<p>When you activate an item (select it with a double click, 
+or with the keyboard), this tells DrPython whether or not 
+to close the Source Browser window.</p>
+</div>
+<div class="section" id="sorted-alphabetical">
+<h2><a class="toc-backref" href="#id121" name="sorted-alphabetical">Sorted (Alphabetical)</a></h2>
+<p>This tells DrPython whether or not to sort 
+classes/functions/import statements alphabetically, or leave 
+them in the order they appear in the program.</p>
+</div>
+<div class="section" id="id16">
+<h2><a class="toc-backref" href="#id122" name="id16">Style</a></h2>
+<p>This sets how the source browser appears (foreground and 
+background color, font, size, underline/bold/italics).</p>
+</div>
+<div class="section" id="auto-refresh-on-save">
+<h2><a class="toc-backref" href="#id123" name="auto-refresh-on-save">Auto Refresh on Save</a></h2>
+<p>Automatically refreshes the source browser on save.</p>
+</div>
+<div class="section" id="auto-refresh">
+<h2><a class="toc-backref" href="#id124" name="auto-refresh">Auto Refresh</a></h2>
+<p>Automatically refreshes the source browser whenever the 
+document is modified. (This can severely impact performance
+for large files.)</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+</div>
+</body>
+</html>

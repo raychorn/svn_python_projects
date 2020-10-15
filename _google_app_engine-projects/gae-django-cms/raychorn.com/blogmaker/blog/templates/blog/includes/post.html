@@ -1,0 +1,77 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+
+
+{% load blog_extras %}
+{% load prefab_tags %}
+{% load comment_utils %}
+{% load markup %}
+
+<div class='posts{% if forloop.last %}_last{% endif %}{% if forloop.first %}_first{% endif %}{% if not forloop %}_single{% endif %}'>
+
+<div class="post_title">
+{% if forloop %}<h2 class="title_nospace">{% else %}<h1>{% endif %}<a href='{{ object.get_absolute_url }}' title='{{ object.headline }}' rel='bookmark' class='title'>{{ object.headline }}</a>{% if forloop %}</h2>{% else %}</h1>{% endif %}
+</div>
+
+<div class="post_infos">
+<span class='blog_sm_wo'>Posted by </span><a href='{% BLOG_ROOT %}user/{{ object.user }}/' class='blog_sm'>{{ object.user|title }}</a><span class='blog_sm_wo'> on </span><a href='{% BLOG_ROOT %}{{ object.pub_date|date:"Y/m" }}/' class='blog_sm'>{{ object.pub_date|date:"F" }}</a> <a href='{% BLOG_ROOT %}{{ object.pub_date|date:"Y/m/d" }}/' class='blog_sm'>{{ object.pub_date|date:"d" }}</a>, <a href='{% BLOG_ROOT %}{{ object.pub_date|date:"Y" }}/' class='blog_sm'>{{ object.pub_date|date:"Y" }}</a><span class='blog_sm_wo'> at {{ object.pub_date|time }}</span>
+</div>
+
+{% if object.image %}
+<div class="post_image">
+<table cellspacing='0' cellpadding='0'>
+<tr>
+<td align='left'>
+<a href='{{ object.get_absolute_url }}' class='image'><img src='{{ object.get_image_url }}' class='blog' alt="Link to {{ object.headline }}"/></a>
+</td>
+</tr>
+<tr>
+<td align='right'{% if not object.copyright %}height='8'{% endif %} class='very_small'>
+{{ object.copyright }}
+</td>
+</tr>
+</table>
+</div>
+{% endif %}
+
+<div class="post_body">
+{{ object.body|markdown|expand_shortcuts }}
+</div>
+<!-- Autodiscovery for trackback url
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <rdf:Description
+      rdf:about="{{ object.get_absolute_url }}"
+      dc:identifier="{{ object.get_absolute_url }}"
+      dc:title="{{ object.headline }}"
+      trackback:ping="{{ object.get_absolute_url }}trackback/" />
+  </rdf:RDF>
+-->
+<div class="post_comments_tags">
+{% get_public_comment_count for blog.entry object.id as comment_count %}
+{% get_public_trackback_count for blog.entry object.id as trackback_count %}
+<a href='{{ object.get_absolute_url }}#comments' class='blog_sm'>{{ comment_count }} comment{{ comment_count|pluralize }}</a>,
+<a href='{{ object.get_absolute_url }}#trackbacks' class='blog_sm'>{{ trackback_count }} trackback{{ trackback_count|pluralize }}</a> (<a href="{{ object.get_absolute_url }}trackback/">URL</a>)
+{% for t in object.get_tags %}{% if forloop.first %}<span class="blog_sm_wo">,</span>&nbsp;<a href='{% BLOG_ROOT %}tag/' class='blog_sm'>Tags:</a>{% endif %} 
+<a href="{{ t.get_absolute_url }}" title="Entries tagged '{{ t }}'" class='blog_sm'>{{ t }}
+</a>
+{% endfor %} 
+</div>
+
+{% if forloop.counter %}
+{% else %}
+<div class="post_related_entries">
+{% for object in object.get_related_entries %}
+{% if forloop.first %}
+<span class='blog_sm_wo'>Related Posts:</span>
+<br />
+{% endif %}
+<span class='blog_sm_wo'>&nbsp;&nbsp;&nbsp;{{ forloop.counter }}. </span><a href='{{ object.get_absolute_url }}' class='blog_sm'>
+{{ object.headline }}
+</a>
+<br />
+{% endfor %}
+</div>
+{% endif %}
+
+</div>

@@ -1,0 +1,5 @@
+What about moving this project into the Google App Engine.
+
+Feed the data using many URL calls from the data loader running on SQL2005 under Ubuntu ?!?
+
+Just a thought.

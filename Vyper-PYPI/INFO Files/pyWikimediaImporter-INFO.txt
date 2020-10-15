@@ -1,0 +1,22 @@
+Metadata-Version: 1.0
+Name: pyWikimediaImporter
+Version: 1.1
+Author: Ray C Horn
+Author-email: raychorn at hotmail com
+Maintainer: Ray C Horn
+Maintainer-email: raychorn at hotmail com
+Home-page: http://python2.near-by.info/
+Download-url: http://python2.near-by.info/index.php?option=com_docman&task=doc_download&gid=27&&Itemid=71
+Summary: pyWikimediaImporter - Massive HTML to MediaWiki Importer.
+License: GPL restricted to non-commercial educational use only.
+Description: Massive HTML to MediaWiki Importer written in Python.
+Keywords: python, windows, multiple, commands, many
+Platform: Windows XP or Windows Vista
+Classifier: Environment :: Console
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+
+

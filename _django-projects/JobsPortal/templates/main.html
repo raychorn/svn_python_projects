@@ -1,0 +1,675 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	var __passwords_must_match__ = 'Passwords must match !!!';
+	
+	var __NUM_USERS__ = parseInt('{{ NUM_USERS }}');
+	var __AUTHS_COUNT__ = parseInt('{{ AUTHS_COUNT }}');
+	
+	var __is_login_dialog__ = false;
+	var __is_register_dialog__ = false;
+	var __is_forgot_dialog__ = false;
+	
+	$(document).ready(function() {
+		$("#div_qr_code_authenticator").hide();
+		$("#span_click_qr_code_setup").show();
+		$("#span_descr_qr_code_setup").hide();
+		
+		$("#td_google_authenticator_info").hide();
+
+		if ( (__NUM_USERS__ > 0) && (__AUTHS_COUNT__ > 0) ) {
+			$('#span_key_text').qtip({
+				content: {
+					text: '{{ AUTH_SEED }}',
+					title: {
+						text: 'Your Google Authenticator Key'
+					}
+				}
+			});
+			
+			$("#img_google_auth_info").click(function(e) {
+				$("#td_google_authenticator_info").toggle();
+            });
+			
+			$("#td_google_authenticator_info a").click(function(e) {
+				$("#td_google_authenticator_info").toggle();
+            });
+		}
+		
+		$("#anchor_show_qr_code").click(function(e) {
+			var href = '{{ AUTH_HREF }}';
+			var content = $("#div_qr_code_authenticator").html();
+			content = $.trim(content);
+			$("#span_click_qr_code_setup").hide();
+			$("#span_descr_qr_code_setup").show();
+			if (content.length == 0) {
+				$("#div_qr_code_authenticator").html('<table><tr><td><b>Scan this QR Code using your Mobile Device</b>&nbsp;&nbsp;<small><a href="#" title="Dismiss QR Code after scanning.">(X)</a></small></td></tr><tr><td><iframe id="iframe_qr_code" width="350" height="350" src="'+href+'"/></td></tr><tr><td></td></tr></table>');
+			}
+			$("#td_google_authenticator_info").hide();
+			$("#div_qr_code_authenticator").show();
+			$("#div_qr_code_authenticator a").click(function(e) {
+				$("#div_qr_code_authenticator").hide();
+				$("#span_click_qr_code_setup").show();
+				$("#span_descr_qr_code_setup").hide();
+            });
+        });
+		
+		function perform_dialog_cleanup() {
+			if (__is_login_dialog__) {
+				onclick_dismiss_login_button();
+			}
+			if (__is_register_dialog__) {
+				onclick_dismiss_register_button();
+			}
+			if (__is_forgot_dialog__) {
+				onclick_dismiss_forgotPassword_button();
+			}
+		}
+
+		$(".anchor_request_register").click(function(e) {
+            setTimeout(function () {
+				perform_dialog_cleanup();
+				setTimeout(function () {onclick_request_register_dialog()}, 100);
+			}, 100);
+        });
+		
+		$(".anchor_request_login").click(function(e) {
+            setTimeout(function () {
+				perform_dialog_cleanup();
+				setTimeout(function () {onclick_request_login_dialog()}, 100);
+			}, 100);
+        });
+		
+		$(".anchor_request_forgotpassword").click(function(e) {
+            setTimeout(function () {
+				perform_dialog_cleanup();
+				setTimeout(function () {onclick_request_forgotPassword_dialog()}, 100);
+			}, 100);
+        });
+		
+	});
+
+	function onclick_request_login_dialog() {
+		try {
+			var __div__ = $("#div_login_content");
+			if (__div__) {
+				var options = ___options___[___pageSelector___];
+				options = (options) ? options : __default_options__;
+				if (options['options']) {
+					options['options']['title'] = 'LOGIN';
+
+					$("[id$=-text]").remove();
+
+					__div__.dialog(options['options']);
+
+					$("#input_login_enter_email").labelify({ labelledClass: "labelHighlight" });
+					$("#input_login_enter_password").labelify({ labelledClass: "labelHighlight" });
+					$("#input_login_auth_code").labelify({ labelledClass: "labelHighlight" });
+					
+					$("#myLoginForm").validate({
+					  rules: {
+						authcode: {
+						  required: true,
+						  number: true,
+						  digits: true,
+						  range : [0, 999999]
+						}
+					  }
+					});
+					
+					$("#input_login_enter_password").keyup(function() {
+						$(this).valid();
+					});
+					
+					$("#input_login_auth_code").keyup(function() {
+						$(this).valid();
+					});
+					
+					$("#input_login_auth_code").keydown(function(e){
+						var keyPressed;
+						if (!e) var e = window.event;
+						if (e.keyCode) keyPressed = e.keyCode;
+						else if (e.which) keyPressed = e.which;
+						var val = $(this).val();
+						var hasMaxChars = (val.length > 5); // google authenticator codes are 6 digits !!!
+						var hasDecimalPoint = ((val.split('.').length-1)>0);
+						if ( keyPressed == 46 || keyPressed == 8 ||((keyPressed == 190||keyPressed == 110)&&(!hasDecimalPoint)) || keyPressed == 9 || keyPressed == 27 || keyPressed == 13 ||
+								 // Allow: Ctrl+A
+								(keyPressed == 65 && e.ctrlKey === true) ||
+								 // Allow: home, end, left, right
+								(keyPressed >= 35 && keyPressed <= 39)) {
+									 // let it happen, don't do anything
+									 return;
+							}
+							else {
+								// Ensure that it is a number and stop the keypress
+								if (e.shiftKey || (keyPressed < 48 || keyPressed > 57) && (keyPressed < 96 || keyPressed > 105 ) || (hasMaxChars)) {
+									e.preventDefault();
+								}
+							}
+					
+					  });					
+					
+					$("#myLoginForm").submit(function(e) {
+						var __validator__ = $('#myLoginForm').validate();
+						var __errors__ = __validator__.numberOfInvalids();
+						console.log( '__errors__='+__errors__ );
+						if (__errors__ == 0) {
+							$("#login_button").hide();
+							$("#ajaxBusyLogin").show();
+						}
+                    });
+
+					__is_login_dialog__ = true;
+				}
+			} else {
+				alert('WARNING:\n\n\tCannot Login at this time...');
+			}
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Login at this time...\n'+e);
+		}
+		return false;
+	}
+
+	function clearValidation(formElement){
+		//Internal $.validator is exposed through $(form).validate()
+		var __validator__ = $(formElement).validate();
+		//Iterate through named elements inside of the form, and mark them as error free
+		$('[name]',formElement).each(function(){
+			__validator__.successList.push(this);//mark as error free
+			__validator__.showErrors();//remove error messages if present
+		});
+		__validator__.resetForm();//remove error class on name elements and clear history
+		__validator__.reset();//remove all error and success data
+	}
+	
+	function handle_github_user_auth_choice() {
+		var __is__ = $('#input_use_github_auth').is(':checked');
+		var label_login_username = $('#label_login_username');
+		var label_login_password = $('#label_login_password');
+		var uname = $("#input_login_enter_email").val();
+		var upwd = $("#input_login_enter_password").val();
+		clearValidation($("#myLoginForm"));
+		if (__is__) {
+			label_login_username.html('Github Username');
+			label_login_password.html('Github Password');
+			$('#tr_login_self_help_kiosk_django').hide();
+			$('#tr_login_self_help_kiosk_github').show();
+			$("#input_login_enter_email").attr('title','Enter your Github Username.');
+			$('#input_login_enter_email').removeClass('required email').addClass('required');
+			$('#input_use_github_auth').prop('checked', true);
+		} else {
+			label_login_username.html('Email Address');
+			label_login_password.html('Password');
+			$('#tr_login_self_help_kiosk_django').show();
+			$('#tr_login_self_help_kiosk_github').hide();
+			$("#input_login_enter_email").attr('title','Enter Your Email Address.');
+			$('#input_login_enter_email').removeClass('required').addClass('required email');
+			$('#input_use_github_auth').prop('checked', false);
+		}
+		if (uname.indexOf('Enter ') >-1) {
+			uname = $("#input_login_enter_email").attr('title');
+		}
+		$("#input_login_enter_email").val(uname);
+		$("#input_login_enter_password").val(upwd);
+	}
+	
+	function handle_github_label_user_auth_choice() {
+		var __is__ = $('#input_use_github_auth').is(':checked');
+		if (__is__) {
+			$('#input_use_github_auth').prop('checked', false);
+		} else {
+			$('#input_use_github_auth').prop('checked', true);
+		}
+		handle_github_user_auth_choice();
+	}
+	
+	function onclick_request_forgotPassword_dialog() {
+		try {
+			var __div__ = $("#div_forgot_password_content");
+			if (__div__) {
+				var options = ___options___[___pageSelector___];
+				options = (options) ? options : __default_options__;
+				if (options['options']) {
+					options['options']['title'] = 'RESET PASSWORD';
+
+					$("[id$=-text]").remove();
+
+					__div__.dialog(options['options']);
+
+					$("#input_forgotPassword_enter_email").labelify({ labelledClass: "labelHighlight" });
+					$("#input_forgotPassword_enter_password").labelify({ labelledClass: "labelHighlight" });
+					$("#input_forgotPassword_enter_password2").labelify({ labelledClass: "labelHighlight" });
+					$("#input_forgotPassword_auth_code").labelify({ labelledClass: "labelHighlight" });
+
+					$("#myForgotPasswordForm").validate();
+
+					__is_forgot_dialog__ = true;
+				}
+			} else {
+				alert('WARNING:\n\n\tCannot Retrieve your Password at this time...');
+			}
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Retrieve your Password at this time...\n'+e);
+		}
+		return false;
+	}
+	
+	function onclick_request_register_dialog() {
+		try {
+			var __div__ = $("#div_register_content");
+			if (__div__) {
+				var options = ___options___[___pageSelector___];
+				options = (options) ? options : __default_options__;
+				if (options['options']) {
+					options['options']['title'] = 'REGISTER';
+
+					$("[id$=-text]").remove();
+
+					__div__.dialog(options['options']);
+
+					$("#input_register_enter_email").labelify({ labelledClass: "labelHighlight" });
+					$("#input_register_enter_password").labelify({ labelledClass: "labelHighlight" });
+					$("#input_register_enter_password2").labelify({ labelledClass: "labelHighlight" });
+					$("#input_register_auth_code").labelify({ labelledClass: "labelHighlight" });
+					
+					$("#myRegisterForm").validate();
+					$("#input_register_enter_password").keyup(function() {
+						$(this).valid();
+					});
+					$("#input_register_enter_password2").keyup(function() {
+						$("#input_register_enter_password2").addClass('valid').removeClass('error');
+						var m = $("#myRegisterForm").find(".password-meter-message");
+						m.html('');
+						if ( ($("#input_register_enter_password").val() != $("#input_register_enter_password2").val()) ) {
+							$("#input_register_enter_password2").addClass('error').removeClass('valid');
+							$("#input_register_enter_password2").highlight();
+							m.html(__passwords_must_match__);
+							m.show();
+						} else {
+							$(this).valid();
+						}
+					});
+
+					__is_register_dialog__ = true;
+				}
+			} else {
+				alert('WARNING:\n\n\tCannot Register at this time...');
+			}
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Register at this time...\n'+e);
+		}
+		return false;
+	}
+
+	function onclick_dismiss_login_button() {
+		try {
+			$("#div_login_content").dialog( "destroy" );
+			__is_login_dialog__ = false;
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Dismiss the Login PopUp at this time...');
+		}
+		return false;
+	}
+
+	function onclick_dismiss_register_button() {
+		try {
+			$("#div_register_content").dialog( "destroy" );
+			__is_register_dialog__ = false;
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Dismiss the Register PopUp at this time...');
+		}
+		return false;
+	}
+	
+	function onclick_dismiss_forgotPassword_button() {
+		try {
+			$("#div_forgot_password_content").dialog( "destroy" );
+			__is_forgot_dialog__ = false;
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Dismiss the Forgot Password PopUp at this time...');
+		}
+		return false;
+	}
+	
+	function onclick_forgotPassword_button() {
+		$("#forgotPassword_button").hide();
+		$("#ajaxBusyForgotPassword").show();
+	}
+	
+	function onclick_register_button() {
+		$("#register_button").hide();
+		$("#ajaxBusyRegister").show();
+	}
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+{% if IS_NOT_LOGGED_IN %}
+			<div id="div_login_content" style="display:none;" class="popup_dialog">
+				<table width="100%">
+					<tr>
+						<td>
+							<p>Currently, the VyperLogix Jobs Portal is open for early access.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>You are more than welcome to test-drive the VyperLogix Jobs Portal, please log in with your account credentials, as follows:</p>
+						</td>
+					</tr>
+					<tr>
+						<td id="td_google_authenticator_info">
+                        	<table width="100%">
+                            	<tr>
+                                	<td width="99%">
+                                    	<b>Before you can login you have to setup your Google Authenticator.</b>
+                                    </td>
+                                	<td>
+                                    	<a href="#" title="Dismiss Google Authenticator Info after reading.">(X)</a>
+                                    </td>
+                                </tr>
+                            	<tr>
+                                	<td valign="top" colspan="2">
+                                        <p>You can read more about the Google Authenticator <a href="https://support.google.com/accounts/answer/1066447?hl=en" target="_blank">here</a>.</p>
+                                        <p>There is also Google Authenticator for your Windows Desktop, <a href="https://code.google.com/p/winauth/" target="_blank">here</a>.</p>
+                                        <p>Your Google Authenticator key is (<b>{{ AUTH_SEED }}</b>) - Copy and Paste as-required for your needs.</p>
+                                        <p><span id="span_click_qr_code_setup">Click <a id="anchor_show_qr_code" href="#">here</a></span><span id="span_descr_qr_code_setup">Scan the QR Code using your Mobile Device</span> to setup your Google Authenticator, you will see a QR Code you can scan with your Google Authenticator or you can enter the <span id="span_key_text">key</span> as shown above.</p>
+                                    </td>
+                                </tr>
+                            </table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                        	<div id="div_qr_code_authenticator">
+                            </div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                        	<form id="myLoginForm" action="/login/user/" enctype="application/x-www-form-urlencoded" method="post">
+                            {% csrf_token %}
+                        	<table width="100%">
+                            	<tr>
+                                	<td align="left">
+                                        <table width="100%">
+                                            <tr>
+                                                <td width="10%" align="right" valign="top"><NOBR><b><span id="label_login_username">Email Address</span>:</b></NOBR></td>
+                                                <td width="*" align="left"><NOBR><input id="input_login_enter_email" name="username" type="text" title="Enter Your Email Address." size="30" class="required email" /></NOBR></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10%" align="right" valign="top"><NOBR><b><span id="label_login_password">Password</span>:</b></NOBR></td>
+                                                <td align="left">
+                                                	<NOBR>
+                                                    	<input id="input_login_enter_password" type="password" name="password" title="Enter Your Password" size="30" class="password" />
+                                                        <div class="password-meter">
+                                                            <div class="password-meter-message"> </div>
+                                                            <div class="password-meter-bg">
+                                                                <div class="password-meter-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                    </NOBR>
+                                                </td>
+                                            </tr>
+{% if NUM_USERS > 0 and AUTHS_COUNT > 0 %}
+                                            <tr>
+                                                <td width="10%" align="right" valign="middle"><NOBR><b><span id="label_login_auth_code">Authentication Code</span>:</b></NOBR></td>
+                                                <td width="*" align="left"><NOBR><input id="input_login_auth_code" name="authcode" type="text" title="Enter Your Authentication Code." size="30" class="required" />&nbsp;<img id="img_google_auth_info" src="/static/images/help-icon-32x32.fw.png" width="30" height="30" title="Click to see some useful information about the Google Authenticator." align="middle"/></NOBR></td>
+                                            </tr>
+{% endif %}
+                                        </table>
+                                    </td>
+                                    <td align="center" valign="bottom">
+                                        <input id="login_button" name="Go" type="submit" value="     Login     " class="main_button"/>
+                                        <div id="ajaxBusyLogin" style="display:none;"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            </form>
+						</td>
+					</tr>
+{% if NUM_USERS > 0 and AUTHS_COUNT > 0 %}
+					<tr id="tr_login_self_help_kiosk_django">
+						<td>
+                        	<UL style="list-style-type:square">
+								<li><a href="#" class="anchor_request_register">I do not have an account, so let me get one.</a></li>
+								<li><a href="#" class="anchor_request_forgotpassword">I have lost my password, so let me change it.</a></li>
+							</ul>
+						</td>
+					</tr>
+{% endif %}
+					<tr>
+	   					<td align="center" valign="bottom" height="130px">
+							<input name="Dismiss" type="button" value="Continue" class="main_button" style="width:100%;" onclick="onclick_dismiss_login_button();"/>
+	   					</td>
+					</tr>
+				</table>
+			</div>
+			<div id="div_forgot_password_content" style="display:none;" class="popup_dialog">
+				<table width="100%">
+					<tr>
+						<td>
+                        	<form id="myForgotPasswordForm" action="/change/password/" enctype="application/x-www-form-urlencoded" method="post">
+                            {% csrf_token %}
+                        	<table width="100%">
+                            	<tr>
+                                	<td align="left">
+                                        <table width="100%">
+                                            <tr>
+                                                <td width="10%" align="left" valign="middle"><NOBR><b>Email Address:</b></NOBR></td>
+                                                <td width="*" align="left"><NOBR><input id="input_forgotPassword_enter_email" name="username" type="text" title="Enter Your Email Address" size="30" class="required email" /></NOBR></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="middle"><NOBR><b>Password:</b></NOBR></td>
+                                                <td align="left">
+                                                	<NOBR>
+                                                    	<input id="input_forgotPassword_enter_password" name="password" type="password" title="Enter Your Password" size="30" />
+                                                        <div class="password-meter">
+                                                            <div class="password-meter-message"> </div>
+                                                            <div class="password-meter-bg">
+                                                                <div class="password-meter-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </NOBR>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="middle"><NOBR><b>Password (again):</b></NOBR></td>
+                                                <td align="left"><NOBR><input id="input_forgotPassword_enter_password2" name="password2" type="password" title="Enter Your Password Again" size="30" /></NOBR></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td align="center" valign="bottom">
+                                        <input id="forgotPassword_button" name="Go" type="submit" value="     Reset Password     " class="main_button" onclick="onclick_forgotPassword_button()"/>
+                                        <div id="ajaxBusyForgotPassword" style="display:none;"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            </form>
+						</td>
+					</tr>
+{% if NUM_USERS > 0 and AUTHS_COUNT > 0 %}
+					<tr>
+						<td>
+                        	<UL style="list-style-type:square">
+								<li><a href="#" class="anchor_request_register">I do not have an account, so let me get one.</a></li>
+								<li><a href="#" class="anchor_request_login">I know my password, so let me login.</a></li>
+							</ul>
+						</td>
+					</tr>
+{% endif %}
+					<tr>
+	   					<td align="center" valign="bottom" height="130px">
+							<input name="Dismiss" type="button" value="Continue" class="main_button" style="width:100%;" onclick="onclick_dismiss_forgotPassword_button();"/>
+	   					</td>
+					</tr>
+				</table>
+			</div>
+			<div id="div_register_content" style="display:none;" class="popup_dialog">
+				<table width="100%">
+					<tr>
+						<td>
+							<p><span class="create_new_account_text">Create a new account</span></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                        	<form id="myRegisterForm" action="/register/user/" enctype="application/x-www-form-urlencoded" method="post">
+                            {% csrf_token %}
+                        	<table width="100%">
+                            	<tr>
+                                	<td align="left">
+                                        <table width="100%">
+                                            <tr>
+                                                <td width="20%" align="left" valign="middle"><NOBR><b>Email Address:</b></NOBR></td>
+                                                <td width="*" align="left"><NOBR><input id="input_register_enter_email" name="username" type="text" title="Enter Your Email Address" size="30" class="required email"/></NOBR></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="middle"><NOBR><b>Password:</b></NOBR></td>
+                                                <td align="left">
+                                                	<NOBR>
+                                                    	<input id="input_register_enter_password" name="password" type="password" title="Enter Your Password" size="30" />
+                                                        <div class="password-meter">
+                                                            <div class="password-meter-message"> </div>
+                                                            <div class="password-meter-bg">
+                                                                <div class="password-meter-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </NOBR>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="middle"><NOBR><b>Password (again):</b></NOBR></td>
+                                                <td align="left"><NOBR><input id="input_register_enter_password2" name="password2" type="password" title="Enter Your Password Again" size="30" /></NOBR></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                	<td align="center" valign="bottom">
+                                        <input id="register_button" name="Go" type="submit" value="     Register     " class="main_button" onclick="onclick_register_button()"/>
+                                        <div id="ajaxBusyRegister" style="display:none;"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            </form>
+						</td>
+					</tr>
+{% if NUM_USERS > 0 and AUTHS_COUNT > 0 %}
+					<tr>
+						<td>
+                        	<UL style="list-style-type:square">
+								<li><a href="#" class="anchor_request_login">I have an account already, just let me login.</a></li>
+								<li><a href="#" class="anchor_request_forgotpassword">I have lost my password, so let me change it.</a></li>
+							</ul>
+						</td>
+					</tr>
+{% endif %}
+					<tr>
+	   					<td align="center" valign="bottom" height="130px">
+							<input name="Dismiss" type="button" value="Continue" class="main_button" style="width:100%;" onclick="onclick_dismiss_register_button();"/>
+	   					</td>
+					</tr>
+				</table>
+			</div>
+{% endif %}
+            <table id="container" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="top" id="main_content_holder">
+                
+                	<table width="100%">
+                		<tr>
+                			<td id="main_background" width="80%">
+                			</td>
+                			<td width="*" valign="top" align="right">
+{% if IS_NOT_LOGGED_IN %}
+		                   		<div id="main_sign_in_holder" style="display:none;">
+		                   			<span><input name="Login" type="button" value="Login" class="main_button" onclick="onclick_request_login_dialog();" /></span>
+		                   			<span><input name="Register" type="button" value="Register" class="main_button" onclick="onclick_request_register_dialog();" /></span>
+		                        </div>
+{% endif %}
+			                   <div id="main_sign_in_holder2">
+			                        VyperLogix Jobs Portal is your Jobs Connection.&nbsp;&nbsp;Get your Resume into Employer's Hands!!!&nbsp;&nbsp;Fast and easy !!!
+								</div>
+                			</td>
+                		</tr>
+                	</table>
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+{% endif %}
+                <div style="clear: both">&nbsp;</div>
+                <div style="clear: both; padding-top:0px;">&nbsp;</div>
+                        <div id="shipment_container">              
+                                        
+                                <div class="bubble">
+                                <div class="rectangle"><div class="header_font">Do you need a job now ?</div></div>
+                                <div class="triangle-l">&nbsp;</div>
+                                
+                                <div class="info">
+                                
+                                <p>
+                              <div class="right_box"></div>
+                                </p>
+                                <BR/>
+                                	<UL id="django_cloud_info" style="list-style-type:square">
+                                        <li ><NOBR>Create a Profile.</NOBR></li>
+                                        <li ><NOBR>Upload your Resume.</NOBR></li>
+                                        <li ><NOBR>Wait for employers to contact you.</NOBR></li>
+                                        <li ><NOBR>Get Hired.</NOBR></li>
+                                        <li ><NOBR>Make referrals; tell your friends and family.</NOBR></li>
+                                	</UL>
+                                <br/>
+                                
+{% if IS_NOT_HIDDEN %}
+                                <center>
+                                    <a href="#" class="anchor_learn_more" onclick="not_yet_implemented();">Learn More</a>
+                                </center>
+{% endif %}
+                                
+                                </div>
+                                </div>
+                        </div> 
+                         <div id="django_rightside_container">              
+                                        
+                                <div class="bubble">
+                                <div class="rectangle"><div class="header_font">Need Python Skills?</div></div>
+                                <div class="triangle-l"></div>
+                                
+                                <div class="infoRight">
+                                	<table width="100%" style="display:inline; padding-left: -20px;">
+                                		<tr>
+                                			<td align="left">
+			                                	<UL id="django_programmer_info" style="list-style-type:square">
+			                                        <li >Are you passionate about the Python Language?</li>
+			                                        <li >Do you love to learn?</li>
+			                                	</UL>
+                                			</td>
+                                			<td align="right"><img src="/static/images/programmer(206x240).jpg" width="190"/></td>
+                                		</tr>
+                                	</table>
+{% if IS_NOT_HIDDEN %}
+                                <div class="left_box_right">
+	                              <input name="" type="button" value="FIND A LOAD" class="main_button_orange" onclick="not_yet_implemented();"/>
+                                </div>
+{% endif %}
+                                
+{% if IS_NOT_HIDDEN %}
+                                <center>
+                                    <a href="#" class="anchor_learn_more" onclick="not_yet_implemented();">Learn More</a>
+                                </center>
+{% endif %}
+                                
+                                </div>
+                                </div>
+                        </div>
+                </td>
+              </tr>
+            </table>   
+{% endblock %}

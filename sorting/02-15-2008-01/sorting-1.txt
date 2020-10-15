@@ -1,0 +1,98 @@
+==============================
+N=(1000)
+
+BEGIN: python native sort() sorts(N) : END! python native sort() 0.00100016593933
+BEGIN: linear sort() searches(N) : END! linear sort() 0.000999927520752
+BEGIN: recursive quick-sort() qsorts(N) : END! recursive quick-sort() 0.00500011444092
+BEGIN: heap-sort-v1() heapsorts(N) : END! heap-sort-v1() 0.0019998550415
+BEGIN: persists() persists(N) : END! persists() 0.0569999217987
+BEGIN: heap-sort-v2() heaps(N) : END! heap-sort-v2() 0.00200009346008
+BEGIN: insertion-sort() inserts(N) : END! insertion-sort() 0.0090000629425
+(slowest) :: 0.0569999217987 :: ['persists']
+(fastest) :: 0.000999927520752 :: ['linear sort']
+(analysis) :: ['linear sort'] is 57.00 times faster than ['persists']
+==============================
+python native sort :: 0.00100016593933
+insertion-sort :: 0.0090000629425
+persists :: 0.0569999217987
+linear sort :: 0.000999927520752
+heap-sort-v2 :: 0.00200009346008
+recursive quick-sort :: 0.00500011444092
+heap-sort-v1 :: 0.0019998550415
+==============================
+==============================
+N=(10000)
+
+BEGIN: python native sort() sorts(N) : END! python native sort() 0.00999999046326
+BEGIN: linear sort() searches(N) : END! linear sort() 0.00600004196167
+BEGIN: recursive quick-sort() qsorts(N) : END! recursive quick-sort() 0.0539999008179
+BEGIN: heap-sort-v1() heapsorts(N) : END! heap-sort-v1() 0.0130000114441
+BEGIN: persists() persists(N) : END! persists() 0.414999961853
+BEGIN: heap-sort-v2() heaps(N) : END! heap-sort-v2() 0.018000125885
+BEGIN: insertion-sort() inserts(N) : END! insertion-sort() 0.924000024796
+(slowest) :: 0.924000024796 :: ['insertion-sort']
+(fastest) :: 0.00600004196167 :: ['linear sort']
+(analysis) :: ['linear sort'] is 154.00 times faster than ['insertion-sort']
+==============================
+python native sort :: 0.00999999046326
+insertion-sort :: 0.924000024796
+persists :: 0.414999961853
+linear sort :: 0.00600004196167
+heap-sort-v2 :: 0.018000125885
+recursive quick-sort :: 0.0539999008179
+heap-sort-v1 :: 0.0130000114441
+==============================
+==============================
+N=(100000)
+
+BEGIN: python native sort() sorts(N) : END! python native sort() 0.15299987793
+BEGIN: linear sort() searches(N) : END! linear sort() 0.0840001106262
+BEGIN: recursive quick-sort() qsorts(N) : END! recursive quick-sort() 1.22699999809
+BEGIN: heap-sort-v1() heapsorts(N) : END! heap-sort-v1() 0.236999988556
+BEGIN: persists() persists(N) : END! persists() 6.10699987411
+BEGIN: heap-sort-v2() heaps(N) : END! heap-sort-v2() 0.308000087738
+BEGIN: insertion-sort() inserts(N) : END! insertion-sort() 247.595999956
+(slowest) :: 247.595999956 :: ['insertion-sort']
+(fastest) :: 0.0840001106262 :: ['linear sort']
+(analysis) :: ['linear sort'] is 2947.57 times faster than ['insertion-sort']
+==============================
+python native sort :: 0.15299987793
+insertion-sort :: 247.595999956
+persists :: 6.10699987411
+linear sort :: 0.0840001106262
+heap-sort-v2 :: 0.308000087738
+recursive quick-sort :: 1.22699999809
+heap-sort-v1 :: 0.236999988556
+==============================
+==============================
+N=(1000000)
+
+BEGIN: python native sort() sorts(N) : END! python native sort() 2.15499997139
+BEGIN: linear sort() searches(N) : END! linear sort() 0.9390001297
+BEGIN: recursive quick-sort() qsorts(N) : END! recursive quick-sort() 14.2039999962
+BEGIN: heap-sort-v1() heapsorts(N) : END! heap-sort-v1() 3.80500006676
+BEGIN: persists() persists(N) : END! persists() 59.9379999638
+BEGIN: heap-sort-v2() heaps(N) : END! heap-sort-v2() 4.9319999218
+BEGIN: insertion-sort() inserts(N) : END! insertion-sort() 27614.7190001
+(slowest) :: 27614.7190001 :: ['insertion-sort']
+(fastest) :: 0.9390001297 :: ['linear sort']
+(analysis) :: ['linear sort'] is 29408.64 times faster than ['insertion-sort']
+==============================
+python native sort :: 2.15499997139
+insertion-sort :: 27614.7190001
+persists :: 59.9379999638
+linear sort :: 0.9390001297
+heap-sort-v2 :: 4.9319999218
+recursive quick-sort :: 14.2039999962
+heap-sort-v1 :: 3.80500006676
+==============================
+==============================
+N=(10000000)
+
+BEGIN: python native sort() sorts(N) : END! python native sort() 26.993999958
+BEGIN: linear sort() searches(N) : END! linear sort() 10.7620000839
+BEGIN: recursive quick-sort() qsorts(N) : END! recursive quick-sort() 291.177999973
+BEGIN: heap-sort-v1() heapsorts(N) : END! heap-sort-v1() 65.9949998856
+BEGIN: persists() persists(N) : END! persists() 578.970999956
+BEGIN: heap-sort-v2() heaps(N) : END! heap-sort-v2() 81.7750000954
+BEGIN: insertion-sort() inserts(N) :

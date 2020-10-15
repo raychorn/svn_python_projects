@@ -1,0 +1,86 @@
+/* This body style can be removed if already applied elsewhere. */
+body {margin:0;padding:0;}
+
+/* All styles beyond the basic body and link styles are namespaced under .gh or in 2 cases .gh_outside. */
+.gh_outside {width:100%;text-align:center;background:#fff url(../images/gn/gradient.gif) repeat-x bottom left;}
+.gh_outside div.fixer {clear:both;height:10px;overflow:hidden;}
+.gh {width:760px;text-align:left;margin:0 auto;background:transparent;font:normal 12px/15px arial,sans-serif;}
+.gh a:link {color:#0066CC;}     /* unvisited link */
+.gh a:visited {color:#663366;}  /* visited link */
+.gh a:hover {color:#0066CC;}   /* mouse over link */
+.gh a:active {color:#0066CC;}   /* selected link */
+.gh div {float:left;}
+.gh div.logo img {display:block;margin:33px 24px 0 10px;width:174px;height:64px;}
+.gh ul {float:left;list-style-type:none;margin:0;padding:0;text-align:right;}
+.gh ul li {display:inline;margin:0;padding:0;}
+.gh ul.primary_links {width:542px;margin:10px 10px 0 0;color:#999;}
+.gh ul.primary_links span {color:#000;}
+.gh div.secondary_links {font:normal 11px/13px arial,sans-serif;width:542px;margin:10px 10px 20px 0;}
+.gh div.secondary_links ul {width:542px;color:#999;}
+.gh div.secondary_links ul span {color:#666;}
+
+.gh ul.lob_tabs {width:330px;}
+.gh ul.lob_tabs li {display:block;float:left;font:bold 15px arial;background:transparent url(../images/gn/gray_divider.gif) no-repeat bottom right;padding-right:1px;}
+.gh ul.lob_tabs li a {display:block;float:left;text-decoration:none;padding:14px 18px 14px 18px;color:#000;}
+.gh ul.lob_tabs li a.active {display:block;float:left;text-decoration:none;padding:14px 18px 14px 18px;background:#fff url(../images/gn/gradient_on.gif) repeat-x bottom left;color:#ff0000;}
+
+.gh ul.lob_tabs li a:link, .gh ul.lob_tabs li a:visited, .gh ul.lob_tabs_small li a:link, .gh ul.lob_tabs_small li a:visited {text-decoration:none;color:#000;}
+.gh ul.lob_tabs li a.active:link, .gh ul.lob_tabs li a.active:visited, .gh ul.lob_tabs_small li a.active:link, .gh ul.lob_tabs_small li a.active:visited {text-decoration:none;color:#ff0000;}
+.gh ul.lob_tabs li a:hover, .gh ul.lob_tabs li a:active, .gh ul.lob_tabs_small li a:hover, .gh ul.lob_tabs_small li a:active {text-decoration:underline;color:#000;}
+.gh ul.lob_tabs li a.active:hover, .gh ul.lob_tabs li a.active:active, .gh ul.lob_tabs_small li a.active:hover, .gh ul.lob_tabs_small li a.active:active {text-decoration:underline;color:#ff0000;}
+
+.gh img {border:0;}
+.gh form#gh_search_form {float:left;width:212px;margin:5px 10px 0 0;padding:0;}
+.gh form#gh_search_form fieldset {margin:0;padding:0;border:0;}
+.gh form#gh_search_form input {float:right;margin:1px 5px 0 0;width:130px;}
+.gh .hidden {position:absolute;left:-1000em;width:1px;height:1px;overflow:hidden;}
+.gh .cart {background:transparent url(../images/gn/cart.gif) no-repeat top left;padding-left:20px;}
+
+.gh button, .gh button span, .gh button span span, .gh button span span span {display:inline;float:right;padding:0;margin:0;border:0;width:auto;height:auto;cursor:pointer;color:#fff;font:bold 12px/21px arial,sans-serif;text-decoration:none;overflow:visible;}
+.gh button {background:transparent;}
+.gh button span {padding-left:10px;padding-right:0px;background:url(../images/gn/red_button_left.gif) transparent no-repeat top left;}
+.gh button span span {padding-left:0px;padding-right:10px;background:url(../images/gn/red_button_right.gif) transparent no-repeat top right;}
+.gh button span span span {padding-left:0px;padding-right:0px;background:url(../images/gn/red_button_1px.gif) #DA0000 repeat-x;}
+
+#gn_outside {background:url(../images/gn/off_red.gif) repeat-x;text-align:center;width:100%;}
+#gn_outside #gn {margin:0 auto;text-align:left;height:35px;width:760px;}
+ 
+#gn div ul, #gn div ul li ul {display:block;width:180px;list-style-type:none;list-style-position:outside;padding:0;margin:0;background-color:#000;}
+#gn div ul li, #gn div ul li ul li {display:block;width:180px;vertical-align:bottom;padding:0;margin:0;background:transparent;}
+ 
+#gn h2 {display:block;float:left;padding:0 1px 0 0;margin:0;height:35px;line-height:35px;background:url(../images/gn/divider.gif) no-repeat top right;}
+#gn h2 a:link, #gn h2 a:visited {display:block;float:left;background:url(../images/gn/off_red.gif) repeat-x;font:bold 13px arial,sans-serif;color:#fff;text-decoration:none;padding:0 10px 0 10px;height:35px;line-height:35px;}
+#gn h2 a:hover, #gn h2 a:active, #gn h2 a:focus, #gn h2 a.gn_active, #gn h2 a.gn_selected {background:url(../images/gn/top_level_active_state.gif) repeat-x;color:#fff;text-decoration:none;}
+#gn h2 span {display:block;float:left;cursor:pointer;cursor:hand;}
+#gn h2 span.gn_left_end {padding:0 0 0 1px;margin:0;height:35px;line-height:35px;background:url(../images/gn/divider.gif) no-repeat top left;}
+#gn h2 img {display:block;float:left;height:35px;width:1px;overflow:hidden;}
+#gn sup {line-height:0px;vertical-align:text-top;}
+ 
+#gn div.gn_dd {position:absolute;left:-1000em;z-index:500;background:url(../images/gn/s.gif);width:180px;}
+#gn div.gn_dd ul li a:link, #gn div.gn_dd ul li a:visited {display:block;font:bold 12px arial,sans-serif;color:#fff;text-decoration:none;padding:5px 20px 5px 20px;background:#000;}
+#gn div.gn_dd ul li a:hover, #gn div.gn_dd ul li a:active, #gn div.gn_dd ul li a:focus {text-decoration:none;}
+#gn div.gn_dd ul li ul {position:absolute;z-index:500;margin-left:180px;top:0;width:0;overflow:hidden;left:-1000em;background-color:#212121;}
+#gn div.gn_dd ul li ul li a:link, #gn div.gn_dd ul li ul li a:visited {font:normal 11px arial,sans-serif;background:#212121;color:#fff;padding:5px 10px 5px 10px;}
+#gn div.gn_dd ul li ul li a:hover, #gn div.gn_dd ul li ul li a:active, #gn div.gn_dd ul li ul li a:focus {text-decoration:none;background:#990000;color:#fff;}
+ 
+#gn div ul li ul li {font:normal 11px/13px arial,sans-serif;color:#fff;background:#212121;}
+#gn div ul li ul li strong {display:block;}
+#gn div ul li ul li p {padding:10px 0 10px 0;margin:0 10px 0 10px;border-bottom:0px none}/*border-bottom:1px solid #3b3b3b;*/
+ 
+#gn div.gn_dd ul li ul li a.newWindow:link,
+#gn div.gn_dd ul li ul li a.newWindow:visited,
+#gn div.gn_dd ul li ul li a.newWindow:hover,
+#gn div.gn_dd ul li ul li a.newWindow:active,
+#gn div.gn_dd ul li ul li a.newWindow:focus {background-image: url(../images/gn/promos/newwindow.gif); background-position: 158px center; background-repeat: no-repeat;}
+
+#gn div.gn_dd ul li a.left_arrow:link,
+#gn div.gn_dd ul li a.left_arrow:visited,
+#gn div.gn_dd ul li a.left_arrow:hover,
+#gn div.gn_dd ul li a.left_arrow:active,
+#gn div.gn_dd ul li a.left_arrow:focus {background-image:url(../images/gn/left_arrow_active.gif);background-repeat:no-repeat;background-position:8px center;}
+
+#gn div.gn_dd ul li a.right_arrow:link,
+#gn div.gn_dd ul li a.right_arrow:visited,
+#gn div.gn_dd ul li a.right_arrow:hover,
+#gn div.gn_dd ul li a.right_arrow:active,
+#gn div.gn_dd ul li a.right_arrow:focus {background-image:url(../images/gn/right_arrow_active.gif);background-repeat:no-repeat;background-position:168px center;}

@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" borderColor="#ff0000" borderStyle="none" 
+	creationComplete="onInit()" initialize="onInitialize()"
+	xmlns:controls="com.HAL.controls.*">
+	<mx:Script>
+		<![CDATA[
+			import com.HAL.views.events.PackageBuilderCheckPackageNameEvent;
+			import com.HAL.utils.FileUtils;
+			import com.HAL.utils.LicenseUtils;
+			import mx.controls.ToolTip;
+			import mx.core.UIComponent;
+			import com.HAL.utils.BitmapUtils;
+			import mx.managers.DragManager;
+			import mx.controls.TextArea;
+			import mx.events.DragEvent;
+			import mx.controls.Image;
+			import mx.core.DragSource;
+			import com.HAL.utils.StringUtils;
+			import mx.controls.TextInput;
+			import com.HAL.controls.buttons.FolderNavigatorButtonCanvas;
+			import mx.containers.HBox;
+			import mx.controls.List;
+			import com.HAL.utils.ArrayUtils;
+			import com.HAL.sockets.views.dialogs.NewFolderDialog;
+			import com.HAL.controls.navigators.events.FileListInitContextMenuEvent;
+			import mx.controls.Alert;
+			import com.HAL.Alert.AlertPopUp;
+			import com.HAL.controls.navigators.events.FolderNavigatorChangedEvent;
+			import mx.managers.PopUpManagerChildList;
+			import com.HAL.controls.navigators.FolderNavigatorPanel;
+			import com.HAL.controls.navigators.FolderNavigatorCanvas;
+			import com.HAL.controls.events.GridWidgetCreatedEvent;
+			import mx.collections.ArrayCollection;
+			import com.HAL.controls.events.GridToggleButtonCreatedEvent;
+			import mx.controls.advancedDataGridClasses.AdvancedDataGridColumn;
+			import mx.controls.AdvancedDataGrid;
+			import mx.events.CollectionEvent;
+			import com.HAL.controls.events.ListItemSelectedEvent;
+			import com.HAL.utils.ArrayCollectionUtils;
+			import com.HAL.utils.Misc;
+			import mx.managers.PopUpManager;
+			import com.HAL.controls.popups.NoticePanel;
+			import mx.managers.ToolTipManager;
+			import mx.events.ListEvent;
+			import com.HAL.sockets.events.ExecPythonEvent;
+			import com.HAL.utils.FileListUtils;
+			import com.HAL.controls.navigators.events.FolderNavigatorUpEvent;
+			import com.HAL.controls.navigators.events.FolderNavigatorHomeEvent;
+			import com.HAL.views.events.PackageBuilderAcceptedEvent;
+			import com.HAL.views.events.PackageBuilderCancelledEvent;
+			import mx.controls.FileSystemEnumerationMode;
+			
+			[Event(name="packageBuilderCancelled", type="com.HAL.views.events.PackageBuilderCancelledEvent")]
+			[Event(name="packageBuilderAccepted", type="com.HAL.views.events.PackageBuilderAcceptedEvent")]
+			[Event(name="folderNavigatorHome", type="com.HAL.controls.navigators.events.FolderNavigatorHomeEvent")]
+			[Event(name="folderNavigatorUp", type="com.HAL.controls.navigators.events.FolderNavigatorUpEvent")]
+			[Event(name="execPython", type="com.HAL.sockets.events.ExecPythonEvent")]
+			[Event(name="packageBuilderCheckPackageName", type="com.HAL.views.events.PackageBuilderCheckPackageNameEvent")]
+			
+			public static const buildPackageDefaultToolTip:String = 'You must place files into the New Package file list before this button will become enabled.';
+			public static const buildPackageToolTipPhase2:String = 'Now that some files have been placed into the file list you must name the New Package file before this button will become enabled. Click on the text area to pop-up the required dialogs.';
+			public static const buildPackageToolTipPhase3:String = 'Now that some files have been placed into the file list and named the New Package file you may click this button to build the New Package.';
+			
+			public static const _packageFileExtension:String = '.PKG';
+
+			private var __packageFileExtension:String;
+			
+			private var __refreshAddRemoveButtons:Function;
+			
+			private var _currentFolder:String = '';
+
+			private var _toolTipCache:Object = {};
+			
+			private var _cacheFilterOut:Object = {};
+			
+			private var _noticePanel:NoticePanel;
+			
+			private var _selectedIndexFromPackage:int;
+			
+			private var _originalWidth:Number = -1;
+			
+			private var popUp_FolderNavPanel:FolderNavigatorPanel;
+			
+			[Embed(source='assets/images/default-document.gif')]
+			public var documentImage:Class;
+
+			public function set refreshAddRemoveButtons(refreshAddRemoveButtons:Function):void {
+				if (refreshAddRemoveButtons != null) {
+					this.__refreshAddRemoveButtons = refreshAddRemoveButtons;
+				}
+			}
+			
+			public function get refreshAddRemoveButtons():Function {
+				return this.__refreshAddRemoveButtons;
+			}
+			
+			public function get packageFileExtension():String {
+				if ( (this.__packageFileExtension == null) || (this.__packageFileExtension.length == 0) ) {
+					this.__packageFileExtension = _packageFileExtension;
+				}
+				return this.__packageFileExtension;
+			}
+			
+			public function set packageFileExtension(packageFileExtension:String):void {
+				this.__packageFileExtension = packageFileExtension;
+			}
+			
+			public function get callbackFunction():Function {
+				return this.determinePackageName;
+			}
+			
+			public function set currentFolder(currentFolder:String):void {
+				this._currentFolder = currentFolder;
+				if (this.fileList1) {
+					try { 
+						this._currentFolder = FileUtils.correctFolderSpec(this._currentFolder);
+						this.fileList1.directory = new File(this._currentFolder); 
+					} 
+					catch (err:Error) { }
+				}
+			}
+			
+			public function get currentFolder():String {
+				return this._currentFolder;
+			}
+			
+			private function onInitialize():void {
+				this.refreshAddRemoveButtons = this.refreshAddRemoveButtonsFunc;
+			}
+			
+			private function onInit():void {
+				this._originalWidth = this.vbox_packageBuilder.width;
+			}
+			
+			private function onCreationCompleteFileSystemList():void {
+				if (this._currentFolder.length > 0) {
+					this._currentFolder = FileUtils.correctFolderSpec(this._currentFolder);
+					this.fileList1.directory = new File(this._currentFolder);
+				}
+				this.fileList1.contextMenu = this.getFileListContextMenu();
+				this.initFileListContextMenu(ContextMenu(this.fileList1.contextMenu),this.onFileListContextMenuItemSelect);
+			}
+			
+			private function onItemDoubleClickFileSystemList(event:ListEvent):void {
+				this.errorString = '';
+				this.refreshNavigationButtons();
+			}
+			
+			private function _refreshBuildPackageButton(fname:String):void {
+				var file:File = new File(fname);
+				this.btn_acceptPackage.enabled = ( (file.isDirectory == false) && (this.listGrid.list_dataProvider.length > 0) );
+			}
+			
+			private function refreshBuildPackageButton():void {
+				this._refreshBuildPackageButton(this.labelFolderName.text);
+			}
+			
+			private function refreshNavigationButtons():void {
+	//			this.refreshBuildPackageButton();
+				this.btn_navigateUp.enabled = (FileListUtils.isFileListAtRoot(this.fileList1) == false);
+				this.btn_navigateUp.styleName = ((this.btn_navigateUp.enabled) ? 'EnabledButton' : 'DisabledButton');
+				this._toolTipCache[this.btn_navigateUp.id+'_'+((this.btn_navigateUp.enabled) ? 'EnabledButton' : 'DisabledButton')] = this.btn_navigateUp.toolTip; 
+				this.btn_navigateUp.toolTip = ((this.btn_navigateUp.enabled) ? this._toolTipCache[this.btn_navigateUp.id+'_EnabledButton'] : 'This button has been disabled.  Navigate to a folder that is one level lower than the current folder to enable this button or Navigate to the HOME folder.');
+			}
+
+			private function onClickNavigateHomeButton():void {
+				this._currentFolder = FileUtils.correctFolderSpec(this._currentFolder);
+				this.fileList1.directory = new File(this._currentFolder);
+				this.refreshNavigationButtons();
+				this.dispatchEvent(new FolderNavigatorHomeEvent(FolderNavigatorHomeEvent.TYPE_FOLDER_NAVIGATOR_HOME));
+			}
+			
+			private function onClickNavigateUpButton():void {
+				this.fileList1.navigateUp();
+				this.refreshNavigationButtons();
+				this.dispatchEvent(new FolderNavigatorUpEvent(FolderNavigatorUpEvent.TYPE_FOLDER_NAVIGATOR_UP));
+			}
+			
+			private function onClickAcceptPackage():void {
+				this.dispatchEvent(new PackageBuilderAcceptedEvent(PackageBuilderAcceptedEvent.TYPE_PACKAGE_BUILDER_ACCEPTED, this.listGrid.input_packageName.text, this.listGrid.list_dataProvider.source));
+			}
+			
+			private function onClickCancelPackage():void {
+				this.dispatchEvent(new PackageBuilderCancelledEvent(PackageBuilderCancelledEvent.TYPE_PACKAGE_BUILDER_CANCELLED));
+			}
+			
+			public function determinePackageName(obj:*):void {
+				var isValid:Boolean = obj.item;
+				this._cacheFilterOut[obj.source] = isValid;
+				this.fileList1.refresh();
+			}
+			
+			public function isPossiblyPackage(aFile:File):Boolean {
+				var bool:Boolean = false;
+				if (aFile is File) {
+					var fname:String = aFile.name.toUpperCase();
+					bool = ( (fname.indexOf(PackageBuilderCanvas._packageFileExtension) > -1) || (fname.indexOf(ArchiveBuilderCanvas._packageFileExtension) > -1) );
+				}
+				return bool;
+			}
+			
+			private function showPackagesAndFolders(file:File):Boolean {
+				var isPossiblyPackage:Boolean = this.isPossiblyPackage(file);
+				var isValid:Boolean = false;
+				if (this._cacheFilterOut[file.nativePath]) {
+					isValid = this._cacheFilterOut[file.nativePath];
+				}
+				if ( (isPossiblyPackage) && (this._cacheFilterOut[file.nativePath] == null) ) {
+					var args:Array = [];
+					args.push(file.nativePath);
+					var id:int = this.parentApplication.commandNameID(this.parentApplication._const_check_package_name_symbol);
+					this.dispatchEvent(new ExecPythonEvent(ExecPythonEvent.TYPE_EXEC_PYTHON,this,'callbackFunction',id,args));
+				}
+				return ( (file.isDirectory) || ( (isPossiblyPackage) && (isValid) ) );
+			}
+			
+			private function showFilesAndFoldersWithoutPackages(file:File):Boolean {
+				var isPossiblyPackage:Boolean = this.isPossiblyPackage(file);
+				var isConfirmedPackage:Boolean = false;
+				if (this._cacheFilterOut[file.nativePath]) {
+					isConfirmedPackage = this._cacheFilterOut[file.nativePath];
+				}
+				if ( (isPossiblyPackage) && (this._cacheFilterOut[file.nativePath] == null) ) {
+					var args:Array = [];
+					args.push(file.nativePath);
+					var id:int = this.parentApplication.commandNameID(this.parentApplication._const_check_package_name_symbol);
+					this.dispatchEvent(new ExecPythonEvent(ExecPythonEvent.TYPE_EXEC_PYTHON,this,'callbackFunction',id,args));
+				}
+				var i:int = ArrayCollectionUtils.findIndexOfItem(this.listGrid.list_dataProvider, 'nativePath', file.nativePath);
+				var isAlreadySelected:Boolean = (i > -1);
+				return ( (isPossiblyPackage == false) && (isConfirmedPackage == false) && (isAlreadySelected == false) );
+			}
+			
+			private function refreshGridDataProvider():void {
+				this.listGrid.grid_dataProvider.removeAll();
+				var ac:ArrayCollection = this.listGrid.list_dataProvider;
+				var dAC:ArrayCollection = new ArrayCollection();
+				var i:int;
+				var o:Object;
+				var aFile:File;
+				for (i = 0; i < ac.length; i++) {
+					o = {};
+					aFile = File(ac.getItemAt(i));
+					o.name = aFile.name;
+					o.nativePath = aFile.nativePath;
+					o.isDirectory = aFile.isDirectory;
+					o.size = aFile.size;
+					o.dataTip = o.nativePath + ', isDirectory=' + o.isDirectory + ', ' + o.size + ' bytes.';
+					dAC.addItem(o);
+				}
+				ArrayCollectionUtils.appendAllInto(this.listGrid.grid_dataProvider, dAC);
+			}
+			
+			private function refreshBuildPackageButtonToolTip():void {
+				this.btn_acceptPackage.toolTip = ((this.listGrid.list_dataProvider.length > 0) ? ((this.listGrid.input_packageName.text.toUpperCase().indexOf(this.packageFileExtension) > -1) ? buildPackageToolTipPhase3 : buildPackageToolTipPhase2) : buildPackageDefaultToolTip);
+			}
+			
+			private function handleAddToPackage(aFile:File, selectedIndex:int):void {
+				if (aFile != null) {
+					var isLimited:Boolean = (LicenseUtils.isLicenseLevelTrial);
+					if (isLimited) {
+						if (LicenseUtils.isLicenseLevelTrial) {
+							if ((this.listGrid.list_dataProvider.length + 1) > 5) {
+								var popUp:Alert = AlertPopUp.error('Your current license is "' + LicenseUtils.licenseLevel + '" but there are limits on this License.\n\nOne of those limits inhibits the number of files you can place into a Package.\n\nYou may wish to upgrade your License in order to allow you to take advantage of the ability to put more files into your Packages.','WARNING :: Time to Upgrade your License');
+								popUp.styleName = 'ErrorAlert';
+								return;
+							}
+						}
+					}
+					this.listGrid.addItem(aFile);
+					this.fileList1.refresh();
+					this.fileList1.selectedIndex = selectedIndex;
+					this.refreshAddRemoveButtons();
+					this.refreshGridDataProvider();
+					this.refreshBuildPackageButtonToolTip();
+				}
+			}
+			
+			private function onClickAddToPackage():void {
+				this.handleAddToPackage(File(this.fileList1.selectedItem),this.fileList1.selectedIndex);
+			}
+			
+			private function handleRemoveFromPackage(index:int):void {
+				if (index > -1) {
+					this.listGrid.list_dataProvider.removeItemAt(index);
+					this.fileList1.refresh();
+					this.btn_removeFromPackage.enabled = false;
+					this.refreshGridDataProvider();
+					this.refreshBuildPackageButtonToolTip();
+				}
+			}
+			
+			private function onClickRemoveFromPackage():void {
+				if (this._selectedIndexFromPackage > -1) {
+					this.handleRemoveFromPackage(this._selectedIndexFromPackage);
+				}
+			}
+			
+			private function popUpNotice(errorString:String):void {
+				this._noticePanel = NoticePanel(PopUpManager.createPopUp(this, NoticePanel, false));
+				var pt:Point = this._noticePanel.localToGlobal(new Point(this.fileList1.width + 10,this.fileList1.y));
+				this._noticePanel.x = pt.x;
+				this._noticePanel.y = pt.y;
+				this._noticePanel.styleName = 'ErrorAlert';
+				this._noticePanel.labelText.text = errorString;
+				var tw:Number = errorString.length * 15;
+				var w:Number = Math.ceil(Math.max(this._noticePanel.labelText.textWidth,tw) / this._noticePanel.width);
+				this._noticePanel.height += (w * this._noticePanel.labelText.textHeight);
+			}
+			
+			public function showNotice(errorString:String):void {
+				this.btn_addToPackage.errorString = errorString;
+				this.btn_removeFromPackage.errorString = errorString;
+			}
+			
+			private function refreshAddRemoveButtonsFunc():void {
+				var aFile:File = File(this.fileList1.selectedItem);
+				if (aFile != null) {
+					this.btn_addToPackage.enabled = ( (aFile.isDirectory == false) && (this.isPossiblyPackage(aFile) == false) );
+					var errorString:String = ((this.btn_addToPackage.enabled) ? '' : 'Cannot add "' + aFile.nativePath + '" to the Package you are building because' + ((aFile.isDirectory) ? ' the selected item is a Directory and at this time only files can be added to a package' : ((this.isPossiblyPackage(aFile)) ? ' because the selected item is known to be a Package and at this time Packages cannot be added to a Package' : ' due to an unknown problem')) + '.');
+					this.callLater(this.showNotice, [errorString]);
+				}
+			}
+			
+			private function onChangeFileList1(event:ListEvent):void {
+				this.refreshAddRemoveButtons();
+				this.refreshFileListContextMenu(File(event.currentTarget.selectedItem),FileSystemList(event.currentTarget));
+			}
+			
+			private function onListItemSelectedListGrid(event:ListItemSelectedEvent):void {
+				this._selectedIndexFromPackage = ListEvent(event.event).currentTarget.selectedIndex;
+				this.btn_removeFromPackage.enabled = (this._selectedIndexFromPackage > -1);
+			}
+			
+			private function onCollectionChangeListDataProvider(event:CollectionEvent):void {
+				this.panel_PackageBuilder.styleName = ((this.listGrid.list_dataProvider.length > 0) ? 'PackageBuilderPanelActive' : 'PackageBuilderPanelInitial');
+			}
+			
+			private function onCreationCompleteGridWidget():void {
+				var grid:AdvancedDataGrid = this.listGrid.gridWidget;
+				var cols:Array = [];
+				var col:AdvancedDataGridColumn = new AdvancedDataGridColumn('name');
+				col.headerText = 'Name';
+				col.dataField = 'name';
+				col.minWidth = 100;
+				cols.push(col);
+				col = new AdvancedDataGridColumn('nativePath');
+				col.headerText = 'Path';
+				col.dataField = 'nativePath';
+				col.minWidth = 150;
+				cols.push(col);
+				col = new AdvancedDataGridColumn('isDirectory');
+				col.headerText = 'isDirectory';
+				col.dataField = 'isDirectory';
+				col.minWidth = 50;
+				col.width = 50;
+				cols.push(col);
+				col = new AdvancedDataGridColumn('size');
+				col.headerText = 'size';
+				col.dataField = 'size';
+				col.minWidth = 50;
+				col.width = 50;
+				cols.push(col);
+				grid.columns = cols;
+			}
+			
+			private function onClickGridToggleButton(event:GridToggleButtonCreatedEvent):void {
+				var btn:Button = Button(event.event.currentTarget);
+			}
+			
+			private function onItemClickGridWidget(event:ListEvent):void {
+				var grid:AdvancedDataGrid = AdvancedDataGrid(event.currentTarget);
+				this._selectedIndexFromPackage = grid.selectedIndex;
+				this.btn_removeFromPackage.enabled = (this._selectedIndexFromPackage > -1);
+			}
+			
+			private function onGridWidgetCreated(event:GridWidgetCreatedEvent):void {
+				this.listGrid.gridWidget.dataTipField = 'dataTip';
+				this.listGrid.gridWidget.addEventListener(ListEvent.ITEM_CLICK, onItemClickGridWidget);
+			}
+			
+			private function onClickClosePopUpButton(event:MouseEvent):void {
+				PopUpManager.removePopUp(this.popUp_FolderNavPanel);
+			}
+			
+			private function fileNameFromPathSpec(pathSpec:String):String {
+				var toks:Array = pathSpec.split(File.separator);
+				var fname:String = toks[toks.length-1];
+				if (fname.indexOf('.') == -1) {
+					fname = '';
+				}
+				return fname;
+			}
+			
+			private function refreshFileListContextMenu(aFile:File, fileList:FileSystemList):void {
+				var cMenu:ContextMenu = ContextMenu(fileList.contextMenu);
+				if (cMenu) {
+					var items:Array = cMenu.customItems;
+					var ac:ArrayCollection = new ArrayCollection(items);
+					var i:int = ArrayCollectionUtils.findIndexOfItem(ac,'label',FolderNavigatorCanvas.const_RemoveFolder);
+					if (i > -1) {
+						var cMenuItem:ContextMenuItem = ContextMenuItem(items[i]);
+						var isEmpty:Boolean = ((aFile.isDirectory) ? (aFile.getDirectoryListing().length == 0) : false);
+						var isCurrentlyOpened:Boolean = (aFile.nativePath == fileList.directory.nativePath);
+						cMenuItem.enabled = ( (aFile.isDirectory) && (isEmpty) && (isCurrentlyOpened == false) );
+					}
+				}
+			}
+			
+			private function onChildFolderNavigatorChanged(event:FolderNavigatorChangedEvent):void {
+				var fname:String = this.fileNameFromPathSpec(this.listGrid.input_packageName.text);
+				var ar:Array = [event.newPath,fname];
+				this.listGrid.input_packageName.text = ar.join(File.separator);
+				this.refreshFileListContextMenu(new File(event.newPath),FolderNavigatorCanvas(event.currentTarget).fileList);
+			}
+			
+			private function onChildInputFileNameKeyUp(event:KeyboardEvent):void {
+				var field:TextInput = TextInput(event.currentTarget);
+				field.text = StringUtils.removeIllegalWindowsFileNameChars(field.text);
+			}
+			
+			private function hookEventHandlersForFileNameInput(defaultFileName:String=''):void {
+				if (defaultFileName.length > 0) {
+					var toks:Array = defaultFileName.split(File.separator);
+					var fname:String = ((String(toks[toks.length-1]).toUpperCase().indexOf(this.packageFileExtension) > -1) ? String(toks[toks.length-1]).toUpperCase().replace(this.packageFileExtension,'') : '');
+					this.popUp_FolderNavPanel.child.input_fileName.text = fname;
+					this.popUp_FolderNavPanel.child.isFileNameInputChanged = true;
+				}
+				this.popUp_FolderNavPanel.child.input_fileName.addEventListener(KeyboardEvent.KEY_UP, onChildInputFileNameKeyUp);
+				this.popUp_FolderNavPanel.child.btn_Ok.addEventListener(MouseEvent.CLICK, onClickChildOKButton);
+			}
+			
+			private function callbackPackageBuilderCheckPackageName(value:*):void {
+				var fileExists:Boolean = false;
+				if (value is Boolean) {
+					fileExists = Boolean(value);
+				} else if (value is Object) {
+					fileExists = value.item;
+				}
+				this.btn_acceptPackage.enabled = (fileExists == false);
+				if (fileExists) {
+					var folderName:String = FileUtils.makeFileSpecIntoFolderSpec(this.listGrid.input_packageName.text);
+					this.listGrid.input_packageName.errorString = 'Cannot use the currently entered file name of "' + this.listGrid.input_packageName.text + '" because it already exists.\n\nPlease choose a file name that does not yet exist as your New Package file name or use a different folder name that the folder currently being used which is "' + folderName + '".';
+				} else {
+					this.listGrid.input_packageName.errorString = '';
+				}
+			}
+			
+			private function onClickChildOKButton(event:MouseEvent):void {
+				var btn:Button = Button(event.currentTarget);
+				if (this.popUp_FolderNavPanel.child.isFileNameInputChanged == false) {
+					this.popUp_FolderNavPanel.child.currentState = FolderNavigatorCanvas.state_FileNameState;
+					this.hookEventHandlersForFileNameInput();
+				} else {
+					var toks:Array = this.listGrid.input_packageName.text.split(File.separator);
+					toks = ArrayUtils.pruneEmptyItems(toks);
+					if (toks[toks.length-1].indexOf('.') > -1) {
+						toks.pop();
+					}
+					toks.push(this.popUp_FolderNavPanel.child.input_fileName.text+this.packageFileExtension);
+					var fname:String = toks.join(File.separator);
+					this.listGrid.input_packageName.text = fname;
+					btn.removeEventListener(MouseEvent.CLICK, onClickChildOKButton);
+					PopUpManager.removePopUp(this.popUp_FolderNavPanel);
+					this._refreshBuildPackageButton(fname);
+					this.dispatchEvent(new PackageBuilderCheckPackageNameEvent(PackageBuilderCheckPackageNameEvent.TYPE_PACKAGE_BUILDER_CHECK_PACKAGE_NAME,fname,this.callbackPackageBuilderCheckPackageName));
+				}
+			}
+			
+			private function openSaveAsPopUp(defaultFileName:String=''):void {
+				this.popUp_FolderNavPanel.child.currentState = FolderNavigatorCanvas.state_FileNameState;
+				this.popUp_FolderNavPanel.child.deferredCallLater(this,hookEventHandlersForFileNameInput,[defaultFileName]);
+			}
+			
+			private function onClickSaveAsPopUpButton(event:MouseEvent):void {
+				this.openSaveAsPopUp();
+			}
+			
+			private function makeFolder(folderPath:String):void {
+				if (FileListUtils.makeFolder(folderPath)) {
+					this.popUp_FolderNavPanel.child.fileList.refresh();
+					var popUp:Alert = AlertPopUp.info("Successfully created the folder '" + folderPath + "'.", "INFO");
+					popUp.styleName = 'InfoMsgAlert';
+				}
+			}
+			
+			private function folderDeletionCallback(file:File,isDeleted:Boolean):void {
+				if (isDeleted) {
+					this.popUp_FolderNavPanel.child.fileList.refresh();
+				}
+			}
+
+			private function onChildFileListContextMenuItemSelect(event:ContextMenuEvent):void {
+				var aFile:File = File(this.popUp_FolderNavPanel.child.fileList.selectedItem);
+				var cMenuItem:ContextMenuItem = ContextMenuItem(event.currentTarget);
+				if (cMenuItem.label == FolderNavigatorCanvas.const_NewFolder) {
+					var path:String = (( (aFile) && (aFile.isDirectory) ) ? aFile.nativePath : this.popUp_FolderNavPanel.child.fileList.directory.nativePath);
+					var dialog:NewFolderDialog = FileListUtils.showNewFolderDialog(this,path,this.makeFolder,true);
+					dialog.styleName = 'InfoAlert';
+					dialog.width = this.width-10;
+					dialog.height = 170;
+				} else if (cMenuItem.label == FolderNavigatorCanvas.const_RemoveFolder) {
+					FileListUtils.confirmFileOrDirectoryDeletion(aFile,folderDeletionCallback);
+				}
+			}
+
+			private function initFileListContextMenu(cMenu:ContextMenu, onContextMenuItemSelect:Function):void {
+	            var item:ContextMenuItem = new ContextMenuItem(FolderNavigatorCanvas.const_NewFolder);
+	            item.separatorBefore = true;
+	            item.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onContextMenuItemSelect);
+	            cMenu.customItems.push(item);
+	            item = new ContextMenuItem(FolderNavigatorCanvas.const_RemoveFolder);
+	            item.separatorBefore = true;
+	            item.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onContextMenuItemSelect);
+	            cMenu.customItems.push(item);
+			}
+			
+			private function onChildFileListInitContextMenu(event:FileListInitContextMenuEvent):void {
+				var cMenu:ContextMenu = ContextMenu(this.popUp_FolderNavPanel.child.fileList.contextMenu);
+				this.initFileListContextMenu(cMenu,onChildFileListContextMenuItemSelect);
+			}
+			
+			private function onChildFolderNavigatorFileItemClick(event:ListEvent):void {
+				this.refreshFileListContextMenu(File(FileSystemList(event.currentTarget).selectedItem),FileSystemList(event.currentTarget));
+			}
+			
+			private function beginDragFromLabelFolderName(event:MouseEvent):void {
+				var dragInitiator:Label = Label(event.currentTarget);
+				var ds:DragSource = new DragSource();
+				ds.addData(dragInitiator, "aFolderName");
+				
+				var data:BitmapData = BitmapUtils.getBitmapFrom(dragInitiator);
+				var bitmap:Bitmap = new Bitmap(data);
+				
+				var bitmapHolder:UIComponent = new UIComponent();
+				var mySprite:Sprite =  new Sprite();
+				mySprite.addChild(bitmap);
+				bitmapHolder.addChild(mySprite); 
+
+				mx.managers.DragManager.doDrag(dragInitiator,ds,event,bitmapHolder,0,0,1.00);
+			}
+			
+			private function beginDragFromListWidgetOnRight(event:MouseEvent):void {
+				var dragInitiator:List = List(event.currentTarget);
+				var ds:DragSource = new DragSource();
+				var item:File = File(dragInitiator.selectedItem);
+				var isItemDirectory:Boolean = false;
+				if (item) {
+					isItemDirectory = (item.isDirectory);
+
+					ds.addData(dragInitiator, ((isItemDirectory) ? "aDirectoryItem" : "aFileItem"));               
+					
+					var tooltip:ToolTip = new ToolTip();
+					tooltip.text = item.name;
+					tooltip.x = dragInitiator.mouseX;
+					tooltip.y = dragInitiator.mouseY;
+					mx.managers.DragManager.doDrag(dragInitiator,ds,event,tooltip,0,0,1.0);
+				}
+			}
+			
+			private function beginDragFromFileListOnLeft(event:MouseEvent):void {
+				var dragInitiator:FileSystemList = FileSystemList(event.currentTarget);
+				var ds:DragSource = new DragSource();
+				var item:File = File(dragInitiator.selectedItem);
+				if (item) {
+					var isItemDirectory:Boolean = false;
+					if (item) {
+						isItemDirectory = (item.isDirectory);
+					}
+					ds.addData(dragInitiator, ((isItemDirectory) ? "aDirectory" : "aFile"));               
+					
+					var tooltip:ToolTip = new ToolTip();
+					tooltip.x = dragInitiator.mouseX;
+					tooltip.y = dragInitiator.mouseY;
+					tooltip.text = item.name;
+					mx.managers.DragManager.doDrag(dragInitiator,ds,event,tooltip,0,0,1.0);
+				}
+			}
+			
+			private function onDragEnterPackageFileInput(event:DragEvent):void {
+				if ( (event.dragSource.hasFormat("aFile")) || (event.dragSource.hasFormat("aFolderName")) || (event.dragSource.hasFormat("aDirectory")) ) {
+					mx.managers.DragManager.acceptDragDrop(TextArea(event.currentTarget));
+				}
+			}
+			
+			private function onDragEnterSourceDocumentFile(event:DragEvent):void {
+				if (event.dragSource.hasFormat("aFile")) {
+					mx.managers.DragManager.acceptDragDrop(List(event.currentTarget));
+				}
+			}
+			
+			private function onDragEnterFileList(event:DragEvent):void {
+				if (event.dragSource.hasFormat("aFileItem")) {
+					mx.managers.DragManager.acceptDragDrop(FileSystemList(event.currentTarget));
+				}
+			}
+			
+			private function onDragDropPackageFileInput(event:DragEvent):void {
+				var fname:String;
+				var pathSpec:String;
+				var target:TextArea = TextArea(event.currentTarget);
+				if ( (event.dragSource.hasFormat('aFile')) || (event.dragSource.hasFormat('aDirectory')) ) {
+					var source:FileSystemList = FileSystemList(event.dragInitiator);
+					pathSpec = File(source.selectedItem).nativePath;
+				} else if (event.dragSource.hasFormat('aFolderName')) {
+					var label:Label = Label(event.dragInitiator);
+					pathSpec = label.text;
+				}
+				fname = this.fileNameFromPathSpec(target.text);
+				var toks:Array = [pathSpec,fname];
+				target.text = toks.join(File.separator);
+				target.errorString = '';
+				this._refreshBuildPackageButton(target.text);
+				this.listGrid.input_packageName.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
+			}
+			
+			private function onDragDropSourceDocumentFile(event:DragEvent):void {
+				if (event.dragSource.hasFormat('aFile')) {
+					var source:FileSystemList = FileSystemList(event.dragInitiator);
+					var item:File = File(source.selectedItem);
+					this.handleAddToPackage(item,source.selectedIndex);
+				} else if (event.dragSource.hasFormat('aFileItem')) {
+					var sourceList:List = List(event.dragInitiator);
+					var anItem:Object = sourceList.selectedItem;
+					this.handleRemoveFromPackage(sourceList.selectedIndex);
+					this.fileList1.selectedItem = anItem;
+				}
+				this.btn_addToPackage.enabled = false;
+				this.btn_removeFromPackage.enabled = false;
+			}
+			
+			private function onDragOverSourceDocumentFile(event:DragEvent):void {
+				if ( (event.dragSource.hasFormat("aFile")) || (event.dragSource.hasFormat("aFileItem")) || (event.dragSource.hasFormat("aFolderName")) || (event.dragSource.hasFormat("aDirectory")) ) {
+					if (event.ctrlKey) {                    
+						mx.managers.DragManager.showFeedback(mx.managers.DragManager.MOVE);
+						return;
+					} else {
+						mx.managers.DragManager.showFeedback(mx.managers.DragManager.MOVE);
+						return;
+					}
+				}
+				mx.managers.DragManager.showFeedback(mx.managers.DragManager.NONE);
+			}
+		
+			private function onClickPackageNameInput(event:MouseEvent):void {
+				if (this.listGrid.list_dataProvider.length == 0) {
+					var warningPopUp:Alert = AlertPopUp.error('Please place files into the file list for this Package before clicking on the text area to choose a file name for this New Package.  You may add or remove files by clicking on a file name before clicking on one of the two arrow buttons.','Warning');
+					warningPopUp.styleName = 'InfoAlert';
+				} else {
+					this.popUp_FolderNavPanel = FolderNavigatorPanel(PopUpManager.createPopUp(this, FolderNavigatorPanel, true));
+					PopUpManager.centerPopUp(this.popUp_FolderNavPanel);
+					this.popUp_FolderNavPanel.packageFileExtension = this.packageFileExtension;
+					this.popUp_FolderNavPanel.styleName = 'FolderNavigatorPanel';
+					this.popUp_FolderNavPanel.width = 400;
+					this.popUp_FolderNavPanel.btn_close.addEventListener(MouseEvent.CLICK, onClickClosePopUpButton);
+					if (this.listGrid.input_packageName.text.length > 0) {
+						var fname:String = this.fileNameFromPathSpec(this.listGrid.input_packageName.text);
+					}
+					this.popUp_FolderNavPanel.child.homePath = ((this.listGrid.input_packageName.text.length > 0) ? this.listGrid.input_packageName.text : this._currentFolder);
+					this.popUp_FolderNavPanel.child.addEventListener(FolderNavigatorChangedEvent.TYPE_FOLDER_NAVIGATOR_CHANGED, onChildFolderNavigatorChanged);
+					this.popUp_FolderNavPanel.child.fileList.addEventListener(ListEvent.ITEM_CLICK, onChildFolderNavigatorFileItemClick);
+					this.popUp_FolderNavPanel.title = 'Choose Folder/File Name...';
+					this.popUp_FolderNavPanel.btn_saveAs.addEventListener(MouseEvent.CLICK, onClickSaveAsPopUpButton);
+					this.popUp_FolderNavPanel.btn_saveAs.label = 'File Name...';
+					var newKeyword:String = 'Package';
+					if (this.packageFileExtension == ArchiveBuilderCanvas._packageFileExtension) {
+						newKeyword = 'Archive';
+					}
+					this.popUp_FolderNavPanel.btn_saveAs.toolTip = 'Click this button to enter a file name for the New Package.  The New Package file will have the file extension of ' + this.packageFileExtension + ' and will reside in the currently selected folder.';
+					this.popUp_FolderNavPanel.btn_saveAs.toolTip = StringUtils.replaceAll(this.popUp_FolderNavPanel.btn_saveAs.toolTip,'Package',newKeyword);
+					this.popUp_FolderNavPanel.btn_close.toolTip = 'Click this button to dismiss this pop-up dialog.';
+					this.popUp_FolderNavPanel.addEventListener(FileListInitContextMenuEvent.TYPE_FILE_LIST_INIT_CONTEXT_MENU, onChildFileListInitContextMenu);
+					this.popUp_FolderNavPanel.child.fileList.toolTip = 'Use the right-click context menu to navigate this file list or add a new folder.';
+
+					if (this.listGrid.input_packageName.text.length > 0) {
+						this.openSaveAsPopUp(this.listGrid.input_packageName.text);
+					}
+				}
+			}
+			
+			private function onCreationCompleteListGridCanvas():void {
+				this.listGrid.addEventListener(ListItemSelectedEvent.TYPE_LIST_ITEM_SELECTED, onListItemSelectedListGrid);
+				this.listGrid.list_dataProvider.addEventListener(CollectionEvent.COLLECTION_CHANGE, onCollectionChangeListDataProvider);
+				this.listGrid.deferredGridAction = onCreationCompleteGridWidget;
+				this.listGrid.btn_gridToggle.addEventListener(GridToggleButtonCreatedEvent.TYPE_GRID_TOGGLE_BUTTON_CREATED, onClickGridToggleButton);
+				this.listGrid.addEventListener(GridWidgetCreatedEvent.TYPE_GRID_WIDGET_CREATED, onGridWidgetCreated);
+				this.listGrid.input_packageName.editable = false;
+				this.listGrid.input_packageName.toolTip = 'Click on this text area to pop-up a dialog that allows you to choose the folder and file name for your new package in order to cause the Build Package button to become enabled.  This performs the same function as if you had clicked on the folder cabinet to the right of this text area.';
+				this.listGrid.input_packageName.addEventListener(MouseEvent.CLICK, onClickPackageNameInput);
+
+				this.listGrid.listWidget.addEventListener(DragEvent.DRAG_ENTER, onDragEnterSourceDocumentFile);
+				this.listGrid.listWidget.addEventListener(DragEvent.DRAG_DROP, onDragDropSourceDocumentFile);
+				this.listGrid.listWidget.addEventListener(DragEvent.DRAG_OVER, onDragOverSourceDocumentFile);
+				
+				this.listGrid.listWidget.addEventListener(MouseEvent.MOUSE_DOWN, beginDragFromListWidgetOnRight);
+
+				this.listGrid.input_packageName.addEventListener(DragEvent.DRAG_ENTER, onDragEnterPackageFileInput);
+				this.listGrid.input_packageName.addEventListener(DragEvent.DRAG_DROP, onDragDropPackageFileInput);
+				this.listGrid.input_packageName.addEventListener(DragEvent.DRAG_OVER, onDragOverSourceDocumentFile);
+
+				var hbox:HBox = this.listGrid.hbox_ToggleHeaderControls;
+				var children:Array = hbox.getChildren();
+				var vbox:VBox = new VBox();
+				vbox.percentWidth = 100;
+				vbox.percentHeight = 100;
+				var i:int;
+				for (i = 0; i < children.length; i++) {
+					vbox.addChild(children[i]);
+				}
+				var btn:FolderNavigatorButtonCanvas = new FolderNavigatorButtonCanvas();
+				btn.toolTip = 'Click this button to open a Folder Navigator to allow you to specify (choose or create) a folder within which this New Package will reside once it has been Built and saved.  This performs the same function as if you had clicked on the text area to the right of the "New Package" label.';
+				btn.addEventListener(MouseEvent.CLICK, onClickPackageNameInput);
+				vbox.addChild(btn);
+				hbox.removeAllChildren();
+				hbox.addChild(vbox);
+			}
+
+			private function localFolderDeletionCallback(file:File,isDeleted:Boolean):void {
+				if (isDeleted) {
+					this.fileList1.refresh();
+				}
+			}
+
+			private function makeLocalFolder(folderPath:String):void {
+				if (FileListUtils.makeFolder(folderPath)) {
+					this.fileList1.refresh();
+					var popUp:Alert = AlertPopUp.info("Successfully created the folder '" + folderPath + "'.", "INFO");
+					popUp.styleName = 'InfoMsgAlert';
+				}
+			}
+			
+			private function onFileListContextMenuItemSelect(event:ContextMenuEvent):void {
+				var cMenuItem:ContextMenuItem = ContextMenuItem(event.currentTarget);
+				var file:File = File(this.fileList1.selectedItem);
+
+				if (cMenuItem.label == FolderNavigatorCanvas.const_NewFolder) {
+					var path:String = (( (file) && (file.isDirectory) ) ? file.nativePath : this.fileList1.directory.nativePath);
+					var dialog:NewFolderDialog = FileListUtils.showNewFolderDialog(this,path,this.makeLocalFolder,true);
+					dialog.styleName = 'InfoAlert';
+					dialog.width = this.width-10;
+					dialog.height = 170;
+				} else if (cMenuItem.label == FolderNavigatorCanvas.const_RemoveFolder) {
+					if (file) {
+						var isEmpty:Boolean = ((file.isDirectory) ? (file.getDirectoryListing().length == 0) : false);
+						if (isEmpty) {
+							FileListUtils.confirmFileOrDirectoryDeletion(file,localFolderDeletionCallback);
+						}
+					}
+				}
+			}
+			
+			private function onContextMenuItemSelect(event:ContextMenuEvent):void {
+				var cMenuItem:ContextMenuItem = ContextMenuItem(event.currentTarget);
+				if (cMenuItem.label == 'Home') {
+					this.onClickNavigateHomeButton();
+				} else if (cMenuItem.label == 'Up') {
+					this.onClickNavigateUpButton();
+				}
+			}
+			
+	        private function addCustomConextMenuItems(cMenu:ContextMenu):void {
+	            var item:ContextMenuItem = new ContextMenuItem('Home');
+	            cMenu.customItems.push(item);
+	            item.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onContextMenuItemSelect);
+	            item = new ContextMenuItem('Up');
+	            cMenu.customItems.push(item);
+	            item.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onContextMenuItemSelect);
+	        }
+
+			private function getFileListContextMenu():ContextMenu {
+	            var cMenu:ContextMenu = new ContextMenu();
+	            cMenu.hideBuiltInItems();
+	            this.addCustomConextMenuItems(cMenu);
+	            return cMenu;
+			}
+			
+			private function fileListDataTip(item:*):String {
+				return item.name;
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%">
+		<mx:HBox width="50%" horizontalAlign="left" paddingLeft="10" borderColor="#f2f2f2" borderStyle="solid">
+			<mx:Button id="btn_navigateHome" toolTip="Click this button to navigate to the home folder, this is the folder you began with." click="onClickNavigateHomeButton()" icon="@Embed(source='assets/images/navigateHome.gif')"/>
+			<mx:Button id="btn_navigateUp" toolTip="Click this button to navigate to the parent folder for the currently selected folder." click="onClickNavigateUpButton()" upIcon="@Embed(source='assets/images/navigateUp.gif')" overIcon="@Embed(source='assets/images/navigateUp.gif')" disabledIcon="@Embed(source='assets/images/navigateUpDisabled.gif')"/>
+			<mx:Label id="labelFolderName" text="{this.fileList1.directory.nativePath}" toolTip="This path name can be dragged to the text area to the right of the New Package label as a faster way to enter a path name for the New Package." mouseDown="beginDragFromLabelFolderName(event)"/>
+		</mx:HBox>
+		<mx:HBox id="hbox_filelist" width="100%" height="100%" paddingLeft="10" toolTip="Select files from this list and add them to the Package using the arrows to the right of this file browser.">
+			<mx:FileSystemList id="fileList1" height="95%" dataTipFunction="fileListDataTip" enumerationMode="{FileSystemEnumerationMode.DIRECTORIES_FIRST}" change="onChangeFileList1(event)" filterFunction="showFilesAndFoldersWithoutPackages" creationComplete="onCreationCompleteFileSystemList()" itemDoubleClick="onItemDoubleClickFileSystemList(event)" mouseDown="beginDragFromFileListOnLeft(event)" dragEnter="onDragEnterFileList(event)" dragOver="onDragOverSourceDocumentFile(event)" dragDrop="onDragDropSourceDocumentFile(event)"/>
+			<mx:VBox height="100%">
+				<mx:Spacer height="80"/>
+				<mx:Button id="btn_addToPackage" click="onClickAddToPackage()" enabled="false" toolTip="Click this button to add the file to the package." upIcon="@Embed(source='assets/images/forward-arrow.gif')" overIcon="@Embed(source='assets/images/forward-arrow.gif')" disabledIcon="@Embed(source='assets/images/forward-arrow-disabled.gif')"/>
+				<mx:Button id="btn_removeFromPackage" click="onClickRemoveFromPackage()" enabled="false" toolTip="Click this button to remove the file from the package." upIcon="@Embed(source='assets/images/back-arrow.gif')" overIcon="@Embed(source='assets/images/back-arrow.gif')" disabledIcon="@Embed(source='assets/images/back-arrow-disabled.gif')"/>
+			</mx:VBox>
+			<mx:VBox id="vbox_packageBuilder" minWidth="300" width="90%" borderColor="#0000ff" borderStyle="none">
+				<mx:HBox width="100%" horizontalAlign="center" verticalAlign="middle">
+					<mx:Button id="btn_acceptPackage" label="Build the Package" enabled="false" click="onClickAcceptPackage()" toolTip="Click this button to build the package. {buildPackageDefaultToolTip}"/>
+					<mx:Spacer width="40"/>
+					<mx:Button id="btn_cancelPackage" label="Cancel" click="onClickCancelPackage()" toolTip="Click this button to Return to the Archives/Packages List."/>
+				</mx:HBox>
+				<mx:Panel id="panel_PackageBuilder" width="{this.vbox_packageBuilder.width-10}" styleName="PackageBuilderPanelInitial">
+					<controls:ListGridCanvas id="listGrid" label_toggleHeader="New Package" currentState="ToggleButtonState" width="{this.panel_PackageBuilder.width-15}" minWidth="100" height="100%" minHeight="300" borderColor="#000000" borderStyle="solid" list_toolTip="Add files to this Package using the arrow buttons to the right of the package list." creationComplete="onCreationCompleteListGridCanvas()"/>
+				</mx:Panel>
+			</mx:VBox>
+		</mx:HBox>
+	</mx:VBox>
+</mx:Canvas>

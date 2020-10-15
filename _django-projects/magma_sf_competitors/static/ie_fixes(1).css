@@ -1,0 +1,21 @@
+#site_body > .eyecatcher .highlights .ruby_enterprise_edition A {
+	CURSOR: pointer
+}
+#site_body > .eyecatcher .install_now A {
+	CURSOR: pointer
+}
+#site_body .passenger_navigation LI A {
+	DISPLAY: inline-block; CURSOR: pointer
+}
+#site_body .passenger_navigation LI A .outer_container {
+	DISPLAY: inline-block; CURSOR: pointer
+}
+#site_body LI.quote BLOCKQUOTE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: auto; BACKGROUND-COLOR: black; BORDER-BOTTOM-STYLE: none
+}
+#site_body PRE.commands {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: white; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#site_body PRE.url {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: white; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}

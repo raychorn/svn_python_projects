@@ -1,0 +1,37 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my (@seen_files, $pre_path, $new_path);
+$pre_path = shift @ARGV;
+$new_path = shift @ARGV;
+
+print join_files(<>);
+print STDERR 'Files joined: ', join(', ', @seen_files),"\n";
+
+sub join_files {
+    my (@in, @out);
+    @in = @_;
+    @out = ();
+    for my $line (@in) {
+	if ($line =~ /^include\s*=\s*(.*)/) {
+	    my $dir = $1;
+	    if ($pre_path and $new_path) {
+		print STDERR " * Substituting $pre_path for $new_path: ";
+		$dir =~ s!$pre_path!$new_path!;
+		print STDERR "$dir\n";
+	    }
+	    # It would be cleaner to include instead File::Find - But
+	    # we want to depend on as little as possible
+	    for my $file (`find $dir -type f`) {
+		my $fh;
+		chomp $file;
+		open($fh, '<', $file);
+		push @seen_files, $file;
+		push @out, join_files(<$fh>);
+	    }
+	} else {
+	    push @out, $line;
+	}
+    }
+    return @out
+}

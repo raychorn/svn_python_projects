@@ -1,0 +1,10 @@
+{% comment %} 
+Copyright (c) 2006-2007, PreFab Software Inc.
+
+Copyright (c) 2006, Andrew Gwozdziewycz <apgwoz@gmail.com>
+All rights reserved. 
+{% endcomment %}
+
+
+Posted by {{ obj.person_name }} on {{ obj.submit_date|date:"F j, Y" }} at {{ obj.submit_date|date:"P" }}<br />
+Re: {{ obj.get_content_object }}<br /><br />{{ obj.comment|linebreaksbr }}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="appName">Sample #1</string>
+<string name="iconName">Sample #1</string>
+
+<string name="private_version">1303407388.63</string>
+
+
+<string name="public_version">1303407388.63</string>
+
+<string name="urlScheme">pygame</string>
+</resources>

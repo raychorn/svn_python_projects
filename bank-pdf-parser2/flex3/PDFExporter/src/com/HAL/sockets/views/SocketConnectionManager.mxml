@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%"
+	initialize="onInit()"
+	>
+	<mx:Script>
+		<![CDATA[
+			[Event(name="connectionTimeout", type="com.HAL.sockets.events.ConnectionTimeoutEvent")]
+			[Event(name="dataReceived", type="com.HAL.sockets.events.DataReceivedEvent")]
+			[Event(name="connectionEstablished", type="com.HAL.sockets.events.ConnectionEstablishedEvent")]
+			[Event(name="ioErrorHandled", type="com.HAL.sockets.events.IOErrorHandledEvent")]
+			[Event(name="connectionClosed", type="com.HAL.sockets.events.ConnectionClosedEvent")]
+			[Event(name="connectionRetry", type="com.HAL.sockets.events.ConnectionRetryEvent")]
+
+			private function onInit():void {
+			}
+		
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%">
+		<mx:TextArea width="100%" height="100%" id="text"/>
+	</mx:VBox>
+</mx:Canvas>

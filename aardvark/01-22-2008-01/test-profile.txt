@@ -1,0 +1,143 @@
+
+Z:\python projects\aardvark>if profile. == profile. goto profiler 
+
+Z:\python projects\aardvark>python -m cProfile -s cumulative main2.py --psyco=bind --input=Bigtest.txt 
+_property_dict=({'1': {'18': 4L, '31': 1L, '27': 3L, '17': 2L}})
+
+_handlers=({'1': {'18': <function handle_property at 0x00BA74B0>, '31': <function handle_property at 0x00BA74B0>, '27': <function handle_property at 0x00BA74B0>, '17': <function handle_property at 0x00BA74B0>}})
+
+(main) :: ERROR :: (global name 'ioTimeAnalysis' is not defined)
+         1743 function calls (1681 primitive calls) in 13.663 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.003    0.003   13.663   13.663 {execfile}
+        1    0.014    0.014   13.661   13.661 main2.py:1(<module>)
+        1   13.634   13.634   13.634   13.634 main2.py:120(main)
+        1    0.002    0.002    0.006    0.006 decimal.py:116(<module>)
+        1    0.002    0.002    0.006    0.006 __init__.py:16(<module>)
+        1    0.000    0.000    0.002    0.002 re.py:178(compile)
+        1    0.000    0.000    0.002    0.002 re.py:219(_compile)
+        1    0.000    0.000    0.002    0.002 sre_compile.py:501(compile)
+        1    0.001    0.001    0.002    0.002 support.py:9(<module>)
+        1    0.002    0.002    0.002    0.002 threading.py:1(<module>)
+        1    0.001    0.001    0.001    0.001 kdictproxy.py:5(<module>)
+        1    0.001    0.001    0.001    0.001 core.py:18(<module>)
+        1    0.000    0.000    0.001    0.001 sre_parse.py:669(parse)
+      9/1    0.000    0.000    0.001    0.001 sre_parse.py:307(_parse_sub)
+     10/1    0.000    0.000    0.001    0.001 sre_parse.py:385(_parse)
+        1    0.000    0.000    0.001    0.001 sre_compile.py:486(_code)
+     19/1    0.000    0.000    0.001    0.001 sre_compile.py:38(_compile)
+      133    0.000    0.000    0.000    0.000 sre_parse.py:207(get)
+      158    0.000    0.000    0.000    0.000 sre_parse.py:188(__next)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:367(_compile_info)
+     27/9    0.000    0.000    0.000    0.000 sre_parse.py:146(getwidth)
+        7    0.000    0.000    0.000    0.000 sre_compile.py:184(_compile_charset)
+        4    0.000    0.000    0.000    0.000 decimal.py:2254(__init__)
+        7    0.000    0.000    0.000    0.000 sre_compile.py:213(_optimize_charset)
+        3    0.000    0.000    0.000    0.000 decimal.py:516(__new__)
+  429/420    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 threading.py:602(_Timer)
+       61    0.000    0.000    0.000    0.000 sre_parse.py:201(match)
+      190    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        3    0.000    0.000    0.000    0.000 decimal.py:438(getcontext)
+       65    0.000    0.000    0.000    0.000 sre_parse.py:136(__getitem__)
+        8    0.000    0.000    0.000    0.000 sre_compile.py:360(_simple)
+        1    0.000    0.000    0.000    0.000 threading.py:633(__init__)
+       15    0.000    0.000    0.000    0.000 copy.py:65(copy)
+       35    0.000    0.000    0.000    0.000 sre_parse.py:132(__len__)
+        1    0.000    0.000    0.000    0.000 threading.py:392(__init__)
+        5    0.000    0.000    0.000    0.000 sre_parse.py:222(isname)
+       75    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 support.py:175(patch)
+       58    0.000    0.000    0.000    0.000 {setattr}
+       19    0.000    0.000    0.000    0.000 sre_parse.py:144(append)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:78(opengroup)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:140(__getslice__)
+       40    0.000    0.000    0.000    0.000 {min}
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+        1    0.000    0.000    0.000    0.000 threading.py:152(Condition)
+       30    0.000    0.000    0.000    0.000 {isinstance}
+        6    0.000    0.000    0.000    0.000 sre_parse.py:263(_escape)
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 decimal.py:507(Decimal)
+       19    0.000    0.000    0.000    0.000 sre_parse.py:96(__init__)
+        5    0.000    0.000    0.000    0.000 decimal.py:2983(_isinfinity)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:89(closegroup)
+        2    0.000    0.000    0.000    0.000 decimal.py:2991(_isnan)
+       34    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:157(__init__)
+       29    0.000    0.000    0.000    0.000 {getattr}
+        1    0.000    0.000    0.000    0.000 traceback.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 core.py:121(bind)
+        4    0.000    0.000    0.000    0.000 {locals}
+       22    0.000    0.000    0.000    0.000 sre_parse.py:216(isident)
+        1    0.000    0.000    0.000    0.000 decimal.py:2234(Context)
+       11    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 sre_parse.py:184(__init__)
+        8    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        4    0.000    0.000    0.000    0.000 {hasattr}
+        2    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        5    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+       14    0.000    0.000    0.000    0.000 copy.py:100(_copy_immutable)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:138(__setitem__)
+        1    0.000    0.000    0.000    0.000 threading.py:383(Thread)
+        7    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+       12    0.000    0.000    0.000    0.000 sre_compile.py:24(_identityfunction)
+        2    0.000    0.000    0.000    0.000 sre_compile.py:480(isstring)
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        7    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {map}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.proxycode}
+        1    0.000    0.000    0.000    0.000 {_sre.compile}
+        8    0.000    0.000    0.000    0.000 {ord}
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dictproxy' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:155(_Condition)
+        1    0.000    0.000    0.000    0.000 threading.py:79(_RLock)
+        1    0.000    0.000    0.000    0.000 copy.py:112(_copy_with_constructor)
+        2    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 {globals}
+        2    0.000    0.000    0.000    0.000 threading.py:39(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:271(_Semaphore)
+        2    0.000    0.000    0.000    0.000 {max}
+        3    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E1E7E18}
+        1    0.000    0.000    0.000    0.000 threading.py:333(_Event)
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 decimal.py:154(DecimalException)
+        2    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 decimal.py:2869(_WorkRep)
+        1    0.000    0.000    0.000    0.000 {built-in method acquire}
+        1    0.000    0.000    0.000    0.000 sre_parse.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 decimal.py:2219(_ContextManager)
+        1    0.000    0.000    0.000    0.000 threading.py:37(_Verbose)
+        1    0.000    0.000    0.000    0.000 {chr}
+        1    0.000    0.000    0.000    0.000 support.py:79(PythonFrame)
+        1    0.000    0.000    0.000    0.000 decimal.py:225(DivisionByZero)
+        1    0.000    0.000    0.000    0.000 support.py:107(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 threading.py:671(_DummyThread)
+        1    0.000    0.000    0.000    0.000 threading.py:318(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 threading.py:631(_MainThread)
+        1    0.000    0.000    0.000    0.000 decimal.py:319(Overflow)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 decimal.py:190(InvalidOperation)
+        1    0.000    0.000    0.000    0.000 decimal.py:254(DivisionUndefined)
+        1    0.000    0.000    0.000    0.000 decimal.py:214(ConversionSyntax)
+        1    0.000    0.000    0.000    0.000 decimal.py:243(DivisionImpossible)
+        1    0.000    0.000    0.000    0.000 decimal.py:280(InvalidContext)
+        1    0.000    0.000    0.000    0.000 decimal.py:177(Clamped)
+        1    0.000    0.000    0.000    0.000 decimal.py:357(Underflow)
+        1    0.000    0.000    0.000    0.000 support.py:75(Frame)
+        1    0.000    0.000    0.000    0.000 decimal.py:294(Rounded)
+        1    0.000    0.000    0.000    0.000 decimal.py:307(Subnormal)
+        1    0.000    0.000    0.000    0.000 decimal.py:267(Inexact)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:640(_set_daemon)
+        1    0.000    0.000    0.000    0.000 {built-in method release}
+        1    0.000    0.000    0.000    0.000 {thread.get_ident}
+
+
+
+Z:\python projects\aardvark>goto end 

@@ -1,0 +1,5 @@
+Write some Python code to generate the .rst files from the doc strings from all the modules and you be in like Flint.
+
+Use the samples-trunk as a guide for your efforts.
+
+Enjoy !

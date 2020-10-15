@@ -1,0 +1,222 @@
+CHANGELOG
+=========
+
+Notice: Please remember to clear your browser's cache before using Molten.
+
+Version 4.0.1, 03/15/2009
+------------------------
+- Improved and Enhanced Molten.
+
+Version 3.0.110, 11/19/2008
+------------------------
+- Added Molten to the Products and Components list.
+- Added Vacation Message to the Molten Login Page.
+- Added User Instructions to advise users to enter an "*" at the end of their keywords in case they cannot locate what they are searching for.
+- Added Daily Downtime Message to the Molten Login Page.
+- Improved Training Center video delivery.
+
+Version 3.0.107, 11/12/2008
+------------------------
+- Adding the Data grid for Beta Support Case view (in development only).
+
+Version 3.0.106, 11/11/2008
+------------------------
+- Adjusted the way searches are performed for certain keywords.
+
+Version 3.0.105, 11/10/2008
+------------------------
+- Now when Weekly Notes change the Case Status is not changed.
+
+Version 3.0.104, 10/31/2008
+------------------------
+- Now when Weekly Notes change the Case Contact is not changed.
+
+Version 3.0.103, 10/03/2008
+------------------------
+- Weekly Notes can now display 21000 chars - new and changed cases will benefit from this however existing or unchanged cases will not.
+- Weekly Notes pop-up now renders correctly when viewed using IE.
+
+Version 3.0.101, 09/26/2008
+------------------------
+- Weekly Notes can now be edited using a pop-up window.
+
+Version 3.0.91, 09/12/2008
+------------------------
+- Sort State is now maintained between logout/login - the last sort state selected is the default sort state whenever a Support Case listing is viewed.
+
+Version 3.0.88, 09/11/2008
+------------------------
+- Adjusted the New Case components to include all current components.
+- Adjusted Molten meta tags to inhibit browser cache to allow dynamic content to be dynamic.
+- Sidebar behaviors are more predictable when switching between Classic and Beta views.
+- Beta View selection is the view that is used whenever a user logs in upon making a choice otherwise the default is Classic.
+
+Version 3.0.87, 09/08/2008
+------------------------
+- Products List on the New Support Case page is dynamically populated from SalesForce.
+
+Version 3.0.86, 09/08/2008
+------------------------
+- FINESIM has been removed from Molten's New Support Case page.
+
+Version 3.0.80, 09/08/2008
+------------------------
+- Fixed a bug with the Molten Sign Up page, now Molten Sign Ups can proceed.
+
+Version 3.0.78, 09/04/2008
+------------------------
+- Fixed a FireFox display glitch for BetaView for Account Filter pop-up.
+- Fixed a FireFox display glitch for BetaView for Status Filter pop-up.
+- Fixed an IE display glitch for Molten Home Page.
+- Added a pop-up window to allow Weekly Notes to be edited directly from the Beta View for Support Cases display.
+
+Version 3.0.73, 09/02/2008
+------------------------
+- Added message to Login screen to tell users about recent emails concerning Molten passwords.
+
+Version 3.0.72, 09/02/2008
+------------------------
+- Viewing My Support Cases now displays cases aligned towards the top of the table rather than aligned to the middle of each row.
+
+Version 3.0.69, 08/29/2008
+------------------------
+- Clicking Account filter no longer causes a 404 error.
+
+Version 3.0.68, 08/29/2008
+------------------------
+- Solutions are not available to Partners.
+- FAQ page is now a pop-up for better site navigation.
+- Attempting a fix for the click Account header results in Missing Page Error - a better fix is on the way in case this one fails.
+
+Version 3.0.66, 08/22/2008
+------------------------
+- New Case form now populates Component List as a static list pending a more dynamic solution.
+
+Version 3.0.64, 08/20/2008
+------------------------
+- New Case Form has been expanded to fill the available space (Weekly Notes is wider).
+- Improvements to the New Case Products and Components List for usability.
+- SideBar is now able to be minimized and restored using the folder icons.
+- Fixed a bug that could have resulted in some users not being able to login to Molten.
+
+Version 3.0.59, 08/18/2008
+------------------------
+- New Case Product List is dynamically populated from SalesForce.
+- New Case Component List is dynamically populated from SalesForce when Product List selection is made.
+
+Version 3.0.54, 08/14/2008
+------------------------
+- Refined the bug fix from 3.0.52 that resulted in formatting problems for Case Details, now Case Details should fit the browser's viewport without causing horizontal scrolling.
+
+Version 3.0.52, 08/14/2008
+------------------------
+- Fixed a bug that resulted in formatting problems for Case Details, now Case Details should fit the browser's viewport without causing horizontal scrolling.
+
+Version 3.0.51, 08/13/2008
+------------------------
+- Fixed a bug that resulted in formatting problems for Case Comments, now Case Comments should fit the browser's viewport without causing horizontal scrolling.
+
+Version 3.0.50, 08/13/2008
+------------------------
+- Fixed a bug that resulted in formatting problems on the Recently Added Solutions page.
+
+Version 3.0.49, 08/13/2008
+------------------------
+- Fixed a bug that resulted in searches for Case not always returning the correct results.
+
+Version 3.0.48, 08/12/2008
+------------------------
+- Fixed a bug in recently Viewed Solutions - this feature works once again.
+
+Version 3.0.47, 08/12/2008
+------------------------
+- Added permissions support for Partners to limit access to Support Cases and Solutions.
+
+Version 3.0.46, 08/11/2008
+------------------------
+- Fixed the double-backslash problem for Case Comments.
+- Corrected Products pull-down for New Cases.
+
+Version 3.0.44, 08/08/2008
+------------------------
+- More columns for display added to view support case page.
+- Case sort mechanism enhanced.
+- New fields TAG, Weekly notes CR status etc. added.
+- Enhanced filtering for status and accounts.
+- New reporting, save & export feature added.
+- Web based training videos available.
+- New flash screen for important messages.
+- Customized hope pages.
+- Enhanced email to case functionality.
+
+Version 2.2.0, 10/1/2007
+------------------------
+- Improved functionality to case sharing: added ability for "User Manager" to subscribe other people to cases.
+- case search: enabled highlighting
+- bug fixes to case search
+
+Version 2.1.0, 9/1/2007
+------------------------
+- Maintenance release (backend improvements)
+
+
+Version 2.0.0, 8/17/2007
+------------------------
+
+- Enhancements to "Create New Case" functionality: improved user interface performs backend search for matching solutions and similar cases during new case creation.
+- Added "New Case - Beta" button
+- Bug fix: search solutions
+- Case search enhancements
+- Added updated date/time value to the export spreadsheet
+
+
+Version 1.9.0, 7/27/2007
+------------------------
+- New feature: MOLTEN full text search of Support Cases
+- New feature: added "Need By Date" and "CR Status" to the list of fields available as columns for the Support Case grid
+- New feature: Display timestamps on all case related pages
+- New feature: changed field sizes on "New Case" page
+- Bug fix: "Last Update" field must reflect any case change
+- Bug fix: Cases tab doesn't display all case statuses
+- Bug fix: Case owner changes in certain situations
+
+Version 1.8.0, 6/7/2007
+------------------------
+- Added "Account Specific" Solutions
+- Improved new user registration process
+
+Version 1.7.0, 5/22/2007
+------------------------
+- Finished search engine improvements: added wildcard search, Boolean search etc.
+- PRINT button works on solutions and cases
+- Added RSS feed for solutions
+- New solutions: added count of new solutions in last 30 days
+- New solutions: added "recently added solutions" view
+
+Version 1.6.0, 5/9/2007
+------------------------
+- improved search engine, more improvements to come in next release
+- re-ordered sections on the home page
+- display count on new solutions added in last 30 days
+
+Version 1.5.0, 4/19/2007
+------------------------
+- feature: added functionality to edit support case
+- feature: added functionality to navigate account hierarchy and see support cases belonging to different accounts
+- feature: added "maintenance announcement" functionality
+- feature: added functionality to customize "View Support Cases" tab in terms of visible columns.
+
+Version 1.4.0, 4/3/2007
+------------------------
+- feature: added functionality to rate how case was handled; rating goes from "Excellent" to "Poor"
+- feature: added CHANGELOG, linked from footer of any page to this document.
+- bug fix: some cases were not visible in MOLTEN, depending on status; fixed so that all cases, regardless of status are visible.
+- bug fix: solution count is not visible any more
+
+
+Version 1.3.0, 3/22/2007
+------------------------
+- feature: added functionality to close the case and leave comment on how case was handled;
+- feature: check user browser and alert if JavaScript is not enabled.
+- bug fix: case priority changes to "Medium" by itself;
+- bug fix: improved wording on automatic email sent as a result of user registration and password change;

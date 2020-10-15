@@ -1,0 +1,136 @@
+================
+ Credits
+================
+
+.. _Help: help.html
+
+Back to Help_
+
+.. _Top:
+
+.. image:: montypythonMOLDoctorAndSupport.jpg
+
+This section is for people who have contributed to DrPython.
+
+Thank you!
+
+(Note, this list is only for the DrPython Core.)
+
+Contributors
+=============
+
+(Thanks For Helping Develop DrPython!)
+
+(Note: If you built an os specific package, and want to be on
+this list, send me an email at DrPython AT bluebottle.com, or 
+post in the forums.) 
+
+=============================== =======================================================================
+Austin Acton                     Mandrake Packager.
+Bjorn Breid                      1 bug-report with fix.
+Bo Jangeborg                     3 bug-reports.
+bugmenot                         1 bug-report.
+Carsten Eckelmann                Linux/UNIX documentation note.
+Cédric Delfosse                  Debian Packager, 1 bug report with fix.
+Chris McDonough                  | Initialized CVS Repository,
+                                 | Submitted Long Line Indicator
+                                 | Code for Preferences.
+Chris Wilson                     | 1 bug-report/feature request,
+                                 | 3 bug-reports, 4 bug-reports with fix.
+                                 | Donation to North Star(DrPython), Daniel Pozmanter(drpython).
+Christian Daven                  1 bug-report with fix, 3 submitted patches.
+Christof Ecker                   1 bug-report, 1 bug-report with fix.
+Christoph Zwerschke              | 2 bug-reports with fix, 1 bug-report with co-fix, 
+                                 | 1 bug-report/feature request with co-fix, 8 bug-reports, 10 bug-report/feature requests,
+                                 | Windows Installer, 3 setup.py patches.
+Dan Kruger                       4 bug-reports, 1 bug-report with fix.
+Dan Uznanski                     1 bug-report.
+Dariusz Mikuiski                 1 bug-report with fix.
+dataangel                        4 bug-reports.
+Davy Mitchell                    Windows Installer.
+Dmitry Ovsjannikov               1 bug-report.
+Dominique Buenzli                | 4 bug-reports,
+                                 | 1 bug-report/feature request.
+                                 | Testing side of the Mac wxPython
+                                 | 1 Bug Work Around.
+fyngyrz (Ben)                    | Donation to Daniel Pozmanter(drpython).
+Franz Steinhausler               | 29 bug-report/feature requests,
+                                 | 7 bug-report/feature requests with co-fix,
+                                 | 83 bug-reports, 6 bug-reports with co-fix,
+                                 | 46 bug-reports with fix, 4 bug-fixes.
+                                 | 19 code-fixes.
+                                 | Submitted Code:
+                                 | Highlight Current Line Code for Preferences.
+                                 | Added Configure Plugins, Customize Shortcuts, Pop Up, Toolbar to pop up menu and shortcuts.
+                                 | Speed Optimizations in Find, Indent/Dedent Region.
+                                 | Indentation format in Paste from CopyCutPasteExtend Plugin.
+                                 | Write Access Patch.  2 Patches for File Dialog.
+                                 | Plugin Display Patches in Edit Index Dialog, Load From Index Menu.
+                                 | Submitted pychecker report, Patch: Display Shortcuts in Pop Up Menu.
+fstephens2                       1 bug-report.				 
+gero                             1 bug-report with co-fix.
+Greg Wilson                      1 bug-report.
+Gregory Smith                    4 bug-reports, 1 bug-report with fix.
+Guillermo Fernandez              1 bug-report with fix.
+indefual                         1 bug-report.
+Ivar Marohombsar                 1 bug-report.
+James Paige                      Donation to North Star(DrPython), Daniel Pozmanter(drpython).
+Jean Luc Damnet                  2 bug-reports, bug-report with fix.
+John Bell                        2 bug-reports, patch.
+Jon Schull                       1 bug-report/feature request.
+Keith Nash                       1 bug-report/feature request.
+limodou                          |  Unicode Co-Developer,
+                                 | UTF-8 Autodetect,
+                                 | Interface Tweak, Persistent Find Across Documents,
+                                 | 4 bug-reports, 8 bug-fixes.
+Marek Kubica                     | 1 co-fix, 6 bug-reports, 3 bug-report/feature requests.
+                                 | Converted Documentation to docutils format.
+Mark Rees                        1 bug-report with fix.
+Martinho DOS SANTOS              Submitted Find and Complete patch.
+Matthew (ECOP)                   Submitted patch for right click activation.
+Michael Stather                  1 bug-report, 1 bug-report/feature request.
+Mike Foord                       1 bug-report/feature request with fix.
+Nathan Jones                     1 bug-report with fix.
+Pawel Dzierzanowski              | 1 bug-report with fix,
+                                 | 1 bug-report with diagnostic test.
+Peter Mayne                      | 4 bug-reports, 2 bug-report/feature requests.
+                                 | 1 bug-report/feature request with co-fix.
+                                 | Submitted updated documentation files with style sheets.
+Peter Schott                     1 bug-report.
+Radoslaw Stachowiak              | Gentoo Packager, 1 submitted patch.
+                                 | Submitted distutils support (setup.py, manifest.in).
+Rene Aguirre                     Submitted pylint report.
+Richard Townsend                 5 bug-reports, 1 bug-report/feature request.
+Robin Dunn                       Code for Text Drag and Drop.
+Ronald Hollwarth                 1 bug-report.
+Ruben Baumann                    1 bug-report with fix.
+RunLevelZero                     3 bug-report/feature requests.
+Sascha Ernst                     Mac Launcher, 1 bug report.
+Schmolch                         1 bug-report/feature-request.
+Sean McKay                       1 bug-report.
+Slim Amamou                      submitted file drag and drop code.
+Stephen Anderson                 5 bug-reports, bug-report with fix.
+Stewart Midwinter                Submitted Code for Save A Copy.
+Steve Holden                     1 bug-report.
+theomurpse                       1 bug-report.
+Thomas Klinger                   1 bug-report.
+Tom De Muer                      1 bug-report/feature request.
+Toronto DrPython Project         | Release 160.
+                                 | 1 bug-report with co-fix,
+                                 | 2 bug-reports,
+                                 | 4 bug-report/feature requests
+Ulf Wostner                      bug-report, bug-report with fix.
+Vincent Foley-Bourgon            1 bug-report/feature request.
+widhaya3                         1 bug-report/feature request with co-fix.
+=============================== =======================================================================
+
+Toronto DrPython Project
+-------------------------
+
+3 Students at the University of Toronto worked on a 
+project to extend and improve DrPython.
+The class was run by Professor Greg Wilson.
+
+- Laurie MacDougal
+- Pat Smith
+- Tim Smith

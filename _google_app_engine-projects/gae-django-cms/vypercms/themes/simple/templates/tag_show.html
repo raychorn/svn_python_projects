@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}{{ tag }}-{% trans "Tag Articles" %}{% endblock %}
+
+{% block extra-head %}
+  <META content="{{ tag }},{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Keywords>
+  <META content="{{ tag }},{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Description>    
+{% endblock %} 
+
+{% block content %}
+<div id="main_content_browse" class="yui-g">{% trans "Browse" %} &gt; <A title="{% trans 'Home' %}" href="/">{% trans "Home" %}</A>
+ / {{ tag }} {% trans "Tag Articles" %}</div>
+<H1 class="art_title">[{{ tag }}] {% trans "Tag Articles" %}</H1>
+
+<DIV style="CLEAR: both"></DIV>
+<ul id="tag_atr_list">
+{% for each in article_list %}
+  <li><a href="{% url cms.views.show_article keyid=each.key.id %}" title="{{ each.title }}" target="_blank">{{ each.title }}</a><br/>
+  	Post by : {{ each.author.first_name }}{{ each.author.last_name }} AT {{ each.EST_time|date:"Y-m-d H:i:s" }}<br/>
+  	{% trans "Categories" %} : <a title="View all articles in {{ each.cate.name|safe }}" href="{% url cms.views.show_categories keyid=each.cate.key.id page=1 %}">{{ each.cate.name|safe }}</a> {% trans "Tags" %} : {% for each2 in each.tags %}<a href="{% url cms.views.show_tag_arts_list tag=each2 %}" title="{{ each2 }}">{{ each2 }}</a>, {% endfor %}</li>
+{% endfor %}
+</ul>
+<DIV style="CLEAR: both"></DIV>
+{% if cate_bot_ad %}<DIV id="main_content_bot_ad">{{ cate_bot_ad|safe }}</DIV>{% endif %}
+<DIV style="CLEAR: both"></DIV>
+
+<div class="yui-g">
+	<div id="main_content_cate_left" class="yui-u first">
+		<H1>{{ random_cate_arts.0.cate.name|safe }}</H1>
+		<UL>
+		{% for each in random_cate_arts %}<LI><A title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}">{{ each.title }}</A></LI>
+		{% endfor %}
+		</UL>
+	</div>
+	<div id="main_content_cate_right" class="yui-u">
+		<H1>{{ random_cate_arts2.0.cate.name|safe }}</H1>
+		<UL>
+		{% for each in random_cate_arts2 %}<LI><A title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}">{{ each.title }}</A></LI>
+		{% endfor %}
+		</UL>
+	</div>
+</div>
+{% endblock %}

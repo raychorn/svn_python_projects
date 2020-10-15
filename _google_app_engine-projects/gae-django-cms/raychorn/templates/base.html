@@ -1,0 +1,143 @@
+{% load currenttimetag %}
+{% get_current_time "%Y-%M-%d %I:%M %p" as my_current_time %}
+{% block html-header %}{% endblock %}
+  <head>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% if google_site_verification %}
+    <meta name="google-site-verification" content="{{ google_site_verification }}" />
+{% endif %}
+    <link rel="alternate" type="application/rss+xml" title="VyperBlog News" href="/feeds/rss/">
+    <title>{% block title %}{% endblock %} &copy;RayCHorn.Com, All Rights Reserved. ({{ my_current_time }})</title>
+	<script src="/js/js/browser-detect.min.js" type="text/javascript" language="JavaScript"></script>
+	{% if is_superuser %}
+	    <script language="javascript" type="text/javascript">
+	    var airVersion = "2.0";
+	    var airApplicationName = "VyperBlog&trade; Admin Tool";
+	    var airApplicationURL = "/static/air/VyperBlogAdmin.air";
+	    var airApplicationImage = "/static/air/sample.jpg";
+	    </script>
+	{% endif %}
+    {% if isJavaScriptOptimized %}
+	<script src="/js/js/core.min.js" type="text/javascript" language="JavaScript"></script>
+    {% else %}
+	<script src="/js/js/core.min.js" type="text/javascript" language="JavaScript"></script>
+	{% if isShowingTitleBar %}
+	    <script src="/js/js/flash_detect.min.js" type="text/javascript" language="JavaScript"></script>
+	    <script src="/js/js/swfObject.min.js" type="text/javascript" language="JavaScript"></script>
+	    <script src="/js/js/rightClick.min.js" type="text/javascript" language="JavaScript"></script>
+	    <script src="/js/js/cache.min.js" type="text/javascript" language="JavaScript"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" language="JavaScript"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js" type="text/javascript" language="JavaScript"></script>
+	    <script src="/js/js/jquery/alerts/jquery.alerts.min.js" type="text/javascript" language="JavaScript"></script>
+	    <script src="/js/js/jquery/jdialog/jquery.jdialog.min.js" type="text/javascript" language="JavaScript"></script>
+	    <script src="/js/js/jquery/feedreader/feedreader.min.js" type="text/javascript"></script>
+	    <script src="/js/js/jquery/menus/apycom/menu.min.js" type="text/javascript" language="JavaScript"></script>
+	    {% if isRunningLocal %}
+		<script src="/js/js/facebook-api.min.js" type="text/javascript" language="JavaScript"></script>
+	    {% else %}
+		<script src="http://connect.facebook.net/en_US/all.js" type="text/javascript" language="JavaScript"></script>
+	    {% endif %}
+	{% endif %}
+    {% endif %}
+    {% block js %}
+    {% endblock %}
+    <script language="javascript" type="text/javascript">
+	{% block include-css %}{% endblock %}
+	{% block more-javascript %}{% endblock %}
+	function _onLoadSWFObject(){
+	    {% block onLoadSWFObject %}{% endblock %}
+	}
+	function _onDocumentReady(){
+	    {% block onDocumentReady %}{% endblock %}
+	}
+	function _onNoFlashInstalled(){
+	    {% block onNoFlashInstalled %}{% endblock %}
+	}
+    </script>
+    {% block extra-head %}{% endblock %}
+  </head>
+
+<body>
+<noscript><p class="nonjsAlert">NOTE: Many features on this site require Javascript and cookies. You can enable both via your browser's preference settings.</p></noscript>
+<div id="fb-root"></div>
+<div id="container">
+    <div id="ie-warning" style="display:none;">
+    {% block ie-warning %}{% endblock %}
+    </div>
+    {% if is_superuser %}
+    {% else %}
+	{% if isShowingFlash %}
+	    <div id="flashContainer">
+	    </div>
+	{% endif %}
+    {% endif %}
+    {% if isShowingTitleBar %}
+	<div id="left-top-bar">
+	    {% block extra-top-left %}{% endblock %}
+	</div>
+	<div id="right-top-bar">
+	    <div id="user-ident">
+		&nbsp;<span id="user-facebook"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="user-welcome"></span>&nbsp;&nbsp;&nbsp;<span id="user-login"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="user-register"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="user-feedback"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="user-sponsor"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="user-feed-rss"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="user-feed-atom"></span>&nbsp;&nbsp;
+		{% block user-ident %}{% endblock %}
+	    </div>
+	</div>
+    {% endif %}
+	<div id="masthead">
+	{% block masthead %}{% endblock %}
+	</div>
+    {% if isShowingTitleBar %}
+	<div id="navigation">
+	{% block navigation %}{% endblock %}
+	</div>
+    {% endif %}
+    {% if isUsingUnsupportedBrowser %}
+	<div id="masthead">
+	    <div id="ie-warning">
+		<span class="errorMessage"><b>WARNING:</b></span> This site is <b><U>best</U></b> viewed using <a href="http://www.google.com/chrome" target="_blank">Google Chrome 5.x+</a> or <a href="http://www.mozilla.com/en-US/products/firefox/" target="_blank">Mozilla FireFox 3.x+</a> or <a href="http://www.opera.com/browser/" target="_blank">Opera 10.5+</a>.<BR/>Some features of this site may not work unless you are using one of the supported browsers; it appears you are using {{ browserName }} v.{{ browserVersion }}.
+		{% if isUsingMSIE %}
+		    <span class="errorMessage"><b>WARNING:</b></span> MS IE (Internet Explorer) is known to be an un-safe browser that hackers can easily exploit to take control of your computer from a remote location.
+		{% endif %}
+	    </div>
+	</div>
+    {% endif %}
+    {% if isShowingTitleBar %}
+	<div id="menu">
+	    {% block main-menu %}{% endblock %}
+	    <div id="twitter-peeper"><a target="_blank" href="http://twitter.com/vyperlogix" title="Follow Us On Twitter"><img src="/static/images/followme_right.png" border="0"/></a></div>
+	    <div id="ajaxBusy"><img src="/static/images/activity/load.gif" border="0"/></div>
+	</div>
+    {% endif %}
+    {% if isShowingTitleBar %}
+	<div id="content_container">
+	    <div id="column_left">
+		{% block left_content %}{% endblock %}
+	    </div>
+	    <div id="column_left_aux">
+		{% block column_left_aux %}{% endblock %}
+	    </div>
+	    <div id="column_right">{{ HTTP_USER_AGENT }}
+		{% block right_content %}{% endblock %}
+	    </div>
+	    <div id="footer">
+		<div id="citation">
+		    <p>Powered by <a href="/about/" target="_blank">VyperBlog&trade;</a>.</p>
+		</div>
+		<div id="copyright">
+		    <p>Copyright &copy; <a href="http://raychorn.com" target="_top">Ray C Horn</a>, All Rights Reserved unless otherwise noted.</p>
+		</div>
+	    </div>
+	</div>
+    {% endif %}
+</div>
+{% if isShowingTitleBar %}
+    {% block admin_content %}{% endblock %}
+    <div id="__container" style="display:none;"></div>
+    <div id="__debugContainer" style="font-size: 10px; display:none;"><textarea id="__debug" rows="10" cols="80" readonly></textarea></div>
+{% endif %}
+</body>
+</html>

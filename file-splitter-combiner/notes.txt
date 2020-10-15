@@ -1,0 +1,7 @@
+-i "F:\rhorn.7z" -o "F:\@2" -n 10 -s
+
+-o "F:\@2\rhorn.7z" -i "F:\@2" -j
+
+-i "C:\@4\On Demand (Recorded 1235p Sep 4, 2008, VODDM).7z" -o "C:\@5" -n 10 -s
+
+-o "F:\@6\rhorn.7z" -i "F:\@5" -j

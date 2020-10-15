@@ -1,0 +1,6 @@
+#site_header UL.navigation LI.active A .inner_container {
+	DISPLAY: inline-block
+}
+#site_header UL.navigation LI.active A .outer_container {
+	DISPLAY: inline-block
+}

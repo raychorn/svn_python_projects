@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/static/js/jquery/colorpicker/css/colorpicker.css" type="text/css" /> 
+<link rel="stylesheet" media="screen" type="text/css" href="/static/js/jquery/colorpicker/css/layout.css" /> 
+<script type="text/javascript" src="/static/js/jquery/colorpicker/js/colorpicker.js"></script> 
+<script type="text/javascript" src="/static/js/jquery/colorpicker/js/eye.js"></script> 
+<script type="text/javascript" src="/static/js/jquery/colorpicker/js/utils.js"></script> 
+<script type="text/javascript" src="/static/js/jquery/colorpicker/js/layout.js?ver=1.0.2"></script> 
+<script language="javascript" type="text/javascript">
+function open_header_editor() {
+	$("#div_header_editor").toggle();
+	$('#colorpickerField1, #colorpickerField2, #colorpickerField3').ColorPicker({
+		onSubmit: function(hsb, hex, rgb, el) {
+			$(el).val(hex);
+			$(el).ColorPickerHide();
+		},
+		onBeforeShow: function () {
+			$(this).ColorPickerSetColor(this.value);
+		}
+	})
+	.bind('keyup', function(){
+		$(this).ColorPickerSetColor(this.value);
+	});
+}
+</script>

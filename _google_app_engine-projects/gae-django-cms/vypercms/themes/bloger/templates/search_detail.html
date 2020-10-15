@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}{% trans 'Search RESULT' %}{% endblock %}
+
+{% block extra-head %}
+  <META content="{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Keywords>
+  <META content="{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Description>    
+{% endblock %} 
+
+{% block content %}
+<div id="main_content_browse" class="yui-g">{% trans "Browse" %} &gt; <A title="{% trans 'Home' %}" href="/">{% trans "Home" %}</A>
+ / {% trans 'Search RESULT' %} </div>
+<H1 title="{{ article.title }}" class="art_title">{% trans 'Search RESULT' %}</H1>
+<DIV style="CLEAR: both"></DIV>
+<DIV id="post_content">
+
+<div id="cse-search-results" style="width:100%;height:100%;background-color: #ffffff;"></div>
+<script type="text/javascript">
+  var googleSearchIframeName = "cse-search-results";
+  var googleSearchFormName = "cse-search-box";
+  var googleSearchFrameWidth = 675;
+  var googleSearchDomain = "www.google.{% if USE_I18N %}cn{% else %}com{% endif %}";
+  var googleSearchPath = "/cse";
+</script>
+<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
+
+</DIV>
+<DIV style="CLEAR: both"></DIV>
+{% if art_bot_ad %}<div id="main_content_bot_ad" class="yui-g" style="margin-bottom:10px;">{{ art_bot_ad|safe }}</div>{% endif %}
+<DIV style="CLEAR: both"></DIV>
+{% endblock %}
+

@@ -1,0 +1,328 @@
+global 
+{
+	image_headerBackgroundAsset:"./images/HeaderBackground.gif";
+	image_lobDivAsset:"./images/LobDivider.gif";
+	image_locDivAsset:"./images/LocDiv.gif";
+	image_lobTabBackAsset:"./images/LobTagBackground.gif";
+	image_gLinkDivAsset:"./images/GlinkDiv.gif";
+	image_glinkShoppingCart:"./images/Cart.gif";
+	image_arrowLNAsset:"./images/ArrowLeft_Gray.gif";
+	image_arrowLHAsset:"./images/ArrowLeft_White.gif";
+	image_arrowRNAsset:"./images/ArrowRight_Gray.gif";
+	image_arrowRHAsset:"./images/ArrowRight_White.gif";
+	image_newPageNAsset:"./images/NewPage_Gray.gif";
+	image_newPageHAsset:"./images/NewPage_White.gif";
+	image_copyRightSymbol:"./images/CopyRight.gif";
+	image_tradeMarkSymbol:"./images/Trademark.gif";
+	image_image_registeredTradeMarkSymbol:"./images/RegisteredTrademark.gif";
+	image_menuItemMouseOverAsset:"./images/MenuItemMouseOver.gif";
+	image_menuItemSeparatorAsset:"./images/MenuItemSeparator.gif";
+	image_categoryItemMouseOutAsset:"./images/MenuBarBackground.gif";
+	image_categoryItemMouseOverAsset:"./images/CategoryMouseOver.gif";
+	image_categorySeparatorAsset:"./images/CategorySeparator.gif";
+	
+	applicationFPS:60;
+	interfaceWidth:985;
+	
+	headerHeight:120;
+	headerLOBDefault:2;
+	headerLOBX:210;
+	headerLOBY:64;
+	headerLOBLinkW:115;
+	headerLOBH:45;
+	
+	headerLogoX:10;
+	headerLogoY:35;
+	
+	headerGlinksY:5;
+	headerGlinksW:10;
+	headerGlinksH:40;
+	headerGlinksGap:3;
+	headerGlinksDivY:2;
+	headerGlinksCartY:2;
+	headerGlinksPadR:3;
+	
+	headerLocationX:717;
+	headerLocationY:40;
+	headerLocationDivY:4.5;
+	headerLocationGap:2;
+	headerLocationH:25;
+	headerLocationPadR:3;
+
+	headerSearchY:75;
+	headerSearchBarW:250;
+	headerSearchPadR:3;
+	searchH:30;
+	searchGap:5;
+	searchStr:"?q=";
+	searchLid:"&lid=search";
+	
+	
+	newPageSymbolXPadding:-20;
+	newPageSymbolYPadding:-5;
+	symbolLpadding:0;
+	symbolRpadding:-2;
+	menuBarHeight:35;
+	menuContainerWidth:220;
+	
+	menuFadeAlphaStart:0;
+	menuFadeAlphaEnd:1;		
+	menuFadeInStep:.05;
+	menuFadeOutStep:.05;
+	
+	menuAppearDelay:100;
+	menuResizeWidthStep:25;
+	menuResizeHeightStep:20;
+	
+	menuItemScaleContent:true;
+	menuItemMaintainAspectRatio:false;
+	menuItemHeight:25;
+	
+	menuItemFadeStart:0;
+	menuItemFadeEnd:1;
+	menuItemFadeInStep:.05;
+	menuItemFadeOutStep:.05;
+	menuItemPadTxtLeft:5;
+	menuItemPadLGX:5;
+	menuItemPadLGY:-2;
+	menuItemPadRGX:40;
+	menuItemPadRGX2:15;
+	menuItemPadRGY:-2;
+	menuItemShift:3;
+	
+	menuItemSeparatorPadLeft:8;
+	menuItemSeparatorWidth:190;
+	menuItemSeparatorHeight:2;
+	menuItemItemScaleContent:true;
+	menuItemItemMaintainAspectRatio:false;
+	
+	categoryMenuOffsetY:0;
+	categoryItemScaleContent:true;
+	categoryItemMaintainAspectRatio:false;
+	
+	categoryItemWidth0:199;
+	categoryItemWidth1:92;
+	categoryItemWidth2:200;
+	categoryItemWidth3:126;
+	categoryItemWidth4:112;
+	categoryItemWidth5:107;
+	categoryItemWidth6:139;
+	
+	categoryFadeStart:0;
+	categoryFadeEnd:1;
+	categoryFadeInStep:.05;
+	categoryFadeOutStep:.05;
+	
+	categorySeparatorHeight:35;
+	categorySeparatorWidth:1;
+	categorySeparatorScaleContent:true;
+	categorySeparatorMaintainAspectRatio:false;
+	categoryPadTop:8;
+	categoryAdminShift:30;
+	
+	menuTextPaddingTop:8;
+	menuTextPaddingLeft:10;
+	menuTextPaddingRight:0;
+	menuTextRightMargin:220;
+	menuTextTitleHeight:17;
+	menuTextBodyHeight:17;
+	smtGap:5;
+	
+	menuInteractionTimeOut:1000;
+}
+.SearchButton
+{
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textAlign:center;
+	labelPlacement:left;
+	cornerRadius:4;
+}
+.HeaderLOBMouseOver
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 17;
+	fontWeight: bold;
+	textDecoration: underline;
+}
+.HeaderLOBSelectMouseOver
+{
+	color: #FF0000;
+	fontFamily: Arial;
+	fontSize: 17;
+	fontWeight: bold;
+	textDecoration: underline;
+}
+.HeaderLOBMouseOut
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 17;
+	fontWeight: bold;
+	textDecoration: none;
+}
+.HeaderLOBSelect
+{
+	color: #FF0000;
+	fontFamily: Arial;
+	fontSize: 17;
+	fontWeight: bold;
+	textDecoration: none;
+}
+.HeaderLocationCompanyName
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textDecoration: none;
+}
+.HeaderLocationNormal
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: normal;
+	textDecoration: none;
+}
+
+.HeaderLocationSelect
+{
+	color: #0000FF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+	textDecoration: underline;
+}
+
+.HeaderLocationMouseOut
+{
+	color: #0000FF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+	textDecoration: underline;
+}
+.CartEmpty
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: normal;
+	textDecoration: none;
+}
+.ViewCart
+{
+	color: #0000FF;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textDecoration: underline;
+}
+.HeaderGlinkSelect
+{
+	color: #0000FF;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: normal;
+	textDecoration: underline;
+}
+.HeaderGlinkMouseOut
+{
+	color: #0000FF;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: normal;
+	textDecoration: none;
+}
+.MenuBar
+{
+	horizontalGap: 0;
+}
+.CategoryItem
+{
+	horizontalAlign: left;
+	paddingLeft: 8;
+	paddingTop: 3;
+	verticalAlign: middle;
+	verticalGap: 0;
+}
+.CategoryItemLabel
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 13;
+	fontWeight: bold;
+	paddingTop:5;
+	paddingLeft:10;
+}
+.MenuContainer
+{
+	backgroundColor: #000000;
+	verticalGap: 0;
+}
+.SubMenuContainer
+{
+	backgroundColor: #212121;
+	verticalGap: 0;
+}
+.MenuItem
+{
+  horizontalGap:0;
+	horizontalAlign: left;
+	paddingLeft: 8;
+	paddingTop: 3;
+	verticalAlign: middle;
+	verticalGap: 0;
+}
+.MenuItemText
+{
+  horizontalGap:0;
+	horizontalAlign: left;
+}
+.MenuItemLabelStyle1
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+}
+.MenuItemLabelStyle2
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+}
+.MenuTextTitle
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: bold;
+}
+.MenuTextBody
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+}
+HBox.CategorySeparator
+{
+	backgrolundSize: "100%";
+	borderStyle: none;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalAlign: top;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+}
+Label.CategoryItemTextfield
+{
+	paddingLeft:10;
+}

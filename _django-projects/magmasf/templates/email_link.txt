@@ -1,0 +1,5 @@
+{{ EMAIL_BODY }}
+
+{{ CASE_LINK }}
+
+Do not respond to this e-mail message.

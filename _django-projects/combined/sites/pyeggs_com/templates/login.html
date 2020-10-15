@@ -1,0 +1,24 @@
+<style>
+	#error_message {
+		color: red;
+		font-weight: bold;
+	}
+</style>
+
+{% block content %}
+
+{% if form.has_errors %}
+    <p id="error_message">Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<form method="post" action="{{ FORM_ACTION }}">
+<table>
+<tr><td><label for="id_username">Username:</label></td><td>{{ form.username }}</td><td><small>(Use your valid Internet Email Address)</small></td></tr>
+<tr><td><label for="id_password">Password:</label></td><td>{{ form.password }}</td><td><small>(Use Upper and lower case with special characters)</small></td></tr>
+</table>
+
+<input id="id_btn_login" type="submit" value="Login" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{% endblock %}

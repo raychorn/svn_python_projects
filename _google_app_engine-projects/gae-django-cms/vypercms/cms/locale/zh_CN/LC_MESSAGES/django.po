@@ -1,0 +1,469 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-10 10:03+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: ego008 <ego008@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\forms.py:13 .\forms.py:28
+msgid "Letters, underscores, numbers, spaces can not be"
+msgstr "允许字母、下划线、数字，不能为空格"
+
+#: .\forms.py:13 .\forms.py:28
+msgid "Variable name"
+msgstr "变量名"
+
+#: .\forms.py:14
+msgid "Variable value"
+msgstr "变量值"
+
+#: .\forms.py:15 .\forms.py:29
+msgid "Variable Description"
+msgstr "变量描述"
+
+#: .\forms.py:21
+msgid "Priority level"
+msgstr "优先级别"
+
+#: .\forms.py:22 .\templates\article_add.html.py:14
+#: .\templates\article_edit.html.py:14 .\templates\categories_list.html.py:11
+msgid "Categories"
+msgstr "分类"
+
+msgid "Whether or not displays In the navigation bar 1 / 0"
+msgstr "是否显示在导航栏 1/0"
+
+msgid "display"
+msgstr "是否显示"
+
+#: .\forms.py:29
+msgid "Optional"
+msgstr "选填"
+
+#: .\forms.py:45
+msgid "Name (required)"
+msgstr "姓名（必填）"
+
+#: .\forms.py:46
+msgid "E-mail (optional)"
+msgstr "邮箱（选填）"
+
+#: .\forms.py:47
+msgid "Website (optional)"
+msgstr "网站（选填）"
+
+#: .\forms.py:48
+msgid "A maximum of 300 characters"
+msgstr "最多300个字符"
+
+#: .\forms.py:48
+msgid "Message (Required)"
+msgstr "留言（必填）"
+
+#: .\forms.py:55
+msgid "Image title"
+msgstr "图片标题"
+
+#: .\forms.py:73
+msgid "Username"
+msgstr "用户名"
+
+#: .\forms.py:75
+msgid "Email address"
+msgstr "邮件地址"
+
+#: .\forms.py:77
+msgid "Password"
+msgstr "密码"
+
+#: .\forms.py:79
+msgid "Password (again)"
+msgstr "重复密码"
+
+#: .\views.py:544 .\views.py:663
+msgid "Not fill the title, go back to fill in the title."
+msgstr "还没填标题，请返回填写标题"
+
+#: .\views.py:548 .\views.py:667
+msgid "Not filled, please return to fill in the content field."
+msgstr "还没填内容，请返回填写内容"
+
+#: .\views.py:582
+msgid "There is some error to Add article."
+msgstr "添加文章出现错误"
+
+#: .\views.py:591
+msgid "Article added successfully."
+msgstr "文章添加成功"
+
+#: .\views.py:648 .\views.py:713 .\views.py:764
+msgid "The article you viewing have been deleted or does not exist."
+msgstr "您所查看的文章已被删除或不存在"
+
+#: .\views.py:655
+msgid "You do not have permission to edit the article."
+msgstr "您没有权限编辑该文章"
+
+#: .\views.py:720
+msgid "You do not have permission to delete the article."
+msgstr "您没有权限删除该文章"
+
+#: .\views.py:762
+msgid "The article has successfully deleted."
+msgstr "该文章已成功删除"
+
+#: .\views.py:772 .\views.py:830 .\views.py:835 .\views.py:840 .\views.py:849
+#: .\views.py:880 .\views.py:886
+msgid "Has been successfully operating."
+msgstr "已成功操作"
+
+#: .\views.py:774 .\views.py:888 .\views.py:911
+msgid "You do not have permission to operate."
+msgstr "您没有权限操作"
+
+#: .\views.py:793
+msgid "Under the Categorie you viewing has not article or has been deleted."
+msgstr "您所查看的分类下没有文章或已被删除"
+
+#: .\views.py:802
+msgid "URL you are viewing does not exist or has been deleted."
+msgstr "您所查看的网址不存在或已被删除"
+
+#: .\views.py:1002
+msgid "Please clear all the databases to install."
+msgstr "请先删除数据库内容后再安装"
+
+#: .\templates\allad_confirm_delete.html.py:2
+#: .\templates\allad_confirm_delete.html.py:5
+msgid "Delete Ad"
+msgstr "删除广告"
+
+#: .\templates\allad_confirm_delete.html.py:6 .\templates\allad_form.html.py:6
+#: .\templates\categories_confirm_delete.html.py:6
+#: .\templates\categories_form.html.py:6
+#: .\templates\globalvar_confirm_delete.html.py:6
+#: .\templates\globalvar_form.html.py:6
+#: .\templates\links_confirm_delete.html.py:6 .\templates\links_form.html.py:6
+#: .\templates\redirect_confirm_delete.html.py:6
+#: .\templates\redirect_form.html.py:6
+msgid "Back to listing"
+msgstr "返回列表"
+
+#: .\templates\allad_confirm_delete.html.py:9
+#: .\templates\categories_confirm_delete.html.py:8
+#: .\templates\globalvar_confirm_delete.html.py:8
+#: .\templates\links_confirm_delete.html.py:8
+#: .\templates\redirect_confirm_delete.html.py:8
+msgid "Do you really want to delete "
+msgstr "您确定要删除 "
+
+#: .\templates\allad_confirm_delete.html.py:12
+#: .\templates\allad_list.html.py:14 .\templates\article_list.html.py:8
+#: .\templates\categories_confirm_delete.html.py:11
+#: .\templates\categories_list.html.py:13 .\templates\comment_list.html.py:13
+#: .\templates\globalvar_confirm_delete.html.py:11
+#: .\templates\globalvar_list.html.py:13
+#: .\templates\links_confirm_delete.html.py:11
+#: .\templates\links_list.html.py:13
+#: .\templates\redirect_confirm_delete.html.py:11
+#: .\templates\redirect_list.html.py:13
+msgid "Delete"
+msgstr "删除"
+
+#: .\templates\allad_form.html.py:2 .\templates\allad_form.html.py:5
+#: .\templates\allad_list.html.py:6
+msgid "Create Ad"
+msgstr "创建广告"
+
+#: .\templates\allad_form.html.py:13 .\templates\categories_form.html.py:13
+#: .\templates\globalvar_form.html.py:13 .\templates\links_form.html.py:13
+#: .\templates\redirect_form.html.py:13
+msgid "Apply changes"
+msgstr "修改"
+
+#: .\templates\allad_form.html.py:13 .\templates\categories_form.html.py:13
+#: .\templates\globalvar_form.html.py:13 .\templates\links_form.html.py:13
+#: .\templates\redirect_form.html.py:13
+msgid "Create"
+msgstr "创建"
+
+#: .\templates\allad_list.html.py:2 .\templates\allad_list.html.py:5
+msgid "Ad listing"
+msgstr "广告列表"
+
+#: .\templates\allad_list.html.py:13 .\templates\article_list.html.py:8
+#: .\templates\categories_list.html.py:12
+#: .\templates\globalvar_list.html.py:12 .\templates\links_list.html.py:12
+#: .\templates\redirect_list.html.py:12
+msgid "Edit"
+msgstr "编辑"
+
+#: .\templates\allad_list.html.py:23 .\templates\categories_list.html.py:20
+#: .\templates\comment_list.html.py:22 .\templates\globalvar_list.html.py:21
+#: .\templates\links_list.html.py:20 .\templates\redirect_list.html.py:20
+msgid "Previous"
+msgstr "前一页"
+
+#: .\templates\allad_list.html.py:26 .\templates\categories_list.html.py:23
+#: .\templates\comment_list.html.py:25 .\templates\globalvar_list.html.py:24
+#: .\templates\links_list.html.py:23 .\templates\redirect_list.html.py:23
+msgid "Next"
+msgstr "下一页"
+
+#: .\templates\article_add.html.py:2 .\templates\article_add.html.py:11
+msgid "Add new"
+msgstr "添加文章"
+
+#: .\templates\article_add.html.py:19 .\templates\article_edit.html.py:19
+msgid "title"
+msgstr "标题"
+
+#: .\templates\article_add.html.py:21
+msgid "The title already exists, you can not add the same title"
+msgstr "这个标题已经存在，不能添加重复标题。"
+
+#: .\templates\article_add.html.py:24 .\templates\article_edit.html.py:20
+msgid "content"
+msgstr "内容"
+
+#: .\templates\article_edit.html.py:2 .\templates\article_edit.html.py:11
+msgid "Edit Article"
+msgstr "编辑文章"
+
+#: .\templates\article_list.html.py:2 .\templates\article_list.html.py:5
+msgid "Article list"
+msgstr "文章列表"
+
+#: .\templates\categories_confirm_delete.html.py:2
+#: .\templates\categories_confirm_delete.html.py:5
+msgid "Delete Categories"
+msgstr "删除分类"
+
+#: .\templates\categories_form.html.py:2 .\templates\categories_form.html.py:5
+#: .\templates\categories_list.html.py:6
+msgid "Create Categories"
+msgstr "创建分类"
+
+#: .\templates\categories_list.html.py:2 .\templates\categories_list.html.py:5
+msgid "Categories listing"
+msgstr "分类列表"
+
+#: .\templates\categories_list.html.py:11
+msgid "Sort"
+msgstr "排序"
+
+#: .\templates\comment_list.html.py:2 .\templates\comment_list.html.py:5
+msgid "Comment list"
+msgstr "评论列表"
+
+#: .\templates\globalvar_confirm_delete.html.py:2
+#: .\templates\globalvar_confirm_delete.html.py:5
+msgid "Delete globalvar"
+msgstr "删除全局变量"
+
+#: .\templates\globalvar_form.html.py:2 .\templates\globalvar_form.html.py:5
+#: .\templates\globalvar_list.html.py:6
+msgid "Create globalvar"
+msgstr "创建全局变量"
+
+#: .\templates\globalvar_list.html.py:2 .\templates\globalvar_list.html.py:5
+msgid "globalvar listing"
+msgstr "全局变量列表"
+
+#: .\templates\import_wp.html.py:2 .\templates\import_wp.html.py:5
+msgid "Import from wordpress"
+msgstr "从wordpress导入"
+
+#: .\templates\import_wp.html.py:9 .\templates\photo_form.html.py:33
+msgid "Select"
+msgstr "选择"
+
+#: .\templates\import_wp.html.py:9 .\templates\photo_form.html.py:33
+msgid "Upload"
+msgstr "上传"
+
+#: .\templates\links_confirm_delete.html.py:2
+#: .\templates\links_confirm_delete.html.py:5
+msgid "Delete links"
+msgstr "删除友情链接"
+
+#: .\templates\links_form.html.py:2 .\templates\links_form.html.py:5
+#: .\templates\links_list.html.py:6
+msgid "Create links"
+msgstr "创建友情链接"
+
+#: .\templates\links_list.html.py:2 .\templates\links_list.html.py:5
+msgid "links listing"
+msgstr "友情链接列表"
+
+#: .\templates\photo_form.html.py:13
+msgid "Images limit "
+msgstr "图片大小限制"
+
+#: .\templates\photo_form.html.py:13
+msgid "current is "
+msgstr "当前图片大小"
+
+#: .\templates\photo_form.html.py:32
+msgid "Title"
+msgstr "标题"
+
+#: .\templates\photo_form.html.py:35
+msgid "Preview"
+msgstr "预览"
+
+#: .\templates\photo_upload_done.html.py:7
+msgid "Images Upload Success"
+msgstr "图片上传成功"
+
+#: .\templates\re_url.html.py:2 .\templates\re_url.html.py:5
+msgid "Loading ..."
+msgstr "载入中..."
+
+#: .\templates\re_url.html.py:6
+msgid "Click to view it"
+msgstr "点击直接访问"
+
+#: .\templates\redirect_confirm_delete.html.py:2
+#: .\templates\redirect_confirm_delete.html.py:5
+msgid "Delete redirect"
+msgstr "删除重定向"
+
+#: .\templates\redirect_form.html.py:2 .\templates\redirect_form.html.py:5
+#: .\templates\redirect_list.html.py:6
+msgid "Create redirect"
+msgstr "创建重定向"
+
+#: .\templates\redirect_list.html.py:2 .\templates\redirect_list.html.py:5
+msgid "redirect listing"
+msgstr "重定向列表"
+
+#: .\templates\set_theme.html.py:2 .\templates\set_theme.html.py:5
+msgid "Set theme"
+msgstr "主题"
+
+#: .\templates\tip.html.py:2 .\templates\tip.html.py:5
+msgid "Message info"
+msgstr "提示信息"
+
+msgid "Post Comment"
+msgstr "提交评论"
+
+msgid "Verification Code"
+msgstr "验证码"
+
+msgid "Submit"
+msgstr "提交"
+
+msgid "Please Enter Verification Code"
+msgstr "请输入验证码"
+
+msgid "Please Enter Right Verification Code"
+msgstr "请正确输入验证码"
+
+msgid "Comments"
+msgstr "评论"
+
+msgid "New Aticles"
+msgstr "最新文章"
+
+msgid "Hot Aticles"
+msgstr "热点文章"
+
+msgid "Home"
+msgstr "首页"
+
+msgid "Basic"
+msgstr "基本设置"
+
+msgid "Ad"
+msgstr "广告"
+
+msgid "Redirect"
+msgstr "重定向"
+
+msgid "new Top100"
+msgstr "最新文章"
+
+msgid "flush Cache"
+msgstr "清空缓存"
+
+msgid "Import"
+msgstr "导入"
+
+msgid "Links"
+msgstr "友情链接"
+
+msgid "Author"
+msgstr "作者"
+
+msgid "add new"
+msgstr "添加文章"
+
+msgid "my articles"
+msgstr "我的文章"
+
+msgid "Change password"
+msgstr "修改密码"
+
+msgid "Logged out"
+msgstr "退出登录"
+
+msgid "Log in"
+msgstr "登录"
+
+msgid "Register"
+msgstr "注册"
+
+msgid "Categories Articles"
+msgstr "该分类下文章列表"
+
+msgid "..more"
+msgstr " ...更多"
+
+msgid "New Comments"
+msgstr "最新评论"
+
+msgid "Leave a Comment"
+msgstr "发表评论"
+
+msgid "Reply"
+msgstr "回复"
+
+msgid "tags"
+msgstr "标签"
+
+msgid "Tags"
+msgstr "标签"
+
+msgid "Tag Cloud"
+msgstr "标签云"
+
+msgid "Tag Articles"
+msgstr "该标签下所有文章"
+
+msgid "The Tag you viewing has not article or has been deleted."
+msgstr "您查看的标签不存在或已经被删除……"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "Search RESULT"
+msgstr "搜索结果"
+
+msgid "Browse"
+msgstr "当前浏览"
+
+msgid "RSS Feed"
+msgstr "RSS 订阅"

@@ -1,0 +1,10 @@
+source_MURRE:
+  folder: C:\ruby,C:\ruby,-[doc,samples,scite,\lib\ruby\gems\1.8\doc]
+  folder: C:\rails\reports,Z:\Ruby In Steel\BigFix_DSS\reports,-[flex,nbproject,public\BigFixDSS,public\csv,public\uploads]
+  files: \reports,+[Rakefile,README]
+
+source_UNDEFINED2:
+  folder: C:\ruby,C:\ruby,-[doc,samples,scite,\lib\ruby\gems\1.8\doc]
+  folder: C:\rails\reports,Z:\Ruby In Steel\BigFix_DSS\reports,-[flex,nbproject,public\BigFixDSS,public\csv,public\uploads]
+  files: \reports,+[Rakefile,README]
+  

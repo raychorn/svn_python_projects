@@ -1,0 +1,925 @@
+{"menu":
+{"metafield":
+"meta",
+"meta":
+[{"id":
+"i"},
+{"label":
+"l"},
+{"url":
+"u"},
+{"type":
+"y"},
+{"domain":
+"d"},
+{"domain_key":
+"o"},
+{"body":
+"b"},
+{"target":
+"t"},
+{"hOrientation":
+"-2"},
+{"vOrientation":
+"top"}],
+"m":
+[{"u":
+"/b2c/store/controller",
+"m":
+[{"u":
+"/b2c/store/controller",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Cell Phones"},
+{"u":
+"/b2c/store/controller",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"BlackBerry"},
+{"u":
+"/",
+"d":
+"smartphones.verizonwireless.com",
+"o":
+"smartphones",
+"l":
+"Smartphone Resource Center"},
+{"u":
+"/b2c/store/controller",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"PDAs %26amp; Smartphones"},
+{"u":
+"/b2c/hpnetbook/overview.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Netbooks"},
+{"u":
+"/b2c/mobilebroadband/",
+"m":
+[{"body":
+"Browse the Internet, download files and access email while youre on the go.",
+"label":
+"Mobile Broadband Devices"},
+{"type":
+"separator"},
+{"u":
+"/b2c/mobilebroadband/",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Data Cards %26amp; Modems"},
+{"u":
+"/b2c/hpnetbook/overview.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Netbooks"},
+{"u":
+"/b2c/mobilebroadband/",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Learn about Mobile Broadband "}],
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Mobile Broadband Devices"},
+{"u":
+"/b2c/store/accessories",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Accessories"},
+{"u":
+"/b2c/promotion/specialoffers.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Online Deals"},
+{"u":
+"/b2c/promotion/controller",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"New Products"},
+{"u":
+"/b2c/store/controller",
+"m":
+[{"body":
+"Take the stress out of finding the perfect present with a gift card.",
+"label":
+"Gift Cards"},
+{"type":
+"separator"},
+{"u":
+"/b2c/store/controller",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Buy a Gift Card"},
+{"u":
+"/b2c/GiftCardControllerServlet",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Check Gift Card Balance"}],
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Gift Cards"}],
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Phones %26amp; Accessories"},
+{"u":
+"/b2c/store/controller",
+"m":
+[{"u":
+"/b2c/store/controller",
+"m":
+[{"body":
+"Stay connected with the best network and calling plans for individuals and families.",
+"label":
+"Voice Plans"},
+{"type":
+"separator"},
+{"u":
+"/b2c/splash/plansingleline.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Individual"},
+{"u":
+"/b2c/splash/planfamily.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Family"},
+{"u":
+"/b2c/splash/prepay.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Prepaid"},
+{"u":
+"/b2c/store/controller",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"View all Voice Plans"}],
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Voice Plans"},
+{"u":
+"/b2c/store/controller",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Voice %26amp; Email Plans"},
+{"u":
+"/b2c/mobilebroadband/",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Mobile Broadband Plans"},
+{"u":
+"/international/inside_us.html",
+"d":
+"b2b.vzw.com",
+"o":
+"b2b",
+"l":
+"International Services"},
+{"u":
+"/b2c/CoverageLocatorController",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Coverage Map"}],
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Plans"},
+{"u":
+"/index.aspx",
+"m":
+[{"u":
+"",
+"d":
+"mediastore.verizonwireless.com",
+"o":
+"mediastore",
+"l":
+"Media Store"},
+{"u":
+"/onlineContentStore/index.html",
+"d":
+"mediastore.verizonwireless.com",
+"o":
+"mediastore",
+"l":
+"Ringtones"},
+{"u":
+"/onlineContentStore/index.html",
+"d":
+"mediastore.verizonwireless.com",
+"o":
+"mediastore",
+"l":
+"Ringback Tones"},
+{"u":
+"/index.aspx",
+"m":
+[{"body":
+"Download songs from your favorite artists to your phone.",
+"label":
+"Music"},
+{"type":
+"separator"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"How to get Music"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"View all Music"},
+{"u":
+"/onlineContentStore/index.html",
+"d":
+"mediastore.verizonwireless.com",
+"o":
+"mediastore",
+"l":
+"Launch Media Store"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"What is V CAST?"}],
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Music"},
+{"u":
+"/onlineContentStore/index.html",
+"d":
+"mediastore.verizonwireless.com",
+"o":
+"mediastore",
+"l":
+"Games"},
+{"u":
+"/onlineContentStore/index.html",
+"d":
+"mediastore.verizonwireless.com",
+"o":
+"mediastore",
+"l":
+"Apps"},
+{"u":
+"/onlineContentStore/index.html",
+"d":
+"mediastore.verizonwireless.com",
+"o":
+"mediastore",
+"l":
+"Wallpapers"},
+{"u":
+"/index.aspx",
+"m":
+[{"body":
+"Get Favorite TV Shows, Sports, News, Live Events, Music Videos and more.",
+"label":
+"V CAST Videos"},
+{"type":
+"separator"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"How to get Video on Demand"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"View all Video on Demand"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"What is V CAST?"}],
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Video on Demand"},
+{"u":
+"/index.aspx",
+"m":
+[{"body":
+"Watch TV on your phone.",
+"label":
+"V CAST Mobile TV"},
+{"type":
+"separator"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Program Guide"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"How to get Mobile TV"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"What is V CAST?"}],
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Mobile TV"},
+{"u":
+"/index.aspx",
+"m":
+[{"body":
+"Introducing two exciting ways to access the content on your phone and on the web.",
+"label":
+"Mobile Web %26amp; Dashboard"},
+{"type":
+"separator"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Mobile Web"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Dashboard"}],
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Mobile Web %26amp; Dashboard"},
+{"u":
+"",
+"d":
+"vznavigator.vzw.com",
+"o":
+"vznavigator",
+"l":
+"Navigator"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Family Locator"}],
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Entertainment %26amp; Apps"},
+{"u":
+"/index.aspx",
+"m":
+[{"u":
+"/vge/index.html",
+"d":
+"animated.messaging.vzw.com",
+"o":
+"animated",
+"l":
+"Animated Messaging"},
+{"u":
+"/customer_site/jsp/overview.jsp",
+"m":
+[{"body":
+"Text from your phone, via email, and from the web.",
+"label":
+"Text Messaging"},
+{"type":
+"separator"},
+{"u":
+"/customer_site/jsp/messaging_lo.jsp",
+"d":
+"text.vzw.com",
+"o":
+"text",
+"l":
+"Send a Text Message"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"How to Text Message"},
+{"u":
+"/text/jsp/txtintl_overview.jsp",
+"d":
+"text1.vzw.com",
+"o":
+"text1",
+"l":
+"International Messaging"}],
+"d":
+"text.vzw.com",
+"o":
+"text",
+"l":
+"Text Messaging"},
+{"u":
+"/index.aspx",
+"m":
+[{"body":
+"Send full-color pictures, sounds, and text in one message.",
+"label":
+"Picture %26amp; Video Messaging"},
+{"type":
+"separator"},
+{"u":
+"/pub/guestComposer/guestCreate.do",
+"d":
+"picture.vzw.com",
+"o":
+"pictures",
+"l":
+"Send a Picture %26amp; Video Message"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"How to Picture %26amp; Video Message"},
+{"u":
+"/text/jsp/txtintl_overview.jsp",
+"d":
+"text1.vzw.com",
+"o":
+"text1",
+"l":
+"International Messaging"},
+{"u":
+"/pub/gallery.do",
+"d":
+"picture.vzw.com",
+"o":
+"pictures",
+"l":
+"Manage your Photo Albums"}],
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Picture %26amp; Video Messaging"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Mobile IM"},
+{"u":
+"/index.aspx",
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Mobile Email"},
+{"u":
+"/guest/general/Overview.do",
+"m":
+[{"body":
+"Get weather, traffic, sports, and stock updates on your phone.",
+"label":
+"Text %26amp; Picture Alerts"},
+{"type":
+"separator"},
+{"u":
+"/faqs/Features and Optional Services/alerts_text_and_picture.html",
+"d":
+"support.vzw.com",
+"o":
+"support",
+"l":
+"How to get Alerts"},
+{"u":
+"/guest/general/Browse/Categories.do",
+"d":
+"alerts.vzw.com",
+"o":
+"alerts",
+"l":
+"View all Alerts"}],
+"d":
+"alerts.vzw.com",
+"o":
+"alerts",
+"l":
+"Text %26amp; Picture Alerts"}],
+"d":
+"products.vzw.com",
+"o":
+"products",
+"l":
+"Messaging"},
+{"u":
+"/b2c/index.html",
+"m":
+[{"u":
+"/productsservices/devices/",
+"d":
+"b2b.vzw.com",
+"o":
+"b2b",
+"l":
+"Phones"},
+{"u":
+"/productsservices/businesscallingplans/",
+"d":
+"b2b.vzw.com",
+"o":
+"b2b",
+"l":
+"Business Plans"},
+{"u":
+"/productsservices/",
+"d":
+"b2b.vzw.com",
+"o":
+"b2b",
+"l":
+"Products %26amp%3B Services"},
+{"u":
+"/smb/",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Small Business"},
+{"u":
+"/govt/overview.html",
+"d":
+"b2b.vzw.com",
+"o":
+"b2b",
+"l":
+"Government"},
+{"u":
+"/b2c/employee/emaildomainauthentication.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Employee Discounts"},
+{"u":
+"/productsservices/businesspromotions.html",
+"d":
+"b2b.vzw.com",
+"o":
+"b2b",
+"l":
+"Current Promotions"}],
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Business"},
+{"u":
+"",
+"m":
+[{"u":
+"/billing/",
+"d":
+"support.vzw.com",
+"o":
+"support",
+"l":
+"Billing %26amp; Account"},
+{"u":
+"/phones/",
+"d":
+"support.vzw.com",
+"o":
+"support",
+"l":
+"Phones %26amp; Devices"},
+{"u":
+"/features/",
+"d":
+"support.vzw.com",
+"o":
+"support",
+"l":
+"Features %26amp; Services"},
+{"u":
+"/support",
+"d":
+"smartphones.verizonwireless.com",
+"o":
+"smartphones",
+"l":
+"Smartphone Resource Center"},
+{"u":
+"/faqs/index.html",
+"d":
+"support.vzw.com",
+"o":
+"support",
+"l":
+"FAQs"},
+{"u":
+"",
+"d":
+"community.vzw.com",
+"o":
+"community",
+"l":
+"Customer Forums"},
+{"u":
+"/b2c/myaccount/welcome.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"New Customers"},
+{"u":
+"/b2c/orderstatus/OrderStatusForm",
+"m":
+[{"body":
+"Track your orders and rebates.",
+"label":
+"Get Status"},
+{"type":
+"separator"},
+{"u":
+"/rebates",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Rebate Center"},
+{"u":
+"/b2c/orderstatus/OrderStatusForm",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Order Status"}],
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Get Status"},
+{"u":
+"/b2b/jsp/popups/optin.jsp",
+"d":
+"business.verizonwireless.com",
+"o":
+"business",
+"l":
+"Sign Up for Email Updates"},
+{"u":
+"/b2c/vzwfly",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Contact Us"}],
+"d":
+"support.vzw.com",
+"o":
+"support",
+"l":
+"Support"},
+{"u":
+"/b2c/index.html",
+"m":
+[{"u":
+"/clp/login",
+"m":
+[{"body":
+"Upgrade your phone, change your plan, pay your bill and more.",
+"label":
+"My Personal Account"},
+{"type":
+"separator"},
+{"u":
+"/clp/login",
+"d":
+"myaccount.verizonwireless.com",
+"o":
+"myverizon",
+"l":
+"Sign In"},
+{"u":
+"/accessmanager/public/controller",
+"d":
+"myaccount.verizonwireless.com",
+"o":
+"myverizon",
+"l":
+"Register"},
+{"u":
+"/accessmanager/public/controller",
+"d":
+"myaccount.verizonwireless.com",
+"o":
+"myverizon",
+"l":
+"Reset Password"},
+{"u":
+"/b2c/store/controller",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Buy Prepaid Refill Cards"},
+{"u":
+"/myverizondemo",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"View My Verizon Demo"}],
+"d":
+"myaccount.verizonwireless.com",
+"o":
+"myverizon",
+"l":
+"My Personal Account"},
+{"u":
+"/amserver/UI/Logout",
+"m":
+[{"body":
+"Pay bills, manage accounts, and access reports.",
+"label":
+"My Business Account"},
+{"type":
+"separator"},
+{"u":
+"/b2c/index.html",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Login"},
+{"u":
+"/enroll/",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Register"},
+{"u":
+"/b2c/businessSolutions/mybiz/index.jsp",
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"Learn More"},
+{"u":
+"/tbmb/forgotPassword.do",
+"d":
+"b2b.verizonwireless.com",
+"o":
+"b2b",
+"l":
+"Reset Password"}],
+"d":
+"mblogin.verizonwireless.com",
+"o":
+"mblogin",
+"l":
+"My Business Account"}],
+"d":
+"www.verizonwireless.com",
+"o":
+"vzw",
+"l":
+"My Verizon"}],
+"datafield":
+"m"}}

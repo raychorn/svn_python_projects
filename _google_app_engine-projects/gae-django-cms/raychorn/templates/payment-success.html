@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}(VyperBlog&trade; Payment Success){% endblock %}
+
+{% block extra-head %}
+{% if isJavaScriptOptimized %}
+    <script language="JavaScript1.2" type="text/javascript">
+    $js('/js/js/about.min.js',function(){});
+    </script>
+{% else %}
+    <script src="/js/js/about.min.js" type="text/javascript" language="JavaScript"></script>
+{% endif %}
+{% endblock %}
+
+{% block include-css %}{% endblock %}
+
+{% block navigation %}{% endblock %}
+
+{% block masthead %}
+<h1><a href="/about/">VyperBlog&trade; Payment Success</a></h1>
+{% endblock %}
+
+{% block extra-top-left %}
+{% endblock %}
+
+{% block user-ident %}
+    <a id="a_Main" href="#" title="Back to the Main Site (Home)">Home</a>
+{% endblock %}
+
+{% block main-menu %}
+<div id="menu">
+<ul class="menu">
+    <li><a id="a_Home" href="#" class="parent"><span>Home</span></a></li>
+</ul>
+<div id="twitter-peeper"><a target="_blank" href="http://twitter.com/vyperlogix"><img border="0" src="/static/images/followme_right.png" alt="Follow us on Twitter" title="Follow Us On Twitter"></a></div>
+</div>
+{% endblock %}
+
+{% block left_content %}
+    One of our technicians will be in-touch with you as soon as possible to help you get setup with your VyperBlog&trade; Site.
+{% endblock %}
+
+{% block right_content %}
+{% endblock %}

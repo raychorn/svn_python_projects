@@ -1,0 +1,60 @@
+This project is a Prototype of things to come.
+
+This Prototype demonstrates some basic techniques one "could" use to construct a packaging system to deploy Adobe AIR Apps complete with the specific version of the AIR Runtime
+the App was designed to use.
+
+The next version of this project will seek to wrapper the Prototype with a functional GUI one might use to manipulate Installer files for the purpose of making it easier to package
+Adobe AIR Apps complete with an XMLSocketServer with minimal programming.
+
+A nice option would be to allow a programmer to deploy Server-side code from the client in a dynamic manner.
+
+A better option would be to allow a programmer to use a Python-based Framework to construct their own Server functionality using a compiled object file as the basis for such an effort.
+
+
+
+Functions:
+
+1). Export Package
+
+2). Remove Package
+
+3). Add Package
+
+4). View Package (depends on items returned from server)
+
+
+Notes:
+
+My code can be packaged to detect if Adobe AIR Runtime is or is not installed.
+
+If Adobe AIR Runtime is not installed then pop-up a dialog that tells the user where they can go to get the missing package - also pop-up a browser window, if possible.
+
+If Adobe AIR Runtime is installed then attempt to install the AIR App and the Server.
+
+After Air App has installed then start the server and launch the Air App.
+
+If Air App cannot make a connection then display some info to tell the user how to start the Socket Server.
+
+
+Alternative(s):
+
+If Adobe AIR Runtime is not installed then Launch browser to a URL that detects if the AIR Runtime is not installed and installs it.
+
+
+Design:
+
+1). Detect and Install the Adobe AIR Runtime
+
+2). Detect and Install the AIR App using a custom installation process.
+
+3). Launch the AIR App via the Server that starts the AIR App before starting the Socket Server.
+
+
+Reasons for embedding the Adobe AIR Runtime in the installer:
+
+* Need to have the correct version of the runtime with the correct version of the Air App.
+
+
+Reasons for downloading the Adobe AIR Runtime during the installer session:
+
+* Need to make the installer as small as possible.

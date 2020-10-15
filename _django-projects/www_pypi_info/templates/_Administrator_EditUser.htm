@@ -1,0 +1,26 @@
+<div class=Section1>
+
+<h3>Edit User</h3>
+
+<style>
+.formalchemy table tr td div {
+	width: 100%;
+}
+</style>
+
+<form name="editUserForm" class="formalchemy" action="{{ HTTP_HOST }}/administrator/user/submit/" enctype="application/x-www-form-urlencoded" method="post">
+<table width="100%">
+	<tr>
+    	<td width="100%">
+                {{ FORM }}
+		</td>
+	</tr>
+	<tr>
+    	<td width="100%">
+                <input type="submit" value="{{ SUBMIT_VALUE }}"/>
+		</td>
+	</tr>
+</table>
+</form>
+
+</div>

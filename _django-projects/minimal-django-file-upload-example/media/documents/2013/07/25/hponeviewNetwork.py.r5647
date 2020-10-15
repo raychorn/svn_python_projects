@@ -1,0 +1,183 @@
+'''
+$Author: partho.bhowmick@hp.com $
+$Date: 2013-07-02 10:27:37 -0500 (Tue, 02 Jul 2013) $
+$Header: https://svn02.atlanta.hp.com/local/ic4vc-dev/server/trunk/src/engines/hponeview.py 5580 2013-07-02 15:27:37Z partho.bhowmick@hp.com $
+$Id: hponeview.py 5580 2013-07-02 15:27:37Z partho.bhowmick@hp.com $
+$Revision: 5580 $
+'''
+#Author(s):Partho Bhowmick, Yanfei Shi
+
+import requests
+import json
+import time
+
+from logging import getLogger
+log = getLogger(__name__)
+
+class hponeview:
+    def __init__(self, username='Administrator', password='Compaq123', baseurl='16.83.122.226', verify=False):
+        #log.verbose( 'HPOneView(%s, ****, %s)', username, host )
+        self.username=username
+        self.password=password
+        self.baseurl = baseurl 
+        self.verify = verify
+        self.headers = {'Content-Type':'application/json',
+                'Accept':'application/json'}
+        self.server_profile={}
+        self.connections={}
+        self.interconnect_uris= set()
+        self.interconnect={}
+        self.interconnect_stats={}
+        self.network_uris={}
+        self.network={}
+        self.uplink={}
+        self.server_hardware_uri=''
+        self.enclosure_uri=''
+        self.server_hardware={}
+        self.enclosure={}
+        self.login(username,password)
+        
+
+    def login(self, username, password):
+        log.debug('hponeviewNetwork.login()')
+        relurl = '/rest/login-sessions'
+        fuapi={}
+        fuapi['userName']=username
+        fuapi['password']=password
+        r = requests.post("https://%s%s" % (self.baseurl, relurl), 
+                verify=self.verify,  data=json.dumps(fuapi),
+                headers= self.headers)
+        self.last_response = r.content
+        if (r.status_code == 200):
+            d = json.loads(r.content)
+            if len(d['sessionID']) > 0: 
+                self.session = d['sessionID']
+                self.headers['auth'] = self.session
+                self.networks = {'ethernet':{}, #ethernet networks
+                        'fc':{} #fiber channel networks
+                        }
+                self.connection_templates = {}
+                return True
+            else:
+                self.session = None
+        else:
+            r.raise_for_status()
+        return False    
+    
+    def get_enclosure(self,uri,refresh=True):
+        log.debug('hponeviewNetwork.get_enclosure()')
+        if (not refresh):
+            return self.enclosure
+        relurl=uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+            verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.enclosure=r.json()
+            return self.enclosure
+        else:
+            r.raise_for_status()
+        
+    def get_server_hardware(self,uri,refresh=True):
+        log.debug('HPOneView.get_server_hardware()')
+        if (not refresh):
+            return self.server_hardware
+        relurl=uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+            verify= self.verify,  headers=self.headers)
+        #print r.status_code
+        if (r.status_code == 200):
+            self.server_hardware=r.json()
+            #print self.server_hardware['name']
+            return self.server_hardware
+        else:
+            r.raise_for_status
+    
+    def get_connections(self,refresh=True):
+        log.debug('hponeviewNetwork.get_connections()')
+        if (not refresh):
+            return self.connections
+        relurl='/rest/connections'
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+            verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            members=r.json()['members']
+            for conn in members:
+                mac = conn['macaddress']
+                self.connections[mac] = conn
+                self.interconnect_uris.add(conn['interconnectUri'])
+                self.network_uris[conn['connectionInstanceId']]=conn['networkResourceUri']
+            return self.connections
+        else:
+            r.raise_for_status()
+            
+    def get_interconnect(self,uri,refresh=True):
+        log.debug('hponeviewNetwork.get_interconnect()')
+        if (not refresh):
+            return self.interconnect
+        relurl=uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+            verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.interconnect=r.json()
+            return self.interconnect
+        else:
+            r.raise_for_status()
+            
+    def get_interconnect_stats(self,id,refresh=True):
+        log.debug('hponeview.get_interconnect_stats()')
+        if (not refresh):
+            return self.interconnect_stats
+        
+        relurl='/rest/interconnects/'+id+'/statistics'
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+                verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.interconnect_stats = r.json()
+            return self.interconnect_stats
+        else:
+            r.raise_for_status()  
+        
+    def get_uplink(self,id,refresh=True):
+        log.debug('hponeviewNetwork.get_uplink()')
+        if (not refresh):
+            return self.uplink
+        
+        relurl='/rest/uplink-sets/'+id
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+            verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.uplink=r.json()
+            return self.uplink
+        else:
+            r.raise_for_status()
+        
+    def get_server_profile(self,uri,refresh=True):
+        log.debug('hponeviewNetwork.get_server_profile()')
+        if (not refresh):
+            return self.server_profile
+        relurl = uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+            verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.server_profile=r.json()
+            self.server_hardware_uri=self.server_profile['serverHardwareUri']
+            self.enclosure_uri=self.server_profile['enclosureUri']
+            return self.server_profile
+        else:
+            r.raise_for_status()
+        
+    def get_ethernet_network(self,uri,refresh=True):
+        log.debug('hponeviewNetwork.get_ethernet_network()')
+        if (not refresh): 
+            return self.network
+        relurl = uri
+        r = requests.get("https://%s%s" % (self.baseurl, relurl), 
+            verify= self.verify,  headers=self.headers)
+        if (r.status_code == 200):
+            self.network=r.json()
+            return self.network
+        else:
+            r.raise_for_status()
+        
+    
+   

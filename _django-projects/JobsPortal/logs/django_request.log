@@ -1,0 +1,18 @@
+2013-09-01 09:33:12,661 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "J:/@Vyper Logix Corp/@Projects/python-projects/_Django-1.5.1\django\core\handlers\base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "J:/@Vyper Logix Corp/@Projects/python-projects/_Django-1.5.1\django\middleware\common.py", line 57, in process_request
+    host = request.get_host()
+  File "J:/@Vyper Logix Corp/@Projects/python-projects/_Django-1.5.1\django\http\request.py", line 72, in get_host
+    "Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): %s" % host)
+SuspiciousOperation: Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): 127.0.0.1:8088
+2013-09-01 09:38:08,540 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "J:/@Vyper Logix Corp/@Projects/python-projects/_Django-1.5.1\django\core\handlers\base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "J:/@Vyper Logix Corp/@Projects/python-projects/_Django-1.5.1\django\middleware\common.py", line 57, in process_request
+    host = request.get_host()
+  File "J:/@Vyper Logix Corp/@Projects/python-projects/_Django-1.5.1\django\http\request.py", line 72, in get_host
+    "Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): %s" % host)
+SuspiciousOperation: Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): 127.0.0.1:8088

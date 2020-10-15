@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block include-css %}include_css('/static/css/reset-fonts.css');include_css('/static/css/container.css');include_css('/static/css/csshacks.css');include_css('/static/css/black.css');include_css('/static/css/misc.css');{% endblock %}
+
+{% block onload-ie %}
+    var t = 'This site is best viewed using Google Chrome or Mozilla FireFox 3.x however you are using IE so now you have to download one of the approved browsers !';
+    var c = document.getElementById('container');
+    if (c) {
+	c.innerHTML = '<p style="color:#FF0;">'+t+'</p><p>You can <a href="http://www.google.com/chrome" target="_blank">download Google Chrome</a> or <a href="http://www.mozilla.com/en-US/products/firefox/" target="_blank">download Mozilla FireFox</a></p><p>Come back with one of the supported browsers...</p>';
+    }
+    alert(t);
+{% endblock %}
+
+{% block top-menu %}
+<div id="toolbar-container" style="height: 30px;">
+	<div id="toolbar" class="browser-width clearfix">
+		<ul id="toolbar-nav" class="toolbar-tab">
+			<li class="selected first" style="display:none;">
+				<a href="/">Video</a>
+			</li>
+		</ul>
+		<div id="toolbar-account" class="toolbar-tab">
+			<ul style="display: block;" id="toolbarnologin">
+				<li class="first"><a href="/login.html" rel="nofollow">&nbsp;Login&nbsp;</a></li>
+				<li><a href="/enter.html" rel="nofollow">&nbsp;Register&nbsp;</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block logo %}
+<div id="hd" class="browser-width">
+	<div class="clearfix">
+		<p id="logo">
+			<a href="/"><img src="/static/logo.jpg" alt="logo" border="0"></a><BR/>
+		</p>
+	</div>
+</div>
+{% endblock %}

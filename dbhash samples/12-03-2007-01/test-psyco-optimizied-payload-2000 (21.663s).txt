@@ -1,0 +1,158 @@
+
+Z:\python projects\dbhash samples>if profile. == profile. goto profile 
+
+Z:\python projects\dbhash samples>python -m cProfile -s cumulative main.py 
+There are (0) keys.
+ERROR.1 due to "'2000'".
+(ioTimeAnalysis) :: Category: "READ" = (0.0) time/iters=(0.0000000000)
+(ioTimeAnalysis) :: Category: "WRITE" = (21.2189998627) time/iters=(0.0106094999)
+(ioTimeAnalysis) :: Category: "BEGIN-KEYS" = (0.0) time/iters=(0.0000000000)
+(ioTimeAnalysis) :: Category: "READ-RANDOM" = (0.0) time/iters=(0.0000000000)
+
+
+Time spent doing I/O :: (21.2189998627)
+         31914 function calls (31913 primitive calls) in 21.663 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001   21.663   21.663 {execfile}
+        1   21.123   21.123   21.661   21.661 main.py:1(<module>)
+        1    0.009    0.009    0.199    0.199 threadpool.py:19(__init__)
+     2000    0.020    0.000    0.186    0.000 __init__.py:225(__setitem__)
+     2000    0.164    0.000    0.164    0.000 __init__.py:228(wrapF)
+     1000    0.008    0.000    0.126    0.000 threading.py:426(start)
+     1000    0.085    0.000    0.085    0.000 {thread.start_new_thread}
+     1001    0.019    0.000    0.063    0.000 threading.py:392(__init__)
+        1    0.035    0.035    0.047    0.047 __init__.py:16(<module>)
+        1    0.016    0.016    0.043    0.043 core.py:34(full)
+     1004    0.004    0.000    0.027    0.000 threading.py:152(Condition)
+        1    0.026    0.026    0.026    0.026 profiler.py:10(<module>)
+     1004    0.021    0.000    0.023    0.000 threading.py:157(__init__)
+      3/2    0.020    0.007    0.020    0.010 {len}
+        1    0.000    0.000    0.020    0.020 __init__.py:217(__len__)
+        1    0.000    0.000    0.020    0.020 __init__.py:219(<lambda>)
+     1000    0.020    0.000    0.020    0.000 {time.sleep}
+      345    0.002    0.000    0.014    0.000 __init__.py:221(__getitem__)
+      345    0.012    0.000    0.012    0.000 __init__.py:223(<lambda>)
+     1002    0.011    0.000    0.011    0.000 {built-in method acquire}
+        1    0.003    0.003    0.011    0.011 support.py:9(<module>)
+        1    0.008    0.008    0.010    0.010 threadpool.py:7(<module>)
+        1    0.000    0.000    0.009    0.009 random.py:39(<module>)
+        1    0.000    0.000    0.008    0.008 random.py:88(__init__)
+        1    0.000    0.000    0.008    0.008 random.py:97(seed)
+        1    0.008    0.008    0.008    0.008 {nt.urandom}
+        1    0.001    0.001    0.008    0.008 dbhash.py:1(<module>)
+        1    0.007    0.007    0.007    0.007 kdictproxy.py:5(<module>)
+        1    0.006    0.006    0.007    0.007 __init__.py:40(<module>)
+     1000    0.002    0.000    0.006    0.000 threading.py:411(_set_daemon)
+     1000    0.005    0.000    0.005    0.000 threading.py:370(_newname)
+     2005    0.004    0.000    0.004    0.000 threading.py:39(__init__)
+     1004    0.003    0.000    0.003    0.000 {thread.allocate_lock}
+     1000    0.002    0.000    0.003    0.000 threading.py:695(currentThread)
+     2000    0.002    0.000    0.002    0.000 main.py:24(getPayload)
+     1000    0.002    0.000    0.002    0.000 threading.py:592(setDaemon)
+        1    0.001    0.001    0.001    0.001 core.py:18(<module>)
+        1    0.001    0.001    0.001    0.001 threading.py:1(<module>)
+     1000    0.001    0.000    0.001    0.000 threading.py:44(_note)
+     1000    0.001    0.000    0.001    0.000 threading.py:588(isDaemon)
+        1    0.000    0.000    0.001    0.001 profiler.py:149(run)
+        1    0.000    0.000    0.001    0.001 profiler.py:35(go)
+        1    0.000    0.000    0.001    0.001 profiler.py:161(start)
+        1    0.000    0.000    0.001    0.001 profiler.py:247(do_start)
+        1    0.001    0.001    0.001    0.001 {psyco._psyco.profiling}
+     2348    0.001    0.000    0.001    0.000 dbutils.py:41(DeadlockWrap)
+     2346    0.001    0.000    0.001    0.000 __init__.py:210(_checkOpen)
+     2001    0.001    0.000    0.001    0.000 __init__.py:194(_closeCursors)
+        1    0.000    0.000    0.001    0.001 dbutils.py:27(<module>)
+     1002    0.000    0.000    0.000    0.000 {built-in method release}
+     1001    0.000    0.000    0.000    0.000 {thread.get_ident}
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:1(<module>)
+      345    0.000    0.000    0.000    0.000 random.py:211(randint)
+        1    0.000    0.000    0.000    0.000 weakref.py:6(<module>)
+        1    0.000    0.000    0.000    0.000 Queue.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 db.py:40(<module>)
+        1    0.000    0.000    0.000    0.000 Queue.py:21(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:633(__init__)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+        7    0.000    0.000    0.000    0.000 support.py:175(patch)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 profiler.py:263(ChargeProfiler)
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 atexit.py:6(<module>)
+        1    0.000    0.000    0.000    0.000 {function seed at 0x00B8C770}
+        1    0.000    0.000    0.000    0.000 traceback.py:1(<module>)
+        2    0.000    0.000    0.000    0.000 threadpool.py:49(decorator)
+        1    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 weakref.py:219(WeakKeyDictionary)
+        1    0.000    0.000    0.000    0.000 profiler.py:293(PassiveProfiler)
+        1    0.000    0.000    0.000    0.000 {math.exp}
+        1    0.000    0.000    0.000    0.000 <string>:2(<module>)
+       14    0.000    0.000    0.000    0.000 {setattr}
+        1    0.000    0.000    0.000    0.000 random.py:69(Random)
+       14    0.000    0.000    0.000    0.000 {getattr}
+        5    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 Queue.py:194(_init)
+        1    0.000    0.000    0.000    0.000 weakref.py:33(WeakValueDictionary)
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        1    0.000    0.000    0.000    0.000 atexit.py:37(register)
+        1    0.000    0.000    0.000    0.000 __init__.py:153(_DBWithCursor)
+        1    0.000    0.000    0.000    0.000 Queue.py:16(Queue)
+        1    0.000    0.000    0.000    0.000 threading.py:383(Thread)
+        2    0.000    0.000    0.000    0.000 {math.log}
+        2    0.000    0.000    0.000    0.000 threadpool.py:47(threadpool)
+        1    0.000    0.000    0.000    0.000 threading.py:602(_Timer)
+        1    0.000    0.000    0.000    0.000 {math.sqrt}
+        1    0.000    0.000    0.000    0.000 threading.py:318(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 profiler.py:146(Profiler)
+        1    0.000    0.000    0.000    0.000 threading.py:155(_Condition)
+        2    0.000    0.000    0.000    0.000 {_bsddb.version}
+        1    0.000    0.000    0.000    0.000 random.py:609(WichmannHill)
+        1    0.000    0.000    0.000    0.000 threading.py:79(_RLock)
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 random.py:759(SystemRandom)
+        1    0.000    0.000    0.000    0.000 {binascii.hexlify}
+        1    0.000    0.000    0.000    0.000 __init__.py:239(close)
+        2    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:6(initIOTime)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.statread}
+        3    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:11(ioBeginTime)
+        1    0.000    0.000    0.000    0.000 threading.py:333(_Event)
+        1    0.000    0.000    0.000    0.000 threading.py:271(_Semaphore)
+        1    0.000    0.000    0.000    0.000 threadpool.py:18(Pool)
+        1    0.000    0.000    0.000    0.000 __init__.py:1(<module>)
+        2    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 <string>:2(_iter_mixin)
+        2    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:16(ioEndTime)
+        1    0.000    0.000    0.000    0.000 threading.py:37(_Verbose)
+        1    0.000    0.000    0.000    0.000 support.py:107(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 support.py:79(PythonFrame)
+        1    0.000    0.000    0.000    0.000 threading.py:631(_MainThread)
+        1    0.000    0.000    0.000    0.000 threading.py:671(_DummyThread)
+        1    0.000    0.000    0.000    0.000 profiler.py:279(ActiveProfiler)
+        1    0.000    0.000    0.000    0.000 {isinstance}
+        1    0.000    0.000    0.000    0.000 weakref.py:198(KeyedRef)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 <string>:1(DBNotFoundError)
+        1    0.000    0.000    0.000    0.000 __init__.py:158(__init__)
+        1    0.000    0.000    0.000    0.000 Queue.py:68(join)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.memory}
+        1    0.000    0.000    0.000    0.000 {method 'has_key' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 profiler.py:337(ActivePassiveProfiler)
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:39(ioTimeAnalysisReport)
+        1    0.000    0.000    0.000    0.000 profiler.py:254(RunOnly)
+        1    0.000    0.000    0.000    0.000 profiler.py:245(FullCompiler)
+        1    0.000    0.000    0.000    0.000 Queue.py:8(Empty)
+        1    0.000    0.000    0.000    0.000 support.py:75(Frame)
+        1    0.000    0.000    0.000    0.000 __init__.py:287(sync)
+        1    0.000    0.000    0.000    0.000 <string>:2(DBKeyEmptyError)
+        1    0.000    0.000    0.000    0.000 dbhash.py:15(open)
+        1    0.000    0.000    0.000    0.000 Queue.py:12(Full)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:640(_set_daemon)
+        1    0.000    0.000    0.000    0.000 __init__.py:250(keys)
+
+
+
+Z:\python projects\dbhash samples>goto end 

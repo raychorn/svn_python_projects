@@ -1,0 +1,66 @@
+<html>
+	<head>
+	
+	<!-- Dont forget to include the jQuery library here -->
+	<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+
+		$("#validate").keyup(function(){
+		
+			var email = $("#validate").val();
+		
+			if(email != 0)
+			{
+				if(isValidEmailAddress(email))
+				{
+					$("#validEmail").css({
+						"background-image": "url('validYes.png')"
+					});
+				} else {
+					$("#validEmail").css({
+						"background-image": "url('validNo.png')"
+					});
+				}
+			} else {
+				$("#validEmail").css({
+					"background-image": "none"
+				});			
+			}
+		
+		});
+	
+	});
+	
+	function isValidEmailAddress(emailAddress) {
+ 		var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+ 		return pattern.test(emailAddress);
+	}
+	
+	</script>
+
+	<style>
+		#validEmail
+		{
+			margin-top: 4px;
+			margin-left: 9px;
+			position: absolute;
+			width: 16px;
+			height: 16px;
+		}
+		
+		.text
+		{
+			font-family: Arial, Tahoma, Helvetica;
+		}
+	</style>
+	
+		<title>Live Email Validation with jQuery Demo</title>
+	</head>
+	<body>
+		<div class="text"><h1>Reynoldsftw.com - Live Email Validation</h1><h2>Type in an email address in the box below:</h2></div>
+		<div><input type="text" id="validate" width="30"><span id="validEmail"></span></div>
+		<div class="text"><P>Download the code and read the tutorial here: <BR><a href="http://www.reynoldsftw.com/2009/03/live-email-validation-with-jquery">http://www.reynoldsftw.com/2009/03/live-email-validation-with-jquery</a></div>
+	</body>
+</html>

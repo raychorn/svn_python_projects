@@ -1,0 +1,28 @@
+YAHOO.namespace("example.calendar");
+
+YAHOO.example.calendar.init = function() {
+
+    function handleSelect(type,args,obj) {
+	var dates = args[0]; 
+	var date = dates[0];
+	var year = date[0], month = date[1], day = date[2];
+	
+	var txtDate = document.getElementById("duedate");
+	txtDate.value = month + "/" + day + "/" + year;
+    }
+
+    // For this example page, stop the Form from being submitted, and update the cal instead
+    function handleSubmit(e) {
+	YAHOO.util.Event.preventDefault(e);
+    }
+    
+    YAHOO.example.calendar.cal1 = new YAHOO.widget.Calendar("cal1","cal1Container", 
+								{ mindate:"1/1/2006",
+								  maxdate:"12/31/2010" });
+    YAHOO.example.calendar.cal1.selectEvent.subscribe(handleSelect, YAHOO.example.calendar.cal1, true);
+    YAHOO.example.calendar.cal1.render();
+
+    YAHOO.util.Event.addListener("dates", "submit", handleSubmit);
+}
+
+YAHOO.util.Event.onDOMReady(YAHOO.example.calendar.init);

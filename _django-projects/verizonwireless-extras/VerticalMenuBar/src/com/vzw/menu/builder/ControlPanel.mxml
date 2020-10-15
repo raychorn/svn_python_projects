@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" title="Admin Tool Control Panel" width="100%" height="100%">
+	<mx:Script>
+		<![CDATA[
+			import com.vzw.menu.builder.events.MenuChangedEvent;
+			import vyperlogix.controls.Alert.AlertPopUp;
+        	import com.vzw.menu.builder.MenuController;
+
+            private function onCreationCompleteMenuChoiceBtn():void {
+            	MenuController.getMenus();
+            }
+
+			private function onClick_btnDeleteSelectedMenu(event:Event):void {
+				AlertPopUp.confirm('Are you sure you want to delete ' + MenuController._currentSelectedMenu.name + ' ?','Confirmation',MenuController.performMenuDelete);
+			}
+
+			public function menu_changed(event:MenuChangedEvent):void {
+				var aMenu:* = event.menu;
+                this.btn_menuChoice.popUp = aMenu;
+                this.btn_menuChoice.label = aMenu.dataProvider[aMenu.selectedIndex].label;
+                trace(this.className + ' --> ' + 'menu_changed().');
+			}
+			
+		]]>
+	</mx:Script>
+    <mx:VBox height="100%">
+	    <mx:Label text="There are {(MenuController._numMenus == -1) ? 'No' : MenuController._numMenus} menu{((MenuController._numMenus == -1) || (MenuController._numMenus > 0)) ? 's' : ''}."/>
+	    <mx:Button label="(new menu)" id="btnNewMenu" click="MenuController.onClick_btnNewMenu(event)"/>
+	    <mx:HBox>
+		    <mx:PopUpButton label="Choose Menu" id="btn_menuChoice" name="btn_menuChoice" creationComplete="onCreationCompleteMenuChoiceBtn()"/>
+		    <mx:VBox>
+		    	<mx:Spacer height="1"/>
+			    <mx:Image source="assets/icons/admin/next.gif" autoLoad="true"/>
+		    </mx:VBox>
+		    <mx:TextInput enabled="false" width="250" htmlText="{MenuController._currentSelectedMenu.name}"/>
+		    <mx:Button id="btnDeleteSelectedMenu" enabled="{(MenuController._currentSelectedMenu.name is String) ? true : false}" label="Delete {(MenuController._currentSelectedMenu.name is String) ? MenuController._currentSelectedMenu.name : '___'} ?" click="onClick_btnDeleteSelectedMenu(event)"/>
+		    <mx:Button id="btnRenameSelectedMenu" enabled="{(MenuController._currentSelectedMenu.name is String) ? true : false}" label="Rename {(MenuController._currentSelectedMenu.name is String) ? MenuController._currentSelectedMenu.name : '___'} ?" click="MenuController.onClick_btnRenameSelectedMenu(event)"/>
+	    </mx:HBox>
+    </mx:VBox>
+</mx:Panel>

@@ -1,0 +1,17 @@
+lpwd
+lcd "J:\@Vyper Logix Corp\@Projects\python\@lib"
+lpwd
+pwd
+cd /root/python/libs
+pwd
+lls
+lcd dist_2.5.5
+rm "vyperlogix_2_5_5.zip"
+put "vyperlogix_2_5_5.zip"
+lcd ..
+lcd dist_2.7.0
+lls
+rm "vyperlogix_2_7_0.zip"
+put "vyperlogix_2_7_0.zip"
+ls
+exit

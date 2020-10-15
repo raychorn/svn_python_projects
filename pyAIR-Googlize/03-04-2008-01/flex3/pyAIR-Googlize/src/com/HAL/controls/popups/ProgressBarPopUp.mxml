@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" 
+	width="100%" height="90">
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+
+			public function dismissPopUp():void {
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox x="0" y="0" width="100%" verticalAlign="middle">
+		<mx:ProgressBar id="pbar" width="100%" mode="manual"/>
+	</mx:VBox>
+</mx:Panel>

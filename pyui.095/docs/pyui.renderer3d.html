@@ -1,0 +1,262 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pyui.renderer3d</title>
+<style type="text/css"><!--
+TT { font-family: lucidatypewriter, lucida console, courier }
+--></style></head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pyui.html"><font color="#ffffff">pyui</font></a>.renderer3d</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/projects/pyuicvs/pyui/renderer3d.py">c:\projects\pyuicvs\pyui\renderer3d.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;PyUI<br>
+#&nbsp;Copyright&nbsp;(C)&nbsp;2001-2002&nbsp;Sean&nbsp;C.&nbsp;Riley<br>
+#&nbsp;<br>
+#&nbsp;This&nbsp;library&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or<br>
+#&nbsp;modify&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;version&nbsp;2.1&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+#&nbsp;License&nbsp;as&nbsp;published&nbsp;by&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation.<br>
+#&nbsp;<br>
+#&nbsp;This&nbsp;library&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+#&nbsp;but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+#&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the&nbsp;GNU<br>
+#&nbsp;Lesser&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+#&nbsp;<br>
+#&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+#&nbsp;License&nbsp;along&nbsp;with&nbsp;this&nbsp;library;&nbsp;if&nbsp;not,&nbsp;write&nbsp;to&nbsp;the&nbsp;Free&nbsp;Software<br>
+#&nbsp;Foundation,&nbsp;Inc.,&nbsp;59&nbsp;Temple&nbsp;Place,&nbsp;Suite&nbsp;330,&nbsp;Boston,&nbsp;MA&nbsp;&nbsp;02111-1307&nbsp;&nbsp;USA</tt></p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="pyui.rendererBase.html#RendererBase">pyui.rendererBase.RendererBase</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pyui.renderer3d.html#Renderer3DBase">Renderer3DBase</a>
+</font></dt></dl>
+</dd>
+</dl>
+ 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Renderer3DBase">class <strong>Renderer3DBase</strong></a>(<a href="pyui.rendererBase.html#RendererBase">pyui.rendererBase.RendererBase</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Renderer3DBase-__init__"><strong>__init__</strong></a>(self, w, h, fullscreen, title)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-addGeometryNode"><strong>addGeometryNode</strong></a>(self, objectHandle, bone<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-addGeometryPiece"><strong>addGeometryPiece</strong></a>(self, node, iType, info, offset, ypr, effect<font color="#909090">=''</font>, effectParams<font color="#909090">={}</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-addToWorld"><strong>addToWorld</strong></a>(self, worldHandle, objectHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-attachController"><strong>attachController</strong></a>(self, objectHandle, controllerType, boneName)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-attachObject"><strong>attachObject</strong></a>(self, objectHandle, toObjectHandle, connectionPointName<font color="#909090">=''</font>, toConnectionPointName<font color="#909090">=''</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-attachView"><strong>attachView</strong></a>(self, windowHandle, viewHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-attachWindow"><strong>attachWindow</strong></a>(self, windowHandle, xoffset, yoffset, objectHandle, viewHandle, nodeName)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-createEmptyBody"><strong>createEmptyBody</strong></a>(self, xyz<font color="#909090">=(0.0, 0.0, 0.0)</font>, label<font color="#909090">='emptyBody'</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-createFont"><strong>createFont</strong></a>(self, fontName, size, flag)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-createObject"><strong>createObject</strong></a>(self, model)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-createView"><strong>createView</strong></a>(self, world)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-createWorld"><strong>createWorld</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-destroyFont"><strong>destroyFont</strong></a>(self, fontHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-destroyObject"><strong>destroyObject</strong></a>(self, handle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-destroyView"><strong>destroyView</strong></a>(self, viewHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-destroyWorld"><strong>destroyWorld</strong></a>(self, worldHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-detachController"><strong>detachController</strong></a>(self, objectHandle, controllerHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-detachObject"><strong>detachObject</strong></a>(self, objectHandle, fromObjectHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-detachWindow"><strong>detachWindow</strong></a>(self, windowHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-dumpCache"><strong>dumpCache</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getCameraDir"><strong>getCameraDir</strong></a>(self, viewHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getCameraPos"><strong>getCameraPos</strong></a>(self, viewHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getCameraYPR"><strong>getCameraYPR</strong></a>(self, viewHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getDesktopWindow"><strong>getDesktopWindow</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getNodeEffect"><strong>getNodeEffect</strong></a>(self, node, num)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getNodeProjectedPos"><strong>getNodeProjectedPos</strong></a>(self, nodeHandle, viewHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getObjectNode"><strong>getObjectNode</strong></a>(self, objectHandle, nodeName, LODLevel)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getObjectProjectedPos"><strong>getObjectProjectedPos</strong></a>(self, objectHandle, viewHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-loadAnimation"><strong>loadAnimation</strong></a>(self, animation)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-loadMusic"><strong>loadMusic</strong></a>(self, waveFileName)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-loadSound"><strong>loadSound</strong></a>(self, waveFileName)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-moveCamera"><strong>moveCamera</strong></a>(self, viewHandle, offset)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-moveObject"><strong>moveObject</strong></a>(self, objectHandle, delta, moveRate, turnRate<font color="#909090">=0</font>, onCompleted<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-moveObjectTo"><strong>moveObjectTo</strong></a>(self, objectHandle, location, moveRate, turnRate<font color="#909090">=0</font>, onCompleted<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-pickView"><strong>pickView</strong></a>(self, viewHandle, xy)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-playMusic"><strong>playMusic</strong></a>(self, waveFileName, completionCallback<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-playSound"><strong>playSound</strong></a>(self, waveFileName, completionCallback<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-removeFromWorld"><strong>removeFromWorld</strong></a>(self, worldHandle, objectHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-rotateObject"><strong>rotateObject</strong></a>(self, objectHandle, delta, turnRate, onCompleted<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-rotateObjectTo"><strong>rotateObjectTo</strong></a>(self, objectHandle, orientation, turnRate, onCompleted<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setCameraPos"><strong>setCameraPos</strong></a>(self, viewHandle, pos)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setCameraYPR"><strong>setCameraYPR</strong></a>(self, viewHandle, YPR)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setController"><strong>setController</strong></a>(self, controllerHandle, **parms)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setEffectParameters"><strong>setEffectParameters</strong></a>(self, effect, parms)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setLightParameters"><strong>setLightParameters</strong></a>(self, viewHandle, YPR)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setObjectAnimation"><strong>setObjectAnimation</strong></a>(self, objectHandle, animation, onCompleted<font color="#909090">=None</font>, blendTime<font color="#909090">=0.0</font>, loop<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setObjectPos"><strong>setObjectPos</strong></a>(self, objectHandle, pos)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setObjectScale"><strong>setObjectScale</strong></a>(self, objectHandle, scale)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setObjectYPR"><strong>setObjectYPR</strong></a>(self, objectHandle, YPR)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setViewParameters"><strong>setViewParameters</strong></a>(self, viewHandle, parameters)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setViewProjectionMode"><strong>setViewProjectionMode</strong></a>(self, viewHandle, projectionMode)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setWindowEffect"><strong>setWindowEffect</strong></a>(self, windowHandle, effectName)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-stopMusic"><strong>stopMusic</strong></a>(self, waveFileName)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-stopSound"><strong>stopSound</strong></a>(self, waveFileName)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-toggleDebugInfo"><strong>toggleDebugInfo</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-updateWorld"><strong>updateWorld</strong></a>(self, worldHandle)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.renderer3d'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.rendererBase.html#RendererBase">pyui.rendererBase.RendererBase</a>:<br>
+<dl><dt><a name="Renderer3DBase-addRect"><strong>addRect</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-createWindow"><strong>createWindow</strong></a>(self, title)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-describeWindow"><strong>describeWindow</strong></a>(self, windowHandle, drawList)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-destroyWindow"><strong>destroyWindow</strong></a>(self, windowHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-doesDirtyRects"><strong>doesDirtyRects</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-draw"><strong>draw</strong></a>(self, windows)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-drawGradient"><strong>drawGradient</strong></a>(self, rect, c1, c2, c3, c4)</dt><dd><tt>Draws&nbsp;a&nbsp;gradient&nbsp;rectangle</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-drawImage"><strong>drawImage</strong></a>(self, rect, filename, pieceRect<font color="#909090">=None</font>)</dt><dd><tt>Draws&nbsp;an&nbsp;image&nbsp;at&nbsp;a&nbsp;position</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-drawImageRotated"><strong>drawImageRotated</strong></a>(self, rect, filename, rotDegrees, textureEffect)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-drawLine"><strong>drawLine</strong></a>(self, x1, y1, x2, y2, color)</dt><dd><tt>Draws&nbsp;a&nbsp;line</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-drawRect"><strong>drawRect</strong></a>(self, color, rect)</dt><dd><tt>Fills&nbsp;a&nbsp;rectangle&nbsp;with&nbsp;the&nbsp;specified&nbsp;color.</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-drawText"><strong>drawText</strong></a>(self, text, pos, color, font<font color="#909090">=None</font>)</dt><dd><tt>Draws&nbsp;the&nbsp;text&nbsp;on&nbsp;the&nbsp;screen&nbsp;in&nbsp;the&nbsp;specified&nbsp;position</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-drawView"><strong>drawView</strong></a>(self, rect, handle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getImageSize"><strong>getImageSize</strong></a>(self, filename)</dt><dd><tt>Return&nbsp;the&nbsp;width&nbsp;and&nbsp;height&nbsp;of&nbsp;the&nbsp;image</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-getMustFill"><strong>getMustFill</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getScreenSize"><strong>getScreenSize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-getTextSize"><strong>getTextSize</strong></a>(self, text, font<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-loadImage"><strong>loadImage</strong></a>(self, filename, label<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-moveToFront"><strong>moveToFront</strong></a>(self, windowHandle)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-moveWindow"><strong>moveWindow</strong></a>(self, windowHandle, x, y)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-packColor"><strong>packColor</strong></a>(self, r, g, b, a<font color="#909090">=255</font>)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-quit"><strong>quit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-readTimer"><strong>readTimer</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-run"><strong>run</strong></a>(self, callback<font color="#909090">=None</font>)</dt><dd><tt>This&nbsp;is&nbsp;a&nbsp;default&nbsp;way&nbsp;of&nbsp;_running_&nbsp;an&nbsp;application&nbsp;using<br>
+the&nbsp;current&nbsp;renderer.</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-setBackMethod"><strong>setBackMethod</strong></a>(self, drawBackMethod, *args)</dt><dd><tt>Set&nbsp;the&nbsp;method&nbsp;used&nbsp;to&nbsp;draw&nbsp;the&nbsp;background.</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-setClipping"><strong>setClipping</strong></a>(self, rect<font color="#909090">=None</font>)</dt><dd><tt>set&nbsp;the&nbsp;clipping&nbsp;rectangle&nbsp;for&nbsp;the&nbsp;main&nbsp;screen.&nbsp;defaults&nbsp;to&nbsp;clearing&nbsp;the&nbsp;clipping&nbsp;rectangle.</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-setDrawList"><strong>setDrawList</strong></a>(self, drawList)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setMustFill"><strong>setMustFill</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-setWindowTitle"><strong>setWindowTitle</strong></a>(self, title)</dt><dd><tt>sets&nbsp;the&nbsp;title&nbsp;of&nbsp;the&nbsp;OS&nbsp;main&nbsp;window.</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-setup2D"><strong>setup2D</strong></a>(self)</dt><dd><tt>must&nbsp;be&nbsp;called&nbsp;in&nbsp;background&nbsp;drawing&nbsp;method&nbsp;to&nbsp;do&nbsp;2D&nbsp;drawing.</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-teardown2D"><strong>teardown2D</strong></a>(self)</dt><dd><tt>must&nbsp;be&nbsp;called&nbsp;in&nbsp;background&nbsp;drawing&nbsp;method&nbsp;to&nbsp;end&nbsp;2D&nbsp;drawing.</tt></dd></dl>
+
+<dl><dt><a name="Renderer3DBase-unpackColor"><strong>unpackColor</strong></a>(self, color)</dt></dl>
+
+<dl><dt><a name="Renderer3DBase-update"><strong>update</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="pyui.rendererBase.html#RendererBase">pyui.rendererBase.RendererBase</a>:<br>
+<dl><dt><strong>name</strong> = 'Base'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+</td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><strong>__file__</strong> = r'.\pyui\renderer3d.pyc'<br>
+<strong>__name__</strong> = 'pyui.renderer3d'</td></tr></table>
+</body></html>

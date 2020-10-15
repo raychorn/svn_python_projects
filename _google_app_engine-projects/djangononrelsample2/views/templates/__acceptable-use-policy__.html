@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% if not title %}{% block title %}Acceptable Use Policy{% endblock %}{% endif %}
+
+{% block extra-head %}
+    {% if not extrahead %}
+		<script language="JavaScript1.2" type="text/javascript">
+        </script>
+    {% else %}
+        {{ extrahead }}
+    {% endif %}
+{% endblock %}
+
+{% if not css %}
+	{% block css %}{% endblock %}
+{% endif %}
+
+{% block include-css %}
+    {% if not includecss %}
+        '/static/main.css'
+    {% else %}
+        {{ includecss }}
+    {% endif %}
+{% endblock %}
+
+{% block extra-content %}
+    {% if not extracontent %}
+    {% else %}
+        {{ extracontent }}
+    {% endif %}
+{% endblock %}
+
+{% block container %}
+<!-- Slide #1 -->
+            <table id="container" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="top" id="main_content_holder">
+						<div class="container_12 container_cloud">
+						
+							<h1 class="cloud">{% autoescape off %}{{ sitename2 }}{% endautoescape %} Acceptable Use Policy (AUP)</h1>
+					<p>&nbsp;</p>
+					<p>This Acceptable Use Policy (“AUP”) is incorporated by reference in your services agreement with {{ company }}.</p>
+					<p>Your services may be suspended or terminated for violation of this AUP in accordance with your services agreement with {{ company }}.</p>
+					<p>Capitalized terms used in this AUP shall have the meaning given in your services agreement.</p>
+					<p>Inquiries regarding this policy should be directed to abuse@{{ company }}.com.</p>
+					<p>Abuse</p>
+					<p>You may not use {{ company }}'s network or services to engage in, foster, or promote illegal, abusive, or irresponsible behavior, including:</p>
+
+					<ol class="standard">
+					<li>Use of an internet account or computer without the owner's authorization;</li>
+					<li>Unauthorized access to or use of data, systems or networks, including any attempt to probe, scan or test the vulnerability of a system or network or to breach security or authentication measures without express authorization of the owner of the system or network;</li>
+					<li>Collecting or using email addresses, screen names or other identifiers without the consent of the person identified (including, without limitation, phishing, Internet scamming, password robbery, spidering, and harvesting);</li>
+					<li>Collecting or using information without the consent of the owner of the information;</li>
+					<li>Use of any false, misleading, or deceptive TCP-IP packet header information in an email or a newsgroup posting;</li>
+					<li>Use of the service to distribute software that covertly gathers information about a user or covertly transmits information about the user;</li>
+					<li>Use of the service for distribution of advertisement delivery software unless: (i) the user affirmatively consents to the download and installation of such software based on a clear and conspicuous notice of the nature of the software, and (ii) the software is easily removable by use of standard tools for such purpose included on major operating systems; (such as Microsoft's "ad/remove" tool); or</li>
+					<li>Any conduct that is likely to result in retaliation against the {{ company }} network or website, or {{ company }}'s employees, officers or other agents, including engaging in behavior that results in any server being the target of a denial of service attack (DoS).</li>
+					<li>Monitoring data or traffic on any network or system without the express authorization of the owner of the system or network;</li>
+					<li>Interference with service to any user of the {{ company }} or other network including, without limitation, mail bombing, flooding, deliberate attempts to overload a system and broadcast attacks;</li>
+					</ol>
+
+					<h4 class="cloud">Excessive Use of System Resources</h4>
+					<p>You may not use any shared system provided by {{ company }} in a way that unnecessarily interferes with the normal operation of the shared system, or that consumes a disproportionate share of the resources of the system. For example, we may prohibit the automated or scripted use of {{ company }} Mail Services if it has a negative impact on the mail system, or we may require you to repair coding abnormalities in your Cloud-hosted code if it unnecessarily conflicts with other Cloud customers’ use of the Cloud. You agree that we may quarantine or delete any data stored on a shared system if the data is infected with a virus, or is otherwise corrupted, and has the potential to infect or corrupt the system or other customers' data that is stored on the same system.</p>
+					<h4 class="cloud">Mail Requirements</h4>
+					<p>You must comply with the CAN-SPAM Act of 2003 and other laws and regulations applicable to bulk or commercial email. In addition, your bulk and commercial email must meet the following requirements:</p>
+					<ol class="standard">
+					<li>Your intended recipients have given their consent to receive e-mail via some affirmative means, such as an opt-in procedure;</li>
+					<li>Your procedures for soliciting consent include reasonable means to ensure that the person giving consent is the owner of the e-mail address for which the consent is given;</li>
+					<li>You retain evidence of the recipient's consent in a form that may be promptly produced on request, and you honor the recipient's and the {{ company }} Cloud's requests to produce consent evidence within 72 hours of receipt of the request;</li>
+					<li>You have procedures in place that allow a recipient to revoke their consent — such as a link in the body of the email, or instructions to reply with the word "Remove" in the subject line; you honor revocations of consent within 48 hours, and you notify recipients that the revocation of their consent will be implemented in 48 hours;</li>
+					<li>You must post an email address for complaints (such as abuse@yourdomain.com) in a conspicuous place on any website associated with the email, you must register that address at abuse.net, and you must promptly respond to messages sent to that address;</li>
+					<li>You must have a Privacy Policy posted for each domain associated with the mailing;</li>
+					<li>You have the means to track anonymous complaints;</li>
+					<li>You must not obscure the source of your e-mail in any manner. Your e-mail must include the recipient's e-mail address in the body of the message or in the "TO" line of the e-mail;</li>
+					<li>You must not attempt to send any message to an email address if 3 consecutive delivery rejections have occurred and the time between the third rejection and the first rejection is longer than fifteen days;</li>
+					</ol>
+					<p>These policies apply to messages sent using the services, or to messages sent from any network by you or any person on your behalf that directly or indirectly refer the recipient to a site hosted via the services. In addition, you may not use a third party e-mail service that does not practice similar procedures for all its customers. These requirements apply to distribution lists created by third parties to the same extent as if you created the list.</p>
+					<p>{{ company }} may test and otherwise monitor your compliance with its requirements, including requesting opt-in information from a random sample of your list at any time. In addition, {{ company }} may block the transmission of email that violates these provisions. {{ company }} may, at its discretion, require certain customers to seek advance approval for bulk and commercial email, which approval will not be granted unless the customer can demonstrate that all of the requirements stated above will be met.</p>
+					<h4 class="cloud">Vulnerability Testing</h4>
+					<p>You may not attempt to probe, scan, penetrate or test the vulnerability of a {{ company }} system or network, or to breach the {{ company }} security or authentication measures, whether by passive or intrusive techniques, without the {{ company }}'s express written consent.</p>
+					<h4 class="cloud">Newsgroup, Chat Forums, Other Networks</h4>
+					<p>You must comply with the rules and conventions for postings to any bulletin board, chat group or other forum in which you participate, such as IRC and USENET groups including their rules for content and commercial postings.  These groups usually prohibit the posting of off-topic commercial messages, or mass postings to multiple forums.</p>
+					<p>You must comply with the rules of any other network you access or participate in using your {{ company }} services.</p>
+					<h4 class="cloud">Offensive Content</h4>
+					<p>You may not publish, transmit or store on or via the {{ company }} network or equipment any content or links to any content that the {{ company }} reasonably believes:</p>
+					<ol class="standard">
+					<li>Constitutes, depicts, fosters, promotes or relates in any manner to child pornography, bestiality, or non-consensual sex acts;</li>
+					<li>is excessively violent, incites violence, threatens violence or contains harassing content or hate speech;</li>
+					<li>is unfair or deceptive under the consumer protection laws of any jurisdiction, including chain letters and pyramid schemes;</li>
+					<li>is defamatory or violates a person’s privacy;</li>
+					<li>creates a risk to a person’s safety or health, creates a risk to public safety or health, compromises national security or interferes with a investigation by law enforcement;</li>
+					<li>improperly exposes trade secrets or other confidential or proprietary information of another person;</li>
+					<li>is intended to assist others in defeating technical copyright protections;</li>
+					<li>infringes on another person’s copyright, trade or service mark, patent or other property right;</li>
+					<li>promotes illegal drugs, violates export control laws, relates to illegal gambling or illegal arms trafficking;</li>
+					<li>is otherwise illegal or solicits conduct that is illegal under laws applicable to you or to {{ company }}; or</li>
+					<li>is otherwise malicious, fraudulent or may result in retaliation against {{ company }} by offended viewers.</li>
+					</ol>
+					<h4 class="cloud">Live Events</h4>
+					<p>You may not use your {{ company }} services to stream live sex acts of any kind, even if the content would otherwise comply with the AUP. {{ company }} may prohibit you from streaming other live events where there is a special risk, in {{ company }}’s reasonable discretion, that the event may violate the Offensive Content section above.</p>
+					<h4 class="cloud">Copyrighted Material</h4>
+					<p>You may not use {{ company }}'s network or services to download, publish, distribute, or otherwise copy or use in any manner any text, music, software, art, image or other work protected by copyright law unless:</p>
+					<ol class="standard">
+					<li>you have been expressly authorized by the owner of the copyright for the work to copy the work in that manner; or</li>
+					<li>you are otherwise permitted by established copyright law to copy the work in that manner.</li>
+					</ol>
+					<p>It is {{ company }}'s policy to terminate in appropriate circumstances the services of customers who are repeat infringers.</p>
+					<h4 class="cloud">Other</h4>
+					<ol class="standard">
+					<li>You must have valid and current information on file with your domain name registrar for any domain hosted on the {{ company }} network.</li>
+					<li>You may only use IP addresses assigned to you by {{ company }} in connection with your {{ company }} services.</li>
+					<li>You agree that if {{ company }} IP numbers assigned to your account are listed on an abuse database like Spamhaus, you will be in violation of this AUP, and {{ company }} may take reasonable action to protect its IP addresses, including suspension and/or termination of your service, regardless of whether the IP addresses were listed as a result of your actions;</li>
+					<li>You agree that if you register a DNS record or zone on {{ company }} managed or operated DNS servers or services for a domain of which you are not the registrant or administrative contact according to the registrars WHOIS system, that, upon request from the registrant or administrative contact according to the registrars WHOIS system, {{ company }} may modify, transfer, or delete such records or zones.</li>
+					<li>You may not register to use any Services under a false name, or use an invalid or unauthorized credit card in connection with any Services.</li>
+					</ol>
+					<h4 class="cloud">SLA</h4>
+					<p>No credit will be available under the {{ company }} Service Level Agreement(s) for interruptions of service resulting from any AUP violation.</p>
+					<p></p>
+					<p></p>
+							
+                    </div>
+						
+                </td>
+              </tr>
+            </table>   
+{% endblock %}

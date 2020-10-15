@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title }}-{{ article.cate.name }}{% endblock %}
+
+{% block extra-head %}
+  <META content="{{ article.title }},{{ article.cate.name }},{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Keywords>
+  <META content="{{ article.cate.name }},{{ article.title }},{{ articlecontent|slice:":20" }},{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Description>    
+{% ifequal syntaxhighlighter '1' %}
+{% if has_pre %}
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shCore.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushBash.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushCpp.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushCSharp.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushCss.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushDelphi.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushDiff.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushGroovy.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushJava.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushPhp.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushPlain.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushPython.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushRuby.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushScala.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushSql.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushVb.js"></script>
+  <script type="text/javascript" src="/tinymce/syntaxhighlighter/scripts/shBrushXml.js"></script>
+  <link type="text/css" rel="stylesheet" href="/tinymce/syntaxhighlighter/styles/shCore.css"/>
+  <link type="text/css" rel="stylesheet" href="/tinymce/syntaxhighlighter/styles/shThemeDefault.css"/>
+  <script type="text/javascript">
+  	SyntaxHighlighter.config.clipboardSwf = '/tinymce/syntaxhighlighter/scripts/clipboard.swf';
+  	SyntaxHighlighter.all();
+  </script>
+{% endif %}
+{% endifequal %}
+{% endblock %} 
+
+{% block content %}
+<div id="main_content_browse" class="yui-g">{% trans "Browse" %} &gt; <A title="{% trans 'Home' %}" href="/">{% trans "Home" %}</A>
+ / <A title="View all articles in {{ article.cate.name|safe }}" href="{% url cms.views.show_categories keyid=article.cate.key.id page=1 %}" rel=category>{{ article.cate.name|safe }}</A> 
+ / <span title="{{ article.title }}">{{ article.title }}</span></div>
+<H1 title="{{ article.title }}" class="art_title">{{ article.title }}</H1>
+<div>
+	<div id="post_date">{% ifequal show_pud_date '1' %}<SPAN class=time>{{ article.EST_time|date:"Y-m-d H:i:s" }}</SPAN> {% endifequal %}
+&nbsp;&nbsp;by : {{ article.author.first_name }}{{ article.author.last_name }}
+&nbsp;&nbsp;{% ifequal show_browse '1' %}views:{{ article.browse }}{% endifequal %}
+{% ifequal user.username article.author.username %}
+&nbsp;&nbsp;[ <a href="{% url cms.views.edit_article article.key.id %}">{% trans "Edit" %}</a> ] | [ <a href="{% url cms.views.delete_article article.key.id %}" onclick="return p_del();">{% trans "Delete" %}</a> ]
+{% else %}
+{% if user.is_superuser %}
+[ <a href="{% url cms.views.edit_article article.key.id %}">{% trans "Edit" %}</a> ] | [ <a href="{% url cms.views.delete_article article.key.id %}" onclick="return p_del();">{% trans "Delete" %}</a> ]
+{% endif %}
+{% endifequal %}</div>
+	<div id="post_new_comment"><a href="#postcomment" onclick="show_post_comment();">{% trans "Leave a Comment" %}</a></div>
+</div>
+
+<DIV style="CLEAR: both"></DIV>
+<DIV id="post_content">
+{{ articlecontent|safe }}
+</DIV>
+<DIV style="CLEAR: both"></DIV>
+{% if art_bot_ad %}<div id="main_content_bot_ad" class="yui-g" style="margin-bottom:10px;">{{ art_bot_ad|safe }}</div>{% endif %}
+<DIV style="CLEAR: both"></DIV>
+<DIV style="FLOAT: left;">
+{% if USE_I18N %}
+<SCRIPT type=text/javascript>
+    var bookmark_position = "margin:0px;PADDING:0px;";
+    var bookmark_url="";
+    var bookmark_title="";
+</SCRIPT>
+<SCRIPT src="/media/js/bookmark_cn.js" type=text/javascript></SCRIPT>
+{% else %}
+<script type="text/javascript">
+addthis_pub  = 'gsmstock';
+addthis_options='favorites, digg, delicious, google, myspace, facebook, reddit, twitter, live, more';
+</script>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="/media/bookmarkimages/button1-bm.gif" width="125" height="16" border="0" alt="" /></a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+{% endif %}
+</DIV>
+
+<DIV class="category">
+{% trans "Categories" %}: <a title="View all articles in {{ article.cate.name|safe }}" href="{% url cms.views.show_categories keyid=article.cate.key.id page=1 %}">{{ article.cate.name|safe }}</a> 
+{% if article.tags %}
+<span class="taglist">{% trans "Tags" %}: </span>
+{% for each in article.tags %}<a href="{% url cms.views.show_tag_arts_list tag=each %}" title="{{ each }}">{{ each }}</a>, {% endfor %}
+{% endif %}
+</DIV>
+
+<DIV style="CLEAR: both"></DIV>
+
+<div class="yui-g">
+	<div id="main_content_cate_left" class="yui-u first">
+		<H1>{{ article.cate.name|safe }}</H1>
+		<UL>
+		{% for each in same_cate_random_arts %}<LI><A title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}">{{ each.title }}</A></LI>
+		{% endfor %}
+		</UL>
+	</div>
+	<div id="main_content_cate_right" class="yui-u">
+		<H1>{{ random_cate_arts2.0.cate.name|safe }}</H1>
+		<UL>
+		{% for each in random_cate_arts2 %}<LI><A title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}">{{ each.title }}</A></LI>
+		{% endfor %}
+		</UL>
+	</div>
+</div>
+<a name="postcomment"></a>
+<DIV id="comment_post" style="display:None;" class="comment_frame">
+<DIV class="comment_title">{% trans "Post Comment" %}:</DIV>
+<form action="" method="POST" onsubmit="return validate();">
+{{ comform.as_p }}
+<p>{% trans "Verification Code" %}：<input  type="text" id="input1" name="vericode1" style="width: 50px" onclick="createCode()" />  
+ <input type="text" name="vericode2" onclick="createCode()" readonly="readonly" id="checkCode" class="unchanged" style="width: 50px" />  
+ <input type="submit" style="width: 90px" value="{% trans 'Submit' %}" onClick="login();"/></p>
+</form>
+<script language="javascript" type="text/javascript">  
+var code ;  
+function createCode(){
+    code = "";
+    var codeLength = 4;
+    var checkCode = document.getElementById("checkCode");   
+    var selectChar = new Array(0,1,2,3,4,5,6,7,8,9); 
+    
+    for(var i=0;i<codeLength;i++){
+        var charIndex = Math.floor(Math.random()*selectChar.length);
+        code +=selectChar[charIndex];
+    }
+    //alert(code);   
+    if(checkCode){   
+        checkCode.className="code";   
+        checkCode.value = code;   
+    } 
+}   
+    
+function validate(){   
+    var inputCode = document.getElementById("input1").value;   
+    if(inputCode.length <=0){   
+        alert("{% trans 'Please Enter Verification Code' %}");
+        createCode();
+        return false;
+    }else if(inputCode != code ){
+        alert("{% trans 'Please Enter Right Verification Code' %}");
+        createCode();
+        return false;
+    }else{
+        //alert("^-^ OK");
+        return true;   
+    }   
+}
+
+//createCode();
+//set cookie
+    
+function setcookie(name,value){
+    var Days = 30;
+    var exp  = new Date();
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+
+function getcookie(name){
+    var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)")); 
+    if(arr != null){
+        return unescape(arr[2]);
+    }else{
+        return "";
+    }
+}
+
+function login(){ 
+   setcookie("author",document.getElementById('id_name').value); 
+   setcookie("email",document.getElementById('id_email').value); 
+   setcookie("url",document.getElementById('id_site').value); 
+} 
+
+function loadcookies(){
+    document.getElementById("id_name").value = getcookie("author");
+    document.getElementById("id_email").value = getcookie("email");
+    document.getElementById("id_site").value = getcookie("url");
+}
+
+{% if user.is_authenticated %}
+document.getElementById("id_name").value = "{{ user.first_name }}{{ user.last_name }}";
+{% else %}
+if (document.cookie != "") { 
+    loadcookies();  
+}
+{% endif %}
+// set cookie end
+//
+function show_post_comment(){
+    document.getElementById("comment_post").style.display = "block";
+}
+//
+function replyto(somebd){
+    show_post_comment();
+    document.getElementById("id_content").value = "To("+somebd+"):";
+}
+</script> 
+</DIV>
+{% if articlecomment %}
+<DIV id="comment_list" class="comment_frame">
+<DIV class="comment_title">{% trans "Comments" %}:</DIV>
+<DIV style="CLEAR: both"></DIV>
+<div id="post_new_comment"><a href="#postcomment" onclick="show_post_comment();">{% trans "Leave a Comment" %}</a></div>
+<DIV style="CLEAR: both"></DIV>
+{% for each in articlecomment %}
+<div class="{% if forloop.counter|divisibleby:2 %}comment_even{% else %}comment_odd{% endif %}">
+ <a name="{{ each.key.id }}"></a> 
+<div class=comment> {{ forloop.revcounter }} Post by : {% if each.site %}<a href="{{ each.site }}" target="_blank">{{ each.name }}</a>{% else %}{{ each.name }}{% endif %} @ {{ each.EST_time|date:"Y-m-d H:i:s" }}
+{% if user.is_superuser %}
+email:{{ each.email }}
+ [ <a href="{% url cms.views.delete_comment key=each.key %}" onclick="return p_del();">{% trans "Delete" %}</a> ]
+{% endif %}
+<a href="#postcomment" onclick="replyto('{{ each.name }}');">{% trans "Reply" %}</a>
+</div>
+<div class="comment_con">{{ each.content }}</div>
+</div>
+{% endfor %}
+</DIV>{% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="21" height="21">
+	<mx:Script>
+		<![CDATA[
+			
+		]]>
+	</mx:Script>
+	<mx:Button x="0" y="0" id="btn_open" width="{this.width}" height="{this.height}" toolTip="Click this button to open the Folder Navigator to navigate to another home folder or to locate other Archives and Packages." icon="@Embed(source='assets/images/file_folders_cabinet.png')"/>
+</mx:Canvas>

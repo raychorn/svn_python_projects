@@ -1,0 +1,10 @@
+### in queue.yaml
+queue:
+- name: hothandler
+  rate: 6/m
+  bucket_size: 1
+
+- name: twitzhandler
+  rate: 24/h
+  bucket_size: 10
+  

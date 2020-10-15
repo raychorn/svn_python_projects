@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Invalid Request{% endblock %}
+
+{% block menu-links %}[<a href="/" target="_top">Home</a>]{% endblock %}
+
+{% block left_content %}
+<font color="red" style="font-weight:bold">The Server suddenly has <U>NO</U> idea what you want to see.</font><br/><br/>
+<font size="-1" face="Verdana, Geneva, sans-serif">
+{{ HTTP_HOST }}<br/><br/>
+{% autoescape off %}
+{{ details }}
+{% endautoescape %}
+</font>
+{% endblock %}

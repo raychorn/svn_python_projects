@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Set theme" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Set theme" %}</h1>
+<form id="form" action="" method="post" onsubmit="return formSubmit2();" >
+Plese select a theme your like and click Submit : <select name="themename" onchange="theme_change(this.value);">
+{% for theme in themes %}
+  <option value="{{ theme }}" {% ifequal theme cur_theme %}selected{% endifequal %}>{{ theme }}</option>
+{% endfor %}
+</select>
+<input type="submit" name="save" value="Submit" />
+</form>
+
+<span id="theme_name" style="FONT-WEIGHT: bold;">{{ cur_theme }} </span> , Screenshot :<br/>
+<div id="screenshot">
+<IMG title="{{ cur_theme }}" alt="{{ cur_theme }}" src="/themes/{{ cur_theme }}/screenshot.png">
+</div>
+
+<script language="javascript" type="text/javascript">
+<!--
+function theme_change(select_theme)
+{
+	document.getElementById("theme_name").innerHTML = 'Your select '+select_theme;
+    document.getElementById("screenshot").innerHTML = '<IMG title="'+ select_theme +'" alt="'+ select_theme +'" src="/themes/'+ select_theme +'/screenshot.png">';
+}
+//-->
+</script>
+
+{% endblock %}

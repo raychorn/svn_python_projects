@@ -1,0 +1,1 @@
+ssh -2 -f -C -N remoteuser@remoteserver.com -L 3307/127.0.0.1/3306

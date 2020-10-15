@@ -1,0 +1,42 @@
+{% load currenttimetag %}
+{% get_current_time "%Y-%M-%d %I:%M %p" as my_current_time %}
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
+    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
+    lang="{% firstof LANGUAGE_CODE 'en' %}">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}{% endblock %} &copy;VyperLogix.Com {{ air_id }} v{{version}}, All Rights Reserved. ({{ my_current_time }})</title>
+    {% block css %}
+      <!--[if IE]>
+      <![endif]-->
+    {% endblock %}
+
+	<script src="/js/js/dynamic.js" language="javascript" type="text/javascript"></script>
+    {% block js %}
+    {% endblock %}
+
+	<script language="javascript" type="text/javascript">
+	    _onload = function () {
+		    var ie  = !!(window.attachEvent && !window.opera);
+		    var wk  = /webkit\/(\d+)/i.test(navigator.userAgent) && (RegExp.$1 < 525);
+		    if (ie) {
+			    var c = document.getElementById('container');
+			    if (c) {
+				c.innerHTML = '<p>You can <a href="http://www.google.com/chrome" target="_blank">download Google Chrome</a> or <a href="http://www.mozilla.com/en-US/products/firefox/" target="_blank">download Mozilla FireFox</a></p><p>Come back with one of the supported browsers...</p>';
+			    }
+			    alert('This site is best viewed using Google Chrome or Mozilla FireFox 3.x however you are using IE so stop it !');
+		    }
+		    include_css({% block include-css %}{% endblock %});
+	    };
+    </script>
+
+    {% block extra-head %}{% endblock %}
+  </head>
+
+<body onload="_onload();"><div id="container">{% block container %}{% endblock %}</div></body>
+</html>

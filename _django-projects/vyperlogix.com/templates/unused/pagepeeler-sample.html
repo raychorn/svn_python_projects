@@ -1,0 +1,51 @@
+<script type="text/javascript" src="http://media.vyperlogix.com/jquery-ui-1.7.2.custom/js/jquery-1.3.2.min.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+	$("#pageflip").hover(function() {
+		$("#pageflip img , .msg_block").stop()
+			.animate({
+				width: '307px', 
+				height: '319px'
+			}, 500); 
+		} , function() {
+		$("#pageflip img").stop() 
+			.animate({
+				width: '50px', 
+				height: '52px'
+			}, 220);
+		$(".msg_block").stop() 
+			.animate({
+				width: '50px', 
+				height: '50px'
+			}, 200);
+	});
+});
+</script> 
+<style type="text/css"> 
+#pageflip {
+	position: relative;
+	right: 0; top: 0;
+	float: right; 
+}
+#pageflip img {
+	width: 50px; height: 52px;
+	z-index: 99;
+	position: absolute;
+	right: 0; top: 0;
+	-ms-interpolation-mode: bicubic;
+}
+#pageflip .msg_block {
+	width: 50px; height: 50px;
+	overflow: hidden;
+	position: absolute;
+	right: 0; top: 0;
+	background: url(http://media.vyperlogix.com/images/ads/ezcheapsites-peeler.jpg) no-repeat right top;
+}
+#pageflip a {
+	color: #000000; 
+}
+</style> 
+<div id="pageflip"> 
+    <a href="http://www.ezCheapSites.com" target="_blank"><img src="http://media.vyperlogix.com/images/page_flip.png" alt="" /></a> 
+    <div class="msg_block"></div> 
+</div> 

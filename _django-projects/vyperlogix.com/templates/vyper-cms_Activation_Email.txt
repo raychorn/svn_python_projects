@@ -1,0 +1,8 @@
+Your password for Vyper-CMS is "{{ PRODUCT_PASSWORD }}" (without the quotes).
+
+Do not share your password with anyone.
+
+Vyper Logix Corp.
+http://www.vyperlogix.com
+
+CONFIDENTIALITY NOTICE: This e-mail may contain information that is confidential and proprietary to Vyper Logix Corp., and we hereby designate the information in this e-mail as confidential. The information is intended only for the use of the individual(s) or entity named above. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of any of the information contained in this transmission is strictly prohibited and that you should immediately destroy this e-mail and its contents and notify the sender.

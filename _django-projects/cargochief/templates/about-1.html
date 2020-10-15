@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block include-css %}'/static/main.css'{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+<!-- Slide #3 -->
+            <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="top" id="main_content_holder">
+                
+                   <div class="bubble2">
+                    <p>Cargo Chief is partnering with brokers, load boards, aggregators and consolidators of trucking services to offer the best value in trucking for shippers with improved quality of service while assisting carriers to fill 28% of their trucks that are running empty.  Through direct relationships and aggregation, Cargo Chief can reach well over 100,000 trucks.  By checking the carrier against U.S. Department of Transportation’s strict Compliance, Safety and Accountability (CSA) requirements before they carry your valuable cargo, you know you are working with a rated carrier.</p>
+                    <p>With unique strategic partnerships, Cargo Chief provides shipping at 40% or even 50% discount compared to market.  Shippers and carriers both win when an empty space is utilized.
+</p>
+                       <table width="100%">
+                        <tr>
+                            <td width="50%" align="left" valign="top" style="border-color: rgb( 0, 0, 0); border-style:solid;">
+                                <p>Cargo Chief provides a number of unique benefits:</p>
+                                <ul>
+                                    <li>Lower/lowest freight expense</li>
+                                    <li>Monthly report of total Cargo Chief based savings</li>
+                                    <li>Insurance</li>
+                                    <li>Free for shippers</li>
+                                </ul>
+                            </td>
+                            <td width="50%" align="center" valign="top">
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+                                <p>
+                                    <a href="/about-2.html" target="_top">How Cargo Chief Works</a>
+                                </p>
+                                <p>
+                                    <a href="/about-4.html" target="_top">Why the Best Results</a>
+                                </p>
+{% endif %}
+                            </td>
+                        </tr>
+                       </table>
+                       <table width="100%">
+                        <tr>
+                            <td align="center">
+                                <img src="/static/images/slide0132_image033.png"/>
+                            </td>
+                        </tr>
+                       </table>
+                   </div>
+                </td>
+              </tr>
+            </table>   
+            <div style="clear: both; padding-top:25px;"></div>
+{% endblock %}

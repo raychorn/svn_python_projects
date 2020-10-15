@@ -1,0 +1,7 @@
+Dear {{ Contact_Name }}, 
+
+A Comment has been posted to the Case #{{ CaseNumber }}. 
+Case Subject: {{ Case_Subject }} 
+
+Comment: 
+{{ Case_Last_Case_Comment }} 

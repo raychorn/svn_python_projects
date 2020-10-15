@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel 
+	xmlns="com.HAL.controls.navigators.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="220" height="350" creationComplete="onInit()">
+	<mx:states>
+		<mx:State name="FileNameState">
+			<mx:RemoveChild target="{btn_saveAs}"/>
+			<mx:RemoveChild target="{hbox1}"/>
+			<mx:SetProperty name="height" value="200"/>
+			<mx:SetProperty name="width" value="450"/>
+		</mx:State>
+	</mx:states>
+	<mx:Script>
+		<![CDATA[
+			private var _child:FolderNavigatorCanvas;
+			
+			public function set packageFileExtension(packageFileExtension:String):void {
+				if (this.child) {
+					this.child.packageFileExtension = packageFileExtension;
+				}
+			}
+			
+			public function get packageFileExtension():String {
+				if (this.child) {
+					return this.child.packageFileExtension;
+				}
+				return 'UNKNOWN';
+			}
+
+			public function get child():FolderNavigatorCanvas {
+				return this._child;
+			}
+			
+			private function onInit():void {
+				this._child = new FolderNavigatorCanvas();
+				this._child.percentWidth = 100;
+				this._child.percentHeight = 100;
+				this._child.x = 0;
+				this._child.y = 0;
+				this.vbox1.addChildAt(this._child,0);
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox id="vbox1" width="100%" height="100%">
+		<mx:HBox width="100%" horizontalAlign="left" id="hbox1">
+			<mx:Button id="btn_saveAs" label="Save-As..."/>
+		</mx:HBox>
+		<mx:HBox width="100%" horizontalAlign="right">
+			<mx:Button id="btn_close" label="Dismiss"/>
+		</mx:HBox>
+	</mx:VBox>
+</mx:Panel>

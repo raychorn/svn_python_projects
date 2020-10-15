@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}VyperCMS v2.0.1{% endblock %}
+
+{% block extra-head %}
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block include-css %}'http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/style2.css'{% endblock %}
+
+{% block left-content %}
+  <ul id="nav">
+    <li><a href="/" target="_top" title="Home">Home</a></li>
+  </ul>
+  
+    <div id="news">
+    <BR/>
+      <h1>VyperCMS V2.0</h1>
+    </div>
+
+    <p>High-powered easy to use and easier to deploy Python-based Content Management System running on the Google App Engine and Django 1.1.1.</p>
+    <h2>VyperCMS V2.0 Features:</h2>
+	<UL>
+    	<LI>Database driven - all content can be stored and maintained online in the Google Datastore via the Django Admin Interface.</LI>
+    	<LI>Template driven - content can be stored and maintained in standard Django Templates.</LI>
+    	<LI>Flexible - Pages can be reconfigured through the use of easy to manage templates.</LI>
+    	<LI>Dynamic - content can be entered by users or generated automatically from external data sources via RSS or other data feeds.</LI>
+    	<LI>Scalable - Google App Engine provides elastic demand-driven scalability.</LI>
+    	<LI>Compatible - works with Django 1.1.1 - can be deployed using Google App Engine or natively using a LAMP-based server.</LI>
+    	<LI>Extensible - allows extensions to be added by anyone who can work with Django 1.1.1.
+        	<UL>
+            	<LI>Works with jQuery, Dojo, Yahoo! User Interface (YUI), Ext JS, Mootools, Prototype, Scriptaculous, Adobe Spry, Microsoft ASP.NET Ajax Controls, MochiKit, Aflax and others...</LI>
+            	<LI>Works with Flash and Flex - includes a powerful swfObject interface with Dynamic Embedding Support.</LI>
+            	<LI>Works with Silverlight.</LI>
+            	<LI>Support AJAX.</LI>
+            </UL>
+        </LI>
+    </UL>
+{% endblock %}
+
+{% block right-content %}
+    <h2>VyperCMS V2.0 Use Cases</h2>
+    <p>VyperCMS V2.0 works best in an environment where non-programmers are called upon to maintain their content.  Non-programmers are typically those who don't have any idea what HTML is all about nor do they know anything about Python or Django.</p>
+    <h2>VyperCMS V2.0 - Future Development Roadmap:</h2>
+	<UL>
+    	<LI>Blog Templates</LI>
+    	<LI>Wiki Templates</LI>
+    	<LI>Social Networking Support
+        	<UL>
+            	<LI>Allows people to build their content interactively while sharing their content with others.</LI>
+            	<LI>Build and deploy the next ... with ease and confidence.
+                	<UL>
+                        <LI>MySpace</LI>
+                        <LI>Facebook</LI>
+                        <LI>Linked-In</LI>
+                        <LI>Wordpress Community</LI>
+                    </UL>
+                </LI>
+            </UL>
+        </LI>
+    	<LI>Site Navigation Support
+        	<UL>
+            	<LI>Automatically builds a Flash-based Site Menu also known as Global Navigation.</LI>
+            	<LI>Site Navigation supports an arbitrary depth hierarchical menu.</LI>
+            </UL>
+        </LI>
+    </UL>
+{% endblock %}
+

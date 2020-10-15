@@ -1,0 +1,143 @@
+================
+ DrScript
+================
+
+.. _Help: help.html
+
+Back to Help_
+
+.. _Top:
+
+DrScript is vaguely modeled after Script-Fu in The Gimp
+(a *VERY* powerful open source image manipulation program,
+used on the images in DrPython).
+
+You can add any Python file you want to the DrPython menu
+under the heading DrScript. Simply select "Add Existing Script".
+
+To start from scratch, select "Add New Script" to add a new
+script to the menu, then open it for editing. (You will have
+to select the filename).
+
+To add a Shell Command, select "Add Shell Command". Note that:
+
+- *Current Directory* is replaced with the directory of the
+  currently open file.
+- *Current File* is replaced with the current open file.
+- *Current File* can only be used as an argument.
+- You can either run the command in the prompt (default),
+  or run it using wx.Shell().
+
+You can select "Dynamic DrScript" from the menu to type in a
+DrScript right away (without saving it to a file). Dynamic
+DrScripts are parsed in the same way as a saved DrScript.
+
+Whether you select "Add New Script" or "Add Existing Script",
+you must select a title for your script. This is what you will
+see on the DrScript submenu.
+
+You can also move scripts Around on the menu once you have
+added them. (Moving scripts around updates and saves all of
+your shortcuts.)
+
+When shortcuts have been added to the menu, they can then be
+seen in the customize shortcuts dialog, and you can bind keys
+to your custom scripts.
+
+Now you are ready to script! It is advisable to make the
+first line or so read.. code-block:: Python
+
+  #drscript
+
+just as a reminder.
+
+Now let's look at an example DrScript. Let's say you want to
+write a script which adds "with ducks" to the selected text.
+
+.. code-block:: Python
+
+  #drscript
+  DrDocument.SetSelectedText(DrDocument.GetSelectedText() + " with ducks!")
+
+First let's look at what this does. Let's say I select the
+text "The Philosopher shares his epipheny". I then select
+"Add With Ducks" from the DrScript submenu. Viola! The text
+now reads "The Philosopher shares his epipheny with ducks!"
+
+Back to the program. DrPython will run the code in the
+DrScript exactly as if it were written into the source of
+DrPython itself! The difference is that there are special
+keywords DrPython recognizes.
+
+You can choose from:
+
+================ ==============================
+DrFrame           which gives access to DrPython internals (DrFrame)
+DrScript          an object attached to DrFrame to hold persistant variables.
+DrFilename        the current filename (of the active tab if in mdi mode)
+DrDocument        gives access to the Document wxStyledTextControl
+DrPrompt          gives access to the Prompt wxStyledTextControl
+================ ==============================
+
+You could choose DrFrame for several reasons. If you want a
+dialog, all you have to do is.. code-block:: Python
+
+  wx.TextEntryDialog(DrFrame, "Replace What?:", "Replace All In Selection", "")
+
+In other words, it is perfect for functions that require a
+wxFrame as an argument.
+
+You can also access DrPython internals
+
+.. code-block:: Python
+
+  Frame.txtDocument.GetTextLength()
+
+Of course, you could also write
+
+.. code-block:: Python
+
+  DrDocument.GetTextLength()
+
+Now if you wanted to set a variable in one script, then use
+it in another, you would write in the first:
+
+.. code-block:: Python
+
+  #drscript
+  #SetWhoRoars
+
+  import wx
+
+  d = wx.TextEntryDialog(DrFrame, "Who Roars?", "Determine Who Roars", "")
+  if (d.ShowModal() == wx.ID_OK):
+    DrScript.WhoRoars = d.GetValue()
+
+and in the second:
+
+.. code-block:: Python
+
+  #drscript
+  #AddRoar
+
+if hasattr(DrScript, "WhoRoars"):
+      DrDocument.SetSelectedText(DrDocument.GetSelectedText() + " roared the " + DrScript.WhoRoars)
+  else:
+      DrDocument.SetSelectedText(DrDocument.GetSelectedText() + " roared the Mouse")
+
+  # Alternative:
+  new_text = DrDocument.GetSelectedText() + " roared the " + getattr(DrScript, "WhoRoars", "Mouse")
+  DrDocument.SetSelectedText(new_text)
+
+You can also set the text for either the Prompt or Document.
+For example:
+
+.. code-block:: Python
+
+  #drscript
+  #AddWithDucks
+
+  DrPrompt.SetText(DrDocument.GetSelectedText() + " with ducks!")
+
+This code will set the prompt text to the document selection
+plus the string "with ducks!".

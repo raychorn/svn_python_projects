@@ -1,0 +1,8 @@
+<path>examples/DrScript/ReverseAssignment.py</path><title>Reverse Assigment</title>
+<path>examples/DrScript/PrintEndOfLineCharactersInPrompt.py</path><title>Print End Of Line Characters In Prompt</title>
+>Run In Terminal
+	<path>examples/DrScript/RunInTerminal.py</path><title>Run In Terminal</title>
+	<path>examples/DrScript/SetTerminalArgs.py</path><title>Set Arguments For Run In Terminal</title>
+>In Selection
+	<path>examples/DrScript/ReplaceAllInSelection.py</path><title>Replace All In Selection</title>
+	<path>examples/DrScript/SwitcherooInSelection.py</path><title>Switcheroo In Selection</title>

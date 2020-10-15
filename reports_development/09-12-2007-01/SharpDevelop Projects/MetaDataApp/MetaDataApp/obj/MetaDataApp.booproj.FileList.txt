@@ -1,0 +1,11 @@
+bin\Debug\MetaDataApp.exe
+bin\Debug\MetaDataApp.pdb
+bin\Debug\Boo.Lang.Useful.dll
+bin\Debug\Boo.Lang.Parser.dll
+bin\Debug\Boo.Lang.Compiler.dll
+bin\Debug\Boo.Lang.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MetaDataApp.MainForm.resources
+obj\Debug\MetaDataApp.booproj.GenerateResource.Cache
+obj\Debug\MetaDataApp.exe
+obj\Debug\MetaDataApp.pdb

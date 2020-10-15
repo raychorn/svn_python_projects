@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel backgroundColor="#8a9faa" backgroundAlpha="1.0" borderStyle="inset"
+	xmlns:mx="http://www.adobe.com/2006/mxml" title="Confirm" 
+	width="100%" height="100%" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+	<mx:Script>
+		<![CDATA[
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%" borderStyle="none">
+		<mx:HBox width="100%">
+			<mx:Image source="@Embed('/vzw/controls/Alert/alert_confirm.gif')"/>
+			<mx:Text id="someText" text="Text" width="100%" height="{this.height-100}"/>
+		</mx:HBox>
+		<mx:HBox width="100%">
+			<mx:Button id="btn_okay" label="Button"/>
+			<mx:Spacer width="20%"/>
+			<mx:Button id="btn_cancel" label="Button"/>
+		</mx:HBox>
+	</mx:VBox>
+</mx:Panel>

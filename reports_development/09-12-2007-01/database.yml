@@ -1,0 +1,50 @@
+mssql:
+  adapter: mssql://
+  driver: SQL Server
+  server: UNDEFINED2\SQLEXPRESS
+  database: reports_development
+  uid: sa
+  pwd: \xf3\xe9\xf3\xeb\xef\xc0\xb7\xb6\xb6\xb0\xa4\xe2\xef\xef
+
+mssql_work:
+  adapter: mssql://
+  driver: SQL Server
+  server: MURRE\SQLEXPRESS
+  database: GentooIntelBenchmarks
+  uid: sa
+  pwd: \xf3\xe9\xf3\xeb\xef\xc0\xb7\xb6\xb6\xb0\xa4\xe2\xef\xef
+
+mssql_work2:
+  adapter: mssql://
+  dsn: GentooIntelBenchmarks
+
+mssql_work3:
+  adapter: mssql://
+  dsn: #BES database goes here once the backup has been restored...
+
+mysql:
+  adapter: mysql://
+  database: reports_development
+  username: root
+  password: foobarbaz
+  host: 192.168.105.67
+
+process:
+  use: mssql_work2
+  project-name: GentooIntelBenchmarks
+  verbose: 1
+  target: SQLAlchemy
+
+process2:
+  use: mssql_work2
+  project-name: GentooIntelBenchmarks
+  verbose: 1
+  target: Rails
+  target-path: Z:\Ruby In Steel\emptyProject\myProject
+
+process3:
+  use: mssql_work2
+  project-name: GentooIntelBenchmarks
+  verbose: 1
+  target: SQLAlchemy
+

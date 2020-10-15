@@ -1,0 +1,51 @@
+#bd div {
+	background-color: #171717;
+	border: 1px solid #272727;
+	padding: 15px 20px;
+	min-height: 380px;
+}
+
+#bd h1 {
+	font: bold 24px arial;
+	margin-bottom: 15px;
+	color: white;
+}
+
+#bd h2 {
+	font: bold 20px arial;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	color: white;
+}
+
+#bd p {
+	font: 100% arial;
+	margin-bottom: 15px;
+	color: white;
+}
+
+#bd pre {
+	color: white;
+}
+
+#bd ol {
+	margin-left: 20px;
+	margin-bottom: 15px;
+	padding-left: 20px;
+	color: white;
+}
+
+#bd li {
+	list-style: decimal;
+	margin-bottom: 5px;
+	color: white;
+}
+
+#bd blockquote {
+	margin-left: 20px;
+	color: white;
+}
+
+#bd a {
+	color: white;
+}

@@ -1,0 +1,19 @@
+Thank you for submitting your Registration for the {{ PRODUCT_NAME }}.
+
+Remember to pay your Subscription Fee at http://www.pypi.info/subscribe/
+
+By submitting your Registration you do hereby agree to be bound by the terms of the EULA as stated below.
+
+Do not share your password with anyone because your Account may not function if our servers determine your password has been shared with other parties.
+
+The {{ PRODUCT_NAME }} End User License Agreement states you may use a single instance of {{ PRODUCT_NAME }} at a time on any Windows platform you choose where {{ PRODUCT_NAME }} will run.
+
+You may return to {{ SITE_LINK }} to upgrade your {{ PRODUCT_NAME }} to take www.pypi.info&trade; to the next level whenever you wish.
+
+Please review the following EULA before installing and using {{ PRODUCT_NAME }}:
+
+{{ EULA }}
+
+<a href="http://www.vyperlogix.com" target="_blank">Vyper Logix Corp.</a>
+
+{{ CONFIDENTIALITYNOTICE }}

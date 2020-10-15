@@ -1,0 +1,100 @@
+<HTML>
+
+<!--------------------------------------------------------------->
+<!-- Copyright (c) 2006 by Conor O'Mahony.                     -->
+<!-- For enquiries, please email GubuSoft@GubuSoft.com.        -->
+<!-- Please keep all copyright notices below.                  -->
+<!-- Original author of TreeView script is Marcelino Martins.  -->
+<!--------------------------------------------------------------->
+<!-- This document includes the TreeView script.  The TreeView -->
+<!-- script can be found at http://www.TreeView.net.  The      -->
+<!-- script is Copyright (c) 2006 by Conor O'Mahony.           -->
+<!--------------------------------------------------------------->
+<!-- Instructions:                                             -->
+<!-- Follow the steps labeled SECTION1, SECTION2, and so on    -->
+<!-- in this file.                                             -->
+<!--------------------------------------------------------------->
+
+ <HEAD>
+
+  <TITLE>{{ title }}</TITLE>
+
+
+  <STYLE>
+
+   /*                                                          */
+   /* Styles for the tree.                                     */
+   /*                                                          */
+   SPAN.TreeviewSpanArea A {
+     font-size: 10pt; 
+     font-family: verdana,helvetica; 
+     text-decoration: none;
+     color: black;}
+   SPAN.TreeviewSpanArea A:hover {
+     color: '#820082';}
+
+   /*                                                          */
+   /* Styles for the remainder of the document.                */
+   /*                                                          */
+   BODY {
+     background-color: white;}
+   TD {
+     font-size: 10pt; 
+     font-family: verdana,helvetica;}
+
+  </STYLE>
+
+
+  <SCRIPT>
+  </SCRIPT>
+
+ </HEAD>
+
+ 
+ <BODY bgcolor="white" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0"  onResize="if (navigator.family == 'nn4') window.location.reload()">
+
+
+ <TABLE cellpadding="0" cellspacing="0" border="0" width="772">
+  <TR>
+   <TD width="178" valign="top">
+
+    <TABLE cellpadding="4" cellspacing="0" border="0" width="100%">
+     <TR>
+      <TD bgcolor="#ECECD9">
+
+        <TABLE cellspacing="0" cellpadding="2" border="0" width="100%">
+         <TR>
+          <TD bgcolor="white">
+
+
+ <SPAN class=TreeviewSpanArea>
+  {{ nodes }}
+ </SPAN>
+          </TD>
+         </TR>
+        </TABLE>
+
+       </TD>
+      </TR>
+     </TABLE>
+
+    </TD>
+    <TD bgcolor="white" valign="top">
+
+     <TABLE cellpadding="10" cellspacing="0" border="0" width="100%">
+      <TR>
+       <TD>
+
+  {{ content }}
+
+       </TD>
+      </TR>
+     </TABLE>
+
+    </TD>
+   </TR>
+  </TABLE>
+
+ </BODY>
+
+</HTML>

@@ -1,0 +1,31 @@
+$def with (page)
+
+<html>
+<head>
+    <title>My Screening</title>
+    <style>
+        #menu {
+            width: 200px;
+            float: left;
+        }
+    </style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+	function handle_submit_button() {
+		var val = $$("#numValue").val();
+		var v = parseInt(val) || 0;
+		var isXML = $$("#numXML").is(':checked');
+		if ( (val.length > 0) && (v > 0) && (v <= 1000) ) {
+			window.location.href = '/'+((isXML) ? 'XML/' : '')+v;
+		} else {
+			alert('WARNING: Please enter a value number, greater than 0 but less than say 1000 or so.');
+		}
+	}
+</script>
+</head>
+<body>
+
+$:page
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}{{ site_name }} {% trans "Home" %}{% endblock %}
+
+{% block extra-head %}
+<META content="{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Keywords>
+<META content="{{ site_name }},{{ site_descr }},gae,cms,gae cms,GD-cms" name=Description> 
+{% if slide %}
+<link href="/media/css/slider.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/media/js/funcs.js"></script>
+{% endif %}
+{% endblock %} 
+
+{% block content %}
+<div id="main_content_top" class="yui-g">
+	<div id="main_content_slider" class="yui-u first">
+		{% if slide %}
+		<link href="/media/css/slider.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/media/js/funcs.js"></script>
+		<script type="text/javascript">
+			var MaxScreen = {{ slide|length }} ;
+			var CurScreen = 1 ;
+		</script>
+		<div class="flashNews" style="text-align:left;font:normal 12px/1.6em simsun, Verdana, Lucida, Arial, Helvetica, sans-serif;color:#353535;">
+		{% for each in slide %}<div style="display: {% ifequal forloop.counter slide|length %}block{% else %}none{% endifequal %};" id="Switch_{{ forloop.counter }}"><a href="{{ each.link }}" blockid="1121" style="text-decoration:none;color:#353535;" target="_blank"><img src="{{ each.imgsrc }}" width="334" height="206" onmouseover="pauseSwitch();" onmouseout="goonSwitch();" style="border:0;"></a></div>
+        {% endfor %}
+        <div id="SwitchTitle" onmouseover="pauseSwitch();" onmouseout="goonSwitch();"></div>
+        <ul id="SwitchNav" style="list-style: none;margin: 0pt; padding: 0pt; list-style: none; list-style-image: none; list-style-position: inside;"></ul>
+        <div class="bg" onmouseover="pauseSwitch();" onmouseout="goonSwitch();"></div>
+        </div>
+        <script type="text/javascript">
+       	var Switcher = new Array();
+       	{% for each in slide %}Switcher[{{ forloop.counter }}] = Array() ;
+       	Switcher[{{ forloop.counter }}]['title'] = "{{ each.title }}" ;
+       	Switcher[{{ forloop.counter }}]['stitle'] = "{{ each.stitle }}" ;
+       	Switcher[{{ forloop.counter }}]['link'] = "{{ each.link }}";
+       	{% endfor %}
+       	var refreshSwitchTimer = null;
+       	switchPic(CurScreen);
+       	refreshSwitchTimer = setTimeout('reSwitchPic();', 3000);
+       	</script>
+       	<OBJECT height=1 width=1><param name="src" value="/media/images/viewer.swf" /></OBJECT>
+		{% endif %}
+	</div>
+	<div id="main_content_new" class="yui-u">
+		<H1>{% trans "New Aticles" %}</H1>
+		<UL>
+			{% for each in new_arts|slice:":9" %}<LI class="newartli"><a title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}" target="_blank">{{ each.title }}</a></LI>
+			{% endfor %}
+		</UL>
+	</div>
+</div>
+{% if center_ad_top %}<div id="main_content_top_ad" class="yui-g">{{ center_ad_top|safe }}</div>{% endif %}
+<div class="yui-g">
+	{% for each_cate,each_cate_arts in cate_art_list %}<div {% if forloop.counter|divisibleby:2 %}id="main_content_cate_right" class="yui-u"{% else %}id="main_content_cate_left" class="yui-u first"{% endif %}>
+	  <H1><a title="{{ each_cate.name|safe }}" href="{% url cms.views.show_categories keyid=each_cate.key.id page=1 %}">{{ each_cate.name|safe }}</a></H1>
+	  <UL>
+		  {% for each in each_cate_arts %}<LI><a title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}" target="_blank">{{ each.title }}</a></LI>
+		  {% endfor %}
+	  </UL>
+	</div>
+	{% if forloop.counter|divisibleby:2 %}<DIV style="CLEAR: both"></DIV>{% endif %}
+			
+	{% if center_ad_mid %}{% ifequal forloop.counter mid_num %}<div id="main_content_mid_ad" class="yui-g" >{{ center_ad_mid|safe }}</div>{% endifequal %}{% endif %}
+					
+	{% endfor %}
+</div>
+{% if center_ad_bot %}<div id="main_content_bot_ad" class="yui-g">{{ center_ad_bot|safe }}</div>{% endif %}
+{% endblock %}

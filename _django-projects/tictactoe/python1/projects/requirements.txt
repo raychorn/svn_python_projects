@@ -1,0 +1,12 @@
+Django==1.11.14
+django-standalone==0.4
+django-wsgiserver==0.6.10
+enum34==1.1.6
+python-dateutil==2.7.3
+pytz==2018.5
+requests==2.19.1
+six==1.11.0
+sqlparse==0.2.4
+typing==3.6.4
+urllib3==1.23
+xlrd==1.1.0

@@ -1,0 +1,101 @@
+{% extends '__base.html' %}
+{% block title %}VyperCMS v2.0.1{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+  // this is where the extra JavaScript goes...
+  // pass the following in the query string: CSS, header, body, footer - parse from JavaScript window.location 
+  //$.get("/global-nav/css-loggedout/globalnav-flex.css",{},function (data) { alert(data); });
+</script>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block include-css %}'http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/style.css'{% endblock %}
+
+{% block left-content %}
+  <form action="?" method="get" id="search" name="search" style="display:none;">
+    <input name="q" class="text" /><input type="submit" value="search" class="submit" />
+  </form>
+
+  <ul id="nav">
+    <li><a href="django2gae.html" target="_top" title="Django to Google App Engine Conversions">Django</a></li>
+    <li><a href="flashgames.html" target="_top" title="Flash Games">Flash Games</a></li>
+  </ul>
+
+    <div id="policies" style="display:none;">
+      <h2><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/images/title_our_policies.gif" width="95"
+      height="22" alt="our policies" /></h2>
+
+      <ul>
+	<li>This is demo text. It will be replaced.</li>
+      </ul>
+    </div>
+          
+    <div id="callbox" style="display:none;"><a href="/"><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/images/call_box_left.gif" width="123" height="110" alt="call our helpline" /></a></div>
+
+    <div class="clear"></div>
+
+    <div id="news">
+      <h2><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/images/title_latest_news.gif" width="93" height="22" alt="latest news" /></h2>
+
+      <h3>May 3, 2010</h3>
+
+      <p>New look and feel for this site.  Intelligent Flash integration that fails to non-Flash gracefully.  Intelligent integration of CSS and JavaScript files using Google-inspired techniques that loads CSS and JS files in parallel.  Django 1.1.1 running in the Google Cloud.</p>
+
+      <p class="readmore" style="display:none;"><a href="/" class="green">Read More</a></p>
+    </div>
+{% endblock %}
+
+{% block right-content %}
+  <div id="explore">
+    <div id="explorei" style="height: 300px;">
+      <h3>Explore our Products and your Business Goals !</h3>
+
+      <ul>
+	<li><a href="vypercms2.html" target="_top" title="VyperCMS 2.0 - Content Management done right.">VyperCMS V2.0</a></li>
+      </ul>
+
+      <p class="learnmore" style="display:none;"></p>
+
+      <div id="special" style="display:none;">
+	  <h3><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/images/offer_box_top.gif" width="187" height="36" alt="special business offer" /></h3>
+	<div class="bottom">{% block specialBottom %}{% endblock %}</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="subright">
+    <div id="strategies">
+      <h2><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/images/title_our_strategies.gif" width="112" height="22" alt="our strategies" /></h2>
+
+      <p>Our unique strategic vision is that the Python Language is at the center of our business however we also believe in leveraging whatever technologies with which we may be able to realize a benefit for our customers and business partners.</p>
+      
+      <p>We have had very good results in producing scalable systems by leveraging the power and flexibility of the Python Langauge and not only because it offers the unique combination of being easy to code while being easy to extend through the use of existing tool chains such as MinGw and others.</p>
+
+	<ul>
+	  <li>Python/Django 1.1.1 running in LAMP via Ubuntu Linux as well as the Google Cloud.</li>
+	  <li>Lua 5.1</li>
+	  <li>MySQL 5.1</li>
+	</ul>
+
+	<p class="readmore" style="display:none;"><a href="/" class="blue">Read More</a></p>
+    </div>
+
+    <div id="solutions">
+      <h2><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/images/title_our_solutions.gif" width="104" height="22" alt="our solutions" /></h2>
+
+      <p>Our Solutions are powered by the Python Language where possible.  Python is a powerful scalable language that offers very good performance across the board without the need to code extensions in a lower-level language and let's face it Python is clearly here to stay.</p>
+
+      <p class="photo"><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/vlc-20/images/photo_people.jpg" width="166" height="103" alt="" /></p>
+
+	<ul>
+	  <li><a href="vypercms2.html" target="_top" title="VyperCMS 2.0 - Content Management done right.">VyperCMS V2.0</a></li>
+	</ul>
+      
+    </div>
+
+    <div class="clear"></div>
+  </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+scramble:	1.315
+scramble_listcomp:	0.965
+scramble_gencomp:	1.007
+scramble_map:	0.961
+scramble_imap:	1.015
+scramble_dict:	0.611
+scramble_dict_map:	0.279
+scramble_dict_imap:	0.292
+scramble_translate:	0.006

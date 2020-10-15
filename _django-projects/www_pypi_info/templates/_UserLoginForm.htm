@@ -1,0 +1,56 @@
+<div class=Section1>
+
+<h3>User Login</h3>
+
+<form name="loginForm" action="{{ HTTP_HOST }}/login/form/submit/" enctype="application/x-www-form-urlencoded" method="post">
+	<p class=MsoNormal style='line-height:normal'><span style='font-size:10.0pt;
+	font-family:"Times New Roman","serif"'>Access to this site as a Registered User
+	will be granted access for Active Monthly Subscribers <u>only</u>.</span></p>
+	
+	<p class=MsoNormal style='line-height:normal'><span style='font-size:10.0pt;
+	font-family:"Times New Roman","serif"'>This form will be submitted using SSL however if your browser is not able to validate our SSL Certificate you may <a href="https://www.vyperlogix.com/data/certs/cacert.der" target="_blank">download our CA Cert</a> or install this <a href="https://www.vyperlogix.com/data/firefox/extenions/remember_certificate_exception-0.8.0-fx.xpi" target="_blank">Add-On for FireFox to by-pass any Exceptions</a>.</span></p>
+	
+    <table width="100%">
+    	<tr>
+        	<td width="*">
+                <p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+                font-family:"Times New Roman","serif"'>Username&nbsp;
+                <INPUT TYPE="text" SIZE="18" NAME="username"></span></p>
+                
+                <p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+                font-family:"Times New Roman","serif"'>Password&nbsp;
+                <INPUT TYPE="password" SIZE="18" NAME="passwd"></span></p>
+                
+                {{ CAPTCHA }}
+            </td>
+        </tr>
+        <tr>
+        	<td colspan="2">
+                <p class=MsoError style='line-height:normal'><span style='font-size:12.0pt;
+                font-family:"Times New Roman","serif"'>{{ ERROR }}</span></p>
+            
+                <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+                normal'><span style='font-size:12.0pt;font-family:"Times New Roman","serif"'><INPUT TYPE="submit" VALUE="Login" METHOD="post" NAME="Submit"></span></p>
+                
+                <ul type=disc>
+                 <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+                     font-family:"Times New Roman","serif"'><a
+                     href="/forgot/password/">Forgot your password? </a></span></li>
+                 <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+                     font-family:"Times New Roman","serif"'><a
+                     href="/forgot/username/">Forgot your username? </a></span></li>
+                 <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+                     font-family:"Times New Roman","serif"'><a
+                     href="/change/email/">Change your email address? </a></span></li>
+                 <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+                     font-family:"Times New Roman","serif"'><a
+                     href="/register/">Get Registered ?</a></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    
+</form>
+
+{{ PAYMENT_OPTIONS }}
+</div>

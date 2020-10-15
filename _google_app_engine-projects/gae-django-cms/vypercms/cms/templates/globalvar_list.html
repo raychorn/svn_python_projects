@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "globalvar listing" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "globalvar listing" %}</h1>
+<a href="{% url cms.views.add_globalvar %}">{% trans "Create globalvar" %}</a>
+
+<ul>
+  {% for each in object_list %}
+    <li>
+      Name:<span style="color:red;">{{ each.name }}</span> | 
+     <a href="{% url cms.views.edit_globalvar key=each.key %}">{% trans "Edit" %}</a> | 
+    <a href="{% url cms.views.delete_globalvar key=each.key %}">{% trans "Delete" %}</a><br/>
+      Value:<input type="text" value="{{ each.value }}" size="20" disabled="false" /> ( {{ each.description }} )
+    </li>
+  {% endfor %}
+</ul>
+<div style="CLEAR: both;"></div>
+<div>
+  {% if has_previous %}
+    <a href="{% url cms.views.list_globalvar %}?page={{ previous }}">&lt;-{% trans "Previous" %}</a>
+  {% endif %}
+  {% if has_next %}
+    <a href="{% url cms.views.list_globalvar %}?page={{ next }}">{% trans "Next" %}-&gt;</a>
+  {% endif %}
+</div>
+{% endblock %}

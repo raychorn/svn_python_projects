@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Categories listing" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Categories listing" %}</h1>
+<a href="{% url cms.views.add_categories %}">{% trans "Create Categories" %}</a>
+
+<ul>
+  {% for each in object_list %}
+    <li>
+      {% trans "Sort" %}:{{ each.sort }} {% trans "Categories" %}:{{ each.name }}
+      <a href="{% url cms.views.edit_categories key=each.key %}">{% trans "Edit" %}</a>
+      <a href="{% url cms.views.delete_categories key=each.key cate_key_id=each.key.id %}">{% trans "Delete" %}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<div>
+  {% if has_previous %}
+    <a href="{% url cms.views.list_categories %}?page={{ previous }}">&lt;-{% trans "Previous" %}</a>
+  {% endif %}
+  {% if has_next %}
+    <a href="{% url cms.views.list_categories %}?page={{ next }}">{% trans "Next" %}-&gt;</a>
+  {% endif %}
+</div>
+{% endblock %}

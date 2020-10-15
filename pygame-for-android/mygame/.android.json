@@ -1,0 +1,1 @@
+{"layout": "internal", "orientation": "portrait", "package": "com.vyperlogix.android.mygame", "include_pil": true, "expansion": false, "name": "mygame", "source": false, "icon_name": "mygame", "version": "1", "permissions": ["INTERNET", "VIBRATE"], "include_sqlite": false, "numeric_version": "1"}

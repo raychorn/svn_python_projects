@@ -1,0 +1,186 @@
+--address=127.0.0.1 --port=9000 "C:\@3\PDFXporter\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+--address=127.0.0.1 --port=9000 "C:\@3\PDFXporter\_google_app_engine-projects\gae-django-cms\vypercms2-globalNav_11"
+
+--address=127.0.0.1 --port=9000 "F:\@Vyper Logix Corp\@Projects\PDFXporter\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+--address=127.0.0.1 --port=9000 "F:\@Vyper Logix Corp\@Projects\PDFXporter\_google_app_engine-projects\gae-django-cms\vypercms2-globalNav_11"
+
+--smtp_host=smtp.gmail.com --smtp_port=587 --smtp_user=raychorn@gmail.com --smtp_password=sisko@7660$boo --clear_datastore
+
+============================================================================================
+
+--address=127.0.0.1 --port=9000 "F:\@Vyper Logix Corp\@Projects\PDFXporter\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+--address=127.0.0.1 --port=9000 "C:\@3\PDFXporter\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+--address=127.0.0.1 --port=9000 -c "F:\@Vyper Logix Corp\@Projects\PDFXporter\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+update "F:\@Vyper Logix Corp\@Projects\PDFXporter\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+update "C:\@3\PDFXporter\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+--address=127.0.0.1 --port=9000 "F:\@Vyper Logix Corp\@Projects\PDFXporter\_google_app_engine-projects\gae-django-cms\vypercms2-globalNav_11"
+
+update "F:\@Vyper Logix Corp\@Projects\PDFXporter\_google_app_engine-projects\gae-django-cms\vypercms2-globalNav_11"
+
+update "C:\@3\PDFXporter\_google_app_engine-projects\gae-django-cms\vypercms2-globalNav_11"
+
+============================================================================================
+
+--debug
+
+--clear_datastore
+
+Runs a development application server for an application.
+
+dev_appserver.py [options] <application root>
+
+Application root must be the path to the application to run in this server.
+Must contain a valid app.yaml or app.yml file.
+
+Options:
+  --help, -h                 View this helpful message.
+  --debug, -d                Use debug logging. (Default false)
+  --clear_datastore, -c      Clear the Datastore on startup. (Default false)
+  --address=ADDRESS, -a ADDRESS
+                             Address to which this server should bind. (Default
+                             localhost).
+  --port=PORT, -p PORT       Port for the server to run on. (Default 8080)
+  --blobstore_path=PATH      Path to use for storing Blobstore file stub data.
+  --datastore_path=PATH      Path to use for storing Datastore file stub data.
+                             (Default c:\users\rhorn\appdata\local\temp\dev_appserver.datastore)
+  --use_sqlite               Use the new, SQLite based datastore stub.
+                             (Default false)
+  --history_path=PATH        Path to use for storing Datastore history.
+                             (Default c:\users\rhorn\appdata\local\temp\dev_appserver.datastore.history)
+  --require_indexes          Disallows queries that require composite indexes
+                             not defined in index.yaml.
+  --smtp_host=HOSTNAME       SMTP host to send test mail to.  Leaving this
+                             unset will disable SMTP mail sending.
+                             (Default '')
+  --smtp_port=PORT           SMTP port to send test mail to.
+                             (Default 25)
+  --smtp_user=USER           SMTP user to connect as.  Stub will only attempt
+                             to login if this field is non-empty.
+                             (Default '').
+  --smtp_password=PASSWORD   Password for SMTP server.
+                             (Default '')
+  --enable_sendmail          Enable sendmail when SMTP not configured.
+                             (Default false)
+  --show_mail_body           Log the body of emails in mail stub.
+                             (Default false)
+  --auth_domain              Authorization domain that this app runs in.
+                             (Default gmail.com)
+  --debug_imports            Enables debug logging for module imports, showing
+                             search paths used for finding modules and any
+                             errors encountered during the import process.
+  --allow_skipped_files      Allow access to files matched by app.yaml's
+                             skipped_files (default False)
+  --disable_static_caching   Never allow the browser to cache static files.
+                             (Default enable if expiration set in app.yaml)
+  --disable_task_running     When supplied, tasks will not be automatically
+                             run after submission and must be run manually
+                             in the local admin console.
+  --task_retry_seconds       How long to wait in seconds before retrying a
+                             task after it fails during execution.
+                             (Default '30')
+
+============================================================================================
+
+Usage: appcfg.py [options] <action>
+
+Action must be one of:
+  create_bulkloader_config: Create a bulkloader.yaml from a running application.
+  cron_info: Display information about cron jobs.
+  download_app: Download a previously-uploaded app.
+  download_data: Download entities from datastore.
+  help: Print help for a specific action.
+  request_logs: Write request logs in Apache common log format.
+  rollback: Rollback an in-progress update.
+  set_default_version: Set the default (serving) version.
+  update: Create or update an app version.
+  update_cron: Update application cron definitions.
+  update_dos: Update application dos definitions.
+  update_indexes: Update application indexes.
+  update_queues: Update application task queue definitions.
+  upload_data: Upload data records to datastore.
+  vacuum_indexes: Delete unused indexes from application.
+Use 'help <action>' for a detailed description.
+
+Options:
+  -h, --help            Show the help message and exit.
+  -q, --quiet           Print errors only.
+  -v, --verbose         Print info level logs.
+  --noisy               Print all logs.
+  -s SERVER, --server=SERVER
+                        The server to connect to.
+  --insecure            Use HTTP when communicating with the server.
+  -e EMAIL, --email=EMAIL
+                        The username to use. Will prompt if omitted.
+  -H HOST, --host=HOST  Overrides the Host header sent with all RPCs.
+  --no_cookies          Do not save authentication cookies to local disk.
+  --passin              Read the login password from stdin.
+  -A APP_ID, --application=APP_ID
+                        Override application from app.yaml file.
+  -V VERSION, --version=VERSION
+                        Override (major) version from app.yaml file.
+  -f, --force           Force deletion without being prompted.
+  -S SIZE, --max_size=SIZE
+                        Maximum size of a file to upload.
+  --no_precompilation   Disable automatic Python precompilation.
+  --exporter_opts=EXPORTER_OPTS
+                        A string to pass to the Exporter.initialize method.
+  --result_db_filename=RESULT_DB_FILENAME
+                        Database to write entities to for download.
+  --has_header          Whether the first line of the input file should be
+                        skipped
+  --loader_opts=LOADER_OPTS
+                        A string to pass to the Loader.initialize method.
+  --config_file=CONFIG_FILE
+                        Name of the configuration file.
+  --num_runs=NUM_RUNS   Number of runs of each cron job to displayDefault is 5
+  --filename=FILENAME   The name of the file containing the input data.
+                        (Required)
+  --kind=KIND           The kind of the entities to store.
+  --url=URL             The location of the remote_api endpoint.
+  --num_threads=NUM_THREADS
+                        Number of threads to upload records with.
+  --batch_size=BATCH_SIZE
+                        Number of records to post in each request.
+  --bandwidth_limit=BANDWIDTH_LIMIT
+                        The maximum bytes/second bandwidth for transfers.
+  --rps_limit=RPS_LIMIT
+                        The maximum records/second for transfers.
+  --http_limit=HTTP_LIMIT
+                        The maximum requests/second for transfers.
+  --db_filename=DB_FILENAME
+                        Name of the progress database file.
+  --auth_domain=AUTH_DOMAIN
+                        The name of the authorization domain to use.
+  --log_file=LOG_FILE   File to write bulkloader logs.  If not supplied then a
+                        new log file will be created, named: bulkloader-log-
+                        TIMESTAMP.
+  --dry_run             Do not execute any remote_api calls
+  --namespace=NAMESPACE
+                        Namespace to use when accessing datastore.
+  -n NUM_DAYS, --num_days=NUM_DAYS
+                        Number of days worth of log data to get. The cut-off
+                        point is midnight US/Pacific. Use 0 to get all
+                        available logs. Default is 1, unless --append is also
+                        given; then the default is 0.
+  -a, --append          Append to existing file.
+  --severity=SEVERITY   Severity of app-level log messages to get. The range
+                        is 0 (DEBUG) through 4 (CRITICAL). If omitted, only
+                        request logs are returned.
+  --vhost=VHOST         The virtual host of log messages to get. If omitted,
+                        all log messages are returned.
+  --include_vhost       Include virtual host in log messages.
+  --include_all         Include everything in log messages.
+  --end_date=END_DATE   End date (as YYYY-MM-DD) of period for log data.
+                        Defaults to today.
+=======================================================================================
+
+--proxy=127.0.0.1:8888
+
+--proxy_https=127.0.0.1:8888

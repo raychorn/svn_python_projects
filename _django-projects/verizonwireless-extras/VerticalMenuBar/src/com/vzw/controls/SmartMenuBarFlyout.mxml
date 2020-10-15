@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="{this._menuItemWidth}" height="100%"
+	click="onClick(event)" styleName="SmartMenuBarFlyout"
+	creationComplete="onCreationComplete()"
+	>
+	<mx:Script>
+		<![CDATA[
+			import com.vzw.menu.builder.MenuController;
+			import mx.validators.StringValidator;
+			import mx.utils.UIDUtil;
+			import vyperlogix.utils.URLUtils;
+			import vyperlogix.utils.ObjectUtils;
+			import mx.utils.ObjectProxy;
+			import mx.collections.ArrayCollection;
+			import mx.managers.PopUpManager;
+			import vyperlogix.utils.StringUtils;
+			import vyperlogix.controls.Alert.AlertPopUp;
+			import mx.events.FlexEvent;
+			import mx.controls.Image;
+			import mx.controls.Spacer;
+			import mx.containers.HBox;
+			import mx.controls.HRule;
+			import mx.controls.TextArea;
+			import mx.controls.Label;
+			import mx.core.IFlexDisplayObject;
+			import mx.core.ScrollPolicy;
+
+			private var _dataProvider:Object = {};
+
+			private var _labelField:String = 'label';
+			private var _alignField:String = 'align';
+			private var _urlField:String = 'url';
+			private var _handCursorField:String = 'handCursor';
+
+			private var _menuItemWidthField:String = 'menuItemWidth';
+
+            [Bindable]
+			private var _menuItemWidth:Number = 200;
+
+			private var _urlPrefix:String = '';
+
+			private var _mbParent:DisplayObject;
+
+			private var _rightAligned:Boolean = false;
+
+			private var _isDebugger:Boolean;
+			private var _debugger:TextArea;
+			
+			private var _debug_level:Object = {};
+
+			private var _controller:SmartMenuBar;
+
+			private static var _this:SmartMenuBarFlyout;
+			
+            [Bindable]
+			private var verticalGap:Number;
+
+			private var _swingBack:Boolean = false;
+
+			private static const SubmenuOrientations:Object = {'Top':'Top','Nominal':'Nominal'};
+			
+			private var _submenuOrientation:String = SubmenuOrientations.Nominal;
+
+			private var _okay_to_render:Boolean = false;
+
+			private var aSmartMenuBarFlyout:SmartMenuBarFlyout = null;
+
+			private var _children:ArrayCollection = new ArrayCollection();
+
+			private var _myParent:DisplayObject;
+
+			private var _handCursor:Boolean = false;
+
+			private var _url:String = '';
+			
+			private var _timer:Timer;
+			
+			private var _waited:Number = 0;
+			
+			private var _mouseOverMap:Object = {};
+			
+			private var _isAdminMode:Boolean;
+
+			private var _visible_popUps:ArrayCollection = new ArrayCollection();
+
+			public function set dataProvider(dataProvider:*):void {
+				if (dataProvider is Object) {
+					this._dataProvider = dataProvider;
+				} else if (dataProvider) {
+					AlertPopUp.errorNoOkay(this.className + '.1 :: ' + '1. Cannot pass an object other than Object into the dataProvider setter for SmartMenuBarFlyout object.','ERROR');
+				}
+			}
+			
+			public function get dataProvider():Object {
+				return this._dataProvider;
+			}
+			
+			public function set visible_popUps(visible_popUps:ArrayCollection):void {
+				if (this._visible_popUps != visible_popUps) {
+					this._visible_popUps = visible_popUps;
+				}
+			}
+			
+			public function get visible_popUps():ArrayCollection {
+				return this._visible_popUps;
+			}
+
+			public function get has_visible_popUps():Boolean {
+				return this._visible_popUps.length > 0;
+			}
+
+			public function set labelField(labelField:String):void {
+				if (this._labelField != labelField) {
+					this._labelField = labelField;
+				}
+			}
+			
+			public function get labelField():String {
+				return this._labelField
+			}
+			
+			public function set urlField(urlField:String):void {
+				if (this._urlField != urlField) {
+					this._urlField = urlField;
+				}
+			}
+			
+			public function get urlField():String {
+				return this._urlField;
+			}
+			
+			public function set alignField(alignField:String):void {
+				if (this._alignField != alignField) {
+					this._alignField = alignField;
+				}
+			}
+			
+			public function get alignField():String {
+				return this._alignField;
+			}
+			
+			public function set handCursorField(handCursorField:String):void {
+				if (this._handCursorField != handCursorField) {
+					this._handCursorField = handCursorField;
+				}
+			}
+			
+			public function get handCursorField():String {
+				return this._handCursorField;
+			}
+			
+			public function set mbParent(mbParent:DisplayObject):void {
+				this._mbParent = mbParent;
+			}
+			
+			public function get mbParent():DisplayObject {
+				return this._mbParent;
+			}
+			
+			public function set debugger(debugger:TextArea):void {
+				this._debugger = debugger;
+			}
+			
+			public function get debugger():TextArea {
+				return this._debugger;
+			}
+			
+			public function set isDebugger(isDebugger:Boolean):void {
+				this._isDebugger = isDebugger;
+			}
+			
+			public function get isDebugger():Boolean {
+				return this._isDebugger;
+			}
+			
+			public function set debugLevel(debug_level:Object):void {
+				this._debug_level = debug_level;
+				if (debug_level[this.className]) {
+					this.isDebugger = debug_level[this.className] == true;
+				}
+			}
+			
+			public function get debugLevel():Object {
+				return this._debug_level;
+			}
+			
+			public function set controller(controller:SmartMenuBar):void {
+				this._controller = controller;
+			}
+			
+			public function get controller():SmartMenuBar {
+				return this._controller;
+			}
+
+			public function set rightAligned(rightAligned:Boolean):void {
+				this._rightAligned = rightAligned;
+			}
+			
+			public function get rightAligned():Boolean {
+				return this._rightAligned;
+			}
+			
+			public function set myParent(myParent:DisplayObject):void {
+				this._myParent = myParent;
+			}
+			
+			public function get myParent():DisplayObject {
+				return this._myParent;
+			}
+
+			public function set urlPrefix(urlPrefix:String):void {
+				if (this._urlPrefix != urlPrefix) {
+					this._urlPrefix = urlPrefix;
+				}
+			}
+			
+			public function get urlPrefix():String {
+				return this._urlPrefix;
+			}
+			
+			public function set handCursor(handCursor:Boolean):void {
+				this._handCursor = handCursor;
+			}
+			
+			public function get handCursor():Boolean {
+				return this._handCursor;
+			}
+			
+			public function set swingBack(swingBack:Boolean):void {
+				this._swingBack = swingBack;
+				this.okay_to_render = true;
+			}
+			
+			public function get swingBack():Boolean {
+				return this._swingBack;
+			}
+			
+			public function set okay_to_render(okay_to_render:Boolean):void {
+				this._okay_to_render = okay_to_render;
+				if (this.isDebugger) {
+					this._debugger.text = this.className + ' :: (!) okay_to_render=(' + this._okay_to_render + ')' + '\n' + this._debugger.text; 
+				}
+			}
+			
+			public function get okay_to_render():Boolean {
+				return this._okay_to_render;
+			}
+			
+			public function set submenuOrientation(submenuOrientation:String):void {
+				this._submenuOrientation = submenuOrientation;
+			}
+			
+			public function get submenuOrientation():String {
+				return this._submenuOrientation;
+			}
+			
+			public function get isSubmenuOrientationTop():Boolean {
+				return this._submenuOrientation == SubmenuOrientations.Top;
+			}
+			
+			public function set isAdminMode(isAdminMode:Boolean):void {
+				if (this._isAdminMode != isAdminMode) {
+					this._isAdminMode = MenuController.AdminMode;
+					if (this.isDebugger) {
+						this._debugger.text = this.className + ' this._isAdminMode=' + this._isAdminMode + '\n' + this._debugger.text 
+					}
+				}
+				this.adminChildren(this._isAdminMode);
+			}
+			
+			public function get isAdminMode():Boolean {
+				return this._isAdminMode;
+			}
+			
+			public function adminChildren(toggle:Boolean):void {
+				var aChild:SmartMenuBarFlyoutItem;
+				var children:Array = this.container.getChildren();
+				var i:int = children.length-1;
+				if (i > -1) {
+					do {
+						aChild = children[i] as SmartMenuBarFlyoutItem;
+						aChild.isAdminMode = toggle;
+						i--;
+					} while (i > -1);
+				}
+			}
+
+			public function dismiss_visible_popup(aChild:*):void {
+				var index:int = this._visible_popUps.getItemIndex(aChild);
+				if (index > -1) {
+					this._visible_popUps.removeItemAt(index);
+				}
+			}
+			
+			public function dissmissChildren():void {
+				var aChild:SmartMenuBarFlyout;
+				var i:int = this._children.length-1;
+				if (i > -1) {
+					do {
+						aChild = this._children.getItemAt(i) as SmartMenuBarFlyout;
+						aChild.dissmissChildren();
+						PopUpManager.removePopUp(aChild);
+						this._children.removeItemAt(i);
+						i--;
+					} while (this._children.length > 0);
+					this.aSmartMenuBarFlyout = null;
+				}
+			}
+
+			public function dissmissFlyout():void {
+				this.dismiss_visible_popup(this);
+				PopUpManager.removePopUp(this);
+				this.dissmissChildren();
+				this.aSmartMenuBarFlyout = null;
+				var parent:SmartMenuBarItem = this.myParent as SmartMenuBarItem;
+				if (parent) {
+					parent.resetMouseOverStyles();
+				}
+			}
+
+			private function onClick(event:MouseEvent):void {
+				if (this.isAdminMode == false) {
+					var protocol:String = URLUtils.protocol(this._url);
+					var domain:String = URLUtils.domain(this._url);
+					var url:String = ( (protocol.length == 0) && (domain.length == 0) ) ? this._urlPrefix + "/" + this._url : this._url;
+					flash.net.navigateToURL(new URLRequest(url),(URLUtils.isDomainLocal(this._urlPrefix)) ? '_blank' : '_top');
+				}
+			}
+			
+			private function onCreationComplete():void {
+				this.buttonMode = this.useHandCursor = this._handCursor;
+			}
+
+			private function onMouseOverMenuCell(event:MouseEvent):void {
+				event.stopImmediatePropagation();
+				event.currentTarget.styleName = 'SmartMenuBarFlyoutRollOver';
+				this.onMouseOver(event);
+			}
+			
+			private function onMouseOutMenuCell(event:MouseEvent):void {
+				event.currentTarget.styleName = this.styleName;
+			}
+			
+			private function onFlyoutItemCreationComplete(event:FlexEvent):void {
+				var container:* = event.currentTarget;
+				if (false) {
+					var gr:Graphics = container.graphics;
+					gr.moveTo(0,0);
+					gr.lineStyle(1.0,0xffffff,1.0);
+					gr.lineTo(container.width,0);
+					gr.moveTo(container.width,0);
+					gr.lineTo(container.width,container.height);
+					gr.moveTo(container.width,container.height);
+					gr.lineTo(0,container.height);
+					gr.moveTo(0,container.height);
+					gr.lineTo(0,0);
+				}
+				this.container.height += container.item_label.height + 3;
+				if (this.isAdminMode) {
+					MenuController.registerMenuItem(container,'myParent','SmartMenuBarItem');
+				}
+			}
+			
+			private function onOkayToRender_container():void {
+				var aLabel:String = '';
+				var uuid:String = '';
+				var anItem:Object;
+				var aMenuItem:*;
+				var container:SmartMenuBarFlyoutItem;
+				SmartMenuBarFlyout._this = this;
+				SmartMenuBarFlyout._this.width = this._menuItemWidth;
+				var isMenuItem:Boolean = false;
+				try {
+					this.container.height = 0;
+					for (var i:String in this._dataProvider) {
+						anItem = this._dataProvider[i];
+						anItem = (anItem is ObjectProxy) ? anItem.valueOf() : anItem;
+						aLabel = anItem[this._labelField];
+						try { uuid = anItem.uuid } catch (e:Error) { uuid = null; }
+						if ( (uuid == null) || (uuid == '') ) {
+							uuid = UIDUtil.createUID();
+							this._dataProvider[i]['uuid'] = uuid;
+						}
+						container = new SmartMenuBarFlyoutItem();
+						container.id = container.name = this.className + '_SmartMenuBarFlyoutItem_' + i.toString();
+						container.label = aLabel;
+						container.uuid = uuid;
+						container.dataProvider = anItem;
+						container.debugger = this._debugger;
+						container.debugLevel = this._debug_level;
+						container.isAdminMode = this.isAdminMode;
+						container.myParent = this;
+						container.addEventListener(MouseEvent.MOUSE_OVER,this.onMouseOverMenuCell);
+						container.addEventListener(MouseEvent.MOUSE_OUT,this.onMouseOutMenuCell);
+						aMenuItem = ObjectUtils.unpack(anItem,ObjectUtils.criteria_unpack_isSomeKindOfObject);
+						try { isMenuItem = ( (aMenuItem is ArrayCollection) || (aMenuItem is Array) ) && (aMenuItem.length > 0) } catch (e:Error) { isMenuItem = false; }
+						if (isMenuItem) {
+							if (this._rightAligned) {
+								container.alignment = container.LeftAlignedState;
+							} else {
+								container.alignment = container.RightAlignedState;
+							}
+						} else {
+							if (this._rightAligned) {
+								container.alignment = container.LeftAlignedNominalState;
+							}
+						}
+						container.hasSubMenu = isMenuItem; // this must appear last right before slapping this container into the parent...
+						container.addEventListener(FlexEvent.CREATION_COMPLETE,onFlyoutItemCreationComplete);
+						this.container.addChild(container);
+						if (this.isDebugger) {
+							this._debugger.text = this.className + ' #' + i + ' (+) :: ' + 'aLabel=' + aLabel + ', isMenuItem=' + isMenuItem + ', swingBack=' + this._swingBack + '\n' + this._debugger.text 
+						}
+					}
+					try {
+						var verticalGap:Number = new Number(MenuController.metaProvider['verticalGap']);
+						this.verticalGap = verticalGap;
+					} catch (e:Error) {}
+					if (this.isDebugger) {
+						this._debugger.text = this.className + ' :: ' + 'verticalGap=' + verticalGap + '\n' + this._debugger.text 
+					}
+					try {
+						var submenuOrientation:String = MenuController.metaProvider['submenuOrientation'];
+						if (ObjectUtils.keys(SubmenuOrientations).indexOf(submenuOrientation) == -1) {
+							submenuOrientation = SubmenuOrientations.Nominal;
+						}
+						this.submenuOrientation = submenuOrientation;
+						if (this.isDebugger) {
+							this._debugger.text = this.className + ' :: ' + 'submenuOrientation=' + submenuOrientation + '\n' + this._debugger.text 
+						}
+					} catch (e:Error) {}
+					if (this.isDebugger) {
+						this._debugger.text = StringUtils.repeatedChars('-',40) + '\n' + this._debugger.text 
+					}
+				} catch (e:Error) {
+					var stackTrace2:String = e.getStackTrace();
+					AlertPopUp.errorNoOkay(this.className + '.3 :: ' + e.message + '\n' + StringUtils.ellipsis(stackTrace2,1000),'ERROR');
+				}
+			}
+			
+ 			private function timerHandler(event:TimerEvent):void {
+				if (this._waited < 1000) {
+					if (this.isDebugger) {
+						this._debugger.text = this.className + ' :: okay_to_render=(' + this._okay_to_render + ')' + '\n' + this._debugger.text; 
+					}
+					if (this._okay_to_render) {
+						this._timer.stop();
+						this.onOkayToRender_container();
+					}
+				} else {
+					this._timer.stop();
+					this.onOkayToRender_container();
+				}
+				this._waited += this._timer.delay;
+			}
+			
+			private function onCreationComplete_container():void {
+				this._timer = new Timer(100);
+				this._timer.addEventListener("timer", this.timerHandler);
+				this._timer.start();
+			}
+			
+			private function onMouseOver(event:MouseEvent):void {
+				try {
+					if (this._dataProvider is Array) {
+						if (this.isDebugger) {
+							this._debugger.text = this.className + ' :: enabled=(' + this.enabled + ')' + '\n' + this._debugger.text; 
+						}
+						var obj:SmartMenuBarFlyoutItem = event.currentTarget as SmartMenuBarFlyoutItem;
+						var name:String = StringUtils.numericTokensOnly(obj.name,'_').join('');
+						if (this.isDebugger) {
+							this._debugger.text = this.className + ' :: name=(' + name + ')' + '\n' + this._debugger.text; 
+						}
+						var i:int = Number(name);
+						var a:Array = this._dataProvider as Array;
+						var data:Object = a[i];
+						data = (data is ObjectProxy) ? data.valueOf() : data;
+						var aLabel:String = '';
+						try { aLabel = data[this._labelField]; } catch (e:Error) {}
+						try { this._url = data[this._urlField]; } catch (e:Error) { }
+						var menuitems:Array;
+						var mitems:* = ObjectUtils.unpack(data,ObjectUtils.criteria_unpack_isSomeKindOfObject);
+						try { menuitems = mitems.source; } catch (e:Error) {}
+						this.dissmissChildren();
+						if (menuitems is Array) {
+							this.aSmartMenuBarFlyout = PopUpManager.createPopUp(this._mbParent, SmartMenuBarFlyout, false) as SmartMenuBarFlyout;
+							this.aSmartMenuBarFlyout.dataProvider = menuitems;
+							this.aSmartMenuBarFlyout.handCursor = this._handCursor;
+							this.aSmartMenuBarFlyout.mbParent = this._mbParent;
+							this.aSmartMenuBarFlyout.debugger = this._debugger;
+							this.aSmartMenuBarFlyout.isAdminMode = this.isAdminMode;
+							this.aSmartMenuBarFlyout.urlPrefix = this._urlPrefix;
+							this.aSmartMenuBarFlyout.rightAligned = this._rightAligned;
+							this.aSmartMenuBarFlyout.verticalScrollPolicy = ScrollPolicy.OFF;
+							this.aSmartMenuBarFlyout.horizontalScrollPolicy = ScrollPolicy.OFF;
+							this.aSmartMenuBarFlyout.controller = this.controller;
+							this.aSmartMenuBarFlyout.myParent = this;
+							PopUpManager.centerPopUp(this.aSmartMenuBarFlyout as IFlexDisplayObject);
+							var aPt:Point;
+							var lPt:Point
+							var cPt:Point = new Point(this.x,this.y);
+							cPt.y = this.aSmartMenuBarFlyout.mbParent.y;
+							aPt = this.aSmartMenuBarFlyout.mbParent.localToGlobal(cPt);
+							lPt = new Point(0,(this.isSubmenuOrientationTop) ? 0 : obj.y);
+							var lPtG:Point = this.localToGlobal(lPt);
+							this.aSmartMenuBarFlyout.x = aPt.x - 5;
+							this.aSmartMenuBarFlyout.y = lPtG.y + 0;
+
+							this.aSmartMenuBarFlyout.swingBack = (this._swingBack) || ((this.aSmartMenuBarFlyout.x + (this.aSmartMenuBarFlyout.width * 2)) >= this.aSmartMenuBarFlyout.mbParent.width);
+							if (this.aSmartMenuBarFlyout.swingBack) {
+								this._rightAligned = this.aSmartMenuBarFlyout.rightAligned = this.aSmartMenuBarFlyout.swingBack;
+							}
+							if (this._rightAligned) {
+								this.aSmartMenuBarFlyout.x -= (this.width + ((this.aSmartMenuBarFlyout.swingBack) ? 1 : 1));
+							} else {
+								this.aSmartMenuBarFlyout.x += (this.width - 3);
+							}
+							this.aSmartMenuBarFlyout.width = this._menuItemWidth;
+							this.aSmartMenuBarFlyout.percentHeight = 100;
+							this.aSmartMenuBarFlyout.okay_to_render = true;
+							this._visible_popUps.addItem(this.aSmartMenuBarFlyout);
+							this._children.addItem(this.aSmartMenuBarFlyout);
+						}
+						try {
+							if (this.isDebugger) {
+								this._debugger.text = this.className; 
+								this._debugger.text += ' :: (onMouseOver) '; 
+								this._debugger.text += ', rAligned=' + this._rightAligned; 
+								this._debugger.text += ' (' + aLabel + ') '; 
+								this._debugger.text += ' i=' + i; 
+								this._debugger.text += ' a.length=' + a.length; 
+								this._debugger.text += ' ' + ((menuitems is Array) ? '-->>' : '');
+								if (this.aSmartMenuBarFlyout) {
+									this._debugger.text += ', Flyout.width=' + this.aSmartMenuBarFlyout.width; 
+									this._debugger.text += ', Flyout.x=' + this.aSmartMenuBarFlyout.x; 
+									this._debugger.text += ', mbParent.width=' + this.aSmartMenuBarFlyout.mbParent.width; 
+									this._debugger.text += ', swingBack=' + this.aSmartMenuBarFlyout.swingBack; 
+									this._debugger.text += ', _swingBack=' + this._swingBack + '\n'; 
+								} 
+								this._debugger.text += this._debugger.text; 
+							}
+						} catch (e:Error) { 
+							var stackTrace1:String = e.getStackTrace();
+							AlertPopUp.errorNoOkay(this.className + '.4 :: ' + StringUtils.ellipsis(stackTrace1,1000) + '\n','ERROR');
+						}
+					}
+				} catch (e:Error) {
+					var stackTrace2:String = e.getStackTrace();
+					AlertPopUp.errorNoOkay(this.className + '.5 :: ' + StringUtils.ellipsis(stackTrace2,1000) + '\n','ERROR');
+				}
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox id="container" width="100%" height="100%" verticalGap="{this.verticalGap}" creationComplete="onCreationComplete_container()">
+	</mx:VBox>
+</mx:Canvas>

@@ -1,0 +1,40 @@
+---
+- hosts: default
+  vars:
+    devstack_repo: git://github.com/openstack-dev/devstack.git
+    public_ip: 192.168.27.100
+    version: stable/havana
+    neutron: True
+    swift: True
+    security_groups: False
+    tempest: False
+    keyring_config_dir: /home/vagrant/.local/share/python_keyring
+
+  tasks:
+    - name: create keyring config directory
+      file: >
+        state=directory
+        dest={{ keyring_config_dir }}
+
+    - name: copy keyring config file to workaround https://bugs.launchpad.net/bugs/1242992
+      copy: >
+        src=files/keyringrc.cfg
+        dest={{ keyring_config_dir }}/keyringrc.cfg
+
+    - name: install git
+      apt: "name=git update_cache=yes"
+      sudo: True
+
+    - name: checkout devstack
+      git: "repo={{ devstack_repo }} dest=/home/vagrant/devstack version={{ version }}"
+
+    - name: local.conf
+      template: src=templates/local.conf.j2 dest=/home/vagrant/devstack/local.conf
+
+    - name: source openrc in profile
+      lineinfile: dest=/home/vagrant/.profile regexp=".*openrc" line='. /home/vagrant/devstack/openrc'
+
+    - name: enable eth2
+      command: ip link set dev eth2 up
+      sudo: True
+

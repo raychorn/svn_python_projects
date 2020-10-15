@@ -1,0 +1,1 @@
+main.py --psyco=bind --time01

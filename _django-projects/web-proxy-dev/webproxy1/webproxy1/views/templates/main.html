@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Vyper Accelerator v{{version}}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+var requiredMajorVersion = 10;
+var requiredMinorVersion = 1;
+var requiredRevision = 0;
+</script>
+<script language="JavaScript1.2" type="text/javascript">
+var hasReqestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+</script>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block container %}
+<div class="align-left">
+	<p>This is the default interface for Vyper Accelerator v{{version}}.</p>
+	
+	<p><a href="/">Main</a></p>
+
+	<p>request.session.is_logged_in = {{ request.session.is_logged_in }}</p>
+	
+	{% if request.session.is_logged_in %}
+		<p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+		<p><a href="/rest/logout/" target="_top">Logout</a></p>
+	{% else %}
+		<p>Welcome, new user. Please log in.</p>
+		<p><a href="login/" target="_top">Login</a> or <a href="register/" target="_top">Register</a></p>
+	{% endif %}
+</div>
+
+<div>
+	{% if request.session.is_logged_in %}
+		<p>Virtual Machines</p>
+		
+		<ul>
+		{% for vm in current_vms %}
+			<li>
+				{{ vm.name }}&nbsp;&nbsp;{{ vm.desc }}&nbsp;&nbsp;<a href="/rest/dropvm/{{ vm.id }}" target="_top">(-)</a>
+				<ul>
+					<li><a href="/rest/newcn/{{ vm.id }}" target="_top">(+)</a></li>
+				</ul>
+			</li>
+		{% endfor %}
+		</ul>		
+		
+	   <p><a href="/new-virtual-machine/">New Virtual Machine</a></p>
+
+	{% endif %}
+</div>
+
+<div id="messages">
+	<p align="left">{{ message }}&nbsp;&nbsp;<span class="error-message">{{ last_error }}</span></p>
+</div>
+
+<div id="warning3" class="align-center">
+</div>
+{% endblock %}

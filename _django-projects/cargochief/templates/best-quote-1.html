@@ -1,0 +1,708 @@
+{% extends 'best-quote.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	$(document).ready(function() {
+		var __origin_from_location_driver_assist_load_yes__ = (('{{ origin_from_location_driver_assist_load_yes }}' == 'yes') ? true : false);
+		var __origin_from_location_driver_assist_load_no__ = (('{{ origin_from_location_driver_assist_load_no }}' == 'yes') ? true : false);
+
+		var __origin_from_location_driver_assist_load_zipcode__ = '{{ origin_from_location_driver_assist_load_zipcode }}';
+		var __origin_from_location_driver_assist_load_state__ = '{{ origin_from_location_driver_assist_load_state }}';
+		var __origin_from_location_driver_assist_load_city__ = '{{ origin_from_location_driver_assist_load_city }}';
+
+		var __origin_from_location_driver_assist_load_with_dock_or_forklift__ = (('{{ origin_from_location_driver_assist_load_with_dock_or_forklift }}' == 'yes') ? true : false);
+		var __origin_from_location_driver_assist_load_without_dock_or_forklift__ = (('{{ origin_from_location_driver_assist_load_without_dock_or_forklift }}' == 'yes') ? true : false);
+		var __origin_from_location_driver_assist_load_convention_center__ = (('{{ origin_from_location_driver_assist_load_convention_center }}' == 'yes') ? true : false);
+		var __origin_from_location_driver_assist_load_construction_site__ = (('{{ origin_from_location_driver_assist_load_construction_site }}' == 'yes') ? true : false);
+		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		var __destination_to_location_driver_assist_unload_yes__ = (('{{ destination_to_location_driver_assist_unload_yes }}' == 'yes') ? true : false);
+		var __destination_to_location_driver_assist_unload_no__ = (('{{ destination_to_location_driver_assist_unload_no }}' == 'yes') ? true : false);
+
+		var __destination_to_location_driver_assist_unload_zipcode__ = '{{ destination_to_location_driver_assist_unload_zipcode }}';
+		var __destination_to_location_driver_assist_unload_state__ = '{{ destination_to_location_driver_assist_unload_state }}';
+		var __destination_to_location_driver_assist_unload_city__ = '{{ destination_to_location_driver_assist_unload_city }}';
+
+		var __destination_to_location_driver_assist_unload_with_dock_or_forklift__ = (('{{ destination_to_location_driver_assist_unload_with_dock_or_forklift }}' == 'yes') ? true : false);
+		var __destination_to_location_driver_assist_unload_without_dock_or_forklift__ = (('{{ destination_to_location_driver_assist_unload_without_dock_or_forklift }}' == 'yes') ? true : false);
+		var __destination_to_location_driver_assist_unload_convention_center__ = (('{{ destination_to_location_driver_assist_unload_convention_center }}' == 'yes') ? true : false);
+		var __destination_to_location_driver_assist_unload_construction_site__ = (('{{ destination_to_location_driver_assist_unload_construction_site }}' == 'yes') ? true : false);
+		
+		function handle_cb_how_much_shipping_ltl_clicked() {
+			$("#cb_how_much_shipping_tl").attr('checked',false);
+			//$("#table_how_much_shipping_ltl").css("background","#ffffff");
+			//$("#table_how_much_shipping_tl").css("background","#87b3d0");
+			$("#table_how_much_shipping_ltl p").css("color","black")
+			$("#table_how_much_shipping_tl p").css('color','silver');
+			$("#td_origin_from_location_driver_assist_load").hide();
+			$("#td_destination_to_location_driver_assist_unload").hide();
+			$("#anchor_origin_from_location_driver_assist_load_convention_center_shortcut").text('Drop at Terminal');
+			$("#anchor_origin_from_location_driver_assist_load_construction_site_shortcut").text('Residential / Inside');
+			$("#anchor_destination_to_location_driver_assist_unload_convention_center_shortcut").text($("#anchor_origin_from_location_driver_assist_load_convention_center_shortcut").text());
+			$("#anchor_destination_to_location_driver_assist_unload_construction_site_shortcut").text($("#anchor_origin_from_location_driver_assist_load_construction_site_shortcut").text());
+		}
+
+		function handle_cb_how_much_shipping_tl_clicked() {
+			$("#cb_how_much_shipping_ltl").attr('checked',false);
+			//$("#table_how_much_shipping_ltl").css("background","#87b3d0");
+			//$("#table_how_much_shipping_tl").css("background","#ffffff");
+			$("#table_how_much_shipping_ltl p").css("color","silver")
+			$("#table_how_much_shipping_tl p").css('color','black');
+			$("#td_origin_from_location_driver_assist_load").show();
+			$("#td_destination_to_location_driver_assist_unload").show();
+			$("#anchor_origin_from_location_driver_assist_load_convention_center_shortcut").text('Convention Center/Tradeshow');
+			$("#anchor_origin_from_location_driver_assist_load_construction_site_shortcut").text('Construction Site');
+			$("#anchor_destination_to_location_driver_assist_unload_convention_center_shortcut").text($("#anchor_origin_from_location_driver_assist_load_convention_center_shortcut").text());
+			$("#anchor_destination_to_location_driver_assist_unload_construction_site_shortcut").text($("#anchor_origin_from_location_driver_assist_load_construction_site_shortcut").text());
+		}
+
+		$("#cb_how_much_shipping_ltl").click(function (e) {
+			if ($(this).is (':checked')) {
+				handle_cb_how_much_shipping_ltl_clicked();
+			}
+		});
+		
+		$("#cb_how_much_shipping_tl").click(function (e) {
+			if ($(this).is (':checked')) {
+				handle_cb_how_much_shipping_tl_clicked();
+			}
+		});
+		
+		$("#anchor_origin_from_location_driver_assist_load_yes_shortcut").click(function (e) {
+			$('#origin_from_location_driver_assist_load_yes').attr('checked',true);
+		});
+		
+		$("#anchor_origin_from_location_driver_assist_load_no_shortcut").click(function (e) {
+			$("#origin_from_location_driver_assist_load_no").attr('checked',true);
+		});
+		
+		$("#anchor_destination_to_location_driver_assist_unload_yes_shortcut").click(function (e) {
+			$('#destination_to_location_driver_assist_unload_yes').attr('checked',true);
+		});
+		
+		$("#anchor_destination_to_location_driver_assist_unload_no_shortcut").click(function (e) {
+			$("#destination_to_location_driver_assist_unload_no").attr('checked',true);
+		});
+		
+		$("#anchor_origin_from_location_driver_assist_load_with_dock_or_forklift_shortcut").click(function (e) {
+			$('#origin_from_location_driver_assist_load_with_dock_or_forklift').attr('checked',true);
+		});
+		
+		$("#anchor_origin_from_location_driver_assist_load_without_dock_or_forklift_shortcut").click(function (e) {
+			$('#origin_from_location_driver_assist_load_without_dock_or_forklift').attr('checked',true);
+		});
+		
+		$("#anchor_origin_from_location_driver_assist_load_convention_center_shortcut").click(function (e) {
+			$('#origin_from_location_driver_assist_load_convention_center').attr('checked',true);
+		});
+		
+		$("#anchor_origin_from_location_driver_assist_load_construction_site_shortcut").click(function (e) {
+			$('#origin_from_location_driver_assist_load_construction_site').attr('checked',true);
+		});
+		
+		$("#anchor_destination_to_location_driver_assist_unload_with_dock_or_forklift_shortcut").click(function (e) {
+			$('#destination_to_location_driver_assist_unload_with_dock_or_forklift').attr('checked',true);
+		});
+		
+		$("#anchor_destination_to_location_driver_assist_unload_without_dock_or_forklift_shortcut").click(function (e) {
+			$('#destination_to_location_driver_assist_unload_without_dock_or_forklift').attr('checked',true);
+		});
+		
+		$("#anchor_destination_to_location_driver_assist_unload_convention_center_shortcut").click(function (e) {
+			$('#destination_to_location_driver_assist_unload_convention_center').attr('checked',true);
+		});
+		
+		$("#anchor_destination_to_location_driver_assist_unload_construction_site_shortcut").click(function (e) {
+			$('#destination_to_location_driver_assist_unload_construction_site').attr('checked',true);
+		});
+		
+		$("#anchor_cb_how_much_shipping_ltl_shortcut").click(function (e) {
+			$('#cb_how_much_shipping_ltl').attr('checked',true);
+			handle_cb_how_much_shipping_ltl_clicked();
+		});
+		
+		$("#anchor_cb_how_much_shipping_tl_shortcut").click(function (e) {
+			$('#cb_how_much_shipping_tl').attr('checked',true);
+			handle_cb_how_much_shipping_tl_clicked();
+		});
+		
+		var __cb_how_much_shipping_tl__ = true;
+		var __cb_how_much_shipping_ltl__ = false;
+		try {
+			__cb_how_much_shipping_tl__ = value_as_true_or_false('{{ cb_how_much_shipping_tl }}');
+		} catch (err) {}
+		try {
+			__cb_how_much_shipping_ltl__ = value_as_true_or_false('{{ cb_how_much_shipping_ltl }}');
+		} catch (err) {}
+		$("#cb_how_much_shipping_tl").attr('checked',__cb_how_much_shipping_tl__);
+		$("#cb_how_much_shipping_ltl").attr('checked',__cb_how_much_shipping_ltl__);
+		
+		if (__cb_how_much_shipping_tl__) {
+			handle_cb_how_much_shipping_tl_clicked();
+		} else if (__cb_how_much_shipping_ltl__) {
+			handle_cb_how_much_shipping_ltl_clicked();
+		}
+		
+		$("#anchor_contact_name_shortcut").click(function (e) {
+			$("#contact_name").focus();
+		});
+		
+		$("#anchor_contact_email_shortcut").click(function (e) {
+			$("#contact_email").focus();
+		});
+		
+		$("#anchor_contact_phone_shortcut").click(function (e) {
+			$("#contact_phone").focus();
+		});
+		
+		$("#anchor_origin_from_location_driver_assist_load_zipcode_shortcut").click(function (e) {
+			$("#origin_from_location_driver_assist_load_zipcode").focus();
+		});
+		
+		$("#anchor_destination_to_location_driver_assist_unload_zipcode_shortcut").click(function (e) {
+			$("#destination_to_location_driver_assist_unload_zipcode").focus();
+		});
+		
+		if (__origin_from_location_driver_assist_load_yes__) {
+			$("#origin_from_location_driver_assist_load_no").attr('checked',false);
+			$('#origin_from_location_driver_assist_load_yes').attr('checked',true);
+		} else {
+			$("#origin_from_location_driver_assist_load_no").attr('checked',true);
+			$('#origin_from_location_driver_assist_load_yes').attr('checked',false);
+		}
+
+		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		if (__origin_from_location_driver_assist_load_with_dock_or_forklift__ || 
+			__origin_from_location_driver_assist_load_without_dock_or_forklift__ || 
+			__origin_from_location_driver_assist_load_convention_center__ || 
+			__origin_from_location_driver_assist_load_construction_site__) {
+			$("#origin_from_location_driver_assist_load_with_dock_or_forklift").attr('checked',__origin_from_location_driver_assist_load_with_dock_or_forklift__);
+			$("#origin_from_location_driver_assist_load_without_dock_or_forklift").attr('checked',__origin_from_location_driver_assist_load_without_dock_or_forklift__);
+			$("#origin_from_location_driver_assist_load_convention_center").attr('checked',__origin_from_location_driver_assist_load_convention_center__);
+			$("#origin_from_location_driver_assist_load_construction_site").attr('checked',__origin_from_location_driver_assist_load_construction_site__);
+		} else {
+			$("#origin_from_location_driver_assist_load_with_dock_or_forklift").attr('checked',true);
+			$("#origin_from_location_driver_assist_load_without_dock_or_forklift").attr('checked',false);
+			$("#origin_from_location_driver_assist_load_convention_center").attr('checked',false);
+			$("#origin_from_location_driver_assist_load_construction_site").attr('checked',false);
+		}
+		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		
+		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		if (__destination_to_location_driver_assist_unload_with_dock_or_forklift__ || __destination_to_location_driver_assist_unload_without_dock_or_forklift__ || __destination_to_location_driver_assist_unload_convention_center__ || __destination_to_location_driver_assist_unload_construction_site__) {
+			$("#destination_to_location_driver_assist_unload_with_dock_or_forklift").attr('checked',__destination_to_location_driver_assist_unload_with_dock_or_forklift__);
+			$("#destination_to_location_driver_assist_unload_without_dock_or_forklift").attr('checked',__destination_to_location_driver_assist_unload_without_dock_or_forklift__);
+			$("#destination_to_location_driver_assist_unload_convention_center").attr('checked',__destination_to_location_driver_assist_unload_convention_center__);
+			$("#destination_to_location_driver_assist_unload_construction_site").attr('checked',__destination_to_location_driver_assist_unload_construction_site__);
+		} else {
+			$("#destination_to_location_driver_assist_load_with_dock_or_forklift").attr('checked',true);
+			$("#destination_to_location_driver_assist_load_without_dock_or_forklift").attr('checked',false);
+			$("#destination_to_location_driver_assist_load_convention_center").attr('checked',false);
+			$("#destination_to_location_driver_assist_load_construction_site").attr('checked',false);
+		}
+		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		
+		if (__origin_from_location_driver_assist_load_zipcode__) {
+			$('#origin_from_location_driver_assist_load_zipcode').val(__origin_from_location_driver_assist_load_zipcode__);
+		}
+		
+		if (__origin_from_location_driver_assist_load_state__) {
+			$('#origin_from_location_driver_assist_load_state').val(__origin_from_location_driver_assist_load_state__);
+		}
+		
+		if (__origin_from_location_driver_assist_load_city__) {
+			$('#origin_from_location_driver_assist_load_city').val(__origin_from_location_driver_assist_load_city__);
+		}
+		
+		if (__destination_to_location_driver_assist_unload_yes__) {
+			$("#destination_to_location_driver_assist_unload_no").attr('checked',false);
+			$('#destination_to_location_driver_assist_unload_yes').attr('checked',true);
+		} else {
+			$("#destination_to_location_driver_assist_unload_no").attr('checked',true);
+			$('#destination_to_location_driver_assist_unload_yes').attr('checked',false);
+		}
+
+		if (__destination_to_location_driver_assist_unload_zipcode__) {
+			$('#destination_to_location_driver_assist_unload_zipcode').val(__destination_to_location_driver_assist_unload_zipcode__);
+		}
+		
+		if (__destination_to_location_driver_assist_unload_state__) {
+			$('#destination_to_location_driver_assist_unload_state').val(__destination_to_location_driver_assist_unload_state__);
+		}
+		
+		if (__destination_to_location_driver_assist_unload_city__) {
+			$('#destination_to_location_driver_assist_unload_city').val(__destination_to_location_driver_assist_unload_city__);
+		}
+		
+		var origin_from_location_driver_assist_load_vector = {zipcode:$('#origin_from_location_driver_assist_load_zipcode'),city:$('#origin_from_location_driver_assist_load_city'),state:$('#origin_from_location_driver_assist_load_state'),isKeypress:false};
+		var destination_to_location_driver_assist_unload_vector = {zipcode:$('#destination_to_location_driver_assist_unload_zipcode'),city:$('#destination_to_location_driver_assist_unload_city'),state:$('#destination_to_location_driver_assist_unload_state'),isKeypress:false};
+
+		if ( (__origin_from_location_driver_assist_load_state__) && (__origin_from_location_driver_assist_load_city__) ) {
+		} else if (__origin_from_location_driver_assist_load_zipcode__) {
+			__handle_zipcode__(origin_from_location_driver_assist_load_vector);
+		}
+		
+		if ( (__destination_to_location_driver_assist_unload_state__) && (__destination_to_location_driver_assist_unload_city__) ) {
+		} else if (__destination_to_location_driver_assist_unload_zipcode__) {
+			__handle_zipcode__(destination_to_location_driver_assist_unload_vector);
+		}
+
+		$('#origin_from_location_driver_assist_load_zipcode').keypress(function() {
+			origin_from_location_driver_assist_load_vector['isKeypress'] = true;
+			__handle_zipcode__(origin_from_location_driver_assist_load_vector);
+		});		
+		$('#origin_from_location_driver_assist_load_zipcode').change(function() {
+			__handle_zipcode__(origin_from_location_driver_assist_load_vector,true);
+		});		
+
+		$('#destination_to_location_driver_assist_unload_zipcode').keypress(function() {
+			destination_to_location_driver_assist_unload_vector['isKeypress'] = true;
+			__handle_zipcode__(destination_to_location_driver_assist_unload_vector);
+		});		
+		$('#destination_to_location_driver_assist_unload_zipcode').change(function() {
+			__handle_zipcode__(destination_to_location_driver_assist_unload_vector,true);
+		});
+
+		$('#container_continue_button').html('<input id="btn_continue" value="Continue" class="main_button"/>');
+		
+		$('#btn_continue').click(function() {
+			var contact_name = $('#contact_name').val();
+			var contact_email = $('#contact_email').val();
+			var contact_phone = $('#contact_phone').val();
+			var origin_from_location_driver_assist_load_yes = checked_as_yes_or_no($('#origin_from_location_driver_assist_load_yes').attr('checked'));
+			var origin_from_location_driver_assist_load_no = checked_as_yes_or_no($('#origin_from_location_driver_assist_load_no').attr('checked'));
+			var origin_from_location_driver_assist_load_zipcode = $('#origin_from_location_driver_assist_load_zipcode').val();
+			var origin_from_location_driver_assist_load_state = $('#origin_from_location_driver_assist_load_state').val();
+			var origin_from_location_driver_assist_load_city = $('#origin_from_location_driver_assist_load_city').val();
+
+			var origin_from_location_driver_assist_load_with_dock_or_forklift = checked_as_yes_or_no($('#origin_from_location_driver_assist_load_with_dock_or_forklift').attr('checked'));
+			var origin_from_location_driver_assist_load_without_dock_or_forklift = checked_as_yes_or_no($('#origin_from_location_driver_assist_load_without_dock_or_forklift').attr('checked'));
+			var origin_from_location_driver_assist_load_convention_center = checked_as_yes_or_no($('#origin_from_location_driver_assist_load_convention_center').attr('checked'));
+			var origin_from_location_driver_assist_load_construction_site = checked_as_yes_or_no($('#origin_from_location_driver_assist_load_construction_site').attr('checked'));
+
+			var cb_how_much_shipping_ltl = checked_as_yes_or_no($("#cb_how_much_shipping_ltl").attr('checked'));
+			var cb_how_much_shipping_tl = checked_as_yes_or_no($("#cb_how_much_shipping_tl").attr('checked'));
+			
+			var destination_to_location_driver_assist_unload_yes = checked_as_yes_or_no($('#destination_to_location_driver_assist_unload_yes').attr('checked'));
+			var destination_to_location_driver_assist_unload_no = checked_as_yes_or_no($('#destination_to_location_driver_assist_unload_no').attr('checked'));
+			var destination_to_location_driver_assist_unload_zipcode = $('#destination_to_location_driver_assist_unload_zipcode').val();
+			var destination_to_location_driver_assist_unload_state = $('#destination_to_location_driver_assist_unload_state').val();
+			var destination_to_location_driver_assist_unload_city = $('#destination_to_location_driver_assist_unload_city').val();
+			var destination_to_location_driver_assist_unload_with_dock_or_forklift = checked_as_yes_or_no($('#destination_to_location_driver_assist_unload_with_dock_or_forklift').attr('checked'));
+			var destination_to_location_driver_assist_unload_without_dock_or_forklift = checked_as_yes_or_no($('#destination_to_location_driver_assist_unload_without_dock_or_forklift').attr('checked'));
+			var destination_to_location_driver_assist_unload_convention_center = checked_as_yes_or_no($('#destination_to_location_driver_assist_unload_convention_center').attr('checked'));
+			var destination_to_location_driver_assist_unload_construction_site = checked_as_yes_or_no($('#destination_to_location_driver_assist_unload_construction_site').attr('checked'));
+			
+			var __data__ = {contact_name:contact_name,contact_email:contact_email,contact_phone:contact_phone,origin_from_location_driver_assist_load_yes:origin_from_location_driver_assist_load_yes,origin_from_location_driver_assist_load_no:origin_from_location_driver_assist_load_no,origin_from_location_driver_assist_load_zipcode:origin_from_location_driver_assist_load_zipcode,origin_from_location_driver_assist_load_state:origin_from_location_driver_assist_load_state,origin_from_location_driver_assist_load_city:origin_from_location_driver_assist_load_city,origin_from_location_driver_assist_load_with_dock_or_forklift:origin_from_location_driver_assist_load_with_dock_or_forklift,origin_from_location_driver_assist_load_without_dock_or_forklift:origin_from_location_driver_assist_load_without_dock_or_forklift,origin_from_location_driver_assist_load_convention_center:origin_from_location_driver_assist_load_convention_center,origin_from_location_driver_assist_load_construction_site:origin_from_location_driver_assist_load_construction_site,origin_from_location_driver_assist_load_explanation:((origin_from_location_driver_assist_load_with_dock_or_forklift) ? $("#anchor_origin_from_location_driver_assist_load_with_dock_or_forklift_shortcut").text() : ((origin_from_location_driver_assist_load_without_dock_or_forklift) ? $("#anchor_origin_from_location_driver_assist_load_without_dock_or_forklift_shortcut").text() : ((origin_from_location_driver_assist_load_convention_center) ? $("#anchor_origin_from_location_driver_assist_load_convention_center_shortcut").text() : ((origin_from_location_driver_assist_load_construction_site) ? $("#anchor_origin_from_location_driver_assist_load_construction_site_shortcut").text() : 'UNKNOWN')))),origin_from_location_driver_assist_loading_explanation:((origin_from_location_driver_assist_load_yes) ? 'Driver to assist in loading' : ((origin_from_location_driver_assist_load_yes) ? 'Driver cannot assist in loading' : 'UNKNOWN')),cb_how_much_shipping_ltl:cb_how_much_shipping_ltl,cb_how_much_shipping_tl:cb_how_much_shipping_tl,destination_to_location_driver_assist_unload_yes:destination_to_location_driver_assist_unload_yes,destination_to_location_driver_assist_unload_no:destination_to_location_driver_assist_unload_no,destination_to_location_driver_assist_unload_zipcode:destination_to_location_driver_assist_unload_zipcode,destination_to_location_driver_assist_unload_state:destination_to_location_driver_assist_unload_state,destination_to_location_driver_assist_unload_city:destination_to_location_driver_assist_unload_city,destination_to_location_driver_assist_unload_with_dock_or_forklift:destination_to_location_driver_assist_unload_with_dock_or_forklift,destination_to_location_driver_assist_unload_without_dock_or_forklift:destination_to_location_driver_assist_unload_without_dock_or_forklift,destination_to_location_driver_assist_unload_convention_center:destination_to_location_driver_assist_unload_convention_center,destination_to_location_driver_assist_unload_construction_site:destination_to_location_driver_assist_unload_construction_site,destination_to_location_driver_assist_unload_explanation:((destination_to_location_driver_assist_unload_with_dock_or_forklift) ? $("#anchor_destination_to_location_driver_assist_unload_with_dock_or_forklift_shortcut").text() : ((destination_to_location_driver_assist_unload_without_dock_or_forklift) ? $("#anchor_destination_to_location_driver_assist_unload_without_dock_or_forklift_shortcut").text() : ((destination_to_location_driver_assist_unload_convention_center) ? $("#anchor_destination_to_location_driver_assist_unload_convention_center_shortcut").text() : ((destination_to_location_driver_assist_unload_construction_site) ? $("#anchor_destination_to_location_driver_assist_unload_construction_site_shortcut").text() : 'UNKNOWN')))),destination_to_location_driver_assist_unloading_explanation:((destination_to_location_driver_assist_unload_yes) ? 'Driver to assist in loading' : ((destination_to_location_driver_assist_unload_yes) ? 'Driver cannot assist in loading' : 'UNKNOWN'))};
+
+			$.ajax({
+				type: 'POST',
+				url: '/best/quote2/',
+				data: __data__,
+				success: function (data) {
+					var __cb_how_much_shipping_tl__ = value_as_true_or_false(cb_how_much_shipping_tl);
+					var __cb_how_much_shipping_ltl__ = value_as_true_or_false(cb_how_much_shipping_ltl);
+					window.location.href = '/best-quote-2'+((__cb_how_much_shipping_ltl__) ? 'ltl' : ((__cb_how_much_shipping_tl__) ? 'tl' : ''))+'.html';
+				},
+				dataType: 'json'
+			});			
+		});
+	});
+</script>
+
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block page-content %}
+            	<tr>
+                	<td valign="top">
+                    	<table width="100%">
+                        	<tr>
+                                <td valign="top">
+                                    <div id="quote_container1">
+                                        <div class="quote_bubble1Left">
+                                            <div class="quote_info">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                          <b>Best Quote is Great for:</b>
+                                                        </td>
+                                                        <td rowspan="2" valign="middle">
+                                                            <img src="/static/images/slide0015_image001.png"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <ul>
+                                                                <li>A price sensitive shipment.</li>
+                                                                <li>A large shipment.</li>
+                                                                <li>You have a bit of time to get the best price.</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </td>
+                            </tr>
+                        	<tr>
+                                <td valign="top">
+                                    <div id="quote_container1">
+                                        <div class="quote_bubble2Left">
+                                            <div class="quote_info">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                          <b>Quote Contact Information</b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <form>
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <NOBR><label><a id="anchor_contact_name_shortcut" class="anchor_for_input_field" href="#">Contact Name</a></label></NOBR>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input id="contact_name" type="text" value="{{ contact_name }}" size="50"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <NOBR><label><a id="anchor_contact_email_shortcut" class="anchor_for_input_field" href="#">Contact Email</a></label></NOBR>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input id="contact_email" type="email" value="{{ contact_email }}" size="50"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <NOBR><label><a id="anchor_contact_phone_shortcut" class="anchor_for_input_field" href="#">Contact Phone</a></label></NOBR>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input id="contact_phone" type="tel" value="{{ contact_phone }}" size="20"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </td>
+                            </tr>
+                        	<tr>
+                                <td valign="top">
+                                    <div id="quote_container1">
+                                        <div class="quote_bubble3Left">
+                                            <div class="quote_info">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td>
+                                                          <b>Origin "From" Location</b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <form>
+                                                                <table width="100%">
+                                                                    <tr>
+                                                                        <td id="td_origin_from_location_driver_assist_load" align="left" colspan="2">
+                                                                            <NOBR>
+                                                                            <label>Driver to assist in loading:</label>
+                                                                            &nbsp;&nbsp;
+                                                                            <a id="anchor_origin_from_location_driver_assist_load_yes_shortcut" class="anchor_for_input_field" href="#"><label>Yes</label></a>
+                                                                            <input id="origin_from_location_driver_assist_load_yes" name="origin_from_location_driver_assist_load" type="radio" value="yes"/>
+                                                                            <label></label>
+                                                                            &nbsp;
+                                                                            <a id="anchor_origin_from_location_driver_assist_load_no_shortcut" class="anchor_for_input_field" href="#"><label>No</label></a>
+                                                                            <input id="origin_from_location_driver_assist_load_no" name="origin_from_location_driver_assist_load" type="radio" value="no"/>
+                                                                            </NOBR>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <nobr><label><a id="anchor_origin_from_location_driver_assist_load_zipcode_shortcut" class="anchor_for_input_field" href="#">Zip Code</a></label></nobr>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="origin_from_location_driver_assist_load_zipcode" type="text" value=""/>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <label>State</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                    	<input id="origin_from_location_driver_assist_load_state" readonly="readonly" size="3" maxlength="2"/>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <label>City</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                    	<input id="origin_from_location_driver_assist_load_city" readonly="readonly"/>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td>
+                                                                            <table width="100%">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <NOBR>
+                                                                                        <input id="origin_from_location_driver_assist_load_with_dock_or_forklift" name="origin_from_location_driver_assist_load2" type="radio" value="yes"/>
+                                                                                        <label><a id="anchor_origin_from_location_driver_assist_load_with_dock_or_forklift_shortcut" class="anchor_for_radio_button" href="#">Location with Dock or Forklift</a></label>
+                                                                                        </NOBR>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <NOBR>
+                                                                                        <input id="origin_from_location_driver_assist_load_without_dock_or_forklift" name="origin_from_location_driver_assist_load2" type="radio" value="yes"/>
+                                                                                        <label><a id="anchor_origin_from_location_driver_assist_load_without_dock_or_forklift_shortcut" class="anchor_for_radio_button" href="#">Location without Dock or Forklift</a></label>
+                                                                                        </NOBR>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <NOBR>
+                                                                                        <input id="origin_from_location_driver_assist_load_convention_center" name="origin_from_location_driver_assist_load2" type="radio" value="yes"/>
+                                                                                        <label><a id="anchor_origin_from_location_driver_assist_load_convention_center_shortcut" class="anchor_for_radio_button" href="#">Convention Center/Tradeshow</a></label>
+                                                                                        </NOBR>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <NOBR>
+                                                                                        <input id="origin_from_location_driver_assist_load_construction_site" name="origin_from_location_driver_assist_load2" type="radio" value="yes"/>
+                                                                                        <label><a id="anchor_origin_from_location_driver_assist_load_construction_site_shortcut" class="anchor_for_radio_button" href="#">Construction Site</a></label>
+                                                                                        </NOBR>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                	<td valign="top">
+                    	<table width="100%">
+                        	<tr>
+                                <td>
+                                    <div id="quote_container1">
+                                        <div class="quote_bubble2">
+                                            <div class="quote_info">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td>
+                                                          <b>How Much You are Shipping</b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <table id="table_how_much_shipping_ltl" width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <table width="100%">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <form>
+                                                                                        <NOBR><input type="checkbox" id="cb_how_much_shipping_ltl"/>&nbsp;<label><a id="anchor_cb_how_much_shipping_ltl_shortcut" class="anchor_for_input_field" href="#">LTL</a></label></NOBR>
+                                                                                    </form>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        Less Than Truckload<br/>
+                                                                                        Up to 6 pallets
+                                                                                    </p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td>
+                                                                        <img src="/static/images/slide0015_image002.png"/>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                          <hr width="100%"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <table id="table_how_much_shipping_tl" width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <table width="100%">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <form>
+                                                                                        <NOBR><input type="checkbox" id="cb_how_much_shipping_tl"/>&nbsp;<label><a id="anchor_cb_how_much_shipping_tl_shortcut" class="anchor_for_input_field" href="#">TL/Partial TL</a></label></NOBR>
+                                                                                    </form>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        Truckload or Partial Truckload<br/>
+                                                                                        Point to point transport<br/>
+                                                                                        7-26 pallets
+                                                                                    </p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td>
+                                                                        <img src="/static/images/slide0015_image003.png" width="195"/>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </td>
+                            </tr>
+                        	<tr>
+                                <td valign="top">
+                                    <div id="quote_container1">
+                                        <div class="quote_bubble">
+                                            <div class="quote_info">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td>
+                                                          <b>Destination "To" Location</b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <form>
+                                                                <table width="100%">
+                                                                    <tr>
+                                                                        <td id="td_destination_to_location_driver_assist_unload" align="left" colspan="2">
+                                                                            <NOBR>
+                                                                            <label>Driver to assist in unloading:</label>
+                                                                            &nbsp;&nbsp;
+                                                                            <a id="anchor_destination_to_location_driver_assist_unload_yes_shortcut" class="anchor_for_input_field" href="#"><label>Yes</label></a>
+                                                                            <input id="destination_to_location_driver_assist_unload_yes" name="destination_to_location_driver_assist_unload" type="radio" value="yes"/>
+                                                                            &nbsp;
+                                                                            <a id="anchor_destination_to_location_driver_assist_unload_no_shortcut" class="anchor_for_input_field" href="#"><label>No</label></a>
+                                                                            <input id="destination_to_location_driver_assist_unload_no" name="destination_to_location_driver_assist_unload" type="radio" value="no"/>
+                                                                            </NOBR>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <nobr><label><a id="anchor_destination_to_location_driver_assist_unload_zipcode_shortcut" class="anchor_for_input_field" href="#">Zip Code</a></label></nobr>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="destination_to_location_driver_assist_unload_zipcode" type="text" value=""/>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <label>State</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                    	<input id="destination_to_location_driver_assist_unload_state" readonly="readonly" size="3" maxlength="2"/>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <label>City</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="destination_to_location_driver_assist_unload_city" type="text" value="" readonly="readonly"/>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td>
+                                                                            <table width="100%">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <NOBR>
+                                                                                        <input id="destination_to_location_driver_assist_unload_with_dock_or_forklift" name="destination_to_location_driver_assist_unload2" type="radio" value="yes"/>
+                                                                                        <label><a id="anchor_destination_to_location_driver_assist_unload_with_dock_or_forklift_shortcut" class="anchor_for_radio_button" href="#">Location with Dock or Forklift</a></label>
+                                                                                        </NOBR>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <NOBR>
+                                                                                        <input id="destination_to_location_driver_assist_unload_without_dock_or_forklift" name="destination_to_location_driver_assist_unload2" type="radio" value="yes"/>
+                                                                                        <label><a id="anchor_destination_to_location_driver_assist_unload_without_dock_or_forklift_shortcut" class="anchor_for_radio_button" href="#">Location without Dock or Forklift</a></label>
+                                                                                        </NOBR>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <NOBR>
+                                                                                        <input id="destination_to_location_driver_assist_unload_convention_center" name="destination_to_location_driver_assist_unload2" type="radio" value="yes"/>
+                                                                                        <label><a id="anchor_destination_to_location_driver_assist_unload_convention_center_shortcut" class="anchor_for_radio_button" href="#">Convention Center/Tradeshow</a></label>
+                                                                                        </NOBR>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <NOBR>
+                                                                                        <input id="destination_to_location_driver_assist_unload_construction_site" name="destination_to_location_driver_assist_unload2" type="radio" value="yes"/>
+                                                                                        <label><a id="anchor_destination_to_location_driver_assist_unload_construction_site_shortcut" class="anchor_for_radio_button" href="#">Construction Site</a></label>
+                                                                                        </NOBR>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </td>
+                            </tr>
+                        	<tr>
+                                <td valign="top">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+{% endblock %}
+
+{% block continue-button-label %}Continue{% endblock %}
+{% block page-href %}/best-quote-2.html{% endblock %}

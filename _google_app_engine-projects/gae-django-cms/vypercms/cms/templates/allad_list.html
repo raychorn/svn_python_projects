@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Ad listing" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Ad listing" %}</h1>
+<a href="{% url cms.views.add_allad %}">{% trans "Create Ad" %}</a>
+
+<ul>
+  {% for each in object_list %}
+    <li>
+      Name:<span title="{{ each.value }}" style="color:red;">{{ each.name }}</span> 
+      ( {{ each.description }} )
+      <a href="{% url cms.views.edit_allad key=each.key %}">{% trans "Edit" %}</a>
+      <a href="{% url cms.views.delete_allad key=each.key %}">{% trans "Delete" %}</a>
+      <br/>
+      <textarea cols="60" rows="2" disabled="false">{{ each.value }}</textarea>
+    </li>
+  {% endfor %}
+</ul>
+<div style="CLEAR: both;"></div>
+<div>
+  {% if has_previous %}
+    <a href="{% url cms.views.list_allad %}?page={{ previous }}">&lt;-{% trans "Previous" %}</a>
+  {% endif %}
+  {% if has_next %}
+    <a href="{% url cms.views.list_allad %}?page={{ next }}">{% trans "Next" %}-&gt;</a>
+  {% endif %}
+</div>
+{% endblock %}

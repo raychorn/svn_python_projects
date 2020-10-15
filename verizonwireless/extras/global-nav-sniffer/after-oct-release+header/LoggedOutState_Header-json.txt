@@ -1,0 +1,1620 @@
+{"menu":
+{"metafield":
+"meta",
+"headerfield":
+"headeritem",
+"headeritem":
+{"lob":
+{"headeritem":
+[{"domain":
+"www22.verizon.com",
+"secure":
+"0",
+"title":
+"Verizon Residential",
+"url":
+"?lid=residential tab",
+"domain_key":
+"www22",
+"label":
+"Residential",
+"uuid":
+"33A8D"},
+{"domain":
+"www22.verizon.com",
+"secure":
+"0",
+"title":
+"Verizon Business",
+"url":
+"/content/verizonglobalhome/ghp_business.aspx?lid=business tab",
+"domain_key":
+"www22",
+"label":
+"Business",
+"uuid":
+"35D25"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"title":
+"Verizon Wireless",
+"url":
+"/b2c/index.html?lid=wireless tab",
+"domain_key":
+"vzw",
+"label":
+"Wireless",
+"uuid":
+"35AA2"}],
+"uuid":
+"318F8"},
+"search":
+{"headeritem":
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/B2CSearch",
+"domain_key":
+"vzw",
+"label":
+"Search",
+"uuid":
+"34520"},
+"uuid":
+"4F53C"},
+"uuid":
+"3D92E",
+"gLinks":
+{"headeritem":
+[{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/myaccount/signin.jsp",
+"domain_key":
+"vzw",
+"label":
+"Sign In",
+"uuid":
+"3C90C"},
+{"domain":
+"espanol.vzw.com",
+"secure":
+"0",
+"url":
+"/enes/b2c/index.html",
+"domain_key":
+"espanol",
+"label":
+"Espa%26ntilde;ol",
+"uuid":
+"5104C"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/aboutUs/index.jsp",
+"domain_key":
+"vzw",
+"label":
+"About Us",
+"uuid":
+"2F2B1"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/contact/index.jsp",
+"domain_key":
+"vzw",
+"label":
+"Contact Us",
+"uuid":
+"58616"},
+{"domain":
+"digital.virtualmarketingpartners.com",
+"secure":
+"0",
+"url":
+"/vmp/verizon/weekly-ad/",
+"domain_key":
+"digital",
+"label":
+"Weekly Ad",
+"target":
+"_blank",
+"uuid":
+"34704"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/storelocator/index.jsp",
+"domain_key":
+"vzw",
+"label":
+"Store Locator",
+"uuid":
+"39C3E"}],
+"uuid":
+"39F46"},
+"cart":
+{"headeritem":
+[{"label":
+"Cart Empty",
+"uuid":
+"32461",
+"id":
+"empty"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=shoppingCartItem&action=viewShoppingCart&itemFromRequest=giftCardItem&steps=yes",
+"domain_key":
+"vzw",
+"label":
+"View Cart",
+"id":
+"not_empty",
+"uuid":
+"3306B"}],
+"uuid":
+"37CD4"},
+"localeCoverage":
+{"headeritem":
+[{"uuid":
+"41857",
+"label":
+"Location:"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/zipEntry.jsp?go=/index.html&action=change",
+"domain_key":
+"vzw",
+"label":
+"LocationName",
+"uuid":
+"2F4DE"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/CoverageLocatorController?requesttype=newsearch&zip=92646&city=Huntington Beach&state=CA&mapType=VZW FOOTPRINT",
+"domain_key":
+"vzw",
+"label":
+"Coverage Locator",
+"uuid":
+"4A65F"}],
+"uuid":
+"4C0B8"},
+"logo":
+{"headeritem":
+{"url":
+"/b2c/index.html",
+"domain_key":
+"vzw",
+"uuid":
+"3F120",
+"domain":
+"www.verizonwireless.com",
+"secure":
+"0"},
+"uuid":
+"576CE"}},
+"meta":
+[{"id":
+"id"},
+{"label":
+"label"},
+{"url":
+"url"},
+{"type":
+"type"},
+{"domain":
+"domain"},
+{"domain_key":
+"domain_key"},
+{"body":
+"body"},
+{"target":
+"target"},
+{"secure":
+"secure"},
+{"title":
+"title"},
+{"uuid":
+"uuid"},
+{"roles":
+"roles"},
+{"onebill":
+"onebill"},
+{"alltel":
+"alltel"},
+{"alltelurl":
+"alltelurl"},
+{"hOrientation":
+"-2"},
+{"vOrientation":
+"top"}],
+"datafield":
+"menuitem",
+"menuitem":
+[{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=phoneFirst&action=viewStoreIndex&lid=//global//phones and accessories",
+"domain_key":
+"vzw",
+"label":
+"Phones %26amp; Accessories",
+"menuitem":
+[{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=phoneFirst&action=viewPhoneOverviewByDevice&deviceType=Phones&sortOption=priceSort&lid=//global//phones and accessories//cell phones",
+"domain_key":
+"vzw",
+"label":
+"Cell Phones",
+"uuid":
+"3D1B7"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=phoneFirst&action=viewPhoneOverviewByDevice&deviceType=BlackBerry Devices&lid=//global//phones and accessories//blackberry",
+"domain_key":
+"vzw",
+"label":
+"BlackBerry",
+"uuid":
+"41950"},
+{"domain":
+"smartphones.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/?lid=//global//phones and accessories//smartphone resource center",
+"domain_key":
+"smartphones",
+"label":
+"Smartphone Resource Center",
+"uuid":
+"38DAB"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=phoneFirst&action=viewPhoneOverviewByDevice&deviceType=PDA/SmartPhones&lid=//global//phones and accessories//pda smartphones",
+"domain_key":
+"vzw",
+"label":
+"PDAs %26amp; Smartphones",
+"uuid":
+"35543"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/hpnetbook/overview.jsp?lid=//global//phones and accessories//netbooks",
+"domain_key":
+"vzw",
+"label":
+"Netbooks",
+"uuid":
+"37057"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/mobilebroadband/?lid=//global//phones and accessories//mobile broadband devices",
+"domain_key":
+"vzw",
+"label":
+"Mobile Broadband Devices",
+"menuitem":
+[{"body":
+"Browse the Internet, download files and access email while youre on the go.",
+"uuid":
+"416EE",
+"label":
+"Mobile Broadband Devices"},
+{"type":
+"separator",
+"uuid":
+"284D0"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/mobilebroadband/?page=products_device&lid=//global//phones and accessories//mobile broadband devices//data cards and modems",
+"domain_key":
+"vzw",
+"label":
+"Data Cards %26amp; Modems",
+"uuid":
+"3147D"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/hpnetbook/overview.jsp?lid=//global//phones and accessories//mobile broadband devices//netbooks",
+"domain_key":
+"vzw",
+"label":
+"Netbooks",
+"uuid":
+"45396"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/mobilebroadband/?lid=//global//phones and accessories//mobile broadband devices//learn about",
+"domain_key":
+"vzw",
+"label":
+"Learn about Mobile Broadband ",
+"uuid":
+"3F16D"}],
+"uuid":
+"2EAF3"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/accessories?lid=//global//phones and accessories//accessories",
+"domain_key":
+"vzw",
+"label":
+"Accessories",
+"uuid":
+"3843B"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/promotion/specialoffers.jsp?lid=//global//phones and accessories//online deals",
+"domain_key":
+"vzw",
+"label":
+"Online Deals",
+"uuid":
+"5604B"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/promotion/controller?promotionType=hotDeals&action=viewHotDeals&lid=//global//phones and accessories//new products",
+"domain_key":
+"vzw",
+"label":
+"New Products",
+"uuid":
+"45CBC"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=giftCardItem&action=viewGiftCards&lid=//global//phones and accessories//gift card",
+"domain_key":
+"vzw",
+"label":
+"Gift Cards",
+"menuitem":
+[{"body":
+"Take the stress out of finding the perfect present with a gift card.",
+"uuid":
+"41314",
+"label":
+"Gift Cards"},
+{"type":
+"separator",
+"uuid":
+"4418B"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=giftCardItem&action=viewGiftCards&lid=//global//phones and accessories//gift card//buy card",
+"domain_key":
+"vzw",
+"label":
+"Buy a Gift Card",
+"uuid":
+"2F110"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/GiftCardControllerServlet?lid=//global//phones and accessories//gift card//check balance",
+"domain_key":
+"vzw",
+"label":
+"Check Gift Card Balance",
+"uuid":
+"3067A"}],
+"uuid":
+"3817C"}],
+"uuid":
+"50527"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=planFirst&action=viewPlanOverview&lid=//global//plans",
+"domain_key":
+"vzw",
+"label":
+"Plans",
+"menuitem":
+[{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=planFirst&action=viewPlanOverview&catType=voice&lid=//global//plans//voice plans",
+"domain_key":
+"vzw",
+"label":
+"Voice Plans",
+"menuitem":
+[{"body":
+"Stay connected with the best network and calling plans for individuals and families.",
+"uuid":
+"2FDD2",
+"label":
+"Voice Plans"},
+{"type":
+"separator",
+"uuid":
+"3737A"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/splash/plansingleline.jsp?lid=//global//plans//voice plans//individual",
+"domain_key":
+"vzw",
+"label":
+"Individual",
+"uuid":
+"3A4AD"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/splash/planfamily.jsp?lid=//global//plans//voice plans//family",
+"domain_key":
+"vzw",
+"label":
+"Family",
+"uuid":
+"38245"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/splash/prepay.jsp?lid=//global//plans//voice plans//prepaid",
+"domain_key":
+"vzw",
+"label":
+"Prepaid",
+"uuid":
+"4579E"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=planFirst&action=viewPlanOverview&catType=voice&lid=//global//plans//voice plans//view all",
+"domain_key":
+"vzw",
+"label":
+"View all Voice Plans",
+"uuid":
+"38390"}],
+"uuid":
+"33E73"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/store/controller?item=planFirst&action=viewPlanOverview&catType=voiceData&lid=//global//plans//voice and email plans",
+"domain_key":
+"vzw",
+"label":
+"Voice %26amp; Email Plans",
+"uuid":
+"45C76"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/mobilebroadband/?page=plans&lid=//global//plans//mobile broadband plan",
+"domain_key":
+"vzw",
+"label":
+"Mobile Broadband Plans",
+"uuid":
+"370D2"},
+{"domain":
+"b2b.vzw.com",
+"secure":
+"0",
+"url":
+"/international/inside_us.html?lid=//global//plans//international services",
+"domain_key":
+"b2b",
+"label":
+"International Services",
+"uuid":
+"5EE23"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/CoverageLocatorController?requesttype=NEWREQUEST&lid=//global//plans//coverage maps",
+"domain_key":
+"vzw",
+"label":
+"Coverage Map",
+"uuid":
+"44773"}],
+"uuid":
+"33DC5"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd&lid=//global//entertainment and apps",
+"domain_key":
+"products",
+"label":
+"Entertainment %26amp; Apps",
+"menuitem":
+[{"domain":
+"mediastore.verizonwireless.com",
+"secure":
+"0",
+"url":
+"?lid=//global//entertainment apps//media store",
+"domain_key":
+"mediastore",
+"label":
+"Media Store",
+"target":
+"_blank",
+"uuid":
+"44154"},
+{"domain":
+"mediastore.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/onlineContentStore/index.html?lid=//global//entertainment and apps//ringtones#MusicTones=home",
+"domain_key":
+"mediastore",
+"label":
+"Ringtones",
+"target":
+"_blank",
+"uuid":
+"37018"},
+{"domain":
+"mediastore.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/onlineContentStore/index.html?lid=//global//entertainment and apps//ringback tones#MusicTones=home",
+"domain_key":
+"mediastore",
+"label":
+"Ringback Tones",
+"target":
+"_blank",
+"uuid":
+"2A587"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_music&lid=//global//entertainment and apps//music",
+"domain_key":
+"products",
+"label":
+"Music",
+"menuitem":
+[{"body":
+"Download songs from your favorite artists to your phone.",
+"uuid":
+"45002",
+"label":
+"Music"},
+{"type":
+"separator",
+"uuid":
+"4435B"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_music_howtobuy&lid=//global//entertainment and apps//music//how to get music",
+"domain_key":
+"products",
+"label":
+"How to get Music",
+"uuid":
+"2E578"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_music_music&lid=//global//entertainment and apps//music//view all",
+"domain_key":
+"products",
+"label":
+"View all Music",
+"uuid":
+"3724F"},
+{"domain":
+"mediastore.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/onlineContentStore/index.html?lid=//global//entertainment and apps//music//launch media store#MusicTones=home",
+"domain_key":
+"mediastore",
+"label":
+"Launch Media Store",
+"target":
+"_blank",
+"uuid":
+"2F45E"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_vcast&lid=//global//entertainment and apps//music//what is vcast",
+"domain_key":
+"products",
+"label":
+"What is V CAST?",
+"uuid":
+"3B87C"}],
+"uuid":
+"3B4BB"},
+{"domain":
+"mediastore.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/onlineContentStore/index.html?lid=//global//entertainment and apps//games#games=home",
+"domain_key":
+"mediastore",
+"label":
+"Games",
+"target":
+"_blank",
+"uuid":
+"3655A"},
+{"domain":
+"mediastore.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/onlineContentStore/index.html?lid=//global//entertainment and apps//apps#apps=home",
+"domain_key":
+"mediastore",
+"label":
+"Apps",
+"target":
+"_blank",
+"uuid":
+"3E391"},
+{"domain":
+"mediastore.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/onlineContentStore/index.html?lid=//global//entertainment and apps//wallpapers#wallpapers=home",
+"domain_key":
+"mediastore",
+"label":
+"Wallpapers",
+"target":
+"_blank",
+"uuid":
+"449BC"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=video&lid=//global//entertainment and apps//video on demand",
+"domain_key":
+"products",
+"label":
+"Video on Demand",
+"menuitem":
+[{"body":
+"Get Favorite TV Shows, Sports, News, Live Events, Music Videos and more.",
+"uuid":
+"3C4C9",
+"label":
+"V CAST Videos"},
+{"type":
+"separator",
+"uuid":
+"3A78A"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=video_how&lid=//global//entertainment and apps//video on demand//how to get",
+"domain_key":
+"products",
+"label":
+"How to get Video on Demand",
+"uuid":
+"48D02"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=video_browse&lid=//global//entertainment and apps//video on demand//view all",
+"domain_key":
+"products",
+"label":
+"View all Video on Demand",
+"uuid":
+"375BA"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_vcast&lid=//global//entertainment and apps//video on demand//what is vcast",
+"domain_key":
+"products",
+"label":
+"What is V CAST?",
+"uuid":
+"34F9A"}],
+"uuid":
+"44E8F"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=mobileTV&lid=//global//entertainment and apps//mobiletv",
+"domain_key":
+"products",
+"label":
+"Mobile TV",
+"menuitem":
+[{"body":
+"Watch TV on your phone.",
+"uuid":
+"288BF",
+"label":
+"V CAST Mobile TV"},
+{"type":
+"separator",
+"uuid":
+"3F1F5"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=mobileTV&lid=//global//entertainment and apps//mobiletv//program guide",
+"domain_key":
+"products",
+"label":
+"Program Guide",
+"uuid":
+"444D4"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=mobileTV&lid=//global//entertainment and apps//mobiletv//how to get mobile tv",
+"domain_key":
+"products",
+"label":
+"How to get Mobile TV",
+"uuid":
+"32D50"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_vcast&lid=//global//entertainment and apps//mobiletv//what is vcast",
+"domain_key":
+"products",
+"label":
+"What is V CAST?",
+"uuid":
+"455C2"}],
+"uuid":
+"33896"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_dashboardMobileWeb&lid=//global//entertainment and apps//mobile web and dashboard",
+"domain_key":
+"products",
+"label":
+"Mobile Web %26amp; Dashboard",
+"menuitem":
+[{"body":
+"Introducing two exciting ways to access the content on your phone and on the web.",
+"uuid":
+"3E6DE",
+"label":
+"Mobile Web %26amp; Dashboard"},
+{"type":
+"separator",
+"uuid":
+"4DC47"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_mobileWeb&lid=//global//entertainment and apps//mobile web and dashboard//mobile web",
+"domain_key":
+"products",
+"label":
+"Mobile Web",
+"uuid":
+"5661F"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_dashboard&lid=//global//entertainment and apps//mobile web and dashboard//dashboard",
+"domain_key":
+"products",
+"label":
+"Dashboard",
+"uuid":
+"3E6D6"}],
+"uuid":
+"3D757"},
+{"domain":
+"vznavigator.vzw.com",
+"secure":
+"0",
+"url":
+"?lid=//global//entertainment and apps//navigator",
+"domain_key":
+"vznavigator",
+"label":
+"Navigator",
+"uuid":
+"4B0A7"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=fnd_familylocator&lid=//global//entertainment and apps//family locator",
+"domain_key":
+"products",
+"label":
+"Family Locator",
+"uuid":
+"4221A"}],
+"uuid":
+"2ED27"},
+{"domain":
+"products.vzw.com",
+"secure":
+"1",
+"url":
+"/index.aspx?id=messaging&lid=//global//messaging",
+"domain_key":
+"products",
+"label":
+"Messaging",
+"menuitem":
+[{"domain":
+"animated.messaging.vzw.com",
+"secure":
+"1",
+"url":
+"/vge/index.html?lid=//global//messaging//animated messaging",
+"domain_key":
+"animated",
+"label":
+"Animated Messaging",
+"uuid":
+"33CF2"},
+{"domain":
+"text.vzw.com",
+"secure":
+"1",
+"url":
+"/customer_site/jsp/overview.jsp?lid=//global//messaging//text messaging",
+"domain_key":
+"text",
+"label":
+"Text Messaging",
+"menuitem":
+[{"body":
+"Text from your phone, via email, and from the web.",
+"uuid":
+"37341",
+"label":
+"Text Messaging"},
+{"type":
+"separator",
+"uuid":
+"29F09"},
+{"domain":
+"text.vzw.com",
+"secure":
+"1",
+"url":
+"/customer_site/jsp/messaging_lo.jsp?lid=//global//messaging//text messaging//send message",
+"domain_key":
+"text",
+"label":
+"Send a Text Message",
+"uuid":
+"4366E"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=messaging_txt_how&lid=//global//messaging//text messaging//how to text message",
+"domain_key":
+"products",
+"label":
+"How to Text Message",
+"uuid":
+"4E331"},
+{"domain":
+"text1.vzw.com",
+"secure":
+"1",
+"url":
+"/text/jsp/txtintl_overview.jsp?lid=//global//messaging//text messaging//international messaging",
+"domain_key":
+"text1",
+"label":
+"International Messaging",
+"uuid":
+"2C497"}],
+"uuid":
+"48F99"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=messaging_pictureVideo&lid=//global//messaging//picture and video messaging",
+"domain_key":
+"products",
+"label":
+"Picture %26amp; Video Messaging",
+"menuitem":
+[{"body":
+"Send full-color pictures, sounds, and text in one message.",
+"uuid":
+"2FA14",
+"label":
+"Picture %26amp; Video Messaging"},
+{"type":
+"separator",
+"uuid":
+"41EEF"},
+{"domain":
+"picture.vzw.com",
+"secure":
+"1",
+"url":
+"/pub/guestComposer/guestCreate.do?mediaType=free&lid=//global//messaging//picture and video messaging//send a picture/video message",
+"domain_key":
+"pictures",
+"label":
+"Send a Picture %26amp; Video Message",
+"uuid":
+"3B5A4"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=messaging_pixflix_pic_how&lid=//global//messaging//picture and video messaging//picture and video messaging help",
+"domain_key":
+"products",
+"label":
+"How to Picture %26amp; Video Message",
+"uuid":
+"3E773"},
+{"domain":
+"text1.vzw.com",
+"secure":
+"1",
+"url":
+"/text/jsp/txtintl_overview.jsp?lid=//global//messaging//picture and video messaging//international messaging",
+"domain_key":
+"text1",
+"label":
+"International Messaging",
+"uuid":
+"33866"},
+{"domain":
+"picture.vzw.com",
+"secure":
+"0",
+"url":
+"/pub/gallery.do?lid=//global//messaging//picture and video messaging//manage your photo albums",
+"domain_key":
+"pictures",
+"label":
+"Manage your Photo Albums",
+"uuid":
+"4421F"}],
+"uuid":
+"375F5"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=messaging_im&lid=//global//messaging//mobile im",
+"domain_key":
+"products",
+"label":
+"Mobile IM",
+"uuid":
+"2F3E6"},
+{"domain":
+"products.vzw.com",
+"secure":
+"0",
+"url":
+"/index.aspx?id=messaging_email&lid=//global//messaging//mobile email",
+"domain_key":
+"products",
+"label":
+"Mobile Email",
+"uuid":
+"370D6"},
+{"domain":
+"alerts.vzw.com",
+"secure":
+"1",
+"url":
+"/guest/general/Overview.do?lid=//global//messaging//text and picture alerts",
+"domain_key":
+"alerts",
+"label":
+"Text %26amp; Picture Alerts",
+"menuitem":
+[{"body":
+"Get weather, traffic, sports, and stock updates on your phone.",
+"uuid":
+"3AC32",
+"label":
+"Text %26amp; Picture Alerts"},
+{"type":
+"separator",
+"uuid":
+"35352"},
+{"domain":
+"support.vzw.com",
+"secure":
+"1",
+"url":
+"/faqs/Features and Optional Services/alerts_text_and_picture.html?lid=//global//messaging//text picture alerts//get alerts",
+"domain_key":
+"support",
+"label":
+"How to get Alerts",
+"uuid":
+"5828F"},
+{"domain":
+"alerts.vzw.com",
+"secure":
+"1",
+"url":
+"/guest/general/Browse/Categories.do?lid=//global//messaging//text and picture alerts//view all alerts",
+"domain_key":
+"alerts",
+"label":
+"View all Alerts",
+"uuid":
+"402AE"}],
+"uuid":
+"37B8A"}],
+"uuid":
+"46632"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/index.html?tab=business&lid=//global//business",
+"domain_key":
+"vzw",
+"label":
+"Business",
+"menuitem":
+[{"domain":
+"b2b.vzw.com",
+"secure":
+"0",
+"url":
+"/productsservices/devices/?lid=//global//business//phones",
+"domain_key":
+"b2b",
+"label":
+"Phones",
+"uuid":
+"4363B"},
+{"domain":
+"b2b.vzw.com",
+"secure":
+"0",
+"url":
+"/productsservices/businesscallingplans/?lid=//global//business//business plans",
+"domain_key":
+"b2b",
+"label":
+"Business Plans",
+"uuid":
+"360B9"},
+{"domain":
+"b2b.vzw.com",
+"secure":
+"0",
+"url":
+"/productsservices/?lid=//global//business//products and services",
+"domain_key":
+"b2b",
+"label":
+"Products %26amp%3B Services",
+"uuid":
+"34C57"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/smb/?lid=//global//business//small business",
+"domain_key":
+"vzw",
+"label":
+"Small Business",
+"uuid":
+"36C78"},
+{"domain":
+"b2b.vzw.com",
+"secure":
+"0",
+"url":
+"/govt/overview.html?lid=//global//business//government",
+"domain_key":
+"b2b",
+"label":
+"Government",
+"uuid":
+"2B87E"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"1",
+"url":
+"/b2c/employee/emaildomainauthentication.jsp?lid=//global//business//employee discounts",
+"domain_key":
+"vzw",
+"label":
+"Employee Discounts",
+"uuid":
+"28D9D"},
+{"domain":
+"b2b.vzw.com",
+"secure":
+"0",
+"url":
+"/productsservices/businesspromotions.html?lid=//global//business//current promotions",
+"domain_key":
+"b2b",
+"label":
+"Current Promotions",
+"uuid":
+"2CB0F"}],
+"uuid":
+"3D096"},
+{"domain":
+"support.vzw.com",
+"secure":
+"0",
+"url":
+"?lid=//global//support",
+"domain_key":
+"support",
+"label":
+"Support",
+"menuitem":
+[{"domain":
+"support.vzw.com",
+"secure":
+"0",
+"url":
+"/billing/?lid=//global//support//billing and account",
+"domain_key":
+"support",
+"label":
+"Billing %26amp; Account",
+"uuid":
+"45D14"},
+{"domain":
+"support.vzw.com",
+"secure":
+"0",
+"url":
+"/phones/?lid=//global//support//phones and devices",
+"domain_key":
+"support",
+"label":
+"Phones %26amp; Devices",
+"uuid":
+"4372D"},
+{"domain":
+"support.vzw.com",
+"secure":
+"0",
+"url":
+"/features/?lid=//global//support//features and services",
+"domain_key":
+"support",
+"label":
+"Features %26amp; Services",
+"uuid":
+"44992"},
+{"domain":
+"smartphones.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/support?lid=//global//support//smartphone resource center",
+"domain_key":
+"smartphones",
+"label":
+"Smartphone Resource Center",
+"uuid":
+"576BD"},
+{"domain":
+"support.vzw.com",
+"secure":
+"0",
+"url":
+"/faqs/index.html?lid=//global//support//faqs",
+"domain_key":
+"support",
+"label":
+"FAQs",
+"uuid":
+"475CC"},
+{"domain":
+"community.vzw.com",
+"secure":
+"0",
+"url":
+"?lid=//global//support//customer forums",
+"domain_key":
+"community",
+"label":
+"Customer Forums",
+"uuid":
+"38DD3"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/myaccount/welcome.jsp?lid=//global//support//new customers",
+"domain_key":
+"vzw",
+"label":
+"New Customers",
+"uuid":
+"36394"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/orderstatus/OrderStatusForm?lid=//global//support//get status",
+"domain_key":
+"vzw",
+"label":
+"Get Status",
+"menuitem":
+[{"body":
+"Track your orders and rebates.",
+"uuid":
+"3EB19",
+"label":
+"Get Status"},
+{"type":
+"separator",
+"uuid":
+"46B4A"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/rebates?lid=//global//support//get status//rebate center",
+"domain_key":
+"vzw",
+"label":
+"Rebate Center",
+"uuid":
+"3FF65"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/orderstatus/OrderStatusForm?lid=//global//support//get status//order status",
+"domain_key":
+"vzw",
+"label":
+"Order Status",
+"uuid":
+"42CBC"}],
+"uuid":
+"3ABFA"},
+{"domain":
+"business.verizonwireless.com",
+"secure":
+"1",
+"url":
+"/b2b/jsp/popups/optin.jsp?sourceSite=Care&lid=//global//support//sign up for email updates",
+"domain_key":
+"business",
+"label":
+"Sign Up for Email Updates",
+"uuid":
+"3FF8B"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/vzwfly?lid=//global//support//contact us",
+"domain_key":
+"vzw",
+"label":
+"Contact Us",
+"uuid":
+"55A8C"}],
+"uuid":
+"51F38"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/index.html?tab=myaccount&lid=//global//my verizon",
+"domain_key":
+"vzw",
+"label":
+"My Verizon",
+"menuitem":
+[{"domain":
+"myaccount.verizonwireless.com",
+"secure":
+"1",
+"url":
+"/clp/login?;lid=//global//my verizon//personal account",
+"domain_key":
+"myverizon",
+"label":
+"My Personal Account",
+"menuitem":
+[{"body":
+"Upgrade your phone, change your plan, pay your bill and more.",
+"uuid":
+"4AC77",
+"label":
+"My Personal Account"},
+{"type":
+"separator",
+"uuid":
+"4281E"},
+{"domain":
+"myaccount.verizonwireless.com",
+"secure":
+"1",
+"url":
+"/clp/login?;lid=//global//my verizon//personal account//login",
+"domain_key":
+"myverizon",
+"label":
+"Sign In",
+"uuid":
+"383EB"},
+{"domain":
+"myaccount.verizonwireless.com",
+"secure":
+"1",
+"url":
+"/accessmanager/public/controller?action=displayRegistration&lid=//global//my verizon//personal account//register",
+"domain_key":
+"myverizon",
+"label":
+"Register",
+"uuid":
+"355AF"},
+{"domain":
+"myaccount.verizonwireless.com",
+"secure":
+"1",
+"url":
+"/accessmanager/public/controller?action=displayForgotPassword&lid=//global//my verizon//personal account//reset password",
+"domain_key":
+"myverizon",
+"label":
+"Reset Password",
+"uuid":
+"3A5AD"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"1",
+"url":
+"/b2c/store/controller?item=cardItem&action=viewCardHome&lid=//global//my verizon//my personal account//buy prepaid refills",
+"domain_key":
+"vzw",
+"label":
+"Buy Prepaid Refill Cards",
+"uuid":
+"46E72"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/myverizondemo?lid=//global//my verizon//personal account//view my verizon demo",
+"domain_key":
+"vzw",
+"label":
+"View My Verizon Demo",
+"uuid":
+"361D7"}],
+"uuid":
+"3B567"},
+{"domain":
+"mblogin.verizonwireless.com",
+"secure":
+"1",
+"url":
+"/amserver/UI/Logout?lid=//global//my verizon//my business account",
+"domain_key":
+"mblogin",
+"label":
+"My Business Account",
+"menuitem":
+[{"body":
+"Pay bills, manage accounts, and access reports.",
+"uuid":
+"4F24A",
+"label":
+"My Business Account"},
+{"type":
+"separator",
+"uuid":
+"3D33C"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/index.html?tab=business&lid=//global//my verizon//my business account//login&tUrl=https://mblogin.verizonwireless.com/amserver/UI/Logout",
+"domain_key":
+"vzw",
+"label":
+"Login",
+"uuid":
+"3E3F2"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/enroll/?lid=//global//my verizon//my business account//register",
+"domain_key":
+"vzw",
+"label":
+"Register",
+"uuid":
+"3AB77"},
+{"domain":
+"www.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/b2c/businessSolutions/mybiz/index.jsp?lid=//global//my verizon//my business account//learn more",
+"domain_key":
+"vzw",
+"label":
+"Learn More",
+"uuid":
+"37E1D"},
+{"domain":
+"b2b.verizonwireless.com",
+"secure":
+"0",
+"url":
+"/tbmb/forgotPassword.do?lid=//global//my verizon//my business account//reset password",
+"domain_key":
+"b2b",
+"label":
+"Reset Password",
+"uuid":
+"42608"}],
+"uuid":
+"436F0"}],
+"uuid":
+"240AD"}]}}

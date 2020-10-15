@@ -1,0 +1,22 @@
+
+Z:\python projects\aardvark>if 1. == . goto end 
+
+Z:\python projects\aardvark>if 1. == 1. goto method1 
+
+Z:\python projects\aardvark>main.py --profile --psyco --input=Bigtest.txt 
+Using Method #1
+_property_dict=({'18': 4L, '31': 1L, '27': 3L, '17': 2L})
+_handlers=({'18': <function handle_property at 0x00B65970>, '31': <function handle_property at 0x00B65970>, '27': <function handle_property at 0x00B65970>, '17': <function handle_property at 0x00B65970>})
+len(_list)=(344180)
+         3 function calls in 127.994 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  127.994  127.994 <string>:1(<module>)
+        1  127.994  127.994  127.994  127.994 main.py:174(main)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+Z:\python projects\aardvark>goto end 

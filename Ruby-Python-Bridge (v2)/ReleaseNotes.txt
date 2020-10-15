@@ -1,0 +1,103 @@
+Release Notes:
+
+Ruby-Python-Bridge_0_1_12:
+
+* Now using a Proxy Front-End for the Bridge to help make the Ruby code less complex and more robust.
+* Stress Tested successfully with 50 concurrent Ruby instances all running transactions across the Bridge.
+* Ruby no longer has to make two connections just to talk to the Bridge - Ruby now makes one connection for each transaction with the Bridge.
+* The Bridge now spawns a worker-thread only when processing a transaction with a Ruby client.
+* The Bridge now disconnects with the client after responding with the results of the transaction.  Connections are not persistent beyond the transmission of the response.
+
+Ruby-Python-Bridge_0_1_11:
+
+* Updated te Ruby code to Demo how to use the Bridge (See also the Ruby file called "doprocess.rb").
+
+Ruby-Python-Bridge_0_1_10:
+
+* Now Updating SalesForce Objects.
+* Grammar for Updating Objects in SalesForce:
+*   See the Grammar Rules Below:
+*      <bridge username="username-goes-here" password="password-goes-here" staging="1"><update table="Case_Watcher_List__c"><item id="another-record-id-goes-here"><column name="Name" value="data-goes-here"/><column name="Email__c" value="name@domain.com"/><column name="Case_Watcher__c" value="record-id-goes-here"/></item></update></bridge>
+
+Ruby-Python-Bridge_0_1_9:
+
+* Now properly logging into the SalesForce Sandbox when the Staging option is used upon submitting SOQL Code for evaluation.
+* Now Creating SalesForce Objects. Returns a list of ID elements for each record created via XML.
+* Grammar for Creating Objects in SalesForce:
+*   Using Staging Server:
+*      <bridge username="username-goes-here" password="password-goes-here" staging="1"><create table="Case_Watcher_List__c"><column name="Name" value="data-goes-here"/><column name="Email__c" value="name@domain.com"/><column name="Case_Watcher__c" value="record-id-goes-here"/></create></bridge>
+*   Using Production Server:
+*      <bridge username="username-goes-here" password="password-goes-here" staging="0"><create table="Case_Watcher_List__c"><column name="Name" value="data-goes-here"/><column name="Email__c" value="name@domain.com"/><column name="Case_Watcher__c" value="record-id-goes-here"/></create></bridge>
+*    OR
+*      <bridge username="username-goes-here" password="password-goes-here"><create table="Case_Watcher_List__c"><column name="Name" value="data-goes-here"/><column name="Email__c" value="name@domain.com"/><column name="Case_Watcher__c" value="record-id-goes-here"/></create></bridge>
+*   Elements of the Create Grammar:
+*    Opening Tag is <bridge username="username-goes-here" password="password-goes-here"> <-- This specifies your user credentials.
+*        Notice the optional attribute: staging="1" or staging="0" (default) <-- The default is Production mode so be careful with this attribute.
+*      Opening Tag for Object Creation is <create table="Case_Watcher_List__c"> <-- This specifies the Table Name for the object creation.
+*        Data Entity Tags:  <column name="Name" value="data-goes-here"/>  <-- This specifies the column name and column value for the object creation.
+*      Closing Tag for Object Creation is </create> <-- This closes the Object Creation activity.
+*    Closing Tag is </bridge> <-- This tag closes the Bridge connection.
+* Now Deleting SalesForce Objects. Takes a list of record ID's and uses Apex to delete them. (Same Grammar Rules as stated above.)
+*    Use the Bridge Opening and Close Tags to specify a Bridge Connection.
+*      <delete table="Case_Watcher_List__c"> ... </delete> <-- This specifies the table from which the list of ID records will be deleted.
+*        <item id="record-id-goes-here"/>  <-- This specifies the record to delete.  One Tag per record to form the list of record ID's to delete.
+*   Sample Object Deletion using Staging Server:
+*      <bridge username="username-goes-here" password="password-goes-here" staging="1"><delete table="Case_Watcher_List__c"><item id="record-id-goes-here"/><item id="another-record-id-goes-here"/></delete></bridge>
+
+Ruby-Python-Bridge_0_1_8:
+
+* XML is now an option when issuing SOQL queries to the Bridge, XML is required for all updates to SalesForce data (coming soon).
+
+Ruby-Python-Bridge_0_1_7:
+
+* XML coming back from SalesForce Connector has been revised to make it easier to use.
+* Ruby code has been revised to allow larger blocks of XML to be received.
+* Successfully tested with 5 separate Ruby instances each requesting data from SalesForce thru the Bridge.
+* (Do Not Use IRB - it is known to have problems running this code.)
+
+Ruby-Python-Bridge_0_1_6:
+
+* Ruby-Python-Bridge now provides a pool of 10 controller conversations (support busy Rails sites).
+* Ruby-Python-Bridge now provides a pool of 1000 worker threads (each Rails hit can process a separate conversation with the Bridge).
+* This is the first version that supports Ruby on Rails.
+* The Ruby-Python-Bridge is now able to handle 10 simultaneous conversations with 10 separate Rails hits.
+* Every time a conversation is initiated with the Ruby-Python-Bridge Controller (ports 55555 thru 55555+10 inclusive) a new Controller is spawned using the next unused port within this range.
+* Each Ruby-Python-Bridge Controller controls access through the Bridge using ports 60000+.
+
+Ruby-Python-Bridge_0_1_5:
+
+* Ruby-Python-Bridge now provides a pool of 999 controller conversations (support busy Rails sites).
+* Ruby-Python-Bridge now provides a pool of 1000 worker threads (each Rails hit can process a separate conversation with the Bridge).
+* This is the first version that supports Ruby on Rails.
+* The Ruby-Python-Bridge is now able to handle 999 simultaneous conversations with 999 separate Rails hits.
+* Every time a conversation is initiated with the Ruby-Python-Bridge Controller (ports 55555 thru 56553 inclusive) a new Controller is spawned using the next unused port within this range.
+* Each Ruby-Python-Bridge Controller controls access through the Bridge using ports 56555 thru 57554 inclusive.
+
+Ruby-Python-Bridge_0_1_4:
+
+* Ruby-Python-Bridge now provides a pool of 1000 worker threads.
+* Ruby code provides an Object-Oriented interface.
+
+Ruby-Python-Bridge_0_1_3:
+
+* Provides a multi-threaded interface suitable for use in a Rails App.
+* Rails app requests a connection, gets back a port number for the connection.
+* Rails apps can request as many connections as required (supports up to 100 requests per second).
+* Port 55555 is used as the controller, ports 55556 thru 56556 are used as worker ports (1000 worker ports are available).
+* Ruby on Rails App is responsible for detecting when the Python server is not able to allocate a new worker port listener.
+* Ruby on Rails App is responsible for closing worker port threads by issuing the appropriate shutdown command to each listener.
+
+Ruby-Python-Bridge_0_1_2:
+
+* Provides a minimal interface between Ruby and Python via TCP/IP for the SalesForce API via SOQL.
+* Cannot be used for Rails but works great for Ruby without Rails (Rails requires a multi-threaded interface).
+
+Ruby-Python-Bridge_0_1_1:
+Ruby-Python-Bridge_0.0.1:
+
+* Provides a minimal interface between Ruby and Python via TCP/IP.
+* This allows the Python code to be either distributed or local.
+* Virtually any Python code can be executed from Ruby using this technique.
+* See the Ruby code for a sample of what the Ruby-Python Bridge can do for you.
+
+Copyright 2007-2008, Hierarchical Applications Limited, Inc., All Rights Reserved., Licensed under LGPL (http://www.fsf.org/licensing/licenses/lgpl.html/view?searchterm=LGPL) License Restricted to non-commercial educational use only.

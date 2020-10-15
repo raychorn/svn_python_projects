@@ -1,0 +1,19 @@
+HTTP Basic Auth
+
+The code in auth-basic.tac is very simple, used to show the basic auth working.
+Run twistd -ny auth-basic.tac to test.
+
+For a real world example, check out the redis-basic.tac.
+
+Create new users using the standard redis client:
+$ redis-cli set cyclone:username password
+$ redis-cli set cyclone:foo bar
+
+Or the web service:
+$ curl -D - -d "p=bar" http://localhost:8888/u/foo
+
+Run the server:
+$ twistd -ny redis-basic.tac
+
+Go to the browser and authenticate yourself, or use curl:
+$ curl -D - -u "foo:bar" http://localhost:8888

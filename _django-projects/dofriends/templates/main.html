@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Entrance{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+  // this is where the extra JavaScript goes...
+  // pass the following in the query string: CSS, header, body, footer - parse from JavaScript window.location 
+  //$.get("/global-nav/css-loggedout/globalnav-flex.css",{},function (data) { alert(data); });
+</script>
+{% endblock %}
+
+{% block include-css %}include_css('/static/css/css.css');{% endblock %}
+
+{% block document-ready %}
+$('#enterbutton').hide();
+$('#logo_pix1').hide();
+$('#leavebutton').hide();
+include_js('/static/js/jquery/uuid/uuid.js',function(){
+    var u = $.cookie('uuid');
+    if (u == null) {
+	$('#enterbutton').show();
+	$('#leavebutton').show();
+	$('#logo_pix1').show();
+    } else {
+	window.location = '/enter/'+u;
+    }
+});
+$('#enterbutton').click(function() {
+    var u = jQuery.uuid();
+    $.cookie('uuid', u, { expires: 30, path: '/', domain: '127.0.0.1', secure: false }); // 'dofriends.com'
+    window.location = '/enter/'+u;
+});
+$('#leavebutton').click(function() {
+  window.location = 'http://www.vyperlogix.com';
+});
+{% endblock %}
+
+{% block onload-ie %}
+    var t = 'This site is best viewed using Google Chrome or Mozilla FireFox 3.x however you are using IE so now you have to download one of the approved browsers !';
+    var c = document.getElementById('warning2');
+    if (c) {
+	c.innerHTML = '<p style="color:#FF0;">'+t+'</p><p>You can <a href="http://www.google.com/chrome" target="_blank">download Google Chrome</a> or <a href="http://www.mozilla.com/en-US/products/firefox/" target="_blank">download Mozilla FireFox</a></p><p>Come back with one of the supported browsers...</p>';
+    }
+    var c = document.getElementById('choices');
+    if (c) {
+	c.innerHTML = '';
+    }
+    var c = document.getElementById('logo_pix1');
+    if (c) {
+	c.style.display = 'none';
+    }
+    alert(t);
+{% endblock %}
+
+{% block container %}
+<div id="logo" class="align-center">
+<a href="/"><img src="/static/logo.jpg" alt="logo" border="0"></a><BR/>
+<a href="/"><img id="logo_pix1" src="/get-image/tb/logo/{{ timeStampForFileName }}/" alt="logo-pix"></a>
+</div>
+
+<div id="warning" class="align-center">
+	WARNING: This website contains explicit adult material.
+</div>
+
+<div id="warning2" class="align-center">
+		You may only enter this Website if you are at least
+		18 years of age, or at least the age of majority in the jurisdiction
+		where you reside or from which you access this Website and you agree 
+		to all <a href="terms.html">Terms of Service</a> including prohibitions against accessing this
+		Website from specified zip codes located <a href="prohibited.html">here</a>.  If you do not meet 
+		these requirements, then you do not have permission to use the Website.
+</div>
+
+<div id="choices" class="align-center">
+    <input id="enterbutton" value="Enter" type="submit"> <input id="leavebutton" value="Leave" type="submit">
+</div>
+
+<div id="warning3" class="align-center">
+	Please email <a href="mailto:support@dofriends.com" class="smarterwiki-linkify">support@dofriends.com</a> if you are having problems with the site.<br>
+	Cookies must be enabled.
+</div>
+{% endblock %}

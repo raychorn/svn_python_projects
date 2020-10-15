@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#####
+# wrapper to launch the mainline of demo.py
+#
+# Author:    Kevin Shuk
+# Date:      2007-05-15
+# Copyright: (c) 2007 Kevin Shuk, Canonical Ltd., All Rights Reserved
+#
+# $ID: $
+#####
+
+# find the actual path of the script, even if it is symlinked multiple levels
+RAWPATH=$0
+while [ -L $RAWPATH ]; do
+    RAWPATH=`readlink $RAWPATH`;
+done
+
+SCRIPTPATH=$RAWPATH
+SCRIPTNAME=`basename $SCRIPTPATH`
+SCRIPTDIR=`dirname $SCRIPTPATH`
+
+source ${SCRIPTDIR}/env.sh
+
+
+$PYTHON ${TESTDIR}/demo.py $*

@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	$(document).ready(function() {
+
+		$('#id_docfile').change(function(){
+			$('#input_file_to_upload').val($(this).val());
+		});
+
+		$('INPUT[type="file"]').change(function () {
+			var ext = this.value;
+			try {
+				ext = this.value.match(/\.(.+)$/)[1];
+			} catch (e) {
+			}
+			switch (ext) {
+				case 'doc':
+				case 'docx':
+					var v = $('#input_file_to_upload').val();
+					if (v && (v.length > 0)) {
+						$('#div_file_upload_submit_button').show();
+					} else {
+						$('#div_file_upload_submit_button').hide();
+					}
+					break;
+				default:
+					$('#input_file_to_upload').val('');
+					$('#div_file_upload_submit_button').hide();
+					alert('You may upload Microsoft Word Docs, must be of type doc or docx only.');
+					this.value = '';
+			}
+		});
+
+		$('#input_file_to_upload').val('');
+		
+		$('#candidate_country').on('change', function() {
+			alert( this.value ); // or $(this).val()
+		});
+		
+  	});
+	
+	function signal_uploading_file() {
+		$('#div_file_upload_submit_button').hide();
+		$('#file_button_container').hide();
+		$('#input_file_to_upload').attr('disabled', 'disabled');
+		$("#ajaxBusyUploadingFile").show();
+	}
+	
+	function handle_drop_file(id) {
+		var __data__ = {'id':id};
+		$.ajax({
+			type: 'POST',
+			url: '/remove/file/',
+			data: __data__,
+			success: function (data) {
+				window.location.href = window.location.href;
+			},
+			 error: function(ts) { 
+                alert(ts.responseText);
+            },
+			dataType: 'json'
+		});			
+	}
+	
+	function signal_saving_profile() {
+		$('#div_candidate_profile_submit_button').hide();
+		//$('#candidate_fullname').attr('disabled', 'disabled');
+		$("#ajaxBusyUploadingFile").show();
+	}
+	
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+
+    <table id="container" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr height="50px">
+            <td>
+                <b>Job Seekers</b>
+            </td>
+        </tr>
+{% if IS_NOT_LOGGED_IN %}
+        <tr>
+            <td>
+                <p>Please <a href="/" target="_top">get a user account</a> to use this part of the site.</p>
+            </td>
+        </tr>
+{% endif %}
+{% if IS_LOGGED_IN %}
+    {% if really_has_candidates %}
+        <tr>
+            <td>
+                <p>Step 1. Edit your Candidate Profile, below, for any changes you wish to make.</p>
+                <p>Step 2. Upload your Resume.</p>
+            </td>
+        </tr>
+    {% else %}
+        <tr>
+            <td>
+                <p>Step 1. Create your Candidate Profile, below, before uploading your Resume.</p>
+                <p>Step 2. Upload your Resume (<small><i>the Resume Uploader appears AFTER your Profile has been saved</i></small>).</p>
+            </td>
+        </tr>
+    {% endif %}
+    <tr>
+        <td id="td_candidate_profile_header">
+            <B>Candidate Profile:</B>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form action="{{ candidate_action }}" method="post" enctype="application/x-www-form-urlencoded">
+                {% csrf_token %}
+                <p>{{ candidate_form.non_field_errors }}</p>
+                <p>{{ candidate_form.docfile.label_tag }} {{ candidate_form.docfile.help_text }}</p>
+                <p>
+                {% if has_candidates %}
+                    {% for candidate in candidates %}
+                        <NOBR><label><b>Full Name:</b></label>&nbsp;<input id="candidate_fullname" name="fullname" type="text" size="32" maxlength="32" value="{{ candidate.fullname }}" />&nbsp;<label><b>Telephone:</b></label>&nbsp;<input id="candidate_phone" name="phone" type="text" size="16" maxlength="16" value="{{ candidate.phone }}" /></NOBR><BR/>
+                        <NOBR><label><b>Country:</b></label>&nbsp;<select id="candidate_country">
+                        {% for country in countries %}
+                        	<option value="{{ country.abbrev }}"{{ country.selected }}>{{ country.abbrev }}</option>
+                        {% endfor %}
+                        </select></NOBR><BR/>
+                        <NOBR><label><b>City:</b></label>&nbsp;<input id="candidate_city" name="city" type="text" size="32" maxlength="32" value="{{ candidate.city }}" />&nbsp;&nbsp;
+                        <label><b>State:</b></label>&nbsp;<select id="candidate_state">
+                        {% for state in states %}
+                        	<option value="{{ state.abbrev }}"{{ state.selected }}>{{ state.abbrev }}</option>
+                        {% endfor %}
+                        </select></NOBR><BR/>
+                        &nbsp;&nbsp;
+                        <label><b>Zip Code:</b></label>&nbsp;<input id="candidate_zipcode" name="zipcode" type="text" size="16" maxlength="16" value="{{ candidate.zipcode }}" /></NOBR><BR/>
+                        <NOBR><label><b>Willing to Relocate:</b></label>&nbsp;<label><b>YES:</b></label><input id="candidate_relocateable_yes" name="relocateable" type="radio" value="YES" {{ candidate.relocateable_yes }}/>&nbsp;<label><b>NO:</b></label><input id="candidate_relocateable_no" name="relocateable" type="radio" value="NO" {{ candidate.relocateable_no }}/></NOBR><BR/>
+                    {% endfor %}
+                {% endif %}
+                </p>
+                <div id="div_candidate_profile_submit_button" style="display: inline">
+                    <p><input id="btn_submit" type="submit" value="Save..." title="Save your Profile." onClick="signal_saving_profile()" /></p>
+                </div>
+            </form>
+        </td>
+    </tr>
+    {% if really_has_candidates %}
+        {% if documents %}
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td width="100%" valign="top">
+                                <div class="datagrid">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><b>Uploaded Resumes</b></th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot style="display:none;"><tr><td colspan="3">
+                                            <div id="paging"><ul><li><a href="#"><span>Previous</span></a></li><li><a href="#" class="active"><span>1</span></a></li><li><a href="#"><span>2</span></a></li><li><a href="#"><span>3</span></a></li><li><a href="#"><span>4</span></a></li><li><a href="#"><span>5</span></a></li><li><a href="#"><span>Next</span></a></li></ul></div></tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr class="alt">
+                                                <td width="33%">
+                                                    <div id="div_files_list1">
+                                                        {% if documents %}
+                                                            <ul>
+                                                            {% for document in documents %}
+                                                                <li><NOBR><button id="btn_remove_file{{ document.id }}" onclick="handle_drop_file({{ document.id }});" class="fancy_button_placeholder" title="REMOVE">REMOVE "{{ document.docfile.fname }}"</button></NOBR></li>
+                                                            {% endfor %}
+                                                            </ul>
+                                                        {% endif %}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td id="ajaxBusyUploadingFile" style="display:none;">
+                                <div><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        {% endif %}
+            <tr>
+                <td>
+                    <div id="div_file_upload_form_message" style="display: {% if has_full_load %}inline{% else %}none{% endif %}">
+                    </div>
+                    <div id="div_file_upload_form" style="display: inline">
+                        <form action="{{ document_action }}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <p>{{ document_form.non_field_errors }}</p>
+                            <p>{{ document_form.docfile.label_tag }} {{ document_form.docfile.help_text }}</p>
+                            <p>
+                                <p>Upload your Resume (Microsoft Word Docs only)</p>
+                                {{ document_form.docfile.errors }}
+                                <input id="input_file_to_upload" type="text" size="60" readonly />
+                                <div id="file_button_container" class="file_button_container">{{ form.docfile }}</div>
+                            </p>
+                            <div id="div_file_upload_submit_button" style="display: none">
+                                <p><input id="btn_submit" type="submit" value="Upload Resume..." title="Upload your Microsoft Word Resume" onClick="signal_uploading_file()" /></p>
+                            </div>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+    {% endif %}
+{% endif %}
+        <tr>
+            <td>
+            </td>
+        </tr>
+    </table>   
+{% endblock %}

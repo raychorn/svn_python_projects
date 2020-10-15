@@ -1,0 +1,19 @@
+<style>
+	#error_message {
+		color: red;
+		font-weight: bold;
+		background-color: white;
+	}
+</style>
+
+{% block content %}
+
+<h1>Upload Image</h1>
+{% if form.has_errors %}
+    <p id="error_message">Unable to upload the image.  Please try again.</p>
+{% endif %}
+<p id="error_message">{{ ERROR_MESSAGE }}</p>
+
+{{ form }}
+
+{% endblock %}

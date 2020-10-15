@@ -1,0 +1,10 @@
+Release Notes:
+
+Version 0.0.1:
+
+* Provides a minimal interface between Ruby and Python via TCP/IP.
+* This allows the Python code to be either distributed or local.
+* Virtually any Python code can be executed from Ruby using this technique.
+* See the Ruby code for a sample of what the Ruby-Python Bridge can do for you.
+
+Copyright 2007, Hierarchical Applications Limited, Inc., All Rights Reserved.

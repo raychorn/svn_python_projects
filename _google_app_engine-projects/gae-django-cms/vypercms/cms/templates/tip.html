@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Message info" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Message info" %}</h1>
+
+{{ tip|safe }}
+
+{% endblock %}

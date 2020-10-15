@@ -1,0 +1,6 @@
+buildPath = 'Z:/python projects/adobe-air-deployment-system-v2'
+toc1 = [('foo1.PKG', 'z:/python projects/adobe-air-deployment-system-v2/@archive/134/foo1.PKG', 'DATA')]
+useConsole = True
+useShelved = True
+shelvedFname = 'Z:/python projects/adobe-air-deployment-system-v2/archive-template.dat'
+exeName = 'z:/python projects/adobe-air-deployment-system-v2/@archive/134/foo800.EXE'

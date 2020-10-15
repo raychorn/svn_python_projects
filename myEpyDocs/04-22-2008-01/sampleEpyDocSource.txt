@@ -1,0 +1,200 @@
+  1  """ 
+  2  Process the creation od Interested partied list (default) and  
+  3   
+  4  add them to the CR. 
+  5   
+  6  """ 
+  7   
+  8  sfUrl = 'https://na1.salesforce.com' 
+  9   
+ 10  import pprint 
+ 11  import sys 
+ 12  import textwrap 
+ 13  import datetime 
+ 14  from optparse import OptionParser 
+ 15   
+ 16  from sfMagma import * 
+ 17  from sfConstant import * 
+ 18  from sfUtil import * 
+ 19   
+ 20 -class CaseWatcherList(SFMagmaTool): 
+ 21       
+ 22      logname = 'CaseWatherList' 
+ 23       
+ 24 -    def getCheckSince(self): 
+ 25          if (sys.platform == 'win32'): 
+ 26              tmp_root = os.sep.join([os.environ['TMP'],'processDates']) 
+ 27              if (os.path.exists(tmp_root) == False): 
+ 28                  os.mkdir(tmp_root) 
+ 29          else: 
+ 30              tmp_root = '/home/sfscript/tmp/processDates' 
+ 31          filename = 'LastCheckedCRNotificationDate'   
+ 32          checksince = None 
+ 33                         
+ 34          curDirPath = os.getcwd() 
+ 35          tmpDirPath = tmp_root 
+ 36          os.chdir(tmpDirPath)        
+ 37           
+ 38          tmpPath = os.path.join(tmp_root,filename) 
+ 39          if os.path.isfile(tmpPath): 
+ 40              curFile=open(tmpPath, "rb", 0) 
+ 41              lines = [l for l in curFile.readlines() if len(l.strip()) > 0] 
+ 42              checksince = None 
+ 43              if (len(lines) > 0): 
+ 44                  checksince = lines[-1] 
+ 45              curFile.close() 
+ 46              os.remove(tmpPath)             
+ 47           
+ 48          try: 
+ 49              #open file stream 
+ 50              #secsAgo=60*60*24 
+ 51              newfilename=os.path.join(tmp_root,filename) 
+ 52              file = open(newfilename, 'a') 
+ 53              file.write(timeStamp()) 
+ 54              file.close() 
+ 55          except IOError: 
+ 56              msg= "There was an error writing to %s" %filename 
+ 57              self.setLog(msg, 'warn') 
+ 58              pass 
+ 59           
+ 60          if checksince in [None,'',""]: 
+ 61              fromSecs = time.time() 
+ 62              fromSecs = datetime.datetime.fromtimestamp(fromSecs) 
+ 63              diff = datetime.timedelta(hours=-1) 
+ 64              previousHour=fromSecs + diff             
+ 65              previousHour=time.mktime(previousHour.timetuple())                     
+ 66              preHourStr = self.getAsDateTimeStr(previousHour)             
+ 67              checksince=preHourStr 
+ 68               
+ 69          os.chdir(curDirPath) 
+ 70          self.createNewNotifyObj(checksince) 
+ 71                                 
+ 72          return      
+ 73       
+ 74 -    def createNewNotifyObj(self,checksince): 
+ 75           
+ 76          if checksince not in [None,'',""]:              
+ 77              soql=" Select OwnerId, CreatedDate, Id, LastModifiedDate,  Name  from Case_Watcher__c where LastModifiedDate > %s" %checksince 
+ 78              logPrint('soql=[%s]' % soql) 
+ 79                           
+ 80              ret1 = self.query('Case_Watcher__c', soql=soql)          
+ 81              logPrint('ret1=[%s]' % ret1) 
+ 82               
+ 83              if ret1  in BAD_INFO_LIST: 
+ 84                  msg ="Could not find any records for Case_Watcher__c Object" 
+ 85                  logPrint('msg=[%s]' % msg) 
+ 86                  print msg 
+ 87                  self.setLog(msg, 'warn') 
+ 88              else:                           
+ 89                  for buildLink in ret1:    
+ 90                      userId = buildLink.get('OwnerId')                                                         
+ 91                      ipId = buildLink.get('Id')                                         
+ 92                      if userId not in BAD_INFO_LIST: 
+ 93                          self.createUserContact(userId,ipId) 
+ 94                      continue 
+ 95                  pass     
+ 96          else: 
+ 97              msg = "No query need to be performed" 
+ 98              logPrint('msg=[%s]' % msg) 
+ 99              self.setLog(msg) 
+100                     
+101          return 
+102       
+103 -    def createUserContact(self,userId,ipId):                 
+104          idList = [] 
+105          idList.append(userId)          
+106          fields = ('Id','Email', 'FirstName','IsActive','LastName','User_Contact_Id__c') 
+107          ret = self.retrieve(idList, 'User', fieldList=fields) 
+108                   
+109          if ret in BAD_INFO_LIST:                         
+110              msg = "Could not find any records for User Id: %s" %teamId 
+111              logPrint('msg=[%s]' % msg) 
+112              print msg 
+113              self.setLog(msg, 'warn') 
+114              pass                 
+115          else: 
+116              for cont in ret: 
+117                  contactId = cont.get('User_Contact_Id__c') 
+118                  email = cont.get('Email')                  
+119                  self.createCRNotificationObj(email,contactId,ipId,'User Alias','False') 
+120              pass 
+121          return  
+122       
+123 -    def getContactEmail(self, contactId):        
+124          email=None 
+125          idList = [] 
+126          idList.append(contactId)          
+127          fields = ('Id','Email') 
+128          ret = self.retrieve(idList, 'Contact', fieldList=fields) 
+129                   
+130          if ret in BAD_INFO_LIST:                         
+131              msg = "Could not find any records for Product team Id: %s" %teamId 
+132              logPrint('msg=[%s]' % msg) 
+133              print msg 
+134              self.setLog(msg, 'warn') 
+135              pass                 
+136          else: 
+137              for cont in ret: 
+138                  email=cont.get('Email')                                                  
+139              pass 
+140           
+141          return email 
+142       
+143 -    def createCRNotificationObj(self,email,contactId,ipId, name,isEmailAlias):         
+144          newEmail=email 
+145          soql="Select Email__c, Id, Case_Watcher__c, Name from Case_Watcher_List__c   where Case_Watcher__c= '%s'" %ipId                 
+146          logPrint('soql=[%s]' % soql) 
+147          ret = self.query('Case_Watcher_List__c', soql=soql)         
+148          logPrint('ret=[%s]' % ret) 
+149          if ret in BAD_INFO_LIST:                         
+150              msg ="Could not find any Case_Watcher__c Object"             
+151              logPrint('msg=[%s]' % msg) 
+152              print msg 
+153              self.setLog(msg, 'warn')                         
+154              data = [{'Email__c':newEmail,'Contact__c':contactId,'Case_Watcher__c':ipId,'Name':name,'Alias_Email__c':isEmailAlias}]                         
+155              contactObjRes = self.create('Case_Watcher_List__c', data)               
+156          else: 
+157              emailExist=False 
+158              for ip in ret:                 
+159                  existEmail=ip.get('Email__c')                 
+160                  if newEmail==existEmail: 
+161                      msg= "Record with the same email Id alraedy exist:  %s" %existEmail 
+162                      logPrint('msg=[%s]' % msg) 
+163                      self.setLog(msg) 
+164                      emailExist=True 
+165                      self.setLog(msg) 
+166                      break 
+167                  continue 
+168               
+169              if not emailExist:                 
+170                  data = [{'Email__c':newEmail, 'Contact__c':contactId,'Case_Watcher__c':ipId,'Name':name}]                 
+171                  contactObjRes = self.create('Case_Watcher_List__c', data)    
+172                  pass         
+173              pass 
+174                   
+175          return 
+176       
+177 -    def getContactId(self,userId): 
+178          contId=None         
+179          idList = [] 
+180          idList.append(userId) 
+181           
+182          if userId is not None: 
+183              fields = ('Id', 'User_Contact_Id__c', 'Email', 'IsActive') 
+184              res = self.retrieve(idList, 'User', fieldList=fields) 
+185   
+186              if res not in BAD_INFO_LIST: 
+187                  for user in res: 
+188                      contId = user.get('User_Contact_Id__c')                     
+189                      continue 
+190                  pass 
+191              pass 
+192          return contId     
+193       
+194 -def main():     
+195      n=CaseWatcherList() 
+196      n.getCheckSince() 
+197   
+198  if __name__ == "__main__": 
+199      main() 
+200   

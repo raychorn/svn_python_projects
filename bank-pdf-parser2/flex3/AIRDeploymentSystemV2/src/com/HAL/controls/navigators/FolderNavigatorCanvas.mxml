@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="215" height="300">
+	<mx:states>
+		<mx:State name="FileNameState">
+			<mx:RemoveChild target="{fileList}"/>
+			<mx:RemoveChild target="{btn_navigateHome}"/>
+			<mx:RemoveChild target="{btn_navigateUp}"/>
+			<mx:RemoveChild target="{hbox1}"/>
+			<mx:RemoveChild target="{vbox1}"/>
+			<mx:AddChild position="lastChild">
+				<mx:VBox x="0" y="0" height="100" width="100%">
+					<mx:Label text="File Name:" id="label_FileName"/>
+					<mx:TextInput id="input_fileName" text="Enter File Name here..." toolTip="Enter only the file name without the rest of the path without a file extension.  The file extension of {this.packageFileExtension} will be used when the system builds and saves the New Package.  Certain characters that are not allowed to be part of a Windows File Name will be automatically replaced with the underscore (_) character as these characters are being entered." width="100%" keyUp="onKeyUpFileNameInput(event)" creationComplete="onCreationCompleteFileNameInput(event)"/>
+					<mx:HBox width="100%" horizontalAlign="center">
+						<mx:Button label="OK" id="btn_Ok" click="onClickOKButton()"/>
+					</mx:HBox>
+				</mx:VBox>
+			</mx:AddChild>
+		</mx:State>
+	</mx:states>
+	<mx:Script>
+		<![CDATA[
+			import com.HAL.utils.FileUtils;
+			import mx.managers.FocusManager;
+			import com.HAL.views.PackageBuilderCanvas;
+			import mx.events.FlexEvent;
+			import com.HAL.controls.navigators.events.FileListInitContextMenuEvent;
+			import com.HAL.utils.ArrayCollectionUtils;
+			import mx.collections.ArrayCollection;
+			import mx.events.FileEvent;
+			import com.HAL.controls.navigators.events.FolderNavigatorChangedEvent;
+			import com.HAL.utils.FileListUtils;
+			import mx.controls.FileSystemEnumerationMode;
+			import mx.events.ListEvent;
+
+			public static const const_RemoveFolder:String = 'Remove Folder';
+			public static const const_NewFolder:String = 'New Folder';
+			
+			public static const state_FileNameState:String = 'FileNameState';
+			
+			private var isInitialized:Boolean = false;
+			
+			[Bindable]
+			private var _packageFileExtension:String = PackageBuilderCanvas._packageFileExtension;
+			
+			[Bindable]
+			private var _homePath:String = '';
+			
+			[Bindable]
+			private var _newPath:String = '';
+			
+			private var _isFileNameInputChanged:Boolean = false;
+			
+			private var _deferredCallLaters:Array = [];
+
+			[Event(name="folderNavigatorChanged", type="com.HAL.controls.navigators.events.FolderNavigatorChangedEvent")]
+			[Event(name="fileListInitContextMenu", type="com.HAL.controls.navigators.events.FileListInitContextMenuEvent")]
+			
+			public function set packageFileExtension(packageFileExtension:String):void {
+				this._packageFileExtension = packageFileExtension;
+			}
+			
+			public function get packageFileExtension():String {
+				return this._packageFileExtension;
+			}
+
+			private function processDeferredCallLaters():void {
+				var i:int;
+				var ac:ArrayCollection = new ArrayCollection(this._deferredCallLaters);
+				for (i = 0; i < ac.length; i++) {
+					var obj:Object = ac.getItemAt(i);
+					var target:* = obj.target;
+					target.callLater(obj.func, obj.args);
+				}
+			}
+			
+			private function onCreationCompleteFileNameInput(event:FlexEvent):void {
+				this.processDeferredCallLaters();
+				this.input_fileName.callLater(getFocus);
+			}
+			
+			private function onKeyUpFileNameInput(event:KeyboardEvent):void {
+				if (event.charCode == 13) {
+					this.btn_Ok.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
+				} else {
+					if (this._isFileNameInputChanged == false) {
+						this.input_fileName.text = String.fromCharCode(event.charCode);
+					}
+					this._isFileNameInputChanged = true;
+				}
+			}
+			
+			public function deferredCallLater(target:*, func:Function, ...args):void {
+				this._deferredCallLaters.push({'target':target, 'func':func, 'args':args});
+			}
+			
+			public function set isFileNameInputChanged(isFileNameInputChanged:Boolean):void {
+				this._isFileNameInputChanged = isFileNameInputChanged;
+			}
+			
+			public function get isFileNameInputChanged():Boolean {
+				return this._isFileNameInputChanged;
+			}
+			
+			public override function set currentState(value:String):void {
+				super.currentState = value;
+				this.parentDocument.currentState = value;
+			}
+			
+			private function onClickOKButton():void {
+				this.currentState = '';
+			}
+			
+			public function get newPath():String {
+				return this._newPath;
+			}
+			
+			public function set homePath(homePath:String):void {
+				var file:File;
+				var toks:Array;
+				var isPathValid:Boolean = true;
+				do {
+					try {
+						file = new File(homePath);
+						isPathValid = (file.exists);
+					} catch (err:Error) { isPathValid = false; }
+					if (isPathValid == false) {
+						toks = homePath.split(File.separator);
+						toks.pop();
+						homePath = toks.join(File.separator);
+						if (homePath.length == 0) {
+							break;
+						}
+					}
+				} while (isPathValid == false);
+				if (isPathValid) {
+					this._homePath = homePath;
+					if (this.isInitialized) {
+						this._homePath = FileUtils.correctFolderSpec(this._homePath);
+						this.fileList.directory = new File(this._homePath);
+					}
+				}
+			}
+			
+			public function get homePath():String {
+				return this._homePath;
+			}
+
+			private function onChangeFileSystemList(event:ListEvent):void {
+			}
+			
+			private function onDirectoryChangeFileSystemList(event:FileEvent):void {
+				this._newPath = this.fileList.directory.nativePath;
+				this.dispatchEvent(new FolderNavigatorChangedEvent(FolderNavigatorChangedEvent.TYPE_FOLDER_NAVIGATOR_CHANGED,this._newPath));
+			}
+			
+			private function onContextMenuItemSelect(event:ContextMenuEvent):void {
+				var cMenuItem:ContextMenuItem = ContextMenuItem(event.currentTarget);
+				if (cMenuItem.label == 'Home') {
+					this.onClickNavigateHomeButton();
+				} else if (cMenuItem.label == 'Up') {
+					this.onClickNavigateUpButton();
+				}
+			}
+			
+	        private function addCustomMenuItems(cMenu:ContextMenu):void {
+	            var item:ContextMenuItem = new ContextMenuItem('Home');
+	            cMenu.customItems.push(item);
+	            item.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onContextMenuItemSelect);
+	            item = new ContextMenuItem('Up');
+	            cMenu.customItems.push(item);
+	            item.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onContextMenuItemSelect);
+	        }
+
+			private function getContextMenu():ContextMenu {
+	            var cMenu:ContextMenu = new ContextMenu();
+	            cMenu.hideBuiltInItems();
+	            addCustomMenuItems(cMenu);
+	            return cMenu;
+			}
+			
+			public function initFileListContextMenu():void {
+				this.fileList.contextMenu = this.getContextMenu();
+			}
+			
+			
+			private function initFileSystemList():void {
+				if (this._homePath.length > 0) {
+					if (this._homePath.toUpperCase().indexOf(this.packageFileExtension) > -1) {
+						var toks:Array = this._homePath.split(File.separator);
+						toks.pop();
+						this._homePath = toks.join(File.separator);
+					}
+					this._homePath = FileUtils.correctFolderSpec(this._homePath);
+					this.fileList.directory = new File(this._homePath);
+				}
+				this.initFileListContextMenu();
+				this.dispatchEvent(new FileListInitContextMenuEvent(FileListInitContextMenuEvent.TYPE_FILE_LIST_INIT_CONTEXT_MENU));
+			}
+			
+			private function onCreationCompleteFileSystemList():void {
+				this.isInitialized = true;
+				this.initFileSystemList();
+			}
+			
+			private function filterFunction(file:File):Boolean {
+				var s:String = file.name;
+				return true;
+			}
+
+			private function refreshNavigationButtons():void {
+				this.btn_navigateUp.enabled = (FileListUtils.isFileListAtRoot(this.fileList) == false);
+				var cMenu:ContextMenu = ContextMenu(this.fileList.contextMenu);
+				var items:Array = cMenu.customItems;
+				var ac:ArrayCollection = new ArrayCollection(items);
+				var i:int = ArrayCollectionUtils.findIndexOfItem(ac,'label', 'Up');
+				var cMenuItem:ContextMenuItem;
+				if (i > -1) {
+					cMenuItem = items[i];
+					cMenuItem.enabled = this.btn_navigateUp.enabled;
+				}
+				this.btn_navigateUp.styleName = ((this.btn_navigateUp.enabled) ? 'EnabledButton' : 'DisabledButton');
+				this.btn_navigateUp.toolTip = ((this.btn_navigateUp.enabled) ? "Click this button to navigate to the parent folder for the currently selected folder." : 'This button has been disabled.  Navigate to a folder that is one level lower than the current folder to enable this button or Navigate to the HOME folder.');
+			}
+
+			private function onClickNavigateUpButton():void {
+				this.fileList.navigateUp();
+				this.refreshNavigationButtons();
+			}
+			
+			private function onClickNavigateHomeButton():void {
+				this.initFileSystemList();
+				this.refreshNavigationButtons();
+			}
+			
+			private function fileDataTip(item:*):String {
+				return item.name;
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox id="vbox1" x="5" y="0" height="{this.height-20}" width="{this.width-20}">
+		<mx:HBox width="100%" horizontalAlign="center" id="hbox1">
+			<mx:Button id="btn_navigateHome" toolTip="Click this button to navigate to the home folder, this is the folder you began with ({this._homePath})." click="onClickNavigateHomeButton()" icon="@Embed(source='assets/images/navigateHome.gif')"/>
+			<mx:Button id="btn_navigateUp" toolTip="Click this button to navigate to the parent folder for the currently selected folder." click="onClickNavigateUpButton()" upIcon="@Embed(source='assets/images/navigateUp.gif')" overIcon="@Embed(source='assets/images/navigateUp.gif')" disabledIcon="@Embed(source='assets/images/navigateUpDisabled.gif')"/>
+		</mx:HBox>
+		<mx:FileSystemList id="fileList" width="100%" height="100%" dataTipFunction="fileDataTip" filterFunction="filterFunction" showHidden="false" enumerationMode="{FileSystemEnumerationMode.DIRECTORIES_ONLY}" change="onChangeFileSystemList(event)" directoryChange="onDirectoryChangeFileSystemList(event)" creationComplete="onCreationCompleteFileSystemList()"/>
+	</mx:VBox>
+</mx:Canvas>

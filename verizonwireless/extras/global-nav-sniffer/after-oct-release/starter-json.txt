@@ -1,0 +1,43 @@
+{
+    "dataField" : "menu",
+    "meta" : {
+        "type" : "type",
+        "body" : "body",
+        "vOrientation" : "top",
+        "hOrientation" : "-2",
+        "target" : "target",
+        "id" : "id",
+        "label" : "label",
+        "domain" : "domain",
+        "url" : "url"
+    },
+    "menu" : [{
+        "label" : "Phones & Accessories",
+        "uuid" : "6b58e894-fd9c-4d0c-b1e1-9252efc662f7"
+    },
+    {
+        "label" : "Plans",
+        "uuid" : "5a788d61-713c-49c5-9d76-01adb754f5d7"
+    },
+    {
+        "label" : "Entertainment & Apps",
+        "uuid" : "7748ef18-d8f4-4855-9a94-c60166f63959"
+    },
+    {
+        "label" : "Messaging",
+        "uuid" : "a07ab1ac-09bc-47d0-be16-05bde6bd7db4"
+    },
+    {
+        "label" : "Business",
+        "uuid" : "756fea9b-12b0-405c-a344-8f6dd4bc6e0b"
+    },
+    {
+        "label" : "Support",
+        "uuid" : "52f1c001-5a70-400c-9a00-f2b9aea33444"
+    },
+    {
+        "label" : "My Verizon",
+        "uuid" : "a0987bfb-3f12-460d-8909-e6fa7a2d9cc6"
+    }],
+    "metaField" : "meta"
+}

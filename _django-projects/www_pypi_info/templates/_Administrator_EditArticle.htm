@@ -1,0 +1,90 @@
+<script type="text/javascript" src="/static/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
+tinyMCE.init({
+	// General options
+	mode : "textareas",
+	theme : "advanced",
+	width : "200",
+	plugins : "safari,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,imagemanager,filemanager",
+
+	// Theme options
+	theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect",
+	theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+	theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+	theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage",
+	theme_advanced_toolbar_location : "top",
+	theme_advanced_toolbar_align : "left",
+	theme_advanced_statusbar_location : "bottom",
+	theme_advanced_resizing : true,
+});
+</script>
+
+<div class=Section1>
+
+<h3>Edit Article</h3>
+
+<style>
+.formalchemy table tr td div {
+	width: 100%;
+}
+</style>
+
+<form name="editArticleForm" class="formalchemy" action="{{ HTTP_HOST }}/administrator/article/submit/" enctype="application/x-www-form-urlencoded" method="post">
+<table width="100%">
+	<tr>
+    	<td width="100%">
+                {{ FORM }}
+		</td>
+	</tr>
+	<tr>
+    	<td width="100%">
+                <NOBR><input type="submit" value="{{ SUBMIT_VALUE }}" onclick="this.disabled=true;"/>&nbsp;<input type="button" value="Cancel" onclick="this.disabled=true; window.location.href = '/administrator/articles/';"/></NOBR>
+		</td>
+	</tr>
+</table>
+</form>
+
+</div>
+
+{{ SECTIONS_CATS }}
+
+<script type="text/javascript">
+//<![CDATA[
+function clear_sels(sel) {
+	for (var i = sel.options.length-1; i > -1; i--) {
+		sel.options[i] = null;
+	}
+}
+
+s1 = document.getElementById("Jos_Sections-{{ SECTION_ID }}-title");
+s2 = document.getElementById("Jos_Categories-{{ CATEGORY_ID }}-title");
+t = '{{ SECTION_TITLE }}';
+if (s1.options[s1.selectedIndex].text != t) {
+	num = -1;
+	for (i = 0; i < s1.options.length-1; i++) {
+		if (s1.options[i].text == t) {
+			num = i;
+		}
+		s1.options[i].selected = false;
+	}
+	if (num > -1) {
+		s1.options[num].selected = true;
+	}
+}
+s1.onchange = function () {
+	var o = sect_cats[this.options[this.selectedIndex].value];
+	var i = 0;
+	if (o) {
+		s2.disabled = true;
+		clear_sels(s2);
+		for (i = 0; i < o.length; i++) {
+			s2.options[i] = new Option(cat_name[o[i]], o[i], false, false);
+		}
+		s2.disabled = false;
+	} else {
+		alert('Invalid selection... Oops.  Try back later on after we get things worked-out.');
+	}
+};
+//]]>
+</script>
+

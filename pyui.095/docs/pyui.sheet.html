@@ -1,0 +1,379 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pyui.sheet</title>
+<style type="text/css"><!--
+TT { font-family: lucidatypewriter, lucida console, courier }
+--></style></head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pyui.html"><font color="#ffffff">pyui</font></a>.sheet</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/projects/pyuicvs/pyui/sheet.py">c:\projects\pyuicvs\pyui\sheet.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;PyUI<br>
+#&nbsp;Copyright&nbsp;(C)&nbsp;2001-2002&nbsp;Sean&nbsp;C.&nbsp;Riley<br>
+#&nbsp;<br>
+#&nbsp;This&nbsp;library&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or<br>
+#&nbsp;modify&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;version&nbsp;2.1&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+#&nbsp;License&nbsp;as&nbsp;published&nbsp;by&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation.<br>
+#&nbsp;<br>
+#&nbsp;This&nbsp;library&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+#&nbsp;but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+#&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the&nbsp;GNU<br>
+#&nbsp;Lesser&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+#&nbsp;<br>
+#&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+#&nbsp;License&nbsp;along&nbsp;with&nbsp;this&nbsp;library;&nbsp;if&nbsp;not,&nbsp;write&nbsp;to&nbsp;the&nbsp;Free&nbsp;Software<br>
+#&nbsp;Foundation,&nbsp;Inc.,&nbsp;59&nbsp;Temple&nbsp;Place,&nbsp;Suite&nbsp;330,&nbsp;Boston,&nbsp;MA&nbsp;&nbsp;02111-1307&nbsp;&nbsp;USA</tt></p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pyui.html">pyui</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="pyui.base.html#Base">pyui.base.Base</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pyui.sheet.html#Sheet">Sheet</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pyui.widgets.html#Edit">pyui.widgets.Edit</a>(<a href="pyui.base.html#Base">pyui.base.Base</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pyui.sheet.html#SheetEntry">SheetEntry</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pyui.sheet.html#SheetInfo">SheetInfo</a>
+</font></dt></dl>
+ 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Sheet">class <strong>Sheet</strong></a>(<a href="pyui.base.html#Base">pyui.base.Base</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Spreadsheet-like&nbsp;widget&nbsp;that&nbsp;contains&nbsp;cells&nbsp;that&nbsp;have&nbsp;values.&nbsp;The&nbsp;&lt;handler&gt;<br>
+passed&nbsp;in&nbsp;will&nbsp;be&nbsp;called&nbsp;when&nbsp;a&nbsp;cell&nbsp;value&nbsp;is&nbsp;changed&nbsp;with&nbsp;(x,&nbsp;y,&nbsp;value)<br>
+as&nbsp;arguments.&nbsp;handler&nbsp;is&nbsp;not&nbsp;called&nbsp;when&nbsp;a&nbsp;vale&nbsp;is&nbsp;set&nbsp;for&nbsp;the&nbsp;first&nbsp;time.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Sheet-__init__"><strong>__init__</strong></a>(self, changeHandler<font color="#909090">=None</font>, insertHandler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Sheet-calcSize"><strong>calcSize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sheet-calculateVisibility"><strong>calculateVisibility</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sheet-checkHighestColumn"><strong>checkHighestColumn</strong></a>(self, colNum)</dt></dl>
+
+<dl><dt><a name="Sheet-checkHighestRow"><strong>checkHighestRow</strong></a>(self, rowNum)</dt></dl>
+
+<dl><dt><a name="Sheet-clear"><strong>clear</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sheet-draw"><strong>draw</strong></a>(self, renderer)</dt></dl>
+
+<dl><dt><a name="Sheet-findCellAt"><strong>findCellAt</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="Sheet-getCellCoordinates"><strong>getCellCoordinates</strong></a>(self, colNum, rowNum)</dt></dl>
+
+<dl><dt><a name="Sheet-getCellValue"><strong>getCellValue</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="Sheet-getColumnReadOnly"><strong>getColumnReadOnly</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Sheet-getColumnTitle"><strong>getColumnTitle</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Sheet-getColumnWidth"><strong>getColumnWidth</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Sheet-getRowHeight"><strong>getRowHeight</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Sheet-getRowReadOnly"><strong>getRowReadOnly</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Sheet-getRowTitle"><strong>getRowTitle</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Sheet-getWidthAndHeightFor"><strong>getWidthAndHeightFor</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="Sheet-onLMouseDown"><strong>onLMouseDown</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="Sheet-onLMouseUp"><strong>onLMouseUp</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="Sheet-onMouseMove"><strong>onMouseMove</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="Sheet-onScroll"><strong>onScroll</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="Sheet-resize"><strong>resize</strong></a>(self, width, height)</dt></dl>
+
+<dl><dt><a name="Sheet-setCellValue"><strong>setCellValue</strong></a>(self, x, y, value)</dt></dl>
+
+<dl><dt><a name="Sheet-setColumnReadOnly"><strong>setColumnReadOnly</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Sheet-setColumnTitle"><strong>setColumnTitle</strong></a>(self, colNum, title)</dt></dl>
+
+<dl><dt><a name="Sheet-setColumnWidth"><strong>setColumnWidth</strong></a>(self, colNum, width)</dt></dl>
+
+<dl><dt><a name="Sheet-setRowHeight"><strong>setRowHeight</strong></a>(self, rowNum, height)</dt></dl>
+
+<dl><dt><a name="Sheet-setRowReadOnly"><strong>setRowReadOnly</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="Sheet-setRowTitle"><strong>setRowTitle</strong></a>(self, rowNum, title)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = 'Spreadsheet-like widget that contains cells that...alled when a vale is set for the first time.<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.sheet'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>defaultColumnWidth</strong> = 40<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>defaultRowHeight</strong> = 16<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.base.html#Base">pyui.base.Base</a>:<br>
+<dl><dt><a name="Sheet-__del__"><strong>__del__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sheet-addChild"><strong>addChild</strong></a>(self, child)</dt><dd><tt>Add&nbsp;a&nbsp;child&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-addPopup"><strong>addPopup</strong></a>(self, popup)</dt></dl>
+
+<dl><dt><a name="Sheet-checkHit"><strong>checkHit</strong></a>(self, pos)</dt></dl>
+
+<dl><dt><a name="Sheet-clearDirty"><strong>clearDirty</strong></a>(self)</dt><dd><tt>Clears&nbsp;this&nbsp;widgets&nbsp;dirty&nbsp;flag.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-destroy"><strong>destroy</strong></a>(self)</dt><dd><tt>Call&nbsp;this&nbsp;to&nbsp;remove&nbsp;all&nbsp;references&nbsp;to&nbsp;the&nbsp;widget&nbsp;from&nbsp;the&nbsp;system.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-getFocus"><strong>getFocus</strong></a>(self)</dt><dd><tt>Acquire&nbsp;the&nbsp;gui&nbsp;system's&nbsp;focus.&nbsp;only&nbsp;one&nbsp;<a href="pyui.base.html#Base">Base</a>&nbsp;may&nbsp;have&nbsp;the&nbsp;focus</tt></dd></dl>
+
+<dl><dt><a name="Sheet-getToolTipInfo"><strong>getToolTipInfo</strong></a>(self, pos)</dt><dd><tt>return&nbsp;a&nbsp;tuple&nbsp;of&nbsp;the&nbsp;text&nbsp;and&nbsp;rectangle&nbsp;for&nbsp;the&nbsp;tooltip&nbsp;for&nbsp;when&nbsp;the<br>
+mouse&nbsp;is&nbsp;in&nbsp;&lt;pos&gt;&nbsp;within&nbsp;the&nbsp;window.&nbsp;This&nbsp;uses&nbsp;the&nbsp;member&nbsp;variable&nbsp;toolTipInfo<br>
+if&nbsp;it&nbsp;is&nbsp;populated.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-handleEvent"><strong>handleEvent</strong></a>(self, event)</dt><dd><tt>&nbsp;event&nbsp;processing&nbsp;for&nbsp;base&nbsp;objects</tt></dd></dl>
+
+<dl><dt><a name="Sheet-hasFocus"><strong>hasFocus</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sheet-hit"><strong>hit</strong></a>(self, pos)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;hit&nbsp;using&nbsp;absolute&nbsp;coordinates.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-loseFocus"><strong>loseFocus</strong></a>(self)</dt><dd><tt>lose&nbsp;the&nbsp;gui&nbsp;system's&nbsp;focus.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-move"><strong>move</strong></a>(self, dx, dy)</dt><dd><tt>move&nbsp;relative&nbsp;to&nbsp;current&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-moveto"><strong>moveto</strong></a>(self, x, y)</dt><dd><tt>move&nbsp;to&nbsp;absolute&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-pack"><strong>pack</strong></a>(self)</dt><dd><tt>used&nbsp;by&nbsp;panels&nbsp;&amp;&nbsp;layout&nbsp;managers</tt></dd></dl>
+
+<dl><dt><a name="Sheet-postEvent"><strong>postEvent</strong></a>(self, eventType)</dt><dd><tt>Post&nbsp;an&nbsp;event&nbsp;to&nbsp;be&nbsp;processed&nbsp;next&nbsp;time&nbsp;through&nbsp;the&nbsp;event&nbsp;loop</tt></dd></dl>
+
+<dl><dt><a name="Sheet-registerEvent"><strong>registerEvent</strong></a>(self, eventType, handler)</dt><dd><tt>Setup&nbsp;handler&nbsp;for&nbsp;an&nbsp;event</tt></dd></dl>
+
+<dl><dt><a name="Sheet-removeChild"><strong>removeChild</strong></a>(self, child)</dt></dl>
+
+<dl><dt><a name="Sheet-setDirty"><strong>setDirty</strong></a>(self, collide<font color="#909090">=1</font>)</dt><dd><tt>Sets&nbsp;this&nbsp;widget&nbsp;to&nbsp;redraw&nbsp;itself&nbsp;and&nbsp;notifies&nbsp;window.</tt></dd></dl>
+
+<dl><dt><a name="Sheet-setParent"><strong>setParent</strong></a>(self, parent)</dt><dd><tt>Set&nbsp;the&nbsp;parent&nbsp;of&nbsp;this&nbsp;widget</tt></dd></dl>
+
+<dl><dt><a name="Sheet-setShow"><strong>setShow</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="Sheet-setWindow"><strong>setWindow</strong></a>(self, window)</dt></dl>
+
+<dl><dt><a name="Sheet-unregisterEvent"><strong>unregisterEvent</strong></a>(self, eventType)</dt><dd><tt>Remove&nbsp;handler&nbsp;for&nbsp;an&nbsp;event</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="pyui.base.html#Base">pyui.base.Base</a>:<br>
+<dl><dt><strong>canTab</strong> = 0<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>widgetLabel</strong> = 'Base'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SheetEntry">class <strong>SheetEntry</strong></a>(<a href="pyui.widgets.html#Edit">pyui.widgets.Edit</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pyui.sheet.html#SheetEntry">SheetEntry</a></dd>
+<dd><a href="pyui.widgets.html#Edit">pyui.widgets.Edit</a></dd>
+<dd><a href="pyui.base.html#Base">pyui.base.Base</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SheetEntry-__init__"><strong>__init__</strong></a>(self, sheet)</dt></dl>
+
+<dl><dt><a name="SheetEntry-activateAt"><strong>activateAt</strong></a>(self, col, row)</dt></dl>
+
+<dl><dt><a name="SheetEntry-deactivate"><strong>deactivate</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SheetEntry-loseFocus"><strong>loseFocus</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SheetEntry-onEnter"><strong>onEnter</strong></a>(self, box, gotoNext<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="SheetEntry-onKeyDown"><strong>onKeyDown</strong></a>(self, event)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.sheet'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.widgets.html#Edit">pyui.widgets.Edit</a>:<br>
+<dl><dt><a name="SheetEntry-_pyuiChar"><strong>_pyuiChar</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="SheetEntry-_pyuiClicked"><strong>_pyuiClicked</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="SheetEntry-_pyuiKeyDown"><strong>_pyuiKeyDown</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="SheetEntry-_pyuiMouseDown"><strong>_pyuiMouseDown</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="SheetEntry-_pyuiMouseMotion"><strong>_pyuiMouseMotion</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="SheetEntry-_pyuiMouseUp"><strong>_pyuiMouseUp</strong></a>(self, event)</dt></dl>
+
+<dl><dt><a name="SheetEntry-deleteSelected"><strong>deleteSelected</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SheetEntry-draw"><strong>draw</strong></a>(self, renderer)</dt></dl>
+
+<dl><dt><a name="SheetEntry-findMousePos"><strong>findMousePos</strong></a>(self, pos)</dt></dl>
+
+<dl><dt><a name="SheetEntry-getFocus"><strong>getFocus</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SheetEntry-setText"><strong>setText</strong></a>(self, text)</dt><dd><tt>external&nbsp;function&nbsp;to&nbsp;set&nbsp;the&nbsp;text&nbsp;and&nbsp;move&nbsp;the&nbsp;caret&nbsp;to&nbsp;the&nbsp;end</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="pyui.widgets.html#Edit">pyui.widgets.Edit</a>:<br>
+<dl><dt><strong>canTab</strong> = 1<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>widgetLabel</strong> = 'Edit'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.base.html#Base">pyui.base.Base</a>:<br>
+<dl><dt><a name="SheetEntry-__del__"><strong>__del__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SheetEntry-addChild"><strong>addChild</strong></a>(self, child)</dt><dd><tt>Add&nbsp;a&nbsp;child&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-addPopup"><strong>addPopup</strong></a>(self, popup)</dt></dl>
+
+<dl><dt><a name="SheetEntry-calcSize"><strong>calcSize</strong></a>(self)</dt><dd><tt>This&nbsp;sets&nbsp;up&nbsp;self.<strong>rect</strong>&nbsp;to&nbsp;be&nbsp;absolute&nbsp;co-ordinates.&nbsp;also&nbsp;sets&nbsp;up&nbsp;self.<strong>windowRect</strong><br>
+to&nbsp;be&nbsp;relative&nbsp;to&nbsp;the&nbsp;upper&nbsp;left&nbsp;of&nbsp;the&nbsp;parent&nbsp;Window</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-checkHit"><strong>checkHit</strong></a>(self, pos)</dt></dl>
+
+<dl><dt><a name="SheetEntry-clearDirty"><strong>clearDirty</strong></a>(self)</dt><dd><tt>Clears&nbsp;this&nbsp;widgets&nbsp;dirty&nbsp;flag.</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-destroy"><strong>destroy</strong></a>(self)</dt><dd><tt>Call&nbsp;this&nbsp;to&nbsp;remove&nbsp;all&nbsp;references&nbsp;to&nbsp;the&nbsp;widget&nbsp;from&nbsp;the&nbsp;system.</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-getToolTipInfo"><strong>getToolTipInfo</strong></a>(self, pos)</dt><dd><tt>return&nbsp;a&nbsp;tuple&nbsp;of&nbsp;the&nbsp;text&nbsp;and&nbsp;rectangle&nbsp;for&nbsp;the&nbsp;tooltip&nbsp;for&nbsp;when&nbsp;the<br>
+mouse&nbsp;is&nbsp;in&nbsp;&lt;pos&gt;&nbsp;within&nbsp;the&nbsp;window.&nbsp;This&nbsp;uses&nbsp;the&nbsp;member&nbsp;variable&nbsp;toolTipInfo<br>
+if&nbsp;it&nbsp;is&nbsp;populated.</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-handleEvent"><strong>handleEvent</strong></a>(self, event)</dt><dd><tt>&nbsp;event&nbsp;processing&nbsp;for&nbsp;base&nbsp;objects</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-hasFocus"><strong>hasFocus</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SheetEntry-hit"><strong>hit</strong></a>(self, pos)</dt><dd><tt>Check&nbsp;for&nbsp;a&nbsp;hit&nbsp;using&nbsp;absolute&nbsp;coordinates.</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-move"><strong>move</strong></a>(self, dx, dy)</dt><dd><tt>move&nbsp;relative&nbsp;to&nbsp;current&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-moveto"><strong>moveto</strong></a>(self, x, y)</dt><dd><tt>move&nbsp;to&nbsp;absolute&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-pack"><strong>pack</strong></a>(self)</dt><dd><tt>used&nbsp;by&nbsp;panels&nbsp;&amp;&nbsp;layout&nbsp;managers</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-postEvent"><strong>postEvent</strong></a>(self, eventType)</dt><dd><tt>Post&nbsp;an&nbsp;event&nbsp;to&nbsp;be&nbsp;processed&nbsp;next&nbsp;time&nbsp;through&nbsp;the&nbsp;event&nbsp;loop</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-registerEvent"><strong>registerEvent</strong></a>(self, eventType, handler)</dt><dd><tt>Setup&nbsp;handler&nbsp;for&nbsp;an&nbsp;event</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-removeChild"><strong>removeChild</strong></a>(self, child)</dt></dl>
+
+<dl><dt><a name="SheetEntry-resize"><strong>resize</strong></a>(self, w, h)</dt><dd><tt>&nbsp;resize&nbsp;absolute&nbsp;size&nbsp;of&nbsp;the&nbsp;widget</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-setDirty"><strong>setDirty</strong></a>(self, collide<font color="#909090">=1</font>)</dt><dd><tt>Sets&nbsp;this&nbsp;widget&nbsp;to&nbsp;redraw&nbsp;itself&nbsp;and&nbsp;notifies&nbsp;window.</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-setParent"><strong>setParent</strong></a>(self, parent)</dt><dd><tt>Set&nbsp;the&nbsp;parent&nbsp;of&nbsp;this&nbsp;widget</tt></dd></dl>
+
+<dl><dt><a name="SheetEntry-setShow"><strong>setShow</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="SheetEntry-setWindow"><strong>setWindow</strong></a>(self, window)</dt></dl>
+
+<dl><dt><a name="SheetEntry-unregisterEvent"><strong>unregisterEvent</strong></a>(self, eventType)</dt><dd><tt>Remove&nbsp;handler&nbsp;for&nbsp;an&nbsp;event</tt></dd></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SheetInfo">class <strong>SheetInfo</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SheetInfo-__init__"><strong>__init__</strong></a>(self, start, span, title, readonly)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.sheet'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+</td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><strong>__file__</strong> = r'.\pyui\sheet.pyc'<br>
+<strong>__name__</strong> = 'pyui.sheet'</td></tr></table>
+</body></html>

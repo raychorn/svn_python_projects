@@ -1,0 +1,61 @@
+GN Version,Site Name,Domain,Logged Out Highlight,Logged In Highlight,VZW Contact Name,VZW Contact Phone,VZW Contact Email,ASP (Vendor),ASP Contact Name,ASP Contact Phone,ASP Contact Email
+ASP,Alerts,http://alerts.vzw.com,Messaging,Messages,Arvind Aggarwal,(925) 952-6616,,,,,
+ASP,Animated Messaging,http://animated.messaging.vzw.com/vge,Messaging,Messages,Arvind Aggarwal,(925) 952-6616,,,,,
+ASP,Backup Assistant,http://backupassistant.vzw.com,Entertainment & Apps,My Verizon Services,Arvind Aggarwal,(925) 952-6616,,Fusion One,,,
+ASP,Dashboard (launching Nov),http://dashboard.vzw.com,Entertainment & Apps,My Verizon Services,Tegan Akins,,,Motricity / Adobe,,,
+ASP,Enterprise Messaging,http://enterprisemessaging.vzw.com,Messaging,N/A,,,,,,,
+ASP,Entertainment & Apps,http://products.vzw.com,Entertainment & Apps,Media,Jim Robinson,,,Moxie Interactive,"Brian Mueller
+Rob Smith",,
+ASP,Family Locator,http://familylocator.vzw.com,Entertainment & Apps,My Verizon Services,Lex Musta,,,,,,
+ASP,Global Rental Program (discontinued),http://www.vzwrentinternational.com,N/A,N/A,William Chang,,,Vodafone,,,
+ASP,Global Satellite Phones,TBD - launch pending,Phones & Accessories,N/A,William Chang,,,Cell Hire,,,
+ASP,Hosted VZ Email,http://vzemail.vzw.com,Entertainment & Apps,My Verizon Services,,,,Verizon Business,James Wofford,,james.wofford@verizonbusiness.com
+ASP,International Messaging,http://text1.vzw.com,Messaging,Messages,Arvind Aggarwal,(925) 952-6616,,,,,
+ASP,Location Management,http://locationmanagement.vzw.com,Entertainment & Apps,My Verizon Services,Arvind Aggarwal,(925) 952-6616,,Autodesk,,,
+ASP,Mobile Web,http://mobileweb.vzw.com,Entertainment & Apps,My Verizon Services,Arvind Aggarwal,(925) 952-6616,,Motricity,,,
+ASP,Phones,http://phones.verizonwireless.com,Phones & Accessories,N/A,Chris Freeman?,,,Moxie Interactive,,,
+ASP,Picture & Video Messaging,http://picture.vzw.com,Messaging,Messages,Biren Patel,,,VeriSign,"Stephan Warren
+Bruce Levin","Stephan 831-325-9558
+Bruce 831-325-4113","swarren@verisign.com
+blevin@verisign.com"
+ASP,Push To Talk,http://pushtotalk.vzw.com,Entertainment & Apps,My Verizon Services,,,,Motorola,,,
+ASP,Rebate Center,https://www.yourwirelessrebatecenter.com,My Verizon,N/A,Melanie Maguire,,,Parago?,,,
+ASP,Shop,http://solutions.vzwshop.com,Phones & Accessories,N/A,Jim Robinson,,,Moxie Interactive,,,
+ASP,Small Business,http://smallbusiness.vzw.com,Business,N/A,,,,Moxie Interactive,,,
+ASP,Text Messaging,http://text.vzw.com,Messaging,Messages,Arvind Aggarwal,(925) 952-6616,,,,,
+ASP,Verizon Hub*,http://hub.vzw.com,Entertainment & Apps,My Verizon Services,,,,,,,
+ASP,Vskins,www.vskins.com,Phones & Accessories,N/A,Carl Fogel,,,SkinIt,"Mark Batliner, VP of Sales",858.433.2580 x7025,Mark.Batliner@skinit.com
+ASP,VZ Access Manager,www.vzam.net,Entertainment & Apps,N/A,Stephen Kolton,,,Smith Micro,,,
+ASP,VZ Navigator,http://vznavigator.vzw.com,Entertainment & Apps,My Verizon Services,Arvind Aggarwal,(925) 952-6616,,,,,
+ASP,VZW Careers,www.vzwcareers.com,N/A,N/A,Gina Malayter,(908) 559-7337,Gina.Malayter@VerizonWireless.com,"TMP Worldwide Advertising & Communications, LLC
+205 Hudson Street, 5th Floor
+New York, NY 10013","Karen Hauptman
+Digital Project Manager",646.613.2106,karen.hauptman@tmp.com
+Access Manager,Forgot Password / User ID flows,https://myaccount.verizonwireless.com/accessmanager/public/controller?action=displayForgotPassword,My Verizon,N/A,,,,,,,
+Access Manager,Registration,https://myaccount.verizonwireless.com/accessmanager/public/controller?action=displayRegistration,My Verizon,N/A,,,,,,,
+Access Manager,Sign In,https://login.verizonwireless.com/amserver/UI/Login,My Verizon,N/A,,,,,,,
+Access Manager,Signed in Change {Profile} pages,https://myaccount.verizonwireless.com/accessmanager/secure/controller?action=displayModifyPassword,N/A,N/A,,,,,,,
+Access Manager,Signed Out page,https://login.vzw.com/cdsso/public/controller?action=logout,My Verizon,N/A,,,,,,,
+CIS,Verizon Wireless,http://www.verizonwireless.com,N/A,N/A,Jennifer San Martin,,,,,,
+CIS - Error,VZW.com error page,http://www.verizonwireless.com/anybogusentry,My Verizon,N/A,,,,,,,
+CIS - Manual,Learning Center,http://learning.verizonwireless.com/learning/,Support,N/A,Norman Frankel,949-286-6433 ,norman.frankel@verizonwireless.com,,,,
+CIS - Static,Static error page,http://www.verizonwireless.com/404.html,My Verizon,N/A,Jennifer San Martin,,,,,,
+CIS - Static,Static error page,http://www.verizonwireless.com/sorryAkamai.html,My Verizon,N/A,Jennifer San Martin,,,,,,
+CIS - Static,Static error page,http://www.verizonwireless.com/amsorry.html,My Verizon,N/A,Jennifer San Martin,,,,,,
+Forums,Forums,http://community.vzw.com,Support,N/A,Kirsten Dernbach,,,Lithium,,,
+My Prepay,My Prepay activation,https://www.verizonwireless.com/vzwapp/prepay/activateinpulse,My Verizon,Home,Bilal Umarji,,,,,,
+My Verizon,My Verizon (east),https://ebillpay.verizonwireless.com/ …,My Verizon,Home,,,,,,,
+My Verizon,My Verizon (west),https://wbillpay.verizonwireless.com/ …,My Verizon,Home,,,,,,,
+Omniture,About Us,http://aboutus.vzw.com,N/A,N/A,,,,,,,
+Omniture,Business,http://b2b.vzw.com/ …,Business,N/A,Lisanne Wirth,,,,,,
+Omniture,News,http://news.vzw.com,N/A,N/A,,,,,,,
+Omniture,Search,http://search.vzw.com,Support,N/A,Chris Freeman,,,,,,
+Omniture,Support,http://support.vzw.com,Support,Support,Chris Verna,,,,,,
+SEO,SEO Shopping Site,http://shop.verizonwireless.com,Phones & Accessories,N/A,Chris Freeman,,,,,,
+None,Media Store,http://mediastore.verizonwireless.com,Entertainment & Apps,Media,,,,VZW IT-WDS,,,
+None,PC Games (launching Nov),http://games.vzw.com,Entertainment & Apps,Media,Jason Henderson,,,Exent
+None,V CAST Live,http://vcastlive.vzw.com,Entertainment & Apps,Media,Tim Hecht,,,TribalBrands
+
+
+*not confirmed whether VZ Hub site uses global navigation,,,,,,,,
+"** tab highlighting for VerizonWireless.com depends on whether the customer is viewing phones/accessories, plans, the home page in focus, etc.",,,,,,,,

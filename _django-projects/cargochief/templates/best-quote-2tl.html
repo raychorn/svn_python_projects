@@ -1,0 +1,137 @@
+{% extends 'best-quote-2.html' %}
+
+{% block additional-stops-content %}
+                            	<td class="quote_info">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                              <b>Additional Stops</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            Are there any Stops
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" onclick="ShowDialog2(false);">explain</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <form>
+                                                                <NOBR>
+                                                                <label>in Transit along the way?</label>
+                                                                <a id="anchor_additional_stops_in_transit_along_the_way_yes_shortcut" href="#"><label>Yes</label></a>
+                                                                <input id="additional_stops_in_transit_along_the_way_yes" name="additional_stops_in_transit_along_the_way" class="anchor_for_radio_button" type="radio" value="yes" onclick="ShowDialog2b(false);"/>
+                                                                &nbsp;
+                                                                <a id="anchor_additional_stops_in_transit_along_the_way_no_shortcut" href="#"><label>No</label></a>
+                                                                <input id="additional_stops_in_transit_along_the_way_no" name="additional_stops_in_transit_along_the_way" class="anchor_for_radio_button" type="radio" value="no" onclick="ShowDialog2d(false);"/>
+                                                                </NOBR>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+{% endblock %}
+
+{% block lower-block %}
+                                	<table>
+                                    	<tr>
+                                        	<td>
+                                            	<b>Truck Load or Partial Truck Load Details</b>
+                                            </td>
+                                        </tr>
+                                    	<tr>
+                                        	<td>
+                                            	<form>
+                                                	<table>
+                                                    	<tr>
+                                                        	<td>
+                                                            	<label>Space Needed</label>
+                                                            </td>
+                                                        	<td colspan="2">
+                                                            	<NOBR>
+                                                                	<select id="truck_load_or_partial_space_needed">
+                                                                    	<option value="">-   Select    -</option>
+                                                                    	<option value="4,2">4 Feet;  2 Pallet Positions</option>
+                                                                    	<option value="8,4">8 Feet;  4 Pallet Positions</option>
+                                                                    	<option value="12,6">12 Feet; 6 Pallet Positions</option>
+                                                                    	<option value="16,8">16 Feet; 8 Pallet Positions</option>
+                                                                    	<option value="24,12">24 Feet, 12 Pallet Positions</option>
+                                                                    	<option value="48,24">48 Feet; 24 Pallet Positions</option>
+                                                                    	<option value="53,26">53 Feet, 26 Pallet Positions</option>
+                                                                    </select>&nbsp;&nbsp;<a href="#" onclick="ShowDialog2c(false);">explain</a><NOBR>
+                                                            </td>
+                                                        </tr>
+                                                    	<tr>
+                                                        	<td>
+                                                            	<label>Packaging</label>
+                                                            </td>
+                                                        	<td colspan="2">
+                                                            	<NOBR>
+                                                                	<select id="truck_load_or_partial_packaging">
+                                                                    	<option value="">-   Select    -</option>
+                                                                    	<option value="1">Pallets, Standard GMA (40” x 48”) with Cargo</option>
+                                                                    	<option value="2">Pallets Non-Standard with Cargo</option>
+                                                                    	<option value="3">Boxes / Crates</option>
+                                                                    	<option value="4">Bags / Bails</option>
+                                                                    	<option value="5">Bunches / Coils</option>
+                                                                    	<option value="6">Cylinders / Rolls / Reels</option>
+                                                                    	<option value="7">Drums / Pails</option>
+                                                                    	<option value="8">Rolls / Carpets</option>
+                                                                    	<option value="9">Tubes / Pipes</option>
+                                                                    </select>
+                                                                <NOBR>
+                                                            </td>
+                                                        </tr>
+                                                    	<tr>
+                                                        	<td>
+                                                            	<label>Total Shipment Weight:</label>
+                                                            </td>
+                                                        	<td colspan="2">
+                                                            	<NOBR><input id="truck_load_or_partial_total_shipment_weight" size="5" maxlength="10"/>&nbsp;in pounds</NOBR>
+                                                            </td>
+                                                        </tr>
+                                                    	<tr>
+                                                        	<td>
+                                                            	<label>Description of Goods:</label>
+                                                            </td>
+                                                        	<td colspan="2">
+                                                            	<input id="truck_load_or_partial_description_of_goods" size="40" maxlength="40"/>
+                                                            </td>
+                                                        </tr>
+                                                    	<tr>
+                                                        	<td>
+                                                            	<label>Ready for Pick Up</label>
+                                                            </td>
+                                                        	<td colspan="2">
+                                                            	<div>
+                                                            	<NOBR><input id="truck_load_or_partial_ready_for_pick_up_date" type="text" size="9" maxlength="10"/>&nbsp;<button id="truck_load_or_partial_ready_for_pick_up_image_date_picker_button"><img src="/static/images/slide0016_image001.png"/></button><NOBR>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    	<tr>
+                                                        	<td>
+                                                            	<label>RFQ Description (Optional)
+</label>
+                                                            </td>
+                                                        	<td>
+                                                            	<input id="truck_load_or_partial_optional_rfq_description" maxlength="20"/>
+                                                            </td>
+                                                        	<td>
+                                                            	<NOBR><a href="#">Another Item Type</a></NOBR>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </table>
+{% endblock %}
+

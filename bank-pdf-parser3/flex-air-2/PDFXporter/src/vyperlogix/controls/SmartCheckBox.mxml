@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:CheckBox xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="onCreationComplete()">
+	<mx:Script>
+		<![CDATA[
+			import vyperlogix.utils.ObjectExplainer;
+			private var _dataProvider:Object = {};
+			
+			private function onCreationComplete():void {
+				this.addEventListener(MouseEvent.CLICK,onClick);
+			}
+			
+			private function onClick(event:MouseEvent):void {
+				var aValue:* = this.dataProvider['exclusive'];
+				var isExclusive:Boolean = (aValue != null) ? aValue : isExclusive;
+				var cb:SmartCheckBox = event.currentTarget as SmartCheckBox;
+				var isSelected:Boolean = cb.selected;
+				var i:String;
+				var aCB:SmartCheckBox;
+				var siblings:Array = [];
+				try {
+					siblings = this.parent['getChildren']() as Array;
+				} catch (e:Error) {trace(this.className + '.onClick().1.ERROR='+e.toString());}
+				if (isExclusive) {
+					for (i in siblings) {
+						aCB = siblings[i] as SmartCheckBox;
+						if ( (aCB is SmartCheckBox) && (isSelected) && (aCB != event.currentTarget) ) {
+							aCB.selected = true;
+						}
+					}
+					cb.selected = false;
+				} else {
+					for (i in siblings) {
+						aCB = siblings[i] as SmartCheckBox;
+						if ( (aCB is SmartCheckBox) && (isSelected) && (aCB.dataProvider['exclusive'] == true) ) {
+							aCB.selected = false;
+						}
+					}
+				}
+			}
+			
+			public function set dataProvider(dataProvider:Object):void {
+				if (this._dataProvider != dataProvider) {
+					this._dataProvider = dataProvider;
+				}
+			}
+			
+			public function get dataProvider():Object {
+				return this._dataProvider;
+			}
+		]]>
+	</mx:Script>
+</mx:CheckBox>

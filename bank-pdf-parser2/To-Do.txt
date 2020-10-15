@@ -1,0 +1,10 @@
+# Registry - find a place to stick some information about where the data resides for this application.
+
+Or maybe make a folder with a specific name in the local area for the current user.
+
+context tasklet to handle communications with the __context__.dbx
+    * save named data element
+    * read named data element
+    
+    Push _data_path into this tasklet
+    

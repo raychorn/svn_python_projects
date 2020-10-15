@@ -1,0 +1,53 @@
+{% comment %} 
+Copyright (c) 2006-2007, PreFab Software Inc.
+
+Copyright (c) 2006, Andrew Gwozdziewycz <apgwoz@gmail.com>
+All rights reserved. 
+{% endcomment %}
+
+
+{% extends "blog/blog_base.html" %}
+
+{% load blog_extras %}
+{% load comment_honeypot %}
+{% load comment_utils %}
+
+{% block "browsertitle" %}
+{{ object.headline }}
+{% endblock %}
+
+{% block "contentbody" %}
+{% include "blog/includes/post.html" %}
+
+<div class="comments_trackbacks">
+{% get_public_comment_list for blog.entry object.id as comment_list %}
+{% if comment_list %}
+<div class="comments">
+<a name="comments" class='subtitle black'>Comments</a>
+{% for comment in comment_list %}
+{% include "comments/comment_display.html" %}
+{% endfor %}
+</div>
+{% endif %}
+
+{% get_public_trackback_list for blog.entry object.id as trackback_list %}
+{% if trackback_list %}
+<div class="trackbacks">
+<a name="trackbacks" class='subtitle black'>Trackbacks</a>
+{% for trackback in trackback_list %}
+{% include "comments/trackback_display.html" %}
+{% endfor %}
+</div>
+{% endif %}
+
+<div class="add_comment">
+<span class='subtitle'>Add Comment</span>
+{% comment_form for blog.entry object.id %}
+</div>
+
+</div>
+{% endblock %}
+
+{% block "taglist" %}
+{% include "blog/includes/popular_tags.html" %}
+{% endblock %}

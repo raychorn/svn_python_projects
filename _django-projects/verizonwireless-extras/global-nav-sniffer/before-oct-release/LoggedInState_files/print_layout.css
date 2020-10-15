@@ -1,0 +1,27 @@
+#masthead,
+#globalNav,
+#navTrail,
+#headline,
+#header,
+#alert,
+#localNav,
+#sub.left,
+#leftNav,
+#leftQuickLinks,
+#promo,
+#confirmation,
+#termOfUse,
+#footer,
+#topmain,
+#subnav,
+#submheader,
+#tip_holder,
+#main_page_headline,
+#main_header,
+#metrics { display:none;}
+
+
+#mainContent {
+position:absolute; 
+
+}

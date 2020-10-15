@@ -1,0 +1,112 @@
+#!/usr/bin/env python
+
+import wx
+import wx.lib.inspection
+import wx.lib.mixins.inspection
+import sys, os
+
+# stuff for debugging
+print "wx.version:", wx.version()
+print "pid:", os.getpid()
+##raw_input("Press Enter...")
+
+assertMode = wx.PYAPP_ASSERT_DIALOG
+##assertMode = wx.PYAPP_ASSERT_EXCEPTION
+
+
+#----------------------------------------------------------------------------
+
+class Log:
+    def WriteText(self, text):
+        if text[-1:] == '\n':
+            text = text[:-1]
+        wx.LogMessage(text)
+    write = WriteText
+
+
+class RunDemoApp(wx.App):
+    def __init__(self, name, module):
+        self.name = name
+        self.demoModule = module
+        wx.App.__init__(self, redirect=False)
+
+    def OnInit(self):
+        wx.Log_SetActiveTarget(wx.LogStderr())
+
+        self.SetAssertMode(assertMode)
+
+        frame = wx.Frame(None, -1, "RunDemo: " + self.name, pos=(50,50), size=(200,100),
+                        style=wx.DEFAULT_FRAME_STYLE, name="run a sample")
+        frame.CreateStatusBar()
+
+        menuBar = wx.MenuBar()
+        menu = wx.Menu()
+        item = menu.Append(-1, "&Widget Inspector\tF6", "Show the wxPython Widget Inspection Tool")
+        self.Bind(wx.EVT_MENU, self.OnWidgetInspector, item)
+        item = menu.Append(-1, "E&xit\tCtrl-Q", "Exit demo")
+        self.Bind(wx.EVT_MENU, self.OnExitApp, item)
+        menuBar.Append(menu, "&File")
+
+        ns = {}
+        ns['wx'] = wx
+        ns['app'] = self
+        ns['module'] = self.demoModule
+        ns['frame'] = frame
+        
+        frame.SetMenuBar(menuBar)
+        frame.Show(True)
+        frame.Bind(wx.EVT_CLOSE, self.OnCloseFrame)
+
+        win = self.demoModule.runTest(frame, frame, Log())
+
+        # a window will be returned if the demo does not create
+        # its own top-level window
+        if win:
+            # so set the frame to a good size for showing stuff
+            frame.SetSize((640, 480))
+            win.SetFocus()
+            self.window = win
+            ns['win'] = win
+            frect = frame.GetRect()
+
+        else:
+            # It was probably a dialog or something that is already
+            # gone, so we're done.
+            frame.Destroy()
+            return True
+
+        self.SetTopWindow(frame)
+        self.frame = frame
+        #wx.Log_SetActiveTarget(wx.LogStderr())
+        #wx.Log_SetTraceMask(wx.TraceMessages)
+
+        return True
+
+
+    def OnExitApp(self, evt):
+        self.frame.Close(True)
+
+
+    def OnCloseFrame(self, evt):
+        if hasattr(self, "window") and hasattr(self.window, "ShutdownDemo"):
+            self.window.ShutdownDemo()
+        evt.Skip()
+
+    def OnWidgetInspector(self, evt):
+        wx.lib.inspection.InspectionTool().Show()
+    
+
+#----------------------------------------------------------------------------
+
+
+def main():
+    name = 'TreeNotebook' # 'AboutBox'
+    module = __import__(name)
+
+    app = RunDemoApp(name, module)
+    app.MainLoop()
+
+if __name__ == "__main__":
+    main()
+
+

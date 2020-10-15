@@ -1,0 +1,16 @@
+         9 function calls in 303.533 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  303.533  303.533 <string>:1(<module>)
+        1  303.523  303.523  303.533  303.533 main.py:26(main2)
+        1    0.000    0.000    0.000    0.000 ntpath.py:252(exists)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.010    0.010    0.010    0.010 {method 'readlines' of 'file' objects}
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {nt.stat}
+        1    0.000    0.000    0.000    0.000 {open}
+
+

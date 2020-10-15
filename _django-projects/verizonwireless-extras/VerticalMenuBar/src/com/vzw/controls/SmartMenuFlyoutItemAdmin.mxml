@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" 
+	title="Menu Item Editor">
+	<mx:Script>
+		<![CDATA[
+			import vyperlogix.controls.Alert.AlertPopUp;
+			import vyperlogix.utils.ArrayCollectionUtils;
+			import vyperlogix.utils.URLUtils;
+			import vyperlogix.utils.ObjectUtils;
+			import com.vzw.menu.builder.MenuController;
+			import mx.collections.ArrayCollection;
+			
+			private function dummy(data:*):* {
+				return data;
+			}
+			
+			// *****************************************************************************************
+			// **  BEGIN:  Functions...
+			// *****************************************************************************************
+			private function boolean(data:*):Boolean {
+				return (data.toString().toLowerCase() == 'true') ? true : false;
+			}
+			
+			private function choice(choice:String):String {
+				return (choice.toString().toLowerCase() == 'choose...') ? '' : choice;
+			}
+
+			private function url(url:String):String {
+				var domain:String = URLUtils.domain_without_port(url);
+				var protocol:String = URLUtils.protocol(url);
+				var i:int = ArrayCollectionUtils.findIndexOfItemCaseless(this.combo_domain.dataProvider,'domain',domain);
+				if (i > -1) {
+					//url = url.replace(protocol+domain,'');
+					//this.combo_domain.selectedIndex = i;
+					AlertPopUp.errorNoOkay('Looks like the URL has some kind of domain name ("' + domain + '") however you really need to choose the domain name from the drop-down list rather than entering it here.','ERROR - User Error');
+				} else if (i == -1) {
+					//AlertPopUp.errorNoOkay('The Server Properties file is missing the domain name of "' + domain + '", please update this file and then return to enter the URL of "' + url + '".','ERROR - Configuration Error');
+				}
+				return url;
+			}
+			// *****************************************************************************************
+			// **  END!  Functions...
+			// *****************************************************************************************
+			
+			private var _dataSelectors:Object = {
+				'label_edit':['label_text','text','dummy'],
+				'url_edit':['url_text','text','url'],
+				'cb_newWindow':['target_text','selected','boolean'],
+				'combo_domain':['domain','selectedIndex','choice']
+			};
+
+			private var _target:*;
+			private var _source:*;
+
+			private var _dataProvider:Object = {};
+			
+			public function get dataSelectors():* {
+				return this._dataSelectors;
+			}
+
+			public function set target(target:*):void {
+				if (this._target != target) {
+					this._target = target;
+				}
+			}
+			
+			public function get target():* {
+				return this._target;
+			}
+
+			public function set source(source:*):void {
+				if (this._source != source) {
+					this._source = source;
+				}
+			}
+			
+			public function get source():* {
+				return this._source;
+			}
+			
+			private function refresh_editables():void {
+				this.refresh_label_text();
+				this.refresh_url_text();
+				this.refresh_target_text();
+				this.refresh_domain_text();
+			}
+			
+			public function set dataProvider(dataProvider:Object):void {
+				if (this._dataProvider != dataProvider) {
+					this._dataProvider = dataProvider;
+					this.refresh_editables();
+				}
+			}
+			
+			public function get dataProvider():Object {
+				return (this._dataProvider) ? this._dataProvider : {};
+			}
+			
+			public function get domains():ArrayCollection {
+				return this.combo_domain.dataProvider as ArrayCollection;
+			}
+			
+			private function onChange(event:Event):void {
+				var source:String;
+				var dest:String;
+				var func:Function;
+				var id:String = event.currentTarget.id;
+				var selector:* = this._dataSelectors[id];
+				if (selector is Array) {
+					source = event.currentTarget[selector[selector.length-2]];
+					dest = this[selector[0]];
+					func = this[selector[selector.length-1]];
+					if ( (source != dest) && (func is Function) ) {
+						this[selector[0]] = func(source);
+					}
+				}
+			}
+
+			public function set label_text(label_text:String):void {
+				if ( (this._dataProvider != null) && (MenuController.metaProvider.label != null) ) {
+					if (this._dataProvider[MenuController.metaProvider.label] != label_text) {
+						this._dataProvider[MenuController.metaProvider.label] = label_text;
+					}
+				}
+			}
+
+			public function get label_text():String {
+				var text:String = ( (this._dataProvider != null) && (MenuController.metaProvider.label != null) ) ? this._dataProvider[MenuController.metaProvider.label] : '';
+				return text;
+			}
+
+			private function refresh_label_text():void {
+				this.label_edit.text = this.label_text;
+			}
+			
+			public function set url_text(url_text:String):void {
+				if ( (this._dataProvider != null) && (MenuController.metaProvider.url != null) ) {
+					if (this._dataProvider[MenuController.metaProvider.url] != url_text) {
+						this._dataProvider[MenuController.metaProvider.url] = url_text;
+					}
+				}
+			}
+
+			public function get url_text():String {
+				var text:String = ((this._dataProvider != null) && (MenuController.metaProvider.url != null)) ? this._dataProvider[MenuController.metaProvider.url] : '';
+				return text;
+			}
+
+			private function refresh_url_text():void {
+				this.url_edit.text = this.url_text;
+			}
+			
+			public function set target_text(target_text:*):void {
+				if (this._dataProvider != null) {
+					if (this._dataProvider.target != target_text) {
+						this._dataProvider.target = target_text;
+					}
+				}
+			}
+
+			public function get target_text():* {
+				var data:* = ( (this._dataProvider != null) && (this._dataProvider.target != null) ) ? this._dataProvider.target : '';
+				return data;
+			}
+
+			private function refresh_target_text():void {
+				this.cb_newWindow.selected = this.target_text;
+			}
+			
+			public function set domain(domain_index:int):void {
+				if (this._dataProvider != null) {
+					if (this._dataProvider.domain != this.domains.getItemAt(domain_index)) {
+						this._dataProvider.domain = this.domains.getItemAt(domain_index);
+					}
+				}
+			}
+
+			public function get domain():int {
+				if ( (this._dataProvider != null) && (this._dataProvider.domain != null) ) {
+					return this._dataProvider.domain;
+				}
+				return -1;
+			}
+
+			public function get domain_index():int {
+				return ObjectUtils.indexOf(this.domains,this._dataProvider.domain);
+			}
+
+			private function refresh_domain_text():void {
+				this.combo_domain.selectedIndex = this.domain_index;
+			}
+			
+		]]>
+	</mx:Script>
+	<mx:HBox x="0" y="0"  width="100%" height="100%" id="hbox1">
+		<mx:VBox width="100%" height="100%">
+			<mx:HBox width="100%">
+				<mx:Label text="Menu Category:"/>
+				<mx:Spacer width="1"/>
+				<mx:Label styleName="SmartMenuFlyoutAdminCategoryLabel" id="label_category" text=""/>
+				<mx:Spacer width="5"/>
+				<mx:CheckBox id="cb_newWindow" label="New Window" toolTip="This checkbox tells the URL to open in a New Window rather than opening in the current window of the browser." selected="{this.target_text}" change="onChange(event)"/>
+			</mx:HBox>
+			<mx:HBox width="100%">
+				<mx:Label text="Label:"/>
+				<mx:Spacer width="1"/>
+				<mx:TextInput id="label_edit" width="100%" height="100%" toolTip="This is the Label that appears on the menu." text="{this.label_text}" change="onChange(event)"/>
+			</mx:HBox>
+			<mx:HBox width="100%">
+				<mx:Label text="URL:"/>
+				<mx:Spacer width="1"/>
+				<mx:ComboBox id="combo_domain" width="140" toolTip="This is the domain for the URL." selectedIndex="{this.domain_index}" change="onChange(event)"/>
+				<mx:TextInput id="url_edit" width="100%" height="100%" text="{this.url_text}" change="onChange(event)"/>
+			</mx:HBox>
+			<mx:HBox width="100%" horizontalAlign="center">
+				<mx:Spacer width="20%"/>
+				<mx:Button id="btn_save" label="(save)" toolTip="Click this button to save your changes to the database."/>
+				<mx:Spacer width="10%"/>
+				<mx:Button id="btn_dismiss" label="(dismiss)" toolTip="Click this button to dismiss your changes without saving them to the database."/>
+			</mx:HBox>
+		</mx:VBox>
+	</mx:HBox>
+</mx:Panel>

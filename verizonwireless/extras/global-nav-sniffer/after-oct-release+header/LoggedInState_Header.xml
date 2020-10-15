@@ -1,0 +1,146 @@
+<menu metafield="meta" datafield="menuitem" headerfield="headeritem">
+	<meta id="id"/>
+	<meta label="label"/>
+	<meta url="url"/>
+	<meta type="type"/>
+	<meta domain="domain"/>
+	<meta domain_key="domain_key"/>
+	<meta body="body"/>
+	<meta target="target"/>
+	<meta secure="secure"/>
+	<meta title="title"/>
+	<meta uuid="uuid"/>
+	<meta roles="roles"/>
+	<meta onebill="onebill"/>
+	<meta alltel="alltel"/>
+	<meta alltelurl="alltelurl"/>
+	<meta hbxlink="hbxlink"/>
+	<meta hOrientation="-2"/>
+	<meta vOrientation="top"/>
+	
+	<headeritem>
+		<gLinks>
+			<headeritem label="Sign In" url="http://www.verizonwireless.com/b2c/myaccount/signin.jsp"/>
+			<headeritem label="Espa&ntilde;ol" url="http://espanol.vzw.com/enes/b2c/index.html"/>
+			<headeritem label="About Us" url="http://www.verizonwireless.com/b2c/aboutUs/index.jsp"/>
+			<headeritem label="Contact Us" url="http://www.verizonwireless.com/b2c/contact/index.jsp"/>
+			<headeritem label="Weekly Ad" url="http://digital.virtualmarketingpartners.com/vmp/verizon/weekly-ad/" target="_blank"/>
+			<headeritem label="Store Locator" url="http://www.verizonwireless.com/b2c/storelocator/index.jsp"/>
+		</gLinks>
+		<logo>
+			<headeritem url="http://www.verizonwireless.com/b2c/index.html"/>
+		</logo>
+		<search>
+			<headeritem label="Search" url="http://www.verizonwireless.com/b2c/store/B2CSearch"/>
+		</search>
+		<home>
+			<headeritem id="home" label="My Verizon Home" url="https://www.verizonwireless.com/"/>
+		</home>
+		<welcome>
+			<headeritem id="title" label="" body="Change your password, address, billing info, personal greeting and more"/>
+			<headeritem id="profile" label="Verizon Wireless Profile" url="https://www.verizonwireless.com/guest/general/Overview.do"/>
+		</welcome>
+		<logout>
+			<headeritem id="logout" label="Logout" url=""/>
+		</logout>
+	</headeritem>
+
+	 <menuitem label="Account" url="https://">
+		 <menuitem label="Bill" url="https://"/>
+		 <menuitem label="Payment" url="https://"/>
+		 <menuitem label="Plan" url="https://"/>
+		 <menuitem label="Account Profile" url="https://"/>
+	 </menuitem>
+	 
+	 <menuitem label="My Verizon Services" url="https://">
+		 <menuitem label="Friends & Family" url="https://"/>
+		 <menuitem label="Parental Controls" url="https://"/>
+		 <menuitem label="Navigator" url="https://"/>
+		 <menuitem label="Media Store" url="https://"/>
+		 <menuitem label="Media Manager" url="https://"/>
+		 <menuitem label="Music" url="https://"/>
+		 <menuitem label="Mobile TV" url="https://"/>
+		 <menuitem label="Video on Demand" url="https://"/>
+		 <menuitem label="Mobile Web & Dashboard" url="https://"/>
+		 <menuitem label="Messages & Alerts" url="https://"/>
+		 <menuitem label="Sync & Connect" url="https://"/>
+	 </menuitem>
+
+	 <menuitem label="Messages" url="https://">
+		 <menuitem label="Wireless Message Center" url="https://">
+			 <menuitem label="Inbox" url="https://"/>
+			 <menuitem label="Contacts" url="https://"/>
+			 <menuitem label="Calendar" url="https://"/>
+			 <menuitem label="Send Picture & Video Message" url="https://"/>
+			 <menuitem label="Send Animated Message" url="https://"/>
+			 <menuitem label="Add an Alert" url="https://"/>
+		 </menuitem>
+		 <menuitem label="Residential Message Center" url="https://">
+			 <menuitem label="Inbox" url="https://"/>
+			 <menuitem label="Contacts" url="https://"/>
+			 <menuitem label="Calendar" url="https://"/>
+		 </menuitem>
+		 <menuitem label="Send Email" url="https://"/>
+		 <menuitem label="Send Text Message" url="https://"/>
+	 </menuitem>
+
+	 <menuitem label="Media" url="https://">
+		 <menuitem label="Media Store" url="https://"/>
+		 <menuitem label="Wireless Media" url="https://">
+			 <menuitem label="Media Store" url="https://"/>
+			 <menuitem label="Ringtones" url="https://"/>
+			 <menuitem label="Ringback Tones" url="https://"/>
+			 <menuitem label="Music" url="https://"/>
+			 <menuitem label="Mobile Games" url="https://"/>
+			 <menuitem label="PC Games" url="https://"/>
+			 <menuitem label="Mobile Apps" url="https://"/>
+			 <menuitem label="Wallpapers" url="https://"/>
+			 <menuitem label="Mobile TV" url="https://"/>
+			 <menuitem label="Video On Demand" url="https://"/>
+		 </menuitem>
+	 </menuitem>
+
+	 <menuitem label="Shop" url="https://">
+		 <menuitem label="Wireless" url="https://">
+			 <menuitem label="Upgrade" url="https://"/>
+			 <menuitem label="Add a Line" url="https://"/>
+			 <menuitem label="Accessories" url="https://"/>
+			 <menuitem label="Add/Change Plan" url="https://"/>
+			 <menuitem label="Add Features" url="https://"/>
+			 <menuitem label="Media" url="https://"/>
+			 <menuitem label="Gift Cards" url="https://"/>
+			 <menuitem label="Bundles" url="https://"/>
+		 </menuitem>
+		 <menuitem label="Internet" url="https://">
+			 <menuitem label="Plans" url="https://"/>
+			 <menuitem label="Security & Storage" url="https://"/>
+			 <menuitem label="Media" url="https://"/>
+			 <menuitem label="Verizon Expert Care" url="https://"/>
+			 <menuitem label="Special Offers" url="https://"/>
+		 </menuitem>
+		 <menuitem label="TV" url="https://">
+			 <menuitem label="Plans & Packages" url="https://"/>
+			 <menuitem label="Media" url="https://"/>
+			 <menuitem label="FiOS Gear" url="https://"/>
+			 <menuitem label="Verizon Expert Care" url="https://"/>
+			 <menuitem label="Special Offers" url="https://"/>
+		 </menuitem>
+		 <menuitem label="HomePhone" url="https://">
+			 <menuitem label="Calling Plans" url="https://"/>
+			 <menuitem label="Calling Features" url="https://"/>
+			 <menuitem label="Verizon Expert Care" url="https://"/>
+			 <menuitem label="Special Offers" url="https://"/>
+		 </menuitem>
+	 </menuitem>
+
+	 <menuitem label="Support" url="https://">
+		 <menuitem label="Services" url="https://"/>
+		 <menuitem label="FAQ" url="https://"/>
+		 <menuitem label="Demos" url="https://"/>
+		 <menuitem label="Updates" url="https://"/>
+		 <menuitem label="Forums, Blogs, & Ideas" url="https://"/>
+	 </menuitem>
+	
+</menu>
+
+

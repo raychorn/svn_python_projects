@@ -1,0 +1,7 @@
+Release Notes:
+
+Reverse Proxy 0.0.1:
+
+* Round Robin Reverse Proxy that connects external browsers to a series of Django Apps.
+
+Copyright 2007-2008, Vyper Logix Corp, All Rights Reserved.

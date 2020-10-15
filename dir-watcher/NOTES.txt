@@ -1,0 +1,3 @@
+Provide a web.py interface to allow the cross-instance communications to notify about changes that should be ignored because files will be copied
+from each instance to the other.
+

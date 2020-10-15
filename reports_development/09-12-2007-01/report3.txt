@@ -1,0 +1,2810 @@
+sys.argv.__class__=<type 'list'>
+sys.argv=['Z:\\python projects\\reports_development\\make-metadata.py', '--yml=database.yml']
+name=mssql, (adapter=mssql://,driver=SQL Server,server=UNDEFINED2\SQLEXPRESS,database=reports_development,uid=sa,pwd=\xf3\xe9\xf3\xeb\xef\xc0\xb7\xb6\xb6\xb0\xa4\xe2\xef\xef)
+==================================================
+name=mssql_work, (adapter=mssql://,driver=SQL Server,server=MURRE\SQLEXPRESS,database=GentooIntelBenchmarks,uid=sa,pwd=\xf3\xe9\xf3\xeb\xef\xc0\xb7\xb6\xb6\xb0\xa4\xe2\xef\xef)
+==================================================
+name=mssql_work2, (adapter=mssql://,dsn=GentooIntelBenchmarks)
+==================================================
+name=mssql_work3, (adapter=mssql://)
+==================================================
+name=mysql, (adapter=mysql://,database=reports_development,username=root,password=foobarbaz,host=192.168.105.67)
+==================================================
+name=process, (use=mssql_work2,project-name=GentooIntelBenchmarks,verbose=1,target=SQLAlchemy)
+==================================================
+name=process2, (use=mssql_work2,project-name=GentooIntelBenchmarks,verbose=1,target=Rails,target-path=Z:\Ruby In Steel\emptyProject\myProject)
+==================================================
+name=process3, (use=mssql_work2,project-name=GentooIntelBenchmarks,verbose=1,target=SQLAlchemy)
+==================================================
+list=[<lib.readYML.ymlObject instance at 0x00EC0DC8>]
+name=process, (use=mssql_work2,project-name=GentooIntelBenchmarks,verbose=1,target=SQLAlchemy)
+use=[mssql_work2]
+============================================================
+project-name=[mssql_work2]
+============================================================
+target=[SQLAlchemy]
+============================================================
+targetPath=[]
+============================================================
+verbose=[True]
+============================================================
+list=[<lib.readYML.ymlObject instance at 0x00EC0B48>]
+==================================================
+Recap: (name=mssql_work2, (adapter=mssql://,dsn=GentooIntelBenchmarks))
+============================================================
+BEGIN: run()
+projName=GentooIntelBenchmarks
+version=0.4.0beta5
+target=SQLAlchemy
+targetPath=
+_mssql_connection_string=[DSN=GentooIntelBenchmarks]
+engine= Engine(mssql://)
+connectMSSQLDynamic() :: _mssql_connection_string=(DSN=GentooIntelBenchmarks)
+conn= <sqlalchemy.engine.base.Connection object at 0x00ECE070>
+connectMSSQLDynamic() :: _mssql_connection_string=(DSN=GentooIntelBenchmarks)
+# 0 :: (nsieve_bits)
+# 1 :: (chameneos)
+# 2 :: (spectral_norms)
+# 3 :: (n_bodies)
+# 4 :: (regex_dnas)
+# 5 :: (k_nucleotides)
+# 6 :: (reverse_complements)
+# 7 :: (cheap_concurrencies)
+# 8 :: (nsieves)
+# 9 :: (pidigits)
+# 10 :: (partial_sums)
+# 11 :: (fastas)
+# 12 :: (recursives)
+# 13 :: (fannkuches)
+# 14 :: (binary_trees)
+# 15 :: (meteor_puzzles)
+# 16 :: (sum_files)
+items=([u'nsieve_bits', u'chameneos', u'spectral_norms', u'n_bodies', u'regex_dnas', u'k_nucleotides', u'reverse_complements', u'cheap_concurrencies', u'nsieves', u'pidigits', u'partial_sums', u'fastas', u'recursives', u'fannkuches', u'binary_trees', u'meteor_puzzles', u'sum_files'])
+BEGIN: make_metadata_for()
+isRails=False, isSQLAlchemy=True
+ERROR - Missing config folder for Rails App due to ([Error 3] The system cannot find the path specified: '/config/*.*') !
+==================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieve_bits)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieve_bits)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieve_bits)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieve_bits)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieve_bits)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_nsieve_bits_table(metadata):
+	nsieve_bits_table = Table('nsieve_bits', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return nsieve_bits_table
+
+class NsieveBitsObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<NsieveBits(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(chameneos)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(chameneos)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(chameneos)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(chameneos)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(chameneos)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_chameneos_table(metadata):
+	chameneos_table = Table('chameneos', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return chameneos_table
+
+class ChameneosObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<Chameneos(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(spectral_norms)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(spectral_norms)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(spectral_norms)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(spectral_norms)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(spectral_norms)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_spectral_norms_table(metadata):
+	spectral_norms_table = Table('spectral_norms', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return spectral_norms_table
+
+class SpectralNormsObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<SpectralNorms(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(n_bodies)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(n_bodies)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(n_bodies)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(n_bodies)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(n_bodies)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_n_bodies_table(metadata):
+	n_bodies_table = Table('n_bodies', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return n_bodies_table
+
+class NBodiesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<NBodies(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(regex_dnas)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(regex_dnas)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(regex_dnas)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(regex_dnas)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(regex_dnas)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_regex_dnas_table(metadata):
+	regex_dnas_table = Table('regex_dnas', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return regex_dnas_table
+
+class RegexDnasObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<RegexDnas(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(k_nucleotides)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(k_nucleotides)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(k_nucleotides)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(k_nucleotides)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(k_nucleotides)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_k_nucleotides_table(metadata):
+	k_nucleotides_table = Table('k_nucleotides', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return k_nucleotides_table
+
+class KNucleotidesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<KNucleotides(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(reverse_complements)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(reverse_complements)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(reverse_complements)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(reverse_complements)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(reverse_complements)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_reverse_complements_table(metadata):
+	reverse_complements_table = Table('reverse_complements', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return reverse_complements_table
+
+class ReverseComplementsObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<ReverseComplements(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(cheap_concurrencies)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(cheap_concurrencies)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(cheap_concurrencies)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(cheap_concurrencies)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(cheap_concurrencies)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_cheap_concurrencies_table(metadata):
+	cheap_concurrencies_table = Table('cheap_concurrencies', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return cheap_concurrencies_table
+
+class CheapConcurrenciesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<CheapConcurrencies(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieves)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieves)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieves)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieves)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(nsieves)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_nsieves_table(metadata):
+	nsieves_table = Table('nsieves', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return nsieves_table
+
+class NsievesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<Nsieves(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(pidigits)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(pidigits)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(pidigits)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(pidigits)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(pidigits)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_pidigits_table(metadata):
+	pidigits_table = Table('pidigits', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return pidigits_table
+
+class PidigitsObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<Pidigits(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(partial_sums)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(partial_sums)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(partial_sums)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(partial_sums)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(partial_sums)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_partial_sums_table(metadata):
+	partial_sums_table = Table('partial_sums', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return partial_sums_table
+
+class PartialSumsObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<PartialSums(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fastas)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fastas)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fastas)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fastas)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fastas)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_fastas_table(metadata):
+	fastas_table = Table('fastas', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return fastas_table
+
+class FastasObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<Fastas(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(recursives)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(recursives)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(recursives)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(recursives)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(recursives)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_recursives_table(metadata):
+	recursives_table = Table('recursives', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return recursives_table
+
+class RecursivesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<Recursives(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fannkuches)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fannkuches)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fannkuches)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fannkuches)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(fannkuches)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_fannkuches_table(metadata):
+	fannkuches_table = Table('fannkuches', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return fannkuches_table
+
+class FannkuchesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<Fannkuches(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(binary_trees)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(binary_trees)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(binary_trees)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(binary_trees)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(binary_trees)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_binary_trees_table(metadata):
+	binary_trees_table = Table('binary_trees', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return binary_trees_table
+
+class BinaryTreesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<BinaryTrees(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(meteor_puzzles)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(meteor_puzzles)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(meteor_puzzles)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(meteor_puzzles)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(meteor_puzzles)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_meteor_puzzles_table(metadata):
+	meteor_puzzles_table = Table('meteor_puzzles', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return meteor_puzzles_table
+
+class MeteorPuzzlesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<MeteorPuzzles(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(sum_files)
+column_name=(id)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(1)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(sum_files)
+column_name=(name)
+data_type=(-9)
+type_name=(nvarchar)
+column_size=(255)
+buffer_length=(510)
+decimal_digits=(None)
+num_prec_radix=(None)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(-9)
+sql_datetime_sub=(None)
+char_octet_length=(510)
+ordinal_position=(2)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(39)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(sum_files)
+column_name=(cpu_rank)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(3)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(sum_files)
+column_name=(ram_use)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(4)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+table_cat=(GentooIntelBenchmarks)
+table_schem=(dbo)
+table_name=(sum_files)
+column_name=(gzip_bytes)
+data_type=(6)
+type_name=(float)
+column_size=(53)
+buffer_length=(8)
+decimal_digits=(None)
+num_prec_radix=(2)
+nullable=(1)
+remarks=(None)
+column_def=(None)
+sql_data_type=(6)
+sql_datetime_sub=(None)
+char_octet_length=(None)
+ordinal_position=(5)
+is_nullable=(YES)
+ss_udt_catalog_name=(None)
+ss_udt_schema_name=(None)
+ss_udt_assembly_type_name=(None)
+ss_xml_schemacollection_catalog_name=(None)
+ss_xml_schemacollection_schema_name=(None)
+ss_xml_schemacollection_name=(None)
+ss_data_type=(109)
+==============================
+
+from sqlalchemy import *
+from sqlalchemy.orm import *
+
+def init_sum_files_table(metadata):
+	sum_files_table = Table('sum_files', metadata,
+		Column('id', Float, nullable=True),
+		Column('name', String(255), nullable=True),
+		Column('cpu_rank', Float, nullable=True),
+		Column('ram_use', Float, nullable=True),
+		Column('gzip_bytes', Float, nullable=True)
+		)
+	return sum_files_table
+
+class SumFilesObj(object):
+	def __init__(self,id,name,cpu_rank,ram_use,gzip_bytes):
+		self.id = id
+		self.name = name
+		self.cpu_rank = cpu_rank
+		self.ram_use = ram_use
+		self.gzip_bytes = gzip_bytes
+
+def __repr__(self):
+	return "<SumFiles(%r,%r,%r,%r,%r)>" % (self.id,self.name,self.cpu_rank,self.ram_use,self.gzip_bytes)
+
+============================================================
+
+__all__ = ["nsieve_bits_table","NsieveBitsObj","chameneos_table","ChameneosObj","spectral_norms_table","SpectralNormsObj","n_bodies_table","NBodiesObj","regex_dnas_table","RegexDnasObj","k_nucleotides_table","KNucleotidesObj","reverse_complements_table","ReverseComplementsObj","cheap_concurrencies_table","CheapConcurrenciesObj","nsieves_table","NsievesObj","pidigits_table","PidigitsObj","partial_sums_table","PartialSumsObj","fastas_table","FastasObj","recursives_table","RecursivesObj","fannkuches_table","FannkuchesObj","binary_trees_table","BinaryTreesObj","meteor_puzzles_table","MeteorPuzzlesObj","sum_files_table","SumFilesObj"]
+
+================================================================================
+
+END! make_metadata_for()
+END! run()

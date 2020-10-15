@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}SVN-Cloud v{{version}}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+var requiredMajorVersion = 10;
+var requiredMinorVersion = 1;
+var requiredRevision = 0;
+</script>
+<script src="{{insecure_endpoint}}/static/air-badge/AC_RunActiveContent.js" type="text/javascript"></script>
+<script language="JavaScript1.2" type="text/javascript">
+var hasReqestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+</script>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block include-css %}'/static/css.css'{% endblock %}
+
+{% block container %}
+<div class="align-left">
+	<p>This is the default interface for SVN-Cloud v{{version}}.</p>
+	<p><a href="users.html" target="_top">Users</a></p>
+</div>
+
+<noscript>
+<table id="messageTable">
+<tr>
+	<td>
+	</td>
+</tr>
+</table>
+</noscript>
+
+<div id="messages">
+<p align="left">{{ message }}</p>
+</div>
+
+<div id="warning3" class="align-center">
+</div>
+{% endblock %}

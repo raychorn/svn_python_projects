@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" creationComplete="onInit()">
+	<mx:states>
+		<mx:State name="ToggleButtonState">
+			<mx:AddChild relativeTo="{this.vbox1}" position="firstChild">
+				<mx:HBox id="hbox_ToggleHeader" width="100%" styleName="ToggleButtonHeaderInitial">
+					<mx:HBox width="90%" horizontalAlign="center">
+						<mx:Label id="_label_toggleHeader" text="{this._toggleHeaderText}"/>
+						<mx:Spacer width="10"/>
+						<mx:TextArea id="input_packageName" width="100%" height="50" editable="false"/>
+					</mx:HBox>
+					<mx:HBox id="hbox_ToggleHeaderControls" width="10%" horizontalAlign="center">
+						<mx:Button id="btn_gridToggle" styleName="ToggleButtonGridState" width="20" toolTip="Click this button to toggle between the List View and the Grid View." click="onClickGridToggleButton(event)" creationComplete="onCreationCompleteGridToggleButton(event)"/>
+					</mx:HBox>
+				</mx:HBox>
+			</mx:AddChild>
+		</mx:State>
+	</mx:states>
+	<mx:constraintColumns>
+		<mx:ConstraintColumn id="Canvas1_col1" width="10.8%"/>
+		<mx:ConstraintColumn id="Canvas1_col2" width="89.2%"/>
+	</mx:constraintColumns>
+	<mx:Script>
+		<![CDATA[
+			import com.HAL.controls.events.GridWidgetCreatedEvent;
+			import com.HAL.controls.events.GridToggleButtonCreatedEvent;
+			import com.HAL.utils.ArrayCollectionUtils;
+			import mx.events.CollectionEvent;
+			import com.HAL.utils.Misc;
+			import mx.controls.advancedDataGridClasses.AdvancedDataGridColumn;
+			import com.HAL.controls.events.ListItemSelectedEvent;
+			import mx.events.ListEvent;
+			import com.HAL.controls.events.ListInFocusEvent;
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+
+			[Event(name="listInFocus", type="com.HAL.controls.events.ListInFocusEvent")]
+			[Event(name="listItemSelected", type="com.HAL.controls.events.ListItemSelectedEvent")]
+			[Event(name="gridToggleButtonCreated", type="com.HAL.controls.events.GridToggleButtonCreatedEvent")]
+			[Event(name="gridWidgetCreated", type="com.HAL.controls.events.GridWidgetCreatedEvent")]
+
+			public static const const_ToggleButtonGridState:String = 'ToggleButtonGridState';
+			public static const const_ToggleButtonListState:String = 'ToggleButtonListState';
+			
+			private var _list:List;
+			private var _grid:AdvancedDataGrid;
+			
+			private var _labelField:String;
+			
+			[Bindable]
+			private var _list_dataProvider:ArrayCollection = new ArrayCollection();
+
+			[Bindable]
+			private var _grid_dataProvider:ArrayCollection = new ArrayCollection();
+			
+			[Bindable]
+			private var _toolTip:String = 'Click any items from the List to display the Contents of each item.';
+			
+			[Bindable]
+			private var _toggleHeaderText:String = '';
+			
+			[Bindable]
+			private var _deferredGridActions:Array = [];
+			
+			public function set deferredGridAction(action:Function):void {
+				if (action != null) {
+					this._deferredGridActions.push(action);
+				}
+			}
+			
+			public function get deferredGridActions():Array {
+				return this._deferredGridActions;
+			}
+			
+			public function set label_toggleHeader(text:String):void {
+				this._toggleHeaderText = text;
+			}
+			
+			public function get label_toggleHeader():String {
+				return this._toggleHeaderText;
+			}
+			
+			public function set list_toolTip(toolTip:String):void {
+				this._toolTip = toolTip;
+			}
+			
+			public function get list_toolTip():String {
+				return this._toolTip;
+			}
+			
+			public function addItem(item:*):void {
+				if (this._list_dataProvider) {
+					this._list_dataProvider.addItem(item);
+				}
+			}
+			
+			public function get list():List {
+				return this._list;
+			}
+			
+			public function set labelField(labelField:String):void {
+				this._labelField = labelField;
+				if (this._list) {
+					this._list.labelField = this._labelField;
+				}
+			}
+			
+			public function get labelField():String {
+				return this._labelField;
+			}
+			
+			public function get grid():AdvancedDataGrid {
+				return this._grid;
+			}
+			
+			public function set list_dataProvider(dp:ArrayCollection):void {
+				this._list_dataProvider = dp;
+				if (this.listWidget) {
+					this.listWidget.dataProvider = dp;
+				}
+			}
+			
+			public function get list_dataProvider():ArrayCollection {
+				if (this.listWidget) {
+					return ArrayCollection(this.listWidget.dataProvider);
+				}
+				return this._list_dataProvider;
+			}
+			
+			public function set grid_dataProvider(dp:ArrayCollection):void {
+				this._grid_dataProvider = dp;
+				if (this.gridWidget) {
+					this.gridWidget.dataProvider = dp;
+					this.gridWidget.callLater(adjustDataGridColWidths,[this.gridWidget]);
+				}
+			}
+			
+			public function get grid_dataProvider():ArrayCollection {
+				if (this.gridWidget) {
+					return ArrayCollection(this.gridWidget.dataProvider);
+				}
+				return this._grid_dataProvider;
+			}
+			
+			private function refreshToggleHeaderState():void {
+				try {
+					this.hbox_ToggleHeader.styleName = ((this.list_dataProvider.length > 0) ? 'ToggleButtonHeaderActive' : 'ToggleButtonHeaderInitial');
+					this.btn_gridToggle.enabled = ((this.list_dataProvider.length > 0) ? true : false);
+					this.btn_gridToggle.styleName = ((this.btn_gridToggle.enabled) ? 'ToggleButtonGridState' : 'ToggleButtonGridDisabledState');
+				} catch (err:Error) { }
+			}
+			
+			private function onCollectionChangeListDataProvider(event:CollectionEvent):void {
+				this.refreshToggleHeaderState();
+			}
+			
+			private function onInit():void {
+				this.callLater(this.refreshToggleHeaderState);
+				this._list_dataProvider.addEventListener(CollectionEvent.COLLECTION_CHANGE, onCollectionChangeListDataProvider);
+			}
+			
+			private function onCreationCompleteListWidget(event:FlexEvent):void {
+				this._list = List(event.currentTarget);
+				if (this._list_dataProvider) {
+					this.listWidget.dataProvider = this._list_dataProvider;
+				}
+				if (this._labelField) {
+					this._list.labelField = this._labelField; 
+				}
+			}
+			
+			private function onCreationCompleteGridToggleButton(event:FlexEvent):void {
+				this.dispatchEvent(new GridToggleButtonCreatedEvent(GridToggleButtonCreatedEvent.TYPE_GRID_TOGGLE_BUTTON_CREATED,event));
+			}
+			
+			public function get isToggledAsGrid():Boolean {
+				return (this.btn_gridToggle.styleName == const_ToggleButtonGridState);
+			}
+			
+			private function onClickGridToggleButton(event:MouseEvent):void {
+				var btn:Button = Button(event.currentTarget);
+				var obj:ListGridCanvas = ListGridCanvas(btn.parentDocument);
+				if (obj) {
+					obj.flipToggle();
+					if (btn.styleName == const_ToggleButtonGridState) {
+						btn.styleName = const_ToggleButtonListState;
+					} else {
+						btn.styleName = const_ToggleButtonGridState;
+					}
+				}
+			}
+			
+			private function adjustDataGridColWidths(grid:*):void {
+				var i:int;
+				var j:int;
+				var dp:ArrayCollection;
+				var obj:Object;
+				var s:String;
+				var cols:Array = [];
+				var colWidths:Array = [];
+				try {
+					if (grid is AdvancedDataGrid) {
+						var c:AdvancedDataGridColumn;
+						var g:AdvancedDataGrid = AdvancedDataGrid(grid);
+						dp = ArrayCollection(g.dataProvider);
+						cols = g.columns;
+						for (i = 0; i < cols.length; i++) {
+							colWidths[i] = 0.0;
+						}
+						for (j = 0; j < dp.length; j++) {
+							obj = dp.getItemAt(j);
+							for (i = 0; i < cols.length; i++) {
+								c = AdvancedDataGridColumn(cols[i]);
+								s = String(obj[c.dataField]);
+								if (s.length > 0) {
+									colWidths[i] = Math.max(Misc.computeTextMetricsForString(s).width,colWidths[i]);
+								}
+							}
+						}
+						for (i = 0; i < cols.length; i++) {
+							c = AdvancedDataGridColumn(cols[i]);
+							c.width = colWidths[i];
+						}
+					}
+				} catch (err:Error) { }
+			}
+			
+			private function onCreationCompleteGridWidget(event:FlexEvent):void {
+				this._grid = AdvancedDataGrid(event.currentTarget);
+				if (this._grid_dataProvider) {
+					this.gridWidget.dataProvider = this._grid_dataProvider;
+					this.gridWidget.callLater(adjustDataGridColWidths,[this.gridWidget]);
+				}
+				var i:int;
+				var actions:Array = this.deferredGridActions;
+				for (i = 0; i < actions.length; i++) {
+					this.gridWidget.callLater(actions[i]);
+				}
+				this.dispatchEvent(new GridWidgetCreatedEvent(GridWidgetCreatedEvent.TYPE_GRID_WIDGET_CREATED, event));
+			}
+
+			public function flipToggle():void {
+				if (this.viewStack.selectedIndex == 0) {
+					this.viewStack.selectedIndex = 1;
+				} else {
+					this.viewStack.selectedIndex = 0;
+				}
+			}
+			
+			public function toggleToGrid():void {
+				this.viewStack.selectedIndex = 1;
+			}
+
+			public function toggleToList():void {
+				this.viewStack.selectedIndex = 0;
+			}
+			
+			private function onMouseOverListWidget(event:MouseEvent):void {
+				this.dispatchEvent(new ListInFocusEvent(ListInFocusEvent.TYPE_LIST_IN_FOCUS,event));
+			}
+			
+			private function onChangeListWidget(event:ListEvent):void {
+				this.dispatchEvent(new ListItemSelectedEvent(ListItemSelectedEvent.TYPE_LIST_ITEM_SELECTED,event));
+			}
+		]]>
+	</mx:Script>
+	<!--
+		To-Do:
+		
+		When "iscompressed" column is "0" for all rows then "uncompressed" column and "iscompressed" column are meaningless and 
+		can be hidden from view.
+		
+		Put the "length" with the List label field.
+	-->
+	<mx:VBox id="vbox1" width="100%" height="100%">
+		<mx:ViewStack id="viewStack" selectedIndex="0" width="100%" height="100%">
+			<mx:Canvas label="ListView" width="100%" height="100%" id="canvas1">
+				<!--
+				 itemRenderer="com.HAL.controls.renderers.ListItemRenderer"
+				-->
+				<mx:List id="listWidget" width="100%" height="100%" borderStyle="none" backgroundColor="#FFFFFF" labelField="name" toolTip="{this._toolTip}" dataProvider="{this._list_dataProvider}" creationComplete="onCreationCompleteListWidget(event)" mouseOver="onMouseOverListWidget(event)" change="onChangeListWidget(event)"/>
+			</mx:Canvas>
+			<mx:Canvas label="GridView" width="100%" height="100%">
+				<mx:AdvancedDataGrid id="gridWidget" designViewDataType="flat" width="100%" height="100%" dataProvider="{this._grid_dataProvider}" creationComplete="onCreationCompleteGridWidget(event)">
+					<mx:columns>
+						<mx:AdvancedDataGridColumn headerText="name" dataField="name" minWidth="100"/>
+						<mx:AdvancedDataGridColumn headerText="pos" dataField="pos" minWidth="70"/>
+						<mx:AdvancedDataGridColumn headerText="length" dataField="length" minWidth="70"/>
+						<mx:AdvancedDataGridColumn headerText="ulength" dataField="uncompressed" minWidth="70"/>
+						<mx:AdvancedDataGridColumn headerText="flag" dataField="iscompressed" minWidth="45"/>
+						<mx:AdvancedDataGridColumn headerText="type" dataField="type" minWidth="45"/>
+					</mx:columns>
+				</mx:AdvancedDataGrid>
+			</mx:Canvas>
+		</mx:ViewStack>
+	</mx:VBox>
+</mx:Canvas>

@@ -1,0 +1,188 @@
+#site_body {
+	color: #eeeeee;
+	font-size: 10px;
+}
+
+#site_body > ul.navigation {
+	position: relative;
+	list-style: none;
+	background-position: top left;
+	background-repeat: no-repeat;
+	padding: 0;
+	margin: 0 20px 0 20px;
+	height: 24px;
+}
+
+#site_body a:hover {
+	color: #F0F;
+	font-size: 10px;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: black;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+a {
+	color: #F0F;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+#site_body dd > p:first-child {
+	margin-top: 0;
+}
+
+#site_body h1 {
+	font-size: 22px;
+}
+
+#site_body dt {
+	color: white;
+	margin-bottom: 2px;
+	font-weight: bold;
+}
+
+#site_body h2 {
+	font-weight: normal;
+	font-size: 18px;
+}
+
+#site_body a {
+	color: #F0F;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#site_container h3 {
+	color: cyan;
+	margin-top: 0.7em;
+	margin-bottom: 0.6em;
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+}
+
+#site_body h1 {
+	margin-top: 0.7em;
+	margin-bottom: 0.6em;
+	color: #F0F;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+#site_body h2 {
+	margin-top: 0.7em;
+	margin-bottom: 0.6em;
+	color: #F0F;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+#site_body h3 {
+	margin-top: 0.7em;
+	margin-bottom: 0.6em;
+	color: #F0F;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+#site_body h4 {
+	margin-top: 0.7em;
+	margin-bottom: 0.6em;
+	color: #F0F;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+
+#site_body a:visited {
+	font-size: 12px;
+	color: blue;
+}
+
+#site_body dd {
+	margin-bottom: 0.3em;
+}
+
+#site_body dd > p:last-child {
+	margin-bottom: 0;
+}
+
+#site_body > .navigation li {
+	float: left;
+}
+
+#site_body img {
+	border: 0;
+}
+
+#site_body > div:last-child {
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	padding-bottom: 22px;
+}
+
+#site_container {
+	display: block; background-color: #261C13; margin-top: 22px;
+}
+
+body {
+	padding: 0; margin: 0; background-color: black; font-family: "Helvetica Neue", "Bitstream Vera Sans", Arial; color: black;
+}
+
+#site_container .basic_info a {
+	color: #777777; font-weight: bold; text-decoration: none;
+}
+
+#site_container .basic_info {
+	display: block; position: absolute; top: 4px; left: 0; width: 100%; color: #777777; letter-spacing: 1px; font-size: 10px; text-align: center;
+}
+
+#site_header,
+#site_body,
+#site_footer .container {
+	position: relative; display: block; width: 990px; margin: 0 auto 0 auto;
+}
+
+#site_container .basic_info a:hover {
+	text-decoration: underline;
+}
+
+#site_header > .meta {
+	position: absolute; top: 0; right: 0; display: block; margin: 0; padding: 0; width: 184px; height: 163px;
+}
+
+#site_header > .meta * {
+	display: none;
+}
+
+#site_header {
+	z-index: 999;
+}
+
+#site_header h1 span {
+	display: none;
+}
+
+#site_header h1 {
+	position: absolute; display: block; margin: 0; padding: 0; left: 280px; top: 64px;
+}
+
+#site_footer a {
+	color: #bbbbbb; font-weight: bold; text-decoration: none;
+}
+
+#site_footer {
+	border: none; background-color: black; border-top: 1px solid #6f6f6f; margin-top: 14px; font-size: 10px; color: #aaaaaa; padding: 7px;
+}
+
+#site_footer a:hover {
+	text-decoration: underline;
+}
+

@@ -1,0 +1,35 @@
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+.oneColElsCtrHdr #container {
+	width: 46em;
+	background: #FFFFFF;
+	margin: 0 auto;
+	border: 1px solid #000000;
+	text-align: left;
+}
+.oneColElsCtrHdr #header { 
+	background: #DDDDDD; 
+	padding: 0 10px 0 20px;
+} 
+.oneColElsCtrHdr #header h1 {
+	margin: 0;
+	padding: 10px 0;
+}
+.oneColElsCtrHdr #mainContent {
+	padding: 0 20px;
+	background: #FFFFFF;
+}
+.oneColElsCtrHdr #footer { 
+	padding: 0 10px;
+	background:#DDDDDD;
+} 
+.oneColElsCtrHdr #footer p {
+	margin: 0;
+	padding: 10px 0;
+}

@@ -1,0 +1,719 @@
+================
+ DrPython: Help
+================
+
+.. _Credits: credits.html
+.. _Thanks: thanks.html
+.. _DrScript: drscript.html
+.. _Plugins: plugins.html
+.. _Preferences: preferences.html
+.. _GPL: gpl.html
+
+:Author: Daniel Pozmanter
+:Contact: drpython@bluebottle.com
+:Web site: http://drpython.sourceforge.net/
+:Copyright: 2003-2007 Daniel Pozmanter
+:License: GPL_
+
+.. _Top:
+
+Credits_
+
+Thanks_
+
+.. contents::
+
+**Customize and Extend:**
+
+- Preferences_
+
+- DrScript_
+
+- Plugins_
+
+Introduction
+=============
+*Just what is DrPython?*
+
+To start with, DrPython is a Development Environment. It is essentially
+a text editor with built in programming tools, like an integrated
+prompt, text manipulation, and syntax highlighting to name a few.
+The integrated prompt means when you run a python program, 
+DrPython catches the output, takes input, and in general behaves
+like a console window (cmd.exe or rxvt for example).
+
+DrPython was designed to be a cross-platform Python IDE. 
+The primary purpose was for use in Education, to make teaching
+Python programming easier. It was originally designed based 
+roughly on DrScheme. DrPython is meant to play the same role 
+for Python that DrScheme plays for Scheme.
+
+The development platform is Linux (Mandrake 10.1 is the 
+current flavor) It has been tested on various flavors of 
+Linux (E.g. Mandrake, Debian, Gentoo, Fedora), Windows 9x,
+Windows NT, Windows XP, and Mac OS X.
+
+Any platform which supports python 2.3+ and wxPython 2.5.2+ 
+should work.
+
+*Is DrPython Free or What?*
+
+DrPython is both free and open source software. This means 
+you can download DrPython for free, share it as much as you 
+want, look through the source, whatever. You can even take 
+chunks of code and plop them into your own program (so long 
+as you give proper credit!). You could even start your own 
+branch of DrPython, or rewrite the code to work with another
+language.
+
+The point of Free/Open Source Software is that the user 
+has the power to use their software as they wish.
+
+The bummer side of this is that DrPython has no warranty. 
+So if after using DrPython your computer becomes telekinetic 
+and blows up your refrigerator... You can send me a bug report.
+
+DrPython is released under the GNU Public License.
+
+Built Using
+------------
+
+For the Program:
+
+- Python (Guido van Rossum et al.)
+- wxWidgets (Julian Smart et al.)
+- wxPython (Robin Dunn et al.)
+- Scintilla (Neil Hodgson)
+
+For the Documentation:
+
+- docutils (David Goodger)
+- Syntax-highlighted code blocks for docutils (On ASPN) (Kevin Schluff)
+- Silver City (Brian Quinlan)
+
+Icons from:
+
+- Klassic New Crisp Icons (Asif Ali Rizwaan)
+- Sparkling (Flow)
+- Noia (Carles Carbonell Bernado)
+- Nuvola (David Vignoni)
+- (Some Icons Were Either Created or Edited by Daniel Pozmanter.)
+
+Donate!
+--------
+
+If you want to show support for DrPython, send a donation our 
+way. A single dollar would be delicious and nutritious:
+
+`Donate to Daniel Pozmanter <http://sourceforge.net/donate/index.php?user_id=796750>`_
+
+`Donate to North Star <http://sourceforge.net/donate/index.php?group_id=83074>`_
+
+Back to the Top_.
+
+
+Installation
+=============
+
+If you are reading this, DrPython should already be installed.
+That being said, you need the following programs to run 
+DrPython: Python 2.0 or newer (tested with 2.2) and the 
+corresponding wxPython. It is really best to get the lastest 
+version of Python and wxPython.
+
+If you are having trouble running DrPython on Linux/Unix, 
+run the file ``drpython.lin``, or edit the first line of 
+``drpython.pyw`` or ``drpython.py`` to read:
+
+.. code-block:: Python
+
+  #![PATH/TO/PYTHON]/python
+
+(eg: ``#!/usr/bin/python``). (In other words, make the path absolute.)
+
+If you are still having trouble, go to the DrPython website
+(http://www.sourceforge.net/projects/drpython/) and post to 
+the help forum.
+
+You can manually set the path used for storing preferences:
+
+``drpython.pyw --preferencesbasepath="the path"``
+
+DrPython will then use preferences in the directory:
+- "the path/.drpython"
+- "the path/drpython" on Windows
+
+Support
+--------
+
+Found a bug? Want to see something change? 
+Have a feature request? Stop by the `DrPython Sourceforge
+Project Page <http://www.sourceforge.net/projects/drpython/>`_.
+Post in the forum, or formally submit a bug/feature request.
+I highly recommend starting a discussion on possible 
+features/changes. Part of the power of open source is the 
+power of the users and developers to engage in discourse 
+about a project, its design and its uses.
+
+Features
+=========
+
+Bookmarks
+----------
+
+Bookmarks are pretty straighforward: there are Bookmarks, and there are Bookmark Folders.
+
+A Bookmark is either a file or directory. When it is selected from the menu, if it is a file, it is opened. If it is a directory, an Open Dialog in that directory pops up.
+
+A Bookmark Folder may contain Bookmarks and/or Bookmark Folders.
+
+You can only add a Bookmark Folder or Bookmark to a Bookmark Folder.
+
+To move a Bookmark or a Bookmark Folder (and all it's contents): 
+
+1. Single click on the item you want to move.
+2. Drag it to the item you want it to go immediately after.
+3. Dragging it to the any item in a folder will cause it 
+   to be added directly after that item.
+4. Dragging it to a folder will cause it to be the first 
+   item in that folder.
+
+Back to the Top_
+
+Check Syntax
+-------------
+
+Runs the python built in 'compile', then tabnanny, on the current file. Reports syntax and indentation errors.
+
+Note that this only checks the syntax for the current file.
+
+Encoding Support
+-----------------
+
+**The following only applies if your version of wxPython was built with unicode support:**
+
+If you want to use a non ascii encoding (like latin-1 or unicode (utf8)),
+you need to set some preferences first.  (In the event of a bad encoding,
+drpython will warn you via standard output (if the problem is in the file dialog
+or prompt), or via a dialog (if the problem occurs while saving or opening a file).
+
+DrPython, by default, checks for unicode when opening/saving files,
+and in the Prompt. 
+
+If you want to use a specific encoding, you have two options.
+
+1. You can set the default encoding via Preferences.
+   This is the encoding used by default when opening/saving files,
+   and the encoding used in the prompt and file dialog.
+2. For Opening and Saving files, if you use the special python comment:
+
+.. code-block:: Python
+
+    # -*- coding: xyz -*-
+
+(As detailed in the Python Tutorial).
+
+DrPython will try the encoding 'xyz' for the file first.
+
+DrPython, when getting text to open/save
+will go through the following steps:
+
+1. Check for a special comment (coding) (if Auto Detect is enabled).
+2. Check for Unicode (if Auto Detect is enabled)
+3. Check for default encoding (if Default Encoding is enabled)
+4. If no check passes, ensure the text is ascii.
+
+To disable default encoding, leave it blank.
+
+Back to the Top_
+
+Find/Replace
+--------------
+
+This is a rather standard/straightforward dialog. However 
+there are some things that stick out.
+
+Right clicking on the text field will yield a pop up menu. 
+You can insert tab/newline/carriage returns, perform clipboard
+operations, or clear the text.
+
+You can also access Find/Replace History via the combobox. 
+
+Back to the Top_
+
+Find and Complete
+------------------
+
+This is a user initiated version of auto complete. 
+DrPython will search the current file for possible 
+completions to the word you are currently typing. 
+It will display these results in a small window. 
+Navigate by using the up and down arrows, or to go faster, 
+page up and page down to go faster, or home and end to skip 
+to the start and end of the list.
+
+Hitting Enter or Tab will complete the current word with 
+the selection.
+
+Context Sensitive: Find And Complete stops at the following 
+characters (in addition to whitespace)::
+
+  ( ) < > [ ] { }
+
+This means:
+
+.. code-block:: Python
+
+  tree
+  dog(threat)
+    
+  dogs
+  dog(tre
+
+searching at ``dog(tre`` will yield ``tree, treat``. However:
+
+.. code-block:: Python
+
+  tree
+  dog(treat
+
+  dogs
+
+  dog(
+    
+searching at ``dog(`` will yield ``dog(threat, dogs``.
+
+Note: Find And Complete is case sensitive.
+
+Back to the Top_
+
+Go To Block / Class / Def
+--------------------------
+
+A few notes. In the code:
+
+.. code-block:: Python
+
+  if True:
+      print "Hallo"
+  # Comment
+      print "Hello again"
+    
+'``if True:``' is the start of the block; 
+'``print "Hello again"``' is the end.
+
+Comments '``#``' are ignored. For explicitly (joined with a 
+backslash) and implicitly joined lines, every line after the
+first is ignored.
+
+Goto Traceback
+---------------
+
+Double clicking a traceback entry in the prompt (the *File* 
+line in the example below)::
+
+  Traceback (most recent call last):
+  File "/home/user/Desktop/test.py", line 6, in ?
+    wd
+  NameError: name 'wd' is not defined
+
+will tell DrPython to open '/home/user/Desktop/test.py' and 
+go to line 6.
+
+Back to the Top_
+
+Indentation and Tabs
+---------------------
+
+The "Use Tabs" option under "Document" in preferences tells 
+DrPython whether to use tabs (default) or spaces for 
+autoindentation. "Tab Width" under "General" is how many 
+spaces DrPython should consider a "Tab" to be.
+
+To see what characters the current document uses for 
+indentation, check the statusbar.
+
+The "Whitespace" menu has entries that allow you to set 
+indentation to tabs or spaces. Setting the indentation for 
+the document to tabs, for example, will replace a set number 
+of spaces with tabs. This operation takes place at the 
+beginning of each line.
+
+Some programmers prefer (and/or were taught) to use tabs 
+('\t') to indent blocks of code. Some use spaces instead.
+
+The whitespace menu lets you easily switch the type of 
+indentation used in the current file to the type you prefer
+to work with.
+
+Note: The ClassBrowser only works properly if the current 
+file is using the same type of indentation (tab character 
+or spaces) as is set as the default for DrPython in prefs. 
+DrPython will automatically check for this when you open 
+the Class Browser. To fix a mixed file, use the "Whitespace"
+menu under "Edit".
+
+NOTE: If the line endings are mixed, DrPython will not be 
+able to properly fix the indentation. Always set the line 
+endings before setting the indentation type. 
+
+Back to the Top_
+
+Shortcuts
+----------
+
+You can set shortcuts by selecting "Customize Shortcuts" from 
+the Options menu.
+
+Ignore Keys ignores the modifier keys listed. Only modifier 
+keys are valid. This is primarily for operating systems such 
+as Linux, where the "Meta" key is set to "Num Lock" by default,
+and hence may always be on.
+
+Note: You can set shortcuts for DrScript menu items. If you 
+have not, or the shortcuts file is somehow out of sync with
+the actual number of DrScripts, DrPython will simply load the
+correct DrScripts, with no default shortcuts. DrScript 
+Shortcuts are stored separately from DrPython Shortcuts.
+
+If your shortcuts are not working, use "get key" on a shortcut
+to see if a modifier key is constantly present. On Linux, 
+"Meta" may be present. If this is the case, use "Ignore Keys"
+to set "Meta" as a key to ignore.
+
+For a given shortcut, simply click the "Get Key" Button, 
+and press the keys you wish. It will print the modifiers 
+detected, and the keycode. When you are done, hit "Close",
+and the keystring will be next to the shortcut.
+
+Select "Update" to start using the key now. Select "Save" 
+to have DrPython remember the changes.
+
+Note: The Tab and Enter keys are used for code related
+to indentation in the document, and Enter + the arrow keys
+are used behaviour specific to the prompt.  Setting these
+keys in the shortcuts may cause DrPython to behave incorrectly.
+
+Note: On some platforms some keys may not register, and thus 
+cannot be used as shortcuts.
+
+Note: There seems to be a bug where shift + backspace 
+inserts the backspace character. To work around this, 
+"Delete Back Not Line" is assigned to ``shift + backspace``.
+If you want to insert the backspace character, just set 
+"Delete Back Not Line" to None. If you want to use 
+``shift + backspace`` for something else, just set it to 
+None, and you should be set.
+
+The defaults are:
+
+=================== ==================
+Key                  Default shortcut
+=================== ==================
+Ctrl + N             New File
+Ctrl + O             Open File
+Ctrl + S             Save File
+Ctrl + W             Close File
+..                   ..
+..                   ..
+..                   ..
+Ctrl + M             Open Imported Module
+..                   ..
+..                   ..
+..                   ..
+F9                   Select Previous Document
+F10                  Select Next Document
+..                   ..
+..                   ..
+..                   ..
+F7                   Open a Python interpreter
+Ctrl + E             Run current program
+Ctrl + D             End current program / Python interpreter
+..                   ..
+..                   ..
+..                   ..
+Ctrl + R             Replace
+Ctrl + F             Find
+F3                   Find Next
+Shift + F3           Find previous
+..                   ..
+..                   ..
+..                   ..
+Ctrl + G             Go to line
+Ctrl + B             Go to block start
+Ctrl + Shift + B     Go to block end
+Ctrl + F8            Source Browser Go To
+..                   ..
+..                   ..
+..                   ..
+Ctrl + Enter         Find and complete
+..                   ..
+..                   ..
+..                   ..
+F6                   Toggle view prompt
+F5                   Toggle maximise
+F8                   Toggle source browser
+Ctrl + Shift + W     Toggle view whitespace
+..                   ..
+..                   ..
+..                   ..
+Ctrl + P             Print file
+Ctrl + Shift + P     Print prompt
+..                   ..
+..                   ..
+..                   ..
+Ctrl + [             Comment
+Ctrl + ]             Uncomment
+Ctrl + I             Indent
+Ctrl + Shift + I     Dedent
+..                   ..
+..                   ..
+..                   ..
+Ctrl + A             Select all
+Ctrl + Z             Undo
+Ctrl + Y             Redo
+Ctrl + X             Cut
+Ctrl + C             Copy
+Ctrl + V             Paste
+Ctrl + +             Zoom in
+Ctrl + -             Zoom out
+Ctrl + Shift + U     Uppercase
+Ctrl + U             Lowercase
+=================== ==================
+
+Back to the Top_
+
+Line Endings
+-------------
+
+================ ======== ===
+Unix Mode         \\n      New line
+Windows Mode      \\r\\n   Carriage return, New line
+Macintosh Mode    \\r      Carriage return
+================ ======== ===
+
+Windows mode can make linux hiccup. So Unix Mode is the 
+default (Windows seems to be fine with it.)
+
+Note: Setting the Line Endings in Preferences does not 
+affect the current open file! 
+
+Back to the Top_
+
+Menu And Focus (Toggling)
+--------------------------
+
+Some menu items act on the Text Control currently with focus.
+Toggle Whitespace Visible is one such item.
+
+If the focus is on the File text control, then selecting 
+this menu item will cause the whitespace to either become 
+visible or invisible in that control.
+
+If the focus is on the prompt, then the whitespace will be 
+toggled in the prompt. 
+
+Back to the Top_
+
+Open Imported Module
+----------------------
+
+DrPython only shows modules which exist. These are either in 
+the current module search path for Python, or in the same 
+directory as the current document.
+
+Some modules do not exist as files. The integral modules sys 
+and time are two examples. These will not show up in the 
+list of imported modules, even if they are imported in the 
+current document.
+
+If you type, the typed text is used as a filter for the 
+matching modules. (Use backspace to backtrack). Only matches
+that contain the typed text will be shown. (Case insensitive.) 
+
+Back to the Top_
+
+Pop Up Menu
+-------------
+
+The Pop Up Menu is the menu that pops up when you right 
+click on the Document, or the Prompt. You can customize 
+this menu to handle DrPython functions, DrScripts, or plugins.
+
+Note that each item on the Pop Up Menu must have a distinct 
+name for everything to work properly.
+
+Back to the Top_
+
+Rectangular Selection
+-----------------------
+
+To activate this feature, use ``Alt`` on Windows, 
+``Shift + Alt`` on Linux. (If neither works, try ``Ctrl``).
+
+**In Find**: rectangular selection ignores line endings, 
+and does not support the 'Whole Word' flag. It searches line 
+by line.
+
+**In Replace**: the above applies. Also, 'Prompt On Replace'
+is not supported.
+
+Back to the Top_
+
+Regular Expressions
+--------------------
+
+It is best to consult the python documentation 
+(Under Modules, "re").
+
+In short, Regular Expressions provide a fast and powerful 
+method for matching patterns of text. These can be quite 
+useful in programs you write, or simply to find and/or 
+replace text in a given file.
+
+Back to the Top_
+
+Running a Python Program
+-------------------------
+
+Open a file, click run, and you are set to go. If your 
+program takes arguments, select "Set Arguments" from the 
+menu or toolbar.
+
+Note the right field in the status bar tells you if the 
+program is running. Also note that the "End" button is 
+enabled, and "Run", "Set Arguments", and "Python Debugger" 
+are disabled.
+
+When the program has ended, the right status bar field 
+goes blank, "End" is disabled, and "Run", "Set Arguments",
+and "Python Debugger" are enabled.
+
+Back to the Top_
+
+Shell Commands
+---------------
+
+To add a shell command, go to the DrScript menu, under 
+Add Script, and select "Shell Command".
+
+Back to the Top_
+
+Source Browser
+---------------
+
+The source browser displays classes, defs, imports, and labels.
+Double Clicking (Or, Optionally, Right Clicking) an item
+will set the Document to the line number of that item.
+
+Separators (Labels) can be added manually
+#---YourLabelHere
+or via the Insert Seperators Dialog.
+
+Back to the Top_
+
+Source Browser Go To
+---------------------
+
+A very quick and simple way to move around in a large document.
+If you type, the typed text is used as a filter for the 
+matching classes, defs, and imports.  (Use backspace to 
+backtrack). Only matches that contain the typed text will 
+be shown. (Case insensitive.)
+
+The typed text is echoed in the top text control. The next 
+two text controls shows the line number of the selected 
+item, as well as the class or function the item is defined in.
+(The filename is used if no class or function is found).
+
+Back to the Top_
+
+Status Bar
+-----------
+
+| The Status Bar displays some useful information. The left bar displays:
+| [*current line*] [*current column*] [*line ending type*] [*insert/overtype*] [*indentation type*]
+| The right bar displays program/Python status, for example ``Running Python Interpreter``. 
+
+Back to the Top_
+
+Tool Bar
+---------
+
+A few notes on customizing the toolbar.
+
+1. When selecting a particular icon for a toolbar item, 
+   select the toolbar item from the left list ("Current List"),
+   then click the "Change" button for the icon size you want.
+2. If you specify an icon, this will be loaded instead of the
+   default, and instead of any icon file loaded.
+3. If you select an icon that is a different size than the 
+   selected size (16x16, 24x24), the toolbar will not display
+   correctly.
+
+Back to the Top_
+
+Tracebacks
+-----------
+
+Tracebacks are the output the python interpreter produces for
+an unhandled exception. This output::
+
+  Traceback (most recent call last):
+    File "/mnt/win_e/docs/prog/drpython/drpython-3.1.2/drpython.py", line 1840, in OnGoTo
+      v = int(v) - 1
+  ValueError: invalid literal for int(): line number
+
+is produced if you type "line number" into the Goto dialog.
+
+Now, DrPython handles this exception. However DrPython 
+displays tracebacks in its error dialogs (if there are any)
+for the purposes of transparency. This way, if there is a 
+bug it is easier to report it, and if you are working on a 
+DrScript or a Plugin, this makes it easier to figure out 
+what is going on.
+
+Back to the Top_
+
+View In Panel
+--------------
+
+View In Panel lets you view any open document (including 
+the current one) in any side panel.
+
+There are two notes.
+
+1. Only STC shortcuts work in these panels. (The exception 
+   is if the split view is of the current document).
+2. If you view document 1 in document 2, then close document
+   1, you need to close the panel in document 2 manually.
+
+Back to the Top_
+
+Notes
+======
+
+DrPython cannot handle everything.
+
+If you create more than 100 Panels in any one direction 
+(Left, Right, Top, Bottom), the events will be all messed up.
+
+If you do not have permission to write to your user's home 
+directory, or the replacement directories DrPython will try
+if your home directory does not exist (eg. ``C:\`` or 
+``os.environ["APPDATA"]``), then DrPython will not save 
+preferences, and will not keep a recent files list.
+
+If you run a program with an infinite loop, things will get 
+rather slow. Hit the "End" button on the toolbar, or hit 
+Ctrl+D to end the program being run.
+
+Please note that if you type the color in for the font style
+dialog, any bad characters (not 0-9 or A-F) will create 
+a warning the moment you enter them. If the string is not
+properly formated ('#' followed by 6 characters), the 
+sliders will be disabled. Upon hitting OK, any invalid 
+color string will be ignored, and DrPython will revert
+to the last value for that color string.
+
+Back to the Top_

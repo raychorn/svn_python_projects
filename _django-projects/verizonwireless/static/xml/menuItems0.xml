@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<{{ head_tag }} metafield="{{ metadata_tag }}" datafield="{{ data_tag }}">
+    <{{ metadata_tag }} id="{{ id }}"/>
+    <{{ metadata_tag }} label="{{ label }}"/>
+    <{{ metadata_tag }} url="{{ url }}"/>
+    <{{ metadata_tag }} type="{{ type }}"/>
+    <{{ metadata_tag }} domain="{{ domain }}"/>
+    <{{ metadata_tag }} body="{{ body }}"/>
+    <{{ metadata_tag }} target="{{ target }}"/>
+    <{{ metadata_tag }} hOrientation="{{ hOrientation }}"/>
+    <{{ metadata_tag }} vOrientation="{{ vOrientation }}"/>
+</{{ head_tag }}>

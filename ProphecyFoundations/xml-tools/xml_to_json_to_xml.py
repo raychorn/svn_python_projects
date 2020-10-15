@@ -1,0 +1,50 @@
+from vyperlogix import misc
+from vyperlogix.hash import lists
+from vyperlogix.xml import XMLJSON
+_metadata = lists.HashedFuzzyLists2()
+
+def callback(data):
+    global _metadata
+    if (misc.isList(data)):
+        data = data[-1]
+    if (lists.isDict(data)) and (data.has_key(_metadata['label'])) and ( (data.has_key(_metadata['url'])) or (data.has_key(_metadata['body'])) ):
+        if (data.has_key(_metadata['url'])):
+            del data[_metadata['url']]
+            data[_metadata['url']] = '...'
+    else:
+        if (lists.isDict(data)):
+            for k,v in data.iteritems():
+                _metadata[k] = v
+    return data
+
+if (__name__ == '__main__'):
+    import os, sys
+    import urllib
+    import simplejson
+    from vyperlogix.misc import _utils
+
+    fname = r'Z:\python projects\_django-projects\@projects\verizonwireless\extras\global-nav-sniffer\LoggedOutState.xml'
+    xml = _utils.readFileFrom(fname)
+    xml = xml.replace('&',urllib.quote_plus('&'))
+    print 'Reading "%s".' % (fname)
+    data = XMLJSON.xml_to_python(xml) # ,callback=callback
+
+    json = XMLJSON.python_to_json(data)
+    toks = list(os.path.splitext(fname))
+    toks[-1] = '.json'
+    fname2 = ''.join(toks)
+    print 'Writing "%s".' % (fname2)
+    _utils.writeFileFrom(fname2,json)
+
+    #data2 = simplejson.loads(json)
+    
+    #import pyxslt.serialize
+    #xml2 = pyxslt.serialize.toString(rootTagName='menu',prettyPrintXml=True,menu=data2)
+
+    #toks[-1] = '2.xml'
+    #fname2 = ''.join(toks)
+    #print 'Writing "%s".' % (fname2)
+    #_utils.writeFileFrom(fname2,xml2)
+
+    print 'DONE !'
+    pass

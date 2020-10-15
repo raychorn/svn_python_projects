@@ -1,0 +1,135 @@
+HBox.MenuItem
+{
+	backgroundColor: #990101;
+	horizontalGap: 0;
+	backgroundAlpha: 1.0;
+	borderStyle: none;
+	verticalAlign:middle;
+	color: #FFFFFF;
+	paddingTop:0;
+	paddingRight:0;
+	paddingLeft:0;
+	paddingBottom:0;
+	fontFamily:"ArialNormal";
+	fontSize:10;
+	fontWeight:normal;
+}
+
+
+
+
+HBox.MenuBar
+{
+	alpha:1.0;
+	borderColor: #FFFFFF;
+	backgroundAlpha: 1.0;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalGap:0;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	height:30;
+}
+VBox.MenuContainer
+{
+	backgroundColor: #000000;
+	backgroundAlpha: 1.0;
+	horizontalAlign: left;
+	verticalAlign: top;
+	verticalGap: 0;
+}
+HBox.MenuItemSeparatorContainer
+{
+	horizontalGap: 0;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 10;
+	paddingRight: 10;
+}
+HBox.MenuItemSeparator
+{
+	backgroundSize: "100%";
+	borderStyle: none;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalAlign: top;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+}
+VBox.CategoryItemContainer
+{
+	backgroundAlpha: 1.0;
+	backgroundColor: #FE1B1B;
+	color: #FFFFFF;
+}
+HBox.CategoryItemTextFieldContainer
+{
+	backgroundColor: #990101;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	paddingTop: 7;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	fontFamily:"ArialNormal";
+	fontSize:12;
+	fontWeight:normal;
+	/*fontWeight:bold;*/
+}
+HBox.CategorySeparator
+{
+	backgroundSize: "100%";
+	borderStyle: none;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalAlign: top;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+}
+Label.CategoryItemTextfield
+{
+	paddingLeft: 10;
+}
+HBox.SubMenuTitle
+{
+	backgroundAlpha: 0.0;
+	backgroundColor: #FFFFFF;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	verticalAlign: middle;
+	paddingBottom: 0;
+	color: #FFFFFF;
+	borderThickness: 0;
+	borderStyle: none;
+	cornerRadius: 0;
+	borderColor: #FFFFFF;
+	horizontalAlign: left;
+	horizontalGap: 0;
+}
+Label.SubmenuTitleLabel
+{
+	color: #FFFFFF;
+	disabledColor: #FFFFFF;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	textAlign: left;
+	textDecoration: none;
+}
+Label.bigText
+{
+	fontFamily: ArialNormal;
+	fontSize: 12;
+}
+
+
+
+

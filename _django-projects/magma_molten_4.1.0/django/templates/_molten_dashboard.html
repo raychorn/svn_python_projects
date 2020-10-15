@@ -1,0 +1,97 @@
+<h1>MOLTEN Dashboard for {{ ACCOUNT_NAME }}</h1>
+{{ CUSTOM_HOME_PAGE_LINK_CONTENT }}
+<h2 class="gray">
+	<span>
+		  <a href="/cases/new"><img alt="New Case" src="{{ IMAGES_URL }}new_case_gray.gif" width="81" height="22"></a>
+		  <a href="/cases/index"><img alt="New Case" src="{{ IMAGES_URL }}browse_cases.gif" width="143" height="22"></a>
+	</span>
+	Recent Support Cases Show Here
+</h2>
+{{ DASHBOARD_CONTENT }}
+
+  <h2 class="gray buried_header">
+    <span>
+      <a href="/solutions/index"><img alt="Browse Solutions" src="{{ IMAGES_URL }}browse_solutions.gif" width="143" height="22"></a>
+    </span>
+    Solutions - {{ NEW_SOLUTIONS_COUNT }} new solutions added in last {{ NEW_SOLUTIONS_LAST_N_DAYS }} days.
+  </h2>
+
+  <style>            
+			div.auto_complete {
+              width: 350px;
+              background: #fff;
+			  z-index:100;
+			  margin-top:100px;
+            }
+            div.auto_complete ul {
+              border:1px solid #888;
+              margin:0;
+              padding:0;
+              width:100%;
+              list-style-type:none;
+            }
+            div.auto_complete ul li {
+              margin:0;
+              padding:3px;
+            }
+            div.auto_complete ul li.selected { 
+              background-color: #ffb; 
+            }
+            div.auto_complete ul strong.highlight { 
+              color: #800; 
+              margin:0;
+              padding:0;
+            }
+</style>
+
+<div class="search">
+<form action="/solutions/search" method="get">
+        <table>
+                <tbody><tr><td style="height: 35px;" valign="top"><input autocomplete="off" class="search_term_field" id="term" name="term" type="text">
+                            <div style="display: none;" id="search_indicator">
+		  <img alt="Indicator_arrows_circle" src="{{ IMAGES_URL }}indicator_arrows_circle.gif">
+		</div>
+
+                        <div style="display: none;" class="auto_complete" id="term_auto_complete"></div>
+                </td>
+                <td valign="top">
+                        <input alt="Search" class="search_button" src="{{ IMAGES_URL }}search.gif" type="image" width="81" height="22">
+                </td>
+          </tr><tr><td colspan="2">As you type, Molten will offer suggestions. Use the arrow keys to navigate the results. <a href="/FAQ.html#SearchSuggestion">Learn more</a>.</td></tr>
+          <tr><td colspan="2"><a href="/FAQ.html#HowToSearch">How to search in MOLTEN</a>?</td></tr>
+
+        </tbody></table>
+</form>
+</div>
+
+  <table id="solutions_container">
+	<tbody><tr>
+		<td class="left" valign="top">
+			
+			<h2>Recently Viewed</h2>
+			<ul>
+				 
+       		</ul>
+			
+		</td>
+		<td class="right" valign="top">
+			
+			<h2>New Solutions</h2>
+            {{ NEW_SOLUTIONS_CONTENT }}
+			
+			<h2>Most Popular</h2>
+            {{ POPULAR_SOLUTIONS_CONTENT }}
+		</td>
+	</tr>
+</tbody></table>
+
+
+<h2 class="gray buried_header">
+	<span>
+		  <a href="/articles/index"><img alt="Browse Articles" src="{{ IMAGES_URL }}browse_articles.gif" width="143" height="22"></a>
+	</span>
+	News
+</h2>
+
+{{ MAGMA_NEWS_CONTENT }}
+

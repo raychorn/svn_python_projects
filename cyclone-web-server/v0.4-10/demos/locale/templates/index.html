@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <title>Locale Demo</title>
+  </head>
+  <body>
+    <h1>{{ _("locale demo") }}</h1>
+    <label for="language">{{ _("please select your language:") }}</label>
+    <form name="locale_demo" action="/" method="post">
+        <select name="language">
+            {% for lang in languages %}
+                <option {% if lang == locale %}selected{% end %}>{{ lang }}</option>
+            {% end %}
+        </select>
+        <br /><br />
+        <label for="apples">{{ _("how many apples?") }}</label>
+        &nbsp;&nbsp;<input type="text" name="apples" size=2 value="{{ apples }}" /><br />
+        <br /><br />
+        <input type="submit" value={{ _("change") }} />
+    </form>
+    <br />
+    <p>{{ _("one apple", "%(count)d apples", apples) % {"count":apples} }}</p>
+  </body>
+</html>

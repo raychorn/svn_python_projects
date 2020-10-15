@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export3.dtd">
+<en-export export-date="20130730T205637Z" application="Evernote" version="Evernote Mac">
+    <note>
+        <title>{{ title }}</title>
+        <content>
+            <![CDATA[{{ content }}]>
+        </content>
+        <created>{{ created }}</created>
+        <updated>{{ updated }}</updated>
+        <tag>{{ tags }}</tag>
+        <note-attributes>
+            <author>Ray C Horn</author>
+        </note-attributes>
+    </note>
+</en-export>

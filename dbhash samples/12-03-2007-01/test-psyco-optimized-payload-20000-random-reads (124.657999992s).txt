@@ -1,0 +1,8 @@
+(ioTimeAnalysis) :: Category: "READ" = (0.0) time/iters=(0.0000000000)
+(ioTimeAnalysis) :: Category: "WRITE" = (0.0) time/iters=(0.0000000000)
+(ioTimeAnalysis) :: Category: "END-KEYS" = (0.0) time/iters=(0.0000000000)
+(ioTimeAnalysis) :: Category: "BEGIN-KEYS" = (0.0) time/iters=(0.0000000000)
+(ioTimeAnalysis) :: Category: "READ-RANDOM" = (124.657999992) time/iters=(0.0062329000)
+
+
+Time spent doing I/O :: (124.657999992)

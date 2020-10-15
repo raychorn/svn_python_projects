@@ -1,0 +1,7 @@
+The idea here is to make a pyro Proxy that interfaces with the SVN Repo sitting in near-by.info such that 
+a Django GUI is able to browse the SVN Repo to allow users to access the contents of the repo in a controlled
+manner.
+
+Q:  Is it necessary to serialize the pySVN accesses ?
+
+A:  Probably not.  svn+ssh does not require serialized accesses.

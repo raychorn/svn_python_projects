@@ -1,0 +1,91 @@
+(ioTimeAnalysis) :: Category: "splitter" = (1.31700015068)
+(ioTimeAnalysis) :: Category: "replacer" = (0.191999912262)
+(ioTimeAnalysis) :: Category: "str_replacer" = (14.3709998131)
+(ioTimeAnalysis) :: Category: "str_replacer2" = (26.7290000916)
+(ioTimeAnalysis) :: Category: "regexer" = (137.207999945)
+(ioTimeAnalysis) :: Category: "regexer2" = (137.741000175)
+
+
+Time spent doing I/O :: (317.558000088)
+         79202175 function calls (79202152 primitive calls) in 317.734 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  317.734  317.734 <string>:1(<module>)
+        1    0.003    0.003  317.734  317.734 {execfile}
+        1    0.143    0.143  317.730  317.730 benchmark1.py:1(<module>)
+        1    0.039    0.039  317.576  317.576 benchmark1.py:34(main)
+      198   50.485    0.255  274.946    1.389 {built-in method sub}
+ 19799802   63.332    0.000  224.457    0.000 re.py:273(filter)
+ 19799802  106.118    0.000  161.126    0.000 sre_parse.py:784(expand_template)
+       99    0.001    0.000  137.742    1.391 benchmark1.py:25(regexer2)
+       99    0.001    0.000  137.209    1.386 benchmark1.py:22(regexer)
+       99    0.001    0.000  137.208    1.386 re.py:144(sub)
+ 19800001   28.506    0.000   28.506    0.000 {method 'join' of 'str' objects}
+ 19799802   27.439    0.000   27.439    0.000 {built-in method group}
+       99    0.001    0.000   26.724    0.270 benchmark1.py:31(str_replacer2)
+       99   26.723    0.270   26.723    0.270 str_replace2.py:1(str_replace2)
+       99    0.220    0.002   14.366    0.145 benchmark1.py:28(str_replacer)
+       99   13.521    0.137   14.147    0.143 str_replace.py:1(str_replace)
+       99    0.224    0.002    1.309    0.013 benchmark1.py:16(splitter)
+       99    0.776    0.008    0.776    0.008 {method 'split' of 'str' objects}
+       99    0.001    0.000    0.186    0.002 benchmark1.py:19(replacer)
+       99    0.186    0.002    0.186    0.002 {method 'replace' of 'str' objects}
+        1    0.005    0.005    0.005    0.005 ioTimeAnalysis.py:1(<module>)
+      198    0.002    0.000    0.004    0.000 re.py:267(_subx)
+      100    0.001    0.000    0.003    0.000 re.py:227(_compile)
+      198    0.001    0.000    0.002    0.000 re.py:247(_compile_repl)
+      298    0.002    0.000    0.002    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.002    0.002 re.py:186(compile)
+        1    0.000    0.000    0.001    0.001 sre_compile.py:501(compile)
+        1    0.000    0.000    0.001    0.001 sre_parse.py:669(parse)
+      3/1    0.000    0.000    0.001    0.001 sre_parse.py:307(_parse_sub)
+      4/1    0.000    0.000    0.001    0.001 sre_parse.py:385(_parse)
+        1    0.000    0.000    0.001    0.001 sre_compile.py:486(_code)
+  302/298    0.001    0.000    0.001    0.000 {len}
+      8/1    0.000    0.000    0.000    0.000 sre_compile.py:38(_compile)
+        6    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:17(ioEndTime)
+       32    0.000    0.000    0.000    0.000 sre_parse.py:188(__next)
+       22    0.000    0.000    0.000    0.000 sre_parse.py:207(get)
+       77    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 sre_compile.py:367(_compile_info)
+       24    0.000    0.000    0.000    0.000 sre_parse.py:201(match)
+     11/4    0.000    0.000    0.000    0.000 sre_parse.py:146(getwidth)
+       18    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:7(initIOTime)
+        6    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:12(ioBeginTime)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:697(parse_template)
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:40(ioTimeAnalysisReport)
+       12    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:26(ioTimeAnalysis)
+       15    0.000    0.000    0.000    0.000 sre_parse.py:132(__len__)
+       12    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+       27    0.000    0.000    0.000    0.000 sre_parse.py:136(__getitem__)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:144(append)
+        2    0.000    0.000    0.000    0.000 sre_parse.py:184(__init__)
+       18    0.000    0.000    0.000    0.000 {method 'has_key' of 'dict' objects}
+       18    0.000    0.000    0.000    0.000 {min}
+        3    0.000    0.000    0.000    0.000 sre_compile.py:360(_simple)
+        3    0.000    0.000    0.000    0.000 sre_parse.py:140(__getslice__)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:96(__init__)
+        2    0.000    0.000    0.000    0.000 sre_compile.py:480(isstring)
+        5    0.000    0.000    0.000    0.000 {_sre.getlower}
+        3    0.000    0.000    0.000    0.000 __init__.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:78(opengroup)
+        5    0.000    0.000    0.000    0.000 {ord}
+        1    0.000    0.000    0.000    0.000 sre_parse.py:89(closegroup)
+        3    0.000    0.000    0.000    0.000 {isinstance}
+        3    0.000    0.000    0.000    0.000 sre_parse.py:138(__setitem__)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:704(literal)
+        1    0.000    0.000    0.000    0.000 str_replace.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 str_replace2.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 {_sre.compile}
+        2    0.000    0.000    0.000    0.000 {max}
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 sre_parse.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {chr}
+        1    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

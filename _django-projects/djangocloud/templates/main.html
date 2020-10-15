@@ -1,0 +1,462 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	var __passwords_must_match__ = 'Passwords must match !!!';
+	
+	function onclick_request_login_dialog() {
+		try {
+			var __div__ = $("#div_login_content");
+			if (__div__) {
+				var options = ___options___[___pageSelector___];
+				options = (options) ? options : __default_options__;
+				if (options['options']) {
+					options['options']['title'] = 'LOGIN';
+
+					$("[id$=-text]").remove();
+					$("#div_register_content").dialog( "destroy" );
+					$("#div_forgot_password_content").dialog( "destroy" );
+
+					__div__.dialog( "destroy" );
+					__div__.dialog(options['options']);
+
+					$("#input_login_enter_email").labelify({ labelledClass: "labelHighlight" });
+					$("#input_login_enter_password").labelify({ labelledClass: "labelHighlight" });
+					
+					$("#myLoginForm").validate();
+					$("#input_login_enter_password").keyup(function() {
+						$(this).valid();
+					});
+				}
+			} else {
+				alert('WARNING:\n\n\tCannot Login at this time...');
+			}
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Login at this time...\n'+e);
+		}
+		return false;
+	}
+	
+	function onclick_request_forgotPassword_dialog() {
+		try {
+			var __div__ = $("#div_forgot_password_content");
+			if (__div__) {
+				var options = ___options___[___pageSelector___];
+				options = (options) ? options : __default_options__;
+				if (options['options']) {
+					options['options']['title'] = 'RESET PASSWORD';
+
+					$("[id$=-text]").remove();
+					$("#div_register_content").dialog( "destroy" );
+					$("#div_login_content").dialog( "destroy" );
+
+					__div__.dialog( "destroy" );
+					__div__.dialog(options['options']);
+
+					$("#input_forgotPassword_enter_email").labelify({ labelledClass: "labelHighlight" });
+					$("#input_forgotPassword_enter_password").labelify({ labelledClass: "labelHighlight" });
+					$("#input_forgotPassword_enter_password2").labelify({ labelledClass: "labelHighlight" });
+
+					$("#myForgotPasswordForm").validate();
+				}
+			} else {
+				alert('WARNING:\n\n\tCannot Retrieve your Password at this time...');
+			}
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Retrieve your Password at this time...\n'+e);
+		}
+		return false;
+	}
+	
+	function onclick_request_register_dialog() {
+		try {
+			var __div__ = $("#div_register_content");
+			if (__div__) {
+				var options = ___options___[___pageSelector___];
+				options = (options) ? options : __default_options__;
+				if (options['options']) {
+					options['options']['title'] = 'REGISTER';
+
+					$("[id$=-text]").remove();
+					$("#div_login_content").dialog( "destroy" );
+					$("#div_forgot_password_content").dialog( "destroy" );
+
+					__div__.dialog( "destroy" );
+					__div__.dialog(options['options']);
+
+					$("#input_register_enter_email").labelify({ labelledClass: "labelHighlight" });
+					$("#input_register_enter_password").labelify({ labelledClass: "labelHighlight" });
+					$("#input_register_enter_password2").labelify({ labelledClass: "labelHighlight" });
+					
+					$("#myRegisterForm").validate();
+					$("#input_register_enter_password").keyup(function() {
+						$(this).valid();
+					});
+					$("#input_register_enter_password2").keyup(function() {
+						$("#input_register_enter_password2").addClass('valid').removeClass('error');
+						var m = $("#myRegisterForm").find(".password-meter-message");
+						m.html('');
+						if ( ($("#input_register_enter_password").val() != $("#input_register_enter_password2").val()) ) {
+							$("#input_register_enter_password2").addClass('error').removeClass('valid');
+							$("#input_register_enter_password2").highlight();
+							m.html(__passwords_must_match__);
+							m.show();
+						} else {
+							$(this).valid();
+						}
+					});
+				}
+			} else {
+				alert('WARNING:\n\n\tCannot Register at this time...');
+			}
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Register at this time...\n'+e);
+		}
+		return false;
+	}
+	
+	function onclick_dismiss_login_button() {
+		try {
+			$("#div_login_content").dialog( "destroy" );
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Dismiss the Login PopUp at this time...');
+		}
+		return false;
+	}
+
+	function onclick_dismiss_register_button() {
+		try {
+			$("#div_register_content").dialog( "destroy" );
+		} catch (e) {
+			alert('ERROR:\n\n\tCannot Dismiss the Register PopUp at this time...');
+		}
+		return false;
+	}
+	
+	function onclick_login_button() {
+		$("#login_button").hide();
+		$("#ajaxBusyLogin").show();
+	}
+
+	function onclick_forgotPassword_button() {
+		$("#forgotPassword_button").hide();
+		$("#ajaxBusyForgotPassword").show();
+	}
+	
+	function onclick_register_button() {
+		$("#register_button").hide();
+		$("#ajaxBusyRegister").show();
+	}
+
+	$(document).ready(function() {
+	});
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block include-css %}'/static/main.css'{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+{% if IS_NOT_LOGGED_IN %}
+			<div id="div_login_content" style="display:none;">
+				<table width="100%">
+					<tr>
+						<td>
+							<p>Currently, the DjangoCloud&trade; is open for early access.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>You are more than welcome to test-drive the DjangoCloud&trade; platform, please log in with your account credentials, as follows:</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                        	<form id="myLoginForm" action="/login/user/" enctype="application/x-www-form-urlencoded" method="post">
+                        	<table width="100%">
+                            	<tr>
+                                	<td align="left">
+                                        <table width="100%">
+                                            <tr>
+                                                <td width="10%" align="left" valign="middle"><NOBR><b>Email Address:</b></NOBR></td>
+                                                <td width="*" align="left"><NOBR><input id="input_login_enter_email" name="username" type="text" title="Enter Your Email Address" size="30" class="required email" /></NOBR></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10%" align="left" valign="middle"><NOBR><b>Password:</b></NOBR></td>
+                                                <td align="left">
+                                                	<NOBR>
+                                                    	<input id="input_login_enter_password" type="password" name="password" title="Enter Your Password" size="30" class="password" />
+                                                        <div class="password-meter">
+                                                            <div class="password-meter-message"> </div>
+                                                            <div class="password-meter-bg">
+                                                                <div class="password-meter-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                    </NOBR>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td align="center">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td align="center" valign="bottom">
+                                        <input id="login_button" name="Go" type="submit" value="     Login     " class="main_button" onclick="onclick_login_button()"/>
+                                        <div id="ajaxBusyLogin" style="display:none;"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            </form>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                        	<UL style="list-style-type:square">
+								<li><a href="#" onclick="onclick_request_register_dialog();">I do not have an account, so let me get one.</a></li>
+								<li><a href="#" onclick="onclick_request_forgotPassword_dialog();">I have lost my password, let me change it.</a></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+	   					<td align="center" valign="bottom" height="130px">
+							<input name="Dismiss" type="button" value="Continue" class="main_button" style="width:100%;" onclick="onclick_dismiss_login_button();"/>
+	   					</td>
+					</tr>
+				</table>
+			</div>
+			<div id="div_forgot_password_content" style="display:none;">
+				<table width="100%">
+					<tr>
+						<td>
+                        	<form id="myForgotPasswordForm" action="/change/password/" enctype="application/x-www-form-urlencoded" method="post">
+                        	<table width="100%">
+                            	<tr>
+                                	<td align="left">
+                                        <table width="100%">
+                                            <tr>
+                                                <td width="10%" align="left" valign="middle"><NOBR><b>Email Address:</b></NOBR></td>
+                                                <td width="*" align="left"><NOBR><input id="input_forgotPassword_enter_email" name="username" type="text" title="Enter Your Email Address" size="30" class="required email" /></NOBR></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="middle"><NOBR><b>Password:</b></NOBR></td>
+                                                <td align="left">
+                                                	<NOBR>
+                                                    	<input id="input_forgotPassword_enter_password" name="password" type="password" title="Enter Your Password" size="30" />
+                                                        <div class="password-meter">
+                                                            <div class="password-meter-message"> </div>
+                                                            <div class="password-meter-bg">
+                                                                <div class="password-meter-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </NOBR>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="middle"><NOBR><b>Password (again):</b></NOBR></td>
+                                                <td align="left"><NOBR><input id="input_forgotPassword_enter_password2" name="password2" type="password" title="Enter Your Password Again" size="30" /></NOBR></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td align="center">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td align="center" valign="bottom">
+                                        <input id="forgotPassword_button" name="Go" type="submit" value="     Reset Password     " class="main_button" onclick="onclick_forgotPassword_button()"/>
+                                        <div id="ajaxBusyForgotPassword" style="display:none;"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            </form>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                        	<UL style="list-style-type:square">
+								<li><a href="#" onclick="onclick_request_register_dialog();">I do not have an account, so let me get one.</a></li>
+								<li><a href="#" onclick="onclick_request_login_dialog();">I know my password, so let me login.</a></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+	   					<td align="center" valign="bottom" height="130px">
+							<input name="Dismiss" type="button" value="Continue" class="main_button" style="width:100%;" onclick="onclick_dismiss_forgotPassword_button();"/>
+	   					</td>
+					</tr>
+				</table>
+			</div>
+			<div id="div_register_content" style="display:none;">
+				<table width="100%">
+					<tr>
+						<td>
+							<p><span class="create_new_account_text">Create a new account</span></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                        	<form id="myRegisterForm" action="/register/user/" enctype="application/x-www-form-urlencoded" method="post">
+                        	<table width="100%">
+                            	<tr>
+                                	<td align="left">
+                                        <table width="100%">
+                                            <tr>
+                                                <td width="20%" align="left" valign="middle"><NOBR><b>Email Address:</b></NOBR></td>
+                                                <td width="*" align="left"><NOBR><input id="input_register_enter_email" name="username" type="text" title="Enter Your Email Address" size="30" class="required email"/></NOBR></td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="middle"><NOBR><b>Password:</b></NOBR></td>
+                                                <td align="left">
+                                                	<NOBR>
+                                                    	<input id="input_register_enter_password" name="password" type="password" title="Enter Your Password" size="30" />
+                                                        <div class="password-meter">
+                                                            <div class="password-meter-message"> </div>
+                                                            <div class="password-meter-bg">
+                                                                <div class="password-meter-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </NOBR>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="middle"><NOBR><b>Password (again):</b></NOBR></td>
+                                                <td align="left"><NOBR><input id="input_register_enter_password2" name="password2" type="password" title="Enter Your Password Again" size="30" /></NOBR></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td align="center">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                	<td align="center" valign="bottom">
+                                        <input id="register_button" name="Go" type="submit" value="     Register     " class="main_button" onclick="onclick_register_button()"/>
+                                        <div id="ajaxBusyRegister" style="display:none;"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            </form>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                        	<UL style="list-style-type:square">
+								<li><a href="#" onclick="onclick_request_login_dialog();">I have an account already, just let me login.</a></li>
+								<li><a href="#" onclick="onclick_request_forgotPassword_dialog();">I have lost my password, so let me change it.</a></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+	   					<td align="center" valign="bottom" height="130px">
+							<input name="Dismiss" type="button" value="Continue" class="main_button" style="width:100%;" onclick="onclick_dismiss_register_button();"/>
+	   					</td>
+					</tr>
+				</table>
+			</div>
+{% endif %}
+            <table id="container" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="top" id="main_content_holder">
+                
+                	<table width="100%">
+                		<tr>
+                			<td id="main_background" width="80%">
+                			</td>
+                			<td width="*" valign="top" align="right">
+{% if IS_NOT_LOGGED_IN %}
+		                   		<div id="main_sign_in_holder" style="display:none;">
+		                   			<span><input name="Login" type="button" value="Login" class="main_button" onclick="onclick_request_login_dialog();" /></span>
+		                   			<span><input name="Register" type="button" value="Register" class="main_button" onclick="onclick_request_register_dialog();" /></span>
+		                        </div>
+{% endif %}
+			                   <div id="main_sign_in_holder2">
+			                        DjangoCloud&trade; is the fastest way to get your Django WebSite into the Cloud; drop-by anytime and get your next Django WebSite Online with a single mouse-click.
+								</div>
+                			</td>
+                		</tr>
+                	</table>
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+{% endif %}
+                <div style="clear: both">&nbsp;</div>
+                <div style="clear: both; padding-top:0px;">&nbsp;</div>
+                        <div id="shipment_container">              
+                                        
+                                <div class="bubble">
+                                <div class="rectangle"><div class="header_font">Want your Django Website Online Today ?</div></div>
+                                <div class="triangle-l">&nbsp;</div>
+                                
+                                <div class="info">
+                                
+                                <p>
+                              <div class="right_box"><img src="/static/images/django-image-outline(333x151).jpg" width="200" /></div>
+                                </p>
+                                <BR/>
+                                	<UL id="django_cloud_info" style="list-style-type:square">
+                                        <li ><NOBR>Instant Access !!!</NOBR></li>
+                                        <li ><NOBR>Instant Database !!!</NOBR></li>
+                                        <li ><NOBR>Instant Web-App !!!</NOBR></li>
+                                        <li ><NOBR>Completely functional Application Framework.</NOBR></li>
+                                        <li ><NOBR>Just one mouse click away...</NOBR></li>
+                                        <li ><NOBR>Get Your Django Application Online now !!!</NOBR></li>
+                                        <li ><NOBR>Reduce your development cost !!!</NOBR></li>
+                                        <li ><NOBR>Reduce your time to market !!!</NOBR></li>
+                                	</UL>
+                                <br/>
+                                
+{% if IS_NOT_HIDDEN %}
+                                <center>
+                                    <a href="#" class="anchor_learn_more" onclick="not_yet_implemented();">Learn More</a>
+                                </center>
+{% endif %}
+                                
+                                </div>
+                                </div>
+                        </div> 
+                         <div id="django_rightside_container">              
+                                        
+                                <div class="bubble">
+                                <div class="rectangle"><div class="header_font">Need Programming Support?</div></div>
+                                <div class="triangle-l"></div>
+                                
+                                <div class="infoRight">
+                                	<table width="100%" style="display:inline; padding-left: -20px;">
+                                		<tr>
+                                			<td align="left">
+			                                	<UL id="django_programmer_info" style="list-style-type:square">
+			                                        <li ><NOBR>Django Guru's for Hire !!!</NOBR></li>
+			                                        <li >Let our Django Gurus do all the work for you !!!</li>
+			                                        <li >We build and maintain your databases !!!</li>
+			                                        <li >We deploy all your Django Apps !!!</li>
+			                                	</UL>
+                                			</td>
+                                			<td align="right"><img src="/static/images/programmer(206x240).jpg" width="190"/></td>
+                                		</tr>
+                                	</table>
+{% if IS_NOT_HIDDEN %}
+                                <div class="left_box_right">
+	                              <input name="" type="button" value="FIND A LOAD" class="main_button_orange" onclick="not_yet_implemented();"/>
+                                </div>
+{% endif %}
+                                
+{% if IS_NOT_HIDDEN %}
+                                <center>
+                                    <a href="#" class="anchor_learn_more" onclick="not_yet_implemented();">Learn More</a>
+                                </center>
+{% endif %}
+                                
+                                </div>
+                                </div>
+                        </div>
+                </td>
+              </tr>
+            </table>   
+{% endblock %}

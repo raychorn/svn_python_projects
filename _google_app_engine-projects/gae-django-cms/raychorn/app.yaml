@@ -1,0 +1,55 @@
+﻿application: raychorn
+version: 121
+runtime: python
+api_version: 1
+skip_files: |
+ ^(.*/)?(
+ (app\.yaml)|
+ (app\.yml)|
+ (index\.yaml)|
+ (index\.yml)|
+ (#.*#)|
+ (.*~)|
+ (.*\.py[co])|
+ (.*\.bat)|
+ (.*\.txt)|
+ (.*/RCS/.*)|
+ (\..*)|
+ (.*/\.svn/.*)|
+ (.*/Thumbs\.db)|
+ )$
+
+default_expiration: '3650d'
+
+derived_file_type:
+- python_precompiled
+
+handlers:
+- url: /_ah/queue/hothandler/.*
+  script: hothandler.py
+  login: admin
+  
+- url: /media/.*
+  script: secureZipServe.py
+  
+- url: /favicon.ico
+  static_files: media/images/favicon.ico
+  upload: media/images/favicon.ico
+  mime_type: image/x-icon 
+
+- url: /js/.*
+  script: secureZipServe.py
+
+- url: /static/.*
+  script: secureZipServe.py
+  
+- url: /tinymce/.*
+  script: secureZipServe.py
+
+- url: /stats.*
+  script: $PYTHON_LIB/google/appengine/ext/appstats/ui.py
+  login: admin
+  
+- url: /.*
+  script: common/appenginepatch/main.py
+  secure: optional

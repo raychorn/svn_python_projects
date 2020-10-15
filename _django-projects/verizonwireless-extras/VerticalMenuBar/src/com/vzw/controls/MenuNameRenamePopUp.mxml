@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" title="Rename Menu Name"
+	>
+	<mx:Script>
+		<![CDATA[
+			import vyperlogix.utils.StringUtils;
+
+			[Bindable]			
+			private var _currentState:String;
+			
+			private function onCreationComplete_txt_new_menu_name():void {
+				this.txt_new_menu_name.setFocus();
+			}
+			
+			private function onKeyDown_txt_menu_name(event:KeyboardEvent):void {
+				this.txt_new_menu_name.text = StringUtils.ellipsis(this.txt_new_menu_name.text,50);
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%">
+		<mx:HBox width="100%">
+			<mx:Label text="Current Menu Name:"/>
+			<mx:TextInput id="txt_current_menu_name" enabled="false" htmlText="" width="100%"/>
+		</mx:HBox>
+		<mx:HBox width="100%">
+			<mx:Label text="Enter the New Name of the Menu:"/>
+			<mx:TextInput id="txt_new_menu_name" htmlText="{this.txt_current_menu_name.text}" width="100%" keyDown="onKeyDown_txt_menu_name(event)" creationComplete="onCreationComplete_txt_new_menu_name()"/>
+		</mx:HBox>
+		<mx:HBox width="100%" horizontalAlign="center">
+			<mx:Button id="btn_save" label="(Save)"/>
+			<mx:Spacer width="5"/>
+			<mx:Button id="btn_dismiss" label="(Dismiss)"/>
+		</mx:HBox>
+	</mx:VBox>
+</mx:Panel>

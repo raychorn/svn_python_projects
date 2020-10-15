@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" backgroundColor="lime" backgroundAlpha="0.5">
+	<mx:Script>
+		<![CDATA[
+			import vyperlogix.menu.builder.MenuController;
+			import mx.events.FlexEvent;
+
+			private function onCreationComplete_adminColorPicker(event:FlexEvent):void {
+				trace(this.className+'.onCreationComplete_adminColorPicker().1 --> !');
+				var image:Image = event.currentTarget as Image;
+				image.source = MenuController.adminColorPickerIcon;
+			}
+		]]>
+	</mx:Script>
+	<mx:Image id="image_adminColorPicker" creationComplete="onCreationComplete_adminColorPicker(event)"/>
+</mx:Canvas>

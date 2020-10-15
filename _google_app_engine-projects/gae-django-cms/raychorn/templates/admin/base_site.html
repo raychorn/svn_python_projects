@@ -1,0 +1,34 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans "Django Admin (Enhanced)" %}{% endblock %}
+
+{% block userlinks %}
+<a href="/">Back to sample project</a> /
+{% url django-admindocs-docroot as docsroot %}{% if docsroot %}<a href="{{ docsroot }}">{% trans 'Documentation' %}</a> / {% endif %}
+<a href="{{ root_path }}password_change/">{% trans 'Change password' %}</a> /
+<a href="{% url django.contrib.auth.views.logout %}">{% trans 'Log out' %}</a>
+{% endblock %}
+
+{% block extrahead %}{{ block.super }}
+<script src="/js/js/dynamic.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript">
+include_css('/js/js/jquery/jHtmlArea/style/jHtmlArea.css');
+include_css('/js/js/jquery/jquery-ui-1.7.2.custom/css/ui-lightness/jquery-ui-1.7.2.custom.css');
+include_js('/js/js/jquery/jquery-ui-1.7.2.custom/js/jquery-1.4.2.min.js', function(){ 
+    $(document).ready(function(){
+        include_js('/js/js/jquery/jquery-ui-1.7.2.custom/js/jquery-ui-1.7.2.custom.min.js', function(){ 
+            include_js('/js/js/jquery/jHtmlArea/scripts/jHtmlArea-0.7.0.min.js', function(){ 
+                $("textarea").htmlarea();
+            });
+        });
+    }); 
+});
+</script>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'Django Administration' %}</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

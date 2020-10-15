@@ -1,0 +1,3 @@
+This is the source distribution of Psyco version 1.6.
+See the Psyco Guide in doc/ for installation instructions.
+Quick start: python setup.py install

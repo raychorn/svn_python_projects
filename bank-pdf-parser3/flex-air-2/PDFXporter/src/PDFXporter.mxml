@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx" 
+					   preloader="preload.CustomPreloader" 
+					   creationComplete="windowedapplication1_creationCompleteHandler(event)">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import flash.display.Screen;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.controls.FileSystemEnumerationMode;
+			import mx.core.FlexGlobals;
+			import mx.effects.Move;
+			import mx.effects.Resize;
+			import mx.events.CloseEvent;
+			import mx.events.EffectEvent;
+			import mx.events.FileEvent;
+			import mx.events.FlexEvent;
+			import mx.events.ListEvent;
+			import mx.events.MenuEvent;
+			import mx.rpc.events.ResultEvent;
+			
+			import preload.WelcomeScreen;
+			import preload.events.SplashScreenCompletedEvent;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import vyperlogix.controls.Alert.AlertPopUp;
+			import vyperlogix.utils.EzHTTPService;
+			import vyperlogix.utils.StringUtils;
+			import vyperlogix.utils.URLUtils;
+			
+			public var mainScreen:Screen = Screen.mainScreen;
+			public var screenBounds:Rectangle = mainScreen.bounds;
+
+			public var ezREST:EzHTTPService = new EzHTTPService(false,false);
+			
+			private var end_point:String = 'http://localhost:8000';
+			
+			private var mySO:SharedObject = SharedObject.getLocal("/vyperlogix/pdfxporter/data");
+			
+			private const default_folderPath:String = 'Undefined';
+			
+			[Bindable]
+			private var __folderPath__:String = default_folderPath;
+			
+			[Bindable]
+			private var __files__:ArrayCollection = new ArrayCollection();
+			
+			[Bindable]
+			private var __contents__:ArrayCollection = new ArrayCollection();
+			
+			private function get isFolderPath():Boolean {
+				return this.__folderPath__ != this.default_folderPath;
+			}
+
+			private function get isNotFolderPath():Boolean {
+				return this.__folderPath__ == this.default_folderPath;
+			}
+			
+			private function get isFolderPathBackSlashed():Boolean {
+				return this.__folderPath__.charAt(this.__folderPath__.length-1) == '\\';
+			}
+			
+			private function resize_stage():void {
+				var _this:* = this;
+				var resize:Resize = new Resize(this);
+				var move:Move = new Move(this);
+				
+				this.mainScreen = Screen.mainScreen;
+				this.screenBounds = this.mainScreen.bounds;
+				
+				resize.widthFrom = this.nativeWindow.width;
+				resize.widthTo = this.screenBounds.width - 100;
+				resize.heightFrom = this.nativeWindow.height;
+				resize.heightTo = this.screenBounds.height - 100;
+				resize.addEventListener(EffectEvent.EFFECT_END, function (event:*):void {
+					_this.nativeWindow.width = resize.widthTo;
+					_this.nativeWindow.height = resize.heightTo;
+				});
+				resize.duration = 1000;
+				
+				move.xFrom = this.nativeWindow.x;
+				move.xTo = 50;
+				move.yFrom = this.nativeWindow.y;
+				move.yTo = 50;
+				move.addEventListener(EffectEvent.EFFECT_END, function (event:*):void {
+					_this.nativeWindow.x = move.xTo;
+					_this.nativeWindow.y = move.yTo;
+				});
+				move.duration = 1000;
+				
+				resize.play();
+				move.play();
+			}
+			
+			private function roll_up_left_panel():void {
+				var _this:* = this;
+				var resize:Resize = new Resize(this.hbox_left);
+				
+				var prev_height:Number = this.hbox_left.height;
+				resize.heightFrom = prev_height;
+				resize.heightTo = 0;
+				resize.addEventListener(EffectEvent.EFFECT_END, function (event:*):void {
+					_this.roll_down_left_panel2(prev_height);
+				});
+				resize.duration = 1000;
+				
+				resize.play();
+			}
+			
+			private function roll_down_left_panel2(height:Number):void {
+				var _this:* = this;
+				var resize:Resize = new Resize(this.hbox_left2);
+				
+				resize.heightFrom = 0;
+				resize.heightTo = height;
+				resize.addEventListener(EffectEvent.EFFECT_END, function (event:*):void {
+				});
+				resize.duration = 1000;
+				
+				resize.play();
+			}
+			
+			private function roll_up_left_panel2():void {
+				var _this:* = this;
+				var resize:Resize = new Resize(this.hbox_left2);
+				
+				var prev_height:Number = this.hbox_left2.height;
+				resize.heightFrom = prev_height;
+				resize.heightTo = 0;
+				resize.addEventListener(EffectEvent.EFFECT_END, function (event:*):void {
+					_this.roll_down_left_panel(prev_height);
+				});
+				resize.duration = 1000;
+				
+				resize.play();
+			}
+			
+			private function roll_down_left_panel(height:Number):void {
+				var _this:* = this;
+				var resize:Resize = new Resize(this.hbox_left);
+				
+				resize.heightFrom = 0;
+				resize.heightTo = height;
+				resize.addEventListener(EffectEvent.EFFECT_END, function (event:*):void {
+				});
+				resize.duration = 1000;
+				
+				resize.play();
+			}
+			
+			protected function windowedapplication1_creationCompleteHandler(event:FlexEvent):void {
+				var _this:* = this;
+				FlexGlobals.topLevelApplication.addEventListener(SplashScreenCompletedEvent.TYPE_SPLASH_COMPLETED, function (event:SplashScreenCompletedEvent):void {
+					_this.resize_stage();
+					trace(_this.className+'.SplashScreenCompletedEvent.TYPE_SPLASH_COMPLETED !');
+				});
+			}
+			
+			private function openFolder(folderSpec:String):void {
+				var _this:* = this;
+				this.ezREST.post(this.end_point+'/folder/'+ StringUtils.urlEncode(folderSpec)+'/', {}, function (event:ResultEvent):void {
+					try {
+						var response:*;
+						response = (event.result is String) ? event.result : event.result.getItemAt(0);
+						_this.__folderPath__ = response.fpath;
+						for (var i:String in response.files) {
+							_this.__files__.addItem({'filename':response.files[i],'status':'None'});
+						}
+					} catch (err:Error) {AlertPopUp.errorNoOkay(err.toString(),'WARNING');}
+				}, ezREST.jsonResultType);
+			}
+
+			private function openFile(fileSpec:String):void {
+				var _this:* = this;
+				trace(this.className+'.openFile.1 --> fileSpec='+fileSpec);
+				this.ezREST.post(this.end_point+'/file/'+ StringUtils.urlEncode(fileSpec)+'/', {}, function (event:ResultEvent):void {
+					try {
+						var response:*;
+						response = (event.result is String) ? event.result : event.result.getItemAt(0);
+						_this.__contents__ = new ArrayCollection(response.content);
+						_this.roll_up_left_panel();
+					} catch (err:Error) {AlertPopUp.errorNoOkay(err.toString(),'WARNING');}
+				}, ezREST.jsonResultType);
+			}
+
+			protected function fileSystem_fileChooseHandler(event:FileEvent):void {
+				var _this:* = this;
+				var fpath:String = event.file.nativePath;
+				trace(this.className+'.fileSystem_fileChooseHandler.1 --> event='+event.toString());
+				AlertPopUp.confirm('Use file files from "'+fpath+'" ?','Confirmation Required...', function (event:CloseEvent):void {
+					if (event.detail == Alert.YES) {
+						_this.mySO.data.__folderPath__ = fpath;
+						_this.openFolder(fpath);
+					}
+				});
+			}
+
+
+			protected function fileSystem_creationCompleteHandler(event:FlexEvent):void {
+				var target:FileSystemTree = event.currentTarget as FileSystemTree;
+				if (this.mySO.data.__folderPath__) {
+					var aFile:File = new File(this.mySO.data.__folderPath__);
+					var toks:Array = aFile.nativePath.split("\\");
+					toks.splice(toks.length-1,1);
+					var name:String = toks.join("\\");
+					target.directory = (aFile.isDirectory) ? aFile : new File(name);
+					this.__folderPath__ = target.directory.nativePath;
+					this.openFolder(this.mySO.data.__folderPath__);
+				}
+			}
+
+
+			protected function fileSystemViewer_directoryChangeHandler(event:FileEvent):void {
+				trace(this.className+'.fileSystemViewer_directoryChangeHandler.1 --> event='+event.toString()+', event.file='+event.file.nativePath);
+				this.fileSystem.directory = event.file;
+			}
+
+
+			protected function button1_clickHandler(event:MouseEvent):void {
+				fileSystemViewer.navigateUp();
+				this.__folderPath__ = this.fileSystem.directory.nativePath;
+			}
+
+
+			protected function dg_status_itemClickHandler(event:ListEvent):void {
+				var _this:* = this;
+				var dg:DataGrid = event.currentTarget as DataGrid;
+				if (dg.selectedItem.status == 'None') {
+					AlertPopUp.confirm('Process "'+dg.selectedItem.filename+'" ?','Confirmation Required...', function (event:CloseEvent):void {
+						if (event.detail == Alert.YES) {
+							_this.openFile(_this.__folderPath__+((_this.isFolderPathBackSlashed) ? '' : '\\')+dg.selectedItem.filename);
+						}
+					});
+				}
+			}
+
+
+			protected function btn_close2_clickHandler(event:MouseEvent):void {
+				this.roll_up_left_panel2();
+			}
+
+			private function myChangedHandler(event:IndexChangeEvent):void {
+			}
+			
+			protected function btn_go2_clickHandler(event:MouseEvent):void {
+				var selIndices:Vector.<int> = this.contents.selectedIndices;
+				var selItems:Vector.<Object> = this.contents.selectedItems;
+				var numItems:Number = selIndices.length;
+				trace(this.className+'.btn_go2_clickHandler.1 --> numItems='+numItems);
+				for (var i:int = numItems-1; i>=0; i--) {
+					trace(this.className+'.btn_go2_clickHandler.1 --> #'+selIndices[i]+'='+selItems[i]);
+				}
+			}
+		]]>
+	</fx:Script>
+	<mx:VBox width="100%" height="100%">
+		<mx:ApplicationControlBar width="100%">
+			<mx:Label text="PDFXporter v0.1" fontSize="18" fontWeight="bold" />
+			<mx:Spacer width="100%" />
+		</mx:ApplicationControlBar>
+		
+		<mx:HDividedBox width="100%" height="100%">
+			<mx:Panel id="panel_left" title="Input - {this.__folderPath__}" width="100%" height="100%" layout="horizontal" cornerRadius="10">
+				<mx:VBox width="100%" height="100%">
+					<mx:HBox width="100%" horizontalAlign="left" paddingTop="2" visible="false" includeInLayout="false">
+						<mx:Spacer width="{this.hbox_left.width/4}"/>
+						<mx:Label text="Double click on a file to get the ball rolling..." visible="{this.isNotFolderPath}"/>
+						<mx:Spacer width="{this.hbox_left.width/4}"/>
+						<mx:Label text="Chosen Path: {this.__folderPath__}" visible="{this.isFolderPath}"/>
+					</mx:HBox>
+					<mx:HBox id="hbox_left" width="100%" height="100%" verticalAlign="top" horizontalAlign="left">
+						<mx:VBox width="40%" height="100%">
+							<mx:HBox width="100%" paddingLeft="10">
+								<mx:FileSystemList id="fileSystemViewer" visible="false" includeInLayout="false" directory="{this.fileSystem.directory}" directoryChange="fileSystemViewer_directoryChangeHandler(event)"/>
+								<mx:FileSystemHistoryButton label="Back" visible="false" includeInLayout="false"
+															enabled="{fileSystemViewer.canNavigateBack}"
+															dataProvider="{fileSystemViewer.backHistory}"
+															click="fileSystemViewer.navigateBack();"
+															itemClick="fileSystemViewer.navigateBack(event.index);"/>						
+								<mx:Button label="Up"
+										   enabled="{fileSystemViewer.canNavigateUp}" click="button1_clickHandler(event)"/>
+								<mx:FileSystemHistoryButton label="Forward" visible="false" includeInLayout="false"
+															enabled="{fileSystemViewer.canNavigateForward}"
+															dataProvider="{fileSystemViewer.forwardHistory}"
+															click="fileSystemViewer.navigateForward();"
+															itemClick="fileSystemViewer.navigateForward(event.index);"/>
+							</mx:HBox>
+							<mx:FileSystemTree id="fileSystem" height="100%" width="100%" fileChoose="fileSystem_fileChooseHandler(event)" creationComplete="fileSystem_creationCompleteHandler(event)"/>
+						</mx:VBox>
+						<mx:DataGrid id="dg_status" width="60%" height="100%" dataProvider="{this.__files__}" itemClick="dg_status_itemClickHandler(event)">
+							<mx:columns>
+								<mx:DataGridColumn headerText="filename" dataField="filename" width="{this.dg_status.width-50}" editable="false"/>
+								<mx:DataGridColumn headerText="status" dataField="status" width="50" editable="false"/>
+							</mx:columns>
+						</mx:DataGrid>
+					</mx:HBox>
+					<mx:HBox id="hbox_left2" width="100%" height="0" verticalAlign="top" horizontalAlign="left">
+						<mx:VBox width="100%" height="100%">
+							<mx:HBox width="100%">
+								<s:List id="contents" width="100%" height="100%" dataProvider="{this.__contents__}" allowMultipleSelection="true" change="myChangedHandler(event)"/>
+								<mx:VBox id="vbox_left_button2" width="60" height="500">
+									<mx:Spacer height="5"/>
+									<mx:Button id="btn_go2" label=">>" width="50" height="{this.vbox_left_button2.height - 30}" click="btn_go2_clickHandler(event)"/>
+									<mx:Spacer height="5"/>
+								</mx:VBox>
+							</mx:HBox>
+							<mx:HBox width="100%">
+								<mx:Spacer width="5"/>
+								<mx:Button id="btn_close2" label="Close" width="100%" click="btn_close2_clickHandler(event)"/>
+								<mx:Spacer width="5"/>
+							</mx:HBox>
+						</mx:VBox>
+					</mx:HBox>
+				</mx:VBox>
+			</mx:Panel>
+			
+			<mx:Panel title="Output" width="100%" height="100%" layout="vertical" alpha="1.0">
+				<mx:DataGrid id="dg_data" width="100%" height="100%">
+					<mx:columns>
+						<mx:DataGridColumn headerText="ID" dataField="id" width="50" />
+						<mx:DataGridColumn headerText="name" dataField="name" />
+						<mx:DataGridColumn headerText="value" dataField="value" />
+					</mx:columns>
+				</mx:DataGrid>
+			</mx:Panel>
+		</mx:HDividedBox>
+	</mx:VBox>
+</s:WindowedApplication>

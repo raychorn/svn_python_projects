@@ -1,0 +1,2425 @@
+" ""CuteFTP 5.0 XP"""
+"Adobe Acrobat 6.0 Standard - English, Fran?ais, Deutsch - 006.000.000"
+"Adobe Acrobat 7.0 Standard - English, Fran?ais, Deutsch - 7.0.0"
+"SQL Anywhere 10, Software - 10.0.0.2465"
+"TrustedLink, AS/400 Edition e-Version 5.4"
+2000 Peer Mortgage Data for CRA Wiz 6.0 (US)
+2001 Peer Mortgage Data for CRA Wiz 6.0 (US)
+80-20 Leaders - 04.01.1736
+80-20 Leaders Online - 03.00.527
+80-20 Leaders Online - 03.01.640
+80-20 Leaders Online - 03.02.1048
+ACD - 1.0.0
+ACD Contributor for Aspect Call Center
+ACD VideoMagic Trial - 1.00.0000
+ACT! + 2005 - 7.00.0000
+ACT! + 2005 - 7.01.0000
+ACT! + 2005 - 7.02.0000
+ACT! + 2005 - 7.03.0000
+ACT! 2000
+ACT! 2000 - 5.0.4.495
+ACT! 2005 - 7.04.0000
+ACT! 2006 - 8.0.1.0000
+ACT! 2006 - 8.0.2.0000
+ACT! 2006 - 8.00.0000
+ACT! 2006 - 8.02.0000
+ACT! 4.0 for Windows
+ACT! 6.0 - 6.0.3.979
+ACT! Link for Palm OS® - 1.00.0000
+ACT! Premium 2006  - 8.0.2.0000
+ACT! Premium 2006  - 8.0.2.0001
+ACT! Premium 2006  - 8.00.0000
+ACT! Premium 2006 - 8.02.0000
+ACT! Standard 9.0 - 9.00.0000
+ACT! Standard 9.0 - 9.01.0000
+ACT! by Sage - 9.0.0.0000
+ACT! by Sage - 9.1.0.0000
+ACT! for Palm OS®
+ACT! for Palm OS® - 2.01.000
+ADO.NET Visual Basic .NET Code
+ANTS Profiler - 2.70.0000
+ANTS Profiler - 2.71.0000
+ARGUS 11.1.2
+ARGUS 12.0
+ARGUS 12.0.1 - 12.0.1
+ARGUS 2006 - 13.0.0
+ARGUS 2006 - 13.0.1
+ART Enterprise 3.1
+AXSPointExchange - 2.03.00017
+AXSPointExchange - 2.03.00017b
+AXSPointExchange - 3.0.19
+Able2Extract 2.2 - 2.2
+Access 3
+Access 97
+Accessing the MapPoint ActiveX Control in Visual Basic Sample - 1.0.0
+Accutrac Balboa - 1.0.0
+Accutrac8.1721.00
+ActivePDFToolkit
+ActiveState Perl Dev Kit 6.0 Pro Pack - 6.0
+Actuate e.Reporting Server 5
+Adobe Acrobat 4.0 - 4.0
+Adobe Acrobat 5.0 - 5.0
+Adobe Acrobat 5.0.5 Upgrade - 5.0.5
+Adobe Acrobat 6.0 Professional - 006.000.000
+Adobe Acrobat 6.0 Standard - 006.000.000
+Adobe Acrobat 6.0 Standard - English, Français, Deutsch - 006.000.000
+Adobe Acrobat 7.0 Professional - 7.0.0
+Adobe Acrobat 7.0.7 Professional - 7.0.7
+Adobe Acrobat 7.0.7 Standard - 7.0.7
+Adobe Acrobat Distiller (Ver. 5.0) - 1.0
+Adobe Acrobat Distiller 7.0 - 7.0.0
+Adobe After Effects
+Adobe After Effects 6.5 - 6.5
+Adobe After Effects 7.0 - 7.0.0.244
+Adobe Audition 2.0 - 2.0
+Adobe Captivate
+Adobe Captivate 1.0
+Adobe Captivate 1.1
+Adobe Captivate 2 - 2.0.0.0
+Adobe Contribute CS3 - 4.1
+Adobe Creative Suite - 1.1.1
+Adobe Creative Suite - 2.0
+Adobe Creative Suite 2
+Adobe Creative Suite 3 Design Premium - 1.0
+Adobe Creative Suite 3 Master Collection - 1.0
+Adobe Creative Suite 3 Web Premium - 1.0
+Adobe Dreamweaver CS3 - 9
+Adobe Dreamweaver CS3 - 9.0
+Adobe Encore DVD 1.5 - 1.5
+Adobe Encore DVD 2.0 - 2.0
+Adobe Fireworks CS3 - 9.0
+Adobe Flash CS3 - 9.0
+Adobe Flash CS3 Professional - 9.0.0
+Adobe Flash Player 9 - 9
+Adobe Flash Player 9 ActiveX - 9
+Adobe Flash Player 9 ActiveX - 9.0
+Adobe Flash Player 9 ActiveX - 9.0.16.0
+Adobe Flash Player 9 ActiveX - 9.0.28.0
+Adobe Flash Player 9 ActiveX - 9.0.45.0
+Adobe Flash Player ActiveX - 9.0.45.0
+Adobe Flash Player ActiveX - 9.0.60.120
+Adobe FrameMaker v7.0 - 7.0
+Adobe FrameMaker v7.2 - 7.2
+Adobe GoLive 4.0 - 1.0
+Adobe GoLive 5.0 - 5.0
+Adobe GoLive CS (ENG) - CS
+Adobe GoLive CS2 English - 8.0
+Adobe GoLive CS2 English - 8.0.1
+Adobe Illustrator 10 - 10
+Adobe Illustrator 10.0.3 - 10.0.3
+Adobe Illustrator 8.0 - 8.0
+Adobe Illustrator 9.0 - 9.0
+Adobe Illustrator 9.0.1 - 9.0.1
+Adobe Illustrator CS - 11
+Adobe Illustrator CS2 - 12.0.1
+Adobe Illustrator CS2 - 12.000.000
+Adobe Illustrator CS3 - 13.0
+Adobe InDesign 1.5 - 1.5
+Adobe InDesign 1.5 - 1.5.2
+Adobe InDesign 2.0 - 2.0
+Adobe InDesign CS - CS
+Adobe InDesign CS2 - {7F4C8163-F259-49A0-A018-2857A90578BC} - 004.000.000
+Adobe InDesign CS3 - 5.0
+Adobe InDesign CS3 Icon Handler - 5.0
+Adobe PageMaker - 7.0.1
+Adobe PageMaker 6.5
+Adobe PageMaker 6.5 - 6.5
+Adobe PageMaker 7.0 - 7.0
+Adobe PageMaker 7.0 - 7.0.1
+Adobe PageMaker Plug-in Pack - 3.00.000
+Adobe PhotoShop CS - 1.0.0
+Adobe Photoshop 5.0 - 5.0
+Adobe Photoshop 5.0 Limited Edition - 5.0
+Adobe Photoshop 5.0.2 - 5.0
+Adobe Photoshop 5.5 - 5.5
+Adobe Photoshop 6.0 - 6.0
+Adobe Photoshop 6.0.1 - 6.0.1
+Adobe Photoshop 7.0 - 7.0
+Adobe Photoshop 7.0 - 7.0.0
+Adobe Photoshop 7.0 ME - 7.0 ME
+Adobe Photoshop 7.0.1 - 7.0
+Adobe Photoshop 7.0.1 - 7.0.1
+Adobe Photoshop Album 2.0 - 2.0
+Adobe Photoshop Album 2.0 Starter Edition - 2.00.000
+Adobe Photoshop Album 2.0 Starter Edition - 2.00.100
+Adobe Photoshop CS - CS
+Adobe Photoshop CS2 - 9.0
+Adobe Photoshop CS2 - {236BB7C4-4419-42FD-0409-1E257A25E34D} - 9.0
+Adobe Photoshop CS3 - 10.0
+Adobe Photoshop Elements - 1.0.0
+Adobe Photoshop Elements 2.0 - 2.0
+Adobe Photoshop Elements 3.0 - 003.000.0000
+Adobe Photoshop Elements 4.0 - 4.0
+Adobe Photoshop Elements 5.0 - 5.0
+Adobe Photoshop Lightroom - 1.00.0000
+Adobe Photoshop Lightroom - 1.10.0000
+Adobe Premiere 6.0 - 6.0
+Adobe Premiere 6.5 - 6.5
+Adobe Premiere Elements 3.0 - 3.0.0
+Adobe Premiere Pro 1.5 - 1.5
+Adobe Premiere Pro 2.0 - 2.000.000
+Adobe Premiere Pro FC - 1.00.0000
+Adobe RoboHelp 6.0 - 6.00
+Adobe SVG Viewer (Ver. 6.0) - 6.0
+Adobe SVG Viewer 3.0 -  3.0
+Adobe SVG Viewer 3.0 - 3.0
+Adobe SVG Viewer 3.0 - 7.0
+Adobe SVG Viewer 3.01 - 3.01
+Adobe SVG Viewer 6.0 -  6.0
+Adobe SVG Viewer 6.0 - 8.0
+Adobe SVGViewer 3.02 - 3.02
+Adobe(R) Photoshop(R) Album Mini 3.0 - 3.00.000
+Adobe? Photoshop? Album Starter Edition 3.0 - 3.0.1
+Adobe? Photoshop? Album Starter Edition 3.0 - 3.00.000
+Adobe? Photoshop? Album Starter Edition 3.0.1 - 3.0.1
+Adobe? Photoshop? Album Starter Edition 3.2 - 3.2.0
+Advanced Find and Replace VB Add-In
+Advanced Find and Replace v1.6.0
+Advanced Find and Replace v1.6.0 - 1.6.0
+Advanced Find and Replace v2.3
+Advanced Find and Replace v2.3 - 2.3
+Advanced Find and Replace v3.0
+Advanced Find and Replace v3.0 - 3.0
+Advanced Find/Replace VB Add-In
+Aelita Consolidation Manager - 6.0.165.02
+Aelita Home Directory Mover - 1.2.073.04
+Aelita Home Directory Mover - 1.2.74.1
+Aelita InTrust for Events 7.0 - 7.0.012.07
+Aelita InTrust for Events 7.0 - 7.0.012.09
+Aelita SCW Report Pack - 1.0.0.11
+Aelita SCW Report Pack - 1.0.0.16
+Aelita Server Consolidation Wizard - 6.0.116.00
+Ahead Nero - Burning Rom
+Ahead Nero 6 Demo
+Ahead Nero BurnRights
+Ahead Nero Burning ROM
+Ahead NeroMIX
+Ahead NeroMediaPlayer
+Akonix L7 Enterprise v4.3 - 4.3.1
+Akonix L7 Enterprise v4.3 - 4.3.2
+Altova MapForce 2005 Enterprise Edition - 7.30
+Altova MapForce 2006 Enterprise Edition - 2006.20
+Altova MapForce 2006 Enterprise Edition - 2006.30
+Altova MapForce 2007 Enterprise Edition - 2007.00
+Altova MapForce 2007 Enterprise Edition - 2007.30
+Altova MapForce 2007 Standard Edition - 2007.00.20
+Altova MapForce 2007 Visual Studio .NET Edition - 2007.00
+Altova STYLEVISION 2004 Professional Edition - 6.40
+Altova StyleVision 2006 Professional Edition - 2006.30.1
+Altova XMLSPY 2004 Enterprise Edition - 6.40
+Altova XMLSPY 2004 Home Edition - 6.40
+Altova XMLSPY 2004 Professional Edition - 6.40
+Altova XMLSpy 2005 Enterprise Edition - 7.10
+Altova XMLSpy 2005 Enterprise Edition - 7.30
+Altova XMLSpy 2005 Home Edition - 7.30
+Altova XMLSpy 2006 Enterprise Edition - 2006.00
+Altova XMLSpy 2006 Enterprise Edition - 2006.10
+Altova XMLSpy 2006 Enterprise Edition - 2006.20
+Altova XMLSpy 2006 Enterprise Edition - 2006.30
+Altova XMLSpy 2006 Enterprise Edition - 2006.30.1
+Altova XMLSpy 2006 Enterprise Edition - 2006.30.2
+Altova XMLSpy 2006 Professional Edition - 2006.10
+Altova XMLSpy 2006 Professional Edition - 2006.20
+Altova XMLSpy 2006 Professional Edition - 2006.30.1
+Altova XMLSpy 2006 Professional Edition - 2006.30.2
+Altova XMLSpy 2006 Visual Studio .NET Edition - 2006.20
+Altova XMLSpy 2006 Visual Studio .NET Edition - 2006.30.1
+Altova XMLSpy 2006 Visual Studio .NET Edition - 2006.30.2
+Altova XMLSpy 2007 Enterprise Edition - 2007.00
+Altova XMLSpy 2007 Enterprise Edition - 2007.00.10
+Altova XMLSpy 2007 Enterprise Edition - 2007.00.20
+Altova XMLSpy 2007 Enterprise Edition - 2007.30
+Altova XMLSpy 2007 Professional Edition - 2007.00
+Altova XMLSpy 2007 Professional Edition - 2007.00.10
+Altova XMLSpy 2007 Professional Edition - 2007.00.20
+Altova XMLSpy 2007 Professional Edition - 2007.30
+Altova XMLSpy 2007 Visual Studio .NET Edition - 2007.00
+Altova XMLSpy 2007 Visual Studio .NET Edition - 2007.30
+Amos 6 - 6.0
+AnyDoc MANAGEit 3.2 - 3.2.1178.24368
+AnyDoc MANAGEit 4.0 - 4.0.1465.15859
+AnyDoc MANAGEit 4.0 - 4.0.3001
+AnyDoc OCR For AnyDoc 4.0 - 4.0.1005
+AnyDoc OCR For AnyDoc 4.0 - 4.0.1013
+AnyDoc OCR For AnyDoc 4.0 - 4.0.1017
+AnyDoc VERIFYit 4.0 - 4.0.1005
+AnyDoc VERIFYit 4.0 - 4.0.1017
+AppSight - 6.0
+AppSight 5.5 Black Box
+AppSight 5.5 COM Black Box
+AppSight 5.7 Black Box
+AppSight Black Box
+AppSight License Server - 5.0
+AppSight Server
+Arel File Storage Server - 17.0.0.0
+Arel Producer
+Arel SpotLight Client - 16.5.2.40
+ArelWebApplications - 128.0.0
+Ascent Capture 6.0 - Workstation
+Aspect 3.04 SDK
+Aspect Arch/SMS 9.1 DNS PatchB - 1.0.0
+Aspect Arch/SMS 9.1 DNS PatchC - 2.0.0
+Aspect Architect
+Aspect Architect - 8.4
+Aspect Architect-SMS Update - 9.0.1
+Aspect CSS ODBC Option - MSSQL Server
+Aspect CSS ODBC Option for Windows
+Aspect CSS ODBC Option for Windows%0d
+Aspect Call Center ReportFolios
+Aspect Call Center Reports 2.0.3
+Aspect Call Center Reports 3.0 - 1.00.0000
+Aspect Contact Center Calculator - 3.0
+Aspect Contact Server/Enterprise Contact Server - 5.2.1200
+Aspect Contact Server/Enterprise Contact Server 5.2 FP02 - 1.00.0000
+Aspect Contact Server/Enterprise Contact Server v5.2 CM - 5.2.1203 CM03
+Aspect Contact Server/Enterprise Contact Server v5.2 CM4 - 5.2.1204
+Aspect Contact\Enterprise Contact Server 5.2 CM05 - 5.2.1200.05
+Aspect CustomView Director - 2.2
+Aspect CustomView Director CIS - 2.2
+Aspect Customer DataMart
+Aspect Customer DataMart 3.1 SP1 CM01 - 3.1.1.11000
+Aspect Customer DataMart 3.1 SP1 Support Tools - 3.1.1.4000
+Aspect DataMart 3.1 SP1 Reports - 1.00.0000
+Aspect Director - Producer Update - 4.0.1
+Aspect ECS v5.2 FP2 Adapter for Siebel v7.5.3 - 1.00.0000
+Aspect Producer 4.0 - 4.0.0
+Aspect SMS (VC7.1 Build) - 10.1
+Aspect SMS - 8.4
+Aspect SMS 9.1 DNS PatchA - 1.0.0
+Aspect System Management Suite (VC 5.0Build)
+Aspect System Management Suite (VC6 Build)
+Aspect System Management Suite (VC6 Build) - 8.4
+Aspect System Management Suite (VC7.1 Build)
+Aspect Viewpoint - 4.0
+Aspect WinSet 3.0.5 - 3.0.5
+Aspect WinSet 3.1
+Aspect WinSet 4.0
+Aspect WinSet 4.0CM01 - 1.0.0
+Aspect Winset 3.05 Remote
+Aspect Winset 4.0 SP1 - 2.0.0
+Aspect Winset Remote Server 4.0
+Aspect(DirPro)LADM - 2.22
+Aspect(DirectorProducer)2.2CCS - 2.2
+Aspect(DirectorProducer)2.2Landsafe - 2.2
+AspectARC1 - 8.4
+AspectARC9 - 9.2.3
+AspectArchitect-SMS - 1.0.0
+AspectDIR - 2.2
+AspectDIR1 - 1.0.0
+AspectDirector4 - 4.0.0
+AspectPRO1 - 1.0.0
+AspectSMS1 - 8.4
+AspectSMS1 Patch - 1.0.0
+Autodesk 3ds Max 9 32-bit - 9.0
+Autodesk Architectural Desktop 2005 - 4.5.202.0
+BIA Professional Web Server - 4.0.0.171
+BMC Remedy Action Request System Server
+BMC Remedy Migrator 7.0 - 7.0
+Beyond Compare - 2.2.5
+Beyond Compare Version 2.2.2
+Beyond Compare Version 2.2.3
+Beyond Compare Version 2.2.5
+Beyond Compare Version 2.2.7
+Beyond Compare Version 2.4
+Beyond Compare Version 2.4.1
+Beyond Compare Version 2.4.3
+BigFix AntiPest - 1.0.0.11
+BigFix Enterprise Client - 5.0.14.00
+BigFix Enterprise Client - 5.0.3.00
+BigFix Enterprise Client - 5.1.1.50
+BigFix Enterprise Client - 5.1.9.12
+BigFix Enterprise Client - 5.1.9.14
+BigFix Enterprise Client - 6.0.21.05
+BizTalk Deployment 03/26/2005 - 1.0.0
+BizTalkDeployment - 1.0.0
+BizTalkWebServiceAIC - 1.0.0
+BlackBerry Enterprise Server for IBM Lotus Domino - 4.0.2 (Bundle 14)
+BlackBerry Enterprise Server for IBM Lotus Domino - 4.0.6 (Bundle 18)
+BlackBerry Enterprise Server for IBM Lotus Domino - 4.0.6 (Bundle 21)
+BlackBerry Enterprise Server for IBM Lotus Domino - 4.0.6 (Bundle 41)
+BlackBerry Enterprise Server for IBM Lotus Domino - 4.1.4 (Bundle 24)
+BlackBerry Enterprise Server for Lotus Domino - 4.0.0
+Bloomberg Mobile 1.3.2.8
+Bloomberg Mobile 1.4.10.19
+Bloomberg Mobile 1.4.6.9
+Bloomberg Mobile 1.4.7.11
+Bloomberg Mobile 1.4.8.4
+Bloomberg Mobile 1.4.9.14
+Business Engine Visual Studio Service Pack 5 - 1.0.0.0
+Business Objects 6.5 SP4 - 65.010.02372.1111
+Business Objects ACE - 7.80c
+Business Objects ACE Views - 7.80c
+CA BrightStor ARCserve Backup - 11.0.0.0
+CIGDocumentum - 1.1.0
+CIGDocumentum - 1.2.0
+CODE-1 Plus Client
+CODE-1 Plus Server
+CONNECT
+CRA Wiz - 6.5 SP3
+CRA Wiz 6.0 SP2.2 Server
+CRA Wiz 6.0 SP3 Server
+CRA Wiz 6.5 SP3 Server
+CRA Wiz 6.5 SP4 - 6.10.34
+CRA Wiz and Fair Lending Wiz 6.6 - 66.0.12
+CRA Wiz and Fair Lending Wiz 6.6 SP1 - 66.1.16
+Camtasia - 3.0
+Camtasia Studio - 1.1
+Camtasia Studio 2 - 2.0
+Camtasia Studio 2 - 2.1
+Camtasia Studio 3 - 3.0
+Camtasia Studio 4 - 4.0.0
+Camtasia Studio 4 - 4.0.1
+Centera 3.0
+Centera 3.1
+Centera 3.1 SP1
+Centera Procedure Generator v1.5.7
+Certus 2.5 - 2.5.0.0
+Certus 2.5.1 - 2.5.1.0
+Certus 2.5.2 - 2.5.2.0
+Certus 2.5.2FP3 - 2.5.2.0
+Certus 2.7 - 2.7.0.0
+Certus 2.7.3 - 2.7.3.0
+Certus2.1 - 2.1.0.0
+Certus2.1.5 - 2.1.5.0
+Chariot
+ChartFX Internet Designer 5.5
+ChartFX Internet Server 5.5
+Check Point VPN-1 Edge Compatibility Package
+Check Point VPN-1 Pro NGX R60  - 1.00.000
+Check Point VPN-1 Pro NGX R60  - 5.0
+Check Point VPN-1 SecuRemote NG_AI
+Check Point VPN-1 SecuRemote NG_AI_R55
+Check Point VPN-1 SecuRemote NG_AI_R56
+Check Point VPN-1 SecureClient NG_AI_R55
+CheckFree RECON Trade
+CheckFree RECON-Plus(TM) for Windows(R) - 7.5
+Chief Legal Officer 99
+Clarity Adobe SVG Viewer 6.0 - 9.0
+ClearCase Attache 4.0
+Client Components for Microsoft SharePoint Portal Server 2001 - 10.*
+Client Components for Microsoft SharePoint Portal Server 2001 - 10.145.3815.0
+Client Components for Microsoft SharePoint Portal Server 2001 - 10.145.6011.0
+Client for Microsoft Office SharePoint Portal Server 2003 - 11.*
+Client for Microsoft Office SharePoint Portal Server 2003 - 11.0.5704.0
+CocoBase Enterprise O/R Version 4.5 SR7
+CocoBase Enterprise O/R Version 4.5 SR8
+CocoBase Enterprise O/R Version 4.5 SR9
+Code Advisor for Visual Basic 6 - 1.0 - 1.0.3.62
+CodeSmith Professional 3.2 - 3.2.5
+CodeSmith Professional 3.2 - 3.2.7
+CodeSmith Standard 3.2 - 3.2.7
+Cole2k Media - Nero Audio Plugin Pack
+CompuLaw Vision SQL - Vision SQL
+Compuware BoundsChecker 7.0 - 7.00.0000
+Compuware BoundsChecker 7.0.2 - 7.0.2
+Compuware DevPartner Studio Professional Edition - 8.0.0.2999
+Compuware DevPartner Studio Professional Edition - 8.1.1
+Compuware DevPartner Studio Professional Edition - 8.1.313.0
+Compuware DevPartner for Visual C++ BoundsChecker Suite - 8.0.0.2999
+Compuware DevPartner for Visual C++ BoundsChecker Suite - 8.1.129.1
+Compuware DevPartner for Visual C++ BoundsChecker Suite - 8.1.313.0
+Crystal Analysis Professional - 10.0.0.13654
+Crystal Analysis Professional - 9.0.2.11060
+Crystal Enterprise (English) - 9.0.0.2815
+Crystal Enterprise - 8.0.2.6725
+Crystal Enterprise - Solution for Siebel eBusiness Applications - 1.0.0
+Crystal Enterprise 10 (English) - 10.0.0.3885
+Crystal Enterprise 10 Embedded - 10.0.0.533
+Crystal Reports
+Crystal Reports - 8.5.0.217
+Crystal Reports - 8.5.0.2175
+Crystal Reports - 8.5.0.2176
+Crystal Reports 10 - 10.0.0.53327
+Crystal Reports 10 - 10.0.0.5335
+Crystal Reports 11 - 11.0.0.89327
+Crystal Reports 11 .NET Server - 11.0.0.0
+Crystal Reports 8.0 - 8.0.0
+Crystal Reports 8.5 - 8.5.0
+Crystal Reports 9 - 9.2.0.439
+Crystal Reports 9 - 9.2.0.4395
+Crystal Reports 9 - 9.2.0.4485
+Crystal Reports 9 - 9.2.2.5700
+Crystal Reports 9 - 9.2.2.5705
+Crystal Reports 9 - 9.2.2.5706
+Crystal Reports 9 .NET Server - 9.2.0.448
+Crystal Reports 9.2 Runtime - 9.2.0
+Crystal Reports Server - 11.0.0.7485
+Crystal Reports XI - 11.0.0.128227
+Crystal Reports XI Release 2 - 11.5.0.31327
+Crystal Reports XI Release 2 - 11.5.3.41727
+Crystal Reports XI Release 2 .NET 2005 Server - 11.5.0.0
+Crystal Reports XI for ESRI - 11.0.0.128227
+Crystal Reports for .NET Framework 2.0 (x86) - 10.2.0
+Crystal Reports for .Net - 1.0.0
+Crystal Reports for Visual Studio code name 'Orcas' Beta 1 - 10.5.0.0
+Crystal Xcelsius Professional 4.5 - 1.0.0
+CuteFTP 7 Home - 7.10.0000
+CuteZIP - 2.1
+DAEMON Tools - 3.47.0
+DB2 Connect Enterprise Edition - 8.1.0
+DB2 Connect Enterprise Edition - 8.1.10
+DB2 Connect Personal Edition - 8.1.0
+DB2 Enterprise Server Edition - 8.1.0
+DB2 Enterprise Server Edition - 8.1.10
+DB2 Enterprise Server Edition - 8.1.11
+DB2 Enterprise Server Edition - 8.1.14
+DB2 Enterprise Server Edition - 8.1.2
+DB2 Enterprise Server Edition - 8.1.7
+DB2 Enterprise Server Edition - 8.1.9
+DB2 Enterprise Server Edition - DB2COPY - 9.1.0.356
+DB2 Enterprise Server Edition - DB2COPY1 - 9.1.0.356
+DB2 Enterprise Server Edition - DB2COPY1 - 9.1.200.98
+DB2 Enterprise Server Edition - quikradmCOPY - 9.1.100.129
+DB2 Universal Database Express Edition - 8.1.7
+DB2 Workgroup Server Edition - 8.1.0
+DB2 Workgroup Server Edition - 8.1.10
+DB2 Workgroup Server Edition - 8.1.9
+DBArtisan 7.3.0
+DBArtisan 7.3.1
+DBArtisan 8.0.1 - 8.0.1
+DBArtisan 8.1.0 - 8.1.0
+DBArtisan 8.1.1 - 8.1.1
+DBArtisan 8.1.2 - 8.1.2
+DBArtisan 8.1.3 - 8.1.3
+DBArtisan 8.1.4 - 8.1.4
+DameWare NT Utilities - 4.8.0.0
+DameWare NT Utilities - 4.9.2.5
+DameWare NT Utilities - 5.1.1.0
+DameWare NT Utilities - 6.0.0.0
+DameWare NT Utilities - 6.0.1.5
+DataStage 6 MetaBroker
+DataStage 7 MetaBroker
+DataStage Client (Remove Only)
+DataStage Client 7.5 (Remove Only)
+DataStage Environment Variable Transporter
+DataStage GAC Registration Assembly - 1.00.0000
+DataStage Intelligent Assistant (Remove Only)
+DataStage Multi-Client Manager (Remove only)
+DataStage Server (Remove Only)
+DataStage Version Control
+DataStage Web Services PACK - 1.0.3
+DataStage Web Services PACK 7.5 - 7.5.0001
+DataStage Web Services PACK 7.5.1 - 7.5.0100
+DataStage XML PACK - 2.0.4
+DataStage XML PACK - 2.0.6
+DataStage XML PACK 7.5 - 7.5.0001
+DataStage XML PACK 7.5.1 - 7.5.0100
+DataStage XML PACK 7.5.2 - 7.5.0200
+Determina Fix for CVE-2006-1359 - 1.00.0000
+Directory Services - 6.0.1001
+Documentum ADO.NET Services 5.3.0.053 - 5.3.0
+Documentum Application Builder - 5.3.0.024
+Documentum Application Builder - 5.3.0.113
+Documentum Application Builder - 5.3.0.206
+Documentum Application Builder - 5.3.0.316
+Documentum Application Builder - 5.3.0.411
+Documentum Application Builder 5.2.5 - 5.2.5.102
+Documentum Business Process Manager - 5.3.0.029
+Documentum Business Process Manager - 5.3.0.111
+Documentum Business Process Manager - 5.3.0.205
+Documentum Business Process Manager - 5.3.0.331
+Documentum Business Process Manager - 5.3.0.434
+Documentum Content Server - 5.3.0.115
+Documentum Content Server - 5.3.0.143
+Documentum Content Server - 5.3.0.214
+Documentum Content Server - 5.3.0.315
+Documentum Content Server - 5.3.0.413
+Documentum Content Server 5.2 - 5.2.5.125
+Documentum Content Server 5.2 - 5.2.5.72
+Documentum Content Transformation Services - 5.3.0.105
+Documentum Content Transformation Services - 5.3.0.305
+Documentum DAM Services - 5.2.5.101
+Documentum DFC Primary Interop Assembly 5.3.0.053 - 5.3.0
+Documentum DFC Runtime Environment - 5.2.5.110
+Documentum DFC Runtime Environment - 5.2.5.219
+Documentum DFC Runtime Environment - 5.2.5.503
+Documentum DFC Runtime Environment - 5.3.0.059
+Documentum DFC Runtime Environment - 5.3.0.124
+Documentum DFC Runtime Environment - 5.3.0.215
+Documentum DFC Runtime Environment - 5.3.0.317
+Documentum DFC Runtime Environment - 5.3.0.414
+Documentum DFC Runtime Environment - 5.3.0.511
+Documentum Desktop - 5.2.5.102
+Documentum Desktop - 5.2.5.302
+Documentum Desktop - 5.3.0.007
+Documentum Desktop - 5.3.0.105
+Documentum Desktop - 5.3.0.204
+Documentum Desktop - 5.3.0.404
+Documentum Digital Asset Manager - 5.2.5.105
+Documentum Document Transformation Services - 5.3.0.105
+Documentum Document Transformation Services - 5.3.0.305
+Documentum Forms Builder - 5.3.0.042
+Documentum Forms Builder - 5.3.0.122
+Documentum Forms Builder - 5.3.0.204
+Documentum Forms Builder - 5.3.0.321
+Documentum Forms Builder - 5.3.0.412
+Documentum Index Agent Configuration Program - 5.3.0.315
+Documentum Index Server - 5.3.0.315
+Documentum Media Server - 5.2.5.135
+Documentum Records Manager Client - 4.1.1.7
+Documentum Records Manager Database Scripts - 4.1.1.7
+Documentum Records Manager Document Server - 4.1.1.7
+Documentum Records Manager Server - 4.1.1.7
+Documentum Records Manager Webtop Client - 4.1.1.010
+Documentum Reporting Gateway
+Documentum Site Caching Services Source - 5.2.5.7
+Documentum Site Caching Services Target - 5.2.5.7
+Documentum Site Caching Services Target - 5.3.0.010
+Documentum Task Chaining Framework - 5.3.0.002
+Documentum Task Chaining Framework - 5.3.0.301
+Documentum Thumbnail Server - 5.2.5.102
+Documentum Thumbnail Server - 5.3.0.003
+Documentum WDK - 5.3.0.135
+Documentum WDK - 5.3.0.216
+Documentum WDK - 5.3.0.317
+Documentum WDK - 5.3.0.416
+Documentum Web Publisher - 5.2.5.108
+Documentum Web Publisher Server Files - 5.2.5.108
+Documentum Web Services - 5.3.0.116
+Documentum Webtop - 5.2.5.108
+Documentum Webtop - 5.2.5.506
+Documentum Webtop - 5.3.0.069
+Documentum Webtop - 5.3.0.135
+Documentum Webtop - 5.3.0.216
+Documentum Webtop - 5.3.0.317
+Documentum Webtop - 5.3.0.416
+EMC Documentum Application Connectors 5.3 - 5.3.0.212
+ERStudio 5.0 MetaBroker
+ERStudio MetaBroker
+ERwin Examiner 4.0
+EVEREST Corporate Edition v3.50 - 3.50
+EVEREST Home Edition v2.20 - 2.20
+EViews 5
+Elixir Application Suite
+Embarcadero Change Manager 3.0.1 - 3.0.1
+Embarcadero Change Manager 3.0.2 - 3.0.2
+Embarcadero Change Manager 3.0.3 - 3.0.3
+Embarcadero Change Manager 3.0.4 - 3.0.4
+Embarcadero Change Manager 3.0.5 - 3.0.5
+Embarcadero Change Manager 3.1.0  - 3.1.0
+Embarcadero ER/Studio v5.5
+Embarcadero ER/Studio v6.0 - 6.0.0
+Embarcadero ER/Studio v6.5 - 6.5.0
+Embarcadero ER/Studio v6.5 Network License - 6.5.0
+Embarcadero ER/Studio v6.6 - 6.6.0
+Embarcadero ER/Studio v6.6 - 6.6.1
+Embarcadero ER/Studio v6.6 Network License - 6.6.0
+Embarcadero ER/Studio v7.0 - 7.0
+Embarcadero ER/Studio v7.1 - 7.1
+Embarcadero Job Scheduler
+Enterprise Architect 4.50 - 4.50.744
+Enterprise Architect 5.0 - 5.00.766
+Enterprise Architect 5.0 - LITE Edition - 5.00.772
+Enterprise Architect 6.0 - 6.0.779
+Enterprise Architect 6.1 - 6.0.785
+Enterprise Architect 6.1 - 6.1.787
+Enterprise Architect 6.1 - 6.1.788
+Enterprise Architect 6.1 - 6.1.789
+Enterprise Architect 6.1 - 6.1.790
+Enterprise Architect 6.1 - 6.1.792
+Enterprise Architect 6.1 - LITE Edition - 6.1.786
+Enterprise Architect 6.1 - LITE Edition - 6.1.792
+Enterprise Architect 6.5 - 6.5.797
+Enterprise Architect 6.5 - 6.5.799
+Enterprise Architect 6.5 - 6.5.801
+Enterprise Architect 6.5 - 6.5.806
+Enterprise Architect 6.5 - LITE Edition - 6.5.804
+Enterprise Development Reference Architecture - 1.0.0
+Enterprise Library - 1.0.1010.0
+Enterprise Library - June 2005 - 1.1.17665.0
+Enterprise Library 3.0 - April 2007 - 3.0.0.0
+Enterprise Library 3.0 - February 2007 CTP - 2.9.9.2
+Enterprise Library 3.1 - May 2007 - 3.1.0.0
+Enterprise Library Hands On Labs - 1.2.5
+Enterprise Library for .NET Framework 2.0 - January 2006 - 2.0.23366.0
+Enterprise Library for .NET Framework 2.0 - November 2005 CTP - 2.0.21129.0
+Enterprise Library for .NET Framework 2.0 Hands On Labs - 2.0.1
+Everest Admin - 4.2.320
+Everest Client - 4.2.320
+Everest server - 4.2.320
+EverestManager - 1.0.0
+Exceed 2006 - 11.0.0.0
+Exceed for Windows NT
+Excel OCX
+FINCAD Developer 9
+FINCAD XL 10
+FINCAD XL 9
+Fair Lending Wiz 4.1 - 4.10
+Fair Lending Wiz 4.5 - 4.5
+FarPoint Spread 7
+FarPoint Spread for Web Forms 1.0.3.0 - 1.0.3.0
+FarPoint Spread for Web Forms 1.0.6.0 - 1.0.6.0
+FarPoint Spread for Web Forms 1.0.8.0 - 1.0.8.0
+FarPoint Spread for Web Forms 2.0.0.0 - 2.0.0.0
+FarPoint Spread for Web Forms 2.0.2.0 - 2.0.2.0
+FarPoint Spread for Web Forms 2.5.1000.2002 - 2.5.1000.2002
+FarPoint Spread for Web Forms 2.5.2000.2005 for Visual Studio 2005 - 2.5.2000.2005
+FarPoint Spread for Web Forms 2.5.2005.2005 for Visual Studio 2005 - 2.5.2005.2005
+FarPoint Spread for Web Forms 2.5.2006.2005 - 2.5.2006.2005
+FarPoint Spread for Web Forms 3.0.1001.2002 - 3.0.1001.2002
+FarPoint Spread for Web Forms 3.0.2001.2005 - 3.0.2001.2005
+FarPoint Spread for Windows Forms 1.0.2.0 - 1.0.2.0
+FarPoint Spread for Windows Forms 1.0.4.0 - 1.0.4.0
+FarPoint Spread for Windows Forms 1.0.5.0 - 1.0.5.0
+FarPoint Spread for Windows Forms 1.0.6.0 - 1.0.6.0
+FarPoint Spread for Windows Forms 1.0.7.0 - 1.0.7.0
+FarPoint Spread for Windows Forms 1.0.8.0 - 1.0.8.0
+FarPoint Spread for Windows Forms 1.0.9.0 - 1.0.9.0
+FarPoint Spread for Windows Forms 1.1.0.0 - 1.1.0.0
+FarPoint Spread for Windows Forms 2.0.0.0 - 2.0.0.0
+FarPoint Spread for Windows Forms 2.0.2.0 - 2.0.2.0
+FarPoint Spread for Windows Forms 2.0.3.0 - 2.0.3.0
+FarPoint Spread for Windows Forms 2.5.1001.2002 - 2.5.1001.2002
+FarPoint Spread for Windows Forms 2.5.1003.2002 - 2.5.1003.2002
+FarPoint Spread for Windows Forms 2.5.1004.2002 - 2.5.1004.2002
+FarPoint Spread for Windows Forms 2.5.1005.2002 - 2.5.1005.2002
+FarPoint Spread for Windows Forms 2.5.1010.2002 - 2.5.1010.2002
+FarPoint Spread for Windows Forms 2.5.2001.2005 - 2.5.2001.2005
+FarPoint Spread for Windows Forms 2.5.2008.2005 - 2.5.2008.2005
+FarPoint Spread for Windows Forms 2.5.2009.2005 - 2.5.2009.2005
+FarPoint Spread for Windows Forms 2.5.2010.2005 - 2.5.2010.2005
+FarPoint Spread for Windows Forms 3.0.1003.2002  - 3.0.1003.2002
+FarPoint Spread for Windows Forms 3.0.2003.2005  - 3.0.2003.2005
+FileNET Panagon Web Services 3.1
+FileNET Panagon Web Services 3.2
+FileNET Print 4.3 - 43.00.000
+FileNET Print 4.3 Patch 5 - 43.00.000
+FileNet IDM Web Services 3.3
+Fincad XL 6.4
+Fincad XL 7
+Fincad XL 8
+Fincad XL 8.1
+Firstlogic ACE DPV Option
+Firstlogic ACE DPV Option - 7.50c
+Firstlogic ACE DPV Option - 7.61
+Firstlogic ACE DPV Option - 7.71c
+Firstlogic DataRight 2.60c Rev 1 - 2.60c
+Firstlogic DataRight IQ Jobfile 7.70c Rev 1 - 7.70c
+Firstlogic DataRight IQ Views 7.70c Rev 1 - 7.70c
+Firstlogic DataRight Views 2.60c Rev 1 - 2.60c
+Firstlogic TrueName 2.60c Rev 1 - 2.60c
+FlashFXP v3 - 3.4.0.1145
+Foglight Cartridge
+Foglight Transaction Recorder - 4.0.2.123
+Foglight Transaction Recorder - 4.2.0.213
+Foglight Transaction Recorder - 4.2.0.217
+Foglight Transaction Recorder - 4.2.1.246
+Foglight Transaction Recorder - 4.2.1.247
+Foglight Transaction Recorder - 4.5.0.444
+Frontline Systems KNITRO Solver V6.5
+Frontline Systems LGO Global Solver V6.5
+Frontline Systems Large-Scale GRG Solver V6.5
+Frontline Systems Large-Scale LP Solver V5.0
+Frontline Systems Large-Scale LP Solver V5.5
+Frontline Systems Large-Scale LP Solver V6.5
+Frontline Systems Large-Scale SQP Solver V6.5
+Frontline Systems MOSEK Solver V6.5
+Frontline Systems OptQuest Solver V6.5
+Frontline Systems Premium Solver Platform V5.5
+Frontline Systems Premium Solver Platform V6.0
+Frontline Systems Premium Solver Platform V6.5
+Frontline Systems SDK Wizards for Visual Basic 6/ Visual C++ 6.0 - 1.0.0
+Frontline Systems SDK Wizards for Visual Basic 6/ Visual C++ 6.0 - 7.0.3
+Frontline Systems SDK Wizards for Visual Studio .NET 2003 - 1.0.0
+Frontline Systems SDK Wizards for Visual Studio .NET 2003 - 7.0.4
+Frontline Systems SDK Wizards for Visual Studio 2005 - 7.0.4
+Frontline Systems Solver DLL Platform V4.5
+Frontline Systems Solver Platform SDK V6.5
+Frontline Systems XPRESS Solver Engine V6.5
+FullShot V7
+GEMS Documentum - 1.0.0
+HP MFP Digital Sending Software - 4.0
+HP MFP Digital Sending Software - 4.5.7
+HP MFP Digital Sending Software - 4.7.6
+HP MFP Digital Sending Software - 4.8.8
+HP MFP Digital Sending Software - 4.9.5
+HP OpenView CM Knowledge Base Server 5.00 - 5.00
+HP PROLIANT SERVERS WBT
+HP PROLIANT-FAMILY WBT
+HP ProLiant Family
+HP ProLiant Hot-Plug Memory Configuration Utility
+HP ProLiant IPMI WMI Provider - 1.0.0.0
+HP ProLiant IPMI WMI Provider - 1.1.0.0
+HP ProLiant Integrated Management Log Viewer
+HP ProLiant Integrated Management Log Viewer - 5.10.0.0
+HP ProLiant Integrated Management Log Viewer - 5.12.0.0
+HP ProLiant Legacy Port Configuration Component
+HP ProLiant Management Pack 1.1 for MOM 2005 - 01.1.0006
+HP ProLiant Remote Monitor Service
+HP ProLiant Remote Monitor Service - 5.11.1.0
+HP ProLiant Remote Monitor Service - 5.11.2.0
+HP ProLiant Smart Array Device Manager Extension - 6.2.0.32
+HP Web Jetadmin
+HaleyAuthority 5.1 - 5.01.000
+HaleyAuthority Edge 5.3 - 5.03.000
+HaleyAuthority Edge 5.3 - 5.03.001
+HaleyAuthority Enterprise 5.2 - 5.02.0002
+HaleyAuthority Enterprise 5.3 - 5.03.001
+HaleyAuthority Enterprise 5.4 - 5.04.000
+HaleyAuthority Enterprise 5.4 - 5.04.200
+HaleyRules-JP 5.3
+HaleyRules-JP 5.4
+HaleyRules-SP 5.4 - 5.04.0000
+HaleyRules-SP 5.4 - 5.04.2000
+Helmsman 2.5 - 1.0.0
+Helmsman 2.5 - 2.5.0
+Helmsman 2.7 for SQL Server
+Helmsman 3.0 for SQL Server - 3.0.41.0
+Helmsman 3.5 for SQL Server - 3.5.13.0
+Helmsman 4.3
+Helmsman 4.3.1
+Helmsman 4.4
+Helmsman 4.4.1
+Helmsman Web Access - 3.5.13
+Host Integration Server 2000 Pre-SP2 Hotfix [See KB 822886 for more information]
+Host Integration Server 2000 SDK - 05.00.0798
+Hotfix for MSXML 2 (KB887606) - 1
+Hotfix for MSXML 4 (KB887606) - 1
+Hotfix for Microsoft Visual SourceSafe 2005 - ENU (KB925275) - 1
+Hotfix for Windows Media Player 10 (KB903157)
+Hummingbird Exceed - 10.0.0.0
+Hummingbird Exceed - 7.0.0.0
+Hummingbird Exceed 10 - 10.0.0.0
+Hummingbird Exceed 10 - 10.0.0.17
+Hummingbird Exceed 10 - 10.0.0.6
+Hummingbird Exceed 2006 - 11.0.0.0
+Hummingbird Exceed 2006 - 11.0.4.0
+Hummingbird Exceed 2007 - 12.0.0.0
+Hummingbird Exceed PowerSuite 2007 - 12.0.0.0
+Hummingbird Exceed V7.0 - 7.0.0.0
+Hummingbird Exceed V8.0 - 8.0.0.0
+Hummingbird Exceed V9.0 - 9.0.0.0
+Hummingbird Exceed onDemand Client 5 (Web Deployed)
+Hyperion Enterprise
+Hyperion Enterprise 5.5.2 - 5.5.2
+Hyperion Enterprise 5.6.0 - 5.6.0
+Hyperion Performance Scorecard
+IBM Application Client for WebSphere Application Server Versio
+IBM DB2 Express Edition - DB2COPY1 - 9.1.0.356
+IBM DB2 Express Edition - DB2GMT1 - 9.1.0.356
+IBM DB2 Express Edition - wpdb2insCOPY - 9.1.0.356
+IBM Development Studio Client 5.1.2
+IBM Lotus Sametime 7.0
+IBM Lotus Sametime 7.5
+IBM Lotus Sametime 7.5 Mobile
+IBM Lotus Sametime 7.5.1
+IBM Lotus Sametime 7.5.1 Community Mux
+IBM Lotus Sametime Connect 7.5 - 7.5
+IBM Lotus Sametime Connect 7.5 - 7.5.60628
+IBM Lotus Sametime Connect 7.5 - 7.5.60730
+IBM Lotus Sametime Connect 7.5 - 7.5.60808
+IBM Lotus Sametime Connect 7.5 - 7.5.61018
+IBM Lotus Sametime Connect 7.5.1 - 7.5.70413
+IBM MQSeries Connector
+IBM MQSeries V5.2
+IBM Object REXX for Windows Development Edition Upgrade 2.1.1.0 - 2.1
+IBM Object REXX for Windows Development Edition Version 2.1 - 2.1
+IBM Rational Purify for Windows - 7.0.0.0
+IBM Rational PurifyPlus for Windows - 7.0.0.0
+IBM Rational RequisitePro - 7.0.0.0
+IBM Tivoli Composite Application Manager for Response Time Tracking - 610
+IBM Tivoli Composite Application Manager for SOA - 600
+IBM Tivoli Composite Application Manager for SOA - 610
+IBM Tivoli Composite Application Manager for WebSphere - 600
+IBM Tivoli Directory Server 6.0
+IBM Tivoli Monitoring - 610
+IBM Tivoli Monitoring - 6101
+IBM Tivoli Monitoring - 61041
+IBM Tivoli Monitoring - 610501
+IBM Tivoli Monitoring for Databases - 610
+IBM Tivoli Monitoring for Messaging and Collaboration - 610
+IBM Tivoli OMEGAMON XE for Messaging - 600
+IBM Tivoli OMEGAMON XE for WebSphere Business Integration - 110
+IBM Tivoli Provisioning Manager 5.1
+IBM WebSphere Application Server
+IBM WebSphere Application Server - Express 5.1
+IBM WebSphere Application Server 4.0 AE
+IBM WebSphere Application Server Community Edition v1.0
+IBM WebSphere Application Server Network Deployment V5.1
+IBM WebSphere Application Server Network Deployment Version 5
+IBM WebSphere Application Server Network Deployment v6
+IBM WebSphere Application Server V5.1
+IBM WebSphere Application Server V6
+IBM WebSphere Application Server Version 5
+IBM WebSphere Application Server clients Version 5.1
+IBM WebSphere Business Integration Modeler Advanced Edition Version 5.1.1
+IBM WebSphere Business Integration Modeler Advanced Edition Version 5.1.1.2
+IBM WebSphere Business Integration Modeler Advanced Edition Version 5.1.1.2 Documentation
+IBM WebSphere Business Integration Modeler Advanced Edition Version 5.1.1.2 Trial
+IBM WebSphere Business Integration Modeler Entry Edition Version 5.1.0
+IBM WebSphere Development Studio Client
+IBM WebSphere Development Studio Client Advanced Edition 5.1.2
+IBM WebSphere Development Studio Client Lite for iSeries V6.0.1 technology preview - 6.0.1
+IBM WebSphere Development Studio Client for iSeries V6.0
+IBM WebSphere Development Studio Client for iSeries Version 5.1
+IBM WebSphere MQ - 5.30.0
+IBM WebSphere MQ - 6.0
+IBM WebSphere MQ Classes for .NET - 1.00.0000
+IBM WebSphere MQ Integrator V2.1
+IBM WebSphere Portal Express 6.0.0.1
+IBM WebSphere Portal for Multiplatforms 6.0.0.0
+IBM Workplace Forms Viewer 2.5.0
+IBM Workplace Forms Viewer 2.6 - 2.6.1
+IBM XForms - 1.0.0
+IBM iSeries Access for Windows
+IBM iSeries Access for Windows - 05.03.0000
+IBM iSeries Access for Windows SI07675
+IBM iSeries Access for Windows SI08894
+IBM iSeries Access for Windows SI09809
+IBM iSeries Access for Windows SI10914
+IBM iSeries Access for Windows SI13587
+IBM iSeries Access for Windows SI14294
+IBM iSeries Access for Windows SI15176
+IBM iSeries Access for Windows SI16136
+IBM iSeries Access for Windows SI16496
+IBM iSeries Access for Windows SI16915
+IBM iSeries Access for Windows SI17411
+IBM iSeries Access for Windows SI17742
+IBM iSeries Access for Windows SI18400
+IBM iSeries Access for Windows SI18651
+IBM iSeries Access for Windows SI20055
+IBM iSeries Access for Windows SI21917
+IBM iSeries Access for Windows SI23492
+IBM iSeries Access for Windows SI23696
+IBM iSeries Access for Windows SI23978
+IBM iSeries Access for Windows SI24723
+IBM iSeries Access for Windows SI24893
+IBM iSeries Access for Windows SI25949
+IBM iSeries Access for Windows SI26600
+IBM iSeries Access for Windows SI26879
+IBM iSeries Access for Windows Service Pack SI18651 - 05.03.0000
+IBM iSeries Access for Windows Service Pack SI24723 - 05.04.00
+IBM iSeries Access for Windows V5R3M0 - 5.3.0
+IBM iSeries Access for Windows V5R4M0 - 05.04.0100
+IBM iSeries Access for Windows V5R4M0 - 05.04.0400
+IBM iSeries Access for Windows V5R4M0 - 05.04.0500
+IIS 6.0 Migration Tool (x86) - 6.0.0.20040827
+IIS 6.0 Resource Kit Tools - 6.00.0000
+IIS Debug Tools
+IIS Diagnostics Toolkit January 2006 (x86) - 1.5.1225.0
+IIS Exception Analysis Tools 6.1
+IIS In-Process Applications - 128.0.0
+IIS Metabase Explorer - 1.1
+IIS Out-Of-Process Pooled Applications - 128.0.0
+IIS Permissions Wizard Template Maker
+IIS Tracer
+IIS UrlScan Tool 2.0 (Uninstall)
+IIS-{Realtorscountrywidecom//Root} - 128.0.0
+IIS-{abacountrywidecom//Root} - 128.0.0
+IIS-{wwwCountrywidecom//Root/Rates} - 128.0.0
+IIS-{wwwCountrywidecom//Root/calculators} - 128.0.0
+IIS-{wwwCountrywidecom//Root} - 128.0.0
+IIS-{wwwFullSpectrumlendingcom//Root} - 128.0.0
+IIS6 Manager - 0
+IISExport
+IISState - 3.0.0
+IIsAdmin.NET 1.1 - 1.1.1
+IdeaBlade - 1.9.10
+IdeaBlade 2-tier - 2.2.0008
+IdeaBlade DevForce - 3.3.0.1j
+Infragistics NetAdvantage 2003 Vol. 1 - 3.1
+Infragistics NetAdvantage 2003 Vol. 2 - 3.2
+Infragistics NetAdvantage 2003 Vol. 3 - 3.3
+Infragistics NetAdvantage 2004 Vol. 1 (ASP.NET Only) - 4.1
+Infragistics NetAdvantage 2004 Vol. 1 - 4.1
+Infragistics NetAdvantage 2004 Vol. 1 .NET Hot Fix -  07/02/04 - 4.1
+Infragistics NetAdvantage 2004 Vol. 2 (ASP.NET Only) - 4.2
+Infragistics NetAdvantage 2004 Vol. 2 - 4.2
+Infragistics NetAdvantage 2004 Vol. 3 - 4.3
+Infragistics NetAdvantage 2005 Vol. 2 - 5.2
+Infragistics NetAdvantage 2005 Vol. 3 CLR 2.0 HotFix - Build.1127 - 5.3
+Infragistics NetAdvantage 2005 Vol. 3 for CLR 2.0 - 5.3
+Infragistics NetAdvantage 2006 Vol. 1 CLR 1.x Hot Fix - 03/24/06 - 6.1
+Infragistics NetAdvantage 2006 Vol. 1 for CLR 1.x - 6.1
+Infragistics NetAdvantage 2006 Vol. 1 for CLR 2.0 - 6.1
+Infragistics NetAdvantage Suite v2.00 - 2.00.02
+Infragistics NetAdvantage for .NET 2006 Vol. 2 CLR 1.x - 6.2
+Infragistics NetAdvantage for .NET 2006 Vol. 2 CLR 2.0 - 6.2
+Infragistics NetAdvantage for .NET 2006 Vol. 3 CLR 2.0 - 6.3
+Infragistics NetAdvantage for .NET 2007 Vol. 1 CLR 1.x - 7.1
+Infragistics NetAdvantage for .NET 2007 Vol. 1 CLR 2.0 - 7.1
+Infragistics NetAdvantage for ASP.NET 2006 Vol. 3  CLR 1.x - 6.3
+Infragistics NetAdvantage for ASP.NET 2006 Vol. 3 CLR 2.0 - 6.3
+Infragistics NetAdvantage for ASP.NET 2007 Vol. 1 CLR 1.x - 7.1
+Infragistics NetAdvantage for ASP.NET 2007 Vol. 1 CLR 2.0 - 7.1
+InstallShield Express Visual FoxPro Limited Edition - 3.03.13
+InstantForum.NET v3.4 Developer License - 3.
+InstantForum.NET v3.4 Developer License - 3.4
+Internet Explorer - No Proxy - 1.0.0
+Internet Explorer 6 SP1 Zones Fix
+Internet Explorer 7 Standalone
+Internet Explorer Q828750
+Internet Explorer Q831167
+Internet Explorer Q832894
+Internet Explorer Q834707
+Internet Explorer Q867801
+Internet Explorer Q889293
+Internet Explorer Q903235
+Ipswitch WS_FTP Home - 9.02
+Ipswitch WS_FTP Home 2006 - 10.0
+Ipswitch WS_FTP Home 2006 - 10.0.1.0
+Ipswitch WS_FTP Home 2007 - 11.00.000
+Ipswitch WS_FTP LE
+Ipswitch WS_FTP Pro
+Ipswitch WS_FTP Pro - 9
+Ipswitch WS_FTP Pro - 9.01
+Ipswitch WS_FTP Professional 2006 - 10.0
+Ipswitch WS_FTP Professional 2006 - 10.0.1.0
+Ipswitch WS_FTP Professional 2007 - 11.0.0.0
+Ipswitch WS_FTP Professional 2007 - 11.00.002
+Ipswitch WS_FTP Server - 5.00.000
+Ipswitch WS_FTP Server - 5.04
+JRun 4 - 4.0.0.0
+Kirchman Bankway - IBM MQSeries Client
+Knowledge Accelerator XI R2: Web Intelligence - 11.5.0
+LDRPS 9.1 Web Server - 9.1.2.206.1106
+LDRPS 9.1 Web Server - 9.1.912
+LINQ: Visual Basic Tech Preview (Jan 2006) - 1.0.1
+List Pro
+List Pro 3
+List Pro Trial
+LoadRunner 8.0 .NET Monitor Probe
+Lotus Notes 6.5 - 6.50.3268
+Lotus Notes 6.5 - 6.50.3275
+Lotus Notes 6.5.2 - 6.52.4152
+Lotus Notes 6.5.3 - 6.53.4218
+Lotus Notes 6.5.3 - 6.53.4258
+Lotus Notes 6.5.3 - 6.53.4301
+Lotus Notes 6.5.4 - 6.54.572
+Lotus Notes 6.5.4 - 6.54.587
+Lotus Notes 6.5.4 - 6.54.595
+Lotus Notes 6.5.5 - 6.55.5334
+Lotus Notes v5.0.8 (Laptop/Home) - 5.0.8
+Lotus QuickPlace Offline
+Lotus Sametime Mobile Extensions v3.0
+Lotus Workflow 3.0.1
+Lotus Workflow 6.5.1
+Lumigent Technologies Log Explorer - 4.0.1
+Lumigent Technologies Log Explorer - 4.0.2
+MAPFORCE 2004 - 6.30
+MATLAB 6.5.1
+MATLAB 7.0.4 - 7.0.4
+MATLAB Component Runtime - 7.2
+MATLAB Component Runtime - 7.3
+MATLAB R2006a - 7.2
+MATLAB R2006b - 7.3
+MATLAB Student 6.5
+MQSeries - 5.21.0
+MQSeries for Windows NT
+MQSeries.NET - 1.0.0
+MSXML - XML Validation IE Extention
+MSXML - XSL Output IE Extention
+MSXML 3.0 - 1.0.0
+MSXML 4.0 - 4.20.9818.0
+MSXML 4.0 SP2
+MSXML 4.0 SP2 (KB925672) - 4.20.9839.0
+MSXML 4.0 SP2 (KB927978) - 4.20.9841.0
+MSXML 4.0 SP2 Parser - 4.20.9818.0
+MSXML 4.0 SP2 Parser and SDK - 4.20.9818.0
+MSXML 4.0 SP2 Parser and SDK - 4.20.9819.0
+MSXML 6.0 Parser (KB925673) - 6.00.3888.0
+MSXML 6.0 Parser (KB927977) - 6.00.3890.0
+MSXML 6.0 Parser - 6.00.3883.8
+MSXML 6.0 Parser - 6.10.1014.0
+MSXML 6.0 Parser - 6.10.1072.0
+MSXML 6.0 Parser - 6.10.1129.0
+MSXML 6.0 Parser and SDK - 6.00.3615.0
+MSXML 6.0 Parser and SDK - 6.00.3800.01
+MSXML 6.0 SDK - 6.00.3883.8
+MSXML3 from Empirix - 3.00.0000
+MSXML4 Parser - 1.0.0
+MSXML4 SP2 - 4.20.9818
+MSXML4.0 redistributable - 4.0.0.0
+MSXml4 - 4.20.9818.0
+Macromedia Captivate - 1.0.7
+Macromedia Captivate - 1.1.3
+Macromedia Contribute - 1.0
+Macromedia Contribute 2 - 2.0
+Macromedia Contribute 3 - 3.1.0.2405
+Macromedia Contribute 3.11 - 3.11.0.2419
+Macromedia Dreamweaver 2 - 2
+Macromedia Dreamweaver 3 - 3
+Macromedia Dreamweaver 4 - 4.0
+Macromedia Dreamweaver 8 - 8.0.0.2734
+Macromedia Dreamweaver 8 - 8.0.1.2753
+Macromedia Dreamweaver 8 - 8.0.2
+Macromedia Dreamweaver MX - 6.0
+Macromedia Dreamweaver MX - 6.1
+Macromedia Dreamweaver MX 2004 - 7.0
+Macromedia Dreamweaver MX 2004 - 7.0.1
+Macromedia Dreamweaver UltraDev 4 - 4.0
+Macromedia Dreamweaver UltraDev 4 - 4.0.0
+Macromedia Fireworks 2 - 2
+Macromedia Fireworks 3 - 3
+Macromedia Fireworks 4 - 4
+Macromedia Fireworks 4 - 4.0.0.0
+Macromedia Fireworks 8 - 8.0.0.777
+Macromedia Fireworks MX - 6
+Macromedia Fireworks MX 2004 - 7
+Macromedia Fireworks MX 2004 - 7.0.2
+Macromedia Flash 2
+Macromedia Flash 4 - 4
+Macromedia Flash 5 - 5
+Macromedia Flash 5 - 5.0.6.0
+Macromedia Flash 8 - 8.00.0000
+Macromedia Flash MX - 6
+Macromedia Flash MX 2004 - 7
+Macromedia Flash MX 2004 - 7.2
+Macromedia Flash Media Server 2
+Macromedia Flash Paper - 1.0
+Macromedia Flash Player - 6.0.79.0
+Macromedia Flash Player - 7.0.14.0
+Macromedia Flash Player - 7.0.19.0
+Macromedia Flash Player 8 - 8
+Macromedia Flash Player 8 - 8.0.22.0
+Macromedia Flash Player 8 - 8.0.24.0
+Macromedia Flash Player 8 - 8.0.5.0
+Macromedia FlashPaper 2 - 2.0.0.2283
+Macromedia FreeHand 10 - 10
+Macromedia FreeHand MX - 11
+Macromedia FreeHand MXa - 11.0.1
+Macromedia FreeHand MXa - 11.0.2
+Macromedia JRun 4 - 4.0.0.0
+MacromediaDreamweaver MX - 6.0
+MapInfo Professional 8.0 - 8.0
+MapPoint Web Service Download API Client - 1.0.0
+Marketrac 3.4
+Marketrac 3.4.13
+Marketrac 3.4.14
+Marketrac 3.4.15
+Marketrac 3.4.16
+Marketrac 3.40
+Marketrac 3.5.0
+Master ACT 6.0 - 1.0.0
+MasterACT - 1.0.0
+MathType 4
+Mavis Beacon Teaches Typing 12 Standard
+Mavis Beacon Teaches Typing 15
+Mavis Beacon Teaches Typing Deluxe 15
+Mercury LoadRunner 8.0
+Micro Focus Application Server for Net Express 3.1
+Micro Focus Application Server for Net Express 4.0
+Micro Focus Enterprise Server 4.0
+Micro Focus Interface Mapping Toolkit 4.0
+Micro Focus Net Express 3.1
+Micro Focus Net Express 4.0
+Micro Focus Net Express Base 3.1
+Micro Focus Net Express Base 4.0
+Micro Focus ODBC Drivers 3.60
+Microsoft .NET Framework 3.0
+Microsoft .NET Framework 3.0 -
+Microsoft .NET Framework 3.0 - 3.0.04324.17
+Microsoft .NET Framework 3.0 - 3.0.04506.03
+Microsoft .NET Framework 3.0 - 3.0.04506.30
+Microsoft Access 2000 SR-1 - 9.00.3821
+Microsoft Access 2000 SR-1 Runtime - 9.00.3821
+Microsoft Access 2002 - 1.0.0
+Microsoft Access 2002 - 10.0.2627.01
+Microsoft Access 2002 - 10.0.6626.0
+Microsoft Access 2002 SBS Files
+Microsoft Access 2002 VBA SBS Files
+Microsoft Access 97
+Microsoft Access 97 - 1.0.0
+Microsoft Access Source Code Control Component
+Microsoft Application Center 2000 - 1.*
+Microsoft Application Center 2000 SP1 *
+Microsoft Application Center 2000 SP2 *
+Microsoft BizTalk Server 2002 - *
+Microsoft BizTalk Server 2002 - 3.00.2023
+Microsoft BizTalk Server 2002 Service Pack 1
+Microsoft BizTalk Server 2004 - *
+Microsoft BizTalk Server 2004 - 3.0.6069.0
+Microsoft BizTalk Server 2004 - 3.0.6070.0
+Microsoft BizTalk Server 2004 - 3.0.7405.0
+Microsoft BizTalk Server 2004 Service Pack - (SP1)
+Microsoft BizTalk Server 2004 Service Pack - (SP2)
+Microsoft BizTalk Server 2006 - *
+Microsoft BizTalk Server 2006 - 3.5.1602.0
+Microsoft BizTalk Server 2006 Developer Edition - *
+Microsoft BizTalk Server 2006 Developer Edition - 3.5.1602.0
+Microsoft BizTalk Server 2006 Enterprise Edition - 3.*
+Microsoft BizTalk Server 2006 Orchestration Designer for Business Analysts - 3.5.1602.0
+Microsoft BizTalk Server 2006 Standard Edition - *
+Microsoft Data Analyzer 3.5 - *
+Microsoft Excel 2000 SR-1 - 9.00.3821
+Microsoft Excel 2002 - 10.0.2627.01
+Microsoft Exchange
+Microsoft FrontPage 2000 - 9.*
+Microsoft FrontPage 2000 SR-1 - 9.*
+Microsoft FrontPage 2002 - 10.*
+Microsoft FrontPage 2002 - 10.0.3520.0
+Microsoft FrontPage 2002 - 10.0.6626.0
+Microsoft FrontPage 98
+Microsoft Host Integration Server 2000 - 05.*
+Microsoft Host Integration Server 2000 Administrator Client - 05.00.0798
+Microsoft Host Integration Server 2000 End-User Client - 05.00.0798
+Microsoft Host Integration Server 2000 SP 1 - 05.*
+Microsoft Host Integration Server 2000 SP 1 End-User Client - 05.00.0873
+Microsoft Host Integration Server 2000 SP 2 - 05.*
+Microsoft Host Integration Server 2000 SP 2 End-User Client - 05.00.2053
+Microsoft Host Integration Server 2004 Setup Bootstrap Files - 6.*
+Microsoft Host Integration Server 2006 - 7.*
+Microsoft Host Integration Server Setup Bootstrap Files - 7.*
+Microsoft IIS v.5 Migration Utility
+Microsoft ISA Server 2000 Service Pack 2 (KB 816460) - 365
+Microsoft ISA Server 2004 - 4.*
+Microsoft ISA Server 2006 - 5.*
+Microsoft Internet Explorer 5.5
+Microsoft Internet Explorer 5.5 and Internet Tools
+Microsoft Internet Explorer 6 SP1
+Microsoft Internet Explorer 6 SP1 and Internet Tools
+Microsoft MapPoint .NET Basic Services SDK - 1.0.0
+Microsoft MapPoint .NET Developer Web Services SDK (2003) Version 3.0 - 1.0.0
+Microsoft MapPoint 2001 North America - 8.*
+Microsoft MapPoint 2002 North America - 9.*
+Microsoft MapPoint 2003 North America - 10.*
+Microsoft MapPoint Europe 2004 - 11.*
+Microsoft MapPoint North America 2004 - 11.*
+Microsoft MapPoint North America 2006 - 13.*
+Microsoft MapPoint Web Service SDK Version 3.5 - 3.5
+Microsoft MapPoint Web Service SDK Version 4.1 - 4.1.1
+Microsoft OLE DB Provider for Visual FoxPro - 8.00.0000.3117
+Microsoft OLE DB Provider for Visual FoxPro - 9.0.0.2412
+Microsoft OLE DB Provider for Visual FoxPro - 9.0.0.3504
+Microsoft Office 2000 Premium - 9.*
+Microsoft Office 2000 Premium - 9.00.2720
+Microsoft Office 2000 Professional - 9.*
+Microsoft Office 2000 Professional - 9.00.2720
+Microsoft Office 2000 SR-1 Disc 2 - 9.00.3821
+Microsoft Office 2000 SR-1 Disc 2 - 9.00.9327
+Microsoft Office 2000 SR-1 Premium - 9.*
+Microsoft Office 2000 SR-1 Premium - 9.00.3821
+Microsoft Office 2000 SR-1 Premium - 9.00.9327
+Microsoft Office 2000 SR-1 Professional - 9.*
+Microsoft Office 2000 SR-1 Professional - 9.00.3821
+Microsoft Office 2000 SR-1 Professional - 9.00.9327
+Microsoft Office 2000 SR-1 Standard - 9.*
+Microsoft Office 2000 SR-1 Standard - 9.00.3821
+Microsoft Office 2000 Small Business - 9.*
+Microsoft Office 2000 Small Business - 9.00.2720
+Microsoft Office 2000 Standard - 9.*
+Microsoft Office 2000 Standard - 9.00.2720
+Microsoft Office 97  Professional Edition
+Microsoft Office 97 Professional Edition
+Microsoft Office 97 Professional Edition*
+Microsoft Office Access 2003 - 11.0.5614.0
+Microsoft Office Access 2003 - 11.0.6361.0
+Microsoft Office Access 2003 - 11.0.7969.0
+Microsoft Office Access 2007 - 12.0.4518.1014
+Microsoft Office Access MUI (English) 2007 (Beta) - 12.0.4017.1006
+Microsoft Office Access MUI (English) 2007 - 12.0.4518.1014
+Microsoft Office Access MUI (Hebrew) 2007 - 12.0.4518.1016
+Microsoft Office Access database engine 2007 (English) - 12.0.4518.1011
+Microsoft Office Access database engine 2007 (English) - 12.0.4518.1031
+Microsoft Office Basic 2007 - 12.*
+Microsoft Office Basic Edition 2003 - 11.*
+Microsoft Office Basic Edition 2003 - 11.0.5614.0
+Microsoft Office Basic Edition 2003 - 11.0.6361.0
+Microsoft Office Basic Edition 2003 - 11.0.7969.0
+Microsoft Office Communicator 2005 - 1.0.559.0
+Microsoft Office Communicator 2007 Public Beta - 2.0.6090.0
+Microsoft Office Enterprise 2007 - 12.*
+Microsoft Office Enterprise 2007 - 12.0.4518.1014
+Microsoft Office Excel 2003 - 11.0.5614.0
+Microsoft Office Excel 2003 - 11.0.6361.0
+Microsoft Office Excel 2003 - 11.0.7969.0
+Microsoft Office Excel MUI (English) 2007 - 12.0.4518.1014
+Microsoft Office FrontPage 2003 - 11.*
+Microsoft Office FrontPage 2003 - 11.0.5614.0
+Microsoft Office FrontPage 2003 - 11.0.6361.0
+Microsoft Office Home and Student 2007 - 12.0.4518.1014
+Microsoft Office Home and Student 2007 Trial - 12.0.4518.1014
+Microsoft Office InfoPath 2003 - 11.0.5614.0
+Microsoft Office InfoPath 2003 - 11.0.6361.0
+Microsoft Office InfoPath 2003 - 11.0.7969.0
+Microsoft Office InfoPath 2003 SDK - 1.0.5717.0
+Microsoft Office InfoPath 2003 SDK - 1.0.6365.0
+Microsoft Office InfoPath 2003 Toolkit for Visual Studio .NET - 11.0.6361.0
+Microsoft Office InfoPath 2003 Toolkit for Visual Studio 2005 - 11.0.6801.0
+Microsoft Office InfoPath 2007 - 12.0.4518.1014
+Microsoft Office InfoPath Forms Services - 12.0.4518.1016
+Microsoft Office InfoPath MUI (English) 2007 (Beta) - 12.0.4017.1006
+Microsoft Office InfoPath MUI (English) 2007 - 12.0.4518.1014
+Microsoft Office Live Communications Server 2005 Address Book Service - 1.0.0.1
+Microsoft Office Live Communications Server 2005 SP1 Resource Kit - 2.0.5470.46
+Microsoft Office OneNote 2003 - 11.*
+Microsoft Office OneNote 2003 - 11.0.5614.0
+Microsoft Office OneNote 2003 - 11.0.6360.0
+Microsoft Office OneNote 2003 - 11.0.7969.0
+Microsoft Office OneNote 2007 - 12.*
+Microsoft Office OneNote 2007 - 12.0.4518.1014
+Microsoft Office OneNote 2007 Trial - 12.*
+Microsoft Office OneNote 2007 Trial - 12.0.4518.1014
+Microsoft Office OneNote MUI (English) 2007 - 12.*
+Microsoft Office OneNote MUI (English) 2007 - 12.0.4518.1014
+Microsoft Office Professional 2007 (Beta) - 12.0.4017.1006
+Microsoft Office Professional 2007 - 12.*
+Microsoft Office Professional 2007 - 12.0.*
+Microsoft Office Professional 2007 - 12.0.4518.1014
+Microsoft Office Professional Edition 2003 - 11.*
+Microsoft Office Professional Edition 2003 - 11.0.5207.5
+Microsoft Office Professional Edition 2003 - 11.0.5614.0
+Microsoft Office Professional Edition 2003 - 11.0.6361.0
+Microsoft Office Professional Edition 2003 - 11.0.7969.0
+Microsoft Office Professional Edition 2003 - 11.0.8173.0
+Microsoft Office Professional Plus 2007 (Beta) - 12.0.4017.1006
+Microsoft Office Professional Plus 2007 - 12.*
+Microsoft Office Professional Plus 2007 - 12.0.4518.1014
+Microsoft Office Project Professional 2003 - 11.0.5614.0
+Microsoft Office Project Professional 2003 - 11.0.6707.0
+Microsoft Office Project Professional 2003 - 11.0.7969.0
+Microsoft Office Project Professional 2007 - 12.0.4518.1014
+Microsoft Office Project Server 12 - 12.0.4518.1016
+Microsoft Office Project Server 2003 - 11.0.5614.0
+Microsoft Office Project Server 2003 - 11.0.7970.0
+Microsoft Office Project Server 2003 EditSite - 1.0.0
+Microsoft Office Project Server 2007 - 12.0.4518.1016
+Microsoft Office Project Server Application Server - 12.0.4518.1016
+Microsoft Office Project Server English Language Pack - 12.0.4518.1016
+Microsoft Office Project Server Web Front End Server - 12.0.4518.1016
+Microsoft Office Project Standard 2003 - 11.0.5614.0
+Microsoft Office Project Standard 2003 - 11.0.6707.0
+Microsoft Office Project Standard 2003 - 11.0.7969.0
+Microsoft Office Project Standard 2007 - 12.0.4518.1014
+Microsoft Office Publisher 2003 - 11.0.5614.0
+Microsoft Office Publisher 2003 - 11.0.6361.0
+Microsoft Office Publisher 2003 - 11.0.7969.0
+Microsoft Office Publisher 2007 - 12.0.4518.1014
+Microsoft Office SharePoint Designer 2007 - 12.0.4518.1014
+Microsoft Office SharePoint Portal - 12.0.4518.1016
+Microsoft Office SharePoint Portal English Language Pack - 12.0.4518.1016
+Microsoft Office SharePoint Portal Server 2003 Doc Library - 11.*
+Microsoft Office SharePoint Portal Server 2003 Doc Library - 11.0.5704
+Microsoft Office SharePoint Server 2007  - 12.0.4518.1016
+Microsoft Office SharePoint Server 2007 - 12.*
+Microsoft Office SharePoint Server 2007 - 12.0.4518.1016
+Microsoft Office SharePoint Server 2007 MOM Pack Beta 2 - 12.0.4017
+Microsoft Office Standard 2007 - 12.*
+Microsoft Office Standard 2007 - 12.0.4518.1014
+Microsoft Office Standard 2007 Trial - 12.0.4518.1014
+Microsoft Office Standard Edition 2003 - 11.*
+Microsoft Office Standard Edition 2003 - 11.0.5614.0
+Microsoft Office Standard Edition 2003 - 11.0.7969.0
+Microsoft Office Standard Edition 2003 60 days trial
+Microsoft Office Ultimate 2007 - 12.*
+Microsoft Office Visio Professional 2003 - 11.*
+Microsoft Office Visio Professional 2003 - 11.0.3216.5614
+Microsoft Office Visio Professional 2003 - 11.0.4301.6360
+Microsoft Office Visio Professional 2003 - 11.0.7969.0
+Microsoft Office Visio Professional 2003 - 11.0.8173.0
+Microsoft Office Visio Professional 2007 - 12.*
+Microsoft Office Visio Professional 2007 - 12.0.4518.1014
+Microsoft Office Visio Professional 2007 Trial - 12.0.4518.1014
+Microsoft Office Visio Standard 2003 - 11.*
+Microsoft Office Visio Standard 2003 - 11.0.3216.5614
+Microsoft Office Visio Standard 2003 - 11.0.4301.6360
+Microsoft Office Visio Standard 2003 - 11.0.7969.0
+Microsoft Office Visio Standard 2007 - 12.*
+Microsoft Office Visio Standard 2007 - 12.0.4518.1014
+Microsoft Office Visio Standard 2007 Trial - 12.0.4518.1014
+Microsoft Office Word 2003 - 11.0.5614.0
+Microsoft Office Word 2003 - 11.0.6361.0
+Microsoft Office Word 2003 - 11.0.7969.0
+Microsoft Office XP Professional - 10.*
+Microsoft Office XP Professional - 10.0.2627.01
+Microsoft Office XP Professional - 10.0.3520.0
+Microsoft Office XP Professional - 10.0.4330.0
+Microsoft Office XP Professional - 10.0.6626.0
+Microsoft Office XP Professional with FrontPage - 10.*
+Microsoft Office XP Professional with FrontPage - 10.0.2627.0
+Microsoft Office XP Professional with FrontPage - 10.0.2627.01
+Microsoft Office XP Professional with FrontPage - 10.0.2701.01
+Microsoft Office XP Professional with FrontPage - 10.0.4330.0
+Microsoft Office XP Professional with FrontPage - 10.0.6626.0
+Microsoft Office XP Small Business - 10.*
+Microsoft Office XP Small Business - 10.0.2627.01
+Microsoft Office XP Small Business - 10.0.6626.0
+Microsoft Office XP Standard - 10.*
+Microsoft Office XP Standard - 10.0.2627.01
+Microsoft Office XP Standard - 10.0.3520.0
+Microsoft Office XP Standard - 10.0.4330.0
+Microsoft Office XP Standard - 10.0.6626.0
+Microsoft Operations Manager 2005 - 5.*
+Microsoft Operations Manager 2005 - 5.0.2911.0
+Microsoft Operations Manager 2005 Agent - 5.*
+Microsoft Operations Manager 2005 Agent - 5.0.2749.0
+Microsoft Operations Manager 2005 Agent - 5.0.2911.0
+Microsoft Project 2000 - 9.*
+Microsoft Project 2000 - 9.00.3821
+Microsoft Project 2000 SR-1 - 9.*
+Microsoft Project 2000 SR-1 - 9.00.4527
+Microsoft Project 98
+Microsoft Project 98*
+Microsoft Project Professional 2002 - 10.0.2915.0
+Microsoft Project Professional 2002 - 10.0.8326.0
+Microsoft Project Server 2002 - 10.0.2915.0
+Microsoft Project Server 2007 Connector - 1.0.0.0
+Microsoft Project Standard 2002 - 10.*
+Microsoft Project Standard 2002 - 10.0.2915.0
+Microsoft Project Standard 2002 - 10.0.8326.0
+Microsoft Publisher 2000 - 9.00.2720
+Microsoft Publisher 2000 SR-1 - 9.00.3821
+Microsoft Publisher 2002 - 10.0.2627.01
+Microsoft Publisher 2002 - 10.0.4330.0
+Microsoft Publisher 2002 - 10.0.6626.0
+Microsoft Publisher 98
+Microsoft SQL Server 2000
+Microsoft SQL Server 2000 (ACT7) - 8.00.760
+Microsoft SQL Server 2000 (AC_LOCAL) - 8.00.194
+Microsoft SQL Server 2000 (ADHOC_1) - 8.00.2039
+Microsoft SQL Server 2000 (ADHOC_2) - 8.00.2039
+Microsoft SQL Server 2000 (ADHOC_3) - 8.00.2039
+Microsoft SQL Server 2000 (ADHOC_4) - 8.00.2039
+Microsoft SQL Server 2000 (ADHOC_5) - 8.00.2039
+Microsoft SQL Server 2000 (ARCHANA) - 8.00.194
+Microsoft SQL Server 2000 (ASF1) - 8.00.2039
+Microsoft SQL Server 2000 (AUTO) - 8.00.194
+Microsoft SQL Server 2000 (B2CQA01) - 8.00.194
+Microsoft SQL Server 2000 (BACCHUS) - 8.00.761
+Microsoft SQL Server 2000 (BASEDATABASE) - 8.00.760
+Microsoft SQL Server 2000 (BHPDEV01) - 8.00.194
+Microsoft SQL Server 2000 (BNODE) - 8.00.760
+Microsoft SQL Server 2000 (CAPT) - 8.00.2039
+Microsoft SQL Server 2000 (CAPT) - 8.00.761
+Microsoft SQL Server 2000 (CASPER) - 8.00.2039
+Microsoft SQL Server 2000 (CEOI_DEV) - 8.00.194
+Microsoft SQL Server 2000 (CFSCSQL) - 8.00.2039
+Microsoft SQL Server 2000 (CITRIX_METAFRAME) - 8.00.2039
+Microsoft SQL Server 2000 (CMDDEVSQLWIN) - 8.00.2039
+Microsoft SQL Server 2000 (CORAD) - 8.00.2039
+Microsoft SQL Server 2000 (CORAD) - 8.00.761
+Microsoft SQL Server 2000 (CTCMKT042000)
+Microsoft SQL Server 2000 (CW2CFCI5Z7AF) - 8.00.194
+Microsoft SQL Server 2000 (CW2LACCHCDK7) - 8.00.761
+Microsoft SQL Server 2000 (CWBC) - 8.00.2039
+Microsoft SQL Server 2000 (CWBC) - 8.00.534
+Microsoft SQL Server 2000 (CWXCFCIVFRFN) - 8.00.194
+Microsoft SQL Server 2000 (CWXCMDVUKEO2) - 8.00.194
+Microsoft SQL Server 2000 (CWXPTDVE75A0) - 8.00.194
+Microsoft SQL Server 2000 (D123) - 8.00.2039
+Microsoft SQL Server 2000 (DANIELDU) - 8.00.194
+Microsoft SQL Server 2000 (DD)
+Microsoft SQL Server 2000 (DEFAULTD) - 8.00.194
+Microsoft SQL Server 2000 (DEV) - 8.00.2039
+Microsoft SQL Server 2000 (DEV2) - 8.00.2039
+Microsoft SQL Server 2000 (DHARINISQL) - 8.00.2039
+Microsoft SQL Server 2000 (DIST) - 8.00.2039
+Microsoft SQL Server 2000 (DOC) - 8.00.2039
+Microsoft SQL Server 2000 (EAM) - 8.00.2039
+Microsoft SQL Server 2000 (ECITESTSERVER) - 8.00.194
+Microsoft SQL Server 2000 (FEZZIK) - 8.00.194
+Microsoft SQL Server 2000 (FTWNVPSQLD01) - 8.00.2039
+Microsoft SQL Server 2000 (FTWSQLRPSDEV) - 8.00.2039
+Microsoft SQL Server 2000 (GANGULY) - 8.00.760
+Microsoft SQL Server 2000 (GOOD) - 8.00.194
+Microsoft SQL Server 2000 (I1) - 8.00.2039
+Microsoft SQL Server 2000 (I1252) - 8.00.2039
+Microsoft SQL Server 2000 (I2) - 8.00.2039
+Microsoft SQL Server 2000 (I2) - 8.00.760
+Microsoft SQL Server 2000 (I2) - 8.00.761
+Microsoft SQL Server 2000 (I3) - 8.00.2039
+Microsoft SQL Server 2000 (I3) - 8.00.760
+Microsoft SQL Server 2000 (I3) - 8.00.761
+Microsoft SQL Server 2000 (I3997) - 8.00.2039
+Microsoft SQL Server 2000 (I4) - 8.00.2039
+Microsoft SQL Server 2000 (I437) - 8.00.2039
+Microsoft SQL Server 2000 (I5) - 8.00.2039
+Microsoft SQL Server 2000 (INSTANCE1) - 8.00.2039
+Microsoft SQL Server 2000 (IRVCATSLQ05) - 8.00.2039
+Microsoft SQL Server 2000 (IRVCATSQL02) - 8.00.194
+Microsoft SQL Server 2000 (IRVCATSQL03) - 8.00.194
+Microsoft SQL Server 2000 (IRVCATSQL04) - 8.00.194
+Microsoft SQL Server 2000 (IRVCATSQL04) - 8.00.2039
+Microsoft SQL Server 2000 (KENS) - 8.00.194
+Microsoft SQL Server 2000 (LAWS3) - 8.00.760
+Microsoft SQL Server 2000 (LISA) - 8.00.194
+Microsoft SQL Server 2000 (LOCAL) - 8.00.194
+Microsoft SQL Server 2000 (LOCALDB) - 8.00.2039
+Microsoft SQL Server 2000 (LOCALDEV) - 8.00.194
+Microsoft SQL Server 2000 (LOCALHOST) - 8.00.2039
+Microsoft SQL Server 2000 (LOCALSQL) - 8.00.194
+Microsoft SQL Server 2000 (LT) - 8.00.194
+Microsoft SQL Server 2000 (LUISLOCAL) - 8.00.194
+Microsoft SQL Server 2000 (LYNX1) - 8.00.2039
+Microsoft SQL Server 2000 (LYNX1_SQL2000) - 8.00.2039
+Microsoft SQL Server 2000 (LYNX2) - 8.00.2039
+Microsoft SQL Server 2000 (LYNX2_SQL2000) - 8.00.2039
+Microsoft SQL Server 2000 (LYNX3) - 8.00.2039
+Microsoft SQL Server 2000 (LYNXDEV) - 8.00.2039
+Microsoft SQL Server 2000 (LYNXPRD) - 8.00.2039
+Microsoft SQL Server 2000 (LYNXTST) - 8.00.2039
+Microsoft SQL Server 2000 (MACHINESERVER) - 8.00.194
+Microsoft SQL Server 2000 (MADHU)
+Microsoft SQL Server 2000 (MANTHAN) - 8.00.194
+Microsoft SQL Server 2000 (MANTHAN) - 8.00.2039
+Microsoft SQL Server 2000 (METADB) - 8.00.2039
+Microsoft SQL Server 2000 (MMM) - 8.00.2039
+Microsoft SQL Server 2000 (MONTANA) - 8.00.2039
+Microsoft SQL Server 2000 (MOSES) - 8.00.194
+Microsoft SQL Server 2000 (MTAG) - 8.00.2039
+Microsoft SQL Server 2000 (MYHP) - 8.00.2039
+Microsoft SQL Server 2000 (NEXOSIT) - 8.00.2039
+Microsoft SQL Server 2000 (NITESH) - 8.00.194
+Microsoft SQL Server 2000 (NNN) - 8.00.2039
+Microsoft SQL Server 2000 (NSS) - 8.00.2039
+Microsoft SQL Server 2000 (PATH1) - 8.00.194
+Microsoft SQL Server 2000 (PATH1) - 8.00.2039
+Microsoft SQL Server 2000 (PATH1_SQL2000) - 8.00.2039
+Microsoft SQL Server 2000 (PATH2) - 8.00.2039
+Microsoft SQL Server 2000 (PATRO) - 8.00.194
+Microsoft SQL Server 2000 (PAUL_SCHANTZ) - 8.00.194
+Microsoft SQL Server 2000 (PIPELINE) - 8.00.2039
+Microsoft SQL Server 2000 (PLANVPSQLD01) - 8.00.2039
+Microsoft SQL Server 2000 (PL_SUBPRIME) - 8.00.194
+Microsoft SQL Server 2000 (PORTAL) - 8.00.2039
+Microsoft SQL Server 2000 (QA1) - 8.00.2039
+Microsoft SQL Server 2000 (QA2) - 8.00.2039
+Microsoft SQL Server 2000 (QA3) - 8.00.2039
+Microsoft SQL Server 2000 (QA4) - 8.00.2039
+Microsoft SQL Server 2000 (QAMAR) - 8.00.194
+Microsoft SQL Server 2000 (QAMAR) - 8.00.2039
+Microsoft SQL Server 2000 (REPORTING) - 8.00.2039
+Microsoft SQL Server 2000 (RFRANKLEDEV) - 8.00.194
+Microsoft SQL Server 2000 (ROBS_SQL) - 8.00.2039
+Microsoft SQL Server 2000 (ROSAIPMQASQLQ01) - 8.00.2039
+Microsoft SQL Server 2000 (ROSCSCDRSQL01_QA) - 8.00.2039
+Microsoft SQL Server 2000 (ROSTBDEVSQL02) - 8.00.2039
+Microsoft SQL Server 2000 (SANDBOX) - 8.00.761
+Microsoft SQL Server 2000 (SCH2) - 8.00.194
+Microsoft SQL Server 2000 (SHARAT) - 8.00.194
+Microsoft SQL Server 2000 (SHAREPOINT) - 8.00.194
+Microsoft SQL Server 2000 (SHAREPOINTDEV) - 8.00.194
+Microsoft SQL Server 2000 (SIGMA)
+Microsoft SQL Server 2000 (SIMLAASWEB01) - 8.00.761
+Microsoft SQL Server 2000 (SIMMOR01) - 8.00.761
+Microsoft SQL Server 2000 (SIMNVPSQLD01) - 8.00.2039
+Microsoft SQL Server 2000 (SIMTBQACMSS66) - 8.00.761
+Microsoft SQL Server 2000 (SMATEST) - 8.00.761
+Microsoft SQL Server 2000 (SMLEVEL3) - 8.00.761
+Microsoft SQL Server 2000 (SMS3000) - 8.00.2039
+Microsoft SQL Server 2000 (SQL) - 8.00.194
+Microsoft SQL Server 2000 (SQL2000) - 8.00.194
+Microsoft SQL Server 2000 (SQL2000) - 8.00.2039
+Microsoft SQL Server 2000 (SQL2000EE) - 8.00.2039
+Microsoft SQL Server 2000 (SQL2K) - 8.00.2039
+Microsoft SQL Server 2000 (SQL2K_DEV) - 8.00.2039
+Microsoft SQL Server 2000 (SQLCONNECT) - 8.00.760
+Microsoft SQL Server 2000 (SQLSERVER) - 8.00.194
+Microsoft SQL Server 2000 (SQL_2K) - 8.00.2039
+Microsoft SQL Server 2000 (SQL_DEV) - 8.00.2039
+Microsoft SQL Server 2000 (SQL_EXT) - 8.00.2039
+Microsoft SQL Server 2000 (SQL_PROD) - 8.00.760
+Microsoft SQL Server 2000 (SQL_QA) - 8.00.2039
+Microsoft SQL Server 2000 (SQL_QAPRD) - 8.00.2039
+Microsoft SQL Server 2000 (SRSDEV) - 8.00.760
+Microsoft SQL Server 2000 (STG) - 8.00.2039
+Microsoft SQL Server 2000 (STGCAPT) - 8.00.2039
+Microsoft SQL Server 2000 (STGCORAD) - 8.00.2039
+Microsoft SQL Server 2000 (STGPORTAL) - 8.00.2039
+Microsoft SQL Server 2000 (STINGRAY) - 8.00.194
+Microsoft SQL Server 2000 (STRATEGIC) - 8.00.2039
+Microsoft SQL Server 2000 (STUDENTLINK) - 8.00.194
+Microsoft SQL Server 2000 (SUNG_KIM) - 8.00.194
+Microsoft SQL Server 2000 (SURESHSQL) - 8.00.194
+Microsoft SQL Server 2000 (SWATHI) - 8.00.194
+Microsoft SQL Server 2000 (SWIFT) - 8.00.194
+Microsoft SQL Server 2000 (SWIFT) - 8.00.2039
+Microsoft SQL Server 2000 (SWIFT1) - 8.00.2039
+Microsoft SQL Server 2000 (SWIFT2) - 8.00.2039
+Microsoft SQL Server 2000 (TEST) - 8.00.194
+Microsoft SQL Server 2000 (TEST) - 8.00.2039
+Microsoft SQL Server 2000 (TEST) - 8.00.761
+Microsoft SQL Server 2000 (TEST1) - 8.00.194
+Microsoft SQL Server 2000 (TEST1) - 8.00.2039
+Microsoft SQL Server 2000 (TEST2) - 8.00.2039
+Microsoft SQL Server 2000 (TESTPLATFORM) - 8.00.2039
+Microsoft SQL Server 2000 (TESTSERVER1) - 8.00.194
+Microsoft SQL Server 2000 (TNIGAM) - 8.00.194
+Microsoft SQL Server 2000 (TRANSFER) - 8.00.2039
+Microsoft SQL Server 2000 (UNIT) - 8.00.2039
+Microsoft SQL Server 2000 (VKUDRY2005) - 8.00.194
+Microsoft SQL Server 2000 (VSBUILD) - 8.00.2039
+Microsoft SQL Server 2000 (WLD) - 8.00.2039
+Microsoft SQL Server 2000 (ZEBRA) - 8.00.761
+Microsoft SQL Server 2000 - 8.*
+Microsoft SQL Server 2000 - 8.00.194
+Microsoft SQL Server 2000 - 8.00.2039
+Microsoft SQL Server 2000 - 8.00.2183
+Microsoft SQL Server 2000 - 8.00.384
+Microsoft SQL Server 2000 - 8.00.534
+Microsoft SQL Server 2000 - 8.00.760
+Microsoft SQL Server 2000 - 8.00.761
+Microsoft SQL Server 2000 Client Utilities - 1.0.0
+Microsoft SQL Server 2000 Reporting Services Developer Edition - 8.0.1038.00
+Microsoft SQL Server 2000 Reporting Services Developer Edition - 8.0.743.00
+Microsoft SQL Server 2000 Reporting Services Developer Edition - 8.0.878.00
+Microsoft SQL Server 2000 Reporting Services Enterprise Edition - 8.0.1038.00
+Microsoft SQL Server 2000 Reporting Services Enterprise Edition - 8.0.1042.00
+Microsoft SQL Server 2000 Reporting Services Enterprise Edition - 8.0.1043.00
+Microsoft SQL Server 2000 Reporting Services Enterprise Edition - 8.0.1053.00
+Microsoft SQL Server 2000 Reporting Services Enterprise Edition - 8.0.743.00
+Microsoft SQL Server 2000 Reporting Services Enterprise Edition - 8.0.878.00
+Microsoft SQL Server 2000 Reporting Services Enterprise Edition - 8.0.969.00
+Microsoft SQL Server 2000 Reporting Services Standard Edition - 8.0.1038.00
+Microsoft SQL Server 2000 Reporting Services Standard Edition - 8.0.743.00
+Microsoft SQL Server 2000 Reporting Services Standard Edition - 8.0.969.00
+Microsoft SQL Server 2005
+Microsoft SQL Server 2005 (AGOSQLEPSCT2005) - 9.1.2047.00
+Microsoft SQL Server 2005 (AGOSQLEPSQA2005) - 9.1.2047.00
+Microsoft SQL Server 2005 (AGW1) - 9.00.1399.06
+Microsoft SQL Server 2005 (AMBE) - 9.00.1399.06
+Microsoft SQL Server 2005 (C1) - 9.2.3042.00
+Microsoft SQL Server 2005 (CALIFORNIA) - 9.2.3042.00
+Microsoft SQL Server 2005 (CALSQL08DEV_2005) - 9.00.1399.06
+Microsoft SQL Server 2005 (CCRI_SUPPORT) - 9.00.1399.06
+Microsoft SQL Server 2005 (CFCTEST) - 9.1.2047.00
+Microsoft SQL Server 2005 (CFCTEST1) - 9.1.2047.00
+Microsoft SQL Server 2005 (CLXCODVKSZAG) - 9.2.3042.00
+Microsoft SQL Server 2005 (CWXCFCIUR5QK) - 9.1.2047.00
+Microsoft SQL Server 2005 (CWXCMDVTKTZM) - 9.00.1399.06
+Microsoft SQL Server 2005 (CWXPTDV34TGE) - 9.1.2047.00
+Microsoft SQL Server 2005 (DCTMDB) - 9.00.1399.06
+Microsoft SQL Server 2005 (DEV) - 9.2.3042.00
+Microsoft SQL Server 2005 (DEV1) - 9.2.3042.00
+Microsoft SQL Server 2005 (DEV2) - 9.2.3042.00
+Microsoft SQL Server 2005 (DEV2K5) - 9.2.3042.00
+Microsoft SQL Server 2005 (DEV3) - 9.2.3042.00
+Microsoft SQL Server 2005 (DUNDAS) - 9.00.1399.06
+Microsoft SQL Server 2005 (EMTSQL2K5EXPRESS) - 9.2.3042.00
+Microsoft SQL Server 2005 (EPM) - 9.00.1399.06
+Microsoft SQL Server 2005 (FPSREPORTSERVER) - 9.00.1399.06
+Microsoft SQL Server 2005 (FSYED) - 9.1.2047.00
+Microsoft SQL Server 2005 (FTWFINIT21_2005) - 9.00.1399.06
+Microsoft SQL Server 2005 (GANJAM) - 9.00.1399.06
+Microsoft SQL Server 2005 (GDANKOVSQL) - 9.2.3042.00
+Microsoft SQL Server 2005 (HPOTHULU2005) - 9.2.3042.00
+Microsoft SQL Server 2005 (I2) - 9.00.1399.06
+Microsoft SQL Server 2005 (I2) - 9.1.2047.00
+Microsoft SQL Server 2005 (I2) - 9.2.3042.00
+Microsoft SQL Server 2005 (I2005) - 9.1.2047.00
+Microsoft SQL Server 2005 (I2005) - 9.2.3042.00
+Microsoft SQL Server 2005 (I3) - 9.00.1399.06
+Microsoft SQL Server 2005 (I3) - 9.1.2047.00
+Microsoft SQL Server 2005 (I3) - 9.2.3042.00
+Microsoft SQL Server 2005 (INSTANCE4) - 9.00.1399.06
+Microsoft SQL Server 2005 (JC_2005_DEV) - 9.00.1399.06
+Microsoft SQL Server 2005 (LAI) - 9.00.1399.06
+Microsoft SQL Server 2005 (LOCAL2005) - 9.00.1399.06
+Microsoft SQL Server 2005 (LYNXDEV2005) - 9.2.3042.00
+Microsoft SQL Server 2005 (MALHAR) - 9.00.1399.06
+Microsoft SQL Server 2005 (MONTHEND1) - 9.2.3042.00
+Microsoft SQL Server 2005 (MONTHEND2) - 9.2.3042.00
+Microsoft SQL Server 2005 (MONTHEND3) - 9.2.3042.00
+Microsoft SQL Server 2005 (MONTHEND4) - 9.2.3042.00
+Microsoft SQL Server 2005 (MSSQL2005A) - 9.00.1399.06
+Microsoft SQL Server 2005 (MSSQL_DB_1) - 9.00.1399.06
+Microsoft SQL Server 2005 (MYDEVDB) - 9.00.1399.06
+Microsoft SQL Server 2005 (NSSPMUNIT) - 9.2.3042.00
+Microsoft SQL Server 2005 (NXSQLIS) - 9.1.2047.00
+Microsoft SQL Server 2005 (OD) - 9.2.3042.00
+Microsoft SQL Server 2005 (PARESH) - 9.1.2047.00
+Microsoft SQL Server 2005 (PARESHONE) - 9.00.1399.06
+Microsoft SQL Server 2005 (PARESHTWO) - 9.00.1399.06
+Microsoft SQL Server 2005 (PATH1) - 9.2.3042.00
+Microsoft SQL Server 2005 (PCWEB) - 9.00.1399.06
+Microsoft SQL Server 2005 (PERSQL2K5) - 9.00.1399.06
+Microsoft SQL Server 2005 (PLARECON01) - 9.2.3042.00
+Microsoft SQL Server 2005 (PLASQLTQLS01) - 9.2.3042.00
+Microsoft SQL Server 2005 (POC) - 9.00.1399.06
+Microsoft SQL Server 2005 (QA) - 9.2.3042.00
+Microsoft SQL Server 2005 (RISHI) - 9.00.1399.06
+Microsoft SQL Server 2005 (ROSMOMPROD) - 9.1.2047.00
+Microsoft SQL Server 2005 (SE2005) - 9.00.1399.06
+Microsoft SQL Server 2005 (SHARATPANDAVULA) - 9.00.1399.06
+Microsoft SQL Server 2005 (SLSQLEXPRESS) - 9.00.1399.06
+Microsoft SQL Server 2005 (SMA) - 9.2.3042.00
+Microsoft SQL Server 2005 (SMADEV) - 9.2.3042.00
+Microsoft SQL Server 2005 (SMDMS) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQL2005) - 9.00.1399.06
+Microsoft SQL Server 2005 (SQL2005) - 9.1.2047.00
+Microsoft SQL Server 2005 (SQL2005) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQL2K5) - 9.00.1399.06
+Microsoft SQL Server 2005 (SQL2K5) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQLCSRI_SUPPORT) - 9.00.1399.06
+Microsoft SQL Server 2005 (SQLEXPRESS) - 9.00.1399.06
+Microsoft SQL Server 2005 (SQLEXPRESS) - 9.1.2047.00
+Microsoft SQL Server 2005 (SQLEXPRESS) - 9.2.3033.00
+Microsoft SQL Server 2005 (SQLEXPRESS) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQLEXPRESSLOCAL) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQLSERVER2005) - 9.00.1399.06
+Microsoft SQL Server 2005 (SQLSERVER2005) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQLSRVRSUDHA) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQLSRVRSUDHADE) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQLTEST) - 9.2.3042.00
+Microsoft SQL Server 2005 (SQLTEST1) - 9.00.1399.06
+Microsoft SQL Server 2005 (SQL_2K5) - 9.00.1399.06
+Microsoft SQL Server 2005 (STAGING) - 9.1.2047.00
+Microsoft SQL Server 2005 (STAGING) - 9.2.3042.00
+Microsoft SQL Server 2005 (STATIC) - 9.2.3042.00
+Microsoft SQL Server 2005 (STATIC2) - 9.2.3042.00
+Microsoft SQL Server 2005 (STATIC3) - 9.2.3042.00
+Microsoft SQL Server 2005 (STATIC4) - 9.2.3042.00
+Microsoft SQL Server 2005 (STATIC5) - 9.2.3042.00
+Microsoft SQL Server 2005 (STATIC6) - 9.2.3042.00
+Microsoft SQL Server 2005 (STATIC7) - 9.2.3042.00
+Microsoft SQL Server 2005 (STG2) - 9.1.2047.00
+Microsoft SQL Server 2005 (TEST) - 9.2.3042.00
+Microsoft SQL Server 2005 (TEST1) - 9.00.1399.06
+Microsoft SQL Server 2005 (TEST4) - 9.1.2047.00
+Microsoft SQL Server 2005 (TOWORKSQL) - 9.00.1399.06
+Microsoft SQL Server 2005 (TR) - 9.1.2047.00
+Microsoft SQL Server 2005 (TSLOCAL) - 9.00.1399.06
+Microsoft SQL Server 2005 (TST) - 9.2.3042.00
+Microsoft SQL Server 2005 (VEGA_ATIMEN) - 9.00.1399.06
+Microsoft SQL Server 2005 (VINCENT) - 9.00.1399.06
+Microsoft SQL Server 2005 (WWW) - 9.00.1399.06
+Microsoft SQL Server 2005 (YUKON) - 9.1.2047.00
+Microsoft SQL Server 2005 (ZION) - 9.2.3042.00
+Microsoft SQL Server 2005 - 9.00.1399.06
+Microsoft SQL Server 2005 - 9.1.2047.00
+Microsoft SQL Server 2005 - 9.2.3027.00
+Microsoft SQL Server 2005 - 9.2.3033.00
+Microsoft SQL Server 2005 - 9.2.3042.00
+Microsoft SQL Server 2005 Analysis Services (SLSQLEXPRESS) - 9.00.1399.06
+Microsoft SQL Server 2005 Analysis Services (SQLEXPRESS) - 9.00.1399.06
+Microsoft SQL Server 2005 Compact Edition [ENU] - 3.1.0000
+Microsoft SQL Server 2005 Compact Edition [ENU] Server Tools - 3.1.0000
+Microsoft SQL Server 2005 Express Edition (ACT7) - 9.1.2047.00
+Microsoft SQL Server 2005 Express Edition (ACT7) - 9.2.3042.00
+Microsoft SQL Server 2005 Express Edition (BKUPEXEC) - 9.1.2047.00
+Microsoft SQL Server 2005 Express Edition (CFCWITNESS) - 9.1.2047.00
+Microsoft SQL Server 2005 Express Edition (MSSMLBIZ) - 9.1.2047.00
+Microsoft SQL Server 2005 Express Edition (MSSMLBIZ) - 9.2.3042.00
+Microsoft SQL Server 2005 Express Edition (OFFICESERVERS) - 9.1.2047.00
+Microsoft SQL Server 2005 Express Edition (SQLEXPRESS) - 9.00.1399.06
+Microsoft SQL Server 2005 Express Edition (SQLEXPRESS) - 9.1.2047.00
+Microsoft SQL Server 2005 Express Edition (SQLEXPRESS) - 9.2.3042.00
+Microsoft SQL Server 2005 Express Edition (SQLEXPRESS1) - 9.00.1399.06
+Microsoft SQL Server 2005 Express Edition (SQLEXPRESS_LOCAL) - 9.2.3042.00
+Microsoft SQL Server 2005 Express Edition - 9.00.1399.06
+Microsoft SQL Server 2005 Express Edition - 9.1.2047.00
+Microsoft SQL Server 2005 Express Edition - 9.2.3042.00
+Microsoft SQL Server 2005 Express Edition Beta 2 (SQLEXPRESS) - 9.00.852
+Microsoft SQL Server 2005 Express Edition Books Online - 1.0.5215
+Microsoft SQL Server 2005 Express Edition Books Online - 1.0.5297
+Microsoft SQL Server 2005 Express Edition Books Online - 1.0.5321
+Microsoft SQL Server 2005 Express Edition CTP (SQLEXPRESS) - 9.00.1116
+Microsoft SQL Server 2005 Reporting Services (ABHASERVER) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (CALSQL08DEV_2005) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (CCRI_SUPPORT) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (CWXCMDVTKTZM) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (DEV) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (DEV) - 9.1.2047.00
+Microsoft SQL Server 2005 Reporting Services (GDANKOVSQL) - 9.2.3042.00
+Microsoft SQL Server 2005 Reporting Services (I2) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (I2) - 9.2.3042.00
+Microsoft SQL Server 2005 Reporting Services (JC_2005_DEV) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (NXSQLIS) - 9.1.2047.00
+Microsoft SQL Server 2005 Reporting Services (PERSQL2K5) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (SIMMOR02) - 9.2.3042.00
+Microsoft SQL Server 2005 Reporting Services (SLSQLEXPRESS) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (SQL2005) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (SQL2005) - 9.1.2047.00
+Microsoft SQL Server 2005 Reporting Services (SQL2005) - 9.2.3042.00
+Microsoft SQL Server 2005 Reporting Services (SQL2K5) - 9.2.3042.00
+Microsoft SQL Server 2005 Reporting Services (SQLCSRI_SUPPORT) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (SQLEXPRESS) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (SQLEXPRESS) - 9.1.2047.00
+Microsoft SQL Server 2005 Reporting Services (SQLEXPRESS) - 9.2.3033.00
+Microsoft SQL Server 2005 Reporting Services (SQLEXPRESS) - 9.2.3042.00
+Microsoft SQL Server 2005 Reporting Services (SQLSERVER2005) - 9.2.3042.00
+Microsoft SQL Server 2005 Reporting Services (SQLTEST) - 9.2.3042.00
+Microsoft SQL Server 2005 Reporting Services (SQL_2005) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (SSRS_NAMED_1) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (TOWORKSQL) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (TSLOCAL) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services (YUKON) - 9.1.2047.00
+Microsoft SQL Server 2005 Reporting Services (ZION) - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services - 9.00.1399.06
+Microsoft SQL Server 2005 Reporting Services - 9.1.2047.00
+Microsoft SQL Server 2005 Reporting Services - 9.2.3027.00
+Microsoft SQL Server 2005 Reporting Services - 9.2.3033.00
+Microsoft SQL Server 2005 Reporting Services - 9.2.3042.00
+Microsoft SQL Server 2005 Tools Express Edition - 9.00.1399.06
+Microsoft SQL Server 2005 Tools Express Edition - 9.1.2047.00
+Microsoft SQL Server 2005 Tools Express Edition - 9.2.3042.00
+Microsoft SQL Server 2008
+Microsoft SQL Server 2008 - 10.0.1075.23
+Microsoft SQL Server 7.0
+Microsoft SQL Server Desktop Engine - 8.*
+Microsoft SQL Server Desktop Engine - 8.00.194
+Microsoft SQL Server Desktop Engine - 8.00.2039
+Microsoft SQL Server Desktop Engine - 8.00.384
+Microsoft SQL Server Desktop Engine - 8.00.534
+Microsoft SQL Server Desktop Engine - 8.00.760
+Microsoft SQL Server Desktop Engine - 8.00.761
+Microsoft SharePoint - 10.0.2627.01
+Microsoft SharePoint - 10.0.4330.0
+Microsoft Streets & Trips 2006 - 13.00.09.0200
+Microsoft Streets & Trips 2006 with GPS Locator - 13.00.09.0200
+Microsoft Streets & Trips 2007 - 14.0.09.1100
+Microsoft Streets & Trips 2007 with GPS Locator - 14.0.09.1100
+Microsoft Streets and Trips - 10.00.09.1300
+Microsoft Streets and Trips 2001 - 8.00.15.1000
+Microsoft Streets and Trips 2002 - 9.00.16.2000
+Microsoft Streets and Trips 2002 - 9.00.17.0200
+Microsoft Streets and Trips 2004 - 11.00.18.1900
+Microsoft Streets and Trips 2005 - 12.00.07.1200
+Microsoft Streets and Trips 2005 with USB GPS - 12.00.07.1200
+Microsoft System Center Operations Manager 2007 - 06.*
+Microsoft Team Foundation Server MSSCCI Provider - 1.0.0
+Microsoft Team Foundation Server Power Tools - 1.20.0000
+Microsoft Update 813321 for Host Integration Server 2000 SP1
+Microsoft Update Q289258 for Exchange 5.5
+Microsoft Update Q304062 for Exchange 5.5
+Microsoft Update Q307195 for Exchange 5.5
+Microsoft Update Q326322 for Exchange 5.5
+Microsoft Update Q330096 (PRIVATE) for Host Integration Server 2000 SP1
+Microsoft Update Q330834 (PRIVATE) for Host Integration Server 2000 SP1
+Microsoft Virtual PC 2004 - 5.*
+Microsoft Virtual PC 2004 - 5.3.555
+Microsoft Virtual PC 2004 - 5.3.582
+Microsoft Virtual PC 2004 - 5.3.582.27
+Microsoft Virtual PC 2004 Service Pack 1 - 5.3.582.27
+Microsoft Virtual PC 2004 Service Pack 1 - 5.3.582.32
+Microsoft Virtual PC 2004 Trial - 5.*
+Microsoft Virtual PC 2004 Trial - 5.3.582.27
+Microsoft Virtual PC 2007 - 6.*
+Microsoft Virtual PC 2007 - 6.0.122.0
+Microsoft Virtual PC 2007 - 6.0.142.0
+Microsoft Virtual PC 2007 - 6.0.156.0
+Microsoft Virtual Server 2005 - 1.1.465.0
+Microsoft Virtual Server 2005 R2 - 1.1.465.292
+Microsoft Visio 2000 (IE) - 06.00.1001
+Microsoft Visio 2000 - 06.00.1001
+Microsoft Visio Professional 2002 - 10.*
+Microsoft Visio Professional 2002 - 10.0.525
+Microsoft Visio Professional 2002 - 10.1.2514
+Microsoft Visio Professional 2002 SR-1 [English] - 10.*
+Microsoft Visio Professional 2002 [English] - 10.*
+Microsoft Visio Professional 2002 [English] - 10.2.5110
+Microsoft Visio Standard 2002 SR-1 [English] - 10.1.2514
+Microsoft Visio Standard 2002 [English] - 10.0.525
+Microsoft Visio Standard 2002 [English] - 10.2.5110
+Microsoft Visual Basic .NET Standard 2003 - English
+Microsoft Visual Basic 2005 Express Edition - ENU
+Microsoft Visual Basic 2005 Express Edition - ENU - 8.*
+Microsoft Visual Basic 2005 Express Edition - ENU - 8.0.50728
+Microsoft Visual Basic 2005 Express Edition - ENU Service Pack 1 (KB926747) - 1
+Microsoft Visual Basic 6.0 Enterprise Edition
+Microsoft Visual Basic 6.0 Professional Edition
+Microsoft Visual Basic for Applications 6.0 SDK Version 6.3 - 6.0
+Microsoft Visual Basic for Applications SDK Version 6.4
+Microsoft Visual FoxPro 5.0
+Microsoft Visual FoxPro 6.0
+Microsoft Visual FoxPro 7.0 Professional - English
+Microsoft Visual FoxPro 8.0 Professional - English
+Microsoft Visual FoxPro 8.0 Runtime GDI+ Hotfix - KB887685 - 1.00.0000
+Microsoft Visual FoxPro 9.0 Professional - English
+Microsoft Visual SourceSafe 2005 - ENU
+Microsoft Visual SourceSafe 6.0
+Microsoft Visual SourceSafe NetSetup
+Microsoft Visual SourceSafe V5.0
+Microsoft Visual Studio .NET Academic - English
+Microsoft Visual Studio .NET Academic 2003 - English
+Microsoft Visual Studio .NET Enterprise Architect - English
+Microsoft Visual Studio .NET Enterprise Architect 2003 - English
+Microsoft Visual Studio .NET Enterprise Developer - English
+Microsoft Visual Studio .NET Enterprise Developer 2003 - English
+Microsoft Visual Studio .NET Professional - English
+Microsoft Visual Studio .NET Professional 2003 - English
+Microsoft Visual Studio 2005 Team Foundation Server (build) - ENU
+Microsoft Visual Studio 2005 Team Foundation Server (build) - ENU Service Pack 1 (KB926738) - 1
+Microsoft Visual Studio 2005 Team Foundation Server - ENU
+Microsoft Visual Studio 2005 Team Foundation Server - ENU Service Pack 1 (KB926738) - 1
+Microsoft Visual Studio 6.0 Enterprise Edition
+Microsoft Visual Studio Team Foundation Server Power Toys - 1.10.0000
+Microsoft Windows IIS MOM 2005 SP1 MP - 05.00.3000
+Microsoft Windows Media Player 6.1
+Microsoft Windows Media Player 6.4
+Microsoft Word 2000 SR-1 - 9.00.3821
+Microsoft Word 2002 - 10.0.2627.01
+Microsoft® Helmsman 4.0 (SQL Server) - 4.0.24.0
+Microsoft® Helmsman Web Access - 4.0.24
+Mindjet MindManager Basic 6 - 6.0.643
+Mindjet MindManager Basic 6 - 6.0.664
+Mindjet MindManager Pro 6 - 6.0.643
+Mindjet MindManager Pro 6 - 6.0.664
+Mindjet MindManager Pro 6 Admin - 6.0.643
+NICE CLS - 9.0.5
+NICE CLS - 9.0.6
+NICE CLS - 9.0.7
+NICE CLS - 9.0.8
+Nero - Burning Rom
+Nero - Burning Rom (Web installer)
+Nero - Burning Rom (ahead software)
+Nero - Burning Rom - 5.5.1.1
+Nero - Burning Rom - 5.5.2.9
+Nero - Burning Rom - 5.5.5.6
+Nero - Burning Rom - 5.5.6.1
+Nero - Burning Rom - 5.5.6.9
+Nero - Burning Rom - 5.5.9
+Nero - Burning Rom - 5.5.9.9
+Nero 6
+Nero 6 Demo
+Nero 6 Enterprise Edition
+Nero 6 Ultra Edition
+Nero 6 Ultra Edition - 6.0.0
+Nero 7 - 7.02.0059
+Nero 7 - 7.02.0936
+Nero 7 - 7.02.2671
+Nero 7 - 7.02.2780
+Nero 7 - 7.02.4712
+Nero 7 - 7.02.6445
+Nero 7 - 7.02.8637
+Nero 7 Demo - 7.00.1461
+Nero 7 Premium - 7.00.0087
+Nero 7 Premium - 7.01.0741
+Nero 7 Premium - 7.01.7728
+Nero 7 Premium - 7.02.0059
+Nero 7 Premium - 7.02.4712
+Nero 7 Ultra Edition - 7.00.0177
+Nero 7 Ultra Edition - 7.00.0205
+Nero 7 Ultra Edition - 7.00.2028
+Nero 7 Ultra Edition - 7.01.0741
+Nero 7 Ultra Edition - 7.01.4028
+Nero 7 Ultra Edition - 7.01.4029
+Nero 7 Ultra Edition - 7.01.7739
+Nero 7 Ultra Edition - 7.01.9436
+Nero 7 Ultra Edition - 7.01.9440
+Nero 7 Ultra Edition - 7.02.0059
+Nero 7 Ultra Edition - 7.02.0936
+Nero 7 Ultra Edition - 7.02.2628
+Nero 7 Ultra Edition - 7.02.2631
+Nero 7 Ultra Edition - 7.02.2760
+Nero 7 Ultra Edition - 7.02.4712
+Nero 7 Ultra Edition - 7.02.4758
+Nero 7 Ultra Edition - 7.02.6445
+Nero 7 Ultra Edition - 7.02.8632
+Nero 7 Ultra Edition - 7.02.8637
+Nero BurnRights
+Nero Digital
+Nero OEM
+Nero ShowTime CE
+Nero Suite
+Nero7 Ultra Edition - 7.00.0574
+NeroMediaPlayer
+NetIQ End2End Console - 1.0.0
+NetIQ Security Administration Suite Launch Pad - 4.20.0.0
+NetIQ Security Administration Suite Launch Pad - 5.0.0.0
+NetIQ Security Manager - 5.50.0.158
+NetIQ Security Manager Agent - 5.10.0.135
+NetIQ Security Manager Data Connectivity Tester - 1.0.0
+NetSpective
+Netcool OMNIbus - 3.6.0.0
+Netcool OMNIbus 3.4
+NiceCLS 8.8 Integrations Service Pack 2  Build 6
+NiceCLS 8.8 Integrations Service Pack 2  Build 8
+NiceCLS 8.8 Integrations Service Pack 3  Build 4
+NiceCLS 8.9 Integrations Service Pack 2  Build 3
+NiceCLS 8.9 Integrations Service Pack 3
+NiceCLS 9.0 Integration
+Norton PartitionMagic 8.0 - 8.05.000
+Novell XForms Technology Preview
+NuMega BoundsChecker 6.0 Visual C++ Edition
+NuMega BoundsChecker 6.01 Visual C++ Edition
+NuMega DevPartner Studio 6.20
+NuMega DevPartner Studio 6.5
+NuMega DevPartner Studio 6.6
+OCR For AnyDoc 4.0.6 - 4.0.1017
+OCR for AnyDoc - 4.0.10
+OCR for AnyDoc 4.0.6
+Object REXX
+Office SharePoint Server 2007 SDK and ECM Starter Kit - 12.0.4518.1027
+Open Object Rexx - 3.0.1
+Open Object Rexx - 3.1.2
+OpenService NerveCenter
+Oracle 9.2.0.5 runtime for Serena ChangeMan Dimensions - 9.2.0.5
+OutlookSoft 3.167 - 3.0.167
+OutlookSoft Everest 4.2 - 4.2.320
+PASSPORT Host Integration Objects - 5.*
+PGP Desktop - 9.0.2.2424
+PKZIP for Windows 8.00.0026 - 8.00.0026
+PLATINUM ERwin ERX 3.5.2
+PVCS Tracker 7
+PVCS Tracker 7.5.0.0 - 1.0.0
+PVCS Tracker 7.5.0.0 - 7.5.0.0
+PVCS Tracker 7.5.2.0 -
+PVCS Tracker 7.5.2.0 - 7.5.2.0
+PVCS Version Manager (C)
+PVCS Version Manager 6.5.00 Workstation
+PVCS Version Manager 6.7.00
+PVCS Version Manager 6.7.00 Workstation
+PVCS Version Manager 6.8.00 - 1.0.0
+PVCS Version Manager 7.5.0.0 - 1.0.0
+PVCS Version Manager 7.5.0.0 - 7.5.0.0
+PVCS Version Manager 7.5.1.0 - 7.5.1.0
+PVCS Version Manager 7.5.1.5 - 7.5.1.5
+Passport Directory Services - 1.00.0000
+Pcl2pdf PC v4.0
+Pcl2pdf PC v5.0
+PeopleSoft 8.4 Pre-Class Navigation Tutorial
+PeopleSoft 8.8 Pre-Class Navigation Tutorial
+PeopleSoft Business Analysis Modeler
+PeopleSoft Change Assistant 8.44
+PeopleSoft Change Assistant 8.45.06
+PeopleSoft Change Assistant 8.46.05
+PeopleSoft Change Assistant 8.46.06
+PeopleSoft Change Assistant 8.46.10
+PeopleSoft Change Assistant 8.46.12
+PeopleSoft Change Assistant 8.48
+PeopleSoft Change Assistant 8.48.03
+PeopleSoft Change Assistant 8.48.07
+PeopleSoft Change Assistant 8.49
+PeopleSoft Change Impact Analyzer 8.48
+PeopleSoft Change Impact Analyzer 8.48.07
+PeopleSoft Change Impact Analyzer 8.49
+PeopleSoft Client 8 - 8.16
+PeopleSoft Edition of BEA TUXEDO v6.5 / BEA Jolt 1.2
+PeopleSoft Enterprise Benefits Administration 8.8 UPK R1 - 1.00.0000
+PeopleSoft Enterprise FSCM 8.8 Reporting Tools for FSCM UPK R1 - 1.00.0000
+PeopleSoft Enterprise FSCM UPK 8.8 Billing R4 - 1.00.0000
+PeopleSoft Enterprise FSCM UPK 8.8 General Ledger R4 - 1.00.0000
+PeopleSoft Enterprise FSCM UPK 8.8 Receivables R4 - 1.00.0000
+PeopleSoft Enterprise Receivables 8.8 UPK R1 - 1.00.0000
+PeopleSoft Fin/SCM 8.8 Pre-Class Navigation Tutorial
+PeopleSoft FinDisMan 7.5 Single User Setup
+PeopleSoft Internet Architecture 8.13
+PeopleSoft Internet Architecture 8.16
+PeopleSoft Internet Architecture 8.19
+PeopleSoft Library
+PeopleSoft MetaBroker
+PeopleSoft Upgrade Assistant 8.44
+PeopleSoft Upgrade Assistant 8.44.09
+PeopleSoft Upgrade Assistant 8.46
+Performance Center - 2.29
+Performance Center - 2.31
+PhotoImpact 6.0 - 6.0.0
+PowerQuest PartitionMagic 7.0
+PowerQuest PartitionMagic 8.0 - 8.00.000
+PowerQuest PartitionMagic 8.0 - 8.01.000
+PrimalScript 3.1
+Princeton Softech Optim 6.2 - 6.2
+Princeton Softech Optim 6.3 - 6.3
+Princeton Softech Optim 6.3.2 - 6.3.2
+ProClarity Analytic Platform 4.0 Desktop Client - 4.0
+ProClarity Analytics Server 6.3 - 6.3
+ProClarity Dashboard Server 6.3 - 6.3
+ProClarity Desktop Professional 5.3 - 5.3
+ProClarity Desktop Professional 6.0 - 6.0
+ProClarity Desktop Professional 6.3 - 6.3
+ProClarity KPI Designer - 6.2
+ProClarity KPI Designer - 6.3
+ProClarity SDK Samples & Documentation -
+ProClarity Selector - 6.3
+ProClarity Web Professional 6.2 - 6.2
+ProClarity Web Professional 6.3 - 6.3
+ProLiant DL380 G4 service training
+ProLiant Performance Analyzer
+ProLiant Storage Manager
+Procomm Plus 4.70
+Procomm Plus 4.8 - 4.8.0
+ProfileStage AnalysisServer
+ProfileStage Enterprise
+ProfileStage MessageSwitch
+Project Professional Desktop Edition - 2.0.0.0
+QualityStage CASS AIM 7.0.0
+QualityStage CASS AIM 7.5.0
+QualityStage Designer 7.0
+QualityStage Designer 7.0 Rules
+QualityStage Designer 7.0 WAVES Rules
+QualityStage Designer 7.5
+QualityStage Designer 7.5 Rules
+QualityStage Designer 7.5 WAVES Rules
+QualityStage Designer 7.5.1
+QualityStage Designer 7.5.1 Rules
+QualityStage Designer 7.5.1 WAVES Rules
+QualityStage Designer Executables 7.0
+QualityStage Designer Executables 7.5
+QualityStage Designer Executables 7.5.1
+QualityStage Server 7.0
+QualityStage Server 7.0.1
+QualityStage Server 7.5.0
+QualityStage Server License Update
+Quest Central - 3.1.1.3661
+Quest Central - 3.1.5.5120
+Quest Software TOAD  Professional Edition 7.4
+Quest Software TOAD  Professional Edition 7.5.2.0
+Quest Software TOAD  Xpert Edition 7.4
+Quest Software Toad for Oracle - Trial Edition Version 8.6
+Quest Software Toad for Oracle Version 8.6
+QuickBooks Pro 2001 - 1.0.0
+QuickBooks Pro 2002
+QuickBooks Pro 2006 - 
+QuickBooks Pro Edition 2003
+QuickTest Professional - 8.0.0.0
+QuickTest Professional Siebel Add-in - 8.0.0.0
+Quicken 2001 Basic
+Quicken 2002 Deluxe
+Quicken 2003 Basic - 12.00.0000
+Quicken 2003 Deluxe - 12.00.0000
+Quicken 2003 Premier - 12.00.0000
+Quicken 2004 - 13.00.0000
+Quicken 2005 - 14.00.0000
+Quicken Basic 2000
+Quicken Basic 98
+Radia Administrator Workstation - 3.1.1
+Radia Administrator Workstation - 4.0
+Radia Administrator Workstation - 4.0.1
+Radia Advanced Features For Windows Installer - 3.1.14
+Radia Client - 4.0
+Radia Client - 4.0.1
+Radia Knowledge Base Manager - 3.1.16
+Rapid SQL 7.2.0
+Rapid SQL 7.2.1
+Rapid SQL 7.3.0 - 7.3.0
+Rapid SQL 7.3.2 - 7.3.2
+Rapid SQL 7.3.3 - 7.3.3
+Rapid SQL 7.4.0 - 7.4.0
+Rapid SQL 7.4.1 - 7.4.1
+Rapid SQL 7.4.2 - 7.4.2
+Rational ClearCase - 2003.06.00.436.000
+Rational ClearCase - 2003.06.15.734.000
+Rational ClearCase LT - 2003.06.00.436.000
+Rational ClearCase Version 2002.05.00
+Rational ClearQuest
+Rational Purify - 2003.06.00.436.000
+Rational PurifyPlus for Windows - 2003.06.00.436.000
+Rational PurifyPlus for Windows - 2003.06.15.734.000
+Rational RequisitePro - 2003.06.15.734.000
+Rational Robot - 2003.06.15.734.000
+Rational Rose 2000 Enterprise Edition
+Rational Rose 98 Professional C++ Edition
+Rational Rose Enterprise Edition
+Rational Rose Enterprise Edition - 2003.06.00.436.000
+Rational Rose Enterprise Edition - 2003.06.16.910.000
+Rational Suite DevelopmentStudio
+Rational Suite Team Unifying Platform - 2003.06.15.734.000
+Rational Unified Process
+Rational XDE Developer - .NET - 2003.06.00.436.001
+Rational XDE Developer Plus for .NET - 2003.06.16.910.004
+RealSecure Server Sensor 7.0 - 7.0
+Rembrandt - Documentum Update - 1.0.0
+Remedy Developer Plus 6.3 - 6.3
+Remedy Migrator 6.0 - 6.0
+RepliWeb R-1 - 3.1.2
+RepliWeb R-1 - 3.3.1
+RepliWeb R-1 - 3.4.1
+RepliWeb R-1 - 3.6.1
+Replication Server - 05.00.00
+Retina - Network Security Scanner - 4.9.115
+Retina - Network Security Scanner - 4.9.199
+RightFax Administrative Utilities - 8.70.0003
+RightFax Fax Board Driver - 8.70.3
+RoboHELP Office - 9.2.0
+RoboHelp Office 5.0.1 VCS Update  - 5.0.1 VCS
+RoboHelp Office X5 - 13.00
+RoboHelp Office X5.0.1 Update  - 5.0.1
+RoboHelp Office X5.0.2 Update  - 5.0.2
+RoboHelp X5 HTML-based Help Training Files - 14.00.0001
+Roxio Easy Media Creator 7 - 7.0.353.0
+Roxio Easy Media Creator 7 - 7.0.430.0
+Roxio Easy Media Creator 7 - 7.5.0.47
+S-PLUS 6.1 PROFESSIONAL Edition Release 1 - 6.1
+S-PLUS 7.0 - 7.00.0000
+S-PLUS 7.0 - 7.06.0000
+SQL Anywhere Studio 8
+SQL Tuner 2.0.3 Floating Network License
+Sametime Client v1.5
+Sametime Client v2.0
+Sametime Client v2.5
+Sametime Client v2.5 - 2.5.0
+Sametime Client v3.0
+Sametime Client v3.0 - 3.0.0
+Sametime Client v3.0 SP1 - 3.0.0
+Sametime Client v3.1
+Sametime Client v6.5.1
+Sametime Client v6.5.1 Fix Pack 1
+Sametime Client v6.5.1 Fix Pack 1 - 6.5.1
+Sametime Client v6.5.1 Fix Pack 1 - 7.5.1
+Sametime Client v7.0
+Sametime Client v7.0.0.1 - 7.0.0.1
+Sametime Everyplace
+Sametime Mux v7.0
+ScanSoft PDF Converter 3.0 - 3.00.0000
+Seagate Crystal Info for SMS
+Seagate Crystal Reports 6.0
+Seagate Crystal Reports 7
+Seagate Crystal Reports Developer Edition - 8.0.0.371
+Seagate Crystal Reports Professional Edition - 8.0.0.371
+Second Copy 2000
+Security Update for Windows Media Player 10 (KB911565)
+Security Update for Windows Media Player 6.4 (KB925398)
+Security Update for Windows Media Player 7.1 (KB911565)
+Security Update for Windows Media Player 8 (KB911565)
+Security Update for Windows Media Player 9 (KB911565)
+Security Update for Windows Media Player 9 (KB917734)
+Send to OneNote from IE Powertoy - 1.0.2
+Serena ChangeMan Dimensions 9.1.2 - 9.1.2
+Serena ChangeMan Dimensions 9.1.3 - 9.1.3
+Serena ChangeMan Dimensions Clients 9.1.0 - 9.1.0
+Serena ChangeMan Dimensions Listener 9.1.0 - 9.1.0
+Serena ChangeMan Dimensions Make 9.1.2 - 9.1.2
+Serena ChangeMan Dimensions Server 9.1.0 - 9.1.0
+Serena ChangeMan Dimensions for .NET Add-in 1.5.1 - 1.5
+Serena ChangeMan Mover
+Serena ChangeMan Version Manager 8.1.0 - 8.1.0
+Serena Dimensions 10 - 10.1.0.2
+Serena Dimensions CM Clients 10.1.0 - 10.1.0
+Serena Dimensions CM Clients 10.1.1 - 10.1.1
+Serena Dimensions CM Server 10.1.1 - 10.1.1
+Serena Dimensions CM for Visual Studio 10.1.1 - 10.1.1.0
+Serena Dimensions RM 10.1 - 10.1
+Serena Mover
+Serena TeamTrack 6.1.1 - 6.1.1
+Serena TeamTrack 6.2 - 6.2
+Serena TeamTrack 6.3 - 6.3
+SerenaDimensions9.1 - 9.1.0
+Service Pack 1 for SQL Server Reporting Services 2005 ENU (KB913090) - 9.1.2047
+Service Pack 2 for SQL Server Reporting Services 2005 ENU (KB921896) - 9.2.3027
+Service Pack 2 for SQL Server Reporting Services 2005 ENU (KB921896) - 9.2.3042
+Servicing HP ProLiant Server Products
+Servicing HP ProLiant Server Products WBT
+SharePoint Portal Server - 10.*
+SharePoint Portal Server - 10.145.6011
+SharePoint Portal Server Recycle Bin - 1.*
+SharePoint Portal Server Recycle Bin - 1.0.24
+Siebel Analytics 7.5.2.211 - 7.50.0211
+Siebel Analytics 7.7.1
+Siebel Analytics 7.8.2
+Siebel Analytics 7.8.4
+Siebel Analytics 7.8.5
+Siebel Analytics Open Intelligence Interface 7.8.5
+Siebel Enterprise Servers full uninstall
+Siebel Reports Server full uninstall
+Siebel Sync in C:/PROGRA~1/Siebel/7.7/SIEBEL~1_PUMA
+Siebel Sync in C:/PROGRA~1/Siebel/7.7/SIEBEL~1_PUMA ENU
+Siebel Systems Uninstallation Manager
+Siebel Uninstallation Manager
+Siebel Web Server Extension full uninstall
+Siebel Web Server Extensions full uninstall
+Siebel Web Server Extensions in D:/sea704/SWEApp_EAPPWEB
+Siebel Web Server Extensions in D:/sea704/SWEApp_EAPPWEB ENU
+Siebel Web Server Extensions in c:/sea704/SWEApp_EAPPWEB
+Siebel Web Server Extensions in c:/sea704/SWEApp_EAPPWEB ENU
+Siebel eBusiness Applications Servers  full uninstall
+Siebel eBusiness Applications Siebel Web Server Extensions  full uninstall
+SnagIt 5 - 5.0
+SnagIt 5 - 5.2
+SnagIt 6 - 6.0
+SnagIt 6 - 6.0.0
+SnagIt 6 - 6.3
+SnagIt 7 - 7.0
+SnagIt 7 - 7.2
+SnagIt 7 - 7.2.3
+SnagIt 7 - 7.2.4
+SnagIt 7 - 7.2.5
+SnagIt 8 - 8.1.0
+SnagIt 8 - 8.2.0
+SnagIt 8 - 8.2.1
+SnagIt 8 - 8.2.2
+SnagIt 8 - 8.2.3
+Spotlight on Windows - 3.5.0.254
+Spread
+Spread 3.5
+Spread 6
+Spread 7
+Sybase PowerBuilder 9.0
+Symantec Ghost - 70.00.0245
+Symantec Ghost - 75.00.335
+Symantec Ghost Configuration Client (Standalone) - 80.00.984
+Symantec Ghost Console and Standard Tools - 110.00.1502
+Symantec Ghost Console and Standard Tools - 80.00.984
+Symantec Ghost Console and Standard Tools - 83.00.1331
+Symantec Ghost Standard Tools - 82.00.01117
+Symantec Ghost Standard Tools - 83.00.1331
+Symantec Procomm Plus
+Symantec WinFax PRO
+Symantec WinFax PRO 10.0
+Symantec pcAnywhere - 12.0.0.123
+Symantec pcAnywhere - 12.0.1
+Symantec pcAnywhere - 12.0.1%00%00#B%000L‹
+Symantec pcAnywhere - 12.0.1%00%00#B%00àK‹
+Symantec pcAnywhere - 12.0.1%00%00#B%00èDŠ
+Symantec pcAnywhere - 12.0.2
+Symantec pcAnywhere - 12.0.2%00%00#B%00èDŠ
+Symantec pcAnywhere - 12.0.2%00%00#B%00øD‹
+Symantec pcAnywhere - 9.0
+Symantec pcAnywhere - 9.2
+Symantec pcAnywhere Host - 10.5
+Symantec pcAnywhere Remote - 10.5
+Syncfusion Essential Studio 5.1.0.51
+Tab Pro 3
+Taxware Enterprise Server 4.7.0.1415_ftwtwappdv01_was51
+Taxware Enterprise Server 4.7.0.1415_twe_47_prd_was51
+Taxware Enterprise Server 5.5.0.333_twe_was60
+Taxware Systems 3.5.3 - 3.5.3
+TextPad 4.6 - 4.6.0
+TextPad 4.7 - 4.7.0
+TextPad46 - 4.62
+The Yield Book Add-In
+Total Visual Agent
+Total Visual SourceBook 2000
+TurboTax 2005 - MSXML 3 - 1.0.0
+Ulead PhotoImpact 5 Bundled Edition
+UltraEdit-32 - 10.10a
+UltraEdit-32 - 10.10b
+UltraEdit-32 - 10.10c
+UltraEdit-32 - 11.20
+UltraEdit-32 - 11.20a
+UltraEdit-32 - 11.20b
+UltraEdit-32 - 12.20
+UltraEdit-32 - 12.20a
+UltraEdit-32 - 12.20b
+Uniphi Connect 1.2.1 - 1.2.1
+Uniphi Connect 1.2.1 - 1.2.1.2
+Uniphi Connect 1.2.1.3 - 1.2.1.3
+Universal Coder - 2.0.0.0
+Universal Coder - 3.1.0.0
+Universal Coder - 3.3.0.0
+Update for Microsoft Visual SourceSafe 2005 - ENU (KB939808) - 1
+Update for Windows Media Player 10 (KB910393)
+Update for Windows Media Player 10 (KB913800)
+Update for Windows Media Player 10 (KB926251)
+VMware GSX Server - 2.0.0000
+VMware GSX Server Installer - 3.1.0.9089
+VMware VirtualCenter - 1.3.16701
+VMware VirtualCenter - 1.3.18881
+VMware VirtualCenter - 1.3.22214
+VMware VirtualCenter - 1.4.28235
+VMware VirtualCenter - 1.4.30780
+VMware VirtualCenter Server 2.0 - 2.0.1.32042
+VMware VirtualCenter Server 2.0 - 2.0.1.40644
+VMware Workstation - 4.0.0.4460
+VMware Workstation - 4.0.5.6030
+VMware Workstation - 4.5.2.8848
+VMware Workstation - 5.0.0.13124
+VMware Workstation - 5.5.0.18463
+VMware Workstation - 5.5.0.19175
+VMware Workstation - 5.5.2.29772
+VMware Workstation - 5.5.3.34685
+VMware Workstation - 5.5.4.44386
+VMware Workstation - 6.0.0.42757
+VMware Workstation - 6.0.0.45731
+VanDyke Software SecureCRT 4.0 - 4.0
+VanDyke Software SecureCRT 4.1 - 4.1
+VanDyke Software SecureCRT 5.0 - 5.0
+VanDyke Software SecureCRT 5.2 - 5.2
+VanDyke Software SecureFX 3.0
+VanDyke Software SecureFX 4.0 - 4.0
+VerifyIt BALBOA
+VerifyIt CHL
+VerifyIt NERO
+VerifyIt SWERO
+Visio Professional
+Visual Basic .NET 2003 SBS
+Visual Basic .NET MMCC
+Visual Basic 2005 Express Edition Beta - English
+Visual Basic 4 (32 bit) Runtime Modules
+Visual Basic 5.0 Enterprise Edition
+Visual Basic 6 SP4 - 1.0.0
+Visual Basic 6*
+Visual Basic Collection
+Visual FoxPro 7 SP1 Runtime - 1.0.0
+Visual FoxPro 7 SP1 Runtime - 7.0.0.9465
+Visual FoxPro ODBC Driver - 1.0.0
+Visual FoxPro Server
+Visual SourceSafe Server
+Visual Studio .NET Enterprise Architect 2003 - English - 7.*
+Visual Studio .NET Enterprise Developer - English - 7.*
+Visual Studio .NET Enterprise Developer 2003 - English - 7.*
+Visual Studio .NET Professional 2003 - English - 7.*
+VisualAge for Java for Windows - 3.5
+VisualAge for Java for Windows - 4.0
+VisualAge for Java for Windows 3.0
+WS_FTP Pro 5.04
+WebSphere Edge Server 2.0
+WebTrends
+WinFax PRO
+WinFax Pro 10 - 10.0.0
+WinZip -  10.0  (6667)
+WinZip -  10.0  (6685)
+WinZip -  10.0  (6698)
+WinZip -  10.0  (7245)
+WinZip -  11.0  (7313)
+WinZip -  11.0  BETA (7291)
+WinZip -  8.1  (4331)
+WinZip -  8.1  BETA (4306)
+WinZip -  8.1 SR-1  (5266)
+WinZip -  9.0  (6028)
+WinZip -  9.0  BETA (5480)
+WinZip -  9.0  BETA (5611)
+WinZip -  9.0  BETA (6007)
+WinZip -  9.0 SR-1 (6224)
+WinZip - 10.0
+WinZip 10 - 12.0
+WinZip 10.0 - 11.0
+WinZip 11.1 - 11.1.7466
+WinZip 8.0 - 8.0.0
+WinZip 8.1 - 8.1.0
+Windows Internet Explorer 7 - 20060823.002922
+Windows Internet Explorer 7 - 20061017.133151
+Windows Internet Explorer 7 - 20061027.150806
+Windows Internet Explorer 7 - 20061107.210142
+Windows Internet Explorer 7 Beta 3 - 20060623.092706
+Windows Media Player 10
+Windows Media Player 10 - 9.00.3636
+Windows Media Player 10 Hotfix - KB888656
+Windows Media Player 10 Hotfix - KB892313
+Windows Media Player 10 Hotfix - KB894476
+Windows Media Player 10 Hotfix - KB895316
+Windows Media Player 10 Hotfix [See EmeraldQFE2 for more information]
+Windows Media Player 10 Hotfix [See KB886612 for more information]
+Windows Media Player 10 SDK - 10.00.3646
+Windows Media Player 10 ¦w¥þ©Ê§ó·s (KB911565)
+Windows Media Player 10 ¦w¥þ©Ê§ó·s (KB917734)
+Windows Media Player 11
+Windows Media Player 6.4 ¦w¥þ©Ê§ó·s (KB925398)
+Windows Media Player 7.1
+Windows Media Player 8.0
+Windows Media Player 9 Hotfix - KB892313
+Windows Media Player 9 Hotfix [See KB840648 for more information]
+Windows Media Player 9 Hotfix [See KB885492 for more information]
+Windows Media Player 9 Hotfix [See KB886610 for more information]
+Windows Media Player 9 Hotfix [See KB888407 for more information]
+Windows Media Player 9 Series - 9.0.0.2980
+Windows Media Player 9 Series Add-in for Microsoft FrontPage - 1.0.0
+Windows Media Player 9 Series Power Toy - Ratings Migration
+Windows Media Player 9 Series SDK - 9.00.3095
+Windows Media Player 9 Series TweakMP PowerToy
+Windows Media Player 9 Series Winter Fun Pack - 1.0.0
+Windows Media Player Enterprise Deployment - 10.0.0.3802
+Windows Media Player system update (9 Series)
+Windows Media Player ¦w¥þ©Ê§ó·s (KB911564)
+Windows Movie Maker 2 Winter Fun Pack - 1.0.0
+Workshare - DeltaView 2.9 - 2.90.03241
+XForms Purchase Requisition
+XMLSPY 2004 Enterprise Edition - 6.30
+XMLSPY 2004 Professional Edition - 6.30
+XMLSPY 2004 Visual Studio .NET Edition - 6.30.0000
+XMLSPY 5 Enterprise Edition - 5.13
+XMLSPY 5 Enterprise Edition - 5.14
+XMLSPY 5 Enterprise Edition - 5.15
+XMLSPY 5 Home Edition - 5.14
+XMLSPY 5 Professional Edition - 5.14
+XMLSPY 5 Professional Edition - 5.15
+XMLSPY 5 Professional Edition - 5.40
+XP PRO IIS Admin Build 1.7.0 - 1.7.0
+XP PRO IIS Admin Build 1.8.0 - 1.8.0
+activePDF DocConverter
+activePDF Printer
+activePDF Server
+activePDF Server - 3.5.2 SP7 (6174)
+activePDF Spooler
+activePDF Toolkit
+activePDF Toolkit Lite - 4.0.4.8052
+activePDF Toolkit Professional Demo4.0.0.6174 - 4.0.0.6174
+activePDF Toolkit Professional Evaluation - 4.0.4.8052
+activePDF Toolkit Professional4.0.0.6174 - 4.0.0.6174
+activePDF WebGrabber
+deskPDF 2.5 Professional Edition
+deskPDF 2.5 Standard Edition
+eCopy Desktop - 8.5
+iisadmin - 1.0.0.0
+msxml4SP2 - 1.00.0000
+netcoolcontext - 3.0.1

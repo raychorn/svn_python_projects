@@ -1,0 +1,136 @@
+﻿#__debugContainer {
+	height: 600px;
+	float: right;
+}
+#hchild {
+	display:none;
+}
+#div_tabSlideOut {
+	padding: 20px;
+	width: 400px;
+	background: #ccc;
+	border: 1px solid #29216d;
+}      
+#div_tabSlideOut #div_tabSlideOut_content {
+	width: 400px;
+	height: 250px;
+	background: #ccc;
+	border: 1px solid #29216d;
+}
+#div_accordion {
+	float: left;
+}
+#left-top-bar {
+	margin: 0 0 0 200px;
+	float: left;
+}
+#right-top-bar {
+	float: right;
+}      
+#flashContainer {
+    margin-left: 200px;
+    background-color: white;
+}
+#user-ident {
+    float: right;
+}
+.clickable {
+	cursor:pointer;
+}
+#citation {
+    float: left;
+}
+#copyright {
+    float: right;
+}
+#ajaxBusy {
+	position:relative;
+    float: right;
+    top:90px;
+	left:100px;
+	z-index: 999;
+}
+#twitter-peeper {
+	position:relative;
+    float: right;
+    top:-0px;
+	z-index: 999;
+}
+div#menu {
+    margin-left:200px;
+    position:relative;
+    top:0px;
+}
+#tabs h2, #tabs h3 {
+    color: yellow;
+}
+.errorMessage {
+    color: red;
+}
+.successMessage {
+    color: blue;
+}
+#container {
+	width: 100%;
+	margin: 0 auto;
+	float: left;
+	/*max-width: 1260px;*/
+	min-width: 1050px;
+	overflow: hidden;
+}
+#ie-warning {
+	margin: 0 0 0 0;
+	padding: 1em;
+	border: outset;
+	border-color: red;
+	background-color: white;
+}
+#masthead {
+	margin: 0 0 0 200px;
+	padding: 1em;
+}
+#masthead #ie-warning a {
+	color: blue;
+	text-decoration:underline;
+}
+#masthead #ie-warning a:hover {
+	background-color: cyan;
+	text-decoration:underline;
+}
+#navigation {
+	margin: 0;
+	padding: 0;
+}
+#content_container {
+	width: 85%;
+	margin: 0 0 0 200px;
+}
+#column_left {
+	padding: 10px 0px 10px 10px;
+	vertical-align: top;
+	float: left;
+	width: 90%;
+	margin: 0px;
+}
+#column_left_aux {
+	padding: 0px 0px 0px 0px;
+	vertical-align: top;
+	float: left;
+	width: 90%;
+	margin: 0px;
+}
+#column_right {
+	float: right;
+	margin: 0;
+	padding: 10px;
+	width: 150px;
+	vertical-align: top;
+}
+#image {
+	float: right;
+}
+#footer {
+	clear: both;
+	margin: 0;
+	padding: 5px;
+}

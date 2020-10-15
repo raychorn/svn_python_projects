@@ -1,0 +1,242 @@
+/* CSS file */
+@font-face {
+	src: url("assets/fonts/NeoSansIntel.ttf");
+	fontFamily: NeoSansIntel;
+}
+
+@font-face {
+	src: url("assets/fonts/NeoSansIntel-Medium.ttf");
+	fontFamily: NeoSansIntelMedium;
+}
+
+@font-face {
+	src: url("assets/fonts/GARA.TTF");
+	fontFamily: Garamond;
+}
+
+@font-face {
+	src: url("assets/fonts/NeoSansIntel-Light.ttf");
+	fontFamily: NeoSansIntelLight;
+}
+
+global
+{
+ 	color: blue; 
+	fontFamily: Arial;
+	fontSize: 12px;
+ 	themeColor: red; 
+}
+
+/*
+//------------------------------
+//  Application
+//------------------------------
+*/
+Application
+{
+	backgroundColor: #990100;
+	paddingTop: 0px;
+	paddingLeft: 0px;
+	paddingRight: 0px;
+	paddingBottom: 0px; 
+}
+
+Panel {
+	borderStyle: inset;
+	borderColor: #ff0000;
+	borderAlpha: 1;
+	borderThicknessLeft: 5;
+	borderThicknessTop: 0;
+	borderThicknessBottom: 5;
+	borderThicknessRight: 5;
+	cornerRadius: 0;
+	headerHeight: 20;
+	backgroundAlpha: 1;
+	highlightAlphas: 0, 0;
+	headerColors: #ff0000, #ff0000;
+	footerColors: #ff0000, #ff0000;
+	backgroundColor: #ffffff;
+	shadowDistance: 4;
+	shadowDirection: right;
+	dropShadowColor: #ff0000;
+	titleStyleName: "mypanelTitle";
+	controlBarStyleName: panelControlBar;
+}
+
+.mypanelTitle {
+	letterSpacing: 1;
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 14;
+	fontWeight: bold;
+	textAlign: center;
+}
+
+MenuBar {
+	cornerRadius: 0;
+	letterSpacing: 0;
+	backgroundAlpha: 1;
+	backgroundColor: #990100;
+	borderColor: #ff0000;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1;
+	fillColors: #ff2300, #ff1a00;
+	rollOverColor: #990100;
+	selectionColor: #000000;
+	color: #000000;
+	textRollOverColor: #0000ff;
+	textSelectedColor: #ff0000;
+	themeColor: #ff0000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textIndent: 0;
+}
+
+/*
+MenuItemRenderer {
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+*/
+
+.SmartMenuItemLabel {
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+
+.SmartMenuBar {
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+
+.SmartMenuBarRollOver {
+	backgroundColor: #9a0101;
+	color: #ffffff;
+}
+
+.SmartMenuBarFlyout {
+	backgroundColor: #000000;
+	color: #ffffff;
+	fontWeight: bold;
+}
+
+.SmartMenuBarFlyoutRollOver {
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+
+.SmartMenuBarItemLabel {
+	fontWeight: bold;
+	paddingLeft: 8;
+	paddingTop: 0;
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+
+.SmartMenuBarFlyoutItem {
+	paddingLeft: 0px;
+	paddingTop: 0px;
+	height: 30px;
+}
+
+.SmartMenuFlyoutAdminItem {
+	paddingLeft: 0px;
+	paddingTop: 0px;
+	height: 30px;
+}
+
+.SmartMenuBarFlyoutItemLabel {
+	fontWeight: bold;
+	paddingLeft: 8px;
+	paddingTop: 6px;
+	color: #ffffff;
+}
+
+.SmartMenuFlyoutAdminCategoryLabel {
+   fontSize: 14;
+   color: #0b333c;
+   fontWeight: bold;
+}
+
+SmartMenuBarTest {
+	cornerRadius: 0;
+	letterSpacing: 0;
+	backgroundAlpha: 1;
+	backgroundColor: #990100;
+	borderColor: #ff0000;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1;
+	fillColors: #ff2300, #ff1a00;
+	rollOverColor: #990100;
+	selectionColor: #000000;
+	color: #ffffff;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff;
+	themeColor: #ff0000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textIndent: 0;
+}
+
+SmartMenuItemRenderer {
+	cornerRadius: 0;
+	letterSpacing: 0;
+	backgroundAlpha: 1;
+	backgroundColor: #990100;
+	borderColor: #ff0000;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1;
+	fillColors: #ff2300, #ff1a00;
+	rollOverColor: #990100;
+	selectionColor: #000000;
+	color: #ffffff;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff;
+	themeColor: #ff0000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textIndent: 0;
+}
+
+PopUpButton {
+	cornerRadius: 0;
+	arrowButtonWidth: 16;
+	popUpGap: 0;
+	textIndent: 0;
+	letterSpacing: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	paddingBottom: 0;
+	highlightAlphas: 0.38, 0.18;
+	fillAlphas: 0.63, 0.52, 0.63, 0.68;
+	fillColors: #EDE9E9, #EEECEC, #ffffff, #ffffff;
+	color: #000000;
+}
+
+.AdminButton {
+	backgroundColor: #990100;
+	fillAlphas: 1.0, 1.0;
+	fillColors: #EDE9E9, #EEECEC;
+	fontFamily: NeoSansIntelLight;
+	fontSize: 10;
+	leading: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	paddingBottom: 0;
+}
+.panelControlBar
+{
+}
+
+.AdminPopupButton {
+	paddingLeft: 0;
+	paddingRight: 10;
+	paddingTop: 0;
+	paddingBottom: 0;
+	popUpIcon: Embed(source="assets/icons/admin/edit-script.gif"); 
+}

@@ -1,0 +1,52 @@
+{% load currenttimetag %}
+{% get_current_time "%Y-%M-%d %I:%M %p" as my_current_time %}
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
+    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
+    lang="{% firstof LANGUAGE_CODE 'en' %}">
+  <head>
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="-1">
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="alternate" type="application/rss+xml" title="VyperBlog News" href="/feed/">
+    <title>FaceBook -{% block title %}{% endblock %} &copy;RayCHorn.Com, All Rights Reserved. ({{ my_current_time }})</title>
+    <script src="/js/js/core.min.js" language="javascript" type="text/javascript"></script>
+    {% block js %}
+    {% endblock %}
+    {% block extra-head %}{% endblock %}
+  </head>
+
+<body>
+<noscript><p class="nonjsAlert">NOTE: Many features on this site require Javascript and cookies. You can enable both via your browser's preference settings.</p></noscript>
+<div id="container">
+    <div id="flashContainer">
+    </div>
+    <div id="left-top-bar">
+	<div id="facebook-login" style="display:none;">
+	    <button id="btn_submitFaceBookLogin" title="Login with your FaceBook Account"><img src="/static/images/facebook-login-button.png"></button>
+	</div>
+	<div id="div-feedback">
+	    <button id="btn_PopulateFeedback" title="Leave some Feedback"><img src="/static/images/feedback_top-tab.gif" width="99"></button>
+	</div>
+    </div>
+    <div id="right-top-bar">
+	<div id="user-ident">
+	</div>
+    </div>
+    <div id="masthead">
+	    <h1><a href="/">The Agile Developer's FaceBook App</a></h1>
+    </div>
+    <div id="navigation">
+    </div>
+    <div id="content_container">
+    </div>
+</div>
+<div id="__debugContainer" style="font-size: 10px; display:none;"><textarea id="__debug" rows="10" cols="80" readonly></textarea></div>
+</body>
+</html>

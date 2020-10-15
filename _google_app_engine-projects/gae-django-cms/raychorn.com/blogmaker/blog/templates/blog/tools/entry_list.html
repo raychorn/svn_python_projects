@@ -1,0 +1,40 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+
+
+{% extends "blog/tools/tools_base.html" %}
+
+{% load prefab_tags %}
+
+{% block extrastyle %}
+{% endblock %}
+
+{% block "browsertitle" %}All Entries{% endblock %}
+
+{% block path %} &rsaquo; Entries{% endblock %}
+
+{% block content %}
+<div class="list_links">Other links:
+<div class="sub">
+<a href="{% setting 'BLOG_ROOT' %}tools/entry/add/">Add a new entry</a>
+</div>
+</div>
+<table cellspacing="0" class="tools_list">
+<thead>
+<tr>
+<th {% ifequal sort 'headline' %}class="sorted"{% endifequal %}{% ifequal sort '-headline' %}class="negsorted"{% endifequal %}><a href="?sort={% ifequal sort 'headline' %}-{% endifequal %}headline">Headline</a></th>
+<th {% ifequal sort 'pub_date' %}class="sorted"{% endifequal %}{% ifequal sort '-pub_date' %}class="negsorted"{% endifequal %}><a href="?sort={% ifequal sort 'pub_date' %}-{% endifequal %}pub_date">Date</a></th>
+<th {% ifequal sort 'image' %}class="sorted"{% endifequal %}{% ifequal sort '-image' %}class="negsorted"{% endifequal %}><a href="?sort={% ifequal sort 'image' %}-{% endifequal %}image">Image</a></th>
+</tr>
+</thead>
+
+<tbody>
+{% for entry in entries %}
+<tr class="{% cycle row1,row2 %}">
+<td><a href="{% setting 'BLOG_ROOT' %}tools/entry/{{ entry.id }}/">{{ entry.headline }}</a></td>
+<td nowrap>{{ entry.pub_date|date }}</td>
+<td>{{ entry.image }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

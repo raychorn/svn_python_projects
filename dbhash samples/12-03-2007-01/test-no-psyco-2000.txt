@@ -1,0 +1,140 @@
+
+Z:\python projects\dbhash samples>if profile. == profile. goto profile 
+
+Z:\python projects\dbhash samples>python -m cProfile -s cumulative main.py 
+There are (0) keys.
+There are now (2000) keys.  Read (0) data elements.
+(ioTimeAnalysis) :: Category: "READ" = (0.0) time/iters=(0.0000000000)
+(ioTimeAnalysis) :: Category: "WRITE" = (126.667000055) time/iters=(0.0633335000)
+(ioTimeAnalysis) :: Category: "END-KEYS" = (0.0319998264313) time/iters=(0.0000159999)
+(ioTimeAnalysis) :: Category: "BEGIN-KEYS" = (0.0) time/iters=(0.0000000000)
+(ioTimeAnalysis) :: Category: "READ-RANDOM" = (0.0780000686646) time/iters=(0.0000390000)
+
+
+Time spent doing I/O :: (126.77699995)
+         81907628 function calls (81907627 primitive calls) in 127.129 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.002    0.002  127.163  127.163 {execfile}
+        1    0.031    0.031  127.161  127.161 main.py:1(<module>)
+     2000   31.867    0.016  126.323    0.063 main.py:23(getPayload)
+ 20466110   21.961    0.000   88.325    0.000 random.py:211(randint)
+ 20466110   59.752    0.000   66.364    0.000 random.py:147(randrange)
+ 20466110    6.612    0.000    6.612    0.000 {method 'random' of '_random.Random' objects}
+20467114/20467113    6.159    0.000    6.159    0.000 {len}
+     3005    0.166    0.000    0.436    0.000 dbutils.py:41(DeadlockWrap)
+     2000    0.012    0.000    0.241    0.000 __init__.py:225(__setitem__)
+        1    0.009    0.009    0.218    0.218 threadpool.py:19(__init__)
+     2000    0.207    0.000    0.207    0.000 __init__.py:228(wrapF)
+     1000    0.008    0.000    0.144    0.000 threading.py:426(start)
+     1000    0.101    0.000    0.101    0.000 {thread.start_new_thread}
+        1    0.000    0.000    0.092    0.092 __init__.py:287(sync)
+     1001    0.023    0.000    0.064    0.000 threading.py:392(__init__)
+        1    0.035    0.035    0.053    0.053 __init__.py:239(close)
+     1000    0.002    0.000    0.045    0.000 __init__.py:221(__getitem__)
+        2    0.000    0.000    0.042    0.021 __init__.py:250(keys)
+     1000    0.039    0.000    0.039    0.000 __init__.py:223(<lambda>)
+        1    0.000    0.000    0.035    0.035 dbhash.py:15(open)
+        1    0.000    0.000    0.035    0.035 __init__.py:295(hashopen)
+     1000    0.024    0.000    0.024    0.000 {time.sleep}
+        1    0.001    0.001    0.023    0.023 dbhash.py:1(<module>)
+     1004    0.004    0.000    0.023    0.000 threading.py:152(Condition)
+        1    0.021    0.021    0.022    0.022 __init__.py:40(<module>)
+        1    0.020    0.020    0.022    0.022 threadpool.py:7(<module>)
+        1    0.000    0.000    0.021    0.021 __init__.py:217(__len__)
+        1    0.000    0.000    0.021    0.021 __init__.py:219(<lambda>)
+     1004    0.017    0.000    0.019    0.000 threading.py:157(__init__)
+     1002    0.010    0.000    0.010    0.000 {built-in method acquire}
+        1    0.000    0.000    0.008    0.008 random.py:39(<module>)
+        1    0.000    0.000    0.008    0.008 random.py:88(__init__)
+        1    0.000    0.000    0.008    0.008 random.py:97(seed)
+        1    0.008    0.008    0.008    0.008 {nt.urandom}
+     2001    0.006    0.000    0.007    0.000 __init__.py:194(_closeCursors)
+     1000    0.002    0.000    0.006    0.000 threading.py:411(_set_daemon)
+     2005    0.005    0.000    0.005    0.000 threading.py:39(__init__)
+     1000    0.005    0.000    0.005    0.000 threading.py:370(_newname)
+     1000    0.002    0.000    0.003    0.000 threading.py:695(currentThread)
+     1003    0.003    0.000    0.003    0.000 {thread.allocate_lock}
+     3004    0.002    0.000    0.002    0.000 __init__.py:210(_checkOpen)
+        1    0.002    0.002    0.002    0.002 threading.py:1(<module>)
+     3005    0.002    0.000    0.002    0.000 {method 'get' of 'dict' objects}
+     1000    0.002    0.000    0.002    0.000 threading.py:592(setDaemon)
+     2001    0.001    0.000    0.001    0.000 {method 'values' of 'dict' objects}
+     3015    0.001    0.000    0.001    0.000 {method 'has_key' of 'dict' objects}
+     1000    0.001    0.000    0.001    0.000 threading.py:588(isDaemon)
+        1    0.000    0.000    0.001    0.001 __init__.py:348(_openDBEnv)
+        1    0.001    0.001    0.001    0.001 {built-in method open}
+     1000    0.001    0.000    0.001    0.000 threading.py:44(_note)
+        1    0.001    0.001    0.001    0.001 dbutils.py:27(<module>)
+     1002    0.000    0.000    0.000    0.000 {built-in method release}
+     1001    0.000    0.000    0.000    0.000 {thread.get_ident}
+        4    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:16(ioEndTime)
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:39(ioTimeAnalysisReport)
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:25(ioTimeAnalysis)
+        1    0.000    0.000    0.000    0.000 Queue.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 db.py:40(<module>)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 weakref.py:6(<module>)
+        1    0.000    0.000    0.000    0.000 Queue.py:21(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:633(__init__)
+        4    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:11(ioBeginTime)
+       10    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:6(initIOTime)
+        1    0.000    0.000    0.000    0.000 threading.py:383(Thread)
+        1    0.000    0.000    0.000    0.000 {built-in method set_lk_detect}
+        1    0.000    0.000    0.000    0.000 {function seed at 0x00B8C770}
+        1    0.000    0.000    0.000    0.000 traceback.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 Queue.py:68(join)
+        8    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 {_bsddb.DBEnv}
+        8    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {math.exp}
+        1    0.000    0.000    0.000    0.000 <string>:2(<module>)
+        2    0.000    0.000    0.000    0.000 threadpool.py:47(threadpool)
+        1    0.000    0.000    0.000    0.000 random.py:69(Random)
+        1    0.000    0.000    0.000    0.000 __init__.py:158(__init__)
+        1    0.000    0.000    0.000    0.000 Queue.py:194(_init)
+        8    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 weakref.py:33(WeakValueDictionary)
+        1    0.000    0.000    0.000    0.000 weakref.py:219(WeakKeyDictionary)
+        1    0.000    0.000    0.000    0.000 {_bsddb.DB}
+        1    0.000    0.000    0.000    0.000 __init__.py:153(_DBWithCursor)
+        1    0.000    0.000    0.000    0.000 Queue.py:16(Queue)
+        6    0.000    0.000    0.000    0.000 {isinstance}
+        2    0.000    0.000    0.000    0.000 {math.log}
+        1    0.000    0.000    0.000    0.000 {math.sqrt}
+        1    0.000    0.000    0.000    0.000 __init__.py:359(_checkflag)
+        2    0.000    0.000    0.000    0.000 {_bsddb.version}
+        1    0.000    0.000    0.000    0.000 threading.py:155(_Condition)
+        1    0.000    0.000    0.000    0.000 threadpool.py:18(Pool)
+        1    0.000    0.000    0.000    0.000 threading.py:79(_RLock)
+        1    0.000    0.000    0.000    0.000 random.py:609(WichmannHill)
+        1    0.000    0.000    0.000    0.000 {binascii.hexlify}
+        1    0.000    0.000    0.000    0.000 {built-in method set_flags}
+        1    0.000    0.000    0.000    0.000 random.py:759(SystemRandom)
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:271(_Semaphore)
+        1    0.000    0.000    0.000    0.000 __init__.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 threading.py:333(_Event)
+        1    0.000    0.000    0.000    0.000 {built-in method set_get_returns_none}
+        1    0.000    0.000    0.000    0.000 threading.py:602(_Timer)
+        1    0.000    0.000    0.000    0.000 <string>:2(_iter_mixin)
+        1    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 threadpool.py:49(decorator)
+        1    0.000    0.000    0.000    0.000 threading.py:37(_Verbose)
+        1    0.000    0.000    0.000    0.000 threading.py:671(_DummyThread)
+        1    0.000    0.000    0.000    0.000 threading.py:318(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 threading.py:631(_MainThread)
+        1    0.000    0.000    0.000    0.000 <string>:1(DBNotFoundError)
+        1    0.000    0.000    0.000    0.000 weakref.py:198(KeyedRef)
+        1    0.000    0.000    0.000    0.000 Queue.py:8(Empty)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 Queue.py:12(Full)
+        1    0.000    0.000    0.000    0.000 <string>:2(DBKeyEmptyError)
+        1    0.000    0.000    0.000    0.000 threading.py:640(_set_daemon)
+
+
+
+Z:\python projects\dbhash samples>goto end 

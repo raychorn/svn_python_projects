@@ -1,0 +1,2 @@
+See also: Z:\python projects\pyZipImport for the details as to how to import from Encrypted Eggs.
+

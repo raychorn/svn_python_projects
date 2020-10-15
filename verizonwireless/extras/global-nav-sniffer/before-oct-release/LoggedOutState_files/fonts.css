@@ -1,0 +1,165 @@
+/* links */
+a:link {color: #06C;}
+a:visited {color: #636;}
+a.boldLink:link {color: #06C; font-weight:bold;}
+a.boldLink:visited {color: #636; font-weight:bold;}
+a.smallLink:link {color: #06C; font-size:0.9em}
+a.smallLink:visited {color: #636; font-size: 0.9em;}
+a.smallBoldLink:link {color: #06C; font-weight:bold; font-size: 0.9em;}
+a.smallBoldLink:visited {color: #636; font-weight:bold; font-size: 0.9em;}
+a.actionLink {padding-left:15px !important;font-weight:bold;background:url(/images_b2c/shared/elements/arrow_button.gif) no-repeat 0 4px;}
+a.backToLink {padding-left:20px !important;font-weight:bold;background:url(/images_b2c/shared/elements/back_arrow.jpg) no-repeat;padding-bottom:2px;}
+a.noUnderlineLink {text-decoration:none;}
+a.questionLink {background:url(/images_b2c/shared/elements/question_mark.gif) no-repeat 100% 50%; padding-right:17px;}
+.actionBottom {background: url(/images_b2c/shared/elements/arrow_down.gif) no-repeat; padding:0 0 5px 20px;}
+a.backToTopLink {background: url(/images_b2c/shared/elements/back_top.jpg) no-repeat; padding-left:20px;}
+a.viewMoreLink {background: url(/images_b2c/shared/elements/plus.gif) no-repeat; padding-left:17px;}
+a.closeExpandedLink {background: url(/images_b2c/shared/elements/minus.gif) no-repeat; padding-left:17px;}
+a.closeLink {background:url(/images_b2c/shared/elements/close_x.gif) no-repeat 100% 50%; padding-right:19px;}
+a.removeLink {background:url(/images_b2c/shared/elements/remove.gif) no-repeat 100% 50%; padding:0 16px 0 5px;}
+a.backArrowLink:visited { color:#636; }
+a.backLink {padding-left:15px;font-weight:bold;background:url(/images_b2c/shared/elements/arrow_l.gif) no-repeat;}
+* html a.backLink {background-image:none;background-image/**/:url(/images_b2c/shared/elements/arrow_l.gif);}/* hidden from win/ie5.0 */
+.promoHeadline a, .promoHeadline a:visited {color:#f00;}
+a.starPromoLink, a.starPromoLink:visited { float:left;font-weight:bold;color:#f00;padding-left:17px;background: transparent url(/images_b2c/shared/elements/star_promo.gif) 0% 0% no-repeat;}
+a.backDblArrow {background: transparent url(/images_b2c/shared/elements/dblarrow.gif) 0% 50% no-repeat;padding-left:15px;}
+a.emailLink {background: url(/images_b2c/shared/elements/email_icon.gif) no-repeat left 4px; padding:2px 10px 0px 19px;}
+a.printLink {background: url(/images_b2c/shared/elements/printer_icon2.gif) no-repeat left 4px; padding:2px 10px 0px 19px;}
+.titleLinks {font-weight:normal;float:right;padding-top:7px;}
+.titleLinks a {padding:0 5px;}
+.compareProducts .category a {color:#fff;}
+.compareProducts .category a:visited {color:#fff;}
+a.dwrLink:visited {color: #06C;}
+
+/* ---------------------------------------------------------
+Key Features - Links
+-------------------------------------------------------------*/
+a.bluetooth {background: url(/images_b2c/shared/features/bluetooth_sm.png) no-repeat left 4px; padding:5px 7px 5px 15px; display:block; float:left;}
+a.broadband {background: url(/images_b2c/shared/features/broadband_access_sm.png) no-repeat left 4px; padding:5px 7px 5px 17px; display:block; float:left;}
+a.camera {background: url(/images_b2c/shared/features/camera_sm.png) no-repeat left 4px; padding:5px 7px 5px 19px; display:block; float:left;}
+a.cameralow {background: url(/images_b2c/shared/features/camera_lowres_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.chaperone {background: url(/images_b2c/shared/features/chaperone_sm.png) no-repeat left 4px; padding:5px 7px 5px 19px; display:block; float:left;}
+a.chaperoneparent {background: url(/images_b2c/shared/features/chaperone_parent_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.colorscreen {background: url(/images_b2c/shared/features/color_screen_sm.png) no-repeat left 4px; padding:5px 7px 5px 17px; display:block; float:left;}
+a.email {background: url(/images_b2c/shared/features/email_sm.png) no-repeat left 4px; padding:5px 7px 5px 22px; display:block; float:left;}
+a.espn {background: url(/images_b2c/shared/features/mvp_sm.png) no-repeat left 4px; padding:5px 7px 5px 23px; display:block; float:left;}
+a.extendedmemory {background: url(/images_b2c/shared/features/memory_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.fieldforce {background: url(/images_b2c/shared/features/field_force_mngr_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.getitnow {background: url(/images_b2c/shared/features/getitnow_sm.png) no-repeat left 4px; padding:5px 7px 5px 22px; display:block; float:left;}
+a.htmlbrowser {background: url(/images_b2c/shared/features/html_browser_sm.png) no-repeat left 4px; padding:5px 7px 5px 19px; display:block; float:left;}
+a.instantmessaging {background: url(/images_b2c/shared/features/mobile_im_sm.png) no-repeat left 4px; padding:5px 7px 5px 20px; display:block; float:left;}
+a.mediaphone {background: url(/images_b2c/shared/features/media_phone_sm.png) no-repeat left 4px; padding:5px 7px 5px 22px; display:block; float:left;}
+a.memory {background: url(/images_b2c/shared/features/removable_mem_sm.png) no-repeat left 4px; padding:5px 7px 5px 15px; display:block; float:left;}	
+a.mobileemail {background: url(/images_b2c/shared/features/mobile_email_sm.png) no-repeat left 4px; padding:5px 7px 5px 24px; display:block; float:left;}
+a.mobileweb {background: url(/images_b2c/shared/features/mobile_web_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.mp3 {background: url(/images_b2c/shared/features/music_player_sm.png) no-repeat left 4px; padding:5px 7px 5px 17px; display:block; float:left;}
+a.nationalaccess {background: url(/images_b2c/shared/features/national_access_sm.png) no-repeat left 4px; padding:5px 7px 5px 23px; display:block; float:left;}
+a.palm {background: url(/images_b2c/shared/features/palm_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.pictureMessaging {background: url(/images_b2c/shared/features/pic_msg_sm.png) no-repeat left 4px; padding:5px 7px 5px 20px; display:block; float:left;}
+a.premiumpricing {background: url(/images_b2c/shared/features/premium_pricing_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.pushtotalk {background: url(/images_b2c/shared/features/push_to_talk_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.qwerty {background: url(/images_b2c/shared/features/qwerty_key_sm.png) no-repeat left 4px; padding:5px 7px 5px 25px; display:block; float:left;}
+a.speakerphone {background: url(/images_b2c/shared/features/speakerphone_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.textmessaging {background: url(/images_b2c/shared/features/txt_messaging_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.texttospeech {background: url(/images_b2c/shared/features/text_to_speech_sm.png) no-repeat left 4px; padding:5px 7px 5px 28px; display:block; float:left;}
+a.touchscreen {background: url(/images_b2c/shared/features/touch_nav_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.vcast {background: url(/images_b2c/shared/features/vcast_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.vcastmobiletv {background: url(/images_b2c/shared/features/vcast_mobile_tv_sm.png) no-repeat left 4px; padding:5px 7px 5px 19px; display:block; float:left;}
+a.vcastmusic {background: url(/images_b2c/shared/features/vcast_music_sm.png) no-repeat left 4px; padding:5px 7px 5px 19px; display:block; float:left;}
+a.videomessaging {background: url(/images_b2c/shared/features/vid_msg_sm.png) no-repeat left 4px; padding:5px 7px 5px 21px; display:block; float:left;}
+a.voicemail {background: url(/images_b2c/shared/features/voice_mail_sm.png) no-repeat left 4px; padding:5px 7px 5px 19px; display:block; float:left;}
+a.voicedialing {background: url(/images_b2c/shared/features/voice_dialing_sm.png) no-repeat left 4px; padding:5px 7px 5px 22px; display:block; float:left;}
+a.vzappzone {background: url(/images_b2c/shared/features/vzapp_zone_sm.png) no-repeat left 4px; padding:5px 7px 5px 18px; display:block; float:left;}
+a.vznavigator {background: url(/images_b2c/shared/features/vznavigator_sm.png) no-repeat left 4px; padding:5px 5px 7px 18px; display:block; float:left;}
+a.waterresistant {background: url(/images_b2c/shared/features/water_resist_sm.png) no-repeat left 4px; padding:5px 5px 7px 18px; display:block; float:left;}
+a.windowsmobile {background: url(/images_b2c/shared/features/windows_sm.png) no-repeat left 4px; padding:5px 5px 7px 18px; display:block; float:left;}
+
+h1 {padding:0;margin:0;font:bold 20px arial,sans-serif;}
+h2 {padding:0;margin:0;font:bold 16px arial,sans-serif;}
+h3 {padding:0;margin:0;font:bold 14px arial,sans-serif;}
+h4 {padding:0;margin:0;font:bold 12px arial,sans-serif;}
+h5 {padding:0;margin:0;font:normal 12px arial,sans-serif;}
+
+/* OLD */
+a.standardLinkBold:link {font-weight:bold;color: #06C;}
+a.standardLinkBold:visited {font-weight:bold;color: #636;}
+a.actionableArrowLink {padding-left:15px !important;font-weight:bold;background:url(/images_b2c/shared/elements/arrow_button.gif) no-repeat 0 4px;}
+* html a.actionableArrowLink {padding-left:15px !important;font-weight:bold;background:url(/images_b2c/shared/elements/arrow_button.gif) no-repeat 0 4px;}/* hidden from win/ie5.0 */
+.actionableItem a, .actionableItem a:visited {font-weight:bold;}
+a.backArrowLink, a.backArrowLink:visited { float:left;font-weight:bold;color:#06C;padding-left: 15px;background: transparent url(/images_b2c/shared/elements/arrow_back_r.gif) 0% 0% no-repeat; }
+a.backArrowLink:visited {color: #636;}
+
+/* headings and global font styles */
+* {font-family:arial, sans-serif;}
+.bodyText {font-size:1em; line-height: 15px;} /* 12px */
+.bodySmallText {font-size: 0.9em; line-height:13px;} /* 11px */
+.boldText {font-weight: bold;}
+.italicText {font-style:italic;}
+.pageTitle {font-size:1.7em;} /* 20px */
+.pageTitle .smallContent {font-size: 0.6em; font-weight: bold;} /* this can only be used with the pageTitle */
+.pageSubTitle {font-size:1.6em;} /* 18px */
+.paragraphHeading {font-weight: bold; font-size:1em; line-height: 15px;} /* 12px */
+.sectionHeadline {color:#000;font-weight:bold;font-size:1.2em;font-family:arial;} /*14px*/
+.pageHeadline {color:#000;font-weight:bold;font-size:1.8em;font-family:arial;} /*21px*/
+h1, .accStorePageHeadline {color:#000;font-weight:bold;font-size:1.3em;font-family:arial;padding-left:10px;} /* 15px */
+h2, .storeHeadline {color:#000; font-size:1.4em; font-family:arial; padding-left:10px;} /* 16px */
+.pageTitleImg {height:30px;width:540px;background: url(/images_b2c/shared/elements/page_titlebar_grad.gif) repeat-x;padding: 0 10px;border-top: 1px solid #f30000;margin:15px 0 0;//margin:0 0 0;}
+.pageTitleImg h2 {padding-top:5px;}
+.pageHeadline sup {font-size:0.5em;font-weight:normal;}  /* Used for SM in Titles, e.g. America's Choice SM */
+.primaryHeadline {color:#000;font-weight:bold;font-size:1.2em;} 
+.pageTitleImg .pageHeadline {color:#fff;float:left;}
+.pageTitleImg .pageHeadlineReduced {color:#fff;font-weight:bold;font-size:1.6em;float:left;font-family:arial;padding-top:2px;} /* Used dynamically when title is longer than 30 charachters */
+.pageTitleImg .primaryHeadline {color:#fff;}
+.sideBarHeadline, .sidebarHeadline {color:#333;font-weight:bold;font-size:1.2em;} /* 14px, THE SECOND STYLE IS FOR ATOMZ */
+.secondaryHeadline1 {color:#333;font-weight:bold;font-size:1.1em;} /* 13px */
+.secondaryHeadline2 {color:#000;font-weight:bold;font-size:1.1em;} /* 13px */
+.tertiaryHeadline1 {color:#333;font-weight:bold;font-size:1em;} /* 12px */
+.tertiaryHeadline2 {color:#000;font-weight:bold;font-size:1em;} /* 12px */
+.wayfindingItem1 {color:#f00;font-weight:bold;font-size:1.1em;} /* 13px - spec changed to red */
+.wayfindingItem2 {color:#666;font-weight:bold;font-size:1.1em;} /* 13px */
+.legalDisclaimerText {color:#666;font-weight:normal;font-size:0.9em !important;} /* 10px */
+.disclaimerText {color:#333;font-weight:normal;font-size:0.9em;} /* 10px */
+.disclaimerTextBoxHeadline {color:#000;font-weight:bold;font-size:1.1em;margin-bottom:10px;}
+.planMinutes {white-space:nowrap;color:#06C;font-weight:bold;font-size:1.3em;} 
+.introPlanMinutes {color:#f00;font-weight:bold;font-size:1.3em;} /*15px */
+.testimonialHeadline {color:#f00;font-weight:bold;font-size:1.7em;} /* 20px RED*/
+.promoHeadline {color:#f00;font-weight:bold;font-size:1.2em;} /* 14px RED*/
+.instructionalText {color:#f00;font-weight:bold;font-size:1.2em;} /* 14px */
+.promoTeaserHeadline {color:#f00;font-weight:bold;font-size:1.1em;} /* 13px */
+.promoText {color:#f00;font-weight:bold;font-size:1em;} /* 12px */
+.promoTextSmall {color:#f00;font-weight:bold;font-size:0.9em;} /* 11px */
+.promo1 {color:#333;font-weight:bold;font-size:1.3em;} /* 15px */
+.promo2 {color:#000;font-weight:bold;font-size:1.3em;} /* 15px */
+.prices {color:#f00;font-weight:bold;font-size:1em;} /* 12px */
+.largePrices {color:#f00;font-weight:bold;font-size:1.1em;} /* 13px */
+.strikePrice {background: url(/images_b2c/shared/elements/strike.gif) repeat-x 55% 60%;display:inline-block;}
+.youAreHere {color:#006;font-weight:bold;font-size:1em;} /* 12px */
+.errorText {color:#f00;padding:10px;border:1px solid #f00;font-weight:normal;font-size:1em;} /* 12px */
+.required {color:#f00;font-weight:normal;font-size:1em;} /* 12px */
+.requiredText {color:#f00;font-weight:bold;font-size:1em;} /* 12px */
+.zipCodeText {color:#000;font-weight:normal;font-size:1em;} /* 12px */
+.headerBar {color:#000;font-weight:normal;font-size:1em;} /* 12px */
+.subheadBar {color:#333;font-weight:normal;font-size:1em;} /* 12px */
+.contentBar {color:#000;font-weight:normal;font-size:1em;} /* 12px */
+.actionableItem {padding-left:15px !important;background:url(/images_b2c/shared/elements/arrow_r.gif) no-repeat;}
+.actionText {padding-left:15px !important;font-weight:bold;background:url(/images_b2c/shared/elements/arrow_button.gif) no-repeat 0 4px;}
+.normal  {font: normal 1em arial, sans-serif; }/* font-size:12px */
+#sectionSidebar li {font-size:1.1em;} /* 13px */
+.whiteText {font-weight:bold;color: #fff;font-size:0.9em;}/* 10px */
+.whiteTextSmall {color: #fff;font-size:0.9em;}/* 10px */
+.rebateText {font-weight:bold;color: #f30;font-size:0.9em;}/* 10px */
+.sectext4  {color: #666;font-size:0.9em;}/* 10px */
+.pfphone  {font-weight:bold;color: #00008b;font-size:0.9em;}/* 10px */
+.indent  {margin-left: 1em;}
+.nowrap {white-space:nowrap;}
+.underline {text-decoration: underline;} 
+.right {float:right;padding-right:15px;}
+.pricingTableItemAdded {color:#009900; font-size:1.2em; font-weight:bold;}
+.marqueeHeadline {color:#fe0000; font-size:2.5em; font-weight:bold;}
+.questionText {background:url(/images_b2c/shared/elements/question_mark.gif) no-repeat 100% 50%; padding-right:17px; text-decoration:none; color:#000 !important;}
+.numberIcon {background:url(/images_b2c/shared/elements/red_circle.gif) no-repeat 50% 49%; font: bold 0.95em arial, sans-serif; color:white;line-height: 20px; width: 16px; padding:5px;}
+.largeSteps {color:#ccc; font-weight:bold; font-size:3em;}
+.inCalling {background:url(/images_b2c/homepage/icon_in.gif) no-repeat 0% 50%; padding:3px; padding-left:18px; }
+.mobile2mobile {background: url(/images_b2c/shared/features/speakerphone_sm.png) no-repeat 0% 50%; padding:3px; padding-bottom:0; padding-left:18px;display:block; }
+.subHeadingBar {background-color:#f30000; color:#fff; padding:3px 0px 3px 10px;}
+

@@ -1,0 +1,142 @@
+/* Copyright (c) 2006-2007, PreFab Software Inc. */
+
+
+table.tools_header {
+	width: 100%;
+	height: 100%;
+}
+
+td.tools_title {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+td.tools_links {
+	text-align: right;
+	vertical-align: middle;
+}
+
+div.tools_header {
+	top: 0;
+	left: 0;
+	background-color: #dddddd;
+	padding: 5px;
+	height: 40px;
+	border-bottom: 1px solid #555555;
+}
+
+div.tools_index {
+	width: 100%;
+}
+
+div.tools_path {
+	border-bottom: 1px solid #555555;
+	padding: 2px 5px;
+}
+
+div.tools_content {
+	padding: 20px;
+}
+
+div.list_links {
+	padding-bottom: 20px;
+}
+
+div.sub {
+	margin-left: 10px;
+}
+
+div.entry_form {
+}
+
+td.entry_preview {
+	text-align: left;
+	vertical-align: top;
+}
+
+td.entry_form {
+	text-align: left;
+	vertical-align: top;
+}
+
+div.entry_preview {
+	width: 478px;
+	margin-left: 35px;
+	border: 1px solid #aaa;
+	padding: 20px;
+}
+
+div.header td {
+	border-bottom-style: none;
+}
+
+table.tools_list {
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	font-size: 12px;
+}
+
+table.tools_list td {
+	padding: 2px 5px;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+table.tools_list th {
+	text-align: left;
+	border-bottom: 1px solid #555;
+	border-right: 1px solid #ccc;
+	color: black;
+	padding: 4px 5px;
+}
+
+th.sorted {
+	background-color: #d9ffe1;
+}
+
+th.negsorted {
+	background-color: #ffcfcc;
+}
+
+table.tools_list tr.row2 {
+	background-color: #eeeeee;
+}
+
+table.entry_form th {
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid #ddd;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+table.entry_form td {
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid #ddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+div.form_errors {
+	font-size: 11px;
+	color: red;
+}
+
+div.form_help_text {
+	font-size: 11px;
+	font-style: italic;
+	padding-top: 4px;
+	color: gray;
+}
+
+.form_link {
+	font-size: 11px;
+}
+
+div.form_current_image {
+	padding-bottom: 4px;
+	font-size: 11px;
+}

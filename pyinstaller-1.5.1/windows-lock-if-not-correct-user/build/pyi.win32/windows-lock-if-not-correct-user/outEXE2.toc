@@ -1,0 +1,10 @@
+('J:\\@Research\\@Python\\PyInstaller 1.5.1\\pyinstaller-1.5.1\\windows-lock-if-not-correct-user\\dist\\windows-lock-if-not-correct-user.exe',
+ True,
+ False,
+ None,
+ None,
+ [],
+ False,
+ True,
+ 0,
+ 1312217998)

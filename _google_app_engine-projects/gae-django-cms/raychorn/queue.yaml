@@ -1,0 +1,14 @@
+### in queue.yaml
+queue:
+- name: hothandler
+  rate: 6/m
+  bucket_size: 1
+
+- name: emailhandler
+  rate: 83/h
+  bucket_size: 10
+  
+- name: mail-queue
+  rate: 2000/d
+  bucket_size: 10
+  

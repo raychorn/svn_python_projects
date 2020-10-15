@@ -1,0 +1,9 @@
+Dear SalesForce Support, 
+
+A Comment change notification cannot be emailed for Case #{{ CaseNumber }} 
+because the email address is "{{ EmailAddress }}" 
+and it does not appear to be a valid email address. 
+
+{{ CASE_LINK }}
+
+Do not respond to this e-mail message.

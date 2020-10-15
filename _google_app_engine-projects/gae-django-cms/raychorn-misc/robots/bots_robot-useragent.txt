@@ -1,0 +1,203 @@
+ABCdatos BotLink/
+AlkalineBOT
+AnthillV
+appie/
+Arachnophilia
+Araneo/
+AraybOt/
+ArchitextSpider
+arks/
+ASpider/
+Atomz/
+AURESYS/
+BackRub/
+bbot/
+Big Brother
+Bjaaland/
+BlackWidow
+Die Blinde Kuh
+borg-bot/
+BoxSeaBot/
+BSpider/
+CACTVS Chemistry Spider
+Checkbot/
+Spider
+combine/
+Confuzzledbot/
+CoolBot
+root/
+cosmos/
+Internet Cruiser Robot/
+Cusco/
+CyberSpyder/
+DesertRealm.com
+Deweb/
+dienstspider/
+Digger/
+DIIbot
+DNAbot/
+DragonBot/
+DWCP/
+LWP::
+EbiNess/
+EIT-Link-Verifier-Robot/
+elfinbot
+Emacs-w3/
+esculapio/
+Evliya Celebi
+FastCrawler
+FelixIDE/
+Hazel
+ESIRover
+fido/
+Hmhkki/
+KIT-Fireball/
+Fish-Search-Robot
+Robot du CRIM
+FunnelWeb
+gazz/
+gcreep/
+GetURL
+Golem/
+Googlebot/
+griffon/
+Gromit/
+Gulliver/
+Gulper Web Bot
+havIndex/
+AITCSRobot/
+wired-digital-newsbot/
+htdig/
+iajaBot/
+IBM_Planetwide
+gestaltIconoclast/
+INGRID/
+IncyWincy/
+Informant
+InfoSeek Robot
+Infoseek Sidewinder
+inspectorwww/
+I Robot
+IsraeliSearch/
+JavaBee
+JBot 
+JCrawler/
+JoBo 
+Jobot/
+JoeBot/
+JubiiRobot/
+jumpstation
+image.kapsi.net/
+Katipo/
+KDD-Explorer/
+KO_Yappo_Robot/
+LabelGrab/
+Linkidator/
+LinkScan Server/
+LinkWalker
+Lockon/
+Lycos/
+Magpie/
+MediaFox/
+MerzScope
+NEC-MeshExplorer
+MindCrawler
+UdmSearch
+moget/
+MOMspider/
+Monster/
+Motor/
+MSNBOT/
+Muninn/
+MuscatFerret/
+MwdSearch/
+NetCarta CyberPilot Pro
+NetMechanic
+newscan-online/
+NHSEWalker/
+Nomad-V2
+NorthStar
+ObjectsSearch/
+Occam/
+HKU WWW Robot
+Openfind data gatherer
+Orbsearch/
+PackRat/
+PageBoy/
+ParaSite/
+Patric/
+web robot PEGASUS
+Peregrinator-Mathematics/
+PerlCrawler/
+Duppies
+phpdig/
+PiltdownMan/
+Pioneer
+PortalJuice.com/
+PGP-KA/
+PlumtreeWebAccessor/
+Poppi/
+Raven-v2
+Resume Robot
+Robbie/
+ComputingSite Robi/
+RoboCrawl
+Robofox
+Roverbot
+RuLeS/
+SafetyNet Robot
+Scooter/
+searchprocess/
+Senrigan
+SG-Scout
+Shagseeker
+SimBot/
+Site Valet
+SiteTech-Rover
+aWapClient
+SLCrawler
+Slurp/
+Snooper/
+Solbot/
+mouse.house/
+spiderline/
+ssearcher100
+Tarantula/
+dlw3robot/
+TechBOT
+Templeton/
+TitIn/
+TITAN/
+UCSD-Crawler
+uptimebot
+urlck/
+Valkyrie/
+Verticrawlbot
+Victoria/
+vision-search/
+void-bot/
+Voyager/
+VWbot_K/
+W3M2/
+CrawlPaper/
+WWWWanderer
+WebBandit/
+WebCatcher/
+WebCopy/
+WebFetcher/
+weblayers/
+WebLinker/
+WebMoose/
+WebQuest/
+Digimarc WebReader/
+WebReaper
+webvac/
+webwalk
+WebWalker/
+WebWatch
+Wget/
+whatUseek_winona/
+w3mir
+WOLP/
+WWWC/
+XGET/

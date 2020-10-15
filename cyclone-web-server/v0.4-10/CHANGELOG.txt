@@ -1,0 +1,8 @@
+
+0.3 --
+
+WebSocket support (beta)
+support for sending e-mail
+fixed error handler bug 
+
+0.1 -- Initial version

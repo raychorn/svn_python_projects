@@ -1,0 +1,30 @@
+
+Z:\python projects\PowerSearch>main.py --dir=c:\ --search=benchmark.rb 
+powerSearchFor(benchmark.rb) at: [c:\]
+Found "benchmark.rb" in "c:\Program Files\NetBeans 6.0 Beta 1\ruby1\jruby-1.0.1\lib\ruby\1.8".
+         1955403 function calls (1804802 primitive calls) in 38.437 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   38.437   38.437 <string>:1(<module>)
+        1    0.122    0.122   38.437   38.437 main.py:10(powerSearchFor)
+        1    0.000    0.000   38.437   38.437 main.py:28(testIt)
+    17624    0.073    0.000    0.126    0.000 misc.py:3(isSimpleWildcard)
+    17624    0.064    0.000    0.190    0.000 misc.py:6(containsWildcard)
+   198575    0.455    0.000    0.455    0.000 ntpath.py:116(splitdrive)
+    17625    0.031    0.000    0.031    0.000 ntpath.py:245(islink)
+   180950    1.411    0.000   29.237    0.000 ntpath.py:267(isdir)
+   198575    0.938    0.000    1.393    0.000 ntpath.py:51(isabs)
+   198575    1.706    0.000    3.432    0.000 ntpath.py:59(join)
+168226/17625    2.340    0.000   38.124    0.002 os.py:224(walk)
+   180950    0.392    0.000    0.392    0.000 stat.py:29(S_IFMT)
+   180950    0.683    0.000    1.075    0.000 stat.py:45(S_ISDIR)
+   198575    0.333    0.000    0.333    0.000 {len}
+   180950    0.328    0.000    0.328    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+    17624    0.054    0.000    0.054    0.000 {method 'find' of 'str' objects}
+    17626    2.757    0.000    2.757    0.000 {nt.listdir}
+   180950   26.751    0.000   26.751    0.000 {nt.stat}
+
+

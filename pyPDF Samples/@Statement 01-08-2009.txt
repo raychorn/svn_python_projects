@@ -1,0 +1,3121 @@
+Statement is <elements=<pod.set.Set object at 0x01DE09F0>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 01-08-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 01-08-2009.pdf has 6 pages.
+========================================
+Account  Statement 
+December  6  ,  2008  through  January  8,  2009 
+Account  Number:  028-5742623 
+Page  1  of  6 
+RAY  C  HORN 
+1630  N  MAIN  ST  #  264 
+WALNUT  CREEK  CA  94596-4609 
+Thank  you  for  banking  with  Wells  Fargo.  For  assistance,  call:  1-800-TO-WELLS  (1-800-869-3557),  TDD  number  (for  the  hearing 
+impaired  only):1-800-877-4833.  Or  write:  WELLS  FARGO  BANK,  N.A.,  P.O.  BOX  6995,  PORTLAND,  OR  97228-6995. 
+Effective  April  1,  2009,  there  will  be  changes  to  Foreign  and  International  Services  Fees.  Foreign  Drafts:  Phone,  Mail  or  In-Store,  $20 
+each;  Foreign  Draft  Stop  Payment,  $75  each;  International  Item  Collection  over  $250,  $55  each. 
+The  Consumer  Account  Fee  And  Information  Schedule  and  the  Consumer  Account  Agreement,  as  amended,  continue  to  apply.  For 
+questions,  please  contact  your  local  banker  or  call  Wells  Fargo  Phone  Bank  at  1-800-TO-WELLS  (1-800-869-3557).  We  appreciate 
+your  business  and  look  forward  to  continuing  to  service  your  financial  needs. 
+Custom  Management  Checking 
+Ray  C  Horn 
+Account  Number:  028-5742623 
+Activity  summary 
+Balance  on  12/05  $2,801.55 
+Deposits  9,731.87 
+Withdrawals  -  12,673.08 
+Balance  on  01/08  -  $139.66 
+Continued  on  next  page 
+----------------------------------------
+December  6  ,  2008  through  January  8,  2009 
+Account  Number:  028-5742623 
+Page  2  of  6 
+Activity  detail 
+Deposits 
+Date  Description  $  Amount 
+12/08  Online  Transfer  Ref  #IBEML39BC6  From  Savings  Xfer  300.00 
+12/12  Online  Transfer  Ref  #IBE26Rqywb  From  Savings  Xfer  100.00 
+12/15  Magma  Design  Aut  Payroll  081211  CTR170967435  Horn,Raymond  C  3,292.86 
+12/15  6445  The  Trust  F  Dirdep  30407  Gwen  Horn  888.00 
+12/19  Online  Transfer  Ref  #IBE53Tyktf  From  Savings  Xfer  100.00 
+12/24  Direct  Deposit  Advance  On  12/24  ($50.00  *Finance  Charge*  Also  Applies)  500.00 
+12/24  Online  Transfer  Ref  #IBE7YWX2FD  From  Savings  Xfer  100.00 
+12/31  Magma  Design  Aut  Payroll  081229  CTR172048047  Horn,Raymond  C  2,951.01 
+12/31  6445  The  Trust  F  Dirdep  30407  Gwen  Horn  1,000.00 
+01/05  Direct  Deposit  Advance  On  01/03  ($50.00  *Finance  Charge*  Also  Applies)  500.00 
+Total  deposits  $9,731.87 
+Withdrawals 
+Other  withdrawals 
+Date  Description  $  Amount 
+12/08  Check  Crd  Purchase  12/06  Fastrak  Csc  01  Of  877-2298655  Ca  487309XXXXXX7156  90.00 
+343840007352764  ?MCC=9399  121042882DA01 
+12/08  POS  Purchase  -  12/07  Mach  ID  000000  Costco  Whse  #00Costco  Whsfairfield  Ca  7156  20.77 
+?MCC=5300  121042882DA 
+12/08  Check  Crd  Purchase  12/04  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  15.40 
+342840019605551  ?MCC=5542  121042882DA90 
+12/08  POS  Purchase  -  12/07  Mach  ID  000000  Costco  Gas  #004Costco  Gasfairfield  Ca  7156  9.69 
+?MCC=5542  121042882DA 
+12/09  Check  Crd  Purchase  12/07  Safeway  Store  00017228  Fairield  Ca  487309XXXXXX7156  54.38 
+344840005535354  ?MCC=5411  121042882DA90 
+12/09  Check  Crd  Purchase  12/08  Tiv*tivo  Service  877-367-8486  Ca  487309XXXXXX7156  12.95 
+344840004734590  ?MCC=4899  121042882DA01 
+12/10  Withdrawal  Made  In  A  Branch/Store  1,508.00 
+12/10  Withdrawal  Made  In  A  Branch/Store  1,200.00 
+12/10  Recurring  Transfer  Ref  #OPEJP2374L  To  Savings  Savings  Plan  100.00 
+12/12  WF  Bill  Pay  Thru  Software:Fee  121042882Nd  6.95 
+12/12  WF  Banking  Thru  Software:Fee  121042882Nd  3.00 
+12/15  Safe  Box  Annual  Fee  Ca-WFB00001-6515  75.00 
+12/15  Recurring  Transfer  Ref  #Opefryxfrf  To  Savings  XXXXXX6341  100.00 
+12/15  Check  Crd  Purchase  12/14  Ip-PROPERTYVAUL8184641  8184641650  Kn  39.95 
+487309XXXXXX7156  350840014530797  ?MCC=5969  121042882DA01 
+12/15  POS  Purchase  -  12/13  Mach  ID  000000  Costco  Gas  #004Costco  Gasfairfield  Ca  7156  6.57 
+?MCC=5542  121042882DA 
+12/16  Countrywide  Mortgage  XXXXX1070  Horn  RC  3,777.78 
+12/16  Countrywide  Mortgage  XXXXX1070  Horn  RC  6.00 
+Continued  on  next  page 
+----------------------------------------
+December  6  ,  2008  through  January  8,  2009 
+Account  Number:  028-5742623 
+Page  3  of  6 
+Other  withdrawals  -continued 
+Date  Description  $  Amount 
+12/18  Check  Crd  Purchase  12/17  Nfi*www.Netflix.Com/CC  Netflix.Com  Ca  487309XXXXXX7156  18.24 
+353840010440681  ?MCC=5968  121042882DA01 
+12/18  Check  Crd  Purchase  12/17  Sunol  Super  Stop  Sunol  Ca  487309XXXXXX7156  353840012268168  14.67 
+?MCC=5542  121042882DA90 
+12/18  Check  Crd  Purchase  12/17  Sunol  Super  Stop  Sunol  Ca  487309XXXXXX7156  353840012268167  5.23 
+?MCC=5541  121042882DA90 
+12/22  POS  Purchase  -  12/20  Mach  ID  000000  Costco  Whse  #00Costco  Whsfairfield  Ca  7156  99.84 
+?MCC=5300  121042882DA 
+12/22  Check  Crd  Purchase  12/20  Safeway  Store  00017228  Fairield  Ca  487309XXXXXX7156  14.00 
+357840007558902  ?MCC=5411  121042882DA90 
+12/22  POS  Purchase  -  12/20  Mach  ID  000000  Costco  Gas  #004Costco  Gasfairfield  Ca  7156  12.73 
+?MCC=5542  121042882DA 
+12/22  Check  Crd  Purchase  12/20  Longs  Drug  #540  Fairfield  Ca  487309XXXXXX7156  5.68 
+357840011969020  ?MCC=5912  121042882DA90 
+12/24  Recurring  Transfer  Ref  #Opefrzvvnr  To  Savings  Savings  Plan  100.00 
+12/26  Online  Transfer  Ref  #IBE7YWYK22  To  Expanded  Bus  Services  Pack  Xfer  404.00 
+12/26  Sbli  USA  Fin  Ser  Premiums  081225  3153213  Gwen  *horn  186.41 
+12/26  Check  Crd  Purchase  12/24  Safeway  Store  00017228  Fairield  Ca  487309XXXXXX7156  57.92 
+361840004298305  ?MCC=5411  121042882DA90 
+12/29  Check  Crd  Purchase  12/24  Pmr  Loan  Svcs  -  In  Hou  949-5872400  Ca  487309XXXXXX7156  206.37 
+363840012945025  ?MCC=7012  121042882DA01 
+12/29  Check  Crd  Purchase  12/27  Tiv*tivo  Service  877-367-8486  Ca  487309XXXXXX7156  6.95 
+363840006737085  ?MCC=4899  121042882DA01 
+12/30  Overdraft  Fee  35.00 
+12/30  Overdraft  Fee  35.00 
+12/31  Payment  For  Direct  Deposit  Advance  On  12/24  500.00 
+12/31  *Finance  Charge*Payment  For  DD  Adv  On  12/24  50.00 
+12/31  Withdrawal  Made  In  A  Branch/Store  3,108.00 
+12/31  Check  Crd  Purchase  12/30  J2  *rapidfax  Svcs  800-362-0703  Ca  487309XXXXXX7156  7.95 
+366840005986782  ?MCC=4814  121042882DA01 
+01/02  POS  Purchase  -  01/02  Mach  ID  000000  Costco  Gas  #004Costco  Gasfairfield  Ca  7156  7.02 
+?MCC=5542  121042882DA 
+01/05  Check  Crd  Purchase  01/03  Vzwrlss-Myacct  Vw  800-9220204  Ca  487309XXXXXX7156  320.64 
+005940008790098  ?MCC=4814  121042882DA01 
+01/05  Check  Crd  Purchase  01/05  Comcast  Cable  Comm  800-Comcast  Ca  487309XXXXXX7156  143.52 
+005940011449220  ?MCC=4899  121042882DA01 
+01/05  Check  Crd  Purchase  01/02  Kaiser  Prmente  002530  888-2186245  Ca  487309XXXXXX7156  70.00 
+005940008805274  ?MCC=5912  121042882DA01 
+01/05  Check  Crd  Purchase  01/03  Mc  Digi-Group  18007484573  Be  487309XXXXXX7156  29.95 
+005940012780132  ?MCC=5968  121042882DA01 
+01/05  Paypal  Inst  Xfer  090103  5ALJ23J4Kqccu  Hal  Smalltalker  Inc.  0.33 
+Continued  on  next  page 
+----------------------------------------
+December  6  ,  2008  through  January  8,  2009 
+Account  Number:  028-5742623 
+Page  4  of  6 
+Other  withdrawals  -continued 
+Date  Description  $  Amount 
+01/06  Check  Crd  Purchase  01/05  Att*cons  Phone  Pmt  800-288-2020  Tx  487309XXXXXX7156  133.80 
+006940007361521  ?MCC=4814  121042882DA01 
+01/06  Check  Crd  Purchase  01/04  Safeway  Store  00017228  Fairield  Ca  487309XXXXXX7156  3.39 
+006940004148941  ?MCC=5411  121042882DA90 
+01/07  Overdraft  Fee  35.00 
+01/07  Overdraft  Fee  35.00 
+Total  other  withdrawals  $12,673.08 
+Daily  balance  summary 
+Date  $  Balance  Date  $  Balance  Date  $  Balance 
+12/05  2,801.55  12/18  317.83  12/31  138.99 
+12/08  2,965.69  12/19  417.83  01/02  131.97 
+12/09  2,898.36  12/22  285.58  01/05  67.53 
+12/10  90.36  12/24  785.58  01/06  -  69.66 
+12/12  180.41  12/26  137.25  01/07  -  139.66 
+12/15  4,139.75  12/29  -  76.07 
+12/16  355.97  12/30  -  146.07 
+Direct  Deposit  Advance  (Lender  -  Wells  Fargo  Bank,  N.A.) 
+Outstanding  advance  balance  as  of  the  beginning  of  this  statement  period  including  Finance  Charges  $0.00 
+Outstanding  advance  balance  as  of  the  end  of  this  statement  period  including  Finance  Charges  $550.00 
+Finance  Charges  incurred  on  advances  taken  during  this  statement  period  $100.00 
+Annual  Percentage  Rate  (APR)  120.0% 
+Current  advance  credit  limit  $500.00 
+Consecutive  statements  with  at  least  1  advance  transaction  01 
+Activity  Detail 
+Post  Transaction 
+Date  Description  Amount 
+12/24  Direct  Deposit  Advance  Via  Online  12/24  500.00 
+12/31  *Finance  Charge*  Payment  For  Dir  Dep  Adv  12/24  -  50.00 
+12/31  Payment  For  Direct  Deposit  Advance  12/24  -  500.00 
+01/05  Direct  Deposit  Advance  Via  Online  01/03  500.00 
+Continued  on  next  page 
+----------------------------------------
+December  6  ,  2008  through  January  8,  2009 
+Account  Number:  028-5742623 
+Page  5  of  6 
+CHOOSE  THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  TO  ACCESS  UP  TO  $500  PRIOR  TO 
+RECEIVING  YOUR  RECURRING  DIRECT  DEPOSIT  INCOME.  JUST  USE  THE  ATM,  ONLINE 
+OR  CALL  THE  PHONE  BANK.  SEE  THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  AGREEMENT 
+AND  PRODUCT  GUIDE  FOR  COMPLETE  DETAILS. 
+THE  FINANCE  CHARGE  FOR  THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  IS  REFLECTED  AS  AN 
+ANNUAL  PERCENTAGE  RATE  (APR)  WHICH  IS  A  MEASURE  OF  THE  COST  OF  CREDIT.  THE 
+ADVANCE  AND  FINANCE  CHARGE  WILL  BE  AUTOMATICALLY  REPAID  FROM  ANY  INCOMING 
+PAYCHECK  OR  OTHER  ELECTRONIC  DEPOSIT  OF  $100  OR  MORE  OR  AFTER  35  DAYS  IF 
+INSUFFICIENT  DEPOSIT  INCOME  IS  RECEIVED.  SEE  THE  DIRECT  DEPOSIT  ADVANCE 
+SERVICE  AGREEMENT  AND  PRODUCT  GUIDE  FOR  COMPLETE  DETAILS. 
+Thank  you  for  banking  with  Wells  Fargo. 
+----------------------------------------
+Account  Balance  Calculation  Worksheet  In  Case  of  Errors  or  Questions  About  Your  Electronic 
+Transfers  (Including  Direct  Deposit  Advance  or  Deposit 
+1.  Use  the  following  worksheet  to  calculate  your  overall  account  balance.  Advance  *  Transactions) 
+2.  Go  through  your  register  and  mark  each  check,  withdrawal,  ATM  transaction, 
+payment,  deposit  or  other  credit  listed  on  your  statement.  Be  sure  that  your  Telephone  us  at  the  number  printed  on  the  front  of  this  statement  or  write  us  at  Wells 
+register  shows  any  interest  paid  into  your  account  and  any  service  charges,  Fargo  Bank,  P.O.  Box  6995,  Portland,  OR  97228-6995  as  soon  as  you  can,  if  you 
+automatic  payments  or  ATM  transactions  withdrawn  from  your  account  think  your  statement  or  receipt  is  wrong  or  if  you  need  more  information  about  a 
+during  this  statement  period.  transfer  on  the  statement  or  receipt.  We  must  hear  from  you  no  later  than  60  days 
+3.  Use  the  chart  below,  list  any  deposits,  transfers  to  your  account,  outstanding  after  we  sent  you  the  FIRST  statement  on  which  the  error  or  problem  appeared. 
+checks,  ATM  withdrawals,  ATM  payments  or  any  other  withdrawals 
+(including  any  from  previous  months)  which  are  listed  in  your  register  but  not  1.  Tell  us  your  name  and  account  number  (if  any). 
+shown  on  your  statement. 
+2.  Describe  the  error  or  the  transfer  you  are  unsure  about,  and  explain  as  clearly  as 
+you  can  why  you  believe  it  is  an  error  or  why  you  need  more  information. 
+ITEMS  OUTSTANDING 
+3.  Tell  us  the  dollar  amount  of  the  suspected  error. 
+NUMBER  AMOUNT 
+We  will  investigate  your  complaint  and  will  correct  any  error  promptly.  If  we  take  more 
+than  10  business  days  to  do  this,  we  will  credit  your  account  for  the  amount  you  think 
+is  in  error,  so  that  you  will  have  the  use  of  the  money  during  the  time  it  takes  us  to 
+complete  our  investigation. 
+If  the  error  concerns  a  Direct  Deposit  Advance  or  Deposit  Advance  transaction,  you 
+do  not  have  to  pay  any  amount  in  question  while  we  are  investigating,  but  you  are  still 
+obligated  to  pay  the  parts  of  your  Direct  Deposit  Advance  or  Deposit  Advance 
+transaction  that  are  not  in  question.  While  we  are  investigating  your  question,  we 
+cannot  report  you  as  delinquent  or  take  any  action  to  collect  the  amount  you  question. 
+*  The  Deposit  Advance  service  is  not  available  in  all  states. 
+To  Dispute  or  Report  Inaccuracies  in  Information  We  Have 
+Furnished  to  a  Consumer  Reporting  Agency  About  Your 
+Accounts 
+You  have  the  right  to  dispute  the  accuracy  of  information  that  Wells  Fargo  Bank,  N.A. 
+has  furnished  to  a  consumer  reporting  agency  by  writing  to  us  at  Wells  Fargo 
+Servicing,  P.O.  Box  14415,  Des  Moines,  IA  50306-3415.  Please  describe  the  specific 
+information  that  is  inaccurate  or  in  dispute  and  the  basis  for  the  dispute  along  with  all 
+supporting  documentation.  If  you  believe  the  information  furnished  is  the  result  of 
+identity  theft,  please  provide  us  with  an  identity  theft  report. 
+TOTAL  $ 
+Are  you  interested  in... 
+ENTER 
+Purchasing  a  home?  Call  us  at  1-800-866-0743 
+A  The  NEW  BALANCE  shown  on  your  statement  $ 
+Getting  a  student  loan?  Call  us  at  1-888-945-5373 
+Optimizing  home  equity?  Call  us  at  1-866-259-0890 
+ADD 
+B  Any  deposits  listed  in  your  $ 
+register  or  transfers  into 
+your  account  which  are  not  $ 
+shown  on  your  statement. 
+$ 
++$ 
+TOTAL  ..................  $ 
+CALCULATE  THE  SUBTOTAL  ...................  $ 
+(Add  Parts  A  and  B) 
+SUBTRACT 
+C  The  total  outstanding  checks  and 
+withdrawals  from  the  chart  above  ..................  -  $ 
+CALCULATE  THE  ENDING  BALANCE 
+(Part  A  +  Part  B  -  Part  C) 
+This  amount  should  be  the  same 
+as  the  current  balance  shown  in 
+your  check  register  ............................................  $ 
+d  2006  Wells  Fargo  Bank,  N.A.  All  rights  reserved. 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01C8E8D0>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 02-06-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 02-06-2009.pdf has 5 pages.
+========================================
+Account  Statement 
+January  9  through  February  6,  2009 
+Account  Number:  028-5742623 
+Page  1  of  5 
+RAY  C  HORN 
+1630  N  MAIN  ST  #  264 
+WALNUT  CREEK  CA  94596-4609 
+Thank  you  for  banking  with  Wells  Fargo.  For  assistance,  call:  1-800-TO-WELLS  (1-800-869-3557),  TDD  number  (for  the  hearing 
+impaired  only):1-800-877-4833.  Or  write:  WELLS  FARGO  BANK,  N.A.,  P.O.  BOX  6995,  PORTLAND,  OR  97228-6995. 
+Custom  Management  Checking 
+Ray  C  Horn 
+Account  Number:  028-5742623 
+Activity  summary 
+Balance  on  01/08  -  $139.66 
+Deposits  8,445.56 
+Withdrawals  -  7,115.19 
+Balance  on  02/06  $1,190.71 
+We  hope  you're  enjoying  all  of  the  benefits  of  your  Checking  Package.  To  make  sure  your  monthly  service  fee  continues  to  be  waived 
+or  to  waive  your  monthly  service  fee  on  your  checking  account,  you  must  meet  the  Checking  Package  requirements  and  have  three 
+additional  qualifying  consumer  accounts  and/or  services.  Business  accounts  and  services  do  not  count  toward  Consumer  Package 
+requirements.  If  you  have  questions,  please  contact  your  Wells  Fargo  banker  or  call  Wells  Fargo  Phone  Bank  at  1-800-TO-WELLS 
+(1-800-857-3557). 
+Continued  on  next  page 
+----------------------------------------
+January  9  through  February  6,  2009 
+Account  Number:  028-5742623 
+Page  2  of  5 
+Activity  detail 
+Deposits 
+Date  Description  $  Amount 
+01/12  ATM  Check  Deposit  -  01/10  Mach  ID  0585E  1499  N  Main  St  Walnut  Creek  Ca  7156  641.70 
+01/15  Magma  Design  Aut  Payroll  090113  CTR174727247  Horn,Raymond  C  2,901.93 
+01/15  6445  The  Trust  F  Dirdep  30407  Gwen  Horn  1,000.00 
+01/30  Magma  Design  Aut  Payroll  090128  CTR176465567  Horn,Raymond  C  2,901.93 
+01/30  6445  The  Trust  F  Dirdep  30407  Gwen  Horn  1,000.00 
+Total  deposits  $8,445.56 
+Withdrawals 
+Other  withdrawals 
+Date  Description  $  Amount 
+01/09  Check  Crd  Purchase  01/08  Tiv*tivo  Service  877-367-8486  Ca  487309XXXXXX7156  12.95 
+009940004530310  ?MCC=4899  121042882DA01 
+01/09  Continuous  OD  Level  2  Charge  5.00 
+01/12  Overdraft  Fee  35.00 
+01/12  Check  Crd  Purchase  01/11  Best  Buy  Mht  00001362  Fairfield  Ca  487309XXXXXX7156  74.08 
+012940012668819  ?MCC=5732  121042882DA90 
+01/12  POS  Purchase  -  01/11  Mach  ID  000000  Costco  Whse  #00Costco  Whsfairfield  Ca  7156  74.04 
+?MCC=5300  121042882DA 
+01/13  Check  Crd  Purchase  01/13  Ip-PROPERTYVAUL8184641  8184641650  Kn  39.95 
+487309XXXXXX7156  013940008631525  ?MCC=5969  121042882DA01 
+01/13  Check  Crd  Purchase  01/11  Regis  Hairstylists  Fairfield  Ca  487309XXXXXX7156  28.33 
+013940005790313  ?MCC=7230  121042882DA90 
+01/13  Check  Crd  Purchase  01/10  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  17.38 
+013940006414387  ?MCC=5542  121042882DA90 
+01/13  Check  Crd  Purchase  01/11  Safeway  Store  00017228  Fairield  Ca  487309XXXXXX7156  16.46 
+013940004580622  ?MCC=5411  121042882DA90 
+01/15  Payment  For  Direct  Deposit  Advance  On  01/03  500.00 
+01/15  *Finance  Charge*Payment  For  DD  Adv  On  01/03  50.00 
+01/15  WF  Bill  Pay  Thru  Software:Fee  121042882Nd  6.95 
+01/15  WF  Banking  Thru  Software:Fee  121042882Nd  3.00 
+01/15  Online  Transfer  Ref  #IBE26Vxjdl  To  Expanded  Bus  Services  Pack  Pay  Back  150.00 
+01/20  Check  Crd  Purchase  01/18  WM  Supercenter  American  Cany  Ca  487309XXXXXX7156  85.98 
+019940009861516  ?MCC=5411  121042882DA90 
+01/20  Check  Crd  Purchase  01/15  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  18.71 
+018940017466134  ?MCC=5542  121042882DA90 
+01/20  Check  Crd  Purchase  01/17  Nfi*www.Netflix.Com/CC  Netflix.Com  Ca  487309XXXXXX7156  18.24 
+018940012606630  ?MCC=5968  121042882DA01 
+01/20  POS  Purchase  -  01/18  Mach  ID  000000  Costco  Gas  #004Costco  Gasfairfield  Ca  7156  13.87 
+?MCC=5542  121042882DA 
+01/21  Online  Transfer  Ref  #IBEML7Jqmv  To  Expanded  Bus  Services  Pack  Business  Expenses  100.00 
+01/23  Paypal  Inst  Xfer  090123  5ALJ23JX5Qsxc  Hal  Smalltalker  Inc.  66.97 
+Continued  on  next  page 
+----------------------------------------
+January  9  through  February  6,  2009 
+Account  Number:  028-5742623 
+Page  3  of  5 
+Other  withdrawals  -continued 
+Date  Description  $  Amount 
+01/26  Sbli  USA  Fin  Ser  Premiums  090125  5253597  Gwen  *horn  186.41 
+01/26  Check  Crd  Purchase  01/23  Fastrak  Csc  877-2298655  Ca  487309XXXXXX7156  025940019167999  90.00 
+?MCC=9399  121042882DA01 
+01/26  Check  Crd  Purchase  01/25  WM  Supercenter  American  Cany  Ca  487309XXXXXX7156  48.67 
+026940013042632  ?MCC=5411  121042882DA90 
+01/26  Check  Crd  Purchase  01/24  Solano  Garbage  Company  510-262-1682  Ca  487309XXXXXX7156  37.82 
+025940009566135  ?MCC=4900  121042882DA01 
+01/26  Check  Crd  Purchase  01/22  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  18.36 
+025940017240662  ?MCC=5542  121042882DA90 
+01/26  POS  Purchase  -  01/25  Mach  ID  000000  Costco  Gas  #004Costco  Gasfairfield  Ca  7156  15.93 
+?MCC=5542  121042882DA 
+01/27  Check  Crd  Purchase  01/27  Aaa*renewal  Payment  800-922-8228  Ca  487309XXXXXX7156  300.00 
+027940009570281  ?MCC=6300  121042882DA01 
+01/27  Hsbc  Card  Srvcs  Online  Pmt  090127  000000409683083  Raymond  Horn  Jr  79.31 
+01/27  Check  Crd  Purchase  01/26  WWW.Safecart.Com  1-800209-6437  Wa  487309XXXXXX7156  39.90 
+027940010519255  ?MCC=5045  121042882DA01 
+01/27  Check  Crd  Purchase  01/26  Best  Buy  00001354  Pleasant  Hill  Ca  487309XXXXXX7156  35.71 
+027940009023821  ?MCC=5732  121042882DA90 
+01/28  Check  Crd  Purchase  01/26  Pmr  Loan  Svcs  -  In  Hou  949-5872400  Ca  487309XXXXXX7156  206.37 
+028940005689293  ?MCC=7012  121042882DA01 
+01/28  Check  Crd  Purchase  01/27  Tiv*tivo  Service  877-367-8486  Ca  487309XXXXXX7156  6.95 
+028940004216540  ?MCC=4899  121042882DA01 
+01/29  POS  Purchase  -  01/29  Mach  ID  000000  Arco  Paypoint  Arco  Paypofairfield  Ca  7156  18.60 
+?MCC=5541  121042882DA 
+01/29  Check  Crd  Purchase  01/27  Safeway  Store  00019315  Fremont  Ca  487309XXXXXX7156  9.78 
+029940004805086  ?MCC=5411  121042882DA90 
+02/02  Online  Transfer  Ref  #IBETDCNCG9  To  Expanded  Bus  Services  Pack  Operating  Budget  150.00 
+02/02  Check  Crd  Purchase  02/02  Comcast  Cable  Comm  800-Comcast  Ca  487309XXXXXX7156  144.01 
+033940016695388  ?MCC=4899  121042882DA01 
+02/02  Check  Crd  Purchase  01/30  J2  *rapidfax  Svcs  800-362-0703  Ca  487309XXXXXX7156  7.95 
+031940005465136  ?MCC=4814  121042882DA01 
+02/03  Countrywide  Mortgage  XXXXX1070  Horn  RC  3,924.61 
+02/03  Countrywide  Mortgage  XXXXX1070  Horn  RC  6.00 
+02/05  Check  Crd  Purchase  02/03  Vzwrlss-Myacct  Vw  800-9220204  Ca  487309XXXXXX7156  318.25 
+036940006508995  ?MCC=4814  121042882DA01 
+02/05  Check  Crd  Purchase  02/04  Att*cons  Phone  Pmt  800-288-2020  Tx  487309XXXXXX7156  133.69 
+036940007569939  ?MCC=4814  121042882DA01 
+02/05  Check  Crd  Purchase  02/03  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  19.96 
+036940007221193  ?MCC=5542  121042882DA90 
+Total  other  withdrawals  $7,115.19 
+Daily  balance  summary 
+Date  $  Balance  Date  $  Balance  Date  $  Balance 
+01/08  -  139.66  01/12  300.97  01/15  3,390.83 
+01/09  -  157.61  01/13  198.85  01/20  3,254.03 
+Continued  on  next  page 
+----------------------------------------
+January  9  through  February  6,  2009 
+Account  Number:  028-5742623 
+Page  4  of  5 
+Daily  balance  summary  -continued 
+Date  $  Balance  Date  $  Balance  Date  $  Balance 
+01/21  3,154.03  01/28  2,021.63  02/03  1,662.61 
+01/23  3,087.06  01/29  1,993.25  02/05  1,190.71 
+01/26  2,689.87  01/30  5,895.18 
+01/27  2,234.95  02/02  5,593.22 
+Direct  Deposit  Advance  (Lender  -  Wells  Fargo  Bank,  N.A.) 
+Outstanding  advance  balance  as  of  the  beginning  of  this  statement  period  including  Finance  Charges  $550.00 
+Outstanding  advance  balance  as  of  the  end  of  this  statement  period  including  Finance  Charges  $0.00 
+Finance  Charges  incurred  on  advances  taken  during  this  statement  period  $0.00 
+Current  advance  credit  limit  $500.00 
+Activity  Detail 
+Post  Transaction 
+Date  Description  Amount 
+01/15  *Finance  Charge*  Payment  For  Dir  Dep  Adv  01/03  -  50.00 
+01/15  Payment  For  Direct  Deposit  Advance  01/03  -  500.00 
+CHOOSE  THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  TO  ACCESS  UP  TO  $500  PRIOR  TO 
+RECEIVING  YOUR  RECURRING  DIRECT  DEPOSIT  INCOME.  JUST  USE  THE  ATM,  ONLINE 
+OR  CALL  THE  PHONE  BANK.  SEE  THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  AGREEMENT 
+AND  PRODUCT  GUIDE  FOR  COMPLETE  DETAILS. 
+Thank  you  for  banking  with  Wells  Fargo. 
+----------------------------------------
+Account  Balance  Calculation  Worksheet  In  Case  of  Errors  or  Questions  About  Your  Electronic 
+Transfers  (Including  Direct  Deposit  Advance  or  Deposit 
+1.  Use  the  following  worksheet  to  calculate  your  overall  account  balance.  Advance  *  Transactions) 
+2.  Go  through  your  register  and  mark  each  check,  withdrawal,  ATM  transaction, 
+payment,  deposit  or  other  credit  listed  on  your  statement.  Be  sure  that  your  Telephone  us  at  the  number  printed  on  the  front  of  this  statement  or  write  us  at  Wells 
+register  shows  any  interest  paid  into  your  account  and  any  service  charges,  Fargo  Bank,  P.O.  Box  6995,  Portland,  OR  97228-6995  as  soon  as  you  can,  if  you 
+automatic  payments  or  ATM  transactions  withdrawn  from  your  account  think  your  statement  or  receipt  is  wrong  or  if  you  need  more  information  about  a 
+during  this  statement  period.  transfer  on  the  statement  or  receipt.  We  must  hear  from  you  no  later  than  60  days 
+3.  Use  the  chart  below,  list  any  deposits,  transfers  to  your  account,  outstanding  after  we  sent  you  the  FIRST  statement  on  which  the  error  or  problem  appeared. 
+checks,  ATM  withdrawals,  ATM  payments  or  any  other  withdrawals 
+(including  any  from  previous  months)  which  are  listed  in  your  register  but  not  1.  Tell  us  your  name  and  account  number  (if  any). 
+shown  on  your  statement. 
+2.  Describe  the  error  or  the  transfer  you  are  unsure  about,  and  explain  as  clearly  as 
+you  can  why  you  believe  it  is  an  error  or  why  you  need  more  information. 
+ITEMS  OUTSTANDING 
+3.  Tell  us  the  dollar  amount  of  the  suspected  error. 
+NUMBER  AMOUNT 
+We  will  investigate  your  complaint  and  will  correct  any  error  promptly.  If  we  take  more 
+than  10  business  days  to  do  this,  we  will  credit  your  account  for  the  amount  you  think 
+is  in  error,  so  that  you  will  have  the  use  of  the  money  during  the  time  it  takes  us  to 
+complete  our  investigation. 
+If  the  error  concerns  a  Direct  Deposit  Advance  or  Deposit  Advance  transaction,  you 
+do  not  have  to  pay  any  amount  in  question  while  we  are  investigating,  but  you  are  still 
+obligated  to  pay  the  parts  of  your  Direct  Deposit  Advance  or  Deposit  Advance 
+transaction  that  are  not  in  question.  While  we  are  investigating  your  question,  we 
+cannot  report  you  as  delinquent  or  take  any  action  to  collect  the  amount  you  question. 
+*  The  Deposit  Advance  service  is  not  available  in  all  states. 
+To  Dispute  or  Report  Inaccuracies  in  Information  We  Have 
+Furnished  to  a  Consumer  Reporting  Agency  About  Your 
+Accounts 
+You  have  the  right  to  dispute  the  accuracy  of  information  that  Wells  Fargo  Bank,  N.A. 
+has  furnished  to  a  consumer  reporting  agency  by  writing  to  us  at  Wells  Fargo 
+Servicing,  P.O.  Box  14415,  Des  Moines,  IA  50306-3415.  Please  describe  the  specific 
+information  that  is  inaccurate  or  in  dispute  and  the  basis  for  the  dispute  along  with  all 
+supporting  documentation.  If  you  believe  the  information  furnished  is  the  result  of 
+identity  theft,  please  provide  us  with  an  identity  theft  report. 
+TOTAL  $ 
+Are  you  interested  in... 
+ENTER 
+Purchasing  a  home?  Call  us  at  1-800-866-0743 
+A  The  NEW  BALANCE  shown  on  your  statement  $ 
+Getting  a  student  loan?  Call  us  at  1-888-945-5373 
+Optimizing  home  equity?  Call  us  at  1-866-259-0890 
+ADD 
+B  Any  deposits  listed  in  your  $ 
+register  or  transfers  into 
+your  account  which  are  not  $ 
+shown  on  your  statement. 
+$ 
++$ 
+TOTAL  ..................  $ 
+CALCULATE  THE  SUBTOTAL  ...................  $ 
+(Add  Parts  A  and  B) 
+SUBTRACT 
+C  The  total  outstanding  checks  and 
+withdrawals  from  the  chart  above  ..................  -  $ 
+CALCULATE  THE  ENDING  BALANCE 
+(Part  A  +  Part  B  -  Part  C) 
+This  amount  should  be  the  same 
+as  the  current  balance  shown  in 
+your  check  register  ............................................  $ 
+d  2006  Wells  Fargo  Bank,  N.A.  All  rights  reserved. 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01C7E5B0>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 03-06-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 03-06-2009.pdf has 5 pages.
+========================================
+Account  Statement 
+February  7  through  March  6,  2009 
+Account  Number:  028-5742623 
+Page  1  of  5 
+RAY  C  HORN 
+1630  N  MAIN  ST  #  264 
+WALNUT  CREEK  CA  94596-4609 
+Thank  you  for  banking  with  Wells  Fargo.  For  assistance,  call:  1-800-TO-WELLS  (1-800-869-3557),  TDD  number  (for  the  hearing 
+impaired  only):1-800-877-4833.  Or  write:  WELLS  FARGO  BANK,  N.A.,  P.O.  BOX  6995,  PORTLAND,  OR  97228-6995. 
+Revised  Agreement  For  Online  Banking 
+We've  updated  our  Online  Access  Agreement.  To  see  what  has  changed,  please  visit  wellsfargo.com/onlineupdates 
+Custom  Management  Checking 
+Ray  C  Horn 
+Account  Number:  028-5742623 
+Activity  summary 
+Balance  on  02/06  $1,190.71 
+Deposits  8,446.80 
+Withdrawals  -  7,730.63 
+Balance  on  03/06  $1,906.88 
+From  now  through  April  15,  2009,  boost  your  retirement  savings  for  the  2008  tax  year  by  opening  or  adding  to  a  Wells  Fargo  IRA.  For 
+Traditional  and  Roth  IRAs,  the  2008  and  2009  annual  contribution  maximums  are  $5,000  for  individuals  under  50,  or  $6,000  for 
+individuals  age  50  or  older.  These  limits  apply  to  aggregate  contributions  made  to  Traditional  and  Roth  IRAs  for  each  year. 
+A  recurring  contribution  to  your  IRA  is  a  great  way  to  pay  yourself  first  and  watch  your  retirement  savings  grow.  To  find  out  how 
+Wells  Fargo  can  help  you  save  for  retirement,  visit  wellsfargo.com/special  Keyword:  "IRA  Today"  or  speak  to  your  local  Wells  Fargo 
+banker. 
+Continued  on  next  page 
+----------------------------------------
+February  7  through  March  6,  2009 
+Account  Number:  028-5742623 
+Page  2  of  5 
+Activity  detail 
+Deposits 
+Date  Description  $  Amount 
+02/12  ATM  Check  Deposit  -  02/12  Mach  ID  0466A  1705  No  First  St  San  Jose  Ca  7156  30.00 
+02/13  Magma  Design  Aut  Payroll  090211  CTR178372003  Horn,Raymond  C  2,901.93 
+02/17  ATM  Check  Deposit  -  02/17  Mach  ID  2816B  Redwood  Plaza  Vallejo  Ca  7156  900.00 
+02/17  ATM  Check  Deposit  -  02/15  Mach  ID  2030S  611  Trancas  St  Napa  Ca  7156  700.00 
+02/20  Check  Crd  Pur  Rtrn  02/19  Ip-Jbeck  Membership  8184641650  Kn  487309XXXXXX7156  39.95 
+051940010053157  ?MCC=8299  121042882DA01 
+02/20  Check  Crd  Pur  Rtrn  02/19  Ip-PROPERTYVAUL8184641  8184641650  Kn  39.95 
+487309XXXXXX7156  051940010055392  ?MCC=5969  121042882DA01 
+02/26  ATM  Check  Deposit  -  02/26  Mach  ID  0466A  1705  No  First  St  San  Jose  Ca  7156  803.04 
+02/27  Magma  Design  Aut  Payroll  090225  CTR180109640  Horn,Raymond  C  2,901.93 
+02/27  ATM  Check  Deposit  -  02/27  Mach  ID  0585A  1499  N  Main  St  Walnut  Creek  Ca  7156  130.00 
+Total  deposits  $8,446.80 
+Withdrawals 
+Checks 
+Number  Date  $  Amount  Number  Date  $  Amount  Number  Date  $  Amount 
+5491  02/19  202.70 
+Total  checks  $202.70 
+Other  withdrawals 
+Date  Description  $  Amount 
+02/09  Capital  One  Auto  Carpay  000066067151001  Ray  Horn  771.62 
+02/09  Check  Crd  Purchase  02/06  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  19.72 
+039940012179036  ?MCC=5542  121042882DA90 
+02/09  Check  Crd  Purchase  02/08  Tiv*tivo  Service  877-367-8486  Ca  487309XXXXXX7156  12.95 
+040940006244760  ?MCC=4899  121042882DA01 
+02/11  Check  Crd  Purchase  02/10  Target  00012088  Walnut  Creek  Ca  487309XXXXXX7156  7.74 
+042940009558852  ?MCC=5310  121042882DA90 
+02/12  Check  Crd  Purchase  02/10  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  16.41 
+043940007189402  ?MCC=5542  121042882DA90 
+02/13  WF  Bill  Pay  Thru  Software:Fee  121042882Nd  6.95 
+02/13  WF  Banking  Thru  Software:Fee  121042882Nd  3.00 
+02/17  Check  Crd  Purchase  02/13  Ip-Jbeck  Membership  8184641650  Kn  487309XXXXXX7156  39.95 
+046940021652892  ?MCC=8299  121042882DA01 
+02/17  Check  Crd  Purchase  02/13  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  21.37 
+046940012008968  ?MCC=5542  121042882DA90 
+02/17  Check  Crd  Purchase  02/15  See'S  Candies  #543  Napa  Ca  487309XXXXXX7156  20.16 
+047940014442017  ?MCC=5441  121042882DA90 
+02/18  Countrywide  Mortgage  XXXXX1070  Horn  RC  3,777.78 
+Continued  on  next  page 
+----------------------------------------
+February  7  through  March  6,  2009 
+Account  Number:  028-5742623 
+Page  3  of  5 
+Other  withdrawals  -continued 
+Date  Description  $  Amount 
+02/18  Check  Crd  Purchase  02/17  Radioshack  COR00132670  Vallejo  Ca  487309XXXXXX7156  123.46 
+049940011238626  ?MCC=5732  121042882DA90 
+02/18  Check  Crd  Purchase  02/17  Nfi*www.Netflix.Com/CC  Netflix.Com  Ca  487309XXXXXX7156  18.24 
+049940009268320  ?MCC=5968  121042882DA01 
+02/18  Countrywide  Mortgage  XXXXX1070  Horn  RC  6.00 
+02/18  Check  Crd  Purchase  02/17  Target  00003319  Vallejo  Ca  487309XXXXXX7156  049940009670881  2.14 
+?MCC=5310  121042882DA90 
+02/19  Check  Crd  Purchase  02/17  Safeway  STORE00009894  Vallejo  Ca  487309XXXXXX7156  14.49 
+050940004446802  ?MCC=5411  121042882DA90 
+02/23  Check  Crd  Purchase  02/20  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  17.04 
+053940012721826  ?MCC=5542  121042882DA90 
+02/25  Check  Crd  Purchase  02/25  Eve-Online  Subscriptio  Reykjavik  Is  487309XXXXXX7156  131.40 
+056940011388598  ?MCC=5968  121042882DA 
+02/25  Check  Crd  Purchase  02/23  Safeway  Store  00017228  Fairield  Ca  487309XXXXXX7156  8.67 
+056940004622978  ?MCC=5411  121042882DA90 
+02/26  Check  Crd  Purchase  02/24  Pmr  Loan  Svcs  -  In  Hou  949-5872400  Ca  487309XXXXXX7156  206.37 
+057940006198065  ?MCC=7012  121042882DA01 
+02/26  Sbli  USA  Fin  Ser  Premiums  090225  6027473  Gwen  *horn  186.41 
+02/27  Check  Crd  Purchase  02/26  Atlas  Technology  Group  305-428-2561  Fl  487309XXXXXX7156  138.95 
+058940009873190  ?MCC=5399  121042882DA01 
+02/27  Check  Crd  Purchase  02/25  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  14.57 
+058940007321592  ?MCC=5542  121042882DA90 
+03/02  Capital  One  Auto  Carpay  000066067151001  Ray  Horn  771.62 
+03/02  Check  Crd  Purchase  02/28  WM  Supercenter  American  Cany  Ca  487309XXXXXX7156  29.81 
+061940025544947  ?MCC=5411  121042882DA90 
+03/02  Check  Crd  Purchase  02/27  Tiv*tivo  Service  877-367-8486  Ca  487309XXXXXX7156  6.95 
+059940005160376  ?MCC=4899  121042882DA01 
+03/03  Pacific  Gas/Elec  Online  Pmt  090303  CKF236716072Neg  Gwen  Horn  420.00 
+03/03  Check  Crd  Purchase  02/28  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  20.71 
+062940007414809  ?MCC=5542  121042882DA90 
+03/04  Check  Crd  Purchase  03/02  Vzwrlss-Myacct  Vw  800-9220204  Ca  487309XXXXXX7156  202.56 
+063940006756634  ?MCC=4814  121042882DA01 
+03/04  Check  Crd  Purchase  03/04  Comcast  Cable  Comm  800-Comcast  Ca  487309XXXXXX7156  144.02 
+063940010506208  ?MCC=4899  121042882DA01 
+03/04  POS  Purchase  -  03/03  Mach  ID  000000  Costco  Whse  #00Costco  Whssanta  Clara  Ca  7156  116.24 
+?MCC=5300  121042882DA 
+03/05  Check  Crd  Purchase  03/04  Union  76  00459412  Fremont  Ca  487309XXXXXX7156  19.16 
+064940011333551  ?MCC=5542  121042882DA90 
+03/06  Check  Crd  Purchase  03/05  Att*cons  Phone  Pmt  800-288-2020  Tx  487309XXXXXX7156  133.52 
+065940007799998  ?MCC=4814  121042882DA01 
+Continued  on  next  page 
+----------------------------------------
+February  7  through  March  6,  2009 
+Account  Number:  028-5742623 
+Page  4  of  5 
+Other  withdrawals  -continued 
+Date  Description  $  Amount 
+03/06  Check  Crd  Purchase  03/05  Fastrak  Csc  877-2298655  Ca  487309XXXXXX7156  065940009198272  90.00 
+?MCC=9399  121042882DA01 
+03/06  Check  Crd  Purchase  03/05  J2  *rapidfax  Svcs  800-362-0703  Ca  487309XXXXXX7156  7.95 
+065940006137870  ?MCC=4814  121042882DA01 
+Total  other  withdrawals  $7,527.93 
+Total  withdrawals  $7,730.63 
+Daily  balance  summary 
+Date  $  Balance  Date  $  Balance  Date  $  Balance 
+02/06  1,190.71  02/18  875.15  02/27  3,869.42 
+02/09  386.42  02/19  657.96  03/02  3,061.04 
+02/11  378.68  02/20  737.86  03/03  2,620.33 
+02/12  392.27  02/23  720.82  03/04  2,157.51 
+02/13  3,284.25  02/25  580.75  03/05  2,138.35 
+02/17  4,802.77  02/26  991.01  03/06  1,906.88 
+Direct  Deposit  Advance  (Lender  -  Wells  Fargo  Bank,  N.A.) 
+Outstanding  advance  balance  as  of  the  beginning  of  this  statement  period  including  Finance  Charges  $0.00 
+Outstanding  advance  balance  as  of  the  end  of  this  statement  period  including  Finance  Charges  $0.00 
+Finance  Charges  incurred  on  advances  taken  during  this  statement  period  $0.00 
+Current  advance  credit  limit  $500.00 
+THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  IS  THERE  WHEN  YOU  NEED  IT.  ADVANCE  UP  TO 
+$500  OF  YOUR  RECURRING  DIRECT  DEPOSIT  INCOME  AT  THE  ATM,  ONLINE  OR  CALL  THE 
+PHONE  BANK.  SEE  THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  AGREEMENT  AND  PRODUCT 
+GUIDE  FOR  COMPLETE  DETAILS. 
+Thank  you  for  banking  with  Wells  Fargo. 
+----------------------------------------
+Account  Balance  Calculation  Worksheet  In  Case  of  Errors  or  Questions  About  Your  Electronic 
+Transfers  (Including  Direct  Deposit  Advance  or  Deposit 
+1.  Use  the  following  worksheet  to  calculate  your  overall  account  balance.  Advance  *  Transactions) 
+2.  Go  through  your  register  and  mark  each  check,  withdrawal,  ATM  transaction, 
+payment,  deposit  or  other  credit  listed  on  your  statement.  Be  sure  that  your  Telephone  us  at  the  number  printed  on  the  front  of  this  statement  or  write  us  at  Wells 
+register  shows  any  interest  paid  into  your  account  and  any  service  charges,  Fargo  Bank,  P.O.  Box  6995,  Portland,  OR  97228-6995  as  soon  as  you  can,  if  you 
+automatic  payments  or  ATM  transactions  withdrawn  from  your  account  think  your  statement  or  receipt  is  wrong  or  if  you  need  more  information  about  a 
+during  this  statement  period.  transfer  on  the  statement  or  receipt.  We  must  hear  from  you  no  later  than  60  days 
+3.  Use  the  chart  below,  list  any  deposits,  transfers  to  your  account,  outstanding  after  we  sent  you  the  FIRST  statement  on  which  the  error  or  problem  appeared. 
+checks,  ATM  withdrawals,  ATM  payments  or  any  other  withdrawals 
+(including  any  from  previous  months)  which  are  listed  in  your  register  but  not  1.  Tell  us  your  name  and  account  number  (if  any). 
+shown  on  your  statement. 
+2.  Describe  the  error  or  the  transfer  you  are  unsure  about,  and  explain  as  clearly  as 
+you  can  why  you  believe  it  is  an  error  or  why  you  need  more  information. 
+ITEMS  OUTSTANDING 
+3.  Tell  us  the  dollar  amount  of  the  suspected  error. 
+NUMBER  AMOUNT 
+We  will  investigate  your  complaint  and  will  correct  any  error  promptly.  If  we  take  more 
+than  10  business  days  to  do  this,  we  will  credit  your  account  for  the  amount  you  think 
+is  in  error,  so  that  you  will  have  the  use  of  the  money  during  the  time  it  takes  us  to 
+complete  our  investigation. 
+If  the  error  concerns  a  Direct  Deposit  Advance  or  Deposit  Advance  transaction,  you 
+do  not  have  to  pay  any  amount  in  question  while  we  are  investigating,  but  you  are  still 
+obligated  to  pay  the  parts  of  your  Direct  Deposit  Advance  or  Deposit  Advance 
+transaction  that  are  not  in  question.  While  we  are  investigating  your  question,  we 
+cannot  report  you  as  delinquent  or  take  any  action  to  collect  the  amount  you  question. 
+*  The  Deposit  Advance  service  is  not  available  in  all  states. 
+To  Dispute  or  Report  Inaccuracies  in  Information  We  Have 
+Furnished  to  a  Consumer  Reporting  Agency  About  Your 
+Accounts 
+You  have  the  right  to  dispute  the  accuracy  of  information  that  Wells  Fargo  Bank,  N.A. 
+has  furnished  to  a  consumer  reporting  agency  by  writing  to  us  at  Wells  Fargo 
+Servicing,  P.O.  Box  14415,  Des  Moines,  IA  50306-3415.  Please  describe  the  specific 
+information  that  is  inaccurate  or  in  dispute  and  the  basis  for  the  dispute  along  with  all 
+supporting  documentation.  If  you  believe  the  information  furnished  is  the  result  of 
+identity  theft,  please  provide  us  with  an  identity  theft  report. 
+TOTAL  $ 
+Are  you  interested  in... 
+ENTER 
+Purchasing  a  home?  Call  us  at  1-800-866-0743 
+A  The  NEW  BALANCE  shown  on  your  statement  $ 
+Getting  a  student  loan?  Call  us  at  1-888-945-5373 
+Optimizing  home  equity?  Call  us  at  1-866-259-0890 
+ADD 
+B  Any  deposits  listed  in  your  $ 
+register  or  transfers  into 
+your  account  which  are  not  $ 
+shown  on  your  statement. 
+$ 
++$ 
+TOTAL  ..................  $ 
+CALCULATE  THE  SUBTOTAL  ...................  $ 
+(Add  Parts  A  and  B) 
+SUBTRACT 
+C  The  total  outstanding  checks  and 
+withdrawals  from  the  chart  above  ..................  -  $ 
+CALCULATE  THE  ENDING  BALANCE 
+(Part  A  +  Part  B  -  Part  C) 
+This  amount  should  be  the  same 
+as  the  current  balance  shown  in 
+your  check  register  ............................................  $ 
+d  2006  Wells  Fargo  Bank,  N.A.  All  rights  reserved. 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01D22DD0>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 04-07-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 04-07-2009.pdf has 5 pages.
+========================================
+Account  Statement 
+March  7  through  April  7,  2009 
+Account  Number:  028-5742623 
+Page  1  of  5 
+RAY  C  HORN 
+1630  N  MAIN  ST  #  264 
+WALNUT  CREEK  CA  94596-4609 
+Thank  you  for  banking  with  Wells  Fargo.  For  assistance,  call:  1-800-TO-WELLS  (1-800-869-3557),  TDD  number  (for  the  hearing 
+impaired  only):1-800-877-4833.  Or  write:  WELLS  FARGO  BANK,  N.A.,  P.O.  BOX  6995,  PORTLAND,  OR  97228-6995. 
+Custom  Management  Checking 
+Ray  C  Horn 
+Account  Number:  028-5742623 
+Activity  summary 
+Balance  on  03/06  $1,906.88 
+Deposits  7,477.19 
+Withdrawals  -  8,456.65 
+Balance  on  04/07  $927.42 
+At  Wells  Fargo,  we  are  committed  to  continually  providing  our  customers  with  tools  and  information  to  help  you  reach  your  financial 
+goals.  We  are  in  the  process  of  redesigning  your  statement  to  give  it  a  new  easy-to-read  look  and  have  also  added  new  features  to 
+help  you  quickly  and  easily  locate  information  that  is  important  to  you.  Look  for  your  new  statement  in  the  coming  months. 
+Continued  on  next  page 
+----------------------------------------
+March  7  through  April  7,  2009 
+Account  Number:  028-5742623 
+Page  2  of  5 
+Activity  detail 
+Deposits 
+Date  Description  $  Amount 
+03/13  Magma  Design  Aut  Payroll  090311  CTR182070921  Horn,Raymond  C  2,901.93 
+03/17  ATM  Check  Deposit  -  03/17  Mach  ID  0466B  1705  No  First  St  San  Jose  Ca  7156  1,640.00 
+03/31  Magma  Design  Aut  Payroll  090327  CTR184060901  Horn,Raymond  C  2,935.26 
+Total  deposits  $7,477.19 
+Withdrawals 
+Other  withdrawals 
+Date  Description  $  Amount 
+03/12  Check  Crd  Purchase  03/10  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  19.38 
+071940007244784  ?MCC=5542  121042882DA90 
+03/13  WF  Bill  Pay  Thru  Software:Fee  121042882Nd  6.95 
+03/13  WF  Banking  Thru  Software:Fee  121042882Nd  3.00 
+03/16  Check  Crd  Purchase  03/13  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  19.63 
+074940012670691  ?MCC=5542  121042882DA90 
+03/16  Check  Crd  Purchase  03/13  Safeway  Store  00018796  Milpitas  Ca  487309XXXXXX7156  19.44 
+074940008652048  ?MCC=5411  121042882DA90 
+03/16  Check  Crd  Purchase  03/14  Sears  Roebuck  1159  Fairfield  Ca  487309XXXXXX7156  13.95 
+075940008044906  ?MCC=5311  121042882DA90 
+03/16  Check  Crd  Purchase  03/13  Godaddy.Com  480-5058855  AZ  487309XXXXXX7156  13.68 
+074940018677212  ?MCC=4816  121042882DA01 
+03/17  Countrywide  Mortgage  XXXXX1070  Horn  RC  3,785.39 
+03/17  Check  Crd  Purchase  03/16  Tiv*tivo  Service  877-367-8486  Ca  487309XXXXXX7156  12.95 
+076940004744892  ?MCC=4899  121042882DA01 
+03/17  Countrywide  Mortgage  XXXXX1070  Horn  RC  6.00 
+03/18  Check  Crd  Purchase  03/17  Nfi*www.Netflix.Com/CC  Netflix.Com  Ca  487309XXXXXX7156  18.24 
+077940009361328  ?MCC=5968  121042882DA01 
+03/20  Check  Crd  Purchase  03/18  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  18.52 
+079940007520963  ?MCC=5542  121042882DA90 
+03/23  ATM  Purchase  -  03/23  Mach  ID  2822D  Redwood  Plaza  Vallejo  Ca  7156  9.18 
+03/23  Check  Crd  Purchase  03/22  WM  Supercenter  American  Cany  Ca  487309XXXXXX7156  65.17 
+082940014854278  ?MCC=5411  121042882DA90 
+03/24  Check  Crd  Purchase  03/22  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  19.12 
+083940007136719  ?MCC=5542  121042882DA90 
+03/25  Check  Crd  Purchase  03/23  Site  5  Llc  888-7483526  Ar  487309XXXXXX7156  084940010758222  179.40 
+?MCC=8999  121042882DA01 
+03/26  Check  Crd  Purchase  03/25  Godaddy.Com  480-5058855  AZ  487309XXXXXX7156  229.99 
+085940008308136  ?MCC=4816  121042882DA01 
+03/26  Check  Crd  Purchase  03/24  Pmr  Loan  Svcs  -  In  Hou  949-5872400  Ca  487309XXXXXX7156  206.37 
+085940006173261  ?MCC=7012  121042882DA01 
+03/26  Sbli  USA  Fin  Ser  Premiums  090325  9456919  Gwen  *horn  186.41 
+03/26  Paypal  Inst  Xfer  090326  5ALJ23MGZ7Mra  Hal  Smalltalker  Inc.  27.31 
+Continued  on  next  page 
+----------------------------------------
+March  7  through  April  7,  2009 
+Account  Number:  028-5742623 
+Page  3  of  5 
+Other  withdrawals  -continued 
+Date  Description  $  Amount 
+03/27  Paypal  Inst  Xfer  090327  5ALJ23Mjbwcbw  Hal  Smalltalker  Inc.  35.64 
+03/30  Check  Crd  Purchase  03/28  Aaa*renewal  Payment  800-922-8228  Ca  487309XXXXXX7156  880.66 
+088940009548855  ?MCC=6300  121042882DA01 
+03/30  Check  Crd  Purchase  03/27  Vzwrlss-Myacct  Vw  800-9220204  Ca  487309XXXXXX7156  233.51 
+089940010241662  ?MCC=4814  121042882DA01 
+03/30  POS  Purchase  -  03/28  Mach  ID  000000  Costco  Whse  #00Costco  Whsfairfield  Ca  7156  143.17 
+?MCC=5300  121042882DA 
+03/30  Check  Crd  Purchase  03/28  Kaiser  021  Vallejo  Ca  487309XXXXXX7156  089940010247216  30.00 
+?MCC=5912  121042882DA90 
+03/30  Check  Crd  Purchase  03/26  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  17.84 
+088940017632925  ?MCC=5542  121042882DA90 
+03/30  POS  Purchase  -  03/28  Mach  ID  000000  Costco  Gas  #004Costco  Gasfairfield  Ca  7156  17.70 
+?MCC=5542  121042882DA 
+03/30  Check  Crd  Purchase  03/27  Tiv*tivo  Service  877-367-8486  Ca  487309XXXXXX7156  6.95 
+088940015307941  ?MCC=4899  121042882DA01 
+03/31  Check  Crd  Purchase  03/29  Regis  Hairstylists  Fairfield  Ca  487309XXXXXX7156  29.00 
+090940006581998  ?MCC=7230  121042882DA01 
+03/31  Check  Crd  Purchase  03/30  J2  *rapidfax  Svcs  800-362-0703  Ca  487309XXXXXX7156  7.95 
+090940005634153  ?MCC=4814  121042882DA01 
+03/31  Check  Crd  Purchase  03/29  Safeway  Store  00017228  Fairield  Ca  487309XXXXXX7156  6.66 
+090940004849828  ?MCC=5411  121042882DA90 
+04/01  Check  Crd  Purchase  03/30  Longs  Drug  #540  Fairfield  Ca  487309XXXXXX7156  11.26 
+091940007413422  ?MCC=5912  121042882DA90 
+04/02  Capital  One  Auto  Carpay  000066067151001  Ray  Horn  771.62 
+04/02  Check  Crd  Purchase  04/01  Fastrak  Csc  877-2298655  Ca  487309XXXXXX7156  092940009921303  60.00 
+?MCC=9399  121042882DA01 
+04/03  Pacific  Gas/Elec  Online  Pmt  090403  CKF000589081Neg  Gwen  Horn  487.00 
+04/03  Check  Crd  Purchase  04/02  Comcast  Cable  Comm  800-Comcast  Ca  487309XXXXXX7156  144.02 
+093940005206481  ?MCC=4899  121042882DA01 
+04/03  Paypal  Inst  Xfer  090403  5ALJ23MU76Slu  Hal  Smalltalker  Inc.  6.00 
+04/06  Online  Transfer  Ref  #IBEMLH3Vwj  To  Expanded  Bus  Services  Pack  Misc  100.00 
+04/06  Check  Crd  Purchase  04/04  Eve-Online  Subscriptio  Reykjavik  Is  487309XXXXXX7156  131.40 
+095940015809000  ?MCC=5968  121042882DA 
+04/06  Check  Crd  Purchase  04/05  WM  Supercenter  American  Cany  Ca  487309XXXXXX7156  48.54 
+096940012378014  ?MCC=5411  121042882DA90 
+04/06  Check  Crd  Purchase  04/03  Tower  Mart  #86  Cordella  Ca  487309XXXXXX7156  21.10 
+095940012094976  ?MCC=5542  121042882DA90 
+04/06  Paypal  Inst  Xfer  090406  5ALJ23MXLH9Tu  Hal  Smalltalker  Inc.  21.05 
+04/07  Hsbc  Card  Srvcs  Online  Pmt  090407  000000436644243  Raymond  Horn  Jr  200.00 
+04/07  Check  Crd  Purchase  04/06  Att*cons  Phone  Pmt  800-288-2020  Tx  487309XXXXXX7156  133.51 
+097940008470991  ?MCC=4814  121042882DA01 
+Continued  on  next  page 
+----------------------------------------
+March  7  through  April  7,  2009 
+Account  Number:  028-5742623 
+Page  4  of  5 
+Other  withdrawals  -continued 
+Date  Description  $  Amount 
+04/07  Paypal  Inst  Xfer  090407  5ALJ23MZ7MSY2  Hal  Smalltalker  Inc.  31.51 
+04/07  Check  Crd  Purchase  04/06  Godaddy.Com  480-5058855  AZ  487309XXXXXX7156  12.99 
+097940008170328  ?MCC=4816  121042882DA01 
+04/07  Check  Crd  Purchase  04/05  Godaddy.Com  480-5058855  AZ  487309XXXXXX7156  7.49 
+097940008170327  ?MCC=4816  121042882DA01 
+Total  other  withdrawals  $8,456.65 
+Daily  balance  summary 
+Date  $  Balance  Date  $  Balance  Date  $  Balance 
+03/06  1,906.88  03/23  2,437.33  04/01  3,103.65 
+03/12  1,887.50  03/24  2,418.21  04/02  2,272.03 
+03/13  4,779.48  03/25  2,238.81  04/03  1,635.01 
+03/16  4,712.78  03/26  1,588.73  04/06  1,312.92 
+03/17  2,548.44  03/27  1,553.09  04/07  927.42 
+03/18  2,530.20  03/30  223.26 
+03/20  2,511.68  03/31  3,114.91 
+Direct  Deposit  Advance  (Lender  -  Wells  Fargo  Bank,  N.A.) 
+Outstanding  advance  balance  as  of  the  beginning  of  this  statement  period  including  Finance  Charges  $0.00 
+Outstanding  advance  balance  as  of  the  end  of  this  statement  period  including  Finance  Charges  $0.00 
+Finance  Charges  incurred  on  advances  taken  during  this  statement  period  $0.00 
+Current  advance  credit  limit  $500.00 
+CHOOSE  THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  TO  ACCESS  UP  TO  $500  PRIOR  TO 
+RECEIVING  YOUR  RECURRING  DIRECT  DEPOSIT  INCOME.  JUST  USE  THE  ATM,  ONLINE  OR 
+CALL  THE  PHONE  BANK.  SEE  THE  DIRECT  DEPOSIT  ADVANCE  SERVICE  AGREEMENT  AND 
+PRODUCT  GUIDE  AND  ANY  AMENDMENT  OR  ADDENDUM  FOR  COMPLETE  DETAILS. 
+Thank  you  for  banking  with  Wells  Fargo. 
+----------------------------------------
+Account  Balance  Calculation  Worksheet  In  Case  of  Errors  or  Questions  About  Your  Electronic 
+Transfers  (Including  Direct  Deposit  Advance  or  Deposit 
+1.  Use  the  following  worksheet  to  calculate  your  overall  account  balance.  Advance  *  Transactions) 
+2.  Go  through  your  register  and  mark  each  check,  withdrawal,  ATM  transaction, 
+payment,  deposit  or  other  credit  listed  on  your  statement.  Be  sure  that  your  Telephone  us  at  the  number  printed  on  the  front  of  this  statement  or  write  us  at  Wells 
+register  shows  any  interest  paid  into  your  account  and  any  service  charges,  Fargo  Bank,  P.O.  Box  6995,  Portland,  OR  97228-6995  as  soon  as  you  can,  if  you 
+automatic  payments  or  ATM  transactions  withdrawn  from  your  account  think  your  statement  or  receipt  is  wrong  or  if  you  need  more  information  about  a 
+during  this  statement  period.  transfer  on  the  statement  or  receipt.  We  must  hear  from  you  no  later  than  60  days 
+3.  Use  the  chart  below,  list  any  deposits,  transfers  to  your  account,  outstanding  after  we  sent  you  the  FIRST  statement  on  which  the  error  or  problem  appeared. 
+checks,  ATM  withdrawals,  ATM  payments  or  any  other  withdrawals 
+(including  any  from  previous  months)  which  are  listed  in  your  register  but  not  1.  Tell  us  your  name  and  account  number  (if  any). 
+shown  on  your  statement. 
+2.  Describe  the  error  or  the  transfer  you  are  unsure  about,  and  explain  as  clearly  as 
+you  can  why  you  believe  it  is  an  error  or  why  you  need  more  information. 
+ITEMS  OUTSTANDING 
+3.  Tell  us  the  dollar  amount  of  the  suspected  error. 
+NUMBER  AMOUNT 
+We  will  investigate  your  complaint  and  will  correct  any  error  promptly.  If  we  take  more 
+than  10  business  days  to  do  this,  we  will  credit  your  account  for  the  amount  you  think 
+is  in  error,  so  that  you  will  have  the  use  of  the  money  during  the  time  it  takes  us  to 
+complete  our  investigation. 
+If  the  error  concerns  a  Direct  Deposit  Advance  or  Deposit  Advance  transaction,  you 
+do  not  have  to  pay  any  amount  in  question  while  we  are  investigating,  but  you  are  still 
+obligated  to  pay  the  parts  of  your  Direct  Deposit  Advance  or  Deposit  Advance 
+transaction  that  are  not  in  question.  While  we  are  investigating  your  question,  we 
+cannot  report  you  as  delinquent  or  take  any  action  to  collect  the  amount  you  question. 
+*  The  Deposit  Advance  service  is  not  available  in  all  states. 
+To  Dispute  or  Report  Inaccuracies  in  Information  We  Have 
+Furnished  to  a  Consumer  Reporting  Agency  About  Your 
+Accounts 
+You  have  the  right  to  dispute  the  accuracy  of  information  that  Wells  Fargo  Bank,  N.A. 
+has  furnished  to  a  consumer  reporting  agency  by  writing  to  us  at  Wells  Fargo 
+Servicing,  P.O.  Box  14415,  Des  Moines,  IA  50306-3415.  Please  describe  the  specific 
+information  that  is  inaccurate  or  in  dispute  and  the  basis  for  the  dispute  along  with  all 
+supporting  documentation.  If  you  believe  the  information  furnished  is  the  result  of 
+identity  theft,  please  provide  us  with  an  identity  theft  report. 
+TOTAL  $ 
+Are  you  interested  in... 
+ENTER 
+Purchasing  a  home?  Call  us  at  1-800-866-0743 
+A  The  NEW  BALANCE  shown  on  your  statement  $ 
+Getting  a  student  loan?  Call  us  at  1-888-945-5373 
+Optimizing  home  equity?  Call  us  at  1-866-259-0890 
+ADD 
+B  Any  deposits  listed  in  your  $ 
+register  or  transfers  into 
+your  account  which  are  not  $ 
+shown  on  your  statement. 
+$ 
++$ 
+TOTAL  ..................  $ 
+CALCULATE  THE  SUBTOTAL  ...................  $ 
+(Add  Parts  A  and  B) 
+SUBTRACT 
+C  The  total  outstanding  checks  and 
+withdrawals  from  the  chart  above  ..................  -  $ 
+CALCULATE  THE  ENDING  BALANCE 
+(Part  A  +  Part  B  -  Part  C) 
+This  amount  should  be  the  same 
+as  the  current  balance  shown  in 
+your  check  register  ............................................  $ 
+d  2006  Wells  Fargo  Bank,  N.A.  All  rights  reserved. 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01DD5B30>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 05-07-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 05-07-2009.pdf has 5 pages.
+========================================
+Custom Management   Checking 
+Account number:     0285742623       n           n     Page 1 of 5 
+Questions? 
+Available by phone 24 hours a day, 7 days a week: 
+RAY C HORN 
+ 
+1630 N MAIN ST # 264 
+TTY:    
+
+En espaol:     TTY:    
+
+
+Online:    wellsfargo.com 
+Write:  Wells Fargo Bank, N.A. (114) 
+P.O. Box 6995 
+
+         
+Account options 
+You and Wells Fargo 
+A check mark in the box indicates you have these 
+Welcome to your new statement. We updated your statement to a new 
+convenient services with your account.  Go to 
+
+wellsfargo.com or call the number above if you have 
+questions or if you would like to add new services. 
+
+new sections that allow key account information to be quickly reviewed and 
+Direct Deposit  3  My Spending Report  3 
+transaction information that is now presented in chronological order. For details, 
+Online Bill Pay  3  Rewards Program 
+visit wellsfargo.com/newstatement  . If you have questions about your new 
+Online Statements  3  Online Banking  3 
+statement, speak to your Banker or call the number at the top of your statement. 
+Overdraft Protection  Auto Transfer/Payment 
+Our phone bankers are available to assist you 24 hours a day, 7 days a week. 
+Account number:    0285742623 
+Activity summary 
+RAY C HORN 
+Beginning balance on 4/8  $927.42 
+California account terms and conditions apply 
+Deposits/Additions  14,367.73 
+Withdrawals/Subtractions  
+For Direct Deposit and Automatic Payments use 
+Routing Number (RTN):  121042882 
+Ending balance on  5/7  $10,980.85 
+Overdraft Protection 
+This account is not currently covered by Overdraft Protection.  If you 
+would like more information regarding Overdraft Protection and 
+eligibility requirements please call the number listed at the top of 
+your statement or visit your Wells Fargo branch. 
+(114) 
+Sheet Seq = 0030956 
+Sheet 00001 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 2 of 5 
+Transaction history 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+4/8  Check Crd Purchase 04/06 Tower Mart #86 Cordella CA  17.82 
+487309Xxxxxx7156 098940007669098 ?McC=5542 
+121042882DA90 
+4/8   12.95  896.65 
+487309Xxxxxx7156 098940004684308 ?McC=4899 
+121042882DA01 
+4/10   40.00 
+CA 487309Xxxxxx7156 100940010473957 ?McC=5912 
+121042882DA01 
+4/10   4.99  851.66 
+487309Xxxxxx7156 100940009201324 ?McC=4816 
+121042882DA01 
+4/13  Check Crd Purchase 04/12 WM Supercenter American Cany CA  28.97 
+487309Xxxxxx7156 103940010558772 ?McC=5411 
+121042882DA90 
+4/13  Check Crd Purchase 04/09 Tower Mart #86 Cordella CA  20.05 
+487309Xxxxxx7156 102940020220227 ?McC=5542 
+121042882DA90 
+4/13   7.49  795.15 
+487309Xxxxxx7156 102940014461262 ?McC=4816 
+121042882DA01 
+4/14  WF Bill Pay Thru Software:Fee 121042882ND  6.95 
+4/14  WF Banking Thru Software:Fee 121042882ND  3.00  785.20 
+4/15  Magma Design Aut Payroll 090413 Ctr185840410 Horn,Raymond  2,935.26 
+C 
+4/15   97.44  3,623.02 
+487309Xxxxxx7156 105940010620796 ?McC=7399 
+121042882DA01 
+4/17   1,410.97  5,033.99 
+Creek CA 7156 
+4/20   101.53 
+Whsfairfield CA 7156 ?McC=5300 121042882DA 
+4/20  Check Crd Purchase 04/18 WM Supercenter American Cany CA  24.07 
+487309Xxxxxx7156 109940015907285 ?McC=5411 
+121042882DA90 
+4/20  Check Crd Purchase 04/17 Tower Mart #86 Cordella CA  22.48 
+487309Xxxxxx7156 109940012054753 ?McC=5542 
+121042882DA90 
+4/20  Check Crd Purchase 04/17 Nfi*WWW.Netflix.Com/CC Netflix.Com  18.41 
+CA 487309Xxxxxx7156 109940021396071 ?McC=5968 
+121042882DA01 
+4/20   4.99  4,862.51 
+487309Xxxxxx7156 109940013712553 ?McC=4816 
+121042882DA01 
+4/21   7.49  4,855.02 
+487309Xxxxxx7156 111940008150794 ?McC=4816 
+121042882DA01 
+4/22   1,600.00 
+CA 7156 
+4/22   145.41  6,309.61 
+487309Xxxxxx7156 112940010464994 ?McC=4900 
+121042882DA01 
+4/23  Paypal Inst Xfer 090423 5Alj23Nnbt6Yj Hal Smalltalker Inc.  86.57 
+4/23  Check Crd Purchase 04/22 WM Supercenter American Cany CA  40.22  6,182.82 
+487309Xxxxxx7156 113940007963160 ?McC=5411 
+121042882DA90 
+4/24   203.15 
+487309Xxxxxx7156 114940009824224 ?McC=4814 
+121042882DA01 
+Sheet Seq = 0030957 
+Sheet 00002 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 3 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+4/24  Check Crd Purchase 04/22 Kaiser 021 Vallejo CA  10.00 
+487309Xxxxxx7156 114940007503082 ?McC=5912 
+121042882DA90 
+4/24  Check Crd Purchase 04/22 Kaiser 021 Vallejo CA  10.00  5,959.67 
+487309Xxxxxx7156 114940007503083 ?McC=5912 
+121042882DA90 
+4/27  Check Crd Purchase 04/24 The Home Depot 633 Vallejo CA  640.74 
+487309Xxxxxx7156 116940011840692 ?McC=5200 
+121042882DA90 
+4/27   206.37 
+CA 487309Xxxxxx7156 117940007516743 ?McC=7012 
+121042882DA01 
+4/27  Sbli USA Fin Ser Premiums 090425 3582589 Gwen *Horn  186.41 
+4/27  Check Crd Purchase 04/24 Best Buy 00011288 Vallejo CA  151.71 
+487309Xxxxxx7156 116940023551941 ?McC=5732 
+121042882DA90 
+4/27  Check Crd Purchase 04/26 Best Buy Mht 00001362 Fairfield CA  70.42 
+487309Xxxxxx7156 117940014762922 ?McC=5732 
+121042882DA90 
+4/27  Check Crd Purchase 04/26 WM Supercenter American Cany CA  67.89 
+487309Xxxxxx7156 117940011695867 ?McC=5411 
+121042882DA90 
+4/27   29.96 
+487309Xxxxxx7156 116940019802165 ?McC=4816 
+121042882DA01 
+4/27  Check Crd Purchase 04/24 The Home Depot 633 Vallejo CA  7.58 
+487309Xxxxxx7156 116940011840693 ?McC=5200 
+121042882DA90 
+4/27   6.95  4,591.64 
+487309Xxxxxx7156 117940007004913 ?McC=4899 
+121042882DA01 
+4/29  Check Crd Purchase 04/27 Tower Mart #86 Cordella CA  22.34  4,569.30 
+487309Xxxxxx7156 119940007724281 ?McC=5542 
+121042882DA90 
+4/30  Pacific Gas/Elec Online Pmt 090430 Ckf303082670Neg Gwen  487.00  4,082.30 
+Horn 
+5/1   8,421.50 
+Creek CA 7156 
+5/1  Capital One Auto Carpay 000066067151001 Ray Horn  771.62 
+5/1   7.95  11,724.23 
+487309Xxxxxx7156 121940005921777 ?McC=4814 
+121042882DA01 
+5/4   144.02 
+487309Xxxxxx7156 123940010540777 ?McC=4899 
+121042882DA01 
+5/4   129.94 
+487309Xxxxxx7156 123940015541150 ?McC=7399 
+121042882DA01 
+5/4  Check Crd Purchase 05/03 WM Supercenter American Cany CA  75.17 
+487309Xxxxxx7156 124940011260860 ?McC=5411 
+121042882DA90 
+5/4   59.95 
+CA 487309Xxxxxx7156 124940014550484 ?McC=5734 
+121042882DA01 
+5/4   36.94 
+487309Xxxxxx7156 123940014158699 ?McC=4816 
+121042882DA01 
+5/4   35.00  11,243.21 
+487309Xxxxxx7156 123940015772709 ?McC=7399 
+121042882DA01 
+Sheet Seq = 0030958 
+Sheet 00003 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 4 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+5/5   19.53 
+487309Xxxxxx7156 125940011106134 ?McC=7399 
+121042882DA01 
+5/5   7.19  11,216.49 
+487309Xxxxxx7156 125940008293632 ?McC=4816 
+121042882DA01 
+5/6   111.49 
+487309Xxxxxx7156 126940010585084 ?McC=5045 
+121042882DA01 
+5/6   20.00 
+CA 487309Xxxxxx7156 126940010074001 ?McC=5912 
+121042882DA01 
+5/6   9.99  11,075.01 
+487309Xxxxxx7156 126940008333954 ?McC=4816 
+121042882DA01 
+5/7   79.18 
+487309Xxxxxx7156 127940010684557 ?McC=2741 
+121042882DA01 
+5/7   14.98  10,980.85 
+487309Xxxxxx7156 127940008213521 ?McC=4816 
+121042882DA01 
+Ending balance on 5/7  10,980.85 
+Totals  $14,367.73  $4,314.30 
+The Ending Daily Balance does not reflect any pending withdrawals or holds on deposited funds that may have been outstanding on your account when your 
+transactions posted.  If you had insufficient available funds when a transaction posted, fees may have been assessed. 
+Direct Deposit Advance        
+$0.00 
+Outstanding advance balance as of the beginning of this statement period including   Finance Charge(s) 
+$0.00 
+Outstanding advance balance as of the end of this statement period including   Finance Charge(s) 
+$0.00 
+Finance Charge(s)   incurred on advances taken during this statement period 
+Current advance credit limit  $500.00 
+Current repayment option  Automatic Deduction 
+n  Use the Direct Deposit Advance service to receive up to $500 of your recurring Direct Deposit income.  Just use the ATM, Online or call  
+the Phone Bank.  See the Direct Deposit Advance Service Agreement and Product Guide and any amendment or addendum for  
+complete details. 
+Sheet Seq = 0030959 
+Sheet 00004 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 5 of 5 
+Worksheet to balance your account  General statement policies for Wells Fargo Bank 
+Follow the steps below to reconcile your statement balance with your 
+To dispute or report inaccuracies in information we have furnished to a 
+ n 
+account register balance.  Be sure that your register shows any interest  Consumer Reporting Agency about your accounts.    You have the right to 
+paid into your account and any service charges, automatic payments or  dispute the accuracy of information that Wells Fargo Bank, N.A. has 
+ATM transactions withdrawn from your account during this statement  furnished to a consumer reporting agency by writing to us at Wells Fargo 
+period.  
+specific information that is inaccurate or in dispute and the basis for the 
+A  $ 
+Enter the ending balance   on this statement. 
+dispute along with supporting documentation.  If you believe the 
+B 
+List outstanding deposits and other 
+information furnished is the result of identity theft, please provide us with 
+credits   to your account that do not appear on 
+an identity theft report. 
+this statement.    Enter the total   in the column  
+ n  In case of errors or questions about your electronic transfers, 
+to the right. 
+telephone us at the number printed on the front of this statement or write 
+  
+Description  Amount 
+
+you can, if you think your statement or receipt is wrong or if you need more 
+information about a transfer on the statement or receipt.  We must hear 
+from you no later than 60 days after we sent you the FIRST statement on 
+which the error or problem appeared. 
+1.  Tell us your name and account number (if any). 
+  
+Describe the error or the transfer you are unsure about, and explain as 
+2. 
+  
+Total  $   
++  $ 
+clearly as you can why you believe it is an error or why you need more 
+information. 
+Tell us the dollar amount of the suspected error. 
+3. 
+=  $    
+C  A  B  to calculate the subtotal. 
+Add  and 
+We will investigate your complaint and will correct any error promptly.  If 
+  
+D  List outstanding checks, withdrawals, and 
+we take more than 10 business days to do this, we will credit your account 
+other debits   to your account that do not appear 
+for the amount you think is in error, so that you will have the use of the 
+on this statement.    Enter the total   in the column 
+money during the time it takes us to complete our investigation. 
+to the right. 
+In case of errors or questions about your Direct Deposit Advance   or 
+   n 
+SM 
+Deposit Advance     * Service 
+Number/Description  Amount 
+  
+If you think your bill is wrong, or if you need more information about a 
+transaction on your bill, write us at Wells Fargo Bank, P. O. Box 6995, 
+
+later than 60 days after we sent you the first bill on which the error or 
+problem appeared. You can telephone us, but doing so will not preserve 
+your rights. 
+  
+In your letter, give us the following information: 
+Your name and account number 
+   1. 
+The dollar amount of the suspected error 
+2. 
+  
+Describe the error and explain, if you can, why you believe there is an 
+3. 
+  
+error. If you need more information, describe the item you are unsure 
+about. 
+You do not have to pay any amount in question while we are investigating, 
+but you are still obligated to pay the parts of your bill that are not in 
+question. While we investigate your question, we cannot report you as 
+delinquent or take any action to collect the amount you question. 
+*   The   Deposit Advance   service is not available in all states. 
+  
+Total  $   
+ $ 
+E  D  C  to calculate the 
+Subtract  from 
+adjusted ending balance.  This amount should be 
+the same as the current balance shown in your 
+=  $ 
+register. 
+2008 Wells Fargo Bank, N.A. All rights reserved  . 
+Sheet Seq = 0030960 
+Sheet 00005 of  00005 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01C25710>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 06-05-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 06-05-2009.pdf has 5 pages.
+========================================
+Custom Management   Checking 
+Account number:     0285742623       n           n     Page 1 of 5 
+Questions? 
+Available by phone 24 hours a day, 7 days a week: 
+RAY C HORN 
+ 
+1630 N MAIN ST # 264 
+TTY:    
+
+En espaol:     TTY:    
+
+
+Online:    wellsfargo.com 
+Write:  Wells Fargo Bank, N.A. (114) 
+P.O. Box 6995 
+
+         
+Account options 
+You and Wells Fargo 
+A check mark in the box indicates you have these 
+We appreciate your business. 
+convenient services with your account.  Go to 
+wellsfargo.com or call the number above if you have 
+questions or if you would like to add new services. 
+As our customer, you have entrusted us with your most important assets. It is a 
+responsibility we do not take lightly. We want to work with you to provide the 
+Direct Deposit  My Spending Report  3 
+best information and guidance about the accounts and services that will help you 
+Online Bill Pay  3  Rewards Program 
+reach your financial goals. If you have questions or comments, we want to hear 
+Online Statements  3  Online Banking  3 
+
+Overdraft Protection  Auto Transfer/Payment 
+statement, or at any Wells Fargo store. 
+If you're looking to either buy a new home or make other large purchases, Wells Fargo can help you make the right decisions about  
+your mortgage and home equity options. You can count on Wells Fargo to be there for you with guidance, low rates and terms to  
+meet your needs. To learn more, visit wellsfargo.com/mortgage 
+Account number:    0285742623 
+Activity summary 
+RAY C HORN 
+Beginning balance on 5/8  $10,980.85 
+California account terms and conditions apply 
+Deposits/Additions  1,108.36 
+Withdrawals/Subtractions  
+For Direct Deposit and Automatic Payments use 
+Routing Number (RTN):  121042882 
+Ending balance on  6/5  $3,565.12 
+Overdraft Protection 
+This account is not currently covered by Overdraft Protection.  If you 
+would like more information regarding Overdraft Protection and 
+eligibility requirements please call the number listed at the top of 
+your statement or visit your Wells Fargo branch. 
+(114) 
+Sheet Seq = 0004848 
+Sheet 00001 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 2 of 5 
+Transaction history 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+5/8   12.95  10,967.90 
+487309Xxxxxx7156 128940005385129 ?McC=4899 
+121042882DA01 
+5/11   9.18 
+Creek CA 7156 
+5/11   249.00 
+OH 487309Xxxxxx7156 130940018934550 ?McC=7311 
+121042882DA01 
+5/11  Check Crd Purchase 05/10 Google *Tigerdirect Google.Com/Ch  247.32 
+CA 487309Xxxxxx7156 131940010811457 ?McC=5399 
+121042882DA01 
+5/11   179.00 
+OH 487309Xxxxxx7156 130940018934549 ?McC=7311 
+121042882DA01 
+5/11   108.41 
+Whsfairfield CA 7156 ?McC=5300 121042882DA 
+5/11  Check Crd Purchase 05/10 WM Supercenter American Cany CA  36.95 
+487309Xxxxxx7156 131940012274953 ?McC=5411 
+121042882DA90 
+5/11  Check Crd Purchase 05/09 Edwards Fairfield Stdm Fairfield CA  15.50  10,122.54 
+487309Xxxxxx7156 131940013469160 ?McC=7832 
+121042882DA90 
+5/12   38.60 
+5/12  Check Crd Purchase 05/09 Tower Mart #86 Cordella CA  23.49 
+487309Xxxxxx7156 132940007591923 ?McC=5542 
+121042882DA90 
+5/12   7.38  10,053.07 
+487309Xxxxxx7156 132940008299222 ?McC=4816 
+121042882DA01 
+5/13   114.00  9,939.07 
+487309Xxxxxx7156 133940010795707 ?McC=7399 
+121042882DA01 
+5/14   1,000.00 
+Mountain View CA 7156 
+5/14  WF Bill Pay Thru Software:Fee 121042882ND  6.95 
+5/14  WF Banking Thru Software:Fee 121042882ND  3.00 
+5/14  Check Crd Purchase 05/13 Frys Electronics 24 Concord CA  220.66 
+487309Xxxxxx7156 134940010980355 ?McC=5732 
+121042882DA90 
+5/14  Check Crd Purchase 05/13 Best Buy Mht 00001362 Fairfield CA  108.36  10,600.10 
+487309Xxxxxx7156 134940011310451 ?McC=5732 
+121042882DA90 
+5/15  Check Crd Purchase 05/14 Google *Tigerdirect Google.Com/Ch  216.13 
+CA 487309Xxxxxx7156 135940008557749 ?McC=5399 
+121042882DA01 
+5/15  Check Crd Purchase 05/14 Fry's Electronics #21 Fremont CA  2.18 
+487309Xxxxxx7156 135940011164960 ?McC=5732 
+121042882DA90 
+5/15  Check Crd Purchase 05/14 Walgreens #3171 Vallejo CA  2.17  10,379.62 
+487309Xxxxxx7156 135940012043704 ?McC=5912 
+121042882DA90 
+5/18  Check Crd Purchase 05/15 Frys Electronics 24 Concord CA  277.47 
+487309Xxxxxx7156 137940022925042 ?McC=5732 
+121042882DA90 
+5/18  Check Crd Purchase 05/15 Frys Electronics 24 Concord CA  201.02 
+487309Xxxxxx7156 137940022925043 ?McC=5732 
+121042882DA90 
+5/18  Check Crd Purchase 05/17 Dri*Heatsoftautomatics Regsoft.Com/C  59.92 
+MN 487309Xxxxxx7156 138940008437887 ?McC=5734 
+121042882DA01 
+Sheet Seq = 0004849 
+Sheet 00002 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 3 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+5/18  Check Crd Purchase 05/15 Mimis Cafe 00000471 Fairfield CA  40.96 
+487309Xxxxxx7156 137940012285322 ?McC=5814 
+121042882DA90 
+5/18  Check Crd Purchase 05/15 Tower Mart #86 Cordella CA  26.00 
+487309Xxxxxx7156 137940012742798 ?McC=5542 
+121042882DA90 
+5/18  Check Crd Purchase 05/17 Nfi*WWW.Netflix.Com/CC Netflix.Com  18.41  9,755.84 
+CA 487309Xxxxxx7156 138940013741342 ?McC=5968 
+121042882DA01 
+5/20  Check Crd Purchase 05/19 Google *Tigerdirect Google.Com/Ch  1,006.82 
+CA 487309Xxxxxx7156 140940008142013 ?McC=5399 
+121042882DA01 
+5/20  Check Crd Purchase 05/19 City of Berkeley Parke Berkeley CA  2.50  8,746.52 
+487309Xxxxxx7156 140940007031727 ?McC=7523 
+121042882DA90 
+5/21  Check Crd Pur Rtrn 05/20 Best Buy Mht 00001362 Fairfield CA  108.36 
+487309Xxxxxx7156 141940011237671 ?McC=5732 121042882DA 
+5/21  Check Crd Purchase 05/20 Best Buy Mht 00001362 Fairfield CA  300.90 
+487309Xxxxxx7156 141940011237673 ?McC=5732 
+121042882DA90 
+5/21  Check Crd Purchase 05/20 Frys Electronics 24 Concord CA  127.79  8,426.19 
+487309Xxxxxx7156 141940011508673 ?McC=5732 
+121042882DA90 
+5/22  Check Crd Purchase 05/21 Frys Electronics 24 Concord CA  160.53  8,265.66 
+487309Xxxxxx7156 142940012008370 ?McC=5732 
+121042882DA90 
+5/26   1,015.00 
+5/26   203.40 
+487309Xxxxxx7156 144940019542261 ?McC=4814 
+121042882DA01 
+5/26  Check Crd Purchase 05/23 WM Supercenter American Cany CA  97.67 
+487309Xxxxxx7156 144940012101332 ?McC=5411 
+121042882DA90 
+5/26  Paypal Inst Xfer 090525 5Alj23Py7Frk2 Hal Smalltalker Inc.  47.30 
+5/26  Check Crd Purchase 05/22 Best Buy Mht 00001362 Fairfield CA  22.75  6,879.54 
+487309Xxxxxx7156 144940023458582 ?McC=5732 
+121042882DA90 
+5/27  Online Transfer Ref #Ibemlndwbb to Expanded Bus Services Pack  250.00 
+Xxxxxx0909 on 05/27/09 
+5/27   123.72 
+Whsfairfield CA 7156 ?McC=5300 121042882DA 
+5/27   6.95  6,498.87 
+487309Xxxxxx7156 147940004690835 ?McC=4899 
+121042882DA01 
+5/28   206.37 
+CA 487309Xxxxxx7156 148940006702497 ?McC=7012 
+121042882DA01 
+5/28  Check Crd Purchase 05/27 Best Buy 00011288 Vallejo CA  198.24 
+487309Xxxxxx7156 148940010946281 ?McC=5732 
+121042882DA90 
+5/28  Check Crd Purchase 05/27 Civil Vallejo Vallejo CA  79.00 
+487309Xxxxxx7156 148940009931931 ?McC=9399 
+121042882DA90 
+5/28  Check Crd Purchase 05/27 WWW.Cleverbridge.Net Koeln Df  68.00 
+487309Xxxxxx7156 148940012253886 ?McC=5734 
+121042882DA01 
+5/28  Check Crd Purchase 05/26 Tower Mart #86 Cordella CA  25.56  5,921.70 
+487309Xxxxxx7156 148940007821153 ?McC=5542 
+121042882DA90 
+5/29  Sbli USA Fin Ser Premiums 090528 8394774 Gwen *Horn  186.41  5,735.29 
+Sheet Seq = 0004850 
+Sheet 00003 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 4 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+6/1   748.00 
+CA 487309Xxxxxx7156 151940024485127 ?McC=6300 
+121042882DA01 
+6/1   133.60 
+487309Xxxxxx7156 151940013999955 ?McC=4814 
+121042882DA01 
+6/1  Check Crd Purchase 05/29 Cvs Pharmacy #3075 Fairfield CA  67.34 
+487309Xxxxxx7156 151940010025868 ?McC=5912 
+121042882DA90 
+6/1   50.00 
+487309Xxxxxx7156 151940016038718 ?McC=5999 
+121042882DA01 
+6/1  Check Crd Purchase 05/29 Regis Hairstylists Fairfield CA  27.00 
+487309Xxxxxx7156 151940013720669 ?McC=7230 
+121042882DA90 
+6/1   7.95  4,701.40 
+487309Xxxxxx7156 151940011854005 ?McC=4814 
+121042882DA01 
+6/2  Capital One Auto Carpay 000066067151001 Ray Horn  771.62 
+6/2   20.94  3,908.84 
+487309Xxxxxx7156 153940011587086 ?McC=7399 
+121042882DA01 
+6/3  Check Crd Purchase 06/01 Main Street Postal & B Walnut Creek CA  198.00 
+487309Xxxxxx7156 154940007807100 ?McC=7399 
+121042882DA01 
+6/3   145.72  3,565.12 
+487309Xxxxxx7156 154940004853012 ?McC=4899 
+121042882DA01 
+Ending balance on 6/5  3,565.12 
+Totals  $1,108.36  $8,524.09 
+The Ending Daily Balance does not reflect any pending withdrawals or holds on deposited funds that may have been outstanding on your account when your 
+transactions posted.  If you had insufficient available funds when a transaction posted, fees may have been assessed. 
+Sheet Seq = 0004851 
+Sheet 00004 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 5 of 5 
+Worksheet to balance your account  General statement policies for Wells Fargo Bank 
+Follow the steps below to reconcile your statement balance with your 
+To dispute or report inaccuracies in information we have furnished to a 
+ n 
+account register balance.  Be sure that your register shows any interest  Consumer Reporting Agency about your accounts.    You have the right to 
+paid into your account and any service charges, automatic payments or  dispute the accuracy of information that Wells Fargo Bank, N.A. has 
+ATM transactions withdrawn from your account during this statement  furnished to a consumer reporting agency by writing to us at Wells Fargo 
+period.  
+specific information that is inaccurate or in dispute and the basis for the 
+A  $ 
+Enter the ending balance   on this statement. 
+dispute along with supporting documentation.  If you believe the 
+B 
+List outstanding deposits and other 
+information furnished is the result of identity theft, please provide us with 
+credits   to your account that do not appear on 
+an identity theft report. 
+this statement.    Enter the total   in the column  
+ n  In case of errors or questions about your electronic transfers, 
+to the right. 
+telephone us at the number printed on the front of this statement or write 
+  
+Description  Amount 
+
+you can, if you think your statement or receipt is wrong or if you need more 
+information about a transfer on the statement or receipt.  We must hear 
+from you no later than 60 days after we sent you the FIRST statement on 
+which the error or problem appeared. 
+1.  Tell us your name and account number (if any). 
+  
+Describe the error or the transfer you are unsure about, and explain as 
+2. 
+  
+Total  $   
++  $ 
+clearly as you can why you believe it is an error or why you need more 
+information. 
+Tell us the dollar amount of the suspected error. 
+3. 
+=  $    
+C  A  B  to calculate the subtotal. 
+Add  and 
+We will investigate your complaint and will correct any error promptly.  If 
+  
+D  List outstanding checks, withdrawals, and 
+we take more than 10 business days to do this, we will credit your account 
+other debits   to your account that do not appear 
+for the amount you think is in error, so that you will have the use of the 
+on this statement.    Enter the total   in the column 
+money during the time it takes us to complete our investigation. 
+to the right. 
+In case of errors or questions about your Direct Deposit Advance   or 
+   n 
+SM 
+Deposit Advance     * Service 
+Number/Description  Amount 
+  
+If you think your bill is wrong, or if you need more information about a 
+transaction on your bill, write us at Wells Fargo Bank, P. O. Box 6995, 
+
+later than 60 days after we sent you the first bill on which the error or 
+problem appeared. You can telephone us, but doing so will not preserve 
+your rights. 
+  
+In your letter, give us the following information: 
+Your name and account number 
+   1. 
+The dollar amount of the suspected error 
+2. 
+  
+Describe the error and explain, if you can, why you believe there is an 
+3. 
+  
+error. If you need more information, describe the item you are unsure 
+about. 
+You do not have to pay any amount in question while we are investigating, 
+but you are still obligated to pay the parts of your bill that are not in 
+question. While we investigate your question, we cannot report you as 
+delinquent or take any action to collect the amount you question. 
+*   The   Deposit Advance   service is not available in all states. 
+  
+Total  $   
+ $ 
+E  D  C  to calculate the 
+Subtract  from 
+adjusted ending balance.  This amount should be 
+the same as the current balance shown in your 
+=  $ 
+register. 
+2008 Wells Fargo Bank, N.A. All rights reserved  . 
+Sheet Seq = 0004852 
+Sheet 00005 of  00005 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01C39E50>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 07-07-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 07-07-2009.pdf has 5 pages.
+========================================
+Custom Management   Checking 
+Account number:     0285742623       n           n     Page 1 of 5 
+Questions? 
+Available by phone 24 hours a day, 7 days a week: 
+RAY C HORN 
+ 
+1630 N MAIN ST # 264 
+TTY:    
+
+En espaol:     TTY:    
+
+
+Online:    wellsfargo.com 
+Write:  Wells Fargo Bank, N.A. (114) 
+P.O. Box 6995 
+
+         
+Account options 
+You and Wells Fargo 
+A check mark in the box indicates you have these 
+Are you aware of all the Online Banking services we offer? We continue to add to 
+convenient services with your account.  Go to 
+and improve our online features to meet your needs with services such as Mobile 
+wellsfargo.com or call the number above if you have 
+questions or if you would like to add new services. 
+Banking, Account Alerts, and My Spending Report. 
+Direct Deposit  3  My Spending Report  3 
+Visit wellsfargo.com for more information on any of these services. 
+Online Bill Pay  3  Rewards Program 
+Online Statements  3  Online Banking  3 
+Overdraft Protection  Auto Transfer/Payment 
+ IMPORTANT ACCOUNT INFORMATION 
+The integration between Wells Fargo & Company and Wachovia Corporation is proceeding on schedule. Together, under the Wells  
+Fargo name, we are bringing you access to more resources and services to help you build your financial future. Right now, you can  
+enjoy expanded ATM access by making cash withdrawals at any Wachovia ATM with no ATM access fee. Please continue to bank as  
+you do today. Visit us online at wellsfargo.com/wachovia for more information. 
+(114)    Ins  =   1   4 
+Sheet Seq = 0004358 
+Sheet 00001 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 2 of 5 
+Account number:    0285742623 
+Activity summary 
+RAY C HORN 
+Beginning balance on 6/6  $3,565.12 
+California account terms and conditions apply 
+Deposits/Additions  975.61 
+Withdrawals/Subtractions  
+For Direct Deposit and Automatic Payments use 
+Routing Number (RTN):  121042882 
+Ending balance on  7/7  $1,284.41 
+Overdraft Protection 
+This account is not currently covered by Overdraft Protection.  If you 
+would like more information regarding Overdraft Protection and 
+eligibility requirements please call the number listed at the top of 
+your statement or visit your Wells Fargo branch. 
+Transaction history 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+6/8  Check Crd Purchase 06/07 WM Supercenter American Cany CA  74.53 
+487309Xxxxxx7156 159940011177993 ?McC=5411 
+121042882DA90 
+6/8   69.71 
+CA 487309Xxxxxx7156 159940006664413 ?McC=5969 
+121042882DA01 
+6/8   12.95 
+487309Xxxxxx7156 159940007009940 ?McC=4899 
+121042882DA01 
+6/8   4.99  3,402.94 
+487309Xxxxxx7156 159940012890494 ?McC=2741 
+121042882DA01 
+6/9  Pacific Gas/Elec Online Pmt 090609 Ckf497977841Neg Gwen  487.00 
+Horn 
+6/9   138.37 
+6/9  Check Crd Purchase 06/07 The Home Depot 633 Vallejo CA  21.61  2,755.96 
+487309Xxxxxx7156 160940006846464 ?McC=5200 
+121042882DA90 
+6/11  Check Crd Purchase 06/09 Ccp Games Orderid:8569 Slough Gb  131.40 
+487309Xxxxxx7156 162940012708147 ?McC=7994 
+121042882DA01 
+6/11  Check Crd Purchase 06/09 Ccp Games Orderid:8569 Slough Gb  131.40  2,493.16 
+487309Xxxxxx7156 162940012708148 ?McC=7994 
+121042882DA01 
+6/12  WF Bill Pay Thru Software:Fee 121042882ND  6.95 
+6/12  WF Banking Thru Software:Fee 121042882ND  3.00 
+6/12   81.41  2,401.80 
+487309Xxxxxx7156 163940008704974 ?McC=4816 
+121042882DA01 
+6/15   69.20 
+Whsfairfield CA 7156 ?McC=5300 121042882DA 
+6/15  Check Crd Purchase 06/12 Tower Mart #86 Cordella CA  30.24 
+487309Xxxxxx7156 165940013630382 ?McC=5542 
+121042882DA90 
+6/15  Check Crd Purchase 06/12 Kaiser 021 Vallejo CA  10.00  2,292.36 
+487309Xxxxxx7156 166940010451424 ?McC=5912 
+121042882DA90 
+6/16   112.85  2,179.51 
+6/18  Check Crd Purchase 06/17 Nfi*WWW.Netflix.Com/CC Netflix.Com  18.41 
+CA 487309Xxxxxx7156 169940010179694 ?McC=5968 
+121042882DA01 
+Sheet Seq = 0004359 
+Sheet 00002 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 3 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+6/18   4.30  2,156.80 
+487309Xxxxxx7156 169940011829797 ?McC=4111 
+121042882DA90 
+6/22   20.00 
+CA 487309Xxxxxx7156 173940010052000 ?McC=5912 
+121042882DA01 
+6/22  Check Crd Purchase 06/18 El Faro Concord CA 487309Xxxxxx7156  8.18  2,128.62 
+172940022611780 ?McC=5812 121042882DA90 
+6/26   975.00 
+CA 7156 
+6/26   206.37 
+CA 487309Xxxxxx7156 177940007179469 ?McC=7012 
+121042882DA01 
+6/26  Sbli USA Fin Ser Premiums 090625 1064089 Gwen *Horn  186.41 
+6/26   144.20  2,566.64 
+487309Xxxxxx7156 177940011116333 ?McC=4814 
+121042882DA01 
+6/29   250.00 
+6/29   151.27 
+Whsfairfield CA 7156 ?McC=5300 121042882DA 
+6/29  Check Crd Purchase 06/26 Best Buy 00011288 Vallejo CA  115.92 
+487309Xxxxxx7156 179940023670712 ?McC=5732 
+121042882DA90 
+6/29  Check Crd Purchase 06/28 WM Supercenter American Cany CA  73.97 
+487309Xxxxxx7156 180940010139375 ?McC=5411 
+121042882DA90 
+6/29   6.95  1,968.53 
+487309Xxxxxx7156 179940010307794 ?McC=4899 
+121042882DA01 
+6/30   92.85  1,875.68 
+MA 487309Xxxxxx7156 181940009412373 ?McC=2741 
+121042882DA01 
+7/1  Google Deposit Vyperlogix 090630 0921615 Ray *C Horn  0.61 
+7/1   323.23 
+487309Xxxxxx7156 182940010125669 ?McC=4814 
+121042882DA01 
+7/1   7.95  1,545.11 
+487309Xxxxxx7156 182940006001506 ?McC=4814 
+121042882DA01 
+7/2   20.93  1,524.18 
+487309Xxxxxx7156 183940012067760 ?McC=7399 
+121042882DA01 
+7/3   145.72 
+487309Xxxxxx7156 184940005664100 ?McC=4899 
+121042882DA01 
+7/3   7.49  1,370.97 
+487309Xxxxxx7156 184940009269048 ?McC=4816 
+121042882DA01 
+7/6  Check Crd Purchase 07/04 WM Supercenter American Cany CA  86.56  1,284.41 
+487309Xxxxxx7156 186940011952395 ?McC=5411 
+121042882DA90 
+Ending balance on 7/7  1,284.41 
+Totals  $975.61  $3,256.32 
+The Ending Daily Balance does not reflect any pending withdrawals or holds on deposited funds that may have been outstanding on your account when your 
+transactions posted.  If you had insufficient available funds when a transaction posted, fees may have been assessed. 
+Sheet Seq = 0004360 
+Sheet 00003 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 4 of 5 
+Your checking package is designed to work with you to achieve financial success by providing additional benefits on the accounts and  
+services you need. Remember, to waive the monthly service fee on your checking account, you must meet the checking package  
+requirements and have three additional qualifying accounts and/or services. If you have any questions, please contact your Wells Fargo  
+
+Sheet Seq = 0004361 
+Sheet 00004 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 5 of 5 
+Worksheet to balance your account  General statement policies for Wells Fargo Bank 
+Follow the steps below to reconcile your statement balance with your 
+To dispute or report inaccuracies in information we have furnished to a 
+ n 
+account register balance.  Be sure that your register shows any interest  Consumer Reporting Agency about your accounts.    You have the right to 
+paid into your account and any service charges, automatic payments or  dispute the accuracy of information that Wells Fargo Bank, N.A. has 
+ATM transactions withdrawn from your account during this statement  furnished to a consumer reporting agency by writing to us at Wells Fargo 
+period.  
+specific information that is inaccurate or in dispute and the basis for the 
+A  $ 
+Enter the ending balance   on this statement. 
+dispute along with supporting documentation.  If you believe the 
+B 
+List outstanding deposits and other 
+information furnished is the result of identity theft, please provide us with 
+credits   to your account that do not appear on 
+an identity theft report. 
+this statement.    Enter the total   in the column  
+ n  In case of errors or questions about your electronic transfers, 
+to the right. 
+telephone us at the number printed on the front of this statement or write 
+  
+Description  Amount 
+
+you can, if you think your statement or receipt is wrong or if you need more 
+information about a transfer on the statement or receipt.  We must hear 
+from you no later than 60 days after we sent you the FIRST statement on 
+which the error or problem appeared. 
+1.  Tell us your name and account number (if any). 
+  
+Describe the error or the transfer you are unsure about, and explain as 
+2. 
+  
+Total  $   
++  $ 
+clearly as you can why you believe it is an error or why you need more 
+information. 
+Tell us the dollar amount of the suspected error. 
+3. 
+=  $    
+C  A  B  to calculate the subtotal. 
+Add  and 
+We will investigate your complaint and will correct any error promptly.  If 
+  
+D  List outstanding checks, withdrawals, and 
+we take more than 10 business days to do this, we will credit your account 
+other debits   to your account that do not appear 
+for the amount you think is in error, so that you will have the use of the 
+on this statement.    Enter the total   in the column 
+money during the time it takes us to complete our investigation. 
+to the right. 
+In case of errors or questions about your Direct Deposit Advance   or 
+   n 
+SM 
+Deposit Advance     * Service 
+Number/Description  Amount 
+  
+If you think your bill is wrong, or if you need more information about a 
+transaction on your bill, write us at Wells Fargo Bank, P. O. Box 6995, 
+
+later than 60 days after we sent you the first bill on which the error or 
+problem appeared. You can telephone us, but doing so will not preserve 
+your rights. 
+  
+In your letter, give us the following information: 
+Your name and account number 
+   1. 
+The dollar amount of the suspected error 
+2. 
+  
+Describe the error and explain, if you can, why you believe there is an 
+3. 
+  
+error. If you need more information, describe the item you are unsure 
+about. 
+You do not have to pay any amount in question while we are investigating, 
+but you are still obligated to pay the parts of your bill that are not in 
+question. While we investigate your question, we cannot report you as 
+delinquent or take any action to collect the amount you question. 
+*   The   Deposit Advance   service is not available in all states. 
+  
+Total  $   
+ $ 
+E  D  C  to calculate the 
+Subtract  from 
+adjusted ending balance.  This amount should be 
+the same as the current balance shown in your 
+=  $ 
+register. 
+2008 Wells Fargo Bank, N.A. All rights reserved  . 
+Sheet Seq = 0004362 
+Sheet 00005 of  00005 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01D8E570>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 08-07-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 08-07-2009.pdf has 5 pages.
+========================================
+Custom Management   Checking 
+Account number:     0285742623       n           n     Page 1 of 5 
+Questions? 
+Available by phone 24 hours a day, 7 days a week: 
+RAY C HORN 
+ 
+1630 N MAIN ST # 264 
+TTY:    
+
+En espaol:     TTY:    
+
+
+Online:    wellsfargo.com 
+Write:  Wells Fargo Bank, N.A. (114) 
+P.O. Box 6995 
+
+         
+Account options 
+You and Wells Fargo 
+A check mark in the box indicates you have these 
+We're glad you've signed up for FREE Online Statements. Benefits include: 
+convenient services with your account.  Go to 
+
+wellsfargo.com or call the number above if you have 
+questions or if you would like to add new services. 
+
+
+Direct Deposit  My Spending Report  3 
+
+Online Bill Pay  3  Rewards Program 
+
+Online Statements  3  Online Banking  3 
+Overdraft Protection  Auto Transfer/Payment 
+Account number:    0285742623 
+Activity summary 
+RAY C HORN 
+Beginning balance on 7/8  $1,284.41 
+California account terms and conditions apply 
+Deposits/Additions  3,520.00 
+Withdrawals/Subtractions  
+For Direct Deposit and Automatic Payments use 
+Routing Number (RTN):  121042882 
+Ending balance on  8/7  
+(114) 
+Sheet Seq = 0003667 
+Sheet 00001 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 2 of 5 
+Overdraft Protection 
+This account is not currently covered by Overdraft Protection.  If you 
+would like more information regarding Overdraft Protection and 
+eligibility requirements please call the number listed at the top of 
+your statement or visit your Wells Fargo branch. 
+Transaction history 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+7/8   33.16 
+487309Xxxxxx7156 189940008377404 ?McC=4816 
+121042882DA01 
+7/8   12.95 
+487309Xxxxxx7156 189940004972868 ?McC=4899 
+121042882DA01 
+7/8   4.99  1,233.31 
+487309Xxxxxx7156 189940010754243 ?McC=2741 
+121042882DA01 
+7/9  Pacific Gas/Elec Online Pmt 090709 Ckf213592126Neg Gwen  487.00 
+Horn 
+7/9   25.00  721.31 
+487309Xxxxxx7156 190940004914401 ?McC=7399 
+121042882DA01 
+7/10  Check Crd Purchase 07/08 Tower Mart #86 Cordella CA  27.98  693.33 
+487309Xxxxxx7156 191940007758593 ?McC=5542 
+121042882DA90 
+7/13   950.00 
+CA 7156 
+7/13   100.00  1,543.33 
+CA 7156 
+7/14  WF Bill Pay Thru Software:Fee 121042882ND  6.95 
+7/14  WF Banking Thru Software:Fee 121042882ND  3.00  1,533.38 
+7/15  Check Crd Purchase 07/13 Safeway Store00009894 Vallejo CA  39.69  1,493.69 
+487309Xxxxxx7156 196940005417619 ?McC=5411 
+121042882DA90 
+7/16  Check Crd Purchase 07/15 WM Supercenter American Cany CA  16.92  1,476.77 
+487309Xxxxxx7156 197940008897400 ?McC=5411 
+121042882DA90 
+7/17   500.00  1,976.77 
+CA 7156 
+7/20   104.85 
+7/20   101.00 
+487309Xxxxxx7156 201940011281510 ?McC=9399 
+121042882DA01 
+7/20   59.95 
+FL 487309Xxxxxx7156 200940022763234 ?McC=4812 
+121042882DA01 
+7/20  Check Crd Purchase 07/18 Target 00012088 Walnut Creek CA  33.90 
+487309Xxxxxx7156 201940006328370 ?McC=5310 
+121042882DA90 
+7/20  Check Crd Purchase 07/17 Safeway Store00009894 Vallejo CA  26.61 
+487309Xxxxxx7156 200940009308676 ?McC=5411 
+121042882DA90 
+7/20  Check Crd Purchase 07/17 Nfi*WWW.Netflix.Com/CC Netflix.Com  18.41 
+CA 487309Xxxxxx7156 200940021507554 ?McC=5968 
+121042882DA01 
+7/20  Check Crd Purchase 07/18 El Faro Concord CA 487309Xxxxxx7156  10.89  1,621.16 
+201940010385763 ?McC=5812 121042882DA90 
+7/21   48.78 
+487309Xxxxxx7156 202940008732154 ?McC=4816 
+121042882DA01 
+Sheet Seq = 0003668 
+Sheet 00002 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 3 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+7/21  Check Crd Purchase 07/18 Tower Mart #86 Cordella CA  28.66  1,543.72 
+487309Xxxxxx7156 202940008275697 ?McC=5542 
+121042882DA90 
+7/23   950.00 
+CA 7156 
+7/23   58.02  2,435.70 
+Whsfairfield CA 7156 ?McC=5300 121042882DA 
+7/27   206.37 
+CA 487309Xxxxxx7156 207940013347468 ?McC=5969 
+121042882DA01 
+7/27  Sbli USA Fin Ser Premiums 090725 9306075 Gwen *Horn  186.41 
+7/27  Check Crd Purchase 07/25 WM Supercenter American Cany CA  104.23 
+487309Xxxxxx7156 207940012728440 ?McC=5411 
+121042882DA90 
+7/27   41.44  1,897.25 
+Whsfairfield CA 7156 ?McC=5300 121042882DA 
+7/28   330.00 
+CA 487309Xxxxxx7156 209940010785187 ?McC=6300 
+121042882DA01 
+7/28   29.96 
+487309Xxxxxx7156 209940008232775 ?McC=4816 
+121042882DA01 
+7/28   6.95  1,530.34 
+487309Xxxxxx7156 209940004773036 ?McC=4899 
+121042882DA01 
+7/29   354.83 
+487309Xxxxxx7156 210940006941708 ?McC=4814 
+121042882DA01 
+7/29  Check Crd Purchase 07/27 Kaiser 021 Vallejo CA  10.00 
+487309Xxxxxx7156 210940006949011 ?McC=5912 
+121042882DA90 
+7/29   8.10  1,157.41 
+487309Xxxxxx7156 210940011550607 ?McC=4111 
+121042882DA90 
+7/30   560.00  597.41 
+CA 487309Xxxxxx7156 211940007180375 ?McC=6300 
+121042882DA01 
+7/31  Debit Card Provisional Credit 07/31/2009 11:16:51:972Claim 1  560.00 
+7/31   7.95  1,149.46 
+487309Xxxxxx7156 212940005969319 ?McC=4814 
+121042882DA01 
+8/3  Check Crd Pur Rtrn 07/30 Matsen Insurance Broke Eureka CA  560.00 
+487309Xxxxxx7156 214940019835212 ?McC=6300 
+121042882DA01 
+8/3   145.61 
+487309Xxxxxx7156 215940007539031 ?McC=4899 
+121042882DA01 
+8/3   21.33 
+Gasfairfield CA 7156 ?McC=5542 121042882DA 
+8/3   20.93  1,521.59 
+487309Xxxxxx7156 214940015886102 ?McC=7399 
+121042882DA01 
+8/4  Online Transfer Ref #Ibexb3D9R4 to Expanded Bus Services Pack  900.00 
+Xxxxxx0909 on 08/04/09 
+8/4   400.00 
+Santa Ana CA 7156 
+8/4  Check Crd Purchase 08/02 Red Roof Inns 00502260 Santa Ana CA  363.16 
+487309Xxxxxx7156 216940010976985 ?McC=3650 
+121042882DA90 
+8/4   89.00 
+487309Xxxxxx7156 216940008925540 ?McC=7012 
+121042882DA01 
+Sheet Seq = 0003669 
+Sheet 00003 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 4 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+8/4   54.00  
+487309Xxxxxx7156 216940008925593 ?McC=7012 
+121042882DA01 
+8/5  Overdraft Fee  35.00 
+8/5  Overdraft Fee  35.00 
+8/5  Overdraft Fee  35.00 
+8/5  Check Crd Purchase 08/02 Cvspharmacy #9725 Q03 Orange CA  49.21  
+487309Xxxxxx7156 217940005958157 ?McC=5912 
+121042882DA90 
+8/6  Overdraft Fee  35.00  
+8/7  Continuous OD Level 2 Charge  5.00 
+8/7  Monthly Service Fee  8.00  
+Ending balance on 8/7  
+Totals  $3,520.00  $5,291.19 
+The Ending Daily Balance does not reflect any pending withdrawals or holds on deposited funds that may have been outstanding on your account when your 
+transactions posted.  If you had insufficient available funds when a transaction posted, fees may have been assessed. 
+Your checking package is designed to work with you to achieve financial success by providing additional benefits on the accounts and  
+services you need. Remember, to waive the monthly service fee on your checking account, you must meet the checking package  
+requirements and have three additional qualifying accounts and/or services. If you have any questions, please contact your Wells Fargo  
+
+Sheet Seq = 0003670 
+Sheet 00004 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 5 of 5 
+Worksheet to balance your account  General statement policies for Wells Fargo Bank 
+Follow the steps below to reconcile your statement balance with your 
+To dispute or report inaccuracies in information we have furnished to a 
+ n 
+account register balance.  Be sure that your register shows any interest  Consumer Reporting Agency about your accounts.    You have the right to 
+paid into your account and any service charges, automatic payments or  dispute the accuracy of information that Wells Fargo Bank, N.A. has 
+ATM transactions withdrawn from your account during this statement  furnished to a consumer reporting agency by writing to us at Wells Fargo 
+period.  
+specific information that is inaccurate or in dispute and the basis for the 
+A  $ 
+Enter the ending balance   on this statement. 
+dispute along with supporting documentation.  If you believe the 
+B 
+List outstanding deposits and other 
+information furnished is the result of identity theft, please provide us with 
+credits   to your account that do not appear on 
+an identity theft report. 
+this statement.    Enter the total   in the column  
+ n  In case of errors or questions about your electronic transfers, 
+to the right. 
+telephone us at the number printed on the front of this statement or write 
+  
+Description  Amount 
+
+you can, if you think your statement or receipt is wrong or if you need more 
+information about a transfer on the statement or receipt.  We must hear 
+from you no later than 60 days after we sent you the FIRST statement on 
+which the error or problem appeared. 
+1.  Tell us your name and account number (if any). 
+  
+Describe the error or the transfer you are unsure about, and explain as 
+2. 
+  
+Total  $   
++  $ 
+clearly as you can why you believe it is an error or why you need more 
+information. 
+Tell us the dollar amount of the suspected error. 
+3. 
+=  $    
+C  A  B  to calculate the subtotal. 
+Add  and 
+We will investigate your complaint and will correct any error promptly.  If 
+  
+D  List outstanding checks, withdrawals, and 
+we take more than 10 business days to do this, we will credit your account 
+other debits   to your account that do not appear 
+for the amount you think is in error, so that you will have the use of the 
+on this statement.    Enter the total   in the column 
+money during the time it takes us to complete our investigation. 
+to the right. 
+In case of errors or questions about your Direct Deposit Advance   or 
+   n 
+SM 
+Deposit Advance     * Service 
+Number/Description  Amount 
+  
+If you think your bill is wrong, or if you need more information about a 
+transaction on your bill, write us at Wells Fargo Bank, P. O. Box 6995, 
+
+later than 60 days after we sent you the first bill on which the error or 
+problem appeared. You can telephone us, but doing so will not preserve 
+your rights. 
+  
+In your letter, give us the following information: 
+Your name and account number 
+   1. 
+The dollar amount of the suspected error 
+2. 
+  
+Describe the error and explain, if you can, why you believe there is an 
+3. 
+  
+error. If you need more information, describe the item you are unsure 
+about. 
+You do not have to pay any amount in question while we are investigating, 
+but you are still obligated to pay the parts of your bill that are not in 
+question. While we investigate your question, we cannot report you as 
+delinquent or take any action to collect the amount you question. 
+*   The   Deposit Advance   service is not available in all states. 
+  
+Total  $   
+ $ 
+E  D  C  to calculate the 
+Subtract  from 
+adjusted ending balance.  This amount should be 
+the same as the current balance shown in your 
+=  $ 
+register. 
+2008 Wells Fargo Bank, N.A. All rights reserved  . 
+Sheet Seq = 0003671 
+Sheet 00005 of  00005 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01C6C630>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 09-08-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 09-08-2009.pdf has 5 pages.
+========================================
+Custom Management   Checking 
+Account number:     0285742623       n           n     Page 1 of 5 
+Questions? 
+Available by phone 24 hours a day, 7 days a week: 
+RAY C HORN 
+ 
+1630 N MAIN ST # 264 
+TTY:    
+
+En espaol:     TTY:    
+
+
+Online:    wellsfargo.com 
+Write:  Wells Fargo Bank, N.A. (114) 
+P.O. Box 6995 
+
+         
+Account options 
+You and Wells Fargo 
+A check mark in the box indicates you have these 
+It's easy to stay informed about your accounts with free Account Alerts. Get timely 
+convenient services with your account.  Go to 
+notifications sent right to your email or wireless device when: 
+wellsfargo.com or call the number above if you have 
+questions or if you would like to add new services. 
+
+
+Direct Deposit  My Spending Report  3 
+
+Online Bill Pay  3  Rewards Program 
+
+Online Statements  3  Online Banking  3 
+Sign up now for Account Alerts or take a tour at wellsfargo.com 
+Overdraft Protection  Auto Transfer/Payment 
+Account number:    0285742623 
+Activity summary 
+RAY C HORN 
+Beginning balance on 8/8  
+California account terms and conditions apply 
+Deposits/Additions  1,387.76 
+Withdrawals/Subtractions  
+For Direct Deposit and Automatic Payments use 
+Routing Number (RTN):  121042882 
+Ending balance on  9/8  
+Overdraft Protection 
+This account is not currently covered by Overdraft Protection.  If you 
+would like more information regarding Overdraft Protection and 
+eligibility requirements please call the number listed at the top of 
+your statement or visit your Wells Fargo branch. 
+(114) 
+Sheet Seq = 0002994 
+Sheet 00001 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 2 of 5 
+Transaction history 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+8/10   950.00 
+Street Santa Ana CA 7156 
+8/10  Check Crd Purchase 08/08 Cvspharmacy #9725 Q03 Orange CA  29.31 
+487309Xxxxxx7156 222940007787649 ?McC=5912 
+121042882DA90 
+8/10   19.95 
+487309Xxxxxx7156 221940009636172 ?McC=7399 
+121042882DA01 
+8/10   4.99  408.97 
+487309Xxxxxx7156 221940021757864 ?McC=2741 
+121042882DA01 
+8/12   12.95 
+487309Xxxxxx7156 224940007986988 ?McC=4899 
+121042882DA01 
+8/12  Check Crd Purchase 08/11 Irvine Cafe 11204591 Irvine CA  7.80 
+487309Xxxxxx7156 224940010461734 ?McC=5814 
+121042882DA90 
+8/12   7.47  380.75 
+487309Xxxxxx7156 224940008566881 ?McC=4816 
+121042882DA01 
+8/13   104.85 
+8/13  Check Crd Purchase 08/12 Friendfinder +16107571929 Gb  17.99 
+487309Xxxxxx7156 225940012519300 ?McC=5968 
+121042882DA01 
+8/13  Check Crd Purchase 08/12 Irvine Cafe 11204591 Irvine CA  8.20 
+487309Xxxxxx7156 225940010442075 ?McC=5814 
+121042882DA90 
+8/13  Check Crd Purchase 08/12 Irvine Cafe 11204591 Irvine CA  7.23  242.48 
+487309Xxxxxx7156 225940010442022 ?McC=5814 
+121042882DA90 
+8/14  Debit Card Reversal of Provisional Credit 10731090959  560.00 
+8/14  WF Bill Pay Thru Software:Fee 121042882ND  6.95 
+8/14  WF Banking Thru Software:Fee 121042882ND  3.00 
+8/14  Check Crd Purchase 08/13 Irvine Cafe 11204591 Irvine CA  9.58 
+487309Xxxxxx7156 226940010627310 ?McC=5814 
+121042882DA90 
+8/14  Check Crd Purchase 08/13 Irvine Cafe 11204591 Irvine CA  8.41  
+487309Xxxxxx7156 226940010627261 ?McC=5814 
+121042882DA90 
+8/17  Overdraft Fee  35.00 
+8/17  Overdraft Fee  35.00 
+8/17  Overdraft Fee  35.00 
+8/17  Check Crd Purchase 08/13 Cvspharmacy #9725 Q03 Orange CA  51.62 
+487309Xxxxxx7156 228940010250478 ?McC=5912 
+121042882DA90 
+8/17   19.99 
+487309Xxxxxx7156 228940018903504 ?McC=7273 121042882DA 
+8/17   17.95 
+CA 487309Xxxxxx7156 228940020987556 ?McC=5967 
+121042882DA01 
+8/17  Check Crd Purchase 08/14 Irvine Cafe 11204591 Irvine CA  9.18 
+487309Xxxxxx7156 228940023258955 ?McC=5814 
+121042882DA90 
+8/17  Check Crd Purchase 08/14 Irvine Cafe 11204591 Irvine CA  8.85 
+487309Xxxxxx7156 228940023258928 ?McC=5814 
+121042882DA90 
+8/17   8.70 
+CA 487309Xxxxxx7156 228940020987555 ?McC=5967 
+121042882DA01 
+8/17  Continuous OD Level 2 Charge  5.00  
+8/18  Overdraft Fee  35.00 
+Sheet Seq = 0002995 
+Sheet 00002 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 3 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+8/18  Overdraft Fee  35.00 
+8/18  Overdraft Fee  35.00 
+8/18  Overdraft Fee  35.00 
+8/18  Overdraft Fee  35.00 
+8/18  Overdraft Fee  35.00 
+8/18  Check Crd Purchase 08/17 Nfi*WWW.Netflix.Com/CC Netflix.Com  18.41 
+CA 487309Xxxxxx7156 230940010002158 ?McC=5968 
+121042882DA01 
+8/18  Continuous OD Level 2 Charge  5.00  
+8/19  Overdraft Fee  35.00 
+8/19  Continuous OD Level 2 Charge  5.00  
+8/20  Continuous OD Level 2 Charge  5.00  
+8/21  Continuous OD Level 2 Charge  5.00  
+8/24   59.50 
+487309Xxxxxx7156 236940010985087 ?McC=8999 
+121042882DA01 
+8/24  Continuous OD Level 2 Charge  5.00  
+8/25  Overdraft Fee  35.00  
+8/27  Sbli USA Fin Ser Premiums 090826 8861501 Gwen *Horn  186.41  
+8/28  Preauthorized Debit Reversal  186.41 
+8/28  NSF Return Item Fee  35.00  
+8/31  Paypal Inst Xfer 090831 5Alj23Tzqmnqu Hal Smalltalker Inc.  71.74 
+8/31  Paypal Inst Xfer 090831 5Alj23Tznl9Bs Hal Smalltalker Inc.  9.77 
+8/31  Paypal Inst Xfer 090831 5Alj23Tzngj6E Hal Smalltalker Inc.  3.69  
+9/1   0.58 
+9/1  Preauthorized Debit Reversal  71.74 
+9/1  Preauthorized Debit Reversal  9.77 
+9/1  Preauthorized Debit Reversal  3.69 
+9/1  NSF Return Item Fee  35.00 
+9/1  NSF Return Item Fee  35.00 
+9/1  NSF Return Item Fee  35.00 
+9/1  Paypal Inst Xfer 090901 5Alj23U3Jrdmg Hal Smalltalker Inc.  50.98 
+9/1  Paypal Inst Xfer 090901 5Alj23U3Hvqjg Hal Smalltalker Inc.  23.95 
+9/1  Paypal Inst Xfer 090901 5Alj23U3Esada Hal Smalltalker Inc.  21.83 
+9/1  Paypal Inst Xfer 090901 5Alj23U3Fxqds Hal Smalltalker Inc.  7.71  
+9/2  Preauthorized Debit Reversal  50.98 
+9/2  Preauthorized Debit Reversal  23.95 
+9/2  Preauthorized Debit Reversal  21.83 
+9/2  Preauthorized Debit Reversal  7.71 
+9/2  NSF Return Item Fee  35.00 
+9/2  NSF Return Item Fee  35.00 
+9/2  NSF Return Item Fee  35.00 
+9/2  NSF Return Item Fee  35.00 
+9/2  Paypal Inst Xfer 090902 5Alj23U542Auc Hal Smalltalker Inc.  50.00 
+9/2  Paypal Inst Xfer 090902 5Alj23U52Lhdq Hal Smalltalker Inc.  7.11  
+9/3  Preauthorized Debit Reversal  50.00 
+9/3  Preauthorized Debit Reversal  7.11 
+9/3  NSF Return Item Fee  35.00 
+9/3  NSF Return Item Fee  35.00 
+9/3  Paypal Inst Xfer 090903 5Alj23U6Uwjqj Hal Smalltalker Inc.  1.99  
+9/4  Preauthorized Debit Reversal  1.99 
+9/4  NSF Return Item Fee  35.00 
+9/4  Paypal Inst Xfer 090904 5Alj23U8Y4P5E Hal Smalltalker Inc.  2.00  
+9/8  Preauthorized Debit Reversal  2.00 
+9/8  NSF Return Item Fee  35.00 
+9/8  Sbli USA Fin Ser Premiums 090904 5564403 Gwen *Horn  186.41 
+9/8  Paypal Inst Xfer 090831 5Alj23Tzqmnqu Hal Smalltalker Inc.  71.74 
+9/8  Paypal Inst Xfer 090831 5Alj23Tznl9Bs Hal Smalltalker Inc.  9.77 
+Sheet Seq = 0002996 
+Sheet 00003 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 4 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+9/8  Paypal Inst Xfer 090831 5Alj23Tzngj6E Hal Smalltalker Inc.  3.69 
+9/8  Monthly Service Fee  8.00  
+Ending balance on 9/8  
+Totals  $1,387.76  $2,554.67 
+The Ending Daily Balance does not reflect any pending withdrawals or holds on deposited funds that may have been outstanding on your account when your 
+transactions posted.  If you had insufficient available funds when a transaction posted, fees may have been assessed. 
+Items returned unpaid 
+Date  Description  Amount 
+8/28   Reference #       021000028186632  186.41 
+9/1   Reference #       091000018253953  71.74 
+9/1   Reference #       091000018255847  9.77 
+9/1   Reference #       091000018255846  3.69 
+9/2   Reference #       091000018204383  50.98 
+9/2   Reference #       091000018200533  23.95 
+9/2   Reference #       091000018204228  21.83 
+9/2   Reference #       091000018201541  7.71 
+9/3   Reference #       091000016039714  50.00 
+9/3   Reference #       091000016044520  7.11 
+9/4   Reference #       091000016678983  1.99 
+9/8   Reference #       091000018501189  2.00 
+Your checking package is designed to work with you to achieve financial success by providing additional benefits on the accounts and  
+services you need. Remember, to waive the monthly service fee on your checking account, you must meet the checking package  
+requirements and have three additional qualifying accounts and/or services. If you have any questions, please contact your Wells Fargo  
+
+Sheet Seq = 0002997 
+Sheet 00004 of  00005 
+----------------------------------------
+Account number:     0285742623       n           n     Page 5 of 5 
+Worksheet to balance your account  General statement policies for Wells Fargo Bank 
+Follow the steps below to reconcile your statement balance with your 
+To dispute or report inaccuracies in information we have furnished to a 
+ n 
+account register balance.  Be sure that your register shows any interest  Consumer Reporting Agency about your accounts.    You have the right to 
+paid into your account and any service charges, automatic payments or  dispute the accuracy of information that Wells Fargo Bank, N.A. has 
+ATM transactions withdrawn from your account during this statement  furnished to a consumer reporting agency by writing to us at Wells Fargo 
+period.  
+specific information that is inaccurate or in dispute and the basis for the 
+A  $ 
+Enter the ending balance   on this statement. 
+dispute along with supporting documentation.  If you believe the 
+B 
+List outstanding deposits and other 
+information furnished is the result of identity theft, please provide us with 
+credits   to your account that do not appear on 
+an identity theft report. 
+this statement.    Enter the total   in the column  
+ n  In case of errors or questions about your electronic transfers, 
+to the right. 
+telephone us at the number printed on the front of this statement or write 
+  
+Description  Amount 
+
+you can, if you think your statement or receipt is wrong or if you need more 
+information about a transfer on the statement or receipt.  We must hear 
+from you no later than 60 days after we sent you the FIRST statement on 
+which the error or problem appeared. 
+1.  Tell us your name and account number (if any). 
+  
+Describe the error or the transfer you are unsure about, and explain as 
+2. 
+  
+Total  $   
++  $ 
+clearly as you can why you believe it is an error or why you need more 
+information. 
+Tell us the dollar amount of the suspected error. 
+3. 
+=  $    
+C  A  B  to calculate the subtotal. 
+Add  and 
+We will investigate your complaint and will correct any error promptly.  If 
+  
+D  List outstanding checks, withdrawals, and 
+we take more than 10 business days to do this, we will credit your account 
+other debits   to your account that do not appear 
+for the amount you think is in error, so that you will have the use of the 
+on this statement.    Enter the total   in the column 
+money during the time it takes us to complete our investigation. 
+to the right. 
+In case of errors or questions about your Direct Deposit Advance   or 
+   n 
+SM 
+Deposit Advance     * Service 
+Number/Description  Amount 
+  
+If you think your bill is wrong, or if you need more information about a 
+transaction on your bill, write us at Wells Fargo Bank, P. O. Box 6995, 
+
+later than 60 days after we sent you the first bill on which the error or 
+problem appeared. You can telephone us, but doing so will not preserve 
+your rights. 
+  
+In your letter, give us the following information: 
+Your name and account number 
+   1. 
+The dollar amount of the suspected error 
+2. 
+  
+Describe the error and explain, if you can, why you believe there is an 
+3. 
+  
+error. If you need more information, describe the item you are unsure 
+about. 
+You do not have to pay any amount in question while we are investigating, 
+but you are still obligated to pay the parts of your bill that are not in 
+question. While we investigate your question, we cannot report you as 
+delinquent or take any action to collect the amount you question. 
+*   The   Deposit Advance   service is not available in all states. 
+  
+Total  $   
+ $ 
+E  D  C  to calculate the 
+Subtract  from 
+adjusted ending balance.  This amount should be 
+the same as the current balance shown in your 
+=  $ 
+register. 
+2008 Wells Fargo Bank, N.A. All rights reserved  . 
+Sheet Seq = 0002998 
+Sheet 00005 of  00005 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01C6C990>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 10-07-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 10-07-2009.pdf has 5 pages.
+========================================
+Custom Management   Checking 
+Account number:     285742623    n           n     Page 1 of 5 
+Questions? 
+Available by phone 24 hours a day, 7 days a week: 
+RAY C HORN 
+ 
+1630 N MAIN ST # 264 
+TTY:    
+
+En espaol:     TTY:    
+
+
+Online:    wellsfargo.com 
+Write:  Wells Fargo Bank, N.A. (114) 
+P.O. Box 6995 
+
+         
+Account options 
+You and Wells Fargo 
+A check mark in the box indicates you have these 
+Online Security Guarantee 
+convenient services with your account.  Go to 
+For more than 150 years, Wells Fargo has stood as a symbol of strength and 
+wellsfargo.com or call the number above if you have 
+security, serving our customers' financial needs. Today we remain as committed as 
+questions or if you would like to add new services. 
+ever and use proven technology to protect your personal information. We 
+Direct Deposit  My Spending Report  3 
+guarantee that you will be covered for 100% of funds removed from your Wells 
+Online Bill Pay  3  Rewards Program 
+Fargo accounts in the unlikely event that someone you haven't authorized 
+Online Statements  3  Online Banking  3 
+removes those funds through our Online Services. Visit 
+Overdraft Protection  Auto Transfer/Payment 
+wellsfargo.com/privacy_security/privacy/ for more information. 
+Account number:    285742623 
+Activity summary 
+RAY C HORN 
+Beginning balance on 9/9  
+California  account terms and conditions apply  
+Deposits/Additions  3,132.40 
+Withdrawals/Subtractions  
+For Direct Deposit and Automatic Payments use 
+Routing Number (RTN):  121042882 
+Ending balance on 10/7     $93.56 
+(114) 
+Sheet Seq = 0002707 
+Sheet 00001 of  00005 
+----------------------------------------
+Account number:     285742623       n           n     Page 2 of 5 
+Overdraft Protection 
+This account is not currently covered by Overdraft Protection.  If you 
+would like more information regarding Overdraft Protection and 
+eligibility requirements please call the number listed at the top of 
+your statement or visit your Wells Fargo branch. 
+Transaction history 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+9/9  Preauthorized Debit Reversal  186.41 
+9/9  Preauthorized Debit Reversal  71.74 
+9/9  Preauthorized Debit Reversal  9.77 
+9/9  Preauthorized Debit Reversal  3.69 
+9/9  NSF Return Item Fee  35.00 
+9/9  NSF Return Item Fee  35.00 
+9/9  NSF Return Item Fee  35.00 
+9/9  NSF Return Item Fee  35.00 
+9/9  Paypal Inst Xfer 090901 5Alj23U3Jrdmg Hal Smalltalker Inc.  50.98 
+9/9  Paypal Inst Xfer 090901 5Alj23U3Hvqjg Hal Smalltalker Inc.  23.95 
+9/9  Paypal Inst Xfer 090901 5Alj23U3Esada Hal Smalltalker Inc.  21.83 
+9/9  Paypal Inst Xfer 090901 5Alj23U3Fxqds Hal Smalltalker Inc.  7.71  
+9/10  Preauthorized Debit Reversal  50.98 
+9/10  Preauthorized Debit Reversal  23.95 
+9/10  Preauthorized Debit Reversal  21.83 
+9/10  Preauthorized Debit Reversal  7.71 
+9/10  NSF Return Item Fee  35.00 
+9/10  NSF Return Item Fee  35.00 
+9/10  NSF Return Item Fee  35.00 
+9/10  NSF Return Item Fee  35.00 
+9/10  Paypal Inst Xfer 090902 5Alj23U542Auc Hal Smalltalker Inc.  50.00 
+9/10  Paypal Inst Xfer 090902 5Alj23U52Lhdq Hal Smalltalker Inc.  7.11  
+9/11  Preauthorized Debit Reversal  50.00 
+9/11  Preauthorized Debit Reversal  7.11 
+9/11  NSF Return Item Fee  35.00 
+9/11  NSF Return Item Fee  35.00 
+9/11  Paypal Transfer 090911 5Alj23Uj57B8C Hal Smalltalker Inc.  71.74 
+9/11  Paypal Transfer 090911 5Alj23Uj57B7N Hal Smalltalker Inc.  3.69 
+9/11  Paypal Inst Xfer 090903 5Alj23U6Uwjqj Hal Smalltalker Inc.  1.99  
+9/14  Preauthorized Debit Reversal  71.74 
+9/14  Preauthorized Debit Reversal  3.69 
+9/14  Preauthorized Debit Reversal  1.99 
+9/14  NSF Return Item Fee  35.00 
+9/14  NSF Return Item Fee  35.00 
+9/14  NSF Return Item Fee  35.00 
+9/14  Paypal Transfer 090913 5Alj23Uljfz5C Hal Smalltalker Inc.  50.98 
+9/14  Paypal Transfer 090913 5Alj23Uljfz5Y Hal Smalltalker Inc.  7.71 
+9/14  Paypal Inst Xfer 090904 5Alj23U8Y4P5E Hal Smalltalker Inc.  2.00  
+9/15  Preauthorized Debit Reversal  50.98 
+9/15  Preauthorized Debit Reversal  7.71 
+9/15  Preauthorized Debit Reversal  2.00 
+9/15  NSF Return Item Fee  35.00 
+9/15  NSF Return Item Fee  35.00 
+9/15  NSF Return Item Fee  35.00 
+9/15  WF Bill Pay Thru Software:Fee 121042882ND  6.95 
+9/15  WF Banking Thru Software:Fee 121042882ND  3.00 
+9/15  Paypal Transfer 090915 5Alj23Updm9Vq Hal Smalltalker Inc.  50.00 
+9/15  Paypal Transfer 090915 5Alj23Updm9T8 Hal Smalltalker Inc.  7.11  
+9/16  Preauthorized Debit Reversal  50.00 
+9/16  Preauthorized Debit Reversal  7.11 
+9/16  NSF Return Item Fee  35.00 
+9/16  NSF Return Item Fee  35.00  
+Sheet Seq = 0002708 
+Sheet 00002 of  00005 
+----------------------------------------
+Account number:     285742623       n           n     Page 3 of 5 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+9/17  Paypal Transfer 090917 5Alj23Uskxb8N Hal Smalltalker Inc.  2.00 
+9/17  Paypal Transfer 090917 5Alj23Uskxbej Hal Smalltalker Inc.  1.99  
+9/18  Preauthorized Debit Reversal  2.00 
+9/18  Preauthorized Debit Reversal  1.99 
+9/18  NSF Return Item Fee  35.00 
+9/18  NSF Return Item Fee  35.00  
+9/22  Online Transfer Ref #Ibe54Tlbqm From Expanded Bus Services  2,200.00  107.97 
+Pack Bring Account Current Business Expenses 
+9/23  Online Transfer Ref #Ibe54Tnllg From Expanded Bus Services  150.00  257.97 
+Pack Business Expenses 
+9/28  Sbli USA Fin Ser Premiums 090925 9353953 Gwen *Horn  186.41  71.56 
+9/30  Online Transfer Ref #Ibexb9G7B9 From Expanded Bus Services  150.00  221.56 
+Pack Misc Business Expenses 
+10/7  Online Transfer Ref #Ibe27Tsgrv to Expanded Bus Services Pack  120.00 
+Xxxxxx0909 on 10/07/09 
+10/7  Monthly Service Fee  8.00  93.56 
+Ending balance on 10/7  93.56 
+Totals  $3,132.40  $1,385.15 
+The Ending Daily Balance does not reflect any pending withdrawals or holds on deposited funds that may have been outstanding on your account when your 
+transactions posted.  If you had insufficient available funds when a transaction posted, fees may have been assessed. 
+Items returned unpaid 
+Date  Description  Amount 
+9/9   Reference #       021000022781749  186.41 
+9/9   Reference #       091000010189859  71.74 
+9/9   Reference #       091000010176507  9.77 
+9/9   Reference #       091000010172863  3.69 
+9/10   Reference #       091000010030974  50.98 
+9/10   Reference #       091000010027926  23.95 
+9/10   Reference #       091000010027638  21.83 
+9/10   Reference #       091000010023192  7.71 
+9/11   Reference #       091000010059933  50.00 
+9/11   Reference #       091000010052293  7.11 
+9/14   Reference #       091000017295387  71.74 
+9/14   Reference #       091000017295388  3.69 
+9/14   Reference #       091000010205856  1.99 
+9/15   Reference #       091000015384745  50.98 
+9/15   Reference #       091000015384732  7.71 
+9/15   Reference #       091000010043232  2.00 
+9/16   Reference #       091000017540095  50.00 
+9/16   Reference #       091000017540096  7.11 
+9/18   Reference #       091000015054172  2.00 
+9/18   Reference #       091000015054171  1.99 
+Your checking package is designed to work with you to achieve financial success by providing additional benefits on the accounts and  
+services you need. Remember, to waive the monthly service fee on your checking account, you must meet the checking package  
+requirements and have three additional qualifying accounts and/or services. If you have any questions, please contact your Wells Fargo  
+
+Sheet Seq = 0002709 
+Sheet 00003 of  00005 
+----------------------------------------
+Account number:     285742623       n           n     Page 4 of 5 
+ IMPORTANT ACCOUNT INFORMATION 
+Credit Defense Platinum on Credit Cards is no longer a qualifying account to meet the Package requirements for Wells Fargo Checking  
+
+
+In an effort to communicate urgent account information as quickly as possible, we are changing the way we deliver account notices to  
+Online Banking customers for whom we have a valid email address. Starting January 17, 2010, we will send an email alert notifying you  
+of an overdraft or insufficient funds notice in your secure online mailbox. These email alerts arrive up to three (3) days faster than paper  
+notices, so you can resolve the situation more quickly and avoid additional fees. If you want to continue to receive notices by mail,  
+please sign on to Online Banking, go to Delivery Preferences and select Online & U.S. Mail next to Account Notices, or contact us at  
+
+Your Card (Wells Fargo ATM Cards, Check Cards, or Cash Cards) must not be used for any unlawful purpose (for example, funding any  
+account that is set up to facilitate Internet gambling). You agree to take steps to ensure that you will not use your Card or any linked  
+account for any transaction that is illegal under the laws governing your account. In addition, the Bank reserves the right to deny  
+transactions or authorizations from merchants apparently engaging in the Internet gambling business or identifying themselves  
+through the Card transactions record or otherwise as engaged in such business. 
+Sheet Seq = 0002710 
+Sheet 00004 of  00005 
+----------------------------------------
+Account number:     285742623       n           n     Page 5 of 5 
+Worksheet to balance your account  General statement policies for Wells Fargo Bank 
+Follow the steps below to reconcile your statement balance with your 
+To dispute or report inaccuracies in information we have furnished to a 
+ n 
+account register balance.  Be sure that your register shows any interest  Consumer Reporting Agency about your accounts.    You have the right to 
+paid into your account and any service charges, automatic payments or  dispute the accuracy of information that Wells Fargo Bank, N.A. has 
+ATM transactions withdrawn from your account during this statement  furnished to a consumer reporting agency by writing to us at Wells Fargo 
+period.  
+specific information that is inaccurate or in dispute and the basis for the 
+A  $ 
+Enter the ending balance   on this statement. 
+dispute along with supporting documentation.  If you believe the 
+B 
+List outstanding deposits and other 
+information furnished is the result of identity theft, please provide us with 
+credits   to your account that do not appear on 
+an identity theft report. 
+this statement.    Enter the total   in the column  
+ n  In case of errors or questions about your electronic transfers, 
+to the right. 
+telephone us at the number printed on the front of this statement or write 
+  
+
+Description  Amount 
+you can, if you think your statement or receipt is wrong or if you need more 
+information about a transfer on the statement or receipt.  We must hear 
+from you no later than 60 days after we sent you the FIRST statement on 
+which the error or problem appeared. 
+1.  Tell us your name and account number (if any). 
+  
+Describe the error or the transfer you are unsure about, and explain as 
+2. 
+  
+clearly as you can why you believe it is an error or why you need more 
+Total  $   
++  $ 
+information. 
+Tell us the dollar amount of the suspected error. 
+3. 
+  
+=  $ 
+C  A  B  to calculate the subtotal. 
+Add  and 
+We will investigate your complaint and will correct any error promptly.  If 
+  
+D  List outstanding checks, withdrawals, and 
+we take more than 10 business days to do this, we will credit your account 
+other debits   to your account that do not appear  for the amount you think is in error, so that you will have the use of the 
+money during the time it takes us to complete our investigation. 
+on this statement.    Enter the total   in the column 
+to the right. 
+In case of errors or questions about your Direct Deposit Advance   or 
+   n 
+SM 
+Deposit Advance     * Service 
+  
+Number/Description  Amount 
+If you think your bill is wrong, or if you need more information about a 
+transaction on your bill, write us at Wells Fargo Bank, P. O. Box 6995, 
+
+later than 60 days after we sent you the first bill on which the error or 
+problem appeared. You can telephone us, but doing so will not preserve 
+your rights. 
+  
+In your letter, give us the following information: 
+Your name and account number 
+   1. 
+The dollar amount of the suspected error 
+2. 
+  
+Describe the error and explain, if you can, why you believe there is an 
+3. 
+  
+error. If you need more information, describe the item you are unsure 
+about. 
+You do not have to pay any amount in question while we are investigating, 
+but you are still obligated to pay the parts of your bill that are not in 
+question. While we investigate your question, we cannot report you as 
+delinquent or take any action to collect the amount you question. 
+*   The   Deposit Advance   service is not available in all states. 
+  
+Total  $   
+ $ 
+E  D  C  to calculate the 
+Subtract  from 
+adjusted ending balance.  This amount should be 
+the same as the current balance shown in your 
+=  $ 
+2008 Wells Fargo Bank, N.A. All rights reserved  . 
+register. 
+Sheet Seq = 0002711 
+Sheet 00005 of  00005 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01F1F0F0>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 11-06-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 11-06-2009.pdf has 3 pages.
+========================================
+Custom Management   Checking 
+Account number:     285742623    n           n     Page 1 of 3 
+Questions? 
+Available by phone 24 hours a day, 7 days a week: 
+RAY C HORN 
+ 
+1630 N MAIN ST # 264 
+TTY:    
+
+En espaol:     TTY:    
+
+
+Online:    wellsfargo.com 
+Write:  Wells Fargo Bank, N.A. (114) 
+P.O. Box 6995 
+
+         
+Account options 
+You and Wells Fargo 
+A check mark in the box indicates you have these 
+We're glad you've chosen to use our free Direct Deposit service. Don't forget, you 
+convenient services with your account.  Go to 
+
+wellsfargo.com or call the number above if you have 
+account giving you instant access to your funds. Visit a banker to learn more about 
+questions or if you would like to add new services. 
+setting up additional payment types for your Direct Deposit. 
+Direct Deposit  3  My Spending Report  3 
+Online Bill Pay  3  Rewards Program 
+Online Statements  3  Online Banking  3 
+Overdraft Protection  Auto Transfer/Payment 
+Account number:    285742623 
+Activity summary 
+RAY C HORN 
+Beginning balance on 10/8  $93.56 
+California  account terms and conditions apply  
+Deposits/Additions  980.00 
+Withdrawals/Subtractions  
+For Direct Deposit and Automatic Payments use 
+Routing Number (RTN):  121042882 
+Ending balance on 11/6     $287.08 
+(114) 
+Sheet Seq = 0002082 
+Sheet 00001 of  00003 
+----------------------------------------
+Account number:     285742623       n           n     Page 2 of 3 
+n     The annual rental fee of $75.00 for Safe 
+Overdraft Protection 
+Deposit Box Number CAWFB000016515   will be 
+This account is not currently covered by Overdraft Protection.  If you 
+would like more information regarding Overdraft Protection and 
+charged to this account   on or about 
+eligibility requirements please call the number listed at the top of 
+12/12/2009. 
+your statement or visit your Wells Fargo branch. 
+Transaction history 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+10/13  Online Transfer Ref #Ibeqj7Ncsw From Expanded Bus Services  110.00  203.56 
+Pack Maintain Minimum Deposit for Bills 
+10/15  WF Bill Pay Thru Software:Fee 121042882ND  6.95 
+10/15  WF Banking Thru Software:Fee 121042882ND  3.00  193.61 
+10/19   870.00  1,063.61 
+Horn Jr 
+10/21  Online Transfer Ref #Ibemm7Bnyq to Expanded Bus Services  500.00  563.61 
+Pack Replaces Funds for Business Expenses 
+10/26  Sbli USA Fin Ser Premiums 091025 2927965 Gwen *Horn  186.41  377.20 
+11/4  Check Crd Purchase 11/03 Carlitos Gardel Los Angeles CA  90.12  287.08 
+434256Xxxxxx0871 308940007651563 ?McC=5812 
+121042882DA90 
+Ending balance on 11/6  287.08 
+Totals  $980.00  $786.48 
+The Ending Daily Balance does not reflect any pending withdrawals or holds on deposited funds that may have been outstanding on your account when your 
+transactions posted.  If you had insufficient available funds when a transaction posted, fees may have been assessed. 
+Wells Fargo Visa Gift Cards make the perfect gift for anyone on your holiday list. Available at your local Wells Fargo and online at  
+wellsfargo.com/giftcard. 
+Direct Deposit Advance        
+$0.00 
+Outstanding advance balance as of the beginning of this statement period including   Finance Charge(s) 
+$0.00 
+Outstanding advance balance as of the end of this statement period including   Finance Charge(s) 
+$0.00 
+Finance Charge(s)   incurred on advances taken during this statement period 
+Current advance credit limit  $300.00 
+Current repayment option  Automatic Deduction 
+n  The Direct Deposit Advance service is there when you need it. Advance up to $500 of your recurring Direct Deposit income at the ATM,  
+
+needs. See the Direct Deposit Advance Service Agreement and Product Guide and any amendment or addendum for complete details. 
+Sheet Seq = 0002083 
+Sheet 00002 of  00003 
+----------------------------------------
+Account number:     285742623       n           n     Page 3 of 3 
+Worksheet to balance your account  General statement policies for Wells Fargo Bank 
+Follow the steps below to reconcile your statement balance with your 
+To dispute or report inaccuracies in information we have furnished to a 
+ n 
+account register balance.  Be sure that your register shows any interest  Consumer Reporting Agency about your accounts.    You have the right to 
+paid into your account and any service charges, automatic payments or  dispute the accuracy of information that Wells Fargo Bank, N.A. has 
+ATM transactions withdrawn from your account during this statement  furnished to a consumer reporting agency by writing to us at Wells Fargo 
+period.  
+specific information that is inaccurate or in dispute and the basis for the 
+A  $ 
+Enter the ending balance   on this statement. 
+dispute along with supporting documentation.  If you believe the 
+B 
+List outstanding deposits and other 
+information furnished is the result of identity theft, please provide us with 
+credits   to your account that do not appear on 
+an identity theft report. 
+this statement.    Enter the total   in the column  
+ n  In case of errors or questions about your electronic transfers, 
+to the right. 
+telephone us at the number printed on the front of this statement or write 
+  
+
+Description  Amount 
+you can, if you think your statement or receipt is wrong or if you need more 
+information about a transfer on the statement or receipt.  We must hear 
+from you no later than 60 days after we sent you the FIRST statement on 
+which the error or problem appeared. 
+1.  Tell us your name and account number (if any). 
+  
+Describe the error or the transfer you are unsure about, and explain as 
+2. 
+  
+clearly as you can why you believe it is an error or why you need more 
+Total  $   
++  $ 
+information. 
+Tell us the dollar amount of the suspected error. 
+3. 
+  
+=  $ 
+C  A  B  to calculate the subtotal. 
+Add  and 
+We will investigate your complaint and will correct any error promptly.  If 
+  
+D  List outstanding checks, withdrawals, and 
+we take more than 10 business days to do this, we will credit your account 
+other debits   to your account that do not appear  for the amount you think is in error, so that you will have the use of the 
+money during the time it takes us to complete our investigation. 
+on this statement.    Enter the total   in the column 
+to the right. 
+In case of errors or questions about your Direct Deposit Advance   or 
+   n 
+SM 
+Deposit Advance     * Service 
+  
+Number/Description  Amount 
+If you think your bill is wrong, or if you need more information about a 
+transaction on your bill, write us at Wells Fargo Bank, P. O. Box 6995, 
+
+later than 60 days after we sent you the first bill on which the error or 
+problem appeared. You can telephone us, but doing so will not preserve 
+your rights. 
+  
+In your letter, give us the following information: 
+Your name and account number 
+   1. 
+The dollar amount of the suspected error 
+2. 
+  
+Describe the error and explain, if you can, why you believe there is an 
+3. 
+  
+error. If you need more information, describe the item you are unsure 
+about. 
+You do not have to pay any amount in question while we are investigating, 
+but you are still obligated to pay the parts of your bill that are not in 
+question. While we investigate your question, we cannot report you as 
+delinquent or take any action to collect the amount you question. 
+*   The   Deposit Advance   service is not available in all states. 
+  
+Total  $   
+ $ 
+E  D  C  to calculate the 
+Subtract  from 
+adjusted ending balance.  This amount should be 
+the same as the current balance shown in your 
+=  $ 
+2008 Wells Fargo Bank, N.A. All rights reserved  . 
+register. 
+Sheet Seq = 0002084 
+Sheet 00003 of  00003 
+----------------------------------------
+========================================
+Statement is <elements=<pod.set.Set object at 0x01F1FED0>, filename=Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 12-07-2009.pdf>
+title = None
+Z:\Ray Horn\Wells Fargo\2009\0285742623\Statement 12-07-2009.pdf has 3 pages.
+========================================
+Custom Management   Checking 
+Account number:     285742623    n           n     Page 1 of 3 
+Questions? 
+Available by phone 24 hours a day, 7 days a week: 
+RAY C HORN 
+ 
+1630 N MAIN ST # 264 
+TTY:    
+
+En espaol:       TTY:   
+
+
+Online:    wellsfargo.com 
+Write:  Wells Fargo Bank, N.A. (114) 
+P.O. Box 6995 
+
+         
+Account options 
+You and Wells Fargo 
+A check mark in the box indicates you have these 
+Online Security Guarantee 
+convenient services with your account.  Go to 
+For more than 150 years, Wells Fargo has stood as a symbol of strength and 
+wellsfargo.com or call the number above if you have 
+security, serving our customers' financial needs. Today we remain as committed as 
+questions or if you would like to add new services. 
+ever and use proven technology to protect your personal information. We 
+Direct Deposit  My Spending Report  3 
+guarantee that you will be covered for 100% of funds removed from your Wells 
+Online Bill Pay  3  Rewards Program 
+Fargo accounts in the unlikely event that someone you haven't authorized 
+Online Statements  3  Online Banking  3 
+removes those funds through our Online Services. Visit 
+Overdraft Protection  Auto Transfer/Payment 
+wellsfargo.com/privacy_security/privacy/ for more information. 
+Account number:    285742623 
+Activity summary 
+RAY C HORN 
+Beginning balance on 11/7  $287.08 
+California account terms and conditions apply 
+Deposits/Additions  600.00 
+Withdrawals/Subtractions  
+For Direct Deposit and Automatic Payments use 
+Routing Number (RTN):  121042882 
+Ending balance on 12/7     $429.90 
+Overdraft Protection 
+This account is not currently covered by Overdraft Protection.  If you 
+would like more information regarding Overdraft Protection and 
+eligibility requirements please call the number listed at the top of 
+your statement or visit your Wells Fargo branch. 
+Transaction history 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+11/16  WF Bill Pay Thru Software:Fee 121042882ND  6.95 
+11/16  WF Banking Thru Software:Fee 121042882ND  3.00 
+(114) 
+Sheet Seq = 0001284 
+Sheet 00001 of  00003 
+----------------------------------------
+Account number:     285742623       n           n     Page 2 of 3 
+Transaction history    (continued) 
+Check  Deposits/  Withdrawals/  Ending daily 
+Date  Number  Description  Additions  Subtractions  balance 
+11/16   22.03 
+434256Xxxxxx0871 320940008303571 ?McC=5812 
+121042882DA90 
+11/16  Check Crd Purchase 11/14 Walgreens #6954 Anaheim CA  11.51 
+434256Xxxxxx0871 320940007526550 ?McC=5912 
+121042882DA90 
+11/16   5.90 
+434256Xxxxxx0871 320940008303572 ?McC=5999 
+121042882DA90 
+11/16   4.95  232.74 
+434256Xxxxxx0871 320940008378829 ?McC=5499 
+121042882DA90 
+11/17  Check Crd Purchase 11/15 Chili's Gri16700001677 Cypress CA  28.76  203.98 
+434256Xxxxxx0871 321940005539498 ?McC=5812 
+121042882DA90 
+11/18  Check Crd Purchase 11/16 AMC Century Ci01002450 Los Angeles  12.00  191.98 
+CA 434256Xxxxxx0871 322940007401306 ?McC=7832 
+121042882DA90 
+11/23  Online Transfer Ref #Ibemmbsbr6 From Expanded Bus Services  250.00 
+Pack Misc Business Expenses 
+11/23  Check Crd Purchase 11/21 Petco 534 63505341 Buena Park CA  52.17 
+434256Xxxxxx0871 327940006992202 ?McC=5995 
+121042882DA90 
+11/23  Check Crd Purchase 11/22 Petco 534 63505341 Buena Park CA  4.34  385.47 
+434256Xxxxxx0871 327940014680786 ?McC=5995 
+121042882DA90 
+11/24  Check Crd Purchase 11/22 Vons Store00020412 Garden Grove CA  58.69  326.78 
+434256Xxxxxx0871 328940004708594 ?McC=5411 
+121042882DA90 
+11/27  Sbli USA Fin Ser Premiums 091125 1602502 Gwen *Horn  186.41  140.37 
+11/30  Online Transfer Ref #Ibe553Vzhx From Expanded Bus Services  200.00 
+Pack Expenses 
+11/30  Check Crd Purchase 11/28 Endless.Com Endls.Com/Bil WA  60.47  279.90 
+434256Xxxxxx0871 333940011766779 ?McC=5942 
+121042882DA01 
+12/7  Online Transfer Ref #Ibeft9Jxc8 From Expanded Bus Services  150.00  429.90 
+Pack Xxxxxx0909 on 12/07/09 
+Ending balance on 12/7  429.90 
+Totals  $600.00  $457.18 
+The Ending Daily Balance does not reflect any pending withdrawals or holds on deposited funds that may have been outstanding on your account when your 
+transactions posted.  If you had insufficient available funds when a transaction posted, fees may have been assessed. 
+Sheet Seq = 0001285 
+Sheet 00002 of  00003 
+----------------------------------------
+Account number:     285742623       n           n     Page 3 of 3 
+Worksheet to balance your account  General statement policies for Wells Fargo Bank 
+Follow the steps below to reconcile your statement balance with your 
+To dispute or report inaccuracies in information we have furnished to a 
+ n 
+account register balance.  Be sure that your register shows any interest  Consumer Reporting Agency about your accounts.    You have the right to 
+paid into your account and any service charges, automatic payments or  dispute the accuracy of information that Wells Fargo Bank, N.A. has 
+ATM transactions withdrawn from your account during this statement  furnished to a consumer reporting agency by writing to us at Wells Fargo 
+period.  
+specific information that is inaccurate or in dispute and the basis for the 
+A  $ 
+Enter the ending balance   on this statement. 
+dispute along with supporting documentation.  If you believe the 
+B 
+List outstanding deposits and other 
+information furnished is the result of identity theft, please provide us with 
+credits   to your account that do not appear on 
+an identity theft report. 
+this statement.    Enter the total   in the column  
+ n  In case of errors or questions about your electronic transfers, 
+to the right. 
+telephone us at the number printed on the front of this statement or write 
+  
+
+Description  Amount 
+you can, if you think your statement or receipt is wrong or if you need more 
+information about a transfer on the statement or receipt.  We must hear 
+from you no later than 60 days after we sent you the FIRST statement on 
+which the error or problem appeared. 
+1.  Tell us your name and account number (if any). 
+  
+Describe the error or the transfer you are unsure about, and explain as 
+2. 
+  
+clearly as you can why you believe it is an error or why you need more 
+Total  $   
++  $ 
+information. 
+Tell us the dollar amount of the suspected error. 
+3. 
+  
+=  $ 
+C  A  B  to calculate the subtotal. 
+Add  and 
+We will investigate your complaint and will correct any error promptly.  If 
+  
+D  List outstanding checks, withdrawals, and 
+we take more than 10 business days to do this, we will credit your account 
+other debits   to your account that do not appear  for the amount you think is in error, so that you will have the use of the 
+money during the time it takes us to complete our investigation. 
+on this statement.    Enter the total   in the column 
+to the right. 
+In case of errors or questions about your Direct Deposit Advance   or 
+   n 
+SM 
+Deposit Advance     * Service 
+  
+Number/Description  Amount 
+If you think your bill is wrong, or if you need more information about a 
+transaction on your bill, write us at Wells Fargo Bank, P. O. Box 6995, 
+
+later than 60 days after we sent you the first bill on which the error or 
+problem appeared. You can telephone us, but doing so will not preserve 
+your rights. 
+  
+In your letter, give us the following information: 
+Your name and account number 
+   1. 
+The dollar amount of the suspected error 
+2. 
+  
+Describe the error and explain, if you can, why you believe there is an 
+3. 
+  
+error. If you need more information, describe the item you are unsure 
+about. 
+You do not have to pay any amount in question while we are investigating, 
+but you are still obligated to pay the parts of your bill that are not in 
+question. While we investigate your question, we cannot report you as 
+delinquent or take any action to collect the amount you question. 
+*   The   Deposit Advance   service is not available in all states. 
+  
+Total  $   
+ $ 
+E  D  C  to calculate the 
+Subtract  from 
+adjusted ending balance.  This amount should be 
+the same as the current balance shown in your 
+=  $ 
+2008 Wells Fargo Bank, N.A. All rights reserved  . 
+register. 
+Sheet Seq = 0001286 
+Sheet 00003 of  00003 
+----------------------------------------
+========================================

@@ -1,0 +1,5 @@
+Test Plan
+
+Order ID can only be used once regardless of the computer.
+
+Validate the ProductKey with the rest of the entries in the database to make sure it is valid for the specific version of the product.

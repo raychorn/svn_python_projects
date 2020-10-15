@@ -1,0 +1,41 @@
+Change history, most recent first - details at http://www.equi4.com/lux/
+
+  - call GetModuleFileName to determine full executable path on Windows
+  - similarly, added FindExecutable code to locate executable on Unix
+
+lux-0.10 - 19/02/2001
+
+  - run.lu[ax] handles zip-at-end-of-exe, zip decoding is preloaded
+  - simplified run.lua, preloaded code is compiled into all builds
+  - created binaries of the LSD scripted doc utility for Linux + Win32
+  - extended global _VERSION to include luxlib version and build info
+  - renamed xyzlib to luxlib, 'cause that's what this thing really is
+
+lux-0.08 - 18/02/2001
+
+  - extended date call in iolib to accept a seconds value as 2nd arg
+  - replaced bitlib with equivalents in lxyzlib (rshift is now signed)
+  - removed socket + posix libs, each adds over 5 Kb to compressed exe
+
+lux-0.06 - 15/02/2001
+
+  - added ldynlib.c to support dynamic loading of extension libraries
+  - merged run.lua into lux[rs] startup, so it runs truly standalone now
+  - removed C-based implementation of MD5, now that there is one in Lua
+  - the "lux" executable is dynlinked, static one is now called "luxs"
+  - renamed clua.[ch] to luxsys.[ch], this is the combined core source
+  - fixed refcount issues in tclux/pylux, tclux now passes cmd as object
+
+lux-0.04 - 09/02/2001
+
+  - Python binding can also exchange data and use callbacks, see pydemo.py
+  - moved compiled binaries to their own area and distribution archives
+  - the Tcl binding now has data exchange and callbacks, see tkdemo.tcl
+  - added examples/ dir with a number of (mostly self-contained) scripts
+  - added poslib 1.1 (unix), final choice of libs yet to be determined
+  - run.lux detects & decompresses input script processed as "gzip <a >b"
+  - run.{lux,py,tcl} changed to accept cmd-line arg of script to launch
+
+lux-0.02 - 05/02/2001
+  
+  - first package, includes luasocket 1.2 and bitlib release 2

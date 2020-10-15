@@ -1,0 +1,41 @@
+<HTML>
+
+<!--------------------------------------------------------------->
+<!-- Copyright (c) 2006 by Conor O'Mahony.                     -->
+<!-- For enquiries, please email GubuSoft@GubuSoft.com.        -->
+<!-- Please keep all copyright notices below.                  -->
+<!-- Original author of TreeView script is Marcelino Martins.  -->
+<!--------------------------------------------------------------->
+<!-- This document includes the TreeView script.  The TreeView -->
+<!-- script can be found at http://www.TreeView.net.  The      -->
+<!-- script is Copyright (c) 2006 by Conor O'Mahony.           -->
+<!--------------------------------------------------------------->
+
+ <HEAD>
+
+  <style>
+   BODY {
+     background-color: white;
+     font-size: 10pt;
+     font-family: verdana,helvetica;}
+  </style>
+
+ </HEAD>
+
+ <BODY BGCOLOR="#FFFFFF">
+
+  <H3>Welcome to the {{ title }}.</H3>
+
+  <script>
+   // This code is only needed for the demo, not for your site
+   var d=""
+   var queryStr = window.location.search.substr(1)
+   queryStr=unescape(queryStr)
+   queryStr=queryStr.replace("+"," ").replace("+"," ")
+   if (queryStr.length != 0)
+    document.write("Date clicked: " + queryStr + "<br><br>");
+  </script>
+
+ </body>
+
+</html>

@@ -1,0 +1,26 @@
+@echo off
+
+cls
+echo BEGIN:
+
+if exist "Z:\python projects\@lib" set PYTHONPATH=c:\python27\lib;Z:\python projects\@lib;
+if exist "F:\@Vyper Logix Corp\@Projects\python\@lib" set PYTHONPATH=c:\python27\lib;F:\@Vyper Logix Corp\@Projects\python\@lib;
+if exist "J:\@Vyper Logix Corp\@Projects\python\@lib" set PYTHONPATH=c:\python27\lib;J:\@Vyper Logix Corp\@Projects\python\@lib;
+
+if 0%1. == 0. goto help
+
+if exist stdout*.txt del stdout*.txt
+
+if %1. == 1. c:\python27\python2.7 -O setup-freeze.py build
+
+goto end
+
+:help
+echo Begin: ---------------------------------------------------------------------------------------------------
+echo "1" means setup.py
+echo END! -----------------------------------------------------------------------------------------------------
+
+:end
+
+echo END!
+

@@ -1,0 +1,13 @@
+{% comment %} 
+Copyright (c) 2006-2007, PreFab Software Inc.
+
+Copyright (c) 2006, Andrew Gwozdziewycz <apgwoz@gmail.com>
+All rights reserved. 
+{% endcomment %}
+
+
+{% load markup %}
+{% load prefab_tags %}
+
+<img src='{{ obj.get_image_url }}'><br />
+{{ obj.body|markdown|expand_shortcuts }}

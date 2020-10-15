@@ -1,0 +1,5 @@
+1. Code a simple web server using Python.
+
+2. Make it multi-threaded.
+
+3. Connect to Flex 3 GUI using REST.

@@ -1,0 +1,95 @@
+
+Z:\python projects\aardvark>if . == . goto Bigtest 
+
+Z:\python projects\aardvark>python -m cProfile -s cumulative bcp.py --output=Bigtest.txt 
+
+Starting copy...
+1000 rows successfully bulk-copied to host-file. Total received: 1000
+1000 rows successfully bulk-copied to host-file. Total received: 2000
+1000 rows successfully bulk-copied to host-file. Total received: 3000
+1000 rows successfully bulk-copied to host-file. Total received: 4000
+1000 rows successfully bulk-copied to host-file. Total received: 5000
+1000 rows successfully bulk-copied to host-file. Total received: 6000
+1000 rows successfully bulk-copied to host-file. Total received: 7000
+1000 rows successfully bulk-copied to host-file. Total received: 8000
+1000 rows successfully bulk-copied to host-file. Total received: 9000
+1000 rows successfully bulk-copied to host-file. Total received: 10000
+
+10000 rows copied.
+Network packet size (bytes): 16192
+Clock Time (ms.) Total     : 562    Average : (17793.59 rows per sec.)
+
+Starting copy...
+1000 rows successfully bulk-copied to host-file. Total received: 1000
+1000 rows successfully bulk-copied to host-file. Total received: 2000
+1000 rows successfully bulk-copied to host-file. Total received: 3000
+1000 rows successfully bulk-copied to host-file. Total received: 4000
+1000 rows successfully bulk-copied to host-file. Total received: 5000
+1000 rows successfully bulk-copied to host-file. Total received: 6000
+1000 rows successfully bulk-copied to host-file. Total received: 7000
+1000 rows successfully bulk-copied to host-file. Total received: 8000
+1000 rows successfully bulk-copied to host-file. Total received: 9000
+1000 rows successfully bulk-copied to host-file. Total received: 10000
+
+10000 rows copied.
+Network packet size (bytes): 16192
+Clock Time (ms.) Total     : 593    Average : (16863.41 rows per sec.)
+bcp "SELECT TOP 10000 qr.computerid, COALESCE(qr.resultstext, lqr.resultstext) as resultstext, qr.sequence, qr.id as property_id, qr.siteid FROM countrywide.dbo.questionresults as qr with (nolock) INNER JOIN countrywide.dbo.computers with (nolock) ON (computers.computerid = qr.computerid AND computers.isdeleted = 0) LEFT OUTER JOIN countrywide.dbo.longquestionresults as lqr with (nolock) on (qr.siteid = lqr.siteid AND qr.id = lqr.id AND qr.computerid = lqr.computerid) WHERE qr.siteid = 1 AND qr.IsFailure = 0 AND ((qr.siteid = 1 AND qr.id = 27)OR (qr.siteid = 1 AND qr.id = 96514)OR (qr.siteid = 1 AND qr.id = 18)OR (qr.siteid = 1 AND qr.id = 82118)OR (qr.siteid = 1 AND qr.id = 31)OR (qr.siteid = 1 AND qr.id = 17)) AND qr.resultscount < 700" queryout Bigtest.txt -t		 -f datafmt.xml -a 16384 -Saracari -Usa -Pfooblah
+Time spent doing I/O :: (0.734999895096)
+bcp "SELECT TOP 10000 qr.computerid, COALESCE(qr.resultstext, lqr.resultstext) as resultstext, qr.sequence, qr.id as property_id, qr.siteid FROM countrywide.dbo.questionresults as qr with (nolock) INNER JOIN countrywide.dbo.computers with (nolock) ON (computers.computerid = qr.computerid AND computers.isdeleted = 0) LEFT OUTER JOIN countrywide.dbo.longquestionresults as lqr with (nolock) on (qr.siteid = lqr.siteid AND qr.id = lqr.id AND qr.computerid = lqr.computerid) WHERE qr.siteid = 1 AND qr.IsFailure = 0 AND ((qr.siteid = 1 AND qr.id = 27)OR (qr.siteid = 1 AND qr.id = 96514)OR (qr.siteid = 1 AND qr.id = 18)OR (qr.siteid = 1 AND qr.id = 82118)OR (qr.siteid = 1 AND qr.id = 31)OR (qr.siteid = 1 AND qr.id = 17)) AND qr.resultscount < 700" queryout Bigtest.txt -t		 -f datafmt.xml -a 16384 -Saracari -Usa -Pfooblah
+Time spent doing I/O :: (2.40699982643)
+         98 function calls in 2.421 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    2.421    2.421 <string>:1(<module>)
+        1    0.001    0.001    2.421    2.421 {execfile}
+        1    0.002    0.002    2.420    2.420 bcp.py:1(<module>)
+        2    2.412    1.206    2.413    1.206 bcp.py:53(main)
+        1    0.002    0.002    0.005    0.005 __init__.py:16(<module>)
+        1    0.001    0.001    0.002    0.002 support.py:9(<module>)
+        1    0.001    0.001    0.001    0.001 core.py:18(<module>)
+        1    0.001    0.001    0.001    0.001 kdictproxy.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:70(search_function)
+        1    0.000    0.000    0.000    0.000 {__import__}
+        1    0.000    0.000    0.000    0.000 string_escape.py:7(<module>)
+        7    0.000    0.000    0.000    0.000 support.py:175(patch)
+        2    0.000    0.000    0.000    0.000 core.py:121(bind)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 string_escape.py:29(getregentry)
+        1    0.000    0.000    0.000    0.000 __init__.py:48(normalize_encoding)
+        1    0.000    0.000    0.000    0.000 codecs.py:77(__new__)
+       14    0.000    0.000    0.000    0.000 {setattr}
+        2    0.000    0.000    0.000    0.000 {psyco._psyco.proxycode}
+       14    0.000    0.000    0.000    0.000 {getattr}
+        5    0.000    0.000    0.000    0.000 {isinstance}
+        4    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.locals}
+        3    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        3    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E1E7E18}
+        1    0.000    0.000    0.000    0.000 string_escape.py:10(Codec)
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 support.py:79(PythonFrame)
+        1    0.000    0.000    0.000    0.000 support.py:107(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 string_escape.py:15(IncrementalEncoder)
+        1    0.000    0.000    0.000    0.000 string_escape.py:19(IncrementalDecoder)
+        2    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.globals}
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 support.py:75(Frame)
+        1    0.000    0.000    0.000    0.000 string_escape.py:23(StreamWriter)
+        1    0.000    0.000    0.000    0.000 string_escape.py:26(StreamReader)
+
+
+
+Z:\python projects\aardvark>goto end 

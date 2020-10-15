@@ -1,0 +1,262 @@
+as
+at
+but
+by
+down
+for
+from
+in
+into
+like
+near
+next
+of
+off
+on
+onto
+out
+over
+past
+plus
+minus
+since
+than
+to
+up
+with
+aboard
+about
+above
+across
+after
+against
+along
+around
+before
+behind
+below
+beneath
+beside
+between
+beyond
+during
+except
+following
+inside
+minus
+onto
+opposite
+outside
+round
+since
+through
+toward
+under
+underneath
+unlike
+until
+upon
+without
+according to
+along with
+alongside
+among
+apart from
+as for
+atop
+because of
+by means of
+concerning
+despite
+except for
+in addition to
+in back of
+in case of
+in front of
+in place of
+in spite of
+instead of
+on top of
+out of
+regarding
+throughout
+till
+up to
+via
+within
+worth
+as
+at
+but
+by
+down
+for
+from
+in
+into
+like
+near
+next
+of
+off
+on
+onto
+out
+over
+past
+plus
+minus
+since
+than
+to
+up
+with
+aboard
+about
+above
+across
+after
+against
+along
+around
+before
+behind
+below
+beneath
+beside
+between
+beyond
+during
+except
+following
+inside
+minus
+onto
+opposite
+outside
+round
+since
+through
+toward
+under
+underneath
+unlike
+until
+upon
+without
+according to
+along with
+alongside
+among
+apart from
+as for
+atop
+because of
+by means of
+concerning
+despite
+except for
+in addition to
+in back of
+in case of
+in front of
+in place of
+in spite of
+instead of
+on top of
+out of
+regarding
+throughout
+till
+up to
+via
+within
+worth
+according to
+capable of
+familiar with
+impatient with
+rewarded for
+superior to
+aboard
+about
+above
+absent
+across
+after
+against
+along
+alongside
+amid
+amidst
+among
+anti 
+around
+as
+at
+atop
+before
+behind
+below
+beneath
+beside
+besides 
+between
+beyond 
+but 
+by
+concerning 
+considering
+despite
+down 
+during
+except
+excepting
+excluding
+following
+for
+from
+in
+in front of 
+inside
+instead of 
+into
+like
+mid
+minus
+near
+next
+of
+off
+on
+on top of 
+onto 
+opposite
+out of 
+outside
+over
+past
+per 
+plus
+regarding
+round
+save
+since
+than
+through
+till
+times
+to
+toward
+towards
+under
+underneath
+unlike 
+until
+up
+upon
+versus 
+via
+with
+within
+without

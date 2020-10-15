@@ -1,0 +1,21 @@
+This source code is being distributed for Educational purposes only and may
+not be used for any commercial purpose whatsoever.
+All modules whether expressed as source or object code are protected under U.S. Federal and State Copyright Laws.
+(c). Copyright 2006-2008, Ray C. Horn and Hierarchical Applications Limited, Inc., All Rights Reserved.
+
+TO INSTALL:
+
+Follow These Steps:
+
+(1). UnZIP files into a folder.
+(2). Execute the following command(s): sorting.py > sorting.txt or python sorting.py > sorting.txt
+
+Notice the point in time when the sorting process concludes.
+
+In-RAM sorting is turned-off as soon as the amount of RAM required to perform the sort exceed the available RAM.
+
+Your actual results may vary depending on the amount of RAM installed in your computer.
+
+http://raychorn.phpnet.us/
+
+(c). Copyright 2006-2008, Ray C. Horn and Hierarchical Applications Limited, Inc., All Rights Reserved.

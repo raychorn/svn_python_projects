@@ -1,0 +1,25 @@
+Production Ready Requirements: (Not sure how much of this is minimally required.)
+ 
+1). Install on VyperLogix Server with Apache 2.2.10 or XAMPP
+
+2). Install on SQL2005 Ubuntu VMWare.
+
+3). Add spawns for Django Application instances.
+
+4). Turn into a Product via License Support same as PDFXporter.
+
+5). Publish the Demo at VyperLogix.Com.
+
+6). Add Google Checkout and PayPal sales for VyperProxy v1.0 for Windows and Linux.
+
+7). Packaging issues.
+
+8). Advertise and sell PaaS via Slicehost (add markup for cost of Slicehost).
+
+9). Advertise and sell Appliance Computers in various flavors for Windows and Linux (Ubuntu 8.10).
+
+10). Advertise and sell VMWare Installations for Ubuntu 8.10.
+
+11). Expand to other Linux versions.
+
+12). Rinse, Wash and Repeat.

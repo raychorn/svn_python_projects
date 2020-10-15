@@ -1,0 +1,1 @@
+python.exe ..\drpython.py --preferencesbasepath=c:/drpython/drpython28

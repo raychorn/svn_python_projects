@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="Administrator Command Prompt here"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /k \"pushd %L && title Command Prompt\""
+
+[HKEY_CLASSES_ROOT\Drive\shell\runas]
+@="Administrator Command Prompt here"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\runas\command]
+@="cmd.exe /k \"pushd %L && title Command Prompt\""

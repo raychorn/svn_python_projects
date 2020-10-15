@@ -1,0 +1,186 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: black;
+	font-family: "Helvetica Neue", "Bitstream Vera Sans", Arial;
+	color: black;
+}
+
+#site_container {
+	display: block;
+	background-color: #4b4b4b;
+	background-image: url(site_container_bg.png);
+	background-repeat: repeat-x;
+	background-position: top left;
+	margin-top: 22px;
+}
+
+#site_container .basic_info {
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 100%;
+	color: #777777;
+	letter-spacing: 1px;
+	font-size: 11px;
+	text-align: center;
+}
+
+#site_container .basic_info a {
+	color: #777777;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#site_container .basic_info a:hover {
+	text-decoration: underline;
+}
+
+#site_header,
+#site_body,
+#site_footer .container {
+	position: relative;
+	display: block;
+	width: 990px;
+	margin: 0 auto 0 auto;
+}
+
+#site_header {
+	z-index: 999;
+}
+
+#site_header > .meta {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	background-image: url(ribbons-trans.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	width: 184px;
+	height: 163px;
+}
+
+#site_header > .meta * {
+	display: none;
+}
+
+#site_header .corporate_identity {
+	position: relative;
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#site_header .corporate_identity .logo {
+	padding-top: 19px;
+}
+
+#site_header .corporate_identity .logo a {
+	display: block;
+	background-image: url(logo-trans.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	width: 246px;
+	height: 108px;
+}
+
+#site_header .corporate_identity .logo a span {
+	display: none;
+}
+
+#site_header ul.navigation {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 280px;
+	top: 23px;
+}
+
+#site_header ul.navigation li {
+	display: inline;
+}
+
+#site_header ul.navigation li a {
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-family: "Century Gothic", "Helvetica Neue", "Bitstream Vera Sans", Arial;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-right: 12px;
+	color: #d0d0d0;
+	text-decoration: none;
+}
+
+#site_header ul.navigation li.inactive a {
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 5px;
+	min-height: 26px;
+}
+
+#site_header ul.navigation li.active a {
+	color: white;
+	background: url(nav_button_center.png) top repeat-x;
+	min-height: 26px;
+	cursor: pointer;
+}
+
+#site_header ul.navigation li.active a .outer_container {
+	background: url(nav_button_left.png) top left no-repeat;
+	display: block;
+	min-height: 26px;
+}
+
+#site_header ul.navigation li.active a .inner_container {
+	background: url(nav_button_right.png) top right no-repeat;
+	display: block;
+	min-height: 26px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 5px;
+}
+
+#site_header ul.navigation li a:hover {
+	text-decoration: underline;
+}
+
+#site_header h1 {
+	position: absolute;
+	display: block;
+	margin: 0;
+	padding: 0;
+	left: 280px;
+	top: 64px;
+}
+
+#site_header h1 span {
+	display: none;
+}
+
+#site_footer {
+	border: none;
+	background-color: black;
+	border-top: 1px solid #6f6f6f;
+	margin-top: 14px;
+	font-size: 10pt;
+	color: #aaaaaa;
+	padding: 7px;
+}
+
+#site_footer a {
+	color: #bbbbbb;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#site_footer a:hover {
+	text-decoration: underline;
+}
+

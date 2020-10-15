@@ -1,0 +1,4 @@
+
+      [nagare.applications]
+      demo = demo.app:app
+      

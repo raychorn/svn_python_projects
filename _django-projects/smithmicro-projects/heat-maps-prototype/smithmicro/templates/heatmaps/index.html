@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0px; padding: 0px }
+    #map_canvas { height: 100% }
+</style>
+<script src="/static/js/00_constants.js" type="text/javascript"></script>
+<script src="/static/js/01_objectExplainer.js" type="text/javascript"></script>
+<script language="Javascript" type="text/javascript">
+var __map__;
+var _model = {};
+
+var __element_stack = [];
+
+var __is_loaded_heat_map_utils__ = false;
+var __interval_wait_for_heat_map_utils = -1;
+
+var __callback_heat_map_utils__ = function () {
+    __is_loaded_heat_map_utils__ = true;
+};
+
+var ObjectKeys = function(o,func) {
+    var accumulator = [];
+    var is_func = (typeof func) == const_function_symbol;
+    for (var propertyName in o) {
+        accumulator.push((is_func) ? func(propertyName) : propertyName);
+    }
+    return accumulator;
+}
+
+var ObjectValues = function(o,func) {
+    var accumulator = [];
+    var is_func = (typeof func) == const_function_symbol;
+    for (var propertyName in o) {
+        accumulator.push((is_func) ? func(o[propertyName]) : o[propertyName]);
+    }
+    return accumulator;
+}
+
+function sign(num) {
+    return ((num >= 0) ? '+' : '-');
+}
+
+function _int(num) {
+    return parseInt(num.toString(),10);
+}
+
+function sprintf () {
+    var regex = /%%|%(\d+\$)?([-+\'#0 ]*)(\*\d+\$|\*|\d+)?(\.(\*\d+\$|\*|\d+))?([scboxXuidfegEG])/g;
+    var a = arguments,
+        i = 0,
+        format = a[i++];
+
+    var pad = function (str, len, chr, leftJustify) {
+        if (!chr) {
+            chr = ' ';
+        }
+        var padding = (str.length >= len) ? '' : Array(1 + len - str.length >>> 0).join(chr);
+        return leftJustify ? str + padding : padding + str;
+    };
+
+    var justify = function (value, prefix, leftJustify, minWidth, zeroPad, customPadChar) {
+        var diff = minWidth - value.length;
+        if (diff > 0) {
+            if (leftJustify || !zeroPad) {
+                value = pad(value, minWidth, customPadChar, leftJustify);
+            } else {
+                value = value.slice(0, prefix.length) + pad('', diff, '0', true) + value.slice(prefix.length);
+            }
+        }
+        return value;
+    };
+
+    var formatBaseX = function (value, base, prefix, leftJustify, minWidth, precision, zeroPad) {
+        var number = value >>> 0;
+        prefix = prefix && number && {
+            '2': '0b',
+            '8': '0',
+            '16': '0x'
+        }[base] || '';
+        value = prefix + pad(number.toString(base), precision || 0, '0', false);
+        return justify(value, prefix, leftJustify, minWidth, zeroPad);
+    };
+
+    var formatString = function (value, leftJustify, minWidth, precision, zeroPad, customPadChar) {
+        if (precision != null) {
+            value = value.slice(0, precision);
+        }
+        return justify(value, '', leftJustify, minWidth, zeroPad, customPadChar);
+    };
+
+    var doFormat = function (substring, valueIndex, flags, minWidth, _, precision, type) {
+        var number;
+        var prefix;
+        var method;
+        var textTransform;
+        var value;
+
+    if (substring == '%%') {
+        return '%';
+    }
+
+    var leftJustify = false,
+        positivePrefix = '',
+        zeroPad = false,
+        prefixBaseX = false,
+        customPadChar = ' ';
+    var flagsl = flags.length;
+    for (var j = 0; flags && j < flagsl; j++) {
+        switch (flags.charAt(j)) {
+        case ' ':
+            positivePrefix = ' ';
+            break;
+        case '+':
+            positivePrefix = '+';
+            break;
+        case '-':
+            leftJustify = true;
+            break;
+        case "'":
+            customPadChar = flags.charAt(j + 1);
+            break;
+        case '0':
+            zeroPad = true;
+            break;
+        case '#':
+            prefixBaseX = true;
+            break;
+        }
+    }
+
+    if (!minWidth) {
+        minWidth = 0;
+    } else if (minWidth == '*') {
+        minWidth = +a[i++];
+    } else if (minWidth.charAt(0) == '*') {
+        minWidth = +a[minWidth.slice(1, -1)];
+    } else {
+        minWidth = +minWidth;
+    }
+
+    if (minWidth < 0) {
+        minWidth = -minWidth;
+        leftJustify = true;
+    }
+
+    if (!isFinite(minWidth)) {
+        throw new Error('sprintf: (minimum-)width must be finite');
+    }
+
+    if (!precision) {
+        precision = 'fFeE'.indexOf(type) > -1 ? 6 : (type == 'd') ? 0 : undefined;
+    } else if (precision == '*') {
+        precision = +a[i++];
+    } else if (precision.charAt(0) == '*') {
+        precision = +a[precision.slice(1, -1)];
+    } else {
+        precision = +precision;
+    }
+
+    value = valueIndex ? a[valueIndex.slice(0, -1)] : a[i++];
+
+    switch (type) {
+    case 's':
+        return formatString(String(value), leftJustify, minWidth, precision, zeroPad, customPadChar);
+    case 'c':
+        return formatString(String.fromCharCode(+value), leftJustify, minWidth, precision, zeroPad);
+    case 'b':
+        return formatBaseX(value, 2, prefixBaseX, leftJustify, minWidth, precision, zeroPad);
+    case 'o':
+        return formatBaseX(value, 8, prefixBaseX, leftJustify, minWidth, precision, zeroPad);
+    case 'x':
+        return formatBaseX(value, 16, prefixBaseX, leftJustify, minWidth, precision, zeroPad);
+    case 'X':
+        return formatBaseX(value, 16, prefixBaseX, leftJustify, minWidth, precision, zeroPad).toUpperCase();
+    case 'u':
+        return formatBaseX(value, 10, prefixBaseX, leftJustify, minWidth, precision, zeroPad);
+    case 'i':
+    case 'd':
+        number = (+value) | 0;
+        prefix = number < 0 ? '-' : positivePrefix;
+        value = prefix + pad(String(Math.abs(number)), precision, '0', false);
+        return justify(value, prefix, leftJustify, minWidth, zeroPad);
+    case 'e':
+    case 'E':
+    case 'f':
+    case 'F':
+    case 'g':
+    case 'G':
+        number = +value;
+        prefix = number < 0 ? '-' : positivePrefix;
+        method = ['toExponential', 'toFixed', 'toPrecision']['efg'.indexOf(type.toLowerCase())];
+        textTransform = ['toString', 'toUpperCase']['eEfFgG'.indexOf(type) % 2];
+        value = prefix + Math.abs(number)[method](precision);
+        return justify(value, prefix, leftJustify, minWidth, zeroPad)[textTransform]();
+    default:
+        return substring;
+    }
+};
+
+    return format.replace(regex, doFormat);
+}
+
+PI_PER_180 = (Math.PI / 180);
+
+function degreesToRadians$(deg) {
+    return deg * PI_PER_180;
+}
+
+function radiansToDegrees$(rad) {
+    return rad / PI_PER_180;
+}
+
+function _ezObjectExplainer(objs) {
+    var t = '';
+    for (o in objs) {
+        t += ezObjectExplainer(objs[o]);
+    }
+    return t;
+}
+
+function findIndexOfItem(selector,pattern) {
+    var i;
+    var obj;
+    for (i = 0; i < this.length; i++) {
+        obj = this[i];
+        if ( ((typeof obj) != const_string_symbol) && (selector) && ((typeof selector) == const_string_symbol) ) {
+            if (obj[selector] == pattern) {
+                return i;
+            }
+        } else {
+            if (obj == pattern) {
+                return i;
+            }
+        }
+    }
+    return -1;
+}
+
+Array.prototype.findIndexOfItem = findIndexOfItem;
+
+/*
+    GeolocationDistance.js
+*/
+
+GeolocationDistance = function(id){
+    this.id = id;	// the id is the position within the global array
+};
+
+GeolocationDistance.$ = [];
+
+GeolocationDistance.get$ = function() {
+    var instance = GeolocationDistance.$[GeolocationDistance.$.length];
+    if(instance == null) {
+        instance = GeolocationDistance.$[GeolocationDistance.$.length] = new GeolocationDistance(GeolocationDistance.$.length);
+    }
+    return instance;
+};
+
+GeolocationDistance.i = function() {
+    return GeolocationDistance.get$(); // this is an alias that aids the transmission of code from the server to the client...
+};
+
+GeolocationDistance.remove$ = function(id) {
+    var ret_val = false;
+    if ( (id > -1) && (id < GeolocationDistance.$.length) ) {
+        var instance = GeolocationDistance.$[id];
+        if (!!instance) {
+            GeolocationDistance.$[id] = object_destructor(instance);
+            ret_val = (GeolocationDistance.$[id] == null);
+        }
+    }
+    return ret_val;
+};
+
+GeolocationDistance.remove$s = function() {
+    var ret_val = true;
+    for (var i = 0; i < GeolocationDistance.$.length; i++) {
+        GeolocationDistance.remove$(i);
+    }
+    GeolocationDistance.$ = [];
+    return ret_val;
+};
+
+GeolocationDistance.LAT_DELTAS = {
+    0.00001 : 3.64,
+    0.0001 : 36.4,
+    0.001 : 364,
+    0.01 : 0.69 * 5280,
+    0.1 : 6.9 * 5280,
+    1.0 : 68.97 * 5280,
+    10.0 : 690.23 * 5280
+};
+
+GeolocationDistance.LNG_DELTAS = {
+    0.00001 : 2.904,
+    0.0001 : 29.04,
+    0.001 : 290.4,
+    0.01 : 0.55 * 5280,
+    0.1 : 5.5 * 5280,
+    1.0 : 55.00 * 5280,
+    10.0 : 549.76 * 5280
+};
+
+GeolocationDistance.UNITS = {
+    radians : 'radians', 
+    miles : 'miles', 
+    mi : 'mi', 
+    feet : 'feet', 
+    meters : 'meters', 
+    m : 'm', 
+    km : 'km', 
+    degrees : 'degrees', 
+    min : 'min' 
+};
+
+GeolocationDistance.EARTH_RAD=6378137.0;
+
+GeolocationDistance.radmiles = GeolocationDistance.EARTH_RAD*100.0/2.54/12.0/5280.0;
+
+GeolocationDistance.feet_per_meter = 3280.8398950131 / 1000;
+
+GeolocationDistance.pi = Math.PI;
+
+GeolocationDistance.multipliers = {
+    radians : 1, 
+    miles : GeolocationDistance.radmiles, 
+    mi : GeolocationDistance.radmiles, 
+    feet : GeolocationDistance.radmiles * 5280,
+    meters : GeolocationDistance.EARTH_RAD, 
+    m : GeolocationDistance.EARTH_RAD, 
+    km : GeolocationDistance.EARTH_RAD / 1000, 
+    degrees : 360 / (2 * GeolocationDistance.pi), 
+    min : 60 * 360 / (2 * GeolocationDistance.pi)
+};
+
+GeolocationDistance.convert_feet_to_feet = function(feet) {
+    return feet;
+};
+
+GeolocationDistance.convert_miles_to_feet = function(miles) {
+    return miles * 5280;
+};
+
+GeolocationDistance.convert_km_to_feet = function(km) {
+    return km * GeolocationDistance.feet_per_meter * 1000;
+};
+
+GeolocationDistance.convert_m_to_feet = function(m) {
+    return m * GeolocationDistance.feet_per_meter;
+};
+
+GeolocationDistance.convertible_units = [
+    {label:'feet',func:GeolocationDistance.convert_feet_to_feet},
+    {label:'miles',func:GeolocationDistance.convert_miles_to_feet},
+    {label:'km',func:GeolocationDistance.convert_km_to_feet},
+    {label:'meters',func:GeolocationDistance.convert_m_to_feet}
+];
+
+GeolocationDistance.determine_max_factor = function(source,value) {
+    var _source;
+    function factor(num,val) {
+        return parseFloat(val.toString()) / parseFloat(num.toString());
+    }
+    if (ObjectKeys(source).length == 0) {
+        return -1;
+    }
+    var result = -1;
+    var guess;
+    for (var i in source) {
+        guess = factor(source[i],value);
+        if (parseInt(guess.toString(),10) > 0) {
+            result = parseFloat(i.toString()) * guess;
+            break;
+        }
+    }
+    return result;
+}
+
+GeolocationDistance.min_or_max_delta_from = function(source,is_min) {
+    is_min = ( (is_min == true) || (is_min == false) ) ? is_min : true;
+    var keys = ObjectKeys(source,
+        function (value) {
+            return parseFloat(value.toString());
+        }
+    );
+    function numericComparison(a,b) {
+        return a - b;
+    }
+
+    keys.sort(numericComparison);
+    return source[keys[(is_min) ? 0 : keys.length-1]];
+};
+
+GeolocationDistance.max_delta_from = function(source) {
+    return GeolocationDistance.min_or_max_delta_from(source,false);
+};
+
+GeolocationDistance.min_delta_from = function(source) {
+    return GeolocationDistance.min_or_max_delta_from(source,true);
+};
+
+GeolocationDistance.max_delta_lat = function() {
+    return GeolocationDistance.max_delta_from(GeolocationDistance.LAT_DELTAS);
+};
+
+GeolocationDistance.min_delta_lat = function() {
+    return GeolocationDistance.min_delta_from(GeolocationDistance.LAT_DELTAS);
+};
+
+GeolocationDistance.min_delta_lng = function() {
+    return GeolocationDistance.min_delta_from(GeolocationDistance.LNG_DELTAS);
+};
+
+GeolocationDistance.max_delta_lng = function() {
+    return GeolocationDistance.max_delta_from(GeolocationDistance.LNG_DELTAS);
+};
+
+GeolocationDistance.delta_from_units_lat_or_lng = function(value,units,source) {
+    var result = value;
+    try {
+        var i = GeolocationDistance.convertible_units.findIndexOfItem('label',units);
+        if (i > -1) {
+            result = GeolocationDistance.convertible_units[i].func(value); // now we have value expressed as 'feet'.
+            var max_factor = GeolocationDistance.determine_max_factor(source,result);
+            if (max_factor == -1) {
+                var key = GeolocationDistance.min_delta_from(source).toString();
+                result = result * parseFloat(source[key]);
+            } else {
+                result = max_factor;
+            }
+        }
+    } catch (e) {
+        alert('GeolocationDistance.delta_from_units_lat_or_lng().6 :: e='+e+'\n'+ezObjectExplainer(e));
+    }
+    return result;
+};
+
+GeolocationDistance.delta_from_units_lat = function(value,units) {
+    var is_neg = value < 0;
+    var result = GeolocationDistance.delta_from_units_lat_or_lng(Math.abs(value),units,GeolocationDistance.LAT_DELTAS);
+    return (is_neg) ? -result : result;
+};
+
+GeolocationDistance.delta_from_units_lng = function(value,units) {
+    var is_neg = value < 0;
+    var result = GeolocationDistance.delta_from_units_lat_or_lng(Math.abs(value),units,GeolocationDistance.LNG_DELTAS);
+    return (is_neg) ? -result : result;
+};
+
+GeolocationDistance.distance = function(pt1, pt2, units) {
+    var lat1 = pt1.lat();
+    var pt1_latRadians = degreesToRadians$(lat1);
+    var lat2 = pt2.lat();
+    var pt2_latRadians = degreesToRadians$(lat2);
+    var lng1 = pt1.lng();
+    var pt1_lngRadians = degreesToRadians$(lng1);
+    var lng2 = pt2.lng();
+    var pt2_lngRadians = degreesToRadians$(lng2);
+    var sdlat = Math.sin((pt1_latRadians - pt2_latRadians) / 2.0);
+    var sdlon = Math.sin((pt1_lngRadians - pt2_lngRadians) / 2.0);
+    var result = Math.sqrt(sdlat * sdlat + Math.cos(pt1_latRadians) * Math.cos(pt2_latRadians) * sdlon * sdlon);
+    result = 2 * Math.asin(result);
+    try {
+        if (GeolocationDistance.multipliers[units]) {
+            result = result * GeolocationDistance.multipliers[units];
+        }
+    } catch (e) {}
+    return result;
+};
+
+GeolocationDistance.hemispherical_offset_for_lat_or_lng = function(value,units,direction) {
+    direction = ((direction == true) || (direction == false)) ? direction : false;
+    return (direction) ? ((value > 0) ? -units : units) : ((value > 0) ? units : -units);
+};
+
+GeolocationDistance.unit_test = function() {
+    var a = new google.maps.LatLng(37.4228327, -122.0850778);
+    var delta = {x:0.00001,y:0.00001};
+    var b = new google.maps.LatLng(a.lat()+delta.x, a.lng()+delta.y);
+    var dst = this.distance(a,b,GeolocationDistance.UNITS.miles);
+};
+
+GeolocationDistance.prototype = {
+    id : -1,
+    toString : function() {
+        function toStr() {
+            var s = '[';
+            s += ']';
+            return s;
+        }
+        var s = 'id = [' + this.id + ']\n' + toStr();
+        return s;
+    },
+    init : function(data) {
+        return this;
+    },
+    destructor : function() {
+        return (this.id = GeolocationDistance.$[this.id] = null);
+    },
+    dummy : function() {
+        return false;
+    }
+};
+// ===========================
+
+/*
+    SmithMicroHeatMapDataModel.js
+*/
+
+SmithMicroHeatMapDataModel = function(id){
+    this.id = id;	// the id is the position within the global array
+    this.data = [];
+    this.target = null;
+    this.total_count = 0;
+    this.is_heat_gps = false;
+    this.min_lat = 0;
+    this.max_lat = 0;
+    this.min_lng = 0;
+    this.max_lng = 0;
+    this.map_bounds = null;
+    this.map_center = null;
+    this.map_SE = null;
+    this.map_SW = null;
+    this.map_NE = null;
+    this.map_NW = null;
+    this._i_ =  -1;
+    this.status = '';
+    this.results = null;
+};
+
+SmithMicroHeatMapDataModel.$ = [];
+
+SmithMicroHeatMapDataModel.get$ = function() {
+    var instance = SmithMicroHeatMapDataModel.$[SmithMicroHeatMapDataModel.$.length];
+    if(instance == null) {
+        instance = SmithMicroHeatMapDataModel.$[SmithMicroHeatMapDataModel.$.length] = new SmithMicroHeatMapDataModel(SmithMicroHeatMapDataModel.$.length);
+    }
+    return instance;
+};
+
+SmithMicroHeatMapDataModel.i = function() {
+    return SmithMicroHeatMapDataModel.get$(); // this is an alias that aids the transmission of code from the server to the client...
+};
+
+SmithMicroHeatMapDataModel.remove$ = function(id) {
+    var ret_val = false;
+    if ( (id > -1) && (id < SmithMicroHeatMapDataModel.$.length) ) {
+        var instance = SmithMicroHeatMapDataModel.$[id];
+        if (!!instance) {
+            SmithMicroHeatMapDataModel.$[id] = object_destructor(instance);
+            ret_val = (SmithMicroHeatMapDataModel.$[id] == null);
+        }
+    }
+    return ret_val;
+};
+
+SmithMicroHeatMapDataModel.remove$s = function() {
+    var ret_val = true;
+    for (var i = 0; i < SmithMicroHeatMapDataModel.$.length; i++) {
+        SmithMicroHeatMapDataModel.remove$(i);
+    }
+    SmithMicroHeatMapDataModel.$ = [];
+    return ret_val;
+};
+
+var MIN_ALPHA = 0.1;
+var MAX_ALPHA = 0.65;
+var DELTA_ALPHA = MAX_ALPHA - MIN_ALPHA;
+
+var OK_SYMBOL = 'OK';
+
+var HEAT_LAT_SYMBOL = 'heat_lat';
+var HEAT_LNG_SYMBOL = 'heat_lng';
+var HEAT_X_SYMBOL = 'heat_x';
+var HEAT_Y_SYMBOL = 'heat_y';
+var HEAT_NUM_SYMBOL = 'heat_num';
+var HEAT_GPS_SYMBOL = 'heat_gps';
+
+var REQUIRED_COLUMNS = [
+    HEAT_LAT_SYMBOL,	
+    HEAT_LNG_SYMBOL,	
+    HEAT_X_SYMBOL,	
+    HEAT_Y_SYMBOL,	
+    HEAT_NUM_SYMBOL,
+    HEAT_GPS_SYMBOL
+];
+
+var PERCENT_SYMBOL = '%';
+var GPS_SYMBOL = '@';
+var ALPHA_SYMBOL = '&';
+
+SmithMicroHeatMapDataModel.prototype = {
+    id : -1,
+    data: [],
+    target:null,
+    total_count:0,
+    is_heat_gps:false,
+    min_lat:0,
+    max_lat:0,
+    min_lng:0,
+    max_lng:0,
+    map_bounds:null, // LatLng
+    map_center:null, // LatLng
+    map_SE:null,    // LatLng
+    map_SW:null,    // LatLng
+    map_NE:null,    // LatLng
+    map_NW:null,    // LatLng
+    _i_: -1,
+    status:'',
+    results:null,    // DO NOT ASSIGN ANY VARIABLES HERE...
+    toString : function(delim) {
+        function toStr(_this) {
+            var s = '[';
+	    delim = ((delim == null) ? '' : delim);
+            s += 'target='+_this.target;
+            s += ','+delim+'total_count='+_this.total_count;
+            s += ','+delim+'min_lat='+_this.min_lat;
+            s += ','+delim+'max_lat='+_this.max_lat;
+            s += ','+delim+'min_lng='+_this.min_lng;
+            s += ','+delim+'max_lng='+_this.max_lng;
+            s += ','+delim+'map_bounds='+_this.map_bounds;
+            s += ','+delim+'map_center='+_this.map_center;
+            s += ','+delim+'_i_='+_this._i_;
+            s += ','+delim+'length='+_this.length();
+	    if ( (_this.data) && (_this.data.length) ) {
+		s += ''+delim+'BEGIN:';
+		for (var i in _this.data) {
+		    s += delim+'#'+i+'='+ezObjectExplainer(_this.data[i]);
+		}
+		s += ''+delim+'END!';
+	    }
+            s += ']';
+            return s;
+        }
+        var s = 'id = [' + this.id + ']\n' + toStr(this);
+        return s;
+    },
+    init : function(data) {
+        var i;
+        var j;
+        var aBucket;
+        var datum;
+	var _gps = null;
+        if ( (data.columns) && (data.results) ) {
+            this.determine_target(data.columns);
+            this.total_count = 0;
+            for (i = 0; i < data.results.length; i++) {
+                aBucket = {};
+                datum = data.results[i];
+                for (j = 0; j < data.columns.length; j++) {
+                    aBucket[data.columns[j]] = (data.columns[j] != HEAT_GPS_SYMBOL) ? parseInt(datum[j].toString(),10) : datum[j];
+                }
+                if (this.is_target_valid) {
+                    try {
+                        aBucket[this.target] = parseFloat(aBucket[this.target]);
+                        this.total_count += aBucket[this.target];
+			_gps = null;
+			if (this.is_heat_gps) {
+			    try {
+				_gps = aBucket[HEAT_GPS_SYMBOL];
+			    } catch (e) {}
+			}
+			if (_gps) {
+			    aBucket[GPS_SYMBOL] = new google.maps.LatLng(_gps.lat,_gps.lng);
+			} else {
+			    aBucket[GPS_SYMBOL] = new google.maps.LatLng(aBucket[HEAT_LAT_SYMBOL]+(aBucket[HEAT_Y_SYMBOL]/aBucket[HEAT_NUM_SYMBOL]),aBucket[HEAT_LNG_SYMBOL]+(aBucket[HEAT_X_SYMBOL]/aBucket[HEAT_NUM_SYMBOL]));
+			}
+                    } catch (e) {}
+                }
+                this.data.push(aBucket);
+            }
+            this.determine_percents();
+            this.determine_map_center();
+            this.status = OK_SYMBOL;
+        } else {
+            alert('WARNING:\n\nCannot process your data request at this time due to a data formatting issue.');
+        }
+        return this;
+    },
+    is_target_valid : function() {
+        return ( ((typeof this.target) == const_string_symbol) && (this.target.length > 0) );
+    },
+    determine_target: function(cols) {
+        var j;
+        if ((typeof this.target) == const_string_symbol) {
+            return;
+        }
+        for (j = 0; j < REQUIRED_COLUMNS.length; j++) {
+            REQUIRED_COLUMNS[j] = String(REQUIRED_COLUMNS[j]).toLowerCase();
+        }
+        for (j = 0; j < cols.length; j++) {
+            if (REQUIRED_COLUMNS.indexOf(String(cols[j]).toLowerCase()) == -1) {
+                this.target = cols[j];
+                break;
+            }
+        }
+    },
+    determine_percents: function() {
+		function _determine_heat_from_percent(pcent,_min,_max) {
+		    var alpha = 0;
+		    var delta = _max - _min;
+		    alpha = (((pcent-_min)/delta) * MAX_ALPHA);
+		    if (alpha < MIN_ALPHA) {
+			alpha += MIN_ALPHA;
+		    }
+		    return alpha;
+		}
+        var i;
+        var aBucket;
+		var min_pcent = 100;
+		var max_pcent = -1;
+        for (i = 0; i < this.data.length; i++) {
+            aBucket = this.data[i];
+            aBucket[PERCENT_SYMBOL] = aBucket[this.target] / this.total_count;
+	    min_pcent = Math.min(aBucket[PERCENT_SYMBOL],min_pcent);
+	    max_pcent = Math.max(aBucket[PERCENT_SYMBOL],max_pcent);
+        }
+        for (i = 0; i < this.data.length; i++) {
+            aBucket = this.data[i];
+            aBucket[ALPHA_SYMBOL] = _determine_heat_from_percent(aBucket[PERCENT_SYMBOL],min_pcent,max_pcent);
+        }
+    },
+    determine_map_center: function() {
+        this.min_lat = 99;
+        this.max_lat = -99;
+        this.min_lng = 180;
+        this.max_lng = -180;
+        var i;
+        var aBucket;
+        var aLatLng;
+        for (i = 0; i < this.data.length; i++) {
+            aBucket = this.data[i];
+            aLatLng = aBucket[GPS_SYMBOL];
+            if (aLatLng) {
+                this.min_lat = Math.min(this.min_lat,aLatLng.lat());
+                this.min_lng = Math.min(this.min_lng,aLatLng.lng());
+
+                this.max_lat = Math.max(this.max_lat,aLatLng.lat());
+                this.max_lng = Math.max(this.max_lng,aLatLng.lng());
+            }
+        }
+        this.map_bounds = new google.maps.LatLngBounds(new google.maps.LatLng(this.min_lat,this.min_lng),new google.maps.LatLng(this.max_lat,this.max_lng));
+        var units = GeolocationDistance.convertible_units[0].label;
+        var northWest = new google.maps.LatLng(this.map_bounds.getNorthEast().lat(),this.map_bounds.getSouthWest().lng());
+        var distLeft = GeolocationDistance.distance(northWest,this.map_bounds.getSouthWest(),units);
+        var distTop = GeolocationDistance.distance(northWest,this.map_bounds.getNorthEast(),units);
+        var offsetLat = GeolocationDistance.hemispherical_offset_for_lat_or_lng(northWest.lat(),GeolocationDistance.delta_from_units_lat((distLeft/2),units),false);
+        var newLat = northWest.lat()-offsetLat;
+        var offsetLng = GeolocationDistance.hemispherical_offset_for_lat_or_lng(northWest.lng(),GeolocationDistance.delta_from_units_lng((distTop/2),units),false);
+        var newLng = northWest.lng()-offsetLng;
+        this.map_center = new google.maps.LatLng(newLat,newLng);
+        this.map_SE = new google.maps.LatLng(this.min_lat, this.max_lng);
+        this.map_SW = new google.maps.LatLng(this.min_lat, this.min_lng);
+        this.map_NE = new google.maps.LatLng(this.max_lat, this.max_lng);
+        this.map_NW = new google.maps.LatLng(this.max_lat, this.min_lng);
+    },
+    next_record: function() {
+        var i = this._i_ + 1;
+        if (i < this.data.length) {
+            this._i_ = i;
+            return this.data[i];
+        }
+        this._i_ = 0;
+        return null;
+    },
+    i: function() {
+        return (this.data) ? this._i_ : 0;
+    },
+    length: function() {
+        return (this.data) ? this.data.length : 0;
+    },
+    destructor : function() {
+        return (this.id = SmithMicroHeatMapDataModel.$[this.id] = null);
+    },
+    dummy : function() {
+        return false;
+    }
+};
+</script>
+<script language="JavaScript" type="application/javascript">
+function initialize() {
+    var myLatlng = new google.maps.LatLng(48.0, 2.5);
+    var myOptions = {
+        zoom: 8,
+	maxZoom: 15,
+	minZoom: 8,
+	streetViewControl: false,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    this.map_bounds = new google.maps.LatLngBounds(new google.maps.LatLng(48.0,2.0),new google.maps.LatLng(50.0,5.0));
+    __map__ = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    //__map__ = new google.maps.Map(document.getElementById("map_canvas"), {});
+    //__map__.panToBounds(this.map_bounds);
+    //__map__.fitBounds(this.map_bounds)
+    if (__callback_heat_map_utils__) {try {__callback_heat_map_utils__();} catch (e) {}}
+}
+
+function loadScript() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://maps.google.com/maps/api/js?v=3.4&libraries=geometry&sensor=false&callback=initialize";
+    document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+</script>
+<script src="https://www.google.com/jsapi?key=ABQIAAAAmwzRmeVGHsXlchx4-mnPJhSYo8ARVewGun5VsPlPlrmHlqyhYRRbfivFBWQjFjYo6ssoQkuK_lCQVQ" type="text/javascript"></script>
+<script language="Javascript" type="text/javascript">
+google.load("jquery", "1.6.1");
+//google.load("jqueryui", "1.8.13");
+
+var NUM_SMALL_BOXES = 100;
+
+var __box_width__ = 1/NUM_SMALL_BOXES;
+var __box_height__ = 1/NUM_SMALL_BOXES;
+
+var __infowindow__;
+
+function _add_polygon_overlay(latLng,alpha,g,color) {
+    var delta_width = 1/g[HEAT_NUM_SYMBOL];
+    var delta_height = 1/g[HEAT_NUM_SYMBOL];
+    var verticies = [
+		new google.maps.Point(0,0),
+		new google.maps.Point(delta_width,0),
+		new google.maps.Point(delta_width,delta_height),
+		new google.maps.Point(0,delta_height)
+    ];
+    var aVertex1;
+    var aVertex2;
+    var latLng1;
+    var latLng2;
+    var i;
+    var m = verticies.length-1;
+    var coords = [];
+    for (i = 0; i <= m; i++) {
+		aVertex1 = verticies[i];
+		aVertex2 = verticies[((i == m) ? 0 : i+1)];
+		latLng1 = (coords.length == 0) ? new google.maps.LatLng(latLng.lat()+aVertex1.y, latLng.lng()+aVertex1.x) : coords[coords.length-1];
+		latLng2 = new google.maps.LatLng(latLng.lat()+aVertex2.y, latLng.lng()+aVertex2.x);
+		if (coords.length == 0) {
+		    coords.push(latLng1);
+		    coords.push(latLng2);
+		} else {
+		    coords.push(latLng2);
+		}
+    }
+    var aPolygon = new google.maps.Polygon({
+      paths: coords,
+      strokeColor: "#000000",
+      strokeOpacity: 1.0,
+      strokeWeight: 1,
+      fillColor: (color) ? color : "#FF0000",
+      fillOpacity: alpha
+    });
+    aPolygon.setMap(__map__);
+
+    if (!__infowindow__) {
+	__infowindow__ = new google.maps.InfoWindow()
+    }
+    
+    google.maps.event.addListener(aPolygon, 'click', 
+	function (event) {
+	    var vertices = this.getPath();
+	    
+	    var contentString = "<b>Polygon</b><br/>";
+	    contentString += "Clicked Location: <small>" + event.latLng.lat() + "," + event.latLng.lng() + "</small><br/>";
+	    
+	    contentString += "<small>";
+	    for (var i =0; i < vertices.length; i++) {
+	      var xy = vertices.getAt(i);
+	      contentString += "<br/>" + "Coordinate: " + i + "&nbsp;" + xy.lat() +"," + xy.lng();
+	    }
+	    contentString += "<p/>" + ezObjectExplainer(g) + "</p>";
+	    contentString += "</small>";
+/*	    
+	    $.ajax({
+		    url: '/get/smithmicro/points/json/',
+		    dataType: 'json',
+		    type: 'POST',
+		    data: {'heat_x':g.heat_x,'heat_y':g.heat_y},
+		    success: onSuccess2,
+		    error: onError
+		    }
+	    );
+*/	    
+	    if (!__infowindow__) {
+		__infowindow__ = new google.maps.InfoWindow()
+	    }
+	    
+	    __infowindow__.close();
+	    __infowindow__.setContent(contentString);
+	    __infowindow__.setPosition(event.latLng);
+	    
+	    __infowindow__.open(__map__);
+	}
+    );
+}
+			
+function determine_gps_heat(g,color) {
+	var lat = parseInt(g.heat_lat.toString(),10);
+	var lng = parseInt(g.heat_lng.toString(),10);
+    var latLng = new google.maps.LatLng(lat,lng);
+    var num = parseInt(g.heat_num.toString(),10);
+
+    var units = GeolocationDistance.UNITS.feet;
+
+    var offsetLat = GeolocationDistance.hemispherical_offset_for_lat_or_lng(latLng.lat(),(__box_height__*g.heat_y),false);
+    var newLat = latLng.lat()+offsetLat;
+    var offsetLng = GeolocationDistance.hemispherical_offset_for_lat_or_lng(latLng.lng(),(__box_width__*g.heat_x),false);
+    var newLng = latLng.lng()+offsetLng;
+    var latLng2 = new google.maps.LatLng(newLat,newLng);
+
+    _add_polygon_overlay(latLng2,0.25,g,color);
+}
+
+function geotagger(lat,lng) {
+    var _keys_ = ['heat_lat','heat_lng','heat_x','heat_y','heat_num'];
+    
+    function geoTagPrefix_as_str(lat,lng) {
+        return sprintf('%s%03d,%s%03d',sign(lat),Math.abs(_int(lat)),sign(lng),Math.abs(_int(lng)));
+    }
+    function geoTagPrefix_as_tuple(lat,lng) {
+        return geoTagPrefix_as_str(lat,lng).split(',');
+    }
+    var _lat = _int(lat);
+    var _lng = _int(lng);
+    
+    var _lat2 = _lat+GeolocationDistance.hemispherical_offset_for_lat_or_lng(lat,1,false);
+    var _lng2 = _lng+GeolocationDistance.hemispherical_offset_for_lat_or_lng(lng,1,false);
+    
+    var x = _int(Math.ceil((Math.max(lng,_lng) - Math.min(lng,_lng)) * NUM_SMALL_BOXES));
+    var y = _int(Math.ceil((Math.max(lat,_lat) - Math.min(lat,_lat)) * NUM_SMALL_BOXES));
+
+    var result = {};
+    var _result = geoTagPrefix_as_tuple(lat,lng);
+    _result.push(x);
+    _result.push(y);
+    _result.push(NUM_SMALL_BOXES);
+    var aKey;
+    for (var i in _keys_) {
+        aKey = _keys_[i];
+        result[aKey] = _result[i];
+    }
+    return result;
+}
+
+function draw_sample_grid(model) {
+    var _step = 1.0/NUM_SMALL_BOXES;
+    var nwLatLng = model.nwLatLng;
+    var lat = nwLatLng.lat();
+    var _lat = lat;
+    var lng;
+    var _lng = nwLatLng.lng();
+    var g1;
+    var s1;
+    var _x_ = 0;
+    var _y_ = 0;
+    while (_y_ < NUM_SMALL_BOXES) {
+		_x_ = 0;
+		lng = _lng;
+        while (_x_ < NUM_SMALL_BOXES) {
+		    g1 = geotagger(lat,lng);
+		    s1 = ezObjectExplainer(g1);
+		    determine_gps_heat(g1,"#00FF00");
+		    lng -= _step;
+		    _x_++;
+        }
+		lat += _step;
+		_y_++;
+    }
+}
+
+function onSuccess(data,textStatus) {
+    $('#ajaxBusy').show(); 
+    _model = SmithMicroHeatMapDataModel.get$();
+    _model.init(data);
+    __map__.setCenter(_model.map_center);
+    __map__.fitBounds(_model.map_bounds);
+
+    var _use_markers_ = false;
+    
+    if (_use_markers_) {
+	var markerC = new google.maps.Marker({position: _model.map_center,title:"Center is "+_model.map_center});
+	markerC.setMap(__map__);
+	
+	var markerSE = new google.maps.Marker({position: _model.map_SE,title:"SE is "+_model.map_SE});
+	markerSE.setMap(__map__);
+	
+	var markerSW = new google.maps.Marker({position: _model.map_SW,title:"SW is "+_model.map_SW});
+	markerSW.setMap(__map__);
+	
+	var markerNE = new google.maps.Marker({position: _model.map_NE,title:"NE is "+_model.map_NE});
+	markerNE.setMap(__map__);
+	
+	var markerNW = new google.maps.Marker({position: _model.map_NW,title:"NW is "+_model.map_NW});
+	markerNW.setMap(__map__);
+	
+	google.maps.event.addListener(markerC, 'click', 
+	    function (event) {
+		var contentString = "<b>Marker</b><br/>";
+		contentString += "Clicked Location: <br/><small>" + event.latLng.toString() + "</small><br/>";
+		
+		contentString += "<small>";
+		contentString += "<p/>" + _model.toString('<br/>') + "</p>";
+		contentString += "</small>";
+		
+		if (!__infowindow__) {
+		    __infowindow__ = new google.maps.InfoWindow()
+		}
+	
+		__infowindow__.close();
+		__infowindow__.setContent(contentString);
+		__infowindow__.setPosition(event.latLng);
+		
+		__infowindow__.open(__map__);
+	    }
+	);
+    }
+
+    /*
+    google.maps.event.addListener(__map__, 'zoom_changed', function() {
+	alert('Zoom: '+__map__.getZoom()+'\n'+'Center: '+__map__.getCenter()+'\n'+'Bounds: '+__map__.getBounds());
+    });
+    */
+  
+    //var _use_markers_ = false;
+    
+    var _g_; // this has to run at-least once to set some global vars for later on...
+    
+    var aMarker;
+    var aDatum;
+    for (var i = 0; i < _model.length(); i++) {
+		aDatum = _model.next_record();
+		_add_polygon_overlay(aDatum[GPS_SYMBOL],aDatum[ALPHA_SYMBOL],aDatum);
+		if (_use_markers_) {
+		    aMarker = new google.maps.Marker({position: aDatum[GPS_SYMBOL],title:'#'+i+' :: '+aDatum[GPS_SYMBOL]});
+		    aMarker.setMap(__map__);
+		}
+    }
+
+    //draw_sample_grid(_model);
+    $('#ajaxBusy').hide();
+}
+function onSuccess2(data,textStatus) {
+    $('#ajaxBusy').show(); 
+    _model = SmithMicroHeatMapDataModel.get$();
+    _model.is_heat_gps = true;
+    _model.init(data);
+
+    var aMarker;
+    var aDatum;
+    for (var i = 0; i < _model.length(); i++) {
+		aDatum = _model.next_record();
+		aMarker = new google.maps.Marker({position: aDatum[GPS_SYMBOL],title:'#'+i+' :: '+aDatum[GPS_SYMBOL]});
+		aMarker.setMap(__map__);
+		google.maps.event.addListener(aMarker, 'click', 
+		    function (event) {
+			var contentString = "<b>Marker</b><br/>";
+			contentString += "Clicked Location: <br/><small>" + event.latLng.toString() + "</small><br/>";
+			
+			contentString += "<small>";
+			contentString += "<p/>" + _model.toString('<br/>') + "</p>";
+			contentString += "</small>";
+			
+			if (!__infowindow__) {
+			    __infowindow__ = new google.maps.InfoWindow()
+			}
+		
+			__infowindow__.close();
+			__infowindow__.setContent(contentString);
+			__infowindow__.setPosition(event.latLng);
+			
+			__infowindow__.open(__map__);
+		    }
+		);
+    }
+    $('#ajaxBusy').hide();
+}
+function onGetCountSuccess(data,textStatus) {
+    alert(ezObjectExplainer(data));
+}
+function onError(jqXHR, textStatus, errorThrown) { 
+	handle_element_stack();
+    alert("error\n"+textStatus+'\n'+errorThrown); 
+}
+function wait_for_heat_map_utils() {
+    var _zoom = null;
+    var _bounds = null;
+    var _c_;
+    var _ne_;
+    var _sw_;
+    var _b_;
+    if (__is_loaded_heat_map_utils__) {
+		_zoom = __map__.getZoom().toString();
+		_bounds = __map__.getBounds();
+		if ( (__interval_wait_for_heat_map_utils > -1) && (_zoom) && (_bounds) ) {
+		    window.clearInterval(__interval_wait_for_heat_map_utils);
+		    __interval_wait_for_heat_map_utils = -1;
+		    _c_ = {lat:_bounds.getCenter().lat(),lng:_bounds.getCenter().lng()};
+		    _ne_ = {lat:_bounds.getNorthEast().lat(),lng:_bounds.getNorthEast().lng()};
+		    _sw_ = {lat:_bounds.getSouthWest().lat(),lng:_bounds.getSouthWest().lng()};
+		    _b_ = {c:_c_,ne:_ne_,sw:_sw_};
+		    /*
+		    $.ajax({
+			type: 'POST',
+			url: '/get/smithmicro/count/json/',
+			data: { zoom: _zoom, bounds: _b_ },
+			success: onGetCountSuccess,
+			error: onError,
+			dataType: 'json'
+		    });
+		    */
+		    google.maps.event.addListener(__map__, 'zoom_changed', function() {
+				_zoom = __map__.getZoom().toString();
+				_bounds = __map__.getBounds();
+				_c_ = {lat:_bounds.getCenter().lat(),lng:_bounds.getCenter().lng()};
+				_ne_ = {lat:_bounds.getNorthEast().lat(),lng:_bounds.getNorthEast().lng()};
+				_sw_ = {lat:_bounds.getSouthWest().lat(),lng:_bounds.getSouthWest().lng()};
+				_b_ = {c:_c_,ne:_ne_,sw:_sw_};
+				/*
+				$.ajax({
+				    type: 'POST',
+				    url: '/get/smithmicro/count/json/',
+				    data: { zoom: _zoom, bounds: _b_ },
+				    success: onGetCountSuccess,
+				    error: onError,
+				    dataType: 'json'
+				});
+				*/
+		    });
+		}
+    }
+}
+function OnLoad() {
+    $(document).ready(function() { 
+		$('body').append('<div id="ajaxBusy"><p><img src="/static/activity/ajax-loader.gif"></p></div>');
+		$('#ajaxBusy').css({
+		    display:"none",
+		    margin:"0px",
+		    paddingLeft:"0px",
+		    paddingRight:"0px",
+		    paddingTop:"0px",
+		    paddingBottom:"0px",
+		    position:"fixed",
+		    right:"50%",
+		    top:"50%",
+		    width:"auto"
+		});
+		$(document).ajaxStart(function(){ 
+		    $('#ajaxBusy').show(); 
+		}).ajaxStop(function(){ 
+		    $('#ajaxBusy').hide();
+		});
+	        if (__interval_wait_for_heat_map_utils == -1) {
+	            __interval_wait_for_heat_map_utils = window.setInterval(function() {wait_for_heat_map_utils();}, 250);
+	        }
+		/*
+		$.ajax({
+		    url: '/get/smithmicro/json/',
+			dataType: 'json',
+			success: onSuccess,
+			error: onError
+			}
+		);
+		*/
+		/*
+		$.ajax({
+		    url: '/get/smithmicro/points/json/',
+			dataType: 'json',
+			success: onSuccess2,
+			error: onError
+			}
+		);
+		*/
+    });
+}
+google.setOnLoadCallback(OnLoad);
+
+function handle_element_stack() {
+	if (__element_stack.length > 0) {
+		var aBtn = __element_stack.pop();
+		aBtn.removeAttr('disabled');
+	}
+}
+function onGetRegionSuccess(data,textStatus) {
+	handle_element_stack();
+    alert(ezObjectExplainer(data));
+}
+function onClickChooseRegion() { 
+	var aBtn =  $('#btn_choose_region');
+	__element_stack.push(aBtn);
+	aBtn.attr('disabled', 'disabled');
+	_zoom = __map__.getZoom().toString();
+	_bounds = __map__.getBounds();
+	_c_ = {lat:_bounds.getCenter().lat(),lng:_bounds.getCenter().lng()};
+	_ne_ = {lat:_bounds.getNorthEast().lat(),lng:_bounds.getNorthEast().lng()};
+	_sw_ = {lat:_bounds.getSouthWest().lat(),lng:_bounds.getSouthWest().lng()};
+	_b_ = {c:_c_,ne:_ne_,sw:_sw_};
+	$.ajax({
+	    type: 'POST',
+	    url: '/get/smithmicro/region/json/',
+	    data: { zoom: _zoom, bounds: _b_ },
+	    success: onGetRegionSuccess,
+	    error: onError,
+	    dataType: 'json'
+	});
+}
+
+</script>
+</head>
+<body>
+	<div id="buttons_container">
+		<input id="btn_choose_region" type="button" value="(Choose Region)" onclick="javascript: onClickChooseRegion();" />
+	</div>
+<div id="map_canvas" style="width:100%; height:100%"></div>
+    </body>
+</html>

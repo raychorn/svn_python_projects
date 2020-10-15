@@ -1,0 +1,1 @@
+c:\Python25\Lib\site-packages\django\bin\django-admin.py compilemessages

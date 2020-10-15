@@ -1,0 +1,1 @@
+python ..\drpython_wx26.py

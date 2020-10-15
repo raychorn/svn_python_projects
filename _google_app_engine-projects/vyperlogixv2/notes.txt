@@ -1,0 +1,6 @@
+runserver --settings=vyperlogixv2.settings
+
+runserver --settings=djangononrelsample.settings
+
+deploy
+

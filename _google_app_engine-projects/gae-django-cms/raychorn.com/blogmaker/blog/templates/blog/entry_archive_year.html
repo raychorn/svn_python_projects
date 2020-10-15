@@ -1,0 +1,25 @@
+{% comment %} 
+Copyright (c) 2006-2007, PreFab Software Inc.
+
+Copyright (c) 2006, Andrew Gwozdziewycz <apgwoz@gmail.com>
+All rights reserved. 
+{% endcomment %}
+
+
+{% extends "blog/blog_base.html" %}
+
+{% load blog_extras %}
+
+{% block "browsertitle" %}
+{{ year }}'s Posts
+{% endblock %}
+
+{% block "contentbody" %}
+{% for d in date_list %}
+<a href="{% BLOG_ROOT %}{{ d|date:"Y/m" }}/" class='blog_text'>{{ d|date:"F Y"}}</a><br />
+{% endfor %}
+{% endblock %}
+
+{% block "taglist" %}
+{% include "blog/includes/popular_tags.html" %}
+{% endblock %}

@@ -1,0 +1,1020 @@
+running py2exe
+*** searching for required modules ***
+*** parsing results ***
+*** finding dlls needed ***
+*** create binaries ***
+*** byte compile python files ***
+writing byte-compilation script 'c:\users\raychorn\appdata\local\temp\tmpwpm-i0.py'
+C:\Python25\python.exe -OO c:\users\raychorn\appdata\local\temp\tmpwpm-i0.py
+byte-compiling C:\Python25\lib\BaseHTTPServer.py to BaseHTTPServer.pyo
+byte-compiling C:\Python25\lib\ConfigParser.py to ConfigParser.pyo
+byte-compiling C:\Python25\lib\Cookie.py to Cookie.pyo
+byte-compiling C:\Python25\lib\HTMLParser.py to HTMLParser.pyo
+byte-compiling C:\Python25\lib\MimeWriter.py to MimeWriter.pyo
+byte-compiling C:\Python25\lib\Queue.py to Queue.pyo
+byte-compiling C:\Python25\lib\SocketServer.py to SocketServer.pyo
+byte-compiling C:\Python25\lib\StringIO.py to StringIO.pyo
+byte-compiling C:\Python25\lib\UserDict.py to UserDict.pyo
+byte-compiling C:\Python25\lib\UserList.py to UserList.pyo
+byte-compiling C:\Python25\lib\_LWPCookieJar.py to _LWPCookieJar.pyo
+byte-compiling C:\Python25\lib\_MozillaCookieJar.py to _MozillaCookieJar.pyo
+byte-compiling C:\Python25\lib\__future__.py to __future__.pyo
+byte-compiling C:\Python25\lib\_strptime.py to _strptime.pyo
+byte-compiling C:\Python25\lib\_threading_local.py to _threading_local.pyo
+byte-compiling C:\Python25\lib\anydbm.py to anydbm.pyo
+byte-compiling C:\Python25\lib\asynchat.py to asynchat.pyo
+byte-compiling C:\Python25\lib\asyncore.py to asyncore.pyo
+byte-compiling C:\Python25\lib\atexit.py to atexit.pyo
+byte-compiling C:\Python25\lib\base64.py to base64.pyo
+byte-compiling C:\Python25\lib\bdb.py to bdb.pyo
+byte-compiling C:\Python25\lib\bisect.py to bisect.pyo
+byte-compiling C:\Python25\lib\bsddb\__init__.py to bsddb\__init__.pyo
+byte-compiling C:\Python25\lib\bsddb\db.py to bsddb\db.pyo
+byte-compiling C:\Python25\lib\bsddb\dbutils.py to bsddb\dbutils.pyo
+byte-compiling C:\Python25\lib\cProfile.py to cProfile.pyo
+byte-compiling C:\Python25\lib\calendar.py to calendar.pyo
+byte-compiling C:\Python25\lib\cgi.py to cgi.pyo
+byte-compiling C:\Python25\lib\cgitb.py to cgitb.pyo
+byte-compiling C:\Python25\lib\cmd.py to cmd.pyo
+byte-compiling C:\Python25\lib\codecs.py to codecs.pyo
+byte-compiling C:\Python25\lib\compiler\__init__.py to compiler\__init__.pyo
+byte-compiling C:\Python25\lib\compiler\ast.py to compiler\ast.pyo
+byte-compiling C:\Python25\lib\compiler\consts.py to compiler\consts.pyo
+byte-compiling C:\Python25\lib\compiler\future.py to compiler\future.pyo
+byte-compiling C:\Python25\lib\compiler\misc.py to compiler\misc.pyo
+byte-compiling C:\Python25\lib\compiler\pyassem.py to compiler\pyassem.pyo
+byte-compiling C:\Python25\lib\compiler\pycodegen.py to compiler\pycodegen.pyo
+byte-compiling C:\Python25\lib\compiler\symbols.py to compiler\symbols.pyo
+byte-compiling C:\Python25\lib\compiler\syntax.py to compiler\syntax.pyo
+byte-compiling C:\Python25\lib\compiler\transformer.py to compiler\transformer.pyo
+byte-compiling C:\Python25\lib\compiler\visitor.py to compiler\visitor.pyo
+byte-compiling C:\Python25\lib\cookielib.py to cookielib.pyo
+byte-compiling C:\Python25\lib\copy.py to copy.pyo
+byte-compiling C:\Python25\lib\copy_reg.py to copy_reg.pyo
+byte-compiling C:\Python25\lib\csv.py to csv.pyo
+byte-compiling C:\Python25\lib\ctypes\__init__.py to ctypes\__init__.pyo
+byte-compiling C:\Python25\lib\ctypes\_endian.py to ctypes\_endian.pyo
+byte-compiling C:\Python25\lib\ctypes\macholib\__init__.py to ctypes\macholib\__init__.pyo
+byte-compiling C:\Python25\lib\ctypes\macholib\dyld.py to ctypes\macholib\dyld.pyo
+byte-compiling C:\Python25\lib\ctypes\macholib\dylib.py to ctypes\macholib\dylib.pyo
+byte-compiling C:\Python25\lib\ctypes\macholib\framework.py to ctypes\macholib\framework.pyo
+byte-compiling C:\Python25\lib\ctypes\util.py to ctypes\util.pyo
+byte-compiling C:\Python25\lib\decimal.py to decimal.pyo
+byte-compiling C:\Python25\lib\difflib.py to difflib.pyo
+byte-compiling C:\Python25\lib\dis.py to dis.pyo
+byte-compiling C:\Python25\lib\distutils\__init__.py to distutils\__init__.pyo
+byte-compiling C:\Python25\lib\distutils\dep_util.py to distutils\dep_util.pyo
+byte-compiling C:\Python25\lib\distutils\errors.py to distutils\errors.pyo
+byte-compiling C:\Python25\lib\distutils\log.py to distutils\log.pyo
+byte-compiling C:\Python25\lib\distutils\spawn.py to distutils\spawn.pyo
+byte-compiling C:\Python25\lib\distutils\sysconfig.py to distutils\sysconfig.pyo
+byte-compiling C:\Python25\lib\distutils\text_file.py to distutils\text_file.pyo
+byte-compiling C:\Python25\lib\distutils\util.py to distutils\util.pyo
+byte-compiling C:\Python25\lib\doctest.py to doctest.pyo
+byte-compiling C:\Python25\lib\dummy_thread.py to dummy_thread.pyo
+byte-compiling C:\Python25\lib\dummy_threading.py to dummy_threading.pyo
+byte-compiling C:\Python25\lib\email\Generator.pyc to email\Generator.pyo
+byte-compiling C:\Python25\lib\email\__init__.py to email\__init__.pyo
+byte-compiling C:\Python25\lib\email\_parseaddr.py to email\_parseaddr.pyo
+byte-compiling C:\Python25\lib\email\base64mime.py to email\base64mime.pyo
+byte-compiling C:\Python25\lib\email\charset.py to email\charset.pyo
+byte-compiling C:\Python25\lib\email\encoders.py to email\encoders.pyo
+byte-compiling C:\Python25\lib\email\errors.py to email\errors.pyo
+byte-compiling C:\Python25\lib\email\feedparser.py to email\feedparser.pyo
+byte-compiling C:\Python25\lib\email\header.py to email\header.pyo
+byte-compiling C:\Python25\lib\email\message.py to email\message.pyo
+byte-compiling C:\Python25\lib\email\mime\__init__.py to email\mime\__init__.pyo
+byte-compiling C:\Python25\lib\email\parser.py to email\parser.pyo
+byte-compiling C:\Python25\lib\email\quoprimime.py to email\quoprimime.pyo
+byte-compiling C:\Python25\lib\email\utils.py to email\utils.pyo
+byte-compiling C:\Python25\lib\encodings\__init__.py to encodings\__init__.pyo
+byte-compiling C:\Python25\lib\encodings\aliases.py to encodings\aliases.pyo
+byte-compiling C:\Python25\lib\encodings\utf_8.py to encodings\utf_8.pyo
+byte-compiling C:\Python25\lib\fnmatch.py to fnmatch.pyo
+byte-compiling C:\Python25\lib\formatter.py to formatter.pyo
+byte-compiling C:\Python25\lib\ftplib.py to ftplib.pyo
+byte-compiling C:\Python25\lib\functools.py to functools.pyo
+byte-compiling C:\Python25\lib\getopt.py to getopt.pyo
+byte-compiling C:\Python25\lib\getpass.py to getpass.pyo
+byte-compiling C:\Python25\lib\gettext.py to gettext.pyo
+byte-compiling C:\Python25\lib\glob.py to glob.pyo
+byte-compiling C:\Python25\lib\gopherlib.py to gopherlib.pyo
+byte-compiling C:\Python25\lib\gzip.py to gzip.pyo
+byte-compiling C:\Python25\lib\hashlib.py to hashlib.pyo
+byte-compiling C:\Python25\lib\heapq.py to heapq.pyo
+byte-compiling C:\Python25\lib\hmac.py to hmac.pyo
+byte-compiling C:\Python25\lib\hotshot\__init__.py to hotshot\__init__.pyo
+byte-compiling C:\Python25\lib\hotshot\log.py to hotshot\log.pyo
+byte-compiling C:\Python25\lib\hotshot\stats.py to hotshot\stats.pyo
+byte-compiling C:\Python25\lib\htmlentitydefs.py to htmlentitydefs.pyo
+byte-compiling C:\Python25\lib\htmllib.py to htmllib.pyo
+byte-compiling C:\Python25\lib\httplib.py to httplib.pyo
+byte-compiling C:\Python25\lib\ihooks.py to ihooks.pyo
+byte-compiling C:\Python25\lib\inspect.py to inspect.pyo
+byte-compiling C:\Python25\lib\keyword.py to keyword.pyo
+byte-compiling C:\Python25\lib\lib-tk\tkCommonDialog.py to tkCommonDialog.pyo
+byte-compiling C:\Python25\lib\linecache.py to linecache.pyo
+byte-compiling C:\Python25\lib\locale.py to locale.pyo
+byte-compiling C:\Python25\lib\logging\__init__.py to logging\__init__.pyo
+byte-compiling C:\Python25\lib\logging\config.py to logging\config.pyo
+byte-compiling C:\Python25\lib\logging\handlers.py to logging\handlers.pyo
+byte-compiling C:\Python25\lib\macpath.py to macpath.pyo
+byte-compiling C:\Python25\lib\macurl2path.py to macurl2path.pyo
+byte-compiling C:\Python25\lib\markupbase.py to markupbase.pyo
+byte-compiling C:\Python25\lib\md5.py to md5.pyo
+byte-compiling C:\Python25\lib\mimetools.py to mimetools.pyo
+byte-compiling C:\Python25\lib\mimetypes.py to mimetypes.pyo
+byte-compiling C:\Python25\lib\msilib\__init__.py to msilib\__init__.pyo
+byte-compiling C:\Python25\lib\new.py to new.pyo
+byte-compiling C:\Python25\lib\ntpath.py to ntpath.pyo
+byte-compiling C:\Python25\lib\nturl2path.py to nturl2path.pyo
+byte-compiling C:\Python25\lib\opcode.py to opcode.pyo
+byte-compiling C:\Python25\lib\optparse.py to optparse.pyo
+byte-compiling C:\Python25\lib\os.py to os.pyo
+byte-compiling C:\Python25\lib\os2emxpath.py to os2emxpath.pyo
+byte-compiling C:\Python25\lib\pdb.py to pdb.pyo
+byte-compiling C:\Python25\lib\pickle.py to pickle.pyo
+byte-compiling C:\Python25\lib\pkgutil.py to pkgutil.pyo
+byte-compiling C:\Python25\lib\platform.py to platform.pyo
+byte-compiling C:\Python25\lib\popen2.py to popen2.pyo
+byte-compiling C:\Python25\lib\posixpath.py to posixpath.pyo
+byte-compiling C:\Python25\lib\pprint.py to pprint.pyo
+byte-compiling C:\Python25\lib\profile.py to profile.pyo
+byte-compiling C:\Python25\lib\pstats.py to pstats.pyo
+byte-compiling C:\Python25\lib\py_compile.py to py_compile.pyo
+byte-compiling C:\Python25\lib\pydoc.py to pydoc.pyo
+byte-compiling C:\Python25\lib\quopri.py to quopri.pyo
+byte-compiling C:\Python25\lib\random.py to random.pyo
+byte-compiling C:\Python25\lib\re.py to re.pyo
+byte-compiling C:\Python25\lib\repr.py to repr.pyo
+byte-compiling C:\Python25\lib\rfc822.py to rfc822.pyo
+byte-compiling C:\Python25\lib\sets.py to sets.pyo
+byte-compiling C:\Python25\lib\sgmllib.py to sgmllib.pyo
+byte-compiling C:\Python25\lib\sha.py to sha.pyo
+byte-compiling C:\Python25\lib\shelve.py to shelve.pyo
+byte-compiling C:\Python25\lib\shlex.py to shlex.pyo
+byte-compiling C:\Python25\lib\shutil.py to shutil.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\Cipher\__init__.py to Crypto\Cipher\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\Hash\HMAC.py to Crypto\Hash\HMAC.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\Hash\MD5.py to Crypto\Hash\MD5.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\Hash\SHA.py to Crypto\Hash\SHA.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\Hash\__init__.py to Crypto\Hash\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\PublicKey\DSA.py to Crypto\PublicKey\DSA.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\PublicKey\ElGamal.py to Crypto\PublicKey\ElGamal.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\PublicKey\RSA.py to Crypto\PublicKey\RSA.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\PublicKey\__init__.py to Crypto\PublicKey\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\PublicKey\pubkey.py to Crypto\PublicKey\pubkey.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\Util\__init__.py to Crypto\Util\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\Util\number.py to Crypto\Util\number.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\Util\randpool.py to Crypto\Util\randpool.pyo
+byte-compiling C:\Python25\lib\site-packages\Crypto\__init__.py to Crypto\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\OpenSSL\__init__.py to OpenSSL\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\OpenSSL\tsafe.py to OpenSSL\tsafe.pyo
+byte-compiling C:\Python25\lib\site-packages\OpenSSL\version.py to OpenSSL\version.pyo
+byte-compiling C:\Python25\lib\site-packages\beautifulsoup-3.0.7a-py2.5.egg\BeautifulSoup.py to BeautifulSoup.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\__init__.py to cherrypy\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cpcgifs.py to cherrypy\_cpcgifs.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cpchecker.py to cherrypy\_cpchecker.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cpconfig.py to cherrypy\_cpconfig.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cpdispatch.py to cherrypy\_cpdispatch.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cperror.py to cherrypy\_cperror.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cplogging.py to cherrypy\_cplogging.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cprequest.py to cherrypy\_cprequest.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cpserver.py to cherrypy\_cpserver.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cpthreadinglocal.py to cherrypy\_cpthreadinglocal.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cptools.py to cherrypy\_cptools.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cptree.py to cherrypy\_cptree.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cpwsgi.py to cherrypy\_cpwsgi.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\_cpwsgi_server.py to cherrypy\_cpwsgi_server.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\__init__.py to cherrypy\lib\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\auth.py to cherrypy\lib\auth.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\caching.py to cherrypy\lib\caching.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\cptools.py to cherrypy\lib\cptools.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\encoding.py to cherrypy\lib\encoding.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\http.py to cherrypy\lib\http.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\httpauth.py to cherrypy\lib\httpauth.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\sessions.py to cherrypy\lib\sessions.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\static.py to cherrypy\lib\static.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\tidy.py to cherrypy\lib\tidy.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\wsgiapp.py to cherrypy\lib\wsgiapp.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\lib\xmlrpc.py to cherrypy\lib\xmlrpc.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\process\__init__.py to cherrypy\process\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\process\plugins.py to cherrypy\process\plugins.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\process\servers.py to cherrypy\process\servers.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\process\win32.py to cherrypy\process\win32.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\process\wspbus.py to cherrypy\process\wspbus.pyo
+byte-compiling C:\Python25\lib\site-packages\cherrypy\wsgiserver\__init__.py to cherrypy\wsgiserver\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\elementtree\ElementIron.py to elementtree\ElementIron.pyo
+byte-compiling C:\Python25\lib\site-packages\elementtree\ElementPath.py to elementtree\ElementPath.pyo
+byte-compiling C:\Python25\lib\site-packages\elementtree\ElementTree.py to elementtree\ElementTree.pyo
+byte-compiling C:\Python25\lib\site-packages\elementtree\__init__.py to elementtree\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\__init__.py to flup\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\__init__.py to flup\server\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\cgi.py to flup\server\cgi.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\fcgi.py to flup\server\fcgi.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\fcgi_base.py to flup\server\fcgi_base.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\paste_factory.py to flup\server\paste_factory.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\scgi.py to flup\server\scgi.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\scgi_base.py to flup\server\scgi_base.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\threadedserver.py to flup\server\threadedserver.pyo
+byte-compiling C:\Python25\lib\site-packages\flup-1.0.1-py2.5.egg\flup\server\threadpool.py to flup\server\threadpool.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\DateTime\ARPA.py to mx\DateTime\ARPA.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\DateTime\DateTime.py to mx\DateTime\DateTime.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\DateTime\ISO.py to mx\DateTime\ISO.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\DateTime\Parser.py to mx\DateTime\Parser.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\DateTime\Timezone.py to mx\DateTime\Timezone.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\DateTime\__init__.py to mx\DateTime\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\DateTime\mxDateTime\__init__.py to mx\DateTime\mxDateTime\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\Misc\LazyModule.py to mx\Misc\LazyModule.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\Misc\__init__.py to mx\Misc\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\TextTools\Constants\Sets.py to mx\TextTools\Constants\Sets.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\TextTools\Constants\TagTables.py to mx\TextTools\Constants\TagTables.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\TextTools\Constants\__init__.py to mx\TextTools\Constants\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\TextTools\TextTools.py to mx\TextTools\TextTools.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\TextTools\__init__.py to mx\TextTools\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\TextTools\mxTextTools\__init__.py to mx\TextTools\mxTextTools\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\Tools\NewBuiltins.py to mx\Tools\NewBuiltins.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\Tools\Tools.py to mx\Tools\Tools.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\Tools\__init__.py to mx\Tools\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\Tools\mxTools\__init__.py to mx\Tools\mxTools\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\mx\__init__.py to mx\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\__init__.py to paramiko\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\agent.py to paramiko\agent.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\auth_handler.py to paramiko\auth_handler.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\ber.py to paramiko\ber.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\buffered_pipe.py to paramiko\buffered_pipe.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\channel.py to paramiko\channel.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\client.py to paramiko\client.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\common.py to paramiko\common.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\compress.py to paramiko\compress.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\config.py to paramiko\config.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\dsskey.py to paramiko\dsskey.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\file.py to paramiko\file.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\hostkeys.py to paramiko\hostkeys.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\kex_gex.py to paramiko\kex_gex.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\kex_group1.py to paramiko\kex_group1.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\logging22.py to paramiko\logging22.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\message.py to paramiko\message.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\packet.py to paramiko\packet.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\pipe.py to paramiko\pipe.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\pkey.py to paramiko\pkey.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\primes.py to paramiko\primes.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\resource.py to paramiko\resource.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\rng.py to paramiko\rng.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\rng_posix.py to paramiko\rng_posix.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\rng_win32.py to paramiko\rng_win32.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\rsakey.py to paramiko\rsakey.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\server.py to paramiko\server.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\sftp.py to paramiko\sftp.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\sftp_attr.py to paramiko\sftp_attr.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\sftp_client.py to paramiko\sftp_client.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\sftp_file.py to paramiko\sftp_file.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\sftp_handle.py to paramiko\sftp_handle.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\sftp_server.py to paramiko\sftp_server.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\sftp_si.py to paramiko\sftp_si.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\ssh_exception.py to paramiko\ssh_exception.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\transport.py to paramiko\transport.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\util.py to paramiko\util.pyo
+byte-compiling C:\Python25\lib\site-packages\paramiko-1.7.4-py2.5.egg\paramiko\win_pageant.py to paramiko\win_pageant.pyo
+byte-compiling C:\Python25\lib\site-packages\psyco\__init__.py to psyco\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\psyco\core.py to psyco\core.pyo
+byte-compiling C:\Python25\lib\site-packages\psyco\kdictproxy.py to psyco\kdictproxy.pyo
+byte-compiling C:\Python25\lib\site-packages\psyco\logger.py to psyco\logger.pyo
+byte-compiling C:\Python25\lib\site-packages\psyco\profiler.py to psyco\profiler.pyo
+byte-compiling C:\Python25\lib\site-packages\psyco\support.py to psyco\support.pyo
+byte-compiling C:\Python25\lib\site-packages\pyPdf\__init__.py to pyPdf\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyPdf\filters.py to pyPdf\filters.pyo
+byte-compiling C:\Python25\lib\site-packages\pyPdf\generic.py to pyPdf\generic.pyo
+byte-compiling C:\Python25\lib\site-packages\pyPdf\pdf.py to pyPdf\pdf.pyo
+byte-compiling C:\Python25\lib\site-packages\pyPdf\utils.py to pyPdf\utils.pyo
+byte-compiling C:\Python25\lib\site-packages\pyinstaller13\__init__.py to pyinstaller13\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyinstaller13\archive.py to pyinstaller13\archive.pyo
+byte-compiling C:\Python25\lib\site-packages\pyinstaller13\bindepend.py to pyinstaller13\bindepend.pyo
+byte-compiling C:\Python25\lib\site-packages\pyinstaller13\carchive.py to pyinstaller13\carchive.pyo
+byte-compiling C:\Python25\lib\site-packages\pyinstaller13\hooks\__init__.py to pyinstaller13\hooks\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyinstaller13\iu.py to pyinstaller13\iu.pyo
+byte-compiling C:\Python25\lib\site-packages\pyinstaller13\mf.py to pyinstaller13\mf.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\FtCore.py to xml\FtCore.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\__init__.py to xml\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Attr.py to xml\dom\Attr.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\CDATASection.py to xml\dom\CDATASection.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\CharacterData.py to xml\dom\CharacterData.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Comment.py to xml\dom\Comment.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\DOMImplementation.py to xml\dom\DOMImplementation.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Document.py to xml\dom\Document.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\DocumentFragment.py to xml\dom\DocumentFragment.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\DocumentType.py to xml\dom\DocumentType.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Element.py to xml\dom\Element.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Entity.py to xml\dom\Entity.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\EntityReference.py to xml\dom\EntityReference.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Event.py to xml\dom\Event.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\FtNode.py to xml\dom\FtNode.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\MessageSource.py to xml\dom\MessageSource.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\NamedNodeMap.py to xml\dom\NamedNodeMap.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\NodeFilter.py to xml\dom\NodeFilter.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\NodeIterator.py to xml\dom\NodeIterator.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\NodeList.py to xml\dom\NodeList.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Notation.py to xml\dom\Notation.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ProcessingInstruction.py to xml\dom\ProcessingInstruction.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Range.py to xml\dom\Range.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\Text.py to xml\dom\Text.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\TreeWalker.py to xml\dom\TreeWalker.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\__init__.py to xml\dom\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\domreg.py to xml\dom\domreg.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\expatbuilder.py to xml\dom\expatbuilder.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ext\Printer.py to xml\dom\ext\Printer.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ext\Visitor.py to xml\dom\ext\Visitor.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ext\XHtmlPrinter.py to xml\dom\ext\XHtmlPrinter.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ext\__init__.py to xml\dom\ext\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ext\c14n.py to xml\dom\ext\c14n.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ext\reader\HtmlLib.py to xml\dom\ext\reader\HtmlLib.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ext\reader\Sgmlop.py to xml\dom\ext\reader\Sgmlop.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\ext\reader\__init__.py to xml\dom\ext\reader\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\html\HTMLCollection.py to xml\dom\html\HTMLCollection.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\html\HTMLDOMImplementation.py to xml\dom\html\HTMLDOMImplementation.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\html\HTMLDocument.py to xml\dom\html\HTMLDocument.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\html\HTMLElement.py to xml\dom\html\HTMLElement.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\html\__init__.py to xml\dom\html\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\minicompat.py to xml\dom\minicompat.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\minidom.py to xml\dom\minidom.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\pulldom.py to xml\dom\pulldom.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\dom\xmlbuilder.py to xml\dom\xmlbuilder.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\ns.py to xml\ns.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\parsers\__init__.py to xml\parsers\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\parsers\expat.py to xml\parsers\expat.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\sax\__init__.py to xml\sax\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\sax\_exceptions.py to xml\sax\_exceptions.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\sax\handler.py to xml\sax\handler.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\sax\sax2exts.py to xml\sax\sax2exts.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\sax\saxexts.py to xml\sax\saxexts.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\sax\saxlib.py to xml\sax\saxlib.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\sax\saxutils.py to xml\sax\saxutils.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\sax\xmlreader.py to xml\sax\xmlreader.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\unicode\__init__.py to xml\unicode\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\unicode\iso8859.py to xml\unicode\iso8859.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\unicode\utf8_iso.py to xml\unicode\utf8_iso.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\utils\__init__.py to xml\utils\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\utils\characters.py to xml\utils\characters.pyo
+byte-compiling C:\Python25\lib\site-packages\simplejson-1.9.2-py2.5-win32.egg\simplejson\__init__.py to simplejson\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\simplejson-1.9.2-py2.5-win32.egg\simplejson\decoder.py to simplejson\decoder.pyo
+byte-compiling C:\Python25\lib\site-packages\simplejson-1.9.2-py2.5-win32.egg\simplejson\encoder.py to simplejson\encoder.pyo
+byte-compiling C:\Python25\lib\site-packages\simplejson-1.9.2-py2.5-win32.egg\simplejson\scanner.py to simplejson\scanner.pyo
+byte-compiling C:\Python25\lib\site-packages\simplejson-1.9.2-py2.5-win32.egg\simplejson\tool.py to simplejson\tool.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\__init__.py to sqlalchemy\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\databases\__init__.py to sqlalchemy\databases\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\databases\postgres.py to sqlalchemy\databases\postgres.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\engine\__init__.py to sqlalchemy\engine\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\engine\base.py to sqlalchemy\engine\base.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\engine\default.py to sqlalchemy\engine\default.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\engine\strategies.py to sqlalchemy\engine\strategies.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\engine\threadlocal.py to sqlalchemy\engine\threadlocal.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\engine\url.py to sqlalchemy\engine\url.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\exc.py to sqlalchemy\exc.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\log.py to sqlalchemy\log.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\__init__.py to sqlalchemy\orm\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\attributes.py to sqlalchemy\orm\attributes.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\collections.py to sqlalchemy\orm\collections.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\dependency.py to sqlalchemy\orm\dependency.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\dynamic.py to sqlalchemy\orm\dynamic.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\evaluator.py to sqlalchemy\orm\evaluator.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\exc.py to sqlalchemy\orm\exc.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\identity.py to sqlalchemy\orm\identity.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\interfaces.py to sqlalchemy\orm\interfaces.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\mapper.py to sqlalchemy\orm\mapper.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\properties.py to sqlalchemy\orm\properties.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\query.py to sqlalchemy\orm\query.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\scoping.py to sqlalchemy\orm\scoping.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\session.py to sqlalchemy\orm\session.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\strategies.py to sqlalchemy\orm\strategies.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\sync.py to sqlalchemy\orm\sync.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\unitofwork.py to sqlalchemy\orm\unitofwork.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\uowdumper.py to sqlalchemy\orm\uowdumper.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\orm\util.py to sqlalchemy\orm\util.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\pool.py to sqlalchemy\pool.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\queue.py to sqlalchemy\queue.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\schema.py to sqlalchemy\schema.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\sql\__init__.py to sqlalchemy\sql\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\sql\compiler.py to sqlalchemy\sql\compiler.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\sql\expression.py to sqlalchemy\sql\expression.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\sql\functions.py to sqlalchemy\sql\functions.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\sql\operators.py to sqlalchemy\sql\operators.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\sql\util.py to sqlalchemy\sql\util.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\sql\visitors.py to sqlalchemy\sql\visitors.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\topological.py to sqlalchemy\topological.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\types.py to sqlalchemy\types.pyo
+byte-compiling C:\Python25\lib\site-packages\sqlalchemy-0.5.0rc1-py2.5.egg\sqlalchemy\util.py to sqlalchemy\util.pyo
+byte-compiling C:\Python25\lib\site-packages\tinytree.py to tinytree.pyo
+byte-compiling C:\Python25\lib\site-packages\win32\lib\netbios.py to netbios.pyo
+byte-compiling C:\Python25\lib\site-packages\win32\lib\win32con.py to win32con.pyo
+byte-compiling C:\Python25\lib\site-packages\win32\lib\win32evtlogutil.py to win32evtlogutil.pyo
+byte-compiling C:\Python25\lib\site-packages\win32\lib\win32netcon.py to win32netcon.pyo
+byte-compiling C:\Python25\lib\site-packages\win32\lib\win32serviceutil.py to win32serviceutil.pyo
+byte-compiling C:\Python25\lib\site-packages\win32\lib\winerror.py to winerror.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\__init__.py to win32com\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\CLSIDToClass.py to win32com\client\CLSIDToClass.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\__init__.py to win32com\client\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\build.py to win32com\client\build.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\dynamic.py to win32com\client\dynamic.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\gencache.py to win32com\client\gencache.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\genpy.py to win32com\client\genpy.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\makepy.py to win32com\client\makepy.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\selecttlb.py to win32com\client\selecttlb.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\client\util.py to win32com\client\util.pyo
+byte-compiling C:\Python25\lib\site-packages\win32com\gen_py\__init__.py to win32com\gen_py\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\wmi.py to wmi.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\__init__.py to wx\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\__version__.py to wx\__version__.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py to wx\_controls.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py to wx\_core.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py to wx\_gdi.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_misc.py to wx\_misc.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_windows.py to wx\_windows.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\animate.py to wx\animate.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\calendar.py to wx\calendar.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\lib\__init__.py to wx\lib\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\lib\embeddedimage.py to wx\lib\embeddedimage.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\lib\mixins\__init__.py to wx\lib\mixins\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\lib\mixins\listctrl.py to wx\lib\mixins\listctrl.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\lib\mixins\treemixin.py to wx\lib\mixins\treemixin.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\lib\rcsizer.py to wx\lib\rcsizer.pyo
+byte-compiling C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\lib\wordwrap.py to wx\lib\wordwrap.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\__init__.py to xlrd\__init__.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\biffh.py to xlrd\biffh.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\compdoc.py to xlrd\compdoc.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\formatting.py to xlrd\formatting.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\formula.py to xlrd\formula.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\licences.py to xlrd\licences.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\sheet.py to xlrd\sheet.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\timemachine.py to xlrd\timemachine.pyo
+byte-compiling C:\Python25\lib\site-packages\xlrd\xldate.py to xlrd\xldate.pyo
+byte-compiling C:\Python25\lib\site-packages\zipextimporter.py to zipextimporter.pyo
+byte-compiling C:\Python25\lib\smtpd.py to smtpd.pyo
+byte-compiling C:\Python25\lib\smtplib.py to smtplib.pyo
+byte-compiling C:\Python25\lib\socket.py to socket.pyo
+byte-compiling C:\Python25\lib\sqlite3\__init__.py to sqlite3\__init__.pyo
+byte-compiling C:\Python25\lib\sqlite3\dbapi2.py to sqlite3\dbapi2.pyo
+byte-compiling C:\Python25\lib\sre.py to sre.pyo
+byte-compiling C:\Python25\lib\sre_compile.py to sre_compile.pyo
+byte-compiling C:\Python25\lib\sre_constants.py to sre_constants.pyo
+byte-compiling C:\Python25\lib\sre_parse.py to sre_parse.pyo
+byte-compiling C:\Python25\lib\stat.py to stat.pyo
+byte-compiling C:\Python25\lib\string.py to string.pyo
+byte-compiling C:\Python25\lib\struct.py to struct.pyo
+byte-compiling C:\Python25\lib\subprocess.py to subprocess.pyo
+byte-compiling C:\Python25\lib\symbol.py to symbol.pyo
+byte-compiling C:\Python25\lib\symtable.py to symtable.pyo
+byte-compiling C:\Python25\lib\tempfile.py to tempfile.pyo
+byte-compiling C:\Python25\lib\test\__init__.py to test\__init__.pyo
+byte-compiling C:\Python25\lib\test\test_MimeWriter.py to test\test_MimeWriter.pyo
+byte-compiling C:\Python25\lib\textwrap.py to textwrap.pyo
+byte-compiling C:\Python25\lib\threading.py to threading.pyo
+byte-compiling C:\Python25\lib\token.py to token.pyo
+byte-compiling C:\Python25\lib\tokenize.py to tokenize.pyo
+byte-compiling C:\Python25\lib\trace.py to trace.pyo
+byte-compiling C:\Python25\lib\traceback.py to traceback.pyo
+byte-compiling C:\Python25\lib\tty.py to tty.pyo
+byte-compiling C:\Python25\lib\types.py to types.pyo
+byte-compiling C:\Python25\lib\unittest.py to unittest.pyo
+byte-compiling C:\Python25\lib\urllib.py to urllib.pyo
+byte-compiling C:\Python25\lib\urllib2.py to urllib2.pyo
+byte-compiling C:\Python25\lib\urlparse.py to urlparse.pyo
+byte-compiling C:\Python25\lib\uu.py to uu.pyo
+byte-compiling C:\Python25\lib\uuid.py to uuid.pyo
+byte-compiling C:\Python25\lib\warnings.py to warnings.pyo
+byte-compiling C:\Python25\lib\weakref.py to weakref.pyo
+byte-compiling C:\Python25\lib\webbrowser.py to webbrowser.pyo
+byte-compiling C:\Python25\lib\whichdb.py to whichdb.pyo
+byte-compiling C:\Python25\lib\wsgiref\__init__.py to wsgiref\__init__.pyo
+byte-compiling C:\Python25\lib\wsgiref\handlers.py to wsgiref\handlers.pyo
+byte-compiling C:\Python25\lib\wsgiref\headers.py to wsgiref\headers.pyo
+byte-compiling C:\Python25\lib\wsgiref\simple_server.py to wsgiref\simple_server.pyo
+byte-compiling C:\Python25\lib\wsgiref\util.py to wsgiref\util.pyo
+byte-compiling C:\Python25\lib\wsgiref\validate.py to wsgiref\validate.pyo
+byte-compiling C:\Python25\lib\xmllib.py to xmllib.pyo
+byte-compiling C:\Python25\lib\xmlrpclib.py to xmlrpclib.pyo
+byte-compiling C:\Python25\lib\zipfile.py to zipfile.pyo
+byte-compiling Z:\python projects\@lib\ext\__init__.py to ext\__init__.pyo
+byte-compiling Z:\python projects\@lib\ext\crypto\__init__.py to ext\crypto\__init__.pyo
+byte-compiling Z:\python projects\@lib\maglib\__init__.py to maglib\__init__.pyo
+byte-compiling Z:\python projects\@lib\maglib\molten\__init__.py to maglib\molten\__init__.pyo
+byte-compiling Z:\python projects\@lib\maglib\molten\roles.py to maglib\molten\roles.pyo
+byte-compiling Z:\python projects\@lib\maglib\salesforce\__init__.py to maglib\salesforce\__init__.pyo
+byte-compiling Z:\python projects\@lib\maglib\salesforce\auth.py to maglib\salesforce\auth.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\FinPy\__init__.py to vyperlogix\FinPy\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\FinPy\dateparse.py to vyperlogix\FinPy\dateparse.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\__init__.py to vyperlogix\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\_pyinstaller13\ArchiveViewer.py to vyperlogix\_pyinstaller13\ArchiveViewer.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\_pyinstaller13\Build.py to vyperlogix\_pyinstaller13\Build.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\_pyinstaller13\__init__.py to vyperlogix\_pyinstaller13\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ai\BackPropagationNeuralNetworks.py to vyperlogix\ai\BackPropagationNeuralNetworks.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ai\BasicBackPropagatingNeuralNetwork.py to vyperlogix\ai\BasicBackPropagatingNeuralNetwork.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ai\__init__.py to vyperlogix\ai\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\__init__.py to vyperlogix\aima\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\agents.py to vyperlogix\aima\agents.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\csp.py to vyperlogix\aima\csp.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\doctests.py to vyperlogix\aima\doctests.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\games.py to vyperlogix\aima\games.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\learning.py to vyperlogix\aima\learning.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\logic.py to vyperlogix\aima\logic.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\mdp.py to vyperlogix\aima\mdp.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\nlp.py to vyperlogix\aima\nlp.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\planning.py to vyperlogix\aima\planning.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\probability.py to vyperlogix\aima\probability.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\py2html.py to vyperlogix\aima\py2html.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\rl.py to vyperlogix\aima\rl.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\search.py to vyperlogix\aima\search.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\text.py to vyperlogix\aima\text.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\aima\utils.py to vyperlogix\aima\utils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\cerealizer\__init__.py to vyperlogix\cerealizer\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\cgi\__init__.py to vyperlogix\cgi\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\cgi\print_env.py to vyperlogix\cgi\print_env.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\classes\CooperativeClass.py to vyperlogix\classes\CooperativeClass.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\classes\ForgivingBaseClass.py to vyperlogix\classes\ForgivingBaseClass.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\classes\SmartObject.py to vyperlogix\classes\SmartObject.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\classes\__init__.py to vyperlogix\classes\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\classes\metaclass.py to vyperlogix\classes\metaclass.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\classes\mixins.py to vyperlogix\classes\mixins.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\classes\noconflict.py to vyperlogix\classes\noconflict.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\const\__init__.py to vyperlogix\const\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\const\constant.py to vyperlogix\const\constant.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\Encryptors.py to vyperlogix\crypto\Encryptors.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\XTEAEncryption.py to vyperlogix\crypto\XTEAEncryption.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\__init__.py to vyperlogix\crypto\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\blowfish.py to vyperlogix\crypto\blowfish.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\__init__.py to vyperlogix\crypto\ez\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\example1.py to vyperlogix\crypto\ez\example1.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\example2.py to vyperlogix\crypto\ez\example2.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\example3.py to vyperlogix\crypto\ez\example3.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\example4.py to vyperlogix\crypto\ez\example4.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\example5.py to vyperlogix\crypto\ez\example5.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\example6.py to vyperlogix\crypto\ez\example6.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\example7.py to vyperlogix\crypto\ez\example7.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\example8.py to vyperlogix\crypto\ez\example8.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\crypto\ez\ezPyCrypto.py to vyperlogix\crypto\ez\ezPyCrypto.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\daemon\__init__.py to vyperlogix\daemon\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\daemon\daemon.py to vyperlogix\daemon\daemon.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\daemon\framework.py to vyperlogix\daemon\framework.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\daemon\utils.py to vyperlogix\daemon\utils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\datetime\__init__.py to vyperlogix\datetime\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\datetime\datetime.py to vyperlogix\datetime\datetime.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\CGImethod.py to vyperlogix\decorators\CGImethod.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\DecoTrace.py to vyperlogix\decorators\DecoTrace.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\PrivateMethod.py to vyperlogix\decorators\PrivateMethod.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\StateDefn.py to vyperlogix\decorators\StateDefn.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\TailRecursive.py to vyperlogix\decorators\TailRecursive.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\__init__.py to vyperlogix\decorators\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\addto.py to vyperlogix\decorators\addto.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\countcalls.py to vyperlogix\decorators\countcalls.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\curried.py to vyperlogix\decorators\curried.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\debug.py to vyperlogix\decorators\debug.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\deprecated.py to vyperlogix\decorators\deprecated.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\dumpArgs.py to vyperlogix\decorators\dumpArgs.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\memoized.py to vyperlogix\decorators\memoized.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\onexit.py to vyperlogix\decorators\onexit.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\properties_idiom.py to vyperlogix\decorators\properties_idiom.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\props.py to vyperlogix\decorators\props.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\pyanno.py to vyperlogix\decorators\pyanno.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\retry.py to vyperlogix\decorators\retry.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\routes.py to vyperlogix\decorators\routes.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\simple.py to vyperlogix\decorators\simple.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\singleton.py to vyperlogix\decorators\singleton.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\states.py to vyperlogix\decorators\states.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\synchronized.py to vyperlogix\decorators\synchronized.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\timeout.py to vyperlogix\decorators\timeout.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\trace.py to vyperlogix\decorators\trace.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\decorators\types.py to vyperlogix\decorators\types.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\__init__.py to vyperlogix\django\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\cherryPy\__init__.py to vyperlogix\django\cherryPy\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\cherryPy\djangocerise\__init__.py to vyperlogix\django\cherryPy\djangocerise\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\decorators\__init__.py to vyperlogix\django\decorators\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\decorators\cache.py to vyperlogix\django\decorators\cache.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\django_utils.py to vyperlogix\django\django_utils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\findDjangoTemplateDirsIn.py to vyperlogix\django\findDjangoTemplateDirsIn.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\pages.py to vyperlogix\django\pages.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\django\tabs.py to vyperlogix\django\tabs.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\enum\Enum.py to vyperlogix\enum\Enum.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\enum\SimpleEnum.py to vyperlogix\enum\SimpleEnum.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\enum\__init__.py to vyperlogix\enum\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\__init__.py to vyperlogix\gds\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\banner.py to vyperlogix\gds\banner.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\bitfield.py to vyperlogix\gds\bitfield.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\bsearch.py to vyperlogix\gds\bsearch.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\cal.py to vyperlogix\gds\cal.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\checksum.py to vyperlogix\gds\checksum.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\cmddecod.py to vyperlogix\gds\cmddecod.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\comb_perm.py to vyperlogix\gds\comb_perm.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\dbase3.py to vyperlogix\gds\dbase3.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\ebcdic.py to vyperlogix\gds\ebcdic.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\envcmp.py to vyperlogix\gds\envcmp.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\fcut.py to vyperlogix\gds\fcut.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\fset.py to vyperlogix\gds\fset.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\julian.py to vyperlogix\gds\julian.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\lc.py to vyperlogix\gds\lc.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\lock.py to vyperlogix\gds\lock.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\man2c.py to vyperlogix\gds\man2c.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\moon.py to vyperlogix\gds\moon.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\mort.py to vyperlogix\gds\mort.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\mp.py to vyperlogix\gds\mp.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\ncss.py to vyperlogix\gds\ncss.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\otp.py to vyperlogix\gds\otp.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\roman.py to vyperlogix\gds\roman.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\sample.py to vyperlogix\gds\sample.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\set.py to vyperlogix\gds\set.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\space.py to vyperlogix\gds\space.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\spinner.py to vyperlogix\gds\spinner.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\stack.py to vyperlogix\gds\stack.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\sw.py to vyperlogix\gds\sw.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\tc.py to vyperlogix\gds\tc.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\tree.py to vyperlogix\gds\tree.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\util.py to vyperlogix\gds\util.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\where.py to vyperlogix\gds\where.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\wire.py to vyperlogix\gds\wire.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gds\xref.py to vyperlogix\gds\xref.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\google\__init__.py to vyperlogix\google\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\google\gae\__init__.py to vyperlogix\google\gae\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\google\gae\gae_utils.py to vyperlogix\google\gae\gae_utils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\google\google.py to vyperlogix\google\google.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\google\translator.py to vyperlogix\google\translator.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gzip\__init__.py to vyperlogix\gzip\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\gzip\pipe.py to vyperlogix\gzip\pipe.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\handlers\ExceptionHandler.py to vyperlogix\handlers\ExceptionHandler.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\handlers\__init__.py to vyperlogix\handlers\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\handlers\autoload.py to vyperlogix\handlers\autoload.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\hash\__init__.py to vyperlogix\hash\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\hash\lists.py to vyperlogix\hash\lists.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\__init__.py to vyperlogix\html\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\anchors.py to vyperlogix\html\anchors.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\flexigrid\__init__.py to vyperlogix\html\flexigrid\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\flexigrid\grid_handler.py to vyperlogix\html\flexigrid\grid_handler.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\flexigrid\script.py to vyperlogix\html\flexigrid\script.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\myOOHTML.py to vyperlogix\html\myOOHTML.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\oohtml.py to vyperlogix\html\oohtml.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\strip.py to vyperlogix\html\strip.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\html\stripper.py to vyperlogix\html\stripper.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\http\__init__.py to vyperlogix\http\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\http\httpServer.py to vyperlogix\http\httpServer.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\imports\__init__.py to vyperlogix\imports\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\imports\monitor.py to vyperlogix\imports\monitor.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\iterators\__init__.py to vyperlogix\iterators\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\iterators\iterutils.py to vyperlogix\iterators\iterutils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\lists\ListWrapper.py to vyperlogix\lists\ListWrapper.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\lists\__init__.py to vyperlogix\lists\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\logging\__init__.py to vyperlogix\logging\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\logging\standardLogging.py to vyperlogix\logging\standardLogging.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mail\__init__.py to vyperlogix\mail\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mail\html.py to vyperlogix\mail\html.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mail\mailServer.py to vyperlogix\mail\mailServer.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mail\mailWithTextAttachment.py to vyperlogix\mail\mailWithTextAttachment.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mail\message.py to vyperlogix\mail\message.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mail\send.py to vyperlogix\mail\send.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mail\validateEmail.py to vyperlogix\mail\validateEmail.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\Args.py to vyperlogix\misc\Args.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\FormatWithCommas.py to vyperlogix\misc\FormatWithCommas.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\GenPasswd.py to vyperlogix\misc\GenPasswd.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\LazyImport.py to vyperlogix\misc\LazyImport.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\ObjectTypeName.py to vyperlogix\misc\ObjectTypeName.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\PrettyPrint.py to vyperlogix\misc\PrettyPrint.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\PriorityQueue.py to vyperlogix\misc\PriorityQueue.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\ReadWriteLock.py to vyperlogix\misc\ReadWriteLock.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\ReportTheList.py to vyperlogix\misc\ReportTheList.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\SequenceMatcher.py to vyperlogix\misc\SequenceMatcher.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\__init__.py to vyperlogix\misc\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\_base64.py to vyperlogix\misc\_base64.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\_getframeInfo.py to vyperlogix\misc\_getframeInfo.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\_psyco.py to vyperlogix\misc\_psyco.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\_utils.py to vyperlogix\misc\_utils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\ask.py to vyperlogix\misc\ask.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\callExternalProgram.py to vyperlogix\misc\callExternalProgram.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\collectFromPath.py to vyperlogix\misc\collectFromPath.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\date.py to vyperlogix\misc\date.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\datetime_iterators.py to vyperlogix\misc\datetime_iterators.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\decode.py to vyperlogix\misc\decode.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\decodeUnicode.py to vyperlogix\misc\decodeUnicode.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\dir.py to vyperlogix\misc\dir.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\getWeekDetails.py to vyperlogix\misc\getWeekDetails.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\ioTimeAnalysis.py to vyperlogix\misc\ioTimeAnalysis.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\jsmin.py to vyperlogix\misc\jsmin.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\lockfile.py to vyperlogix\misc\lockfile.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\pretty.py to vyperlogix\misc\pretty.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\processAllFilesUnder.py to vyperlogix\misc\processAllFilesUnder.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\putStr.py to vyperlogix\misc\putStr.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\readYML.py to vyperlogix\misc\readYML.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\safely_mkdir.py to vyperlogix\misc\safely_mkdir.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\schizoid.py to vyperlogix\misc\schizoid.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\shelved.py to vyperlogix\misc\shelved.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\sortedDictionary.py to vyperlogix\misc\sortedDictionary.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\sorted_copy.py to vyperlogix\misc\sorted_copy.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\soundex.py to vyperlogix\misc\soundex.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\threadpool.py to vyperlogix\misc\threadpool.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\misc\timer.py to vyperlogix\misc\timer.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mixins\LastError.py to vyperlogix\mixins\LastError.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mixins\__init__.py to vyperlogix\mixins\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mixins\magma\CurrentAssetsProcess_mixin.py to vyperlogix\mixins\magma\CurrentAssetsProcess_mixin.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mixins\magma\CurrentUsersProcess_mixin.py to vyperlogix\mixins\magma\CurrentUsersProcess_mixin.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\mixins\magma\__init__.py to vyperlogix\mixins\magma\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\money\QIF.py to vyperlogix\money\QIF.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\money\__init__.py to vyperlogix\money\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\money\floatValue.py to vyperlogix\money\floatValue.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\msi\__init__.py to vyperlogix\msi\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\msi\msiMaker.py to vyperlogix\msi\msiMaker.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\msi\msilib.py to vyperlogix\msi\msilib.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\msi\schema.py to vyperlogix\msi\schema.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\msi\sequence.py to vyperlogix\msi\sequence.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\nltk\__init__.py to vyperlogix\nltk\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\nltk\spelling.py to vyperlogix\nltk\spelling.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\odbc\__init__.py to vyperlogix\odbc\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\odbc\_pyodbc.py to vyperlogix\odbc\_pyodbc.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\oodb\__init__.py to vyperlogix\oodb\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\parsers\CSV.py to vyperlogix\parsers\CSV.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\parsers\__init__.py to vyperlogix\parsers\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\process\Popen.py to vyperlogix\process\Popen.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\process\__init__.py to vyperlogix\process\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\process\killProcByPID.py to vyperlogix\process\killProcByPID.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\products\__init__.py to vyperlogix\products\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\products\data.py to vyperlogix\products\data.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\products\keys.py to vyperlogix\products\keys.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\products\responses.py to vyperlogix\products\responses.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\profiling\__init__.py to vyperlogix\profiling\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\profiling\profilehooks.py to vyperlogix\profiling\profilehooks.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\profiling\profileit.py to vyperlogix\profiling\profileit.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\prolog\Pythologic.py to vyperlogix\prolog\Pythologic.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\prolog\__init__.py to vyperlogix\prolog\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\prolog\pylog.py to vyperlogix\prolog\pylog.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyAMF\__init__.py to vyperlogix\pyAMF\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyAMF\hooks.py to vyperlogix\pyAMF\hooks.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyPdf\__init__.py to vyperlogix\pyPdf\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyPdf\getPDFContent.py to vyperlogix\pyPdf\getPDFContent.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\__init__.py to vyperlogix\pyax\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\apex.py to vyperlogix\pyax\apex.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\auth.py to vyperlogix\pyax\auth.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\baseconvert.py to vyperlogix\pyax\baseconvert.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\beatbox.py to vyperlogix\pyax\beatbox.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\cache.py to vyperlogix\pyax\cache.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\classproperty.py to vyperlogix\pyax\classproperty.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\collections\__init__.py to vyperlogix\pyax\collections\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\collections\cdict.py to vyperlogix\pyax\collections\cdict.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\collections\clist.py to vyperlogix\pyax\collections\clist.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\collections\odict.py to vyperlogix\pyax\collections\odict.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\collections\updatedict.py to vyperlogix\pyax\collections\updatedict.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\connection.py to vyperlogix\pyax\connection.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\context.py to vyperlogix\pyax\context.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\datatype\__init__.py to vyperlogix\pyax\datatype\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\datatype\apexdatetime.py to vyperlogix\pyax\datatype\apexdatetime.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\datatype\base64binary.py to vyperlogix\pyax\datatype\base64binary.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\exceptions.py to vyperlogix\pyax\exceptions.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\logger.py to vyperlogix\pyax\logger.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\sobject\__init__.py to vyperlogix\pyax\sobject\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\sobject\batch.py to vyperlogix\pyax\sobject\batch.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\sobject\classfactory.py to vyperlogix\pyax\sobject\classfactory.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\sobject\leadapi.py to vyperlogix\pyax\sobject\leadapi.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\sobject\metadata.py to vyperlogix\pyax\sobject\metadata.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\sobject\sobjectapi.py to vyperlogix\pyax\sobject\sobjectapi.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\sobject\type.py to vyperlogix\pyax\sobject\type.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\sobject\util.py to vyperlogix\pyax\sobject\util.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\unpackomatic.py to vyperlogix\pyax\unpackomatic.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\util.py to vyperlogix\pyax\util.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax\xmltramp.py to vyperlogix\pyax\xmltramp.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\ReConnection.py to vyperlogix\pyax_utils\ReConnection.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\__init__.py to vyperlogix\pyax_utils\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\abstract.py to vyperlogix\pyax_utils\abstract.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\accounts.py to vyperlogix\pyax_utils\accounts.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\assets.py to vyperlogix\pyax_utils\assets.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\cases.py to vyperlogix\pyax_utils\cases.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\contacts.py to vyperlogix\pyax_utils\contacts.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\context.py to vyperlogix\pyax_utils\context.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\delete.py to vyperlogix\pyax_utils\delete.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\hostify.py to vyperlogix\pyax_utils\hostify.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\leads.py to vyperlogix\pyax_utils\leads.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\__init__.py to vyperlogix\pyax_utils\magma\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\case_views.py to vyperlogix\pyax_utils\magma\case_views.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\competitors.py to vyperlogix\pyax_utils\magma\competitors.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\customers.py to vyperlogix\pyax_utils\magma\customers.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\free_email_hosts.py to vyperlogix\pyax_utils\magma\free_email_hosts.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\leadSourceData.py to vyperlogix\pyax_utils\magma\leadSourceData.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\leadSourceHistory.py to vyperlogix\pyax_utils\magma\leadSourceHistory.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\molten_posts.py to vyperlogix\pyax_utils\magma\molten_posts.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\solution_views.py to vyperlogix\pyax_utils\magma\solution_views.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\magma\temp_object.py to vyperlogix\pyax_utils\magma\temp_object.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\record_types.py to vyperlogix\pyax_utils\record_types.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\sf.py to vyperlogix\pyax_utils\sf.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\solutions.py to vyperlogix\pyax_utils\solutions.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\update.py to vyperlogix\pyax_utils\update.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pyax_utils\users.py to vyperlogix\pyax_utils\users.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pytz\__init__.py to vyperlogix\pytz\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pytz\reference.py to vyperlogix\pytz\reference.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pytz\tzfile.py to vyperlogix\pytz\tzfile.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\pytz\tzinfo.py to vyperlogix\pytz\tzinfo.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\que\MessageQueue.py to vyperlogix\que\MessageQueue.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\que\PriorityQueue.py to vyperlogix\que\PriorityQueue.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\que\__init__.py to vyperlogix\que\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\rss\__init__.py to vyperlogix\rss\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\rss\reader.py to vyperlogix\rss\reader.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\services\__init__.py to vyperlogix\services\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\services\_win32service.py to vyperlogix\services\_win32service.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sgml\MoreReasonableSGMLParser.py to vyperlogix\sgml\MoreReasonableSGMLParser.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sgml\__init__.py to vyperlogix\sgml\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\CherryPyWSGIServer\__init__.py to vyperlogix\sockets\CherryPyWSGIServer\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\ConnectionHandle.py to vyperlogix\sockets\ConnectionHandle.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\IPy.py to vyperlogix\sockets\IPy.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\SmtpMailsink.py to vyperlogix\sockets\SmtpMailsink.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\SocketServer.py to vyperlogix\sockets\SocketServer.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\__init__.py to vyperlogix\sockets\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\parallelBridge.py to vyperlogix\sockets\parallelBridge.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\pinger.py to vyperlogix\sockets\pinger.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\pop3.py to vyperlogix\sockets\pop3.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\proxies\TinyHTTPProxy.py to vyperlogix\sockets\proxies\TinyHTTPProxy.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\proxies\__init__.py to vyperlogix\sockets\proxies\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\sniffer.py to vyperlogix\sockets\sniffer.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\wsgi\__init__.py to vyperlogix\sockets\wsgi\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sockets\wsgi\wsgiserver.py to vyperlogix\sockets\wsgi\wsgiserver.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sorting\HeapSort2.py to vyperlogix\sorting\HeapSort2.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sorting\InsertionSort.py to vyperlogix\sorting\InsertionSort.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sorting\__init__.py to vyperlogix\sorting\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sorting\heapsort.py to vyperlogix\sorting\heapsort.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sorting\qsort.py to vyperlogix\sorting\qsort.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sorting\quicksort.py to vyperlogix\sorting\quicksort.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sql\__init__.py to vyperlogix\sql\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sql\sqlalchemy\SQLAgent.py to vyperlogix\sql\sqlalchemy\SQLAgent.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sql\sqlalchemy\__init__.py to vyperlogix\sql\sqlalchemy\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sql\sqlalchemy\models\__init__.py to vyperlogix\sql\sqlalchemy\models\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sql\sqlalchemy\models\resources\__init__.py to vyperlogix\sql\sqlalchemy\models\resources\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sql\sqlalchemy\models\resources\library\__init__.py to vyperlogix\sql\sqlalchemy\models\resources\library\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\sql\sqlalchemy\models\resources\library\library_node.py to vyperlogix\sql\sqlalchemy\models\resources\library\library_node.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ssh\__init__.py to vyperlogix\ssh\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ssh\shutil.py to vyperlogix\ssh\shutil.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ssh\sshUtils.py to vyperlogix\ssh\sshUtils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\stackless\__init__.py to vyperlogix\stackless\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\stackless\framework\__init__.py to vyperlogix\stackless\framework\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\stackless\framework\events\EventHandler.py to vyperlogix\stackless\framework\events\EventHandler.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\stackless\framework\events\Reporter.py to vyperlogix\stackless\framework\events\Reporter.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\stackless\framework\events\Switch.py to vyperlogix\stackless\framework\events\Switch.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\stackless\framework\events\__init__.py to vyperlogix\stackless\framework\events\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\test\__init__.py to vyperlogix\test\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\test\test-enum.py to vyperlogix\test\test-enum.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\test\test-hexConversions.py to vyperlogix\test\test-hexConversions.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\test\test-oodb.py to vyperlogix\test\test-oodb.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\test\test-safeSerialization.py to vyperlogix\test\test-safeSerialization.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\trees\__init__.py to vyperlogix\trees\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\trees\btree.py to vyperlogix\trees\btree.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ui\PyDialog.py to vyperlogix\ui\PyDialog.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ui\__init__.py to vyperlogix\ui\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ui\tkMessageBox.py to vyperlogix\ui\tkMessageBox.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\ui\uisample.py to vyperlogix\ui\uisample.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\url\__init__.py to vyperlogix\url\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\url\decode.py to vyperlogix\url\decode.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\url\fetch.py to vyperlogix\url\fetch.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\UserGetInfo.py to vyperlogix\win\UserGetInfo.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\WinProcesses.py to vyperlogix\win\WinProcesses.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\__init__.py to vyperlogix\win\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\computerSystem.py to vyperlogix\win\computerSystem.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\csv_to_xls.py to vyperlogix\win\csv_to_xls.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\excel.py to vyperlogix\win\excel.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\getLastReboot.py to vyperlogix\win\getLastReboot.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\regnow.py to vyperlogix\win\regnow.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\shortcut_hook.py to vyperlogix\win\shortcut_hook.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\windows.py to vyperlogix\win\windows.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\windowsShortcuts.py to vyperlogix\win\windowsShortcuts.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\win\winreg.py to vyperlogix\win\winreg.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\word\__init__.py to vyperlogix\word\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\word\readWordDoc.py to vyperlogix\word\readWordDoc.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wsgi\__init__.py to vyperlogix\wsgi\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wsgi\logging_wsgi.py to vyperlogix\wsgi\logging_wsgi.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\AnimatedGIFPanel.py to vyperlogix\wx\AnimatedGIFPanel.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\ChangeLogDialog.py to vyperlogix\wx\ChangeLogDialog.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\CustomStatusBar.py to vyperlogix\wx\CustomStatusBar.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\Error_Handlers.py to vyperlogix\wx\Error_Handlers.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\GenericValidator.py to vyperlogix\wx\GenericValidator.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\NotYetImplemented.py to vyperlogix\wx\NotYetImplemented.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\ObjectAttrValidator2.py to vyperlogix\wx\ObjectAttrValidator2.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\PopUpDialog.py to vyperlogix\wx\PopUpDialog.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\ProgressDialogPanel.py to vyperlogix\wx\ProgressDialogPanel.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\ProgressPanel.py to vyperlogix\wx\ProgressPanel.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\SalesForceLogin.py to vyperlogix\wx\SalesForceLogin.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\SplashFrame.py to vyperlogix\wx\SplashFrame.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\__init__.py to vyperlogix\wx\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\logger.py to vyperlogix\wx\logger.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\mixins.py to vyperlogix\wx\mixins.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\pyax\SalesForceLoginModel.py to vyperlogix\wx\pyax\SalesForceLoginModel.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\pyax\__init__.py to vyperlogix\wx\pyax\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\wxGetNumberFromUser.py to vyperlogix\wx\wxGetNumberFromUser.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\wx\wx_utils.py to vyperlogix\wx\wx_utils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\xlrd\__init__.py to vyperlogix\xlrd\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\xlrd\excel.py to vyperlogix\xlrd\excel.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\xlrd\excelReader.py to vyperlogix\xlrd\excelReader.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\xml\__init__.py to vyperlogix\xml\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\xml\xml_utils.py to vyperlogix\xml\xml_utils.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\zip\SecurePyZipFile.py to vyperlogix\zip\SecurePyZipFile.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\zip\__init__.py to vyperlogix\zip\__init__.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\zip\copyZipFile.py to vyperlogix\zip\copyZipFile.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\zip\eggs.py to vyperlogix\zip\eggs.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\zip\getZipFilesAnalysis.py to vyperlogix\zip\getZipFilesAnalysis.pyo
+byte-compiling Z:\python projects\@lib\vyperlogix\zip\secure.py to vyperlogix\zip\secure.pyo
+byte-compiling Z:\python projects\resources-utils\Resources_GUI\Resources_GUI_Dialog.py to Resources_GUI_Dialog.pyo
+byte-compiling Z:\python projects\resources-utils\Resources_GUI\icon2.py to icon2.pyo
+byte-compiling Z:\python projects\resources-utils\Resources_GUI\script_16x16.py to script_16x16.pyo
+removing c:\users\raychorn\appdata\local\temp\tmpwpm-i0.py
+*** copy extensions ***
+copying C:\Python25\DLLs\_bsddb.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\_ctypes.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\_hashlib.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\_msi.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\_socket.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\_sqlite3.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\_ssl.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\select.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\unicodedata.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\Crypto\Cipher\AES.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\Crypto\Cipher
+copying C:\Python25\lib\site-packages\Crypto\Cipher\ARC2.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\Crypto\Cipher
+copying C:\Python25\lib\site-packages\Crypto\Cipher\Blowfish.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\Crypto\Cipher
+copying C:\Python25\lib\site-packages\Crypto\Cipher\CAST.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\Crypto\Cipher
+copying C:\Python25\lib\site-packages\Crypto\Cipher\DES3.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\Crypto\Cipher
+copying C:\Python25\lib\site-packages\Crypto\Cipher\IDEA.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\Crypto\Cipher
+copying C:\Python25\lib\site-packages\Crypto\Cipher\RC5.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\Crypto\Cipher
+copying C:\Python25\lib\site-packages\OpenSSL\SSL.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\OpenSSL
+copying C:\Python25\lib\site-packages\OpenSSL\crypto.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\OpenSSL
+copying C:\Python25\lib\site-packages\OpenSSL\rand.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\OpenSSL
+copying C:\Python25\lib\site-packages\Pythonwin\win32ui.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\mx\DateTime\mxDateTime\mxDateTime.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\mx\DateTime\mxDateTime
+copying C:\Python25\lib\site-packages\mx\TextTools\mxTextTools\mxTextTools.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\mx\TextTools\mxTextTools
+copying C:\Python25\lib\site-packages\mx\Tools\mxTools\mxTools.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\mx\Tools\mxTools
+copying C:\Python25\lib\site-packages\psyco\_psyco.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\psyco
+copying C:\Python25\lib\site-packages\pylzma-0.3.0-py2.5-win32.egg\pylzma.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\pyodbc.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\pyxml-0.8.4-py2.5-win32.egg\_xmlplus\parsers\pyexpat.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\xml\parsers
+copying C:\Python25\lib\site-packages\simplejson-1.9.2-py2.5-win32.egg\simplejson\_speedups.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\simplejson
+copying C:\Python25\lib\site-packages\sip.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\_win32sysloader.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\perfmon.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\servicemanager.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32api.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32event.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32evtlog.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32file.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32gui.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32net.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32pdh.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32pipe.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32process.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32service.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\win32\win32wnet.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_animate.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\wx
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_calendar.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\wx
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_controls_.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\wx
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_core_.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\wx
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi_.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\wx
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_misc_.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\wx
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\_windows_.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\wx
+copying Z:\python projects\@lib\ext\crypto\coder.pyd -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5\ext\crypto
+*** copy dlls ***
+copying C:\Windows\system32\MSVCR71.dll -> Z:\python projects\resources-utils\Resources_GUI\dist
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\wxmsw28uh_core_vc.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\DLLs\sqlite3.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\wxbase28uh_vc.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\w9xpopen.exe -> Z:\python projects\resources-utils\Resources_GUI\dist
+copying C:\Windows\system32\MSWSOCK.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\wxbase28uh_net_vc.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Windows\system32\python25.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\bundle-2.5
+setting sys.winver for 'Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\bundle-2.5\python25.dll' to 'py2exe'
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\wxmsw28uh_html_vc.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\MSVCR71.dll -> Z:\python projects\resources-utils\Resources_GUI\dist
+copying C:\Windows\system32\pywintypes25.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Windows\system32\MPR.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\wxmsw28uh_adv_vc.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Windows\system32\pythoncom25.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\OpenSSL\SSLEAY32.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\OpenSSL\LIBEAY32.dll -> Z:\python projects\resources-utils\Resources_GUI\build\bdist.win32\winexe\collect-2.5
+copying C:\Python25\lib\site-packages\py2exe\run_w.exe -> Z:\python projects\resources-utils\Resources_GUI\dist\Resources_GUI.exe
+Adding python25.dll as resource to Z:\python projects\resources-utils\Resources_GUI\dist\Resources_GUI.exe
+The following modules appear to be missing
+['CooperativeClass', 'Crypto.PublicKey._fastmath', 'Crypto.Util.winrandom', 'ElementJava', 'PyDialog', 'System', 'System.IO', 'System.Xml', '_psyco', '_pybsddb', 'bsddb3.dbutils', 'chardet', 'cjkcodecs.aliases', 'clr', 'django.core.cache', 'django.core.handlers.wsgi', 'django.core.servers.basehttp', 'django.core.urlresolvers', 'django.http', 'django.template', 'django.template.loader', 'email.Encoders', 'email.Header', 'email.Iterators', 'email.MIMEBase', 'email.MIMEMultipart', 'email.MIMEText', 'email.Utils', 'email.base64MIME', 'ext.IsDOMString', 'ext.SplitQName', 'icon', 'iconv_codec', 'lib.oodb', 'memcache', 'mxDateTime.__version__', 'mxTextTools.__version__', 'mxTools.__version__', 'nltk_lite', 'nltk_lite.corpora', 'nltk_lite.stem.porter', 'pkg_resources', 'psyco_linux', 'psycopg2', 'pyExcelerator', 'pyparsing', 'pytz', 'pytz.tzinfo', 'r_hmac', 'resource', 'routes', 'salesforce_icon', 'stackless', 'tests', 'testset', 'uisample', 'versionInfo', 'vyperlogix.ConnectionHandle', 'vyperlogix.PrettyPrint', 'vyperlogix.WinProcesses', 'vyperlogix.threadpool', 'whrandom', 'win32com.shell', 'wsgistraw', 'mx.TextTools.hex2str', 'mx.TextTools.mxTextTools.CharSet', 'mx.TextTools.str2hex', 'mx.Tools.RTLD_GLOBAL', 'mx.Tools.RTLD_NOW', 'mx.Tools.dlopen']
+
+*** binary dependencies ***
+Your executable(s) also depend on these dlls which are not included,
+you may or may not need to distribute them.
+
+Make sure you have the license if you distribute any of them, and
+make sure you don't distribute files belonging to the operating system.
+
+   OLEAUT32.dll - C:\Windows\system32\OLEAUT32.dll
+   USER32.dll - C:\Windows\system32\USER32.dll
+   WINMM.dll - C:\Windows\system32\WINMM.dll
+   ADVAPI32.dll - C:\Windows\system32\ADVAPI32.dll
+   msvcrt.dll - C:\Windows\system32\msvcrt.dll
+   WS2_32.dll - C:\Windows\system32\WS2_32.dll
+   GDI32.dll - C:\Windows\system32\GDI32.dll
+   NETAPI32.dll - C:\Windows\system32\NETAPI32.dll
+   MSVCP71.dll - C:\Python25\lib\site-packages\wx-2.8-msw-unicode\wx\MSVCP71.dll
+   KERNEL32.dll - C:\Windows\system32\KERNEL32.dll
+   gdiplus.dll - C:\Windows\system32\gdiplus.dll
+   ODBC32.dll - C:\Windows\system32\ODBC32.dll
+   WSOCK32.dll - C:\Windows\system32\WSOCK32.dll
+   msi.dll - C:\Windows\system32\msi.dll
+   VERSION.dll - C:\Windows\system32\VERSION.dll
+   ole32.dll - C:\Windows\system32\ole32.dll
+   MFC71.DLL - C:\Windows\system32\MFC71.DLL
+   RPCRT4.dll - C:\Windows\system32\RPCRT4.dll
+   SHELL32.dll - C:\Windows\system32\SHELL32.dll
+   ntdll.dll - C:\Windows\system32\ntdll.dll
+   comdlg32.dll - C:\Windows\system32\comdlg32.dll
+   COMCTL32.dll - C:\Windows\system32\COMCTL32.dll
+   WINSPOOL.DRV - C:\Windows\system32\WINSPOOL.DRV

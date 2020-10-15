@@ -1,0 +1,188 @@
+global 
+{
+	arrowLNAsset:"http://127.0.0.1:8888/static/globalnav/images/ArrowLeft_Gray.png";
+	arrowLHAsset:"http://127.0.0.1:8888/static/globalnav/images/ArrowLeft_White.png";
+	arrowRNAsset:"http://127.0.0.1:8888/static/globalnav/images/ArrowRight_Gray.png";
+	arrowRHAsset:"http://127.0.0.1:8888/static/globalnav/images/ArrowRight_White.png";
+	newPageNAsset:"http://127.0.0.1:8888/static/globalnav/images/NewPage_Gray.png";
+	newPageHAsset:"http://127.0.0.1:8888/static/globalnav/images/NewPage_White.png";
+	
+	menuBarHeight:35;
+	
+	menuContainerWidth:220;
+	
+	menuFadeInSpeed:0;		
+	menuFadeAlphaStart:0; 	
+	menuFadeAlphaEnd:1;		
+	menuFadeInStep:.01;
+	menuFadeOutSpeed:0;
+	menuFadeOutStep:.01;
+	
+	menuAppearDelay:50;
+	menuResizeWidthSpeed:0;
+	menuResizeWidthStep:1;
+	menuResizeHeightSpeed:0;
+	menuResizeHeightStep:1;
+	
+	
+	menuItemMouseOutAsset:"http://127.0.0.1:8888/static/globalnav/images/MenuItemMouseOut.png";
+	menuItemMouseOverAsset:"http://127.0.0.1:8888/static/globalnav/images/MenuItemMouseOver.png";
+	menuItemScaleContent:true;
+	menuItemMaintainAspectRatio:false;
+	menuItemHeight:25;
+	
+	menuItemFadeInSpeed:0;
+	menuItemFadeStart:0;
+	menuItemFadeEnd:1;
+	menuItemFadeInStep:.01;
+	menuItemFadeOutSpeed:0;
+	menuItemFadeOutStep:.01;
+	menuItemPadTxtLeft:5;
+	menuItemPadLGX:5;
+	menuItemPadLGY:-2;
+	menuItemPadRGX:10;
+	menuItemPadRGY:-2;
+	
+	
+	menuItemSeparatorAsset:"http://127.0.0.1:8888/static/globalnav/images/MenuItemSeparator.png";
+	menuItemSeparatorPadLeft:8;
+	menuItemSeparatorWidth:190;
+	menuItemSeparatorHeight:2;
+	menuItemItemScaleContent:true;
+	menuItemItemMaintainAspectRatio:false;
+	
+	
+	categoryItemMouseOutAsset:"http://127.0.0.1:8888/static/globalnav/images/MenuBarBackground.png";
+	categoryItemMouseOverAsset:"http://127.0.0.1:8888/static/globalnav/images/CategoryMouseOver.png";
+	categoryItemScaleContent:true;
+	categoryItemMaintainAspectRatio:false;
+	
+	categoryItemWidth0:199;
+	categoryItemWidth1:92;
+	categoryItemWidth2:200;
+	categoryItemWidth3:126;
+	categoryItemWidth4:112;
+	categoryItemWidth5:107;
+	categoryItemWidth6:139;
+	
+	categoryFadeInSpeed:0;
+	categoryFadeStart:0;
+	categoryFadeEnd:1;
+	categoryFadeInStep:.05;
+	categoryFadeOutSpeed:0;
+	categoryFadeOutStep:.05;
+	
+	categorySeparatorAsset:"http://127.0.0.1:8888/static/globalnav/images/CategorySeparator.png";
+	categorySeparatorHeight:35;
+	categorySeparatorWidth:1;
+	categorySeparatorScaleContent:true;
+	categorySeparatorMaintainAspectRatio:false;
+	
+	
+	menuTextPaddingLeft:10;
+	menuTextPaddingRight:0;
+	menuTextRightMargin:220;
+	menuTextTitleHeight:17;
+	menuTextBodyHeight:17;
+	smtGap:5;
+	
+	dataURL:"http://127.0.0.1:8888/static/globalnav/jsondata.json";
+	dataType:"json";
+	cacheBuster:true;
+}
+
+
+.MenuBar
+{
+	horizontalGap: 0;
+}
+
+.CategoryItem
+{
+	horizontalAlign: left;
+	paddingLeft: 8;
+	paddingTop: 3;
+	verticalAlign: middle;
+	verticalGap: 0;
+}
+
+
+
+.CategoryItemLabel
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 13;
+	fontWeight: bold;
+}
+
+.MenuContainer
+{
+	backgroundColor: #000000;
+	verticalGap: 0;
+}
+
+.SubMenuContainer
+{
+	backgroundColor: #212121;
+	verticalGap: 0;
+}
+
+
+.MenuItem
+{
+	horizontalAlign: left;
+	paddingLeft: 8;
+	paddingTop: 3;
+	verticalAlign: middle;
+	verticalGap: 0;
+}
+
+.MenuItemLabelStyle1
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	paddingLeft:0;
+}
+.MenuItemLabelStyle2
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+	paddingLeft:0;
+}
+
+
+.MenuTextTitle
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: bold;
+}
+.MenuTextBody
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+}
+HBox.CategorySeparator
+{
+	backgrolundSize: "100%";
+	borderStyle: none;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalAlign: top;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+}
+Label.CategoryItemTextfield
+{
+	paddingLeft: 10;
+}

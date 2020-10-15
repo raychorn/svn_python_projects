@@ -1,0 +1,2 @@
+2009-08-16 21:05:41,456 INFO Start the vyperlogix.django.cherryPy.djangocerise server on 127.0.0.1:8888 logging to Z:\python projects\_django-projects\@projects\amfsample\django\djangocerise_1_2\logs\webserver_2009-08-16_210540_127_0_0_1_8888.log
+2009-08-16 21:06:35,782 DEBUG AMFMiddleware was initialized.

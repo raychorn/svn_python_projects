@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load switchcase %}
+{% block title %}(About VyperBlog&trade;){% endblock %}
+
+{% block extra-head %}
+{% if isJavaScriptOptimized %}
+    <script language="JavaScript1.2" type="text/javascript">
+    $js('/js/js/about.min.js',function(){});
+    </script>
+{% else %}
+    <script src="/js/js/about.min.js" type="text/javascript" language="JavaScript"></script>
+{% endif %}
+{% endblock %}
+
+{% block more-javascript %}
+function __onWindowLoad(){}
+{% endblock %}
+
+{% block include-css %}{% endblock %}
+
+{% block navigation %}{% endblock %}
+
+{% block masthead %}
+<h1><a href="/about/">About VyperBlog&trade;</a></h1>
+{% endblock %}
+
+{% block extra-top-left %}
+{% endblock %}
+
+{% block user-ident %}
+    <a id="a_Main" href="#" title="Back to the Main Site (Home)">Home</a>&nbsp;
+{% endblock %}
+
+{% block main-menu %}
+<ul class="menu">
+    <li><a id="a_Home" href="#" class="parent"><span>Home</span></a></li>
+</ul>
+{% endblock %}
+
+{% block left_content %}
+    <div>
+        <a href="{{ url }}?num={{ firstPage }}" target="_top">
+            {% if isFirstPage %}
+                <big><b>
+            {% endif %}
+            [1]
+            {% if isFirstPage %}
+                </b></big>
+            {% endif %}
+        </a>
+        &nbsp;&nbsp;
+        {% if notFirstPage %}
+            <a href="{{ url }}?num={{ firstPage }}" target="_top">[|<]</a>
+            &nbsp;&nbsp;
+            <a href="{{ url }}?num={{ prevPageNum }}" target="_top">[<]</a>
+        {% endif %}
+        &nbsp;&nbsp;
+        {% for pageNum in pageNums %}
+            &nbsp;
+            <a href="{{ url }}?num={{ pageNum.num }}" target="_top">
+                {% if pageNum.isCurrent %}
+                    <big><b>
+                {% endif %}
+                [{{ pageNum.displayable }}]
+                {% if pageNum.isCurrent %}
+                    </b></big>
+                {% endif %}
+            </a>
+            &nbsp;
+        {% endfor %}
+        &nbsp;&nbsp;
+        {% if notLastPage %}
+            <a href="{{ url }}?num={{ nextPageNum }}" target="_top">[>]</a>
+            &nbsp;&nbsp;
+            <a href="{{ url }}?num={{ lastPage }}" target="_top">[>|]</a>
+        {% endif %}
+        &nbsp;&nbsp;
+        <a href="{{ url }}?num={{ lastPage }}" target="_top">
+            {% if isLastPage %}
+                <big><b>
+            {% endif %}
+            [{{ numPages }}]
+            {% if isLastPage %}
+                </b></big>
+            {% endif %}
+        </a>
+	{% if isRunningLocal %}
+	    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fraychorn.com%2Fabout%2F&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=segoe+ui&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+	{% else %}
+	    <fb:like href="http://raychorn.com/about/" font="segoe ui"></fb:like>
+	{% endif %}
+    </div>
+    <p><img src="{{ anImage.image }}" border="0"><BR/>{{ anImage.descr }}&nbsp;
+    {% if anImage.showPayPal %}
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="VXMNU5TCVEQSS">
+        <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <table width="800">
+            <tr>
+                <td>
+                    Your payment of $9.95 covers the following:  <small><i>(prices are subject to change without notice)</i></small>
+                    <UL>
+                        <li>VyperBlog&trade; Setup in your Google Account for the Google App Engine.</li>
+                        <li>Setup for One (1) FaceBook App for your site. ($49.95 value)</li>
+                        <li>Daily Monitoring of your Google App Engine Account for 30 days to ensure VyperBlog&trade; is working correctly for your needs.</li>
+                        <li>FREE Installation of all VyperBlog&trade; updates for 30 days.</li>
+                        <li>Access to the Vyper Logix Development Team for 30 days.</li>
+                    </UL>
+                </td>
+                <td>
+                    Optionally, you can elect to buy a Maintenance Contract for VyperBlog&trade; for $4.95 per month:  <small><i>(prices are subject to change without notice)</i></small>
+                    <UL>
+                        <li>Daily Monitoring of your Google App Engine Account for 1 month to ensure VyperBlog&trade; is working correctly for your needs.</li>
+                        <li>FREE Installation of all VyperBlog&trade; updates for 1 month.</li>
+                        <li>Access to the Vyper Logix Development Team for 1 month.</li>
+                    </UL>
+                </td>
+            </tr>
+        </table>
+    {% endif %}
+    &nbsp;&nbsp;&nbsp;
+    <table width="800">
+        <tr>
+            <td>
+            {% switch anImage.num %}
+                {% case 1 %}
+                    Vyper Logix Corp. can be reached via <a href="http://vyperlogix.com" target="_blank">VyperLogix.Com</a> or <a href="mailto:Sales@VyperLogix.com" target="_blank">Sales@VyperLogix.com</a>.
+                {% endcase %}
+                {% case 2 %}
+                    You can test-drive VyperBlog&trade; by viewing the following sites:
+                    <UL>
+                        <li><a href="http://raychorn.com" target="_blank">RayCHorn.Com</a></li>
+                        <li><a href="http://vyperlogix.com" target="_blank">VyperLogix.Com</a></li>
+                    </UL>
+                {% endcase %}
+                {% case 3 %}
+                    <a href="http://raychorn.com/about/" target="_blank">VyperBlog&trade;</a> has the features YOU want today !
+                {% endcase %}
+                {% case 4 %}
+                    <a href="http://raychorn.com/about/" target="_blank">VyperBlog&trade;</a> has the features YOU want tomorrow !
+                {% endcase %}
+                {% case 5 %}
+                    <a href="http://raychorn.com/about/" target="_blank">VyperBlog&trade;</a> has the security YOU want now !
+                    <BR/>
+                    You will not be bothered by bot-wielding hackers doing malicious things with your site !
+                    <BR/>
+                    Your valuable users will not be bothered by having to deal with Captcha - your Forms are covered by Secure-Site and SSL !
+                {% endcase %}
+                {% case 6 %}
+                    <a href="http://raychorn.com/about/" target="_blank">VyperBlog&trade;</a> has the Security YOU want tomorrow !
+                {% endcase %}
+                {% case 7 %}
+                    Give it a test-drive !  <a href="http://raychorn.com" target="_blank">VyperBlog&trade; Test-Drive</a>
+                {% endcase %}
+                {% case 8 %}
+                    User Management built-in !
+                {% endcase %}
+                {% case 9 %}
+                    User Management built-in with Self-Help !
+                {% endcase %}
+                {% case 10 %}
+                    User Management with positive feedback for your User's Pleasure !
+                {% endcase %}
+                {% case 11 %}
+                    Get your new Users Registered quickly and easily !
+                {% endcase %}
+                {% case 12 %}
+                    User Management without all that annoying Captcha !
+                {% endcase %}
+                {% case 13 %}
+                    User Management with Self-Help for those who forget their passwords !  No more emails from your upset users.
+                {% endcase %}
+                {% case 14 %}
+                    Your users can manage their own access in a safe and secure manner !
+                {% endcase %}
+                {% case 15 %}
+                    Safe and Secure Password Resets !
+                {% endcase %}
+                {% case 16 %}
+                    Lower your User Support Cost !
+                {% endcase %}
+                {% case 17 %}
+                    Get valuable feedback from your users !
+                {% endcase %}
+                {% case 18 %}
+                    Only registered Users can leave feedback !
+                {% endcase %}
+                {% case 19 %}
+                    Get useful feedback from your users, improve your business and service offerings !
+                {% endcase %}
+                {% case 20 %}
+                    Feedback that can help you improve your business and service offerings !
+                {% endcase %}
+                {% case 21 %}
+                    Here are the <a href="http://python2.wordpress.com/2010/07/03/10-reasons-for-using-vyperblog-in-the-google-cloud/" target="_blank">Top 10 Reasons you should be using the Google App Engine</a> for your growing business.
+                {% endcase %}
+                {% case 22 %}
+                    The <a href="http://python2.wordpress.com/2010/07/03/10-reasons-for-using-vyperblog-in-the-google-cloud/" target="_blank">Google App Engine</a> is FREE of cost until your business grows larger than 1 million hits per day.
+                    <br/>
+                    Vyper Logix Corp can help you grow your use of the Google App Engine to something closer to 10 million hits per day all the while making your use of the Google App Engine FREE of cost.
+                {% endcase %}
+                {% case 23 %}
+                    Django gives your website the power it needs to grow !
+                {% endcase %}
+                {% case 24 %}
+                    You can, if you wish, Admin your site through the Django Amin Tool !
+                {% endcase %}
+                {% case 25 %}
+                    The Django Admin Tool is very easy to use !
+                {% endcase %}
+                {% case 26 %}
+                    Give it a test-drive, NOW !  <a href="http://raychorn.com" target="_blank">VyperBlog&trade; Test-Drive</a>
+                {% endcase %}
+                {% case 27 %}{% endcase %}
+                {% case 28 %}
+                    The VyperBlog&trade; Future is <b>bright</b> !
+                {% endcase %}
+                {% case 29 %}
+                    The VyperBlog&trade; Features List is <b>rich</b> !
+                {% endcase %}
+                {% case 30 %}
+                    VyperBlog&trade; does <b>Social Networking</b> !
+                {% endcase %}
+                {% case 31 %}
+                    VyperBlog&trade; give <b>YOU</b> the features you want !
+                {% endcase %}
+                {% case 32 %}{% endcase %}
+                {% case 33 %}
+                    Give it a test-drive, NOW !  <a href="http://raychorn.com" target="_blank">VyperBlog&trade; Test-Drive</a>
+                    <p><small>Powered by <a href="http://code.google.com/p/vyperblog/" target="_blank">VyperBlog&trade;</a>.</small></p>
+                {% endcase %}
+            {% endswitch %}
+            </td>
+        </tr>
+    </table>
+    <BR/>
+    {{ anImage.notes }}
+    </p>
+    <hr width="50%" color="#0000ff" align="center"/>
+{% endblock %}
+
+{% block right_content %}
+{% endblock %}

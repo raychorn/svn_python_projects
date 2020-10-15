@@ -1,0 +1,50 @@
+Site Name,Domain
+Alerts,http://alerts.vzw.com
+Animated Messaging,http://animated.messaging.vzw.com/vge
+Backup Assistant,http://backupassistant.vzw.com
+Dashboard (launching Nov),http://dashboard.vzw.com
+Enterprise Messaging,http://enterprisemessaging.vzw.com
+Entertainment & Apps,http://products.vzw.com
+Family Locator,http://familylocator.vzw.com
+Global Rental Program (discontinued),http://www.vzwrentinternational.com
+Global Satellite Phones,TBD - launch pending
+Hosted VZ Email,http://vzemail.vzw.com
+International Messaging,http://text1.vzw.com
+Location Management,http://locationmanagement.vzw.com
+Mobile Web,http://mobileweb.vzw.com
+Phones,http://phones.verizonwireless.com
+Picture & Video Messaging,http://picture.vzw.com
+Push To Talk,http://pushtotalk.vzw.com
+Rebate Center,https://www.yourwirelessrebatecenter.com
+Shop,http://solutions.vzwshop.com
+Small Business,http://smallbusiness.vzw.com
+Text Messaging,http://text.vzw.com
+Verizon Hub*,http://hub.vzw.com
+Vskins,www.vskins.com
+VZ Access Manager,www.vzam.net
+VZ Navigator,http://vznavigator.vzw.com
+VZW Careers,www.vzwcareers.com
+Forgot Password / User ID flows,https://myaccount.verizonwireless.com/accessmanager/public/controller?action=displayForgotPassword
+Registration,https://myaccount.verizonwireless.com/accessmanager/public/controller?action=displayRegistration
+Sign In,https://login.verizonwireless.com/amserver/UI/Login
+Signed in Change {Profile} pages,https://myaccount.verizonwireless.com/accessmanager/secure/controller?action=displayModifyPassword
+Signed Out page,https://login.vzw.com/cdsso/public/controller?action=logout
+Verizon Wireless,http://www.verizonwireless.com
+VZW.com error page,http://www.verizonwireless.com/anybogusentry
+Learning Center,http://learning.verizonwireless.com/learning/
+Static error page,http://www.verizonwireless.com/404.html
+Static error page,http://www.verizonwireless.com/sorryAkamai.html
+Static error page,http://www.verizonwireless.com/amsorry.html
+Forums,http://community.vzw.com
+My Prepay activation,https://www.verizonwireless.com/vzwapp/prepay/activateinpulse
+My Verizon (east),https://ebillpay.verizonwireless.com/ …
+My Verizon (west),https://wbillpay.verizonwireless.com/ …
+About Us,http://aboutus.vzw.com
+Business,http://b2b.vzw.com/ …
+News,http://news.vzw.com
+Search,http://search.vzw.com
+Support,http://support.vzw.com
+SEO Shopping Site,http://shop.verizonwireless.com
+Media Store,http://mediastore.verizonwireless.com
+PC Games (launching Nov),http://games.vzw.com
+V CAST Live,http://vcastlive.vzw.com

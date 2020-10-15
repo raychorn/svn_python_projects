@@ -1,0 +1,710 @@
+{% extends 'best-quote.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	function has_additional_destinations_to_location() {
+		var div = $("#div_additional_destinations_to_location");
+		var s_html = div.html();
+		return (s_html.indexOf('<BR/>') > -1);
+	}
+
+	function ShowDialog2(modal) {
+		$("#overlay2").show();
+		$("#dialog2").fadeIn(300);
+
+		if (modal) {
+			$("#overlay2").unbind("click");
+		} else {
+			$("#overlay2").click(function (e) {
+				HideDialog2();
+			});
+		}
+	}
+
+	function HideDialog2() {
+		$("#overlay2").hide();
+		$("#dialog2").fadeOut(300);
+	} 
+
+	function handle_dialog2_close(event) {
+		HideDialog2();
+		event.preventDefault();
+	}
+
+	function ShowDialog2a(modal) {
+		$("#overlay2").show();
+		$("#dialog2a").fadeIn(300);
+
+		if (modal) {
+			$("#overlay2").unbind("click");
+		} else {
+			$("#overlay2").click(function (e) {
+				HideDialog2a();
+			});
+		}
+	}
+
+	function HideDialog2a() {
+		$("#overlay2").hide();
+		$("#dialog2a").fadeOut(300);
+	} 
+
+	function handle_dialog2a_close(event) {
+		HideDialog2a();
+		event.preventDefault();
+	}
+
+	function ShowDialog2b(modal) {
+		$("#overlay2").show();
+		$("#dialog2b").fadeIn(300);
+
+		if (modal) {
+			$("#overlay2").unbind("click");
+		} else {
+			$("#overlay2").click(function (e) {
+				HideDialog2b();
+			});
+		}
+	}
+
+	function HideDialog2b() {
+		$("#overlay2").hide();
+		$("#dialog2b").fadeOut(300);
+	} 
+
+	function handle_dialog2b_close(event) {
+		HideDialog2b();
+		event.preventDefault();
+	}
+
+	function ShowDialog2c(modal) {
+		$("#overlay2").show();
+		$("#dialog2c").fadeIn(300);
+
+		if (modal) {
+			$("#overlay2").unbind("click");
+		} else {
+			$("#overlay2").click(function (e) {
+				HideDialog2c();
+			});
+		}
+	}
+
+	function HideDialog2c() {
+		$("#overlay2").hide();
+		$("#dialog2c").fadeOut(300);
+	} 
+
+	function handle_dialog2c_close(event) {
+		HideDialog2c();
+		event.preventDefault();
+	}
+
+	function ShowDialog2d(modal) {
+		if (has_additional_destinations_to_location()) {
+			$("#overlay2").show();
+			$("#dialog2d").fadeIn(300);
+	
+			if (modal) {
+				$("#overlay2").unbind("click");
+			} else {
+				$("#overlay2").click(function (e) {
+					HideDialog2d();
+				});
+			}
+		}
+	}
+
+	function HideDialog2d() {
+		$("#overlay2").hide();
+		$("#dialog2d").fadeOut(300);
+	} 
+
+	function handle_dialog2d_close(event) {
+		HideDialog2d();
+		event.preventDefault();
+	}
+
+	$(document).ready(function() {
+		initialize_dialogs();
+
+		$("#btn_additional_stops_in_transit_done").click(function (e) {
+			HideDialog2b();
+			e.preventDefault();
+		});
+		
+		$("#btn_remove_existing_additional_stops_done").click(function (e) {
+			HideDialog2d();
+			e.preventDefault();
+		});
+
+		$("#anchor_additional_stops_in_transit_yes_shortcut").click(function (e) {
+			$('#additional_stops_in_transit_yes').attr('checked',true);
+		});
+		
+		$("#anchor_additional_stops_in_transit_no_shortcut").click(function (e) {
+			$('#additional_stops_in_transit_no').attr('checked',true);
+		});
+		
+		$("#anchor_additional_stops_in_transit_driver_assist_load_yes_shortcut").click(function (e) {
+			$('#additional_stops_in_transit_driver_assist_load_yes').attr('checked',true);
+		});
+		
+		$("#anchor_additional_stops_in_transit_driver_assist_load_no_shortcut").click(function (e) {
+			$('#additional_stops_in_transit_driver_assist_load_no').attr('checked',true);
+		});
+
+		function refresh_additional_destinations_to_location(data) {
+			var div = $("#div_additional_destinations_to_location");
+			var i;
+			var s_html = '';
+			var n = 0;
+			if (data) {
+				for (i in data) {
+					var toks = data[i].split(',');
+					if (toks[toks.length-2] == 'true') {
+						toks[toks.length-2] = 'Driver to assist in loading';
+						toks[toks.length-1] = null;
+					} else {
+						toks[toks.length-2] = 'Driver will not assist in loading';
+						toks[toks.length-1] = null;
+					}
+					var tokens = [];
+					for (var j in toks) {
+						if (toks[j] != null) {
+							tokens[tokens.length] = toks[j];
+						}
+					}
+					data[i] = tokens.join(',');
+					s_html += '<NOBR>'+data[i]+'&nbsp;<a id="anchor_unlink_additional_destination_to_location" name="'+i+'" href="#">(-)</a></NOBR><BR/>';
+					n++;
+				}
+			}
+			div.html(s_html);
+			$("#anchor_unlink_additional_destination_to_location").click(function (e) {
+				handle_best_quote2_drop_stop($(this).attr("name"));
+			});
+			if (n > 0) {
+				$("#span_additional_destinations_to_location_title").show();
+			} else {
+				$("#span_additional_destinations_to_location_title").hide();
+			}
+		}
+		// +++
+		function handle_remove_existing_additional_stops_click(option) {
+			if (option == 'yes') {
+				$.ajax({
+					type: 'POST',
+					url: '/best/quote2/drop/all/stops/',
+					data: {},
+					success: function (data) {
+						refresh_additional_destinations_to_location(data);
+						HideDialog2d();
+					},
+					dataType: 'json'
+				});			
+			} else {
+				HideDialog2d();
+			}
+		}
+		
+		$("#anchor_remove_existing_additional_stops_yes_shortcut").click(function (e) {
+			$('#remove_existing_additional_stops_yes').attr('checked',true);
+			handle_remove_existing_additional_stops_click('yes');
+		});
+		
+		$("#anchor_remove_existing_additional_stops_no_shortcut").click(function (e) {
+			$('#remove_existing_additional_stops_no').attr('checked',true);
+			handle_remove_existing_additional_stops_click('no');
+		});
+		
+		$("#remove_existing_additional_stops_yes").click(function (e) {
+			handle_remove_existing_additional_stops_click('yes');
+		});
+		
+		$("#remove_existing_additional_stops_no").click(function (e) {
+			handle_remove_existing_additional_stops_click('no');
+		});
+		
+		$("#anchor_additional_stops_in_transit_zipcode_shortcut").click(function (e) {
+			$('#additional_stops_in_transit_zipcode').focus();
+		});
+		
+		$("#anchor_additional_stops_in_transit_city_shortcut").click(function (e) {
+			$('#additional_stops_in_transit_city').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_packaging_shortcut").click(function (e) {
+			$('#less_than_truck_load_packaging').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_quantity_of_items_shortcut").click(function (e) {
+			$('#less_than_truck_load_quantity_of_items').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_dimensions_length_shortcut").click(function (e) {
+			$('#less_than_truck_load_dimensions_length').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_dimensions_width_shortcut").click(function (e) {
+			$('#less_than_truck_load_dimensions_width').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_dimensions_height_shortcut").click(function (e) {
+			$('#less_than_truck_load_dimensions_height').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_total_shipment_weight_shortcut").click(function (e) {
+			$('#less_than_truck_load_total_shipment_weight').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_freight_class_of_goods_shortcut").click(function (e) {
+			$('#less_than_truck_load_freight_class_of_goods').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_description_of_goods_shortcut").click(function (e) {
+			$('#less_than_truck_load_description_of_goods').focus();
+		});
+		
+		$("#anchor_less_than_truck_load_optional_rfq_description_shortcut").click(function (e) {
+			$('#less_than_truck_load_optional_rfq_description').focus();
+		});
+		
+		$("#anchor_additional_stops_in_transit_along_the_way_yes_shortcut").click(function (e) {
+			$('#additional_stops_in_transit_along_the_way_yes').attr('checked',true);
+			ShowDialog2b(false);
+		});
+		
+		$("#anchor_additional_stops_in_transit_along_the_way_no_shortcut").click(function (e) {
+			$('#additional_stops_in_transit_along_the_way_no').attr('checked',true);
+		});
+		
+		$("#anchor_bid_timing_1_hour_shortcut").click(function (e) {
+			$('#bid_timing_1_hour').attr('checked',true);
+		});
+		
+		$("#anchor_bid_timing_4_hours_shortcut").click(function (e) {
+			$('#bid_timing_4_hours').attr('checked',true);
+		});
+		
+		$("#anchor_bid_timing_24_hours_shortcut").click(function (e) {
+			$('#bid_timing_24_hours').attr('checked',true);
+		});
+		
+		$("#anchor_bid_timing_48_hours_shortcut").click(function (e) {
+			$('#bid_timing_48_hours').attr('checked',true);
+		});
+		
+		$('#additional_stops_in_transit_along_the_way_no').attr('checked',true);
+		$('#bid_timing_4_hours').attr('checked',true);
+		
+		$('#span_star_bidding_window').html(get_full_date_time());
+
+		var dateString = $('#span_star_bidding_window').html();
+		var currentTime = new Date();
+		var dateStr3 = currentTime.toLocaleString();
+		var date3 = Date.parse(dateStr3);
+		var date3a = new Date(date3);
+		$('#input_star_bidding_window').val(date3a.toISOString());
+		
+        $('#truck_load_or_partial_ready_for_pick_up_date').datepicker({
+                changeYear: true,
+                beforeShow: function (textbox, instance) {   
+                instance.dpDiv.css({
+                    marginTop: (-textbox.offsetHeight) + 'px',
+                    marginLeft: (textbox.offsetWidth+5) + 'px'
+                });
+                }
+            });
+			
+		$("#truck_load_or_partial_ready_for_pick_up_image_date_picker_button").click(function (event) {
+			$('#truck_load_or_partial_ready_for_pick_up_date').datepicker("show");
+			event.preventDefault();
+		});
+
+		function handle_best_quote2_drop_stop(id) {
+			$.ajax({
+				type: 'POST',
+				url: '/best/quote2/drop/stop/',
+				data: {id:id},
+				success: function (data) {
+					refresh_additional_destinations_to_location(data);
+				},
+				dataType: 'json'
+			});			
+		}
+
+		$("#anchor_additional_stops_in_transit_add_another_stop").click(function (e) {
+			var city = $('#additional_stops_in_transit_city').val();
+			var state = $('#additional_stops_in_transit_state').val();
+			var zip = $('#additional_stops_in_transit_zipcode').val();
+			var yes = checked_as_true_or_false($('#additional_stops_in_transit_driver_assist_load_yes').attr('checked'));
+			var no = checked_as_true_or_false($('#additional_stops_in_transit_driver_assist_load_no').attr('checked'));
+			var yes_or_no = (yes) ? 'yes' : 'no';
+
+			var __data__ = {additional_stops_in_transit_city:city,additional_stops_in_transit_state:state,additional_stops_in_transit_zipcode:zip,additional_stops_in_transit_driver_assist_load_yes:yes,additional_stops_in_transit_driver_assist_load_no:no};
+
+			$.ajax({
+				type: 'POST',
+				url: '/best/quote2/add/stop/',
+				data: __data__,
+				success: function (data) {
+					refresh_additional_destinations_to_location(data);
+				},
+				dataType: 'json'
+			});			
+		});
+
+		$.ajax({
+			type: 'GET',
+			url: '/best/quote2/get/stops/',
+			success: function (data) {
+				refresh_additional_destinations_to_location(data);
+			},
+			dataType: 'json'
+		});			
+		$("#span_additional_destinations_to_location_title").hide();
+		
+		var additional_stops_in_transit_zipcode_vector = {zipcode:$('#additional_stops_in_transit_zipcode'),city:$('#additional_stops_in_transit_city'),state:$('#additional_stops_in_transit_state'),isKeypress:false};
+
+		$('#additional_stops_in_transit_zipcode').keypress(function() {
+			additional_stops_in_transit_zipcode_vector['isKeypress'] = true;
+			__handle_zipcode__(additional_stops_in_transit_zipcode_vector);
+		});		
+		$('#additional_stops_in_transit_zipcode').change(function() {
+			__handle_zipcode__(additional_stops_in_transit_zipcode_vector,true);
+		});		
+
+	});
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block dialogs %}
+    <div id="overlay2" class="web_dialog_overlay"></div>
+    <div id="dialog2" class="web_dialog">
+        <table style="width: 100%; border: 0px;" cellpadding="3" cellspacing="0">
+            <tr>
+                <td class="web_dialog_title">Stops in Transit</td>
+                <td class="web_dialog_title align_right">
+                    <a href="#" onclick="handle_dialog2_close(event)">Close</a>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left: 15px;">
+                    <p>Cargo Chief enables the shipper to input additional stops in between the Origin and the Destination for your quote. For example, you may have 20 pallets going from Los Angeles to the Southeast, 6 going to Atlanta and 14 going Miami.  Miami would be the Destination and Atlanta would Be a Stop in Transit.</p>
+                    <p>
+                    	For shipments with Stops in Transit, Best Quote is used.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><img src="/static/images/slide0017_image001.png"/></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    <div id="dialog2a" class="web_dialog2a">
+        <table style="width: 100%; border: 0px;" cellpadding="3" cellspacing="0">
+            <tr>
+                <td class="web_dialog_title">Bid Timing</td>
+                <td class="web_dialog_title align_right">
+                    <a href="#" onclick="handle_dialog2a_close(event)">Close</a>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left: 15px;">
+                    <p>This option determines how much time Cargo Chief has to get you the best value (service level, transit time or price).</p>
+                    <p>The more time you give us, the more time we have to work our network of load boards, consolidators, websites and other brokers to find the best for you.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    <div id="dialog2b" class="web_dialog2b">
+        <table style="width: 100%; border: 0px;" cellpadding="3" cellspacing="0">
+            <tr>
+                <td class="web_dialog_title">Stops in Transit</td>
+                <td class="web_dialog_title align_right">
+                    <a href="#" onclick="handle_dialog2b_close(event)">Close</a>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left: 15px;">
+                	<form>
+                    	<table width="100%">
+                        	<tr style="display: none;">
+                            	<td>
+                                    <NOBR>
+                                    <label>Additional Stops in Transit: </label>
+                                    <a id="anchor_additional_stops_in_transit_yes_shortcut" href="#"><label>Yes</label></a>
+                                    <input id="additional_stops_in_transit_yes" name="additional_stops_in_transit" type="radio" value="yes"/>
+                                    &nbsp;
+                                    <a id="anchor_additional_stops_in_transit_no_shortcut" href="#"><label>No</label></a>
+                                    <input id="additional_stops_in_transit_no" name="additional_stops_in_transit" type="radio" value="no"/>
+                                    </NOBR>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                    <NOBR>
+                                    <label>Stop <span id="span_additional_stops_in_transit_count">1</span>:</label>&nbsp;
+                                    <a id="anchor_additional_stops_in_transit_zipcode_shortcut" href="#"><label>Zip Code</label></a>
+                                    <input id="additional_stops_in_transit_zipcode" type="text" value="" size="10"/>&nbsp;
+                                    <label>State</label>
+                                    <input id="additional_stops_in_transit_state" type="text" readonly="readonly" value="" size="3"/>&nbsp;
+                                    <label>City</label>
+                                    <input id="additional_stops_in_transit_city" type="text" readonly="readonly" value="" size="30"/>
+                                    </NOBR>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                    <NOBR>
+                                    <label>Driver to assist in loading:</label>
+                                    &nbsp;&nbsp;
+                                    <a id="anchor_additional_stops_in_transit_driver_assist_load_yes_shortcut" href="#"><label>Yes</label></a>
+                                    <input id="additional_stops_in_transit_driver_assist_load_yes" name="additional_stops_in_transit_driver_assist_load" type="radio" value="yes"/>
+                                    &nbsp;
+                                    <a id="anchor_additional_stops_in_transit_driver_assist_load_no_shortcut" href="#"><label>No</label></a>
+                                    <input id="additional_stops_in_transit_driver_assist_load_no" name="additional_stops_in_transit_driver_assist_load" type="radio" value="no"/>
+                                    </NOBR>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                	<table width="100%">
+                                    	<tr>
+                                        	<td width="50%">
+                                                <a id="anchor_additional_stops_in_transit_add_another_stop" href="#">Add another stop</a>
+                                            </td>
+                                        	<td width="50%">
+                                            	<input id="btn_additional_stops_in_transit_done" value="Done" class="main_button"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    <div id="dialog2c" class="web_dialog2c">
+        <table style="width: 100%; border: 0px;" cellpadding="3" cellspacing="0">
+            <tr>
+                <td class="web_dialog_title">Space Needed</td>
+                <td class="web_dialog_title align_right">
+                    <a href="#" onclick="handle_dialog2c_close(event)">Close</a>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left: 15px;">
+                    <p>This is where you state the amount of the truck you want by specifying the depth of the truck you require.  The width is the standard width of 8 feet (96"), enough for two standard pallets and the height is the standard height of 8.75 feet (105").  Since so much freight is moved on pallets, we have made the choices for “Space Needed” multiples of side-by-side pallets. high, and wide</p>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    <div id="dialog2d" class="web_dialog2d">
+        <table style="width: 100%; border: 0px;" cellpadding="3" cellspacing="0">
+            <tr>
+                <td class="web_dialog_title">Remove Additional Stops</td>
+                <td class="web_dialog_title align_right">
+                    <a href="#" onclick="handle_dialog2d_close(event)">Close</a>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left: 15px;">
+                	<form>
+                    	<table width="100%">
+                        	<tr>
+                            	<td>
+                                    <NOBR>
+                                    <label>Are you sure you want to remove all existing Additional Stops ?</label>
+                                    &nbsp;&nbsp;
+                                    <a id="anchor_remove_existing_additional_stops_yes_shortcut" href="#"><label>Yes</label></a>
+                                    <input id="remove_existing_additional_stops_yes" name="remove_existing_additional_stops" type="radio" value="yes"/>
+                                    &nbsp;
+                                    <a id="anchor_remove_existing_additional_stops_no_shortcut" href="#"><label>No</label></a>
+                                    <input id="remove_existing_additional_stops_no" name="remove_existing_additional_stops" type="radio" value="no"/>
+                                    </NOBR>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                	&nbsp;
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                	<table width="100%">
+                                    	<tr>
+                                        	<td width="50%">
+                                            	&nbsp;
+                                            </td>
+                                        	<td width="50%">
+                                            	<input id="btn_remove_existing_additional_stops_done" value="Done" class="main_button"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
+
+
+{% block page-content %}
+            	<tr>
+                	<td valign="top" align="left" class="quote_info">
+                        <NOBR><b>Contact:</b>&nbsp;{{ contact_name }},&nbsp;{{ contact_email }},&nbsp;{{ contact_phone }}</NOBR><br/>
+                        <NOBR><b>Origin Location:</b>&nbsp;{{ origin_from_location_driver_assist_load_city }},&nbsp;{{ origin_from_location_driver_assist_load_state }},&nbsp;{{ origin_from_location_driver_assist_load_zipcode }},&nbsp;{{ origin_from_location_driver_assist_loading_explanation }},&nbsp;{{ origin_from_location_driver_assist_load_explanation }}</NOBR><br/>
+                        <NOBR><b>Destination Location:</b>&nbsp;{{ destination_to_location_driver_assist_unload_city }},&nbsp;{{ destination_to_location_driver_assist_unload_state }},&nbsp;{{ destination_to_location_driver_assist_unload_zipcode }},&nbsp;{{ destination_to_location_driver_assist_unload_explanation }},&nbsp;{{ destination_to_location_driver_assist_unloading_explanation }}</NOBR><br/>
+                    </td>
+                </tr>
+            	<tr>
+                	<td valign="top" align="left" class="quote_info">
+                    	<span id="span_additional_destinations_to_location_title">Additional Destinations:</span>
+                    </td>
+                </tr>
+            	<tr>
+                	<td valign="top" align="left" class="quote_info">
+                    	<div id="div_additional_destinations_to_location">
+                        </div>
+                    </td>
+                </tr>
+            	<tr>
+                	<td valign="top">
+                    	<table width="100%">
+                        	<tr>
+{% block additional-stops-content %}
+{% endblock %}
+                            	<td width="100%" class="quote_info">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                              <b>Bid Timing</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            Start Bidding Window:
+                                                        </td>
+                                                        <td>
+                                                            <span id="span_star_bidding_window">(now)  April 15, 10:25AM PST</span>
+                                                            <input id="input_star_bidding_window" name="input_star_bidding_window" type="hidden" value=""/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        Duration of Bidding Window:&nbsp;&nbsp;<a href="#" onclick="ShowDialog2a(false);">explain</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <form>
+                                                                            <NOBR>
+                                                                            <a id="anchor_bid_timing_1_hour_shortcut" class="anchor_for_radio_button" href="#"><label>1 Hour</label></a>
+                                                                            <input id="bid_timing_1_hour" name="bid_timing" type="radio" value="1"/>
+                                                                            &nbsp;
+                                                                            <a id="anchor_bid_timing_4_hours_shortcut" class="anchor_for_radio_button" href="#"><label>4 Hours</label></a>
+                                                                            <input id="bid_timing_4_hours" name="bid_timing" type="radio" value="4"/>
+                                                                            &nbsp;
+                                                                            <a id="anchor_bid_timing_24_hours_shortcut" class="anchor_for_radio_button" href="#"><label>24 Hours</label></a>
+                                                                            <input id="bid_timing_24_hours" name="bid_timing" type="radio" value="24"/>
+                                                                            &nbsp;
+                                                                            <a id="anchor_bid_timing_48_hours_shortcut" class="anchor_for_radio_button" href="#"><label>48 Hours</label></a>
+                                                                            <input id="bid_timing_48_hours" name="bid_timing" type="radio" value="48"/>
+                                                                            </NOBR>
+                                                                        </form>
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            	<tr>
+                	<td valign="top" class="quote_info">
+{% block lower-block %}
+{% endblock %}
+                    </td>
+                </tr>
+{% endblock %}
+
+{% block page-back %}<input id="btn_back" value="Back" class="main_button" onclick="window.location.href = '/best-quote-1.html';"/>&nbsp;&nbsp;&nbsp;&nbsp;{% endblock %}
+
+{% block continue-button-label %}Continue{% endblock %}
+{% block page-href %}/best-quote-3.html{% endblock %}

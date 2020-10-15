@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <title>Email Demo</title>
+  </head>
+  <body>
+    <h1>Email Demo</h1>
+    <form name="email_demo" action="/sendmail" method="post">
+        <label for="to_addrs">destination (separated by commas):</label>
+        <input type="text" name="to_addrs" /><br />
+
+        <label for="subject">subject:</label>
+        <input type="text" name="subject" /><br />
+
+        <label for="message">message:</label><br />
+        <textarea name="message">&lt;h1&gt;foo bar&lt;/h1&gt;</textarea><br />
+
+        <input type="radio" name="content_type" value="text/plain" />plain text
+        <input type="radio" name="content_type" value="text/html" checked />HTML text
+        
+        <br /><br />
+        <input type="submit" value="send" />
+    </form>
+  </body>
+</html>
+

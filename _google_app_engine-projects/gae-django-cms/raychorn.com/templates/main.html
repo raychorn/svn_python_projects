@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}VyperCMS v2.0.1{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+  // this is where the extra JavaScript goes...
+  // pass the following in the query string: CSS, header, body, footer - parse from JavaScript window.location 
+  //$.get("/global-nav/css-loggedout/globalnav-flex.css",{},function (data) { alert(data); });
+</script>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block include-css %}'/static/css.css'{% endblock %}
+
+{% block container %}
+<div id="logo" class="align-center">
+	<a href="http://www.dofriends.com/">
+		<img src="" alt="logo">
+	</a>
+</div>
+
+<div id="warning" class="align-center">
+	WARNING: This website contains explicit adult material.
+</div>
+
+<div id="warning2" class="align-center">
+		You may only enter this Website if you are at least
+		18 years of age, or at least the age of majority in the jurisdiction
+		where you reside or from which you access this Website and you agree 
+		to all <a href="http://www.dofriends.com/terms">Terms of Service</a> including prohibitions against accessing this
+		Website from specified zip codes located <a href="http://www.dofriends.com/prohibited">here</a>.  If you do not meet 
+		these requirements, then you do not have permission to use the Website.
+</div>
+
+<div id="choices" class="align-center">
+	<form method="POST">
+		<input id="enterbutton" name="user_choice" value="Enter" type="submit"> <input name="user_choice" value="Leave" type="submit">
+	</form>
+</div>
+
+<div id="warning3" class="align-center">
+	Please email <a href="mailto:support@dofriends.com" class="smarterwiki-linkify">support@dofriends.com</a> if you are having problems with the site.<br>
+	Cookies must be enabled.
+</div>
+{% endblock %}

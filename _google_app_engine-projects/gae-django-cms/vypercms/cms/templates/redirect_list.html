@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "redirect listing" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "redirect listing" %}</h1>
+<a href="{% url cms.views.add_redirect %}">{% trans "Create redirect" %}</a>
+
+<ul>
+  {% for each in object_list %}
+    <li>
+      value:<a href="{% url cms.views.re_url each.value %}" target="_blank">{{ each.value }}</a>--><a href="{{ each.redirto }}" target="_blank">{{ each.redirto }}</a> 
+      <a href="{% url cms.views.edit_redirect key=each.key %}">{% trans "Edit" %}</a>
+      <a href="{% url cms.views.delete_redirect key=each.key %}">{% trans "Delete" %}</a>
+    </li>
+  {% endfor %}
+</ul>
+<div style="CLEAR: both;"></div>
+<div>
+  {% if has_previous %}
+    <a href="{% url cms.views.list_redirect %}?page={{ previous }}">&lt;-{% trans "Previous" %}</a>
+  {% endif %}
+  {% if has_next %}
+    <a href="{% url cms.views.list_redirect %}?page={{ next }}">{% trans "Next" %}-&gt;</a>
+  {% endif %}
+</div>
+{% endblock %}

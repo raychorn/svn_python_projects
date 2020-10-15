@@ -1,0 +1,28 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+
+
+{% load blog_extras %}
+
+{% if object.id %}
+{% get_recent_posts 5 as post_list object.id %}
+{% endif %}
+{% if not object.id %}
+{% get_recent_posts 5 as post_list %}
+{% endif %}
+{% if post_list %}
+<!-- recent posts begin -->
+<div class="menu">
+<div class="menu_header">Recent Posts</div>
+<div class="menu_content">
+<ul class='recent'>
+{% for p in post_list %}
+<li class='recent'>
+<a href="{{ p.get_absolute_url }}" title="{{ p.headline }}" class='menu{% if not p.current_post %}_content{% endif %}{% if p.current_post %}_current{% endif %}'>{{ p.headline }}
+</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+<!-- recent posts end -->
+{% endif %}

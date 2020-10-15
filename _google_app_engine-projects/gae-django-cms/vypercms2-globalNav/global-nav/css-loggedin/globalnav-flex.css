@@ -1,0 +1,392 @@
+global 
+{
+	image_headerBackgroundAsset:"./images/HeaderBackground.gif";
+	image_headerBottomBackgroundAsset:"./images/HeaderBottomBackground.gif";
+	image_headerBottomBackgroundBorderAsset:"./images/HeaderBottomBackgroundBorder.gif";
+	image_menuShape:"./images/MenuMask.png";
+	image_logoAsset:"./images/Logo.gif";
+	image_homeAssetN:"./images/B1_Home.gif";
+	image_homeAssetH:"./images/B2_Home.gif";
+	image_lobDivAsset:"./images/LobDivider.gif";
+	image_lobTabBackAsset:"./images/LobTagBackground.gif";
+	image_gLinkDivAsset:"./images/GlinkDiv.gif";
+	image_logoutDivAsset:"./images/LogoutDiv.gif";
+	image_glinkShoppingCart:"./images/Cart.gif";
+	image_arrowLNAsset:"./images/ArrowLeft_Gray.gif";
+	image_arrowLHAsset:"./images/ArrowLeft_White.gif";
+	image_arrowRNAsset:"./images/ArrowRight_Gray.gif";
+	image_arrowRHAsset:"./images/ArrowRight_White.gif";
+	image_newPageNAsset:"./images/NewPage_Gray.gif";
+	image_newPageHAsset:"./images/NewPage_White.gif";
+	image_copyRightSymbol:"./images/CopyRight.gif";
+	image_tradeMarkSymbol:"./images/Trademark.gif";
+	image_registeredTradeMarkSymbol:"./images/RegisteredTrademark.gif";
+	image_menuItemMouseOverAsset:"./images/MenuItemMouseOver.gif";
+	image_menuItemSeparatorAsset:"./images/MenuItemSeparator.gif";
+	image_categoryItemMouseOutAsset:"./images/MenuBarBackground.gif";
+	image_categoryItemMouseOverAsset:"./images/CategoryMouseOver.gif";
+	image_categoryItemMouseClickAsset:"./images/CategoryMouseOver.gif";
+	image_personAssetN:"./images/Person01.gif";
+	image_personAssetH:"./images/Person02.gif";
+	image_categorySeparatorAsset:"./images/CategorySeparator.gif";
+	
+	image_catB1Account:"./images/B1_Account.gif";
+	image_catB2Account:"./images/B2_Account.gif";
+	image_catB3Account:"./images/B3_Account.gif";
+	
+	image_catB1MVS:"./images/B1_MVS.gif";
+	image_catB2MVS:"./images/B2_MVS.gif";
+	image_catB3MVS:"./images/B3_MVS.gif";
+	
+	image_catB1Messages:"./images/B1_Messages.gif";
+	image_catB2Messages:"./images/B2_Messages.gif";
+	image_catB3Messages:"./images/B3_Messages.gif";
+	
+	image_catB1Media:"./images/B1_Media.gif";
+	image_catB2Media:"./images/B2_Media.gif";
+	image_catB3Media:"./images/B3_Media.gif";
+	
+	image_catB1Shop:"./images/B1_Shop.gif";
+	image_catB2Shop:"./images/B2_Shop.gif";
+	image_catB3Shop:"./images/B3_Shop.gif";
+	
+	image_catB1Support:"./images/B1_Support.gif";
+	image_catB2Support:"./images/B2_Support.gif";
+	image_catB3Support:"./images/B3_Support.gif";
+	
+	applicationFPS:60;
+	interfaceWidth:985;
+	menuBarXPos:177;
+	menuBarYPos:17;
+	menuBarW:500;
+	reflectAlpha:.2;
+	
+	menuContainerOffsetY:10;
+	
+	headerHeight:120;
+	headerBottomY:65;
+	
+	headerLOBDefault:2;
+	headerLOBX:210;
+	headerLOBY:79;
+	headerLOBLinkW:115;
+	headerLOBH:30;
+	
+	headerLogoX:-20;
+	headerLogoY:0;
+	
+	headerHomeX:130;
+	headerHomeY:17;
+	
+	headerLoginPadTop:25;
+	headerLoginLetterSpacing:-.6;
+	headerLoginDivPadTop:27;
+	headerLoginStatePadR:200;
+		
+	homeReflectionY:30;
+	
+	headerGlinksY:5;
+	headerGlinksW:10;
+	headerGlinksH:40;
+	headerGlinksGap:40;
+	headerGlinksDivY:2;
+	headerGlinksCartY:2;
+	headerGlinksPadR:30;
+	headerGlinksCWidth:100;
+	headerGlinksCHeight:50;
+	
+	headerLocationX:717;
+	headerLocationY:40;
+	headerLocationDivY:2;
+	headerLocationGap:2;
+	headerLocationH:25;
+	headerLocationPadR:3;
+
+	headerSearchY:75;
+	headerSearchBarW:250;
+	headerSearchPadR:3;
+	searchH:30;
+	searchGap:5;
+	searchStr:"?q=";
+	searchLid:"&lid=search";
+	
+	
+	newPageSymbolXPadding:-20;
+	newPageSymbolYPadding:-5;
+	symbolLpadding:0;
+	symbolRpadding:-2;
+	menuBarHeight:37;
+	menuContainerWidth:220;
+	
+	menuFadeAlphaStart:0;
+	menuFadeAlphaEnd:1;		
+	menuFadeInStep:.005;
+	menuFadeOutStep:.005;
+	
+	menuAppearDelay:100;
+	menuResizeWidthStep:25;
+	menuResizeHeightStep:20;
+	
+	menuItemScaleContent:true;
+	menuItemMaintainAspectRatio:false;
+	menuItemHeight:25;
+	
+	menuItemFadeStart:0;
+	menuItemFadeEnd:1;
+	menuItemFadeInStep:.05;
+	menuItemFadeOutStep:.05;
+	menuItemPadTxtLeft:5;
+	menuItemPadLGX:5;
+	menuItemPadLGY:-2;
+	menuItemPadRGX:35;
+	menuItemPadRGX2:10;
+	menuItemPadRGY:-5;
+	menuItemShift:3;
+	
+	menuItemSeparatorPadLeft:8;
+	menuItemSeparatorWidth:190;
+	menuItemSeparatorHeight:1;
+	menuItemItemScaleContent:true;
+	menuItemItemMaintainAspectRatio:false;
+	
+	categoryMenuOffsetY:-5;
+	categoryItemScaleContent:true;
+	categoryItemMaintainAspectRatio:false;
+	categorySeparatorHeight:35;
+	categorySeparatorWidth:0;
+	categorySeparatorScaleContent:true;
+	categorySeparatorMaintainAspectRatio:false;
+	categoryPadTop:8;
+	categoryPadLeft:18;
+	categoryAdminShift:30;
+	categoryGapW:0;
+	categoryReflectionY:45;
+	
+	categoryItemWidth0:88;
+	categoryItemWidth1:169;
+	categoryItemWidth2:105;
+	categoryItemWidth3:74;
+	categoryItemWidth4:80;
+	categoryItemWidth5:87;
+	
+	categoryFadeStart:0;
+	categoryFadeEnd:1;
+	categoryFadeInStep:.05;
+	categoryFadeOutStep:.05;
+	
+	menuTextPaddingTop:8;
+	menuTextPaddingLeft:10;
+	menuTextPaddingRight:0;
+	menuTextRightMargin:200;
+	menuTextTitleHeight:17;
+	menuTextBodyHeight:17;
+	smtGap:5;
+	
+	menuInteractionTimeOut:1000;
+}
+.SearchButton
+{
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textAlign:center;
+	labelPlacement:left;
+	cornerRadius:4;
+}
+.HeaderLOBMouseOver
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 18;
+	fontWeight: normal;
+	textDecoration: underline;
+}
+.HeaderLOBSelectMouseOver
+{
+	color: #FF0000;
+	fontFamily: Arial;
+	fontSize: 18;
+	fontWeight: normal;
+	textDecoration: underline;
+}
+.HeaderLOBMouseOut
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 18;
+	fontWeight: normal;
+	textDecoration: none;
+}
+.HeaderLOBSelect
+{
+	color: #FF0000;
+	fontFamily: Arial;
+	fontSize: 18;
+	fontWeight: normal;
+	textDecoration: none;
+}
+
+.HeaderLocationNormal
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: normal;
+	textDecoration: none;
+}
+
+.HeaderLocationSelect
+{
+	color: #0000FF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+	textDecoration: underline;
+}
+
+.HeaderLocationMouseOut
+{
+	color: #0000FF;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+	textDecoration: underline;
+}
+.CartEmpty
+{
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: normal;
+	textDecoration: none;
+}
+.ViewCart
+{
+	color: #0000FF;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textDecoration: underline;
+}
+.HeaderGlinkStyle
+{
+	verticalGap:"-5";
+	paddingTop:"0";
+	paddingBottom:"0";
+	verticalScrollPolicy:"off";
+	horizontalScrollPolicy:"off";	
+}
+.HeaderGlinkSelect
+{
+	color: #5695d6;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+	textDecoration: underline;
+}
+.HeaderGlinkMouseOut
+{
+	color: #5695d6;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: normal;
+	textDecoration: none;
+}
+.MenuBar
+{
+	horizontalGap: 0;
+	paddingLeft:0;
+}
+.CategoryItem
+{
+	horizontalAlign: left;
+	paddingLeft: 8;
+	paddingTop: 3;
+	verticalAlign: middle;
+	verticalGap: 0;
+}
+.CategoryItemLabel
+{
+	color: #FFFFFF;
+	fontFamily: Arial;
+	fontSize: 13;
+	fontWeight: bold;
+	paddingTop:5;
+}
+.CategoryItemLabelOver
+{
+	color: #FF0000;
+	fontFamily: Arial;
+	fontSize: 13;
+	fontWeight: bold;
+	paddingTop:5;
+	paddingLeft:14;
+}
+.MenuContainer
+{
+	backgroundColor: #FFFFFF;
+	verticalGap: 0;
+}
+.SubMenuContainer
+{
+	backgroundColor: #FFFFFF;
+	verticalGap: 0;
+}
+.MenuItem
+{
+    horizontalGap:0;
+	horizontalAlign: left;
+	paddingLeft: 8;
+	paddingTop: 3;
+	verticalAlign: middle;
+	verticalGap: 0;
+}
+.MenuItemText
+{
+  horizontalGap:0;
+  horizontalAlign: left;
+}
+.MenuItemLabelStyle1
+{
+	color: #b2b2b2;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+}
+.MenuItemLabelStyle2
+{
+	color: #b2b2b2;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+}
+.MenuTextTitle
+{
+	color: #FF0000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+}
+.MenuTextBody
+{
+	color: #FF0000;
+	fontFamily: Arial;
+	fontSize: 11;
+	fontWeight: bold;
+}
+HBox.CategorySeparator
+{
+	backgrolundSize: "100%";
+	borderStyle: none;
+	horizontalAlign: left;
+	horizontalGap: 0;
+	verticalAlign: top;
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+}
+Label.CategoryItemTextfield
+{
+	paddingLeft:10;
+}

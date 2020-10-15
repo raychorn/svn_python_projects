@@ -1,0 +1,1 @@
+more than one timestamp in a table means make both timestamps into bigint but flag the condition in the log file.

@@ -1,0 +1,48 @@
+Some random remarks:
+
+(FS) ... Franz Steinhauesler
+(AB) ... Antonio Barbosa
+
+by Franz Steinhaeusler:
+
+Priority 1 (highest):
+  - tackle the bug entries on sourceforge.
+  - tackle the feature request entries on sourceforge.
+  - a user reported about problems in UTF-8.
+
+Priority 2 (would be useful):
+
+Priority 3 (when time):
+  - put edit scripts to DrScript Menu?
+  - put edit bookmarsk to Bookmarks Menu?
+  - add "Posititon Marker" to the core (most programs have it by default).
+  - update doku for new plugins
+  
+Priority 4 (when much time):
+  - use icons from tango project (already three people gave me that hint).
+  - Add a "What's new" to DrPyhton help (if a say 1.66 is released, it should show all new features/fixes in that
+      version. A more button could show previous changes.
+  - test on linux ("segmentation fault" happens often on program exit)
+  - make some controls more userfriendly, as in windows on gtk.
+      listctrl, listbox, combobox should have more keyboard support.
+  - some problems in findautocomplete plugin on gtk.
+
+  - split export/import files to drscrips, drplugins and preferences as it was before.
+  - add a function (Check for updates on drpython) (automatically and/or manually (setup switch))
+  - add a function (Check for updates on plugins) (automatically and/or manually (setup switch))
+  - install plugins from sourceforge
+  - assign plugin shortcuts right away?
+
+Priority 5(lowest):
+  - download and install plugins or core automatically, if a update is found.
+  - write a second "SearchInFiles" (a simple one) and add it to the core.
+
+
+--------
+
+by ...:
+
+--------
+
+by ... :)
+  

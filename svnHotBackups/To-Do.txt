@@ -1,0 +1,17 @@
+# See this as a service - automated backups of SVN repos to a secure server (nearbyin) where there is a ton of disk space. via SSH.
+
+# Check-point the restore to filter-out the file currently being used.
+
+# Unzip the file after download and install in the target svn folder ???  Must add an option for this... !!!
+
+# Maintain current file in the download folder - use this to make sure it is not downloaded again.
+
+To Do LIST:
+
+(1). Check available disk space before extractall ?  Do nothing if not enough space.
+
+(2). Check if directory already exists - do nothing !
+
+(3). Connect to svn server via symlink !!!
+
+(4). Test...

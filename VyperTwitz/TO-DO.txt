@@ -1,0 +1,10 @@
+http://blog.vyperlogix.com/index.php/feed/
+
+Design:
+
+* Top of the hour toss in a blog post from the RSS and track the last time it was twitz.
+* 15, 30 and 45 twitz something from Amazon.com via blog.vyperlogix.com
+
+* Randomly twitz the FREE WebSite Ad or Free Advertising Ad
+
+http://craftsmeow.etsy.com <-- Pull the content and twitter it.

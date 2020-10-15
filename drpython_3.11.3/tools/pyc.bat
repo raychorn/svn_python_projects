@@ -1,0 +1,52 @@
+cd ..
+call c:\Python24\Scripts\pychecker.bat drAboutDialog.py              > tools\pycoutput\drAboutDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drBookmarksDialog.py          > tools\pycoutput\drBookmarksDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drBookmarksMenu.py            > tools\pycoutput\drBookmarksMenu.pyt
+call c:\Python24\Scripts\pychecker.bat drDragAndDrop.py              > tools\pycoutput\drDragAndDrop.pyt
+call c:\Python24\Scripts\pychecker.bat drDynamicDrScriptDialog.py    > tools\pycoutput\drDynamicDrScriptDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drEncoding.py                 > tools\pycoutput\drEncoding.pyt
+call c:\Python24\Scripts\pychecker.bat drFileDialog.py               > tools\pycoutput\drFileDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drFileDialogPrefs.py          > tools\pycoutput\drFileDialogPrefs.pyt
+call c:\Python24\Scripts\pychecker.bat drFindReplaceDialog.py        > tools\pycoutput\drFindReplaceDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drGetBlockInfo.py             > tools\pycoutput\drGetBlockInfo.pyt
+call c:\Python24\Scripts\pychecker.bat drGetKeyDialog.py             > tools\pycoutput\drGetKeyDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drKeywords.py                 > tools\pycoutput\drKeywords.pyt
+call c:\Python24\Scripts\pychecker.bat drMenu.py                     > tools\pycoutput\drMenu.pyt
+rem call c:\Python24\Scripts\pychecker.bat drModeDialog.py               > tools\pycoutput\drModeDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drOpenImportedModuleDialog.py > tools\pycoutput\drOpenImportedModuleDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drPDB.py                      > tools\pycoutput\drPDB.pyt
+call c:\Python24\Scripts\pychecker.bat drPluginDialog.py             > tools\pycoutput\drPluginDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drPluginMenu.py               > tools\pycoutput\drPluginMenu.pyt
+call c:\Python24\Scripts\pychecker.bat drPopUp.py                    > tools\pycoutput\drPopUp.pyt
+call c:\Python24\Scripts\pychecker.bat drPopUpMenuDialog.py          > tools\pycoutput\drPopUpMenuDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drPreferences.py              > tools\pycoutput\drPreferences.pyt
+call c:\Python24\Scripts\pychecker.bat drPrefsDialog.py              > tools\pycoutput\drPrefsDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drPrefsFile.py                > tools\pycoutput\drPrefsFile.pyt
+call c:\Python24\Scripts\pychecker.bat drPrinter.py                  > tools\pycoutput\drPrinter.pyt
+call c:\Python24\Scripts\pychecker.bat drPrompt.py                   > tools\pycoutput\drPrompt.pyt
+call c:\Python24\Scripts\pychecker.bat drProperty.py                 > tools\pycoutput\drProperty.pyt
+call c:\Python24\Scripts\pychecker.bat drRegularExpressionDialog.py  > tools\pycoutput\drRegularExpressionDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drSTC.py                      > tools\pycoutput\drSTC.pyt
+call c:\Python24\Scripts\pychecker.bat drScriptDialog.py             > tools\pycoutput\drScriptDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drScriptMenu.py               > tools\pycoutput\drScriptMenu.pyt
+call c:\Python24\Scripts\pychecker.bat drScrolledMessageDialog.py    > tools\pycoutput\drScrolledMessageDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drSetupPreferences.py         > tools\pycoutput\drSetupPreferences.pyt
+call c:\Python24\Scripts\pychecker.bat drShortcuts.py                > tools\pycoutput\drShortcuts.pyt
+call c:\Python24\Scripts\pychecker.bat drShortcutsDialog.py          > tools\pycoutput\drShortcutsDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drShortcutsFile.py            > tools\pycoutput\drShortcutsFile.pyt
+call c:\Python24\Scripts\pychecker.bat drSingleChoiceDialog.py       > tools\pycoutput\drSingleChoiceDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drSourceBrowser.py            > tools\pycoutput\drSourceBrowser.pyt
+call c:\Python24\Scripts\pychecker.bat drSourceBrowserGoTo.py        > tools\pycoutput\drSourceBrowserGoTo.pyt
+call c:\Python24\Scripts\pychecker.bat drStyleDialog.py              > tools\pycoutput\drStyleDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drTabNanny.py                 > tools\pycoutput\drTabNanny.pyt
+call c:\Python24\Scripts\pychecker.bat drText.py                     > tools\pycoutput\drText.pyt
+call c:\Python24\Scripts\pychecker.bat drToolBarDialog.py            > tools\pycoutput\drToolBarDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drToolBarFile.py              > tools\pycoutput\drToolBarFile.pyt
+call c:\Python24\Scripts\pychecker.bat drTreeDialog.py               > tools\pycoutput\drTreeDialog.pyt
+call c:\Python24\Scripts\pychecker.bat drZip.py                      > tools\pycoutput\drZip.pyt
+call c:\Python24\Scripts\pychecker.bat drpython.py                   > tools\pycoutput\drpython.pyt
+call c:\Python24\Scripts\pychecker.bat drpython.pyw                  > tools\pycoutput\drpython.pyw.pyt
+call c:\Python24\Scripts\pychecker.bat lnkDecoderRing.py             > tools\pycoutput\lnkDecoderRing.pyt
+call c:\Python24\Scripts\pychecker.bat postinst.py                   > tools\pycoutput\postinst.pyt
+rem call c:\Python24\Scripts\pychecker.bat setup.py                      > tools\pycoutput\setup.pyt
+cd tools

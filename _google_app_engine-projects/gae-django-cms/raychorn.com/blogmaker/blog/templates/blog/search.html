@@ -1,0 +1,27 @@
+{% comment %} 
+Copyright (c) 2006-2007, PreFab Software Inc.
+
+Copyright (c) 2006, Andrew Gwozdziewycz <apgwoz@gmail.com>
+All rights reserved. 
+{% endcomment %}
+
+
+{% extends "blog/blog_base.html" %}
+
+{% load blog_extras %}
+
+{% block "browsertitle" %}
+Search
+{% endblock %}
+
+{% block "contentbody" %}
+<form action="{% BLOG_ROOT %}search/" method="post">
+<input type="text" name="query" size="50">
+<br />
+<input type="submit" value="Search">
+</form>
+{% endblock %}
+
+{% block "taglist" %}
+{% include "blog/includes/popular_tags.html" %}
+{% endblock %}

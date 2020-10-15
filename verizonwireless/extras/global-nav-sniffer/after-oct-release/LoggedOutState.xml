@@ -1,0 +1,175 @@
+<menu metafield="meta" datafield="menuitem">
+	<meta id="id"/>
+	<meta label="label"/>
+	<meta url="url"/>
+	<meta type="type"/>
+	<meta domain="domain"/>
+	<meta domain_key="domain_key"/>
+	<meta body="body"/>
+	<meta target="target"/>
+	<meta secure="secure"/>
+	<meta hOrientation="-2"/>
+	<meta vOrientation="top"/>
+	
+	 <menuitem label="Phones &amp; Accessories" url="http://www.verizonwireless.com/b2c/store/controller?item=phoneFirst&amp;action=viewStoreIndex&amp;lid=//global//phones+and+accessories">
+		 <menuitem label="Cell Phones" url="http://www.verizonwireless.com/b2c/store/controller?item=phoneFirst&amp;action=viewPhoneOverviewByDevice&amp;deviceType=Phones&amp;sortOption=priceSort&amp;lid=//global//phones+and+accessories//cell+phones"/>
+		 <menuitem label="BlackBerry" url="http://www.verizonwireless.com/b2c/store/controller?item=phoneFirst&amp;action=viewPhoneOverviewByDevice&amp;deviceType=BlackBerry%20Devices&amp;lid=//global//phones+and+accessories//blackberry"/>
+		 <menuitem label="Smartphone Resource Center" url="http://smartphones.verizonwireless.com/?lid=//global//phones+and+accessories//smartphone+resource+center"/>
+		 <menuitem label="PDAs &amp; Smartphones" url="http://www.verizonwireless.com/b2c/store/controller?item=phoneFirst&amp;action=viewPhoneOverviewByDevice&amp;deviceType=PDA/SmartPhones&amp;lid=//global//phones+and+accessories//pda+smartphones"/>
+		 <menuitem label="Netbooks" url="http://www.verizonwireless.com/b2c/hpnetbook/overview.jsp?lid=//global//phones+and+accessories//netbooks"/>
+		 <menuitem label="Mobile Broadband Devices" url="http://www.verizonwireless.com/b2c/mobilebroadband/?lid=//global//phones+and+accessories//mobile+broadband+devices">
+		 	<menuitem label="Mobile Broadband Devices" body="Browse the Internet, download files and access email while you’re on the go."/>
+            <menuitem type="separator"/>
+		 	<menuitem label="Data Cards &amp; Modems" url="http://www.verizonwireless.com/b2c/mobilebroadband/?page=products_device&amp;lid=//global//phones+and+accessories//mobile+broadband+devices//data+cards+and+modems"/>
+		 	<menuitem label="Netbooks" url="http://www.verizonwireless.com/b2c/hpnetbook/overview.jsp?lid=//global//phones+and+accessories//mobile+broadband+devices//netbooks"/>
+		 	<menuitem label="Learn about Mobile Broadband " url="http://www.verizonwireless.com/b2c/mobilebroadband/?lid=//global//phones+and+accessories//mobile+broadband+devices//learn+about"/>
+		</menuitem>
+		 <menuitem label="Accessories" url="http://www.verizonwireless.com/b2c/store/accessories?lid=//global//phones+and+accessories//accessories"/>
+		 <menuitem label="Online Deals" url="http://www.verizonwireless.com/b2c/promotion/specialoffers.jsp?lid=//global//phones+and+accessories//online+deals"/>
+		 <menuitem label="New Products" url="http://www.verizonwireless.com/b2c/promotion/controller?promotionType=hotDeals&amp;action=viewHotDeals&amp;lid=//global//phones+and+accessories//new+products"/>
+		 <menuitem label="Gift Cards" url="http://www.verizonwireless.com/b2c/store/controller?item=giftCardItem&amp;action=viewGiftCards&amp;lid=//global//phones+and+accessories//gift+card">
+		 	<menuitem label="Gift Cards" body="Take the stress out of finding the perfect present with a gift card."/>
+            <menuitem type="separator"/>
+		 	<menuitem label="Buy a Gift Card" url="http://www.verizonwireless.com/b2c/store/controller?item=giftCardItem&amp;action=viewGiftCards&amp;lid=//global//phones+and+accessories//gift+card//buy+card"/>
+		 	<menuitem label="Check Gift Card Balance" url="http://www.verizonwireless.com/b2c/GiftCardControllerServlet?lid=//global//phones+and+accessories//gift+card//check+balance"/>
+		 </menuitem>
+	 </menuitem>
+	 
+
+	 <menuitem label="Plans" url="http://www.verizonwireless.com/b2c/store/controller?item=planFirst&amp;action=viewPlanOverview&amp;lid=//global//plans">
+		 <menuitem label="Voice Plans" url="http://www.verizonwireless.com/b2c/store/controller?item=planFirst&amp;action=viewPlanOverview&amp;catType=voice&amp;lid=//global//plans//voice+plans">
+		 	 <menuitem label="Voice Plans" body="Stay connected with the best network and calling plans for individuals and families."/>
+            <menuitem type="separator"/>
+			 <menuitem label="Individual" url="http://www.verizonwireless.com/b2c/splash/plansingleline.jsp?lid=//global//plans//voice+plans//individual"/>
+			 <menuitem label="Family" url="http://www.verizonwireless.com/b2c/splash/planfamily.jsp?lid=//global//plans//voice+plans//family"/>
+			 <menuitem label="Prepaid" url="http://www.verizonwireless.com/b2c/splash/prepay.jsp?lid=//global//plans//voice+plans//prepaid"/>
+			 <menuitem label="View all Voice Plans" url="http://www.verizonwireless.com/b2c/store/controller?item=planFirst&amp;action=viewPlanOverview&amp;catType=voice&amp;lid=//global//plans//voice+plans//view+all"/>
+		 </menuitem>
+
+		 <menuitem label="Voice &amp; Email Plans" url="http://www.verizonwireless.com/b2c/store/controller?item=planFirst&amp;action=viewPlanOverview&catType=voiceData&amp;lid=//global//plans//voice+and+email+plans"/>
+		 <menuitem label="Mobile Broadband Plans" url="http://www.verizonwireless.com/b2c/mobilebroadband/?page=plans&amp;lid=//global//plans//mobile+broadband+plan"/>
+		 <menuitem label="International Services" url="http://b2b.vzw.com/international/inside_us.html?lid=//global//plans//international+services"/>
+		 <menuitem label="Coverage Map" url="http://www.verizonwireless.com/b2c/CoverageLocatorController?requesttype=NEWREQUEST&amp;lid=//global//plans//coverage+maps"/>
+	 </menuitem>
+
+	 <menuitem label="Entertainment &amp; Apps" url="http://products.vzw.com/index.aspx?id=fnd&amp;lid=//global//entertainment+and+apps">
+		 <menuitem label="Media Store" url="http://mediastore.verizonwireless.com?lid=//global//entertainment+apps//media+store" target="_blank"/>
+		 <menuitem label="Ringtones" url="http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//ringtones#MusicTones=home" target="_blank"/>
+		 <menuitem label="Ringback Tones" url="http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//ringback+tones#MusicTones=home" target="_blank"/>
+		 <menuitem label="Music" url="http://products.vzw.com/index.aspx?id=fnd_music&amp;lid=//global//entertainment+and+apps//music">
+		 	 <menuitem label="Music" body="Download songs from your favorite artists to your phone."/>
+            <menuitem type="separator"/>
+			 <menuitem label="How to get Music" url="http://products.vzw.com/index.aspx?id=fnd_music_howtobuy&amp;lid=//global//entertainment+and+apps//music//how+to+get+music"/>
+			 <menuitem label="View all Music" url="http://products.vzw.com/index.aspx?id=fnd_music_music&amp;lid=//global//entertainment+and+apps//music//view+all"/>
+			 <menuitem label="Launch Media Store" url="http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//music//launch+media+store#MusicTones=home" target="_blank"/>
+			 <menuitem label="What is V CAST?" url="http://products.vzw.com/index.aspx?id=fnd_vcast&amp;lid=//global//entertainment+and+apps//music//what+is+vcast"/>
+		 </menuitem>
+		 <menuitem label="Games" url="http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//games#games=home" target="_blank"/>
+		 <menuitem label="Apps" url="http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//apps#apps=home" target="_blank"/>
+		 <menuitem label="Wallpapers" url="http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//wallpapers#wallpapers=home" target="_blank"/>
+		 <menuitem label="Video on Demand" url="http://products.vzw.com/index.aspx?id=video&amp;lid=//global//entertainment+and+apps//video+on+demand">
+		 	 <menuitem label="V CAST Videos" body="Get Favorite TV Shows, Sports, News, Live Events, Music Videos and more."/>
+            <menuitem type="separator"/>
+			 <menuitem label="How to get Video on Demand" url="http://products.vzw.com/index.aspx?id=video_how&amp;lid=//global//entertainment+and+apps//video+on+demand//how+to+get"/>
+			 <menuitem label="View all Video on Demand" url="http://products.vzw.com/index.aspx?id=video_browse&amp;lid=//global//entertainment+and+apps//video+on+demand//view+all"/>
+			 <menuitem label="What is V CAST?" url="http://products.vzw.com/index.aspx?id=fnd_vcast&amp;lid=//global//entertainment+and+apps//video+on+demand//what+is+vcast"/>
+		 </menuitem>
+		 <menuitem label="Mobile TV" url="http://products.vzw.com/index.aspx?id=mobileTV&amp;lid=//global//entertainment+and+apps//mobiletv">
+		 	 <menuitem label="V CAST Mobile TV" body="Watch TV on your phone."/>
+            <menuitem type="separator"/>
+			 <menuitem label="Program Guide" url="http://products.vzw.com/index.aspx?id=mobileTV&amp;lid=//global//entertainment+and+apps//mobiletv//program+guide"/>
+			 <menuitem label="How to get Mobile TV" url="http://products.vzw.com/index.aspx?id=mobileTV&amp;lid=//global//entertainment+and+apps//mobiletv//how+to+get+mobile+tv"/>
+			 <menuitem label="What is V CAST?" url="http://products.vzw.com/index.aspx?id=fnd_vcast&amp;lid=//global//entertainment+and+apps//mobiletv//what+is+vcast"/>
+		 </menuitem>
+		 <menuitem label="Mobile Web &amp; Dashboard" url="http://products.vzw.com/index.aspx?id=fnd_dashboardMobileWeb&amp;lid=//global//entertainment+and+apps//mobile+web+and+dashboard">
+		 	 <menuitem label="Mobile Web &amp; Dashboard" body="Introducing two exciting ways to access the content on your phone and on the web."/>
+            <menuitem type="separator"/>
+			 <menuitem label="Mobile Web" url="http://products.vzw.com/index.aspx?id=fnd_mobileWeb&amp;lid=//global//entertainment+and+apps//mobile+web+and+dashboard//mobile+web"/>
+			 <menuitem label="Dashboard" url="http://products.vzw.com/index.aspx?id=fnd_dashboard&amp;lid=//global//entertainment+and+apps//mobile+web+and+dashboard//dashboard"/>
+		 </menuitem>
+		 <menuitem label="Navigator" url="http://vznavigator.vzw.com?lid=//global//entertainment+and+apps//navigator"/>
+		 <menuitem label="Family Locator" url="http://products.vzw.com/index.aspx?id=fnd_familylocator&amp;lid=//global//entertainment+and+apps//family+locator"/>
+	 </menuitem>
+
+
+	 <menuitem label="Messaging" url="https://products.vzw.com/index.aspx?id=messaging&amp;lid=//global//messaging">
+		 <menuitem label="Animated Messaging" url="https://animated.messaging.vzw.com/vge/index.html?lid=//global//messaging//animated+messaging"/>
+		 <menuitem label="Text Messaging" url="https://text.vzw.com/customer_site/jsp/overview.jsp?lid=//global//messaging//text+messaging">
+		 	 <menuitem label="Text Messaging" body="Text from your phone, via email, and from the web."/>
+            <menuitem type="separator"/>
+			 <menuitem label="Send a Text Message" url="https://text.vzw.com/customer_site/jsp/messaging_lo.jsp?lid=//global//messaging//text+messaging//send+message"/>
+			 <menuitem label="How to Text Message" url="http://products.vzw.com/index.aspx?id=messaging_txt_how&amp;lid=//global//messaging//text+messaging//how+to+text+message"/>
+			 <menuitem label="International Messaging" url="https://text1.vzw.com/text/jsp/txtintl_overview.jsp?lid=//global//messaging//text+messaging//international+messaging"/>
+		 </menuitem>
+		 <menuitem label="Picture &amp; Video Messaging" url="http://products.vzw.com/index.aspx?id=messaging_pictureVideo&amp;lid=//global//messaging//picture+and+video+messaging">
+		 	 <menuitem label="Picture &amp; Video Messaging" body="Send full-color pictures, sounds, and text in one message."/>
+            <menuitem type="separator"/>
+			 <menuitem label="Send a Picture &amp; Video Message" url="https://picture.vzw.com/pub/guestComposer/guestCreate.do?mediaType=free&amp;lid=//global//messaging//picture+and+video+messaging//send+a+picture/video+message"/>
+			 <menuitem label="How to Picture &amp; Video Message" url="http://products.vzw.com/index.aspx?id=messaging_pixflix_pic_how&amp;lid=//global//messaging//picture+and+video+messaging//picture+and+video+messaging+help"/>
+			 <menuitem label="International Messaging" url="https://text1.vzw.com/text/jsp/txtintl_overview.jsp?lid=//global//messaging//picture+and+video+messaging//international+messaging"/>
+			 <menuitem label="Manage your Photo Albums" url="http://picture.vzw.com/pub/gallery.do?lid=//global//messaging//picture+and+video+messaging//manage+your+photo+albums"/>
+		 </menuitem>
+		 <menuitem label="Mobile IM" url="http://products.vzw.com/index.aspx?id=messaging_im&amp;lid=//global//messaging//mobile+im"/>
+		 <menuitem label="Mobile Email" url="http://products.vzw.com/index.aspx?id=messaging_email&amp;lid=//global//messaging//mobile+email"/>
+		 <menuitem label="Text &amp; Picture Alerts" url="https://alerts.vzw.com/guest/general/Overview.do?lid=//global//messaging//text+and+picture+alerts">
+		 	 <menuitem label="Text &amp; Picture Alerts" body="Get weather, traffic, sports, and stock updates on your phone."/>
+            <menuitem type="separator"/>
+			 <menuitem label="How to get Alerts" url="https://support.vzw.com/faqs/Features%20and%20Optional%20Services/alerts_text_and_picture.html?lid=//global//messaging//text+picture+alerts//get+alerts"/>
+			 <menuitem label="View all Alerts" url="https://alerts.vzw.com/guest/general/Browse/Categories.do?lid=//global//messaging//text+and+picture+alerts//view+all+alerts"/>
+		 </menuitem>
+	 </menuitem>
+
+
+
+	 <menuitem label="Business" url="http://www.verizonwireless.com/b2c/index.html?tab=business&amp;lid=//global//business">
+		 <menuitem label="Phones" url="http://b2b.vzw.com/productsservices/devices/?lid=//global//business//phones"/>
+		 <menuitem label="Business Plans" url="http://b2b.vzw.com/productsservices/businesscallingplans/?lid=//global//business//business+plans"/>
+		 <menuitem label="Products %26amp%3B Services" url="http://b2b.vzw.com/productsservices/?lid=//global//business//products+and+services"/>
+		 <menuitem label="Small Business" url="http://www.verizonwireless.com/smb/?lid=//global//business//small+business"/>
+		 <menuitem label="Government" url="http://b2b.vzw.com/govt/overview.html?lid=//global//business//government"/>
+		 <menuitem label="Employee Discounts" url="https://www.verizonwireless.com/b2c/employee/emaildomainauthentication.jsp?lid=//global//business//employee+discounts"/>
+		 <menuitem label="Current Promotions" url="http://b2b.vzw.com/productsservices/businesspromotions.html?lid=//global//business//current+promotions"/>
+	 </menuitem>
+
+
+	 <menuitem label="Support" url="http://support.vzw.com?lid=//global//support">
+		 <menuitem label="Billing &amp; Account" url="http://support.vzw.com/billing/?lid=//global//support//billing+and+account"/>
+		 <menuitem label="Phones &amp; Devices" url="http://support.vzw.com/phones/?lid=//global//support//phones+and+devices"/>
+		 <menuitem label="Features &amp; Services" url="http://support.vzw.com/features/?lid=//global//support//features+and+services"/>
+		 <menuitem label="Smartphone Resource Center" url="http://smartphones.verizonwireless.com/support?lid=//global//support//smartphone+resource+center"/>
+		 <menuitem label="FAQs" url="http://support.vzw.com/faqs/index.html?lid=//global//support//faqs"/>
+		 <menuitem label="Customer Forums" url="http://community.vzw.com?lid=//global//support//customer+forums"/>
+		 <menuitem label="New Customers" url="http://www.verizonwireless.com/b2c/myaccount/welcome.jsp?lid=//global//support//new+customers"/>
+		 <menuitem label="Get Status" url="http://www.verizonwireless.com/b2c/orderstatus/OrderStatusForm?lid=//global//support//get+status">
+		 	 <menuitem label="Get Status" body="Track your orders and rebates."/>
+            <menuitem type="separator"/>
+			 <menuitem label="Rebate Center" url="http://www.verizonwireless.com/rebates?lid=//global//support//get+status//rebate+center"/>
+			 <menuitem label="Order Status" url="http://www.verizonwireless.com/b2c/orderstatus/OrderStatusForm?lid=//global//support//get+status//order+status"/>
+		 </menuitem>
+		 <menuitem label="Sign Up for Email Updates" url="https://business.verizonwireless.com/b2b/jsp/popups/optin.jsp?sourceSite=Care&amp;lid=//global//support//sign+up+for+email+updates"/>
+		 <menuitem label="Contact Us" url="http://www.verizonwireless.com/b2c/vzwfly?go=/ContactUsControllerServlet?lid=//global//support//contact+us"/>
+	 </menuitem>
+
+
+	 <menuitem label="My Verizon" url="http://www.verizonwireless.com/b2c/index.html?tab=myaccount&amp;lid=//global//my+verizon">
+		 <menuitem label="My Personal Account" url="https://myaccount.verizonwireless.com/clp/login?;lid=//global//my+verizon//personal+account">
+		 	 <menuitem label="My Personal Account" body="Upgrade your phone, change your plan, pay your bill and more."/>
+            <menuitem type="separator"/>
+			 <menuitem label="Sign In" url="https://myaccount.verizonwireless.com/clp/login?;lid=//global//my+verizon//personal+account//login"/>
+			 <menuitem label="Register" url="https://myaccount.verizonwireless.com/accessmanager/public/controller?action=displayRegistration&amp;lid=//global//my+verizon//personal+account//register"/>
+			 <menuitem label="Reset Password" url="https://myaccount.verizonwireless.com/accessmanager/public/controller?action=displayForgotPassword&amp;lid=//global//my+verizon//personal+account//reset+password"/>
+			 <menuitem label="Buy Prepaid Refill Cards" url="https://www.verizonwireless.com/b2c/store/controller?item=cardItem&action=viewCardHome&amp;lid=//global//my+verizon//my+personal+account//buy+prepaid+refills"/>
+			 <menuitem label="View My Verizon Demo" url="http://www.verizonwireless.com/myverizondemo?lid=//global//my+verizon//personal+account//view+my+verizon+demo"/>
+		 </menuitem>
+		 <menuitem label="My Business Account" url="https://mblogin.verizonwireless.com/amserver/UI/Logout?lid=//global//my+verizon//my+business+account">
+		 	 <menuitem label="My Business Account" body="Pay bills, manage accounts, and access reports."/>
+            <menuitem type="separator"/>
+			 <menuitem label="Login" url="http://www.verizonwireless.com/b2c/index.html?tab=business&amp;lid=//global//my+verizon//my+business+account//login&amp;tUrl=https://mblogin.verizonwireless.com/amserver/UI/Logout"/>
+			 <menuitem label="Register" url="http://www.verizonwireless.com/enroll/?lid=//global//my+verizon//my+business+account//register"/>
+			 <menuitem label="Learn More" url="http://www.verizonwireless.com/b2c/businessSolutions/mybiz/index.jsp?lid=//global//my+verizon//my+business+account//learn+more"/>
+			 <menuitem label="Reset Password" url="http://b2b.verizonwireless.com/tbmb/forgotPassword.do?lid=//global//my+verizon//my+business+account//reset+password"/>
+		 </menuitem>
+	 </menuitem>
+
+
+</menu>

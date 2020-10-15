@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<resource>
+  <object class="wxMenuBar" name="menu_bar">
+    <object class="wxMenu" name="file_menu">
+      <object class="wxMenuItem" name="Open">
+        <label>Open</label>
+      </object>
+      <label>File</label>
+      <object class="wxMenuItem" name="export">
+        <label>Export</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="exit">
+        <label>Exit</label>
+      </object>
+    </object>
+    <object class="wxMenu" name="help">
+      <label>Help</label>
+      <object class="wxMenuItem" name="about">
+        <label>About</label>
+      </object>
+    </object>
+  </object>
+</resource>

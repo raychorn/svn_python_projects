@@ -1,0 +1,6 @@
+#1. Filter-out .svn and _svn folders from the processing list.
+
+#2. Make sure #1 above does not appear in the current database.
+
+#3. Integrate create.py into the GUI and get it working.
+

@@ -1,0 +1,20 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+
+
+{% extends "blog/tools/tools_base.html" %}
+
+{% load prefab_tags %}
+
+{% block "browsertitle" %}Blogmaker Tools Index{% endblock %}
+
+{% block path %}{% endblock %}
+
+{% block content %}
+<div class="tools_index">
+<b>Blog entries</b>
+<div class="sub">
+<a href='entry/'>Existing entries</a><br />
+<a href='entry/add/'>Add a new entry</a>
+</div>
+</div>
+{% endblock %}

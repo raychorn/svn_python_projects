@@ -1,0 +1,48 @@
+{% load currenttimetag %}
+{% get_current_time "%Y-%M-%d %I:%M %p" as my_current_time %}
+{% load miscutils %}
+{% misc_utils "timeStampForFileName()" as timeStampForFileName %}
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
+    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
+    lang="{% firstof LANGUAGE_CODE 'en' %}">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="/static/favicon.ico" />
+    <title>{% block title %}{% endblock %} &copy;DoFriends.Com, All Rights Reserved. ({{ my_current_time }})</title>
+	<script src="/static/js/dynamic.js" language="javascript" type="text/javascript"></script>
+    {% block js %}
+    {% endblock %}
+
+	<script language="javascript" type="text/javascript">
+	    {% block include-css %}{% endblock %}
+	    include_css('/static/js/jquery/jquery-ui-1.8.1.custom/css/ui-lightness/jquery-ui-1.8.1.custom.css');
+	    __onload__ = function () {
+		    var ie  = !!(window.attachEvent && !window.opera);
+		    var wk  = /webkit\/(\d+)/i.test(navigator.userAgent) && (RegExp.$1 < 525);
+		    if (ie) {
+			{% block onload-ie %}{% endblock %}
+		    }
+	    };
+	    __onunload__ = function () { {% block onunload %}{% endblock %} };
+	    include_js('/static/js/jquery/jquery-1.4.2.min.js',function(){
+		include_js('/static/js/jquery/jquery-ui-1.8.1.custom/js/jquery-ui-1.8.1.custom.min.js',function(){});
+		include_js('/static/js/jquery/maskedinput/maskedinput-1.2.2.min.js',function(){});
+		include_js('/static/js/jquery/cookies/cookies.js',function(){});
+		include_js('/static/js/jquery/timers/jquery.timers.js',function(){});
+		$(document).ready(function() {
+		    {% block document-ready %}{% endblock %}
+		});
+	    });
+    </script>
+
+    {% block extra-head %}{% endblock %}
+  </head>
+
+<body onload="__onload__();" onunload="__onunload__();">{% block top-menu %}{% endblock %}{% block logo %}{% endblock %}<div id="container"><div id="bd" class="browser-width">{% block content %}{% block container %}{% endblock %}{% endblock %}<div></div></body>
+</html>
+

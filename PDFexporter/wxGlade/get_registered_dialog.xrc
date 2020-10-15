@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<resource>
+  <object class="wxDialog" name="get_registered_dialog">
+    <size>400,300</size>
+    <title>Get Registered</title>
+    <centered>1</centered>
+    <style>wxSTAY_ON_TOP|wxCLOSE_BOX</style>
+    <XRCED>
+      <events>EVT_CLOSE</events>
+    </XRCED>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <object class="wxStaticBitmap"/>
+      </object>
+      <object class="sizeritem">
+        <object class="wxStaticText" name="s_text">
+          <label>some text goes here</label>
+          <wrap>0</wrap>
+          <style>wxALIGN_LEFT</style>
+        </object>
+      </object>
+      <object class="sizeritem">
+        <object class="wxButton" name="close">
+          <label>Dismiss</label>
+          <XRCED>
+            <events>EVT_BUTTON</events>
+          </XRCED>
+        </object>
+      </object>
+    </object>
+  </object>
+</resource>

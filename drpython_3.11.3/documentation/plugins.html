@@ -1,0 +1,645 @@
+<?xml version="1.0"  ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<meta name="generator" content="Docutils 0.3.8: http://docutils.sourceforge.net/" />
+<title>Plugins</title>
+<link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="plugins">
+<h1 class="title">Plugins</h1>
+<p>Back to <a class="reference" href="help.html">Help</a></p>
+<a class="target" id="top" name="top"></a><div class="contents topic" id="contents">
+<p class="topic-title first"><a name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#installing-a-plugin" id="id1" name="id1">Installing a Plugin</a><ul>
+<li><a class="reference" href="#use-the-wizard" id="id2" name="id2">Use the Wizard</a></li>
+<li><a class="reference" href="#install-from-py" id="id3" name="id3">Install From Py</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#configuring-a-plugin" id="id4" name="id4">Configuring a Plugin</a></li>
+<li><a class="reference" href="#uninstalling-a-plugin" id="id5" name="id5">Uninstalling a Plugin</a></li>
+<li><a class="reference" href="#creating-a-plugin" id="id6" name="id6">Creating a Plugin</a><ul>
+<li><a class="reference" href="#naming-convention" id="id7" name="id7">Naming Convention</a></li>
+<li><a class="reference" href="#keyboard-shortcuts" id="id8" name="id8">Keyboard Shortcuts</a></li>
+<li><a class="reference" href="#pop-up-menu" id="id9" name="id9">Pop up menu</a></li>
+<li><a class="reference" href="#toolbar" id="id10" name="id10">Toolbar</a></li>
+<li><a class="reference" href="#preferences" id="id11" name="id11">Preferences</a></li>
+<li><a class="reference" href="#about-dialog" id="id12" name="id12">About Dialog</a></li>
+<li><a class="reference" href="#drframe-events" id="id13" name="id13">DrFrame Events</a></li>
+<li><a class="reference" href="#adding-to-panels" id="id14" name="id14">Adding to Panels</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#install-uninstall-scripts" id="id15" name="id15">Install/Uninstall Scripts</a><ul>
+<li><a class="reference" href="#install-script" id="id16" name="id16">Install Script</a></li>
+<li><a class="reference" href="#uninstall-script" id="id17" name="id17">Uninstall Script</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#useful-methods" id="id18" name="id18">Useful Methods</a></li>
+</ul>
+</div>
+<p>Plugins provide a method of adding functionality to DrPython.</p>
+<div class="section" id="installing-a-plugin">
+<h1><a class="toc-backref" href="#id1" name="installing-a-plugin">Installing a Plugin</a></h1>
+<p>Note:</p>
+<ul class="simple">
+<li>Plugins are not loaded on install.</li>
+<li>Some plugins cannot be indexed. They can only be loaded at program startup.</li>
+</ul>
+<p>You have two options for installing a plugin.</p>
+<div class="section" id="use-the-wizard">
+<h2><a class="toc-backref" href="#id2" name="use-the-wizard">Use the Wizard</a></h2>
+<p>Select Install Plugin from the Configure Plugins Menu
+(Under Options). You can either download from a mirror,
+or select a downloaded plugin to install from local media.</p>
+<p>When installing, you will be asked to select which plugins 
+are:</p>
+<ul class="simple">
+<li><strong>Loaded By Default</strong> (These plugins will be loaded at 
+startup. They are placed in the default index [default.idx].)</li>
+<li><strong>Loaded From Index</strong> (If supported (only supported plugins
+will be listed here), these plugins are indexed. You can 
+then select them from the options submenu &quot;Load Plugin(s)
+From Index&quot;.)</li>
+</ul>
+</div>
+<div class="section" id="install-from-py">
+<h2><a class="toc-backref" href="#id3" name="install-from-py">Install From Py</a></h2>
+<p>If you are making your own plugin, or have the plugin files
+availible in unzipped format, simply locate the main plugin
+file (<tt class="docutils literal"><span class="pre">PluginName.py</span></tt>), and DrPython will do the rest.</p>
+</div>
+</div>
+<div class="section" id="configuring-a-plugin">
+<h1><a class="toc-backref" href="#id4" name="configuring-a-plugin">Configuring a Plugin</a></h1>
+<p>You can (via Options:Configure Plugins) edit the Plugin 
+Source, or Create/Edit/Delete Index Files, which are simply
+lists of plugins to load when activated.</p>
+<p>You can edit Plugin Preferences via the Plugin Preferences
+menu.</p>
+<p>You can edit shortcuts or add items to the pop up menu or
+toolbar via the standard dialogs, for all plugins which 
+support each feature.</p>
+<p>All changes to a plugin's source take effect the next time 
+DrPython loads. Shortcuts, Preferences, etc are either 
+immediate, or effective upon reload depending on the plugin.</p>
+<p>If a plugin is not loaded, you can still edit shortcuts and
+the pop up menu, but you will be unable to access the plugin
+functions unless the plugin is loaded.</p>
+</div>
+<div class="section" id="uninstalling-a-plugin">
+<h1><a class="toc-backref" href="#id5" name="uninstalling-a-plugin">Uninstalling a Plugin</a></h1>
+<p>Simply fire up the Uninstall Wizard.</p>
+</div>
+<div class="section" id="creating-a-plugin">
+<h1><a class="toc-backref" href="#id6" name="creating-a-plugin">Creating a Plugin</a></h1>
+<p>NOTE: If you write your own plugin, please note that you can
+access the entire DrPython application (via the DrFrame 
+instance). This means a plugin can make stuff not work right,
+or can access an internal function that may be changed in a 
+future release. If you are adding a new component (such as a
+new menu item, and a new dialog), you should be fine.</p>
+<div class="section" id="naming-convention">
+<h2><a class="toc-backref" href="#id7" name="naming-convention">Naming Convention</a></h2>
+<p>If you want to distribute your plugin named <em>PluginName</em>,
+make sure that:</p>
+<ol class="arabic simple">
+<li>All needed files are in a zip file: 
+<em>PluginName</em>-<em>Version</em>.zip</li>
+<li>The main plugin file is named: <em>PluginName</em>.py</li>
+<li>The install script, if any, is named <em>PluginName</em>.py.install</li>
+<li>The index file, if any, is named: <em>PluginName</em>.idx</li>
+</ol>
+<p>The first thing you need to do is import the relevant 
+wxWidgets modules (usually just &quot;wx&quot;).</p>
+<div class="code-block">
+<span class="p_word">import</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span>
+</div>
+<p>Next, you need to define the &quot;Plugin&quot; function.</p>
+<div class="code-block">
+<span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">Plugin</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span>
+</div>
+<p>DrFrame is the variable for the DrFrame in the DrPython 
+program. It is the same variable as in DrScript.</p>
+<p>Now you can add something to the interface simply by using the
+underlying code in DrPython. To bind a function to an event,
+there are two ways. Let's take a look at the following code.</p>
+<div class="code-block">
+<span class="p_commentline">#Example&nbsp;Plugin</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">import</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">Plugin</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">idum</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">GetNewId</span><span class="p_operator">()</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">viewmenu</span><span class="p_operator">.</span><span class="p_identifier">Append</span><span class="p_operator">(</span><span class="p_identifier">idum</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"Lookit!"</span><span class="p_operator">,</span><span class="p_string">"&nbsp;I&nbsp;said&nbsp;Lookit!"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">exampleFunction</span><span class="p_operator">(</span><span class="p_identifier">event</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">ShowPrompt</span><span class="p_operator">()</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">txtPrompt</span><span class="p_operator">.</span><span class="p_identifier">SetText</span><span class="p_operator">(</span><span class="p_string">"I'm&nbsp;looking....&nbsp;Now&nbsp;what?"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">Bind</span><span class="p_operator">(</span><span class="p_identifier">wx</span><span class="p_operator">.</span><span class="p_identifier">EVT_MENU</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">exampleFunction</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">id</span><span class="p_operator">=</span><span class="p_identifier">idum</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddToPopUpMenu</span><span class="p_operator">(</span><span class="p_string">"Lookit!"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">exampleFunction</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_number">0</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddSeparatorToPopUpMenu</span><span class="p_operator">(</span><span class="p_number">1</span><span class="p_operator">)</span>
+</div>
+<p>What this code does is the following. It adds an item to 
+the viewmenu (you can grab the menu names by looking in the
+DrPython source: <tt class="docutils literal"><span class="pre">drpython.py</span></tt>). 
+DrFrame.GetNewId() makes sure a unique id number is 
+returned. (You only need an id number if the wx Component 
+you are adding requires one. You need one for menus).</p>
+<p>The second step to adding a menu is to use the DrFrame
+function. There are two necessary steps. The first is to 
+define a function. If this function is going to access 
+DrFrame, it must be defined within the Plugin function 
+(which is only called once, when the plugin is loaded).</p>
+<p>The function you add must take one argument, <tt class="docutils literal"><span class="pre">event</span></tt>.
+You can name them whatever you want. For example, 
+<tt class="docutils literal"><span class="pre">MenuEvent</span></tt> the second will hold the wx Menu Event.</p>
+<p>Next, you must use the wxPython method Bind() to bind
+that function to the component you want. Consult the 
+wxPython documentation for usage. Here is a brief summary 
+of Bind().</p>
+<div class="line-block">
+<div class="line"><tt class="docutils literal"><span class="pre">wxPythonWidget.Bind(wx.EVT_EVENTTYPE,</span> <span class="pre">Function,</span> <span class="pre">id=IdNumber)</span></tt></div>
+<div class="line">The idNumber argument is optional (recommended if the 
+eventtype in question allows it, check the wxWidgets 
+documentation for that info). <tt class="docutils literal"><span class="pre">wx.EVT_EVENTTYPE</span></tt>
+is the event type (wxWidgets documentation for a list).
+Function is the function you are binding to the widget. </div>
+</div>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2><a class="toc-backref" href="#id8" name="keyboard-shortcuts">Keyboard Shortcuts</a></h2>
+<p>To Tell DrPython to let a user access a function from 
+keyboard shortcuts, the pop up menu, or the toolbar, you 
+have several options. You can specify each separately 
+(or choose only one or two methods), or you can specify all 
+at once.</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddPluginFunction</span><span class="p_operator">(</span><span class="p_identifier">NameOfTheCurrentPlugin</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">FunctionLabel</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">FunctionYouWantToAdd</span><span class="p_operator">)</span>
+</div>
+<p>Here is a brief code example.</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddPluginShortcutFunction</span><span class="p_operator">(</span><span class="p_string">"SearchInFiles"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"Find&nbsp;In&nbsp;Files"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">OnFindInFiles</span><span class="p_operator">)</span>
+</div>
+<p>This will let the user add the function OnFindInFiles to 
+keyboard shortcuts, the pop up menu, or the toolbar.</p>
+<p>For more info on what this means for each method, see below.</p>
+<p>To add a keyboard shortcut, you have two options. You can 
+simply use &quot;AddKeyEvent&quot;. It takes the following arguments.</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddKeyEvent</span><span class="p_operator">(</span><span class="p_identifier">FunctionYouWantToAdd</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">Keycode</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">Control</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">Shift</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">Alt</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">Meta</span><span class="p_operator">)</span>
+</div>
+<p>The default for all modifier keys (Control, Shift, Alt, Meta) is 0 (do not use).</p>
+<p>Keycodes can be tricky. For both lowercase and uppercase, 
+use the Python function <tt class="docutils literal"><span class="pre">ord()</span></tt> plus the uppercase letter. 
+Add Shift=1 if you want to use uppercase.</p>
+<p><strong>Target</strong>: Uppercase 'A'</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddKeyEvent</span><span class="p_operator">(</span><span class="p_identifier">FunctionYouWantToAdd</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">ord</span><span class="p_operator">(</span><span class="p_character">'A'</span><span class="p_operator">),</span><span class="p_default">&nbsp;</span><span class="p_number">0</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_number">1</span><span class="p_operator">)</span>
+</div>
+<p><strong>Target</strong>: Lowercase 'a'</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddKeyEvent</span><span class="p_operator">(</span><span class="p_identifier">FunctionYouWantToAdd</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">ord</span><span class="p_operator">(</span><span class="p_character">'A'</span><span class="p_operator">))</span>
+</div>
+<p>This will make the shortcut set in stone.</p>
+<p>If you want to let the user configure the shortcut:</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddPluginShortcutFunction</span><span class="p_operator">(</span><span class="p_identifier">NameOfTheCurrentPlugin</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">FunctionLabel</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">FunctionYouWantToAdd</span><span class="p_operator">)</span>
+</div>
+<p>For example:</p>
+<div class="code-block">
+<span class="p_commentline">#Example&nbsp;Plugin</span><span class="p_default"><br/>
+</span><span class="p_commentline">#This&nbsp;file&nbsp;is&nbsp;called&nbsp;"examplenumber2.py"</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">import</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">Plugin</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">idum</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">GetNewId</span><span class="p_operator">()</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">viewmenu</span><span class="p_operator">.</span><span class="p_identifier">Append</span><span class="p_operator">(</span><span class="p_identifier">idum</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"Lookit!"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"&nbsp;I&nbsp;said&nbsp;Lookit!"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">exampleFunction</span><span class="p_operator">(</span><span class="p_identifier">event</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">ShowMessage</span><span class="p_operator">(</span><span class="p_string">"I'm&nbsp;Looking&nbsp;Already!"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"Result:"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">Bind</span><span class="p_operator">(</span><span class="p_identifier">wx</span><span class="p_operator">.</span><span class="p_identifier">EVT_MENU</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">exampleFunction</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">id</span><span class="p_operator">=</span><span class="p_identifier">idum</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddPluginShortcutFunction</span><span class="p_operator">(</span><span class="p_string">"examplenumber2"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"Example&nbsp;Function"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">exampleFunction</span><span class="p_operator">)</span>
+</div>
+<p>Now, you can open the customize shortcuts dialog, and select 
+the &quot;examplenumber2&quot; plugin, to set the shortcut for the 
+function &quot;exampleFunction&quot; you just added.</p>
+<p>Note the use of the ShowMessage function.</p>
+<p>Show message calls the drScrolledMessageDialog. 
+DrFrame.ShowMessage(message, title) The 
+drScrolledMessageDialog automatically displays a traceback if
+one exists.</p>
+</div>
+<div class="section" id="pop-up-menu">
+<h2><a class="toc-backref" href="#id9" name="pop-up-menu">Pop up menu</a></h2>
+<p>To allow the user to add to the pop up menu, use
+<tt class="docutils literal"><span class="pre">AddPluginPopUpMenuFunction</span></tt>.</p>
+<div class="code-block">
+<span class="p_identifier">AddPluginPopUpMenuFunction</span><span class="p_operator">(</span><span class="p_identifier">NameOfTheCurrentPlugin</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">FunctionLabel</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">FunctionYouWantToAdd</span><span class="p_operator">)</span>
+</div>
+<p>The NameOfTheCurrentPlugin is straightforward.</p>
+<p>This will allow the user to, via the PopUpMenu Dialog, add 
+a Plugin Function to the PopUpMenu (with the label 
+<em>FunctionLabel</em>).</p>
+<p>Notes: If you uninstall the plugin, you have to manually 
+remove the item from the PopUpMenu list via the PopUpMenu 
+Dialog.</p>
+<p>Each Plugin Item on the PopUpMenu is only loaded if that 
+plugin is loaded. So if the plugin is loaded via index, 
+when you load the plugin, the relevant item will show up on 
+the PopUpMenu. Even if the plugin is not loaded, the item is
+on the PopUpMenu List.</p>
+</div>
+<div class="section" id="toolbar">
+<h2><a class="toc-backref" href="#id10" name="toolbar">Toolbar</a></h2>
+<p>To allow the user to add to the ToolBar, use 
+<tt class="docutils literal"><span class="pre">AddPluginToolBarFunction</span></tt>.</p>
+<div class="code-block">
+<span class="p_identifier">AddPluginToolBarFunction</span><span class="p_operator">(</span><span class="p_identifier">FunctionLabel</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">FunctionYouWantToAdd</span><span class="p_operator">)</span>
+</div>
+<p>This will allow the user to, via the Customize ToolBar Dialog,
+add a Plugin Function to the ToolBar (with the label 
+<em>FunctionLabel</em>).</p>
+<p>Notes: If you uninstall the plugin, you have to manually 
+remove the item from the ToolBar list via the ToolBar Dialog.</p>
+<p>Each Plugin Item on the ToolBar will be loaded no matter what,
+so be sure to remove the entry if you remove the plugin (if 
+not, nothing will happen when you click the button.)</p>
+<p>To set icons, you have two options. One is to write an 
+install script that installs the icons onto the user's 
+harddrive, and then adds entries for each icon into the 
+custom icon data file in the user's DrPython preferences 
+directory.</p>
+<p>The other is to let the user set the icons manually.</p>
+<p>To add entries, you can either do so manually, or use the 
+following built in functions.</p>
+<div class="code-block">
+<span class="p_identifier">AddPluginIcon</span><span class="p_operator">(</span><span class="p_identifier">Label</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">LocationOf16x16File</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">LocationOf24x24File</span><span class="p_operator">)</span>
+</div>
+<div class="code-block">
+<span class="p_identifier">RemovePluginIcon</span><span class="p_operator">(</span><span class="p_identifier">Label</span><span class="p_operator">)</span>
+</div>
+<p>Here is an example.</p>
+<div class="code-block">
+<span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">GetPluginsDirectory</span><span class="p_operator">()</span><span class="p_default"><br/>
+</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddPluginIcon</span><span class="p_operator">(</span><span class="p_string">"Find&nbsp;In&nbsp;Files"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">""</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/24/Find&nbsp;In&nbsp;Files.png"</span><span class="p_operator">)</span>
+</div>
+<p>Assuming you have copied the icon file to the proper location
+(in this case, in the plugin directory 
+<tt class="docutils literal"><span class="pre">plugindir/bitmaps/24/</span></tt>), this will add an entry into the 
+user's custom icon data file, so that if they have their 
+toolbar set to 24x24, and they add the Find In Files item, 
+it will display the &quot;Find In Files.png&quot; icon. This function 
+is best called in a <tt class="docutils literal"><span class="pre">.install</span></tt> script.</p>
+<p><tt class="docutils literal"><span class="pre">RemovePluginIcon</span></tt> is best called in the <tt class="docutils literal"><span class="pre">Uninstall</span></tt>
+function, and removes the entry in question from the custom 
+icon data file.</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">RemovePluginIcon</span><span class="p_operator">(</span><span class="p_string">"Find&nbsp;In&nbsp;Files"</span><span class="p_operator">)</span>
+</div>
+<p>Note: <tt class="docutils literal"><span class="pre">AddPluginIcon</span></tt> will overwrite any entries in the 
+custom icon data file with the same label.</p>
+</div>
+<div class="section" id="preferences">
+<h2><a class="toc-backref" href="#id11" name="preferences">Preferences</a></h2>
+<p>If the you want to set and load preferences in your plugin,
+all you have to do to edit those preferences is define a
+function.</p>
+<div class="code-block">
+<span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">OnPreferences</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span>
+</div>
+<p>This function will be called (with DrFrame as the argument)
+from the Options menu. You can make your own Preferences 
+Dialog, and have it launched from this function.</p>
+</div>
+<div class="section" id="about-dialog">
+<h2><a class="toc-backref" href="#id12" name="about-dialog">About Dialog</a></h2>
+<p>If you want to have an About dialog, or a Help dialog, use:</p>
+<div class="code-block">
+<span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">OnAbout</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span>
+</div>
+<div class="code-block">
+<span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">OnHelp</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span>
+</div>
+<p>This function will be called (with DrFrame as the argument) 
+from the Help menu. You can make your own Dialog, and have it
+launched from this function.</p>
+</div>
+<div class="section" id="drframe-events">
+<h2><a class="toc-backref" href="#id13" name="drframe-events">DrFrame Events</a></h2>
+<p>DrPython defines a few wxPython events you can use in your
+plugins.  They are:</p>
+<dl class="docutils">
+<dt>EVT_DRPY_DOCUMENT_CHANGED</dt>
+<dd>(Posted whenever the active document is changed).</dd>
+<dt>EVT_DRPY_FILE_OPENING</dt>
+<dd>(Posted at the start of DrFrame.OpenFile).</dd>
+<dt>EVT_DRPY_FILE_OPENED</dt>
+<dd>(Posted at the end of DrFrame.OpenFile).</dd>
+<dt>EVT_DRPY_FILE_SAVING</dt>
+<dd>(Posted at the start of DrFrame.SaveFile).</dd>
+<dt>EVT_DRPY_FILE_SAVED</dt>
+<dd>(Posted at the end of DrFrame.SaveFile).</dd>
+<dt>EVT_DRPY_FILE_CLOSING</dt>
+<dd>(Posted at the start of DrFrame.OnClose).</dd>
+<dt>EVT_DRPY_FILE_CLOSED</dt>
+<dd>(Posted at the end of DrFrame.OnClose).</dd>
+<dt>EVT_DRPY_NEW</dt>
+<dd>(Posted at the end of DrFrame.OnNew).</dd>
+<dt>EVT_DRPY_NEW_PROMPT</dt>
+<dd>(Posted at the end of DrFrame.OnNewPrompt).</dd>
+</dl>
+<p>Usage is as below:</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">PBind</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">EVT_DRPY_FILE_OPENED</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">CustomFunction</span><span class="p_operator">)</span>
+</div>
+<p>That's it.  Just bind the event to DrFrame.  By default, 
+no argument is passed to the function.  (There is no need to
+call event.Skip()).</p>
+<p>You can change this as follows:</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">PBind</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">EVT_DRPY_FILE_OPENED</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">CustomFunction</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_word">None</span><span class="p_operator">)</span>
+</div>
+<p>This will result in CustomFunction(None).</p>
+<p>(The last argument is a tuple of arguments to pass to the
+function.)</p>
+<p><strong>IMPORTANT:  You MUST Unbind the event if the function is a
+member of a deleted object.</strong></p>
+<p>For example:
+If you have:</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">PBind</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">EVT_DRPY_NEW</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">MyPanel</span><span class="p_operator">.</span><span class="p_identifier">OnButtonPress</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_word">None</span><span class="p_operator">)</span>
+</div>
+<p>and you want to call</p>
+<div class="code-block">
+<span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">ClosePanel</span><span class="p_operator">(</span><span class="p_identifier">MyPanel</span><span class="p_operator">.</span><span class="p_identifier">Position</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">MyPanel</span><span class="p_operator">.</span><span class="p_identifier">Index</span><span class="p_operator">)</span>
+</div>
+<p>You MUST call <tt class="docutils literal"><span class="pre">DrFrame.PUnbind((DrFrame.EVT_DRPY_NEW,</span> <span class="pre">MyPanel.OnButtonPress)</span></tt>
+first.</p>
+<p>DrFrame.PUnbind takes the same arguments as PBind, except you
+do not need the optional arguments bit.</p>
+<p><strong>Note: If a plugin runs code in OnNew, it is highly 
+recommended that the plugin is loaded by default, rather than
+via an index. Otherwise things can be a bit complicated if 
+multuiple documents are open when the plugin is loaded 
+(you can always handle this in your plugin code, however).</strong></p>
+</div>
+<div class="section" id="adding-to-panels">
+<h2><a class="toc-backref" href="#id14" name="adding-to-panels">Adding to Panels</a></h2>
+<p>Want to write a panel to access from the main window? Here
+is what the code looks like for the creation of a Panel.</p>
+<div class="code-block">
+<span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_default">&nbsp;</span><span class="p_word">is</span><span class="p_default">&nbsp;</span><span class="p_word">None</span><span class="p_operator">:</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">target</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">i</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">mainpanel</span><span class="p_operator">.</span><span class="p_identifier">GetTargetNotebookPage</span><span class="p_operator">(</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">prefs</span><span class="p_operator">.</span><span class="p_identifier">sourcebrowserpanel</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"Source&nbsp;Browser"</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">drSourceBrowserPanel</span><span class="p_operator">(</span><span class="p_identifier">target</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_operator">-</span><span class="p_number">1</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">prefs</span><span class="p_operator">.</span><span class="p_identifier">sourcebrowserpanel</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">i</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">target</span><span class="p_operator">.</span><span class="p_identifier">SetPanel</span><span class="p_operator">(</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">mainpanel</span><span class="p_operator">.</span><span class="p_identifier">ShowPanel</span><span class="p_operator">(</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">prefs</span><span class="p_operator">.</span><span class="p_identifier">sourcebrowserpanel</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">i</span><span class="p_operator">)</span><span class="p_default"><br/>
+</span><span class="p_word">else</span><span class="p_operator">:</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_word">not</span><span class="p_default">&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">mainpanel</span><span class="p_operator">.</span><span class="p_identifier">IsVisible</span><span class="p_operator">(</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_operator">.</span><span class="p_identifier">Position</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_operator">.</span><span class="p_identifier">Index</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_operator">.</span><span class="p_identifier">Browse</span><span class="p_operator">()</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">mainpanel</span><span class="p_operator">.</span><span class="p_identifier">TogglePanel</span><span class="p_operator">(</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_operator">.</span><span class="p_identifier">Position</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_operator">.</span><span class="p_identifier">Index</span><span class="p_operator">)</span>
+</div>
+<p>So there are four steps to creating a side panel:</p>
+<p>Get the Target Notebook Page itself, and its index,</p>
+<ul class="simple">
+<li>Create the Panel.</li>
+<li>Set the Notebook page's Panel</li>
+<li>Tell DrPython to Show the Panel.</li>
+</ul>
+<p>There are several important things to note:</p>
+<ol class="arabic">
+<li><p class="first"><tt class="docutils literal"><span class="pre">GetTargetNotebookPage</span></tt> takes two arguments, the
+position (0 = Left, 1 = Right), and (optionally) the tab
+text for the target notebook.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">GetTargetNotebookPage</span></tt> returns the page itself 
+(the parent of the Panel you create), and the index. 
+The Index and the Position (Left, Right) are how you 
+access that specific panel. In this case, the last two 
+arguments to <tt class="docutils literal"><span class="pre">drSourceBrowserPanel</span></tt> are the position and 
+the index.</p>
+</li>
+<li><p class="first">You need to call the target sash window's .SetPanel method
+to ensure the Panel you create is sized properly.</p>
+</li>
+<li><p class="first">You need to call <tt class="docutils literal"><span class="pre">ShowPanel</span></tt> after newly creating
+a panel.</p>
+</li>
+<li><p class="first">You have two options for toggling a panel.</p>
+<ol class="upperalpha simple">
+<li>Simply call TogglePanel(Position, Index).</li>
+<li>Call <tt class="docutils literal"><span class="pre">ShowPanel(Position,</span> <span class="pre">Index,</span> <span class="pre">ShowThePanel=True)</span></tt>.
+(ShowThePanel is a boolean, enabled by default.).</li>
+</ol>
+<p>If you choose B, you can use <tt class="docutils literal"><span class="pre">IsVisible(Position,</span> <span class="pre">Index)</span></tt>
+to determine if the Panel is showing. In this case, if the
+panel is going to be shown, DrPython refreshes the Source
+Browser.</p>
+</li>
+</ol>
+<p>Here is the code for destroying the Panel.</p>
+<div class="code-block">
+<span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">OnbtnClose</span><span class="p_operator">(</span><span class="p_identifier">self</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">event</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">parent</span><span class="p_operator">.</span><span class="p_identifier">PUnbind</span><span class="p_operator">(</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">parent</span><span class="p_operator">.</span><span class="p_identifier">EVT_DRPY_DOCUMENT_CHANGED</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">OnbtnRefresh</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">parent</span><span class="p_operator">.</span><span class="p_identifier">txtDocument</span><span class="p_operator">.</span><span class="p_identifier">SourceBrowser</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_word">None</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">panelparent</span><span class="p_operator">.</span><span class="p_identifier">ClosePanel</span><span class="p_operator">(</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">Position</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">self</span><span class="p_operator">.</span><span class="p_identifier">Index</span><span class="p_operator">)</span>
+</div>
+<p><tt class="docutils literal"><span class="pre">ClosePanel(Position,</span> <span class="pre">Index)</span></tt> will destroy the panel 
+completely, so any code after it will cause issues. This makes
+calling <tt class="docutils literal"><span class="pre">ClosePanel</span></tt> from code that gets called more than
+one (like <tt class="docutils literal"><span class="pre">wx.EVT_SIZE</span></tt>) a bad idea.</p>
+<p>Also note that the SourceBrowser variable is set to None here.
+Closing a Panel does not automatically do this, so if you are
+using the value of variable holding the Panel in your code,
+be sure to set it to None before destroying the Panel itself.</p>
+<p>The full code can be found in the SourceBrowser code in the
+DrPython Core.</p>
+</div>
+</div>
+<div class="section" id="install-uninstall-scripts">
+<h1><a class="toc-backref" href="#id15" name="install-uninstall-scripts">Install/Uninstall Scripts</a></h1>
+<p>DrPython provides a method for automatic install script
+execution.</p>
+<p>If you have a plugin named <tt class="docutils literal"><span class="pre">example.py</span></tt>, a file named 
+<tt class="docutils literal"><span class="pre">example.py.install</span></tt> in the same directory will be 
+automatically run on install.</p>
+<div class="section" id="install-script">
+<h2><a class="toc-backref" href="#id16" name="install-script">Install Script</a></h2>
+<p>An install script is especially useful if you have files 
+you want to install to a specific location on the user's 
+hard drive (eg, bitmaps for the toolbar).</p>
+<p>Here is an example.</p>
+<div class="code-block">
+<span class="p_commentline">#Example&nbsp;Plugin&nbsp;Install&nbsp;Script</span><span class="p_default"><br/>
+</span><span class="p_commentline">#This&nbsp;file&nbsp;is&nbsp;called&nbsp;"example.py.install"</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">import</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">shutil</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">path</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">Install</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">d</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_operator">.</span><span class="p_identifier">MessageDialog</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"This&nbsp;will&nbsp;install&nbsp;some&nbsp;bitmaps&nbsp;for&nbsp;the&nbsp;Example&nbsp;plugin.\nAre&nbsp;you&nbsp;sure&nbsp;you&nbsp;want&nbsp;to&nbsp;proceed?"</span><span class="p_operator">,</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_string">"Install&nbsp;Search&nbsp;In&nbsp;Files"</span><span class="p_operator">,</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">wx</span><span class="p_operator">.</span><span class="p_identifier">YES_NO</span><span class="p_default">&nbsp;</span><span class="p_operator">|</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_operator">.</span><span class="p_identifier">ICON_QUESTION</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">answer</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">d</span><span class="p_operator">.</span><span class="p_identifier">ShowModal</span><span class="p_operator">()</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">d</span><span class="p_operator">.</span><span class="p_identifier">Destroy</span><span class="p_operator">()</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_operator">(</span><span class="p_identifier">answer</span><span class="p_default">&nbsp;</span><span class="p_operator">==</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_operator">.</span><span class="p_identifier">ID_YES</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">cwd</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">getcwd</span><span class="p_operator">()</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">GetPluginsDirectory</span><span class="p_operator">()</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_word">not</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">path</span><span class="p_operator">.</span><span class="p_identifier">exists</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps"</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">mkdir</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps"</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_word">not</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">path</span><span class="p_operator">.</span><span class="p_identifier">exists</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/16"</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">mkdir</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/16"</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_word">not</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">path</span><span class="p_operator">.</span><span class="p_identifier">exists</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/24"</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">mkdir</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/24"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">shutil</span><span class="p_operator">.</span><span class="p_identifier">copyfile</span><span class="p_operator">(</span><span class="p_identifier">cwd</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/16/Example.png"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/16/Example.png"</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">shutil</span><span class="p_operator">.</span><span class="p_identifier">copyfile</span><span class="p_operator">(</span><span class="p_identifier">cwd</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/24/Example.png"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/24/Example.png"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">AddPluginIcon</span><span class="p_operator">(</span><span class="p_string">"Example"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/16/Example.png"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/24/Example.png"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">return</span><span class="p_default">&nbsp;</span><span class="p_identifier">True</span>
+</div>
+<p>Note the return statement. This determines the behaviour 
+after your plugin install script exits. If you return <tt class="docutils literal"><span class="pre">True</span></tt>,
+DrPython will continue to install the plugin. This is good 
+if you just want to install some bitmaps, but otherwise want 
+DrPython to handle the rest.</p>
+<p>Returning <tt class="docutils literal"><span class="pre">False</span></tt> will tell DrPython to halt the 
+installation. This is good if you want to let the user cancel,
+or if you want to manually install the plugin yourself. 
+Also note <tt class="docutils literal"><span class="pre">GetPluginsDirectory()</span></tt>. This returns the user 
+directory where plugins are stored once they are installed.</p>
+</div>
+<div class="section" id="uninstall-script">
+<h2><a class="toc-backref" href="#id17" name="uninstall-script">Uninstall Script</a></h2>
+<p>If you want specific behaviour on uninstall, write a method 
+in your plugin file called <tt class="docutils literal"><span class="pre">UnInstall</span></tt>.</p>
+<div class="code-block">
+<span class="p_commentline">#Example&nbsp;Plugin</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">import</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">path</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">UnInstall</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">GetPluginsDirectory</span><span class="p_operator">()</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">path</span><span class="p_operator">.</span><span class="p_identifier">exists</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/16/Example.png"</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">remove</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/16/Example.png"</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">path</span><span class="p_operator">.</span><span class="p_identifier">exists</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/24/Example.png"</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">os</span><span class="p_operator">.</span><span class="p_identifier">remove</span><span class="p_operator">(</span><span class="p_identifier">plugindir</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"/bitmaps/24/Example.png"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrFrame</span><span class="p_operator">.</span><span class="p_identifier">RemovePluginIcon</span><span class="p_operator">(</span><span class="p_string">"Example"</span><span class="p_operator">)</span><span class="p_default"><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">return</span><span class="p_default">&nbsp;</span><span class="p_identifier">True</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">def</span><span class="p_default">&nbsp;</span><span class="p_defname">Plugin</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">yadda</span><span class="p_default">&nbsp;</span><span class="p_identifier">yadda</span><span class="p_default">&nbsp;</span><span class="p_identifier">yadda</span><span class="p_operator">...</span>
+</div>
+<p>Again, note the return. <tt class="docutils literal"><span class="pre">UnInstall</span></tt> must take a DrFrame as
+the only argument. If this function returns <tt class="docutils literal"><span class="pre">True</span></tt>,
+DrPython will continue with the rest of the uninstall process.
+If the function returns <tt class="docutils literal"><span class="pre">False</span></tt>, DrPython will halt the 
+uninstall.</p>
+</div>
+</div>
+<div class="section" id="useful-methods">
+<h1><a class="toc-backref" href="#id18" name="useful-methods">Useful Methods</a></h1>
+<p>Here are a few useful methods, and what they do:
+(They are all members of DrFrame)</p>
+<div class="code-block">
+<span class="p_identifier">Ask</span><span class="p_operator">(</span><span class="p_identifier">question</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">title</span><span class="p_operator">=</span><span class="p_character">'DrPython'</span><span class="p_operator">)</span>
+</div>
+<p>Asks a yes or no question, with an optional title.
+Returns True if the user selects 'Yes',
+False otherwise.</p>
+<div class="code-block">
+<span class="p_identifier">Execute</span><span class="p_operator">(</span><span class="p_identifier">command</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">statustext</span><span class="p_operator">=</span><span class="p_character">''</span><span class="p_operator">)</span>
+</div>
+<p>Executes a raw command in the prompt, displaying optional
+statustext.</p>
+<div class="code-block">
+<span class="p_identifier">ExecutePython</span><span class="p_operator">()</span>
+</div>
+<p>Runs the python interpreter in the prompt.</p>
+<div class="code-block">
+<span class="p_identifier">ExecuteWithPython</span><span class="p_operator">(</span><span class="p_identifier">command</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">statustext</span><span class="p_operator">=</span><span class="p_character">''</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">pythonargs</span><span class="p_operator">=</span><span class="p_character">''</span><span class="p_operator">)</span>
+</div>
+<p>Executes a command as an argument to python in the prompt, 
+displaying optional statustext, and using optional additional
+arguments to the python interpreter (in addition to those set
+in preferences).</p>
+<div class="code-block">
+<span class="p_identifier">GetActiveSTC</span><span class="p_operator">()</span>
+</div>
+<p>Returns the active Styled Text Control (Document or Prompt).</p>
+<div class="code-block">
+<span class="p_identifier">GetAlreadyOpen</span><span class="p_operator">()</span>
+</div>
+<p>Returns a tuple of the filenames of each open Document.</p>
+<div class="code-block">
+<span class="p_identifier">GetNewId</span><span class="p_operator">()</span>
+</div>
+<p>Returns a new wx Id, making sure the value is not anywhere 
+near constants used by drpython.</p>
+<div class="code-block">
+<span class="p_identifier">GetPluginsDirectory</span><span class="p_operator">()</span>
+</div>
+<p>Returns the directory where the user's plugins are stored.</p>
+<div class="code-block">
+<span class="p_identifier">GetPluginMenuLabel</span><span class="p_operator">(</span><span class="p_identifier">plugin</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">functionlabel</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">menulabel</span><span class="p_operator">=</span><span class="p_character">''</span><span class="p_operator">)</span>
+</div>
+<p>You must first add the shortcuts with 
+(DrFrame.AddPluginFunction or 
+DrFrame.AddPluginShortcutFunction). Then use 
+DrFrame.LoadShortcuts(plugin). When this function is called,
+it will return a properly formatted menu label that includes 
+the corresponding shortcut.</p>
+<p>'plugin' is the name of the plugin.  'functionlabel' is the label given in 'AddPluginFunction'.
+'menulabel' (optional) lets you specify a specific label to append the shortcut to
+(like adding '...' or and Ampersand).</p>
+<div class="code-block">
+<span class="p_identifier">GetPreference</span><span class="p_operator">(</span><span class="p_identifier">pref</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">key</span><span class="p_operator">=</span><span class="p_word">None</span><span class="p_operator">)</span>
+</div>
+<p>Returns the value of preference 'pref', using the optional 
+key 'key'. pref should be a string. key should be either a
+string or an integer as appropriate.</p>
+<div class="code-block">
+<span class="p_identifier">GetPreferencesDirectory</span><span class="p_operator">()</span>
+</div>
+<p>Returns the directory where the user's preferences, shortcuts,
+pop up menu, toolbar settings, etc, are stored.</p>
+<div class="code-block">
+<span class="p_identifier">LoadPluginShortcuts</span><span class="p_operator">(</span><span class="p_identifier">plugin</span><span class="p_operator">)</span>
+</div>
+<p>If this is called within a plugin, it will load the shortcuts
+(useful if you need to get the shortcuts to display in the
+menu).</p>
+<p>Otherwise, it is automatically called during plugin 
+initialization.</p>
+<p>It can only be called once for each plugin.</p>
+<div class="code-block">
+<span class="p_identifier">ShowMessage</span><span class="p_operator">(</span><span class="p_identifier">msg</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_identifier">title</span><span class="p_operator">=</span><span class="p_character">'DrPython'</span><span class="p_operator">)</span>
+</div>
+<p>Shows a message, with an optional title.  If there are any 
+tracebacks to be had, shows them too.</p>
+<div class="code-block">
+<span class="p_identifier">ShowPrompt</span><span class="p_operator">(</span><span class="p_identifier">Visible</span><span class="p_operator">=</span><span class="p_identifier">True</span><span class="p_operator">)</span>
+</div>
+<p>Either shows or hides the prompt.</p>
+<div class="code-block">
+<span class="p_identifier">ViewURLInBrowser</span><span class="p_operator">(</span><span class="p_identifier">url</span><span class="p_operator">)</span>
+</div>
+<p>Shows the url in the default browser specified in preferences.</p>
+</div>
+</div>
+</body>
+</html>

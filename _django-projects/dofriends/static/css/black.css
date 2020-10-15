@@ -1,0 +1,490 @@
+html {
+	background-color: black;
+}
+
+body {
+	background-color: black;
+	text-align: center;
+}
+
+div.multicolumn div.column { 
+	float: left; 
+}
+
+div.multicolumn div.lcolumn { 
+	float: left; 
+}
+
+div.multicolumn div.rcolumn { 
+	float: right; 
+}
+
+.browser-width {
+	margin: 0 auto;
+	text-align: left;	
+}
+
+#headertxt {
+	position:absolute;
+	width:950px;
+	height:35px;
+	z-index:3;
+	left: 50%;
+	margin-left:-475px;
+	top:auto !important;
+	bottom:12px;
+	font: 100% Arial;
+	color: #777;
+}
+
+.hidden {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+			
+#toolbar-container {
+	background: #404040 url(/static/css/sel2.gif) left top repeat-x; 
+	margin: 0 auto;
+}
+
+.toolbar-tab {
+	margin-right: 20px;
+}
+
+.toolbar-tab li {
+	float: left;
+	height: 20px;
+}
+
+.toolbar-tab a {
+	display: block;
+	color: #d7d7d7;
+	text-decoration: none;	
+	border-right: 1px solid #222;
+	font-size:18px;
+}
+
+.toolbar-tab a:hover {
+	background-color: #373737; 
+	color: white;
+}
+
+.toolbar-tab li.first a {
+	border-left: 1px solid #222;
+}
+
+.toolbar-tab li.selected  a {
+	color: white;
+	background: url(/static/css/tab2.jpg) top left repeat-x;
+	background-color: #272727;
+}
+
+.toolbar-tab li.selected  a:hover {
+	background-color: #272727;
+}
+
+#toolbar-account {
+	float: right;
+}
+
+#toolbar span.seperator {
+	color: #606060;
+	font: 122% arial;
+	margin: 10px 10px;
+}
+
+#toolbar span.greeting {
+	color: white;
+}
+
+#toolbar span.greetingseperator {
+	color: white;
+}
+
+#toolbar #toolbarnologin,
+#toolbar #toolbarloggedin {
+	display: none;
+}
+
+#hd {
+	margin-bottom: 20px;	
+}
+
+#logo {
+	float: left;
+}
+
+#header-ad {
+	float: left;
+}
+
+#primary-nav  ul {
+	margin-top: 20px;
+}
+
+#primary-nav  li {
+	float: left;
+	margin-right: 5px;
+}
+
+#primary-nav div {
+	background-color: #272727;
+	border-top: 1px solid #404040;
+	border-left: 1px solid #404040;
+	border-right: 1px solid #404040;	
+}
+
+#primary-nav a {
+	display: block;
+	color: #bbb;
+	text-decoration: none;	
+	background: url(/static/css/deselected.jpg) top repeat-x;
+}
+
+#primary-nav li {
+	position: relative;
+}
+
+#primary-nav li.category, 
+#primary-nav li.category .dropdown {
+	z-index: 2;
+}
+
+#primary-nav li.category span {
+	font-size: 13px;
+	line-height: 25px;
+}
+
+#primary-nav li.category div.text {
+  z-index:3;
+  position:relative;
+}
+
+#primary-nav li.category span.new {
+	position: block;
+	height: 26px;
+	width: 26px;
+	position: absolute;
+	top: -1px;
+	_top:0;
+	right: -1px;
+	text-indent: -9999px;
+	background: url(/static/css/new-tab-ribbon.png) no-repeat top right;
+}
+
+#primary-nav #category-dropdown {
+	display: none;
+	border-width: 0;
+	position: absolute;
+	top: 21px;
+	left: -13px;
+	_left: -14px;
+	padding:0;
+	background-color: transparent;
+}
+
+#category-dropdown div {
+  border-width: 0;
+  background-color: transparent;
+}
+
+#category-dropdown {
+ position:relative;
+ min-width:8em;
+ max-width:896px;
+ margin-left:14px;
+ width:744px;
+}
+
+#category-dropdown .content,
+#category-dropdown .t,
+#category-dropdown .b,
+#category-dropdown .b div {
+ background:transparent url(/static/css/background-dropdown.png) no-repeat top right;
+ _background-image:url(/static/css/background-dropdown-ie6.png);
+}
+
+#category-dropdown .content {
+ position:relative;
+ zoom:1;
+ _overflow-y:hidden;
+ padding:29px 31px 15px 17px;
+}
+
+#category-dropdown .t {
+ position:absolute;
+ left:0px;
+ top:0px;
+ width:14px;
+ margin-left:-14px;
+ height:100%;
+ _height:1600px;
+ background-position:top left;
+}
+
+#category-dropdown .b {
+ position:relative;
+ width:100%;
+}
+
+#category-dropdown .b,
+#category-dropdown .b div {
+ height:28px;
+ font-size:1px;
+}
+
+#category-dropdown .b {
+ background-position:bottom right;
+}
+
+#category-dropdown .b div {
+ position:relative;
+ width:14px;
+ margin-left:-14px;
+ background-position:bottom left;
+}
+
+#primary-nav .dropdown .content:after {
+  content:'';
+  display:block;
+  clear:both;
+  height:0;
+  font-size:0;
+  visibility:hidden;
+}
+
+#primary-nav #category-dropdown-shim {
+  position:absolute;
+  z-index:1;
+  top:33px;
+  width:718px;
+  left:0;
+  visibility:hidden;
+  opacity:0;
+  filter:alpha(opacity=0)
+}
+
+#primary-nav .dropdown a {
+	background: 0;
+}
+
+#primary-nav .dropdown ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#primary-nav .dropdown li {
+	float: none;
+	margin: 0;
+}
+
+#primary-nav .dropdown li a:hover, 
+#primary-nav li.selected .dropdown li a:hover,
+#primary-nav li.category .dropdown li a:hover {
+	color: #EE577C;
+	cursor: pointer;
+	background: transparent;
+	text-decoration: none;
+}
+
+#primary-nav li.selected .dropdown a {
+	color: #b2b2b2; 
+	text-decoration: none;	
+	background: none; 
+}		
+
+#primary-nav li a:hover {
+	text-decoration: underline;
+	color: white;
+	background-color: #555;
+	background-image: none;
+}
+
+#primary-nav li.selected div {
+}
+
+#primary-nav li.selected a,
+#primary-nav li.category a:hover {
+	color: white; 
+	text-decoration: none;	
+	background: #404040 url(/static/css/selected.gif) left top repeat-x; 
+}
+
+#primary-nav li.selected a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+#secondary-nav-empty {
+	padding: 0;
+	height: 5px;
+	font-size: 5px;
+	background-color: #404040;
+}
+				
+#secondary-nav {
+	background-color: #404040;
+	color: white;	
+}
+
+#secondary-nav p {
+	float: left;
+	font-weight: bold;
+	margin-right: 12px;
+}
+
+#secondary-nav  ul {
+	float: left;
+}
+
+#secondary-nav li {
+	float: left;
+	padding: 0 ;
+	margin-right: 0px;
+}
+
+
+#secondary-nav li a {
+	color: #e5e5e5;	
+	text-decoration: underline;
+	padding: 0 7px;
+	border-right: 1px solid #666;
+}
+
+#secondary-nav li.last a {
+	border: 0;
+}
+
+#secondary-nav li.first a {
+	padding-left: 0;
+}
+
+#secondary-nav li a.current {
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+
+#secondary-nav li a:hover {
+	text-decoration: none;
+}
+
+#loginbox {
+	background-color: #171717;
+	height: 380px;
+	border: 1px solid #272727;
+}
+
+#loginbox h1 {
+	color: white;
+}
+
+#loginbox h2 {
+	color: white;
+}
+
+#loginbox .error-message {
+	border: 1px solid red;
+	background-color: white;
+	padding: 5px 10px;
+	color: red;
+	font: 129% arial;
+	margin: 0 0 25px 0;
+}
+
+#loginbox a {
+	color: white;
+}
+
+#loginbox form {
+	margin: 0 0 25px 30px;
+}
+
+#loginbox form div.clearfix {
+	padding: 5px 0;
+}
+
+#loginbox form .focus {
+	background-color: #FFC;
+}
+
+#loginbox span {
+	color: #c1c1c1;;
+	margin-left: 20px;
+}
+
+#loginbox span b {
+	font-weight: normal;
+	color: white;
+}
+
+#loginbox form label {
+	float: left;
+	color: #c1c1c1;
+}
+
+#loginbox form .emptylabel {
+	padding: 5px 0 0 0;
+}
+
+.misc #ft-container {
+	background-color: black;
+}
+
+#ft-ad-container{
+	background-color: #171717;
+	border-top: 1px solid #272727;	
+	border-bottom: 1px solid #272727;
+}
+#ft-ad {
+	margin-bottom: 0px;
+	text-align: center;
+	padding: 0 0 0 0px;
+}
+
+#ft-ad div.ft-ad {
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+#ft-ad h1 {
+	display: block;
+	color: white;
+	font: bold 100% arial;
+	letter-spacing: 1px;
+	font-variant: small-caps;
+	text-align: left;
+	margin: 0 0 10px 0;
+}
+
+#ft-container {
+	background-color: #111;
+}
+
+#ft {
+	color: #aaa;
+	padding: 8px 0 13px 0;
+	text-align: left;
+}
+
+#ft em {
+	font-weight: bold;
+	padding-right: 8px;
+	border-right: 1px solid #666;
+	margin-right: 6px;
+}
+
+#ft a {
+	color: #aaa;
+	padding-right: 8px;
+	border-right: 1px solid #666;
+	margin-right: 6px;
+}
+
+#ft a.last {
+	border-right: 0px solid #666;
+}

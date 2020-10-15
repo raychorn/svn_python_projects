@@ -1,0 +1,6 @@
+# To-Do List
+
+* handle the date field for the calendar whenever a POST item does not have a field.
+
+* test all scenarios...
+

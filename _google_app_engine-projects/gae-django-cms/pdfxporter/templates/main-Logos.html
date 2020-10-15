@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}{{ air_id }} v{{version}}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+var requiredMajorVersion = 10;
+var requiredMinorVersion = 2;
+var requiredRevision = 0;
+var hasReqestedVersion = false;
+include_js("{{ request_endpoint }}/static/swfObject.js",
+	function () {
+		if (window.location.href.toLowerCase().indexOf('http://') > -1) {
+			window.location.href = window.location.href.toLowerCase().replace('http://','https://');
+		} else {
+			var s=generate_flash_content(10,0,0,'{{ request_endpoint }}/static/swf/Logos/LogosWeb.swf',950,800,'logos','logos','white','http://vyperlogix.com/vyperlogos.html','','21st Century Innovation with Vyper Logix Corp.'); 
+			var c = document.getElementById('flashContainer');
+			if (c) {
+				c.innerHTML = s;
+			}
+		}
+	}
+);
+</script>
+{% endblock %}
+
+{% block css %}
+<style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	color: #000000;
+}
+#container {
+	width: 990;
+}
+#container #flashcontent {
+	width: 990;
+	float: left;
+}
+--> 
+</style>
+<!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColElsLtHdr #sidebar1 { padding-top: 30px; }
+.twoColElsLtHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+</style>
+<![endif]-->
+{% endblock %}
+
+{% block include-css %}'{{ request_endpoint }}/static/css.css'{% endblock %}
+
+{% block container %}
+<table width="990" align="left">
+	<tr>
+    	<td width="100%" align="center">
+            <p>This is the pre-Alpha Release of {{ air_id }} v{{version}} (Web Only)<span style="display: none;"> produced and sponsored by 
+                <a href="{{ request_endpoint }}/{{ air_id }}/"><b>Vyper Logix Corp.</b></a></span>
+            .</p>
+        </td>
+    </tr>
+	<tr>
+    	<td width="100%" align="left">
+            <div id="flashContainer"></div>
+        </td>
+    </tr>
+</table>
+<noscript>
+<table id="messageTable">
+<tr>
+	<td>
+	This application requires the following be installed:
+	<ol>
+		<li><a href="http://get.adobe.com/flashplayer/">Adobe&#174; Flash&#8482; Player</a></li>
+	</ol>
+	Please click on each link in the order above to complete the installation process.
+	</td>
+</tr>
+</table>
+</noscript>
+
+{% endblock %}
+

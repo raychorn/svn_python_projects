@@ -1,0 +1,1410 @@
+Total Deposits: $99971.17  
+$      6.00	DepositsClassifications.bank_fee_rebate
+$   6676.58	DepositsClassifications.AllBusiness_Payroll
+$   2523.61	DepositsClassifications.atm_deposit
+$  34270.34	DepositsClassifications.Visioneer_Payroll
+$    904.94	DepositsClassifications.purchase_return
+$   3686.15	DepositsClassifications.tax_fin_deposit
+$  51903.55	DepositsClassifications.Indotronix_Payroll
+
+W2 Analysis:
+Total for ATM Deposits=$2523.61   
+Total for W2 Deposits=$0.00      
+==============================
+Remainder Deposits less W2 Deposits=$2523.61   
+
+==============================
+
+W2 Deposit Analysis:
+
+UNCLASSIFIED
+$    100.00	01/10/2005, (#  10)	ATM Deposit -01/07 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+	[1, 10, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  01/07
+	[2, 8, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  02/07
+$     50.00	01/18/2005, (#  18)	ATM Deposit -01/15 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+	[1, 18, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  01/15
+	[2, 18, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  02/18
+$    342.50	01/21/2005, (#  21)	ATM Deposit -01/20 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+	[1, 21, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  01/20
+$    100.00	02/08/2005, (#  39)	ATM Deposit -02/07 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+	[1, 10, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  01/07
+	[2, 8, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  02/07
+$     50.00	02/18/2005, (#  49)	ATM Deposit -02/18 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+	[1, 18, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  01/15
+	[2, 18, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  02/18
+$     40.00	04/11/2005, (# 101)	ATM Deposit -04/08 Mach ID 2816B Redwood Plaza Vallejo Ca 7156
+	[4, 11, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  04/08
+$    192.09	04/26/2005, (# 116)	ATM Deposit -04/26 Mach ID 2666K 3111 Crow Canyon Pl San Ramon Ca 7156
+	[4, 26, 2005]	3111 Crow Canyon Pl     San Ramon     CA 7156	ATM Deposit -  04/26
+$     12.20	05/06/2005, (# 126)	ATM Deposit -05/06 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+	[5, 6, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  05/06
+$    640.00	06/02/2005, (# 153)	ATM Deposit -06/02 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+	[6, 2, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  06/02
+$    166.23	07/18/2005, (# 199)	ATM Deposit -07/15 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+	[7, 18, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  07/15
+$    110.00	07/29/2005, (# 210)	ATM Deposit -07/29 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+	[7, 29, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  07/29
+$     19.00	08/23/2005, (# 235)	ATM Deposit -08/23 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+	[8, 23, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  08/23
+$     30.00	09/22/2005, (# 265)	ATM Deposit -09/22 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+	[9, 22, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  09/22
+$    242.59	10/05/2005, (# 278)	ATM Deposit -10/05 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+	[10, 5, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  10/05
+$     35.00	10/19/2005, (# 292)	ATM Deposit -10/19 Mach ID 2030H 3112 Santa Rita Rd Pleasanton Ca 7156
+	[10, 19, 2005]	3112 Santa Rita Rd      Pleasanton    CA 7156	ATM Deposit -  10/19
+$     69.00	10/21/2005, (# 294)	ATM Deposit -10/21 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+	[10, 21, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  10/21
+$     45.00	11/14/2005, (# 318)	ATM Deposit -11/12 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+	[11, 14, 2005]	1499 N Main St          Walnut Creek  CA 7156	ATM Deposit -  11/12
+$     50.00	12/13/2005, (# 347)	ATM Deposit -12/12 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+	[1, 18, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  01/15
+	[2, 18, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  02/18
+$     50.00	12/13/2005, (# 347)	ATM Deposit -12/11 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+	[1, 18, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  01/15
+	[2, 18, 2005]	Redwood Plaza           Vallejo       CA 7156	ATM Deposit -  02/18
+$    180.00	12/20/2005, (# 354)	ATM Deposit -12/18 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+===========
+$   2523.61 Total
+
+Grand Total=$   2523.61
+
+==============================
+All W2 Deposits have been accounted for however some of them may require re-classification.
+==============================
+
+General Deposit Analysis:
+
+(DepositsClassifications.bank_fee_rebate)
+
+$      2.00	01/07/2005, (#   7)	Discount For ACH Direct Deposits
+$      2.00	02/07/2005, (#  38)	Discount For ACH Direct Deposits
+$      2.00	04/07/2005, (#  97)	Discount For ACH Direct Deposits
+===========
+$      6.00 Total
+
+
+(DepositsClassifications.AllBusiness_Payroll)
+
+$   2212.15	11/16/2005, (# 320)	ATM Deposit -11/16 Mach ID 0445D San Bruno San Bruno Ca 7156
+$   3009.55	12/01/2005, (# 336)	Trinet Payroll 051125 00001041687 HornRay C
+$    527.50	12/05/2005, (# 340)	ATM Deposit -12/03 Mach ID 0585E 1499 N Main St Walnut Creek Ca 7156
+$    927.38	12/05/2005, (# 340)	ATM Deposit -12/04 Mach ID 2816B Redwood Plaza Vallejo Ca 7156
+===========
+$   6676.58 Total
+
+
+(DepositsClassifications.atm_deposit)
+
+$    100.00	01/10/2005, (#  10)	ATM Deposit -01/07 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     50.00	01/18/2005, (#  18)	ATM Deposit -01/15 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+$    342.50	01/21/2005, (#  21)	ATM Deposit -01/20 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+$    100.00	02/08/2005, (#  39)	ATM Deposit -02/07 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     50.00	02/18/2005, (#  49)	ATM Deposit -02/18 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     40.00	04/11/2005, (# 101)	ATM Deposit -04/08 Mach ID 2816B Redwood Plaza Vallejo Ca 7156
+$    192.09	04/26/2005, (# 116)	ATM Deposit -04/26 Mach ID 2666K 3111 Crow Canyon Pl San Ramon Ca 7156
+$     12.20	05/06/2005, (# 126)	ATM Deposit -05/06 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$    640.00	06/02/2005, (# 153)	ATM Deposit -06/02 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$    166.23	07/18/2005, (# 199)	ATM Deposit -07/15 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$    110.00	07/29/2005, (# 210)	ATM Deposit -07/29 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$     19.00	08/23/2005, (# 235)	ATM Deposit -08/23 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+$     30.00	09/22/2005, (# 265)	ATM Deposit -09/22 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+$    242.59	10/05/2005, (# 278)	ATM Deposit -10/05 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+$     35.00	10/19/2005, (# 292)	ATM Deposit -10/19 Mach ID 2030H 3112 Santa Rita Rd Pleasanton Ca 7156
+$     69.00	10/21/2005, (# 294)	ATM Deposit -10/21 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+$     45.00	11/14/2005, (# 318)	ATM Deposit -11/12 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$     50.00	12/13/2005, (# 347)	ATM Deposit -12/12 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+$     50.00	12/13/2005, (# 347)	ATM Deposit -12/11 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$    180.00	12/20/2005, (# 354)	ATM Deposit -12/18 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+===========
+$   2523.61 Total
+
+
+(DepositsClassifications.Visioneer_Payroll)
+
+$   3946.99	07/15/2005, (# 196)	Visioneer Inc Reg.Salary 071505 PRIMAX5764 Horn Ray
+$   3967.22	07/29/2005, (# 210)	Visioneer Inc Reg.Salary 072905 PRIMAX5764 Horn Ray
+$   3636.66	08/12/2005, (# 224)	Visioneer Inc Reg.Salary 081205 PRIMAX5764 Horn Ray
+$   1842.50	08/12/2005, (# 224)	ATM Deposit -08/11 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$   5070.71	08/26/2005, (# 238)	Visioneer Inc Reg.Salary 082605 PRIMAX5764 Horn Ray
+$   4809.12	09/09/2005, (# 252)	Visioneer Inc Reg.Salary 090905 PRIMAX5764 Horn Ray
+$   2659.22	09/23/2005, (# 266)	Visioneer Inc Reg.Salary 092305 PRIMAX5764 Horn Ray
+$   2607.80	10/07/2005, (# 280)	Visioneer Inc Reg.Salary 100705 PRIMAX5764 Horn Ray
+$   2607.81	10/21/2005, (# 294)	Visioneer Inc Reg.Salary 102105 PRIMAX5764 Horn Ray
+$   3122.31	11/04/2005, (# 308)	ATM Deposit -11/04 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+===========
+$  34270.34 Total
+
+
+(DepositsClassifications.purchase_return)
+
+$     45.09	01/18/2005, (#  18)	Check Crd Pur Rtrn 01/16 Best Buy 00001362 Fairfield Ca 
+$    199.22	04/11/2005, (# 101)	Check Crd Pur Rtrn 04/10 Best Buy 00001362 Fairfield Ca 
+$    238.13	07/08/2005, (# 189)	Check Crd Pur Rtrn 07/06 Compusa #777 Concord Ca 
+$     81.18	07/13/2005, (# 194)	Check Crd Pur Rtrn 07/11 Compusa #777 Concord Ca 
+$     81.55	07/14/2005, (# 195)	Check Crd Pur Rtrn 07/13 Compusa #777 Concord Ca 
+$    259.77	09/20/2005, (# 263)	Check Crd Pur Rtrn 09/19 Frys Electronics 24 Concord Ca 
+===========
+$    904.94 Total
+
+
+(DepositsClassifications.tax_fin_deposit)
+
+$   3686.15	02/25/2005, (#  56)	Tax Fin Services Deposit 022305 XXXXX0426 Horn
+===========
+$   3686.15 Total
+
+
+(DepositsClassifications.Indotronix_Payroll)
+
+$   3766.54	01/11/2005, (#  11)	Indotronix Inter Payroll 015661 K84000000002840 HornRay
+$   3281.24	01/25/2005, (#  25)	Indotronix Inter Payroll 036807 K84000000002840 HornRay
+$   3440.97	02/08/2005, (#  39)	Indotronix Inter Payroll 057845 K84000000002840 HornRay
+$   2652.62	02/22/2005, (#  53)	Indotronix Inter Payroll 078870 K84000000002840 HornRay
+$   1511.00	03/07/2005, (#  66)	ATM Deposit -03/04 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$      2.00	03/07/2005, (#  66)	Discount For ACH Direct Deposits
+$   2980.24	03/08/2005, (#  67)	Indotronix Inter Payroll 091217 K84000000002840 HornRay
+$   3447.10	03/22/2005, (#  81)	Indotronix Inter Payroll 112247 K84000000002840 HornRay
+$   3250.53	04/05/2005, (#  95)	Indotronix Inter Payroll 130577 K84000000002840 HornRay
+$   1092.20	04/12/2005, (# 102)	ATM Deposit -04/12 Mach ID 2666K 3111 Crow Canyon Pl San Ramon Ca 7156
+$   3053.94	04/19/2005, (# 109)	Indotronix Inter Payroll 151670 K84000000002840 HornRay
+$   2652.64	05/03/2005, (# 123)	Indotronix Inter Payroll 172720 K84000000002840 HornRay
+$   2652.63	05/17/2005, (# 137)	Indotronix Inter Payroll 193727 K84000000002840 HornRay
+$   2652.62	05/31/2005, (# 151)	Indotronix Inter Payroll 214625 K84000000002840 HornRay
+$   2652.63	06/14/2005, (# 165)	Indotronix Inter Payroll 235701 K84000000002840 HornRay
+$   2652.63	06/28/2005, (# 179)	Indotronix Inter Payroll 256816 K84000000002840 HornRay
+$   2935.05	07/05/2005, (# 186)	ATM Deposit -07/01 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$    193.26	07/05/2005, (# 186)	Check Crd Pur Rtrn 07/02 Best Buy 00001362 Fairfield Ca 
+$   1265.00	07/07/2005, (# 188)	ATM Deposit -07/06 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$   2645.86	12/14/2005, (# 348)	Indotronix Inter Payroll 503585 K84000000002840 HornRay
+$   3122.85	12/28/2005, (# 362)	Indotronix Inter Payroll 524557 K84000000002840 HornRay
+===========
+$  51903.55 Total
+
+$  99971.17 Grand Total
+
+==============================
+Total Withdrawals: $96204.06  
+================================================================================
+UNCLASSIFIED EXPENSES:
+01/10,Check Crd Purchase 01/08 Bby / Mht 00001354 Pleasant Hill Ca 
+02/07,Check Crd Purchase 02/05 Bby / Mht 00001354 Pleasant Hill Ca 
+02/09,Check Crd Purchase 02/08 The Vt Teddy Bear Co 800-988-8277 Vt 
+02/17,Check Crd Purchase 02/14 Core Services 831712 31Toulouse Fr 
+10/31,Check Crd Purchase 10/28 Opay Vallejo-Benicia J 800-4874567 Ca 
+10/31,Check Crd Purchase 10/28 Vallejo-Benicia Jdcl D 800-4874567 Ca 
+12/21,5248,378.15
+================================================================================
+================================================================================
+CLASSIFIED EXPENSES:
+
+$  18600.00 Total Withdrawals for WithdrawlsClassifications.business_rent
+
+$   2435.46 Total Withdrawals for WithdrawlsClassifications.business_meal
+
+$  22792.25 Total Withdrawals for WithdrawlsClassifications.business_travel
+
+$    181.00 Total Withdrawals for WithdrawlsClassifications.office_supplies
+
+$    289.69 Total Withdrawals for WithdrawlsClassifications.repairs
+
+$    216.81 Total Withdrawals for WithdrawlsClassifications.business_research
+
+$   8342.15 Total Withdrawals for WithdrawlsClassifications.advertising
+
+$     20.00 Total Withdrawals for WithdrawlsClassifications.medical_expense
+
+$   9299.59 Total Withdrawals for WithdrawlsClassifications.computer_hardware_software
+
+$   2973.51 Total Withdrawals for WithdrawlsClassifications.education_expenses
+
+$    177.27 Total Withdrawals for WithdrawlsClassifications.banking_fees
+
+$   4823.13 Total Withdrawals for WithdrawlsClassifications.insurance_and_fees
+
+$    292.98 Total Withdrawals for WithdrawlsClassifications.shipping_and_receiveing
+
+$   6734.69 Total Withdrawals for WithdrawlsClassifications.vehicle_purchase
+
+$    110.93 Total Withdrawals for WithdrawlsClassifications.business_entertainment
+
+$    145.35 Total Withdrawals for WithdrawlsClassifications.pet_expense
+
+$   2359.45 Total Withdrawals for WithdrawlsClassifications.business_utilities
+
+$  10217.35 Total Withdrawals for WithdrawlsClassifications.petty_cash
+
+$   4658.13 Total Withdrawals for WithdrawlsClassifications.petty_cash_paypal
+
+$    468.00 Total Withdrawals for WithdrawlsClassifications.legal_fees
+
+$  95137.74 Total Classified Withdrawals (VALIDATED)
+================================================================================
+
+
+
+================================================================================
+
+	WithdrawlsClassifications.business_rent
+
+$   1550.00	02/01/2005	5252
+$   1550.00	03/03/2005	5255
+$   1550.00	04/01/2005	Check #5258  David Stauffer Bills Rent
+$   1550.00	04/29/2005	Check #5259  David Stauffer Bills Rent
+$   1550.00	06/02/2005	Check #5262  David Stauffer Bills Rent
+$   1550.00	07/06/2005	5264
+$   1550.00	08/05/2005	Check #5266  David Stauffer Bills Rent
+$   1550.00	09/02/2005	Check #5268  David Stauffer Bills Rent
+$   1550.00	10/04/2005	Check #5269  David Stauffer Bills Rent
+$   1550.00	11/01/2005	5271
+$   1550.00	12/02/2005	Check #5273  David Stauffer Bills Rent
+$   1550.00	12/31/2005	5249
+
+===========
+$  18600.00 Total Withdrawals for WithdrawlsClassifications.business_rent
+
+	WithdrawlsClassifications.business_meal
+
+$     29.95	01/11/2005	Check Crd Purchase 01/10 Emetrix Online Sales 888-447-1175 Ut 
+$      1.68	01/21/2005	Check Crd Purchase 01/20 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	01/21/2005	Check Crd Purchase 01/20 Aramark Svcs Co Pacifi San Ramon Ca 
+$      5.14	01/24/2005	Check Crd Purchase 01/20 Aramark Svcs Co SBC SA San Ramon Ca 
+$      1.68	02/15/2005	Check Crd Purchase 02/14 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	02/15/2005	Check Crd Purchase 02/14 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	02/16/2005	Check Crd Purchase 02/15 Aramark Svcs Co Pacifi San Ramon Ca 
+$      8.69	02/16/2005	Check Crd Purchase 02/14 Aramark Svcs Co SBC SA San Ramon Ca 
+$      1.68	02/16/2005	Check Crd Purchase 02/15 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	02/17/2005	Check Crd Purchase 02/16 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	02/17/2005	Check Crd Purchase 02/16 Aramark Svcs Co Pacifi San Ramon Ca 
+$      5.20	02/17/2005	Check Crd Purchase 02/15 Aramark Svcs Co SBC SA San Ramon Ca 
+$      8.41	02/18/2005	Check Crd Purchase 02/16 Aramark Svcs Co SBC SA San Ramon Ca 
+$      1.68	03/11/2005	Check Crd Purchase 03/10 Aramark Svcs Co Pacifi San Ramon Ca 
+$      3.63	03/11/2005	Check Crd Purchase 03/10 Aramark Svcs Co Pacifi San Ramon Ca 
+$      5.40	03/14/2005	Check Crd Purchase 03/10 Aramark Svcs Co SBC SA San Ramon Ca 
+$      2.98	03/14/2005	Check Crd Purchase 03/10 Aramark Svcs Co SBC SA San Ramon Ca 
+$      1.68	03/14/2005	Check Crd Purchase 03/11 Aramark Svcs Co Pacifi San Ramon Ca 
+$      0.75	03/14/2005	Check Crd Purchase 03/11 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	03/14/2005	Check Crd Purchase 03/11 Aramark Svcs Co Pacifi San Ramon Ca 
+$     15.00	03/21/2005	Check Crd Purchase 03/18 Cache Creek Casino F&b Brook Ca 
+$      3.00	04/26/2005	Check Crd Purchase 04/25 Albertsons 7020 S6M San Ramon Ca 
+$      6.98	04/29/2005	Check Crd Purchase 04/27 Albertsons 7020 S6M San Ramon Ca 
+$      8.75	05/03/2005	Check Crd Purchase 05/01 Aramark Oakland Stadiu Oakland Ca 
+$     14.00	05/16/2005	Check Crd Purchase 05/15 Aramark Oakland Stadiu Oakland Ca 
+$      3.61	05/31/2005	Check Crd Purchase 05/30 Albertsons 7020 S6M San Ramon Ca 
+$      8.75	06/01/2005	Check Crd Purchase 05/31 Aramark Oakland Stadiu Oakland Ca 
+$      3.73	06/08/2005	Check Crd Purchase 06/06 Aramark Svcs Co SBC SA San Ramon Ca 
+$      3.73	06/09/2005	Check Crd Purchase 06/07 Aramark Svcs Co SBC SA San Ramon Ca 
+$     12.00	06/09/2005	Check Crd Purchase 06/08 Aramark Svc Co Pacific San Ramon Ca 
+$      3.40	06/10/2005	Check Crd Purchase 06/08 Aramark Svcs Co SBC SA San Ramon Ca 
+$      7.13	06/15/2005	Check Crd Purchase 06/13 Aramark Svcs Co SBC SA San Ramon Ca 
+$      3.57	06/16/2005	Check Crd Purchase 06/14 Aramark Svcs Co SBC SA San Ramon Ca 
+$      8.75	06/27/2005	Check Crd Purchase 06/25 Aramark Oakland Stadiu Oakland Ca 
+$      8.25	06/27/2005	Check Crd Purchase 06/25 Aramark Oakland Stadiu Oakland Ca 
+$     12.44	07/18/2005	Check Crd Purchase 07/14 Nob Hill #610 Pleasanton Ca 
+$     22.97	07/20/2005	Check Crd Purchase 07/18 Nob Hill #610 Pleasanton Ca 
+$      1.76	07/22/2005	Check Crd Purchase 07/20 Nob Hill #610 Pleasanton Ca 
+$     16.65	07/25/2005	Check Crd Purchase 07/21 Nob Hill #610 Pleasanton Ca 
+$    165.84	07/25/2005	Check Crd Purchase 07/22 Batteries & Bands #97 Sandy Ut 
+$      3.99	07/25/2005	Check Crd Purchase 07/22 Nob Hill #610 Pleasanton Ca 
+$     84.97	08/08/2005	Check Crd Purchase 08/05 Star Trek Las Vegas Nv 
+$     55.54	08/08/2005	Check Crd Purchase 08/07 America Las Vegas Nv 
+$     88.27	08/08/2005	Check Crd Purchase 08/04 Monte Carlo Blackstone Las Vegas Nv 
+$     27.84	08/08/2005	Check Crd Purchase 08/05 Orleans Fr Mkt Buffet Las Vegas Nv 
+$     16.11	08/08/2005	Check Crd Purchase 08/06 Star Trek Las Vegas Nv 
+$    190.00	08/08/2005	Check Crd Purchase 08/06 Ny-Ny Hotel Show TIC Las Vegas Nv 
+$     26.56	08/09/2005	Check Crd Purchase 08/07 Ihop #1601 32016016 Las Vegas Nv 
+$     28.42	08/09/2005	Check Crd Purchase 08/05 The NEW Frontier Resta 00001 Nv 
+$    895.00	08/09/2005	Check Crd Purchase 08/06 Soleil Sampler Sales # Las Vegas Nv 
+$      4.79	08/10/2005	Check Crd Purchase 08/08 Togo'S Pleasanton Ca 
+$      8.12	08/18/2005	Check Crd Purchase 08/16 Nob Hill #610 Pleasanton Ca 
+$      9.78	08/22/2005	Check Crd Purchase 08/19 Nob Hill #610 Pleasanton Ca 
+$      4.79	08/24/2005	Check Crd Purchase 08/22 Togo'S Pleasanton Ca 
+$      3.79	08/29/2005	Check Crd Purchase 08/25 Nob Hill #610 Pleasanton Ca 
+$      9.03	08/31/2005	Check Crd Purchase 08/29 Nob Hill #610 Pleasanton Ca 
+$      5.24	09/06/2005	Check Crd Purchase 09/01 Nob Hill #610 Pleasanton Ca 
+$      6.68	09/06/2005	Check Crd Purchase 09/02 Nob Hill #610 Pleasanton Ca 
+$      8.73	09/08/2005	Check Crd Purchase 09/06 Nob Hill #610 Pleasanton Ca 
+$      7.20	09/12/2005	Check Crd Purchase 09/09 Nob Hill #610 Pleasanton Ca 
+$     15.37	09/12/2005	Check Crd Purchase 09/08 Nob Hill #610 Pleasanton Ca 
+$     56.69	09/12/2005	Check Crd Purchase 09/09 Jillian'S #41 San Francisc Ca 
+$     17.85	09/14/2005	Check Crd Purchase 09/12 Nob Hill #610 Pleasanton Ca 
+$     17.60	09/15/2005	Check Crd Purchase 09/13 Nob Hill #610 Pleasanton Ca 
+$      8.16	09/19/2005	Check Crd Purchase 09/15 Nob Hill #610 Pleasanton Ca 
+$      5.24	09/21/2005	Check Crd Purchase 09/19 Nob Hill #610 Pleasanton Ca 
+$      1.45	09/22/2005	Check Crd Purchase 09/20 Nob Hill #610 Pleasanton Ca 
+$     16.13	09/30/2005	Check Crd Purchase 09/28 Nob Hill #610 Pleasanton Ca 
+$      1.45	10/03/2005	Check Crd Purchase 09/30 Nob Hill #610 Pleasanton Ca 
+$     18.51	10/06/2005	Check Crd Purchase 10/04 Nob Hill #610 Pleasanton Ca 
+$      9.19	10/07/2005	Check Crd Purchase 10/05 Nob Hill #610 Pleasanton Ca 
+$      6.51	10/12/2005	Check Crd Purchase 10/10 Nob Hill #610 Pleasanton Ca 
+$      5.40	10/14/2005	Check Crd Purchase 10/12 Nob Hill #610 Pleasanton Ca 
+$     11.67	10/19/2005	Check Crd Purchase 10/17 Nob Hill #610 Pleasanton Ca 
+$      8.53	10/20/2005	Check Crd Purchase 10/18 Nob Hill #610 Pleasanton Ca 
+$      8.32	10/26/2005	Check Crd Purchase 10/24 Nob Hill #610 Pleasanton Ca 
+$     22.70	10/28/2005	Check Crd Purchase 10/26 Nob Hill #610 Pleasanton Ca 
+$     28.88	11/14/2005	Check Crd Purchase 11/11 Chili'S Grill 00000570 San Bruno Ca 
+$     24.90	11/14/2005	Check Crd Purchase 11/09 Thai Nakorn Restaurant San Bruno Ca 
+$     20.81	11/21/2005	Check Crd Purchase 11/18 Chili'S Grill 00000570 San Bruno Ca 
+$     35.64	11/28/2005	Check Crd Purchase 11/24 Boston Market #1961 Pleasant Hill Ca 
+$     19.54	12/05/2005	Check Crd Purchase 12/02 Chili'S Grill 00000570 San Bruno Ca 
+$      1.68	12/08/2005	Check Crd Purchase 12/07 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	12/08/2005	Check Crd Purchase 12/07 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	12/09/2005	Check Crd Purchase 12/08 Aramark Svcs Co Pacifi San Ramon Ca 
+$      5.40	12/09/2005	Check Crd Purchase 12/07 Aramark Svcs Co SBC SA San Ramon Ca 
+$      1.68	12/09/2005	Check Crd Purchase 12/08 Aramark Svcs Co Pacifi San Ramon Ca 
+$      8.41	12/09/2005	Check Crd Purchase 12/06 Aramark Svcs Co SBC SA San Ramon Ca 
+$      8.41	12/10/2005	Check Crd Purchase 12/08 Aramark Svcs Co SBC SA San Ramon Ca 
+$      1.68	12/13/2005	Check Crd Purchase 12/10 Aramark Svcs Co Pacifi San Ramon Ca 
+$     49.15	12/13/2005	Check Crd Purchase 12/09 Back Forty Texas Bbq P Pleasant Hill Ca 
+$      5.95	12/13/2005	Check Crd Purchase 12/10 Aramark Svcs Co SBC SA San Ramon Ca 
+$      3.36	12/13/2005	Check Crd Purchase 12/10 Aramark Svcs Co SBC SA San Ramon Ca 
+$      1.68	12/13/2005	Check Crd Purchase 12/10 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	12/13/2005	Check Crd Purchase 12/09 Aramark Svcs Co Pacifi San Ramon Ca 
+$      5.40	12/13/2005	Check Crd Purchase 12/09 Aramark Svcs Co SBC SA San Ramon Ca 
+$      6.86	12/13/2005	Check Crd Purchase 12/03 Aramark Svcs Co SBC SA San Ramon Ca 
+$      1.68	12/14/2005	Check Crd Purchase 12/13 Aramark Svcs Co Pacifi San Ramon Ca 
+$      1.68	12/14/2005	Check Crd Purchase 12/13 Aramark Svcs Co Pacifi San Ramon Ca 
+$      6.22	12/15/2005	Check Crd Purchase 12/01 Aramark Svcs Co SBC SA San Ramon Ca 
+$      5.40	12/15/2005	Check Crd Purchase 12/02 Aramark Svcs Co SBC SA San Ramon Ca 
+$      8.41	12/15/2005	Check Crd Purchase 12/13 Aramark Svcs Co SBC SA San Ramon Ca 
+$     33.30	12/22/2005	Check Crd Purchase 12/19 Back Forty Texas Bbq P Pleasant Hill Ca 
+$      9.74	12/28/2005	Check Crd Purchase 12/27 Aramark Svcs Co Pacifi San Ramon Ca 
+
+===========
+$   2435.46 Total Withdrawals for WithdrawlsClassifications.business_meal
+
+	WithdrawlsClassifications.business_travel
+
+$    336.02	01/03/2005	Check Crd Purchase 01/02 Best Buy 00001362 Fairfield Ca 
+$     43.50	01/10/2005	Check Crd Purchase 01/07 Safeway STORE00009894 Vallejo Ca 
+$     30.00	01/10/2005	Check Crd Purchase 01/08 Ca Dot-Fastrak Toll Concord Ca 
+$     12.34	01/13/2005	Check Crd Purchase 01/11 Radio Shack 00132670 Vallejo Ca 
+$     51.72	01/18/2005	Check Crd Purchase 01/15 Safeway STORE00009894 Vallejo Ca 
+$      9.65	01/18/2005	Check Crd Purchase 01/15 Target 00003319 Vallejo Ca 
+$     15.02	01/18/2005	Check Crd Purchase 01/15 Cinnabon #094 Fairfeild Ca 
+$      1.08	01/18/2005	Check Crd Purchase 01/16 Target 00003319 Vallejo Ca 
+$    123.43	01/18/2005	Check Crd Purchase 01/15 Best Buy 00001362 Fairfield Ca 
+$    381.60	01/24/2005	Check Crd Purchase 01/21 Winningin The Cash Flo 303-4997064 Co 
+$     16.30	01/24/2005	Check Crd Purchase 01/22 Safeway STORE00009894 Vallejo Ca 
+$      8.78	01/24/2005	Check Crd Purchase 01/20 Safeway STORE00009894 Vallejo Ca 
+$      6.40	01/25/2005	Check Crd Purchase 01/23 O'Connor Lumber Ace Ha Vallejo Ca 
+$     30.00	01/26/2005	Check Crd Purchase 01/23 Ca Dot-Fastrak Toll Concord Ca 
+$     24.24	01/31/2005	Check Crd Purchase 01/28 Safeway STORE00009894 Vallejo Ca 
+$     25.99	01/31/2005	Check Crd Purchase 01/27 Walgreen 00031716 Vallejo Ca 
+$     33.25	01/31/2005	Check Crd Purchase 01/29 Chevys Val 2026 Vallejo Ca 
+$     17.26	01/31/2005	Check Crd Purchase 01/27 Walgreen 00031716 Vallejo Ca 
+$     40.00	01/31/2005	ATM Withdrawal -01/28 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     17.15	02/07/2005	Check Crd Purchase 02/05 The Home Depot 633 Vallejo Ca 
+$    200.00	02/07/2005	ATM Withdrawal -02/05 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+$     55.00	02/07/2005	Check Crd Purchase 02/04 Newcomb & Sons Inc Vallejo Ca 
+$     30.00	02/07/2005	Check Crd Purchase 02/05 Ca Dot-Fastrak Toll Concord Ca 
+$     31.80	02/07/2005	Check Crd Purchase 02/04 Safeway STORE00009894 Vallejo Ca 
+$     25.59	02/08/2005	Check Crd Purchase 02/06 Safeway STORE00009894 Vallejo Ca 
+$     10.00	02/09/2005	Check Crd Purchase 02/07 Safeway STORE00009894 Vallejo Ca 
+$      7.51	02/15/2005	Check Crd Purchase 02/13 Walgreen 00031716 Vallejo Ca 
+$     31.67	02/15/2005	Check Crd Purchase 02/13 Margaritas #2 Vallejo Ca 
+$      5.01	02/17/2005	Check Crd Purchase 02/15 Shell Oil 27425036608 San Romon Ca 
+$     23.83	02/18/2005	Check Crd Purchase 02/16 Safeway Fuel 10009686 Vallejo Ca 
+$     41.92	02/22/2005	Check Crd Purchase 02/18 Safeway STORE00009894 Vallejo Ca 
+$     28.96	02/22/2005	Check Crd Purchase 02/19 Petco Vallejo Ca 
+$     28.22	02/22/2005	Check Crd Purchase 02/19 Applebee'S VAL48288534 Vallejo Ca 
+$     32.24	02/22/2005	Check Crd Purchase 02/19 Safeway STORE00009894 Vallejo Ca 
+$     30.00	02/23/2005	Check Crd Purchase 02/19 Ca Dot-Fastrak Toll Concord Ca 
+$     40.00	02/25/2005	ATM Withdrawal -02/24 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     40.00	02/28/2005	ATM Withdrawal -02/27 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$      7.75	02/28/2005	ATM Purchase -02/27 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     23.17	02/28/2005	Check Crd Purchase 02/24 Safeway STORE00009894 Vallejo Ca 
+$     26.83	02/28/2005	Check Crd Purchase 02/27 Best Buy 00001362 Fairfield Ca 
+$     10.73	03/01/2005	Check Crd Purchase 02/27 Safeway STORE00009894 Vallejo Ca 
+$     53.66	03/07/2005	Check Crd Purchase 03/06 Best Buy 00001362 Fairfield Ca 
+$     30.00	03/07/2005	Check Crd Purchase 03/03 Ca Dot-Fastrak Toll Concord Ca 
+$     45.81	03/07/2005	Check Crd Purchase 03/04 Safeway STORE00009894 Vallejo Ca 
+$    160.00	03/08/2005	ATM Withdrawal -03/07 Mach ID 2816B Redwood Plaza Vallejo Ca 7156
+$    353.40	03/08/2005	Check Crd Purchase 03/06 The Home Depot 633 Vallejo Ca 
+$     32.20	03/08/2005	Check Crd Purchase 03/06 Verizon Wrls 08935-01 Fairfield Ca 
+$    119.78	03/14/2005	Check Crd Purchase 03/12 Walgreen 00031716 Vallejo Ca 
+$     20.00	03/14/2005	Check Crd Purchase 03/11 Kaiser PERMANENTE21017 Vallejo Ca 
+$     59.40	03/14/2005	Check Crd Purchase 03/12 Safeway STORE00009894 Vallejo Ca 
+$    307.06	03/14/2005	Check Crd Purchase 03/12 Best Buy 00001362 Fairfield Ca 
+$     40.00	03/15/2005	ATM Withdrawal -03/14 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     30.00	03/21/2005	Check Crd Purchase 03/19 Ca Dot-Fastrak Toll Concord Ca 
+$     39.98	03/21/2005	Check Crd Purchase 03/19 Safeway STORE00009894 Vallejo Ca 
+$    100.00	03/21/2005	ATM Withdrawal -03/19 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     15.80	03/24/2005	Check Crd Purchase 03/22 Safeway STORE00009894 Vallejo Ca 
+$     19.10	03/25/2005	Check Crd Purchase 03/23 Kaiser 021 Vallejo Ca 
+$      6.42	03/28/2005	Check Crd Purchase 03/24 Walgreen 00031716 Vallejo Ca 
+$     56.31	03/28/2005	Check Crd Purchase 03/25 Autozone #5696 Vallejo Ca 
+$     19.10	03/28/2005	Check Crd Purchase 03/26 Pizza H011699 01200880 Vallejo Ca 
+$      8.58	03/29/2005	Check Crd Purchase 03/27 Safeway STORE00009894 Vallejo Ca 
+$     41.60	03/29/2005	Check Crd Purchase 03/27 Walgreen 00031716 Vallejo Ca 
+$     42.94	03/29/2005	Check Crd Purchase 03/27 Albertsons #7254 S6M Vallejo Ca 
+$     59.35	03/30/2005	Check Crd Purchase 03/28 Safeway STORE00009894 Vallejo Ca 
+$     17.99	04/04/2005	Check Crd Purchase 04/01 Hertz Rent-A-Car Vallejo Ca 
+$      8.57	04/04/2005	Check Crd Purchase 04/02 Radio Shack 00132670 Vallejo Ca 
+$     29.58	04/04/2005	Check Crd Purchase 04/02 Safeway STORE00009894 Vallejo Ca 
+$     36.55	04/04/2005	Check Crd Purchase 04/02 Red Robin #354 Fairfield Ca 
+$     30.57	04/04/2005	Check Crd Purchase 04/01 Best Buy 00001362 Fairfield Ca 
+$     30.00	04/08/2005	Check Crd Purchase 04/06 Ca Dot-Fastrak Toll Concord Ca 
+$     20.00	04/08/2005	Check Crd Purchase 04/06 Kaiser PERMANENTE21034 Vallejo Ca 
+$     31.84	04/11/2005	Check Crd Purchase 04/09 Outback #0532 Pinole Ca 
+$     18.00	04/11/2005	Check Crd Purchase 04/07 Budget Rent A Car Concord Ca 
+$     10.00	04/11/2005	Check Crd Purchase 04/07 Kaiser 021 Vallejo Ca 
+$     49.55	04/11/2005	Check Crd Purchase 04/08 Safeway STORE00009894 Vallejo Ca 
+$    214.74	04/11/2005	Check Crd Purchase 04/09 Best Buy 00001362 Fairfield Ca 
+$    231.89	04/11/2005	Check Crd Purchase 04/10 Best Buy 00001362 Fairfield Ca 
+$     20.38	04/12/2005	Check Crd Purchase 04/10 The Home Depot 633 Vallejo Ca 
+$     15.22	04/12/2005	Check Crd Purchase 04/10 Albertsons #7254 S6M Vallejo Ca 
+$     27.66	04/12/2005	Check Crd Purchase 04/10 Safeway STORE00009894 Vallejo Ca 
+$     38.01	04/15/2005	Check Crd Purchase 04/13 Safeway Fuel 10009686 Vallejo Ca 
+$    100.00	04/15/2005	ATM Withdrawal -04/14 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     84.83	04/18/2005	Check Crd Purchase 04/17 Target 00003319 Vallejo Ca 
+$     18.24	04/18/2005	Check Crd Purchase 04/16 Albertsons #7254 S6M Vallejo Ca 
+$     11.03	04/18/2005	Check Crd Purchase 04/14 Safeway STORE00009894 Vallejo Ca 
+$     91.23	04/18/2005	Check Crd Purchase 04/16 Best Buy 00001362 Fairfield Ca 
+$     48.42	04/18/2005	Check Crd Purchase 04/15 Safeway STORE00009894 Vallejo Ca 
+$     31.62	04/19/2005	Check Crd Purchase 04/17 Albertsons #7254 S6M Vallejo Ca 
+$     30.00	04/19/2005	Check Crd Purchase 04/16 Ca Dot-Fastrak Toll Concord Ca 
+$     17.36	04/19/2005	Check Crd Purchase 04/18 Albertsons #7254 S6M Vallejo Ca 
+$     10.00	04/20/2005	Check Crd Purchase 04/18 Kaiser 021 Vallejo Ca 
+$     54.60	04/25/2005	Check Crd Purchase 04/22 Albertsons #7254 S6M Vallejo Ca 
+$     17.56	04/27/2005	Check Crd Purchase 04/26 Albertsons #7254 S6M Vallejo Ca 
+$     32.47	04/29/2005	Check Crd Purchase 04/28 Albertsons #7254 S6M Vallejo Ca 
+$     30.00	05/02/2005	Check Crd Purchase 04/29 Ca Dot-Fastrak Toll Concord Ca 
+$     32.06	05/02/2005	Check Crd Purchase 04/30 Albertsons #7254 S6M Vallejo Ca 
+$     19.06	05/02/2005	Check Crd Purchase 04/30 The Home Depot 633 Vallejo Ca 
+$      8.25	05/03/2005	Check Crd Purchase 05/01 Safeway STORE00009894 Vallejo Ca 
+$     44.25	05/04/2005	Check Crd Purchase 05/03 Albertsons #7254 S6M Vallejo Ca 
+$     47.61	05/06/2005	Check Crd Purchase 05/05 Albertsons #7254 S6M Vallejo Ca 
+$     21.46	05/09/2005	Check Crd Purchase 05/07 Pizza H011698 01200872 Vallejo Ca 
+$    136.34	05/09/2005	Check Crd Purchase 05/07 Best Buy 00001362 Fairfield Ca 
+$      3.60	05/09/2005	Check Crd Purchase 05/06 Albertsons #7254 S6M Vallejo Ca 
+$     37.75	05/10/2005	Check Crd Purchase 05/09 Albertsons #7254 S6M Vallejo Ca 
+$     32.52	05/13/2005	Check Crd Purchase 05/11 Albertsons #7254 S6M Vallejo Ca 
+$     30.00	05/13/2005	Check Crd Purchase 05/11 Ca Dot-Fastrak Toll Concord Ca 
+$     80.00	05/16/2005	ATM Withdrawal -05/14 Mach ID 6458R 4300 Sonoma Blvd Ste 5 Vallejo Ca 7156
+$     10.50	05/16/2005	Check Crd Purchase 05/13 Loews Metreon #325 San Francisco Ca 
+$      9.49	05/16/2005	Check Crd Purchase 05/13 Loews Metreon #325 San Francisco Ca 
+$    368.87	05/16/2005	Check Crd Purchase 05/13 Playstationsf San Francisco Ca 
+$     57.17	05/17/2005	Check Crd Purchase 05/15 Outback #0532 Pinole Ca 
+$     42.76	05/18/2005	Check Crd Purchase 05/16 Albertsons #7254 S6M Vallejo Ca 
+$     32.35	05/19/2005	Check Crd Purchase 05/18 Albertsons #7254 S6M Vallejo Ca 
+$     30.00	05/23/2005	Check Crd Purchase 05/21 Ca Dot-Fastrak Toll Concord Ca 
+$     39.45	05/23/2005	Check Crd Purchase 05/19 Safeway Fuel 10009686 Vallejo Ca 
+$     11.80	05/23/2005	Check Crd Purchase 05/21 Pizza H011698 01200872 Vallejo Ca 
+$    123.20	05/23/2005	Check Crd Purchase 05/22 Target 00003319 Vallejo Ca 
+$     33.90	05/24/2005	Check Crd Purchase 05/22 Albertsons #7254 S6M Vallejo Ca 
+$     38.92	05/24/2005	Check Crd Purchase 05/22 The Home Depot 633 Vallejo Ca 
+$     13.28	05/25/2005	Check Crd Purchase 05/24 Albertsons #7254 S6M Vallejo Ca 
+$     57.23	05/31/2005	Check Crd Purchase 05/29 Albertsons #7254 S6M Vallejo Ca 
+$     40.06	05/31/2005	Check Crd Purchase 05/26 Albertsons #7254 S6M Vallejo Ca 
+$     62.72	05/31/2005	Check Crd Purchase 05/28 Speedee Oil Change&tun Vallejo Ca 
+$     37.87	06/03/2005	Check Crd Purchase 06/02 Albertsons #7254 S6M Vallejo Ca 
+$     16.07	06/06/2005	Check Crd Purchase 06/04 The Pepboys 00008151 Vallejo Ca 
+$     17.78	06/06/2005	Check Crd Purchase 06/04 Safeway STORE00009894 Vallejo Ca 
+$     30.00	06/06/2005	Check Crd Purchase 06/04 Fastrak Csc 01 Of 877-2298655 Ca 
+$    437.97	06/08/2005	Check Crd Purchase 06/06 3 Day Blinds Inc 046 Vallejo Ca 
+$     54.62	06/09/2005	Check Crd Purchase 06/07 Albertsons #7254 S6M Vallejo Ca 
+$     20.34	06/10/2005	Check Crd Purchase 06/09 Albertsons #7254 S6M Vallejo Ca 
+$    232.96	06/13/2005	Check Crd Purchase 06/10 Best Buy 00001362 Fairfield Ca 
+$     34.35	06/13/2005	Check Crd Purchase 06/11 Pasta Pomodoro #2020 Vallejo Ca 
+$     60.00	06/14/2005	Check Crd Purchase 06/13 Fastrak Csc 01 Of 877-2298655 Ca 
+$     35.18	06/15/2005	Check Crd Purchase 06/14 Albertsons #7254 S6M Vallejo Ca 
+$     27.58	06/20/2005	Check Crd Purchase 06/18 Albertsons #7254 S6M Vallejo Ca 
+$    630.22	06/20/2005	Check Crd Purchase 06/17 Best Buy 00001362 Fairfield Ca 
+$     40.00	06/21/2005	ATM Withdrawal -06/21 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$      7.85	06/21/2005	ATM Purchase -06/21 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     71.94	06/21/2005	Check Crd Purchase 06/19 Albertsons #7254 S6M Vallejo Ca 
+$      2.45	06/24/2005	Check Crd Purchase 06/23 Albertsons #7254 S6M Vallejo Ca 
+$     36.39	06/27/2005	Check Crd Purchase 06/24 Albertsons #7254 S6M Vallejo Ca 
+$     58.99	06/27/2005	Check Crd Purchase 06/26 Toys For Fun Fairfield Ca 
+$    100.00	06/27/2005	ATM Withdrawal -06/27 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     74.60	06/28/2005	Check Crd Purchase 06/27 Best Buy 00001362 Fairfield Ca 
+$     18.95	06/29/2005	Check Crd Purchase 06/27 Safeway STORE00009894 Vallejo Ca 
+$      5.89	07/05/2005	Check Crd Purchase 07/02 Best Buy 00001362 Fairfield Ca 
+$      9.62	07/05/2005	Check Crd Purchase 07/02 Albertsons #7254 S6M Vallejo Ca 
+$     60.00	07/05/2005	Check Crd Purchase 07/01 Fastrak Csc 01 Of 877-2298655 Ca 
+$     54.11	07/05/2005	Check Crd Purchase 07/03 Best Buy 00001388 Pinole Ca 
+$     62.25	07/05/2005	Check Crd Purchase 07/02 Best Buy 00001362 Fairfield Ca 
+$     46.39	07/05/2005	Check Crd Purchase 07/01 Safeway STORE00009894 Vallejo Ca 
+$    238.13	07/05/2005	Check Crd Purchase 07/02 Compusa #777 Concord Ca 
+$    193.26	07/05/2005	Check Crd Purchase 07/02 Best Buy 00001362 Fairfield Ca 
+$      7.98	07/07/2005	Check Crd Purchase 07/05 Albertsons #7254 S6M Vallejo Ca 
+$     10.00	07/08/2005	Check Crd Purchase 07/06 Kaiser 021 Vallejo Ca 
+$    100.00	07/11/2005	ATM Withdrawal -07/10 Mach ID 2816B Redwood Plaza Vallejo Ca 7156
+$     41.92	07/11/2005	Check Crd Purchase 07/07 Safeway Fuel 10009686 Vallejo Ca 
+$    183.99	07/11/2005	Check Crd Purchase 07/08 Compusa #777 Concord Ca 
+$     53.83	07/11/2005	Check Crd Purchase 07/08 Albertsons #7254 S6M Vallejo Ca 
+$     38.34	07/12/2005	Check Crd Purchase 07/10 Red Robin #354 Fairfield Ca 
+$      6.55	07/12/2005	Check Crd Purchase 07/11 Albertsons #7254 S6M Vallejo Ca 
+$     21.63	07/13/2005	Check Crd Purchase 07/11 Compusa #777 Concord Ca 
+$      8.19	07/14/2005	Check Crd Purchase 07/12 Albertsons #7254 S6M Vallejo Ca 
+$    643.60	07/15/2005	Check Crd Purchase 07/13 Jetblue J3J2Lp Darien Ct 
+$    177.00	07/18/2005	Check Crd Purchase 07/16 Vallejo Optometry Grou Vallejo Ca 
+$     16.21	07/18/2005	Check Crd Purchase 07/15 Albertsons #7254 S6M Vallejo Ca 
+$     75.53	07/18/2005	Check Crd Purchase 07/17 Jcpenney Store 0334 Fairfield Ca 
+$     30.42	07/18/2005	Check Crd Purchase 07/16 Albertsons #7254 S6M Vallejo Ca 
+$      4.80	07/18/2005	Check Crd Purchase 07/16 Bart-El Cerrito Del Nr 5104646979 Ca 
+$     24.69	07/18/2005	Check Crd Purchase 07/17 Kohl'S #0763 Vallejo Ca 
+$    110.16	07/18/2005	Check Crd Purchase 07/16 Target 00003319 Vallejo Ca 
+$    161.00	07/19/2005	Check Crd Purchase 07/17 Sears Roebuck 1159 Fairfield Ca 
+$     44.11	07/19/2005	Check Crd Purchase 07/17 The Olive GARD00014183 Vallejo Ca 
+$     30.82	07/19/2005	Check Crd Purchase 07/17 Albertsons #7254 S6M Vallejo Ca 
+$     28.34	07/25/2005	Check Crd Purchase 07/23 Albertsons #7254 S6M Vallejo Ca 
+$     60.00	07/25/2005	Check Crd Purchase 07/24 Fastrak Csc 01 Of 877-2298655 Ca 
+$     16.10	07/27/2005	Check Crd Purchase 07/26 Albertsons #7254 S6M Vallejo Ca 
+$    149.25	07/29/2005	Check Crd Purchase 07/27 The Home Depot 633 Vallejo Ca 
+$    110.48	07/29/2005	Check Crd Purchase 07/27 The Home Depot 633 Vallejo Ca 
+$     38.39	08/01/2005	Check Crd Purchase 07/30 Albertsons #7254 S6M Vallejo Ca 
+$    178.00	08/01/2005	Check Crd Purchase 07/30 Vallejo Optometry Grou Vallejo Ca 
+$    288.69	08/01/2005	POS Purchase -07/30 Mach ID 000000 Pet Club # 9 Pet Club #Fairfield Ca 7156 
+$     64.38	08/01/2005	Check Crd Purchase 07/30 Best Buy 00001362 Fairfield Ca 
+$      8.76	08/01/2005	Check Crd Purchase 07/30 UPS StoreThe Fairfield Ca 
+$    225.40	08/08/2005	Check Crd Purchase 08/05 Alamo Rent-A-Car Las Vegas Nv 
+$     40.70	08/10/2005	Check Crd Purchase 08/08 Albertsons #7254 S6M Vallejo Ca 
+$     12.34	08/15/2005	Check Crd Purchase 08/14 Best Buy 00001362 Fairfield Ca 
+$    100.00	08/15/2005	ATM Withdrawal -08/13 Mach ID 8459N Pinole Vista Pinole Ca 7156
+$    129.90	08/15/2005	Check Crd Purchase 08/13 Best Buy 00001362 Fairfield Ca 
+$     16.85	08/15/2005	Check Crd Purchase 08/13 The Home Depot 633 Vallejo Ca 
+$     17.98	08/17/2005	Check Crd Purchase 08/15 Albertsons #7254 S6M Vallejo Ca 
+$    200.00	08/19/2005	ATM Withdrawal -08/18 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     64.35	08/22/2005	Check Crd Purchase 08/20 Hungry Hunter 210732 Fairfield Ca 
+$    751.60	08/22/2005	Check Crd Purchase 08/20 Best Buy 00001362 Fairfield Ca 
+$    182.49	08/23/2005	Check Crd Purchase 08/21 Best Buy 00001362 Fairfield Ca 
+$     21.77	08/23/2005	Check Crd Purchase 08/21 Albertsons #7254 S6M Vallejo Ca 
+$     60.00	08/25/2005	Check Crd Purchase 08/23 Fastrak Csc 01 Of 877-2298655 Ca 
+$     26.77	08/26/2005	Check Crd Purchase 08/24 Albertsons #7254 S6M Vallejo Ca 
+$    732.97	08/29/2005	Check Crd Purchase 08/27 Best Buy 00001362 Fairfield Ca 
+$     29.23	08/29/2005	Check Crd Purchase 08/27 Red Robin #354 Fairfield Ca 
+$     48.31	08/29/2005	Check Crd Purchase 08/28 Best Buy 00001362 Fairfield Ca 
+$     55.81	08/30/2005	Check Crd Purchase 08/28 Albertsons #7254 S6M Vallejo Ca 
+$     21.46	09/06/2005	Check Crd Purchase 09/03 Verizon Wrls 08935-01 Fairfield Ca 
+$     85.50	09/06/2005	Check Crd Purchase 09/04 Budget Rent-A-Car Ryde Vallejo Ca 
+$     42.47	09/06/2005	Check Crd Purchase 09/04 Albertsons #7254 S6M Vallejo Ca 
+$    493.15	09/06/2005	Check Crd Purchase 09/03 Verizon Wrls 08935-01 Fairfield Ca 
+$     16.90	09/06/2005	Check Crd Purchase 09/01 Safeway STORE00009894 Vallejo Ca 
+$    355.87	09/06/2005	POS Purchase -09/04 Mach ID 000000 Kohl'S #0763 11Kohl'S #07Vallejo Ca 7156 
+$     58.72	09/06/2005	Check Crd Purchase 09/04 Speedee Oil Change&tun Vallejo Ca 
+$     23.54	09/09/2005	Check Crd Purchase 09/08 Albertsons #7254 S6M Vallejo Ca 
+$     44.46	09/09/2005	Check Crd Purchase 09/07 Safeway Fuel 10009686 Vallejo Ca 
+$    148.11	09/12/2005	Check Crd Purchase 09/11 Best Buy 00001362 Fairfield Ca 
+$     41.88	09/12/2005	POS Purchase -09/10 Mach ID 000000 Winco Foods 855Winco Foodvacaville Ca 7156 
+$   1716.30	09/13/2005	Check Crd Purchase 09/12 Compusa #777 Concord Ca 
+$    259.77	09/19/2005	Check Crd Purchase 09/18 Frys Electronics 24 Concord Ca 
+$     75.00	09/19/2005	Check Crd Purchase 09/17 Fastrak Csc 01 Of 877-2298655 Ca 
+$    400.00	09/19/2005	ATM Withdrawal -09/18 Mach ID 2816B Redwood Plaza Vallejo Ca 7156
+$     17.81	09/19/2005	Check Crd Purchase 09/16 Albertsons #7254 S6M Vallejo Ca 
+$     13.87	09/20/2005	Check Crd Purchase 09/18 The Home Depot 633 Vallejo Ca 
+$      9.28	09/23/2005	Check Crd Purchase 09/21 Albertsons #7254 S6M Vallejo Ca 
+$    395.08	09/26/2005	Check Crd Purchase 09/23 Frys Electronics 24 Concord Ca 
+$     32.90	09/26/2005	Check Crd Purchase 09/24 Albertsons #7254 S6M Vallejo Ca 
+$    256.59	09/26/2005	Check Crd Purchase 09/24 Best Buy 00001362 Fairfield Ca 
+$     16.45	09/27/2005	Check Crd Purchase 09/25 Kaiser 021 Vallejo Ca 
+$    132.05	09/27/2005	Check Crd Purchase 09/26 Frys Electronics 24 Concord Ca 
+$    173.93	10/03/2005	Check Crd Purchase 10/02 Best Buy 00001362 Fairfield Ca 
+$     32.19	10/03/2005	Check Crd Purchase 10/01 Best Buy 00001362 Fairfield Ca 
+$     27.31	10/03/2005	Check Crd Purchase 10/01 Albertsons #7254 S6M Vallejo Ca 
+$     49.88	10/04/2005	Check Crd Purchase 10/02 Albertsons #7254 S6M Vallejo Ca 
+$     23.94	10/07/2005	Check Crd Purchase 10/05 Albertsons #7254 S6M Vallejo Ca 
+$     76.19	10/11/2005	Check Crd Purchase 10/08 Best Buy 00001362 Fairfield Ca 
+$     27.98	10/11/2005	Check Crd Purchase 10/08 Albertsons #7254 S6M Vallejo Ca 
+$    139.58	10/11/2005	Check Crd Purchase 10/09 Best Buy 00001362 Fairfield Ca 
+$     48.15	10/11/2005	Check Crd Purchase 10/08 Best Buy 00001388 Pinole Ca 
+$     24.26	10/17/2005	Check Crd Purchase 10/14 Albertsons #7254 S6M Vallejo Ca 
+$     86.57	10/17/2005	Check Crd Purchase 10/16 Compusa #777 Concord Ca 
+$     75.00	10/19/2005	Check Crd Purchase 10/18 Fastrak Csc 01 Of 877-2298655 Ca 
+$     27.06	10/20/2005	Check Crd Purchase 10/18 Albertsons #7254 S6M Vallejo Ca 
+$     49.26	10/24/2005	Check Crd Purchase 10/22 Outback #0532 Pinole Ca 
+$     41.06	10/24/2005	Check Crd Purchase 10/22 Michaels #4741 Pinole Ca 
+$     53.68	10/24/2005	Check Crd Purchase 10/23 Best Buy 00001362 Fairfield Ca 
+$     75.73	10/24/2005	Check Crd Purchase 10/22 Compusa #777 Concord Ca 
+$     42.38	10/24/2005	Check Crd Purchase 10/22 Albertsons #7254 S6M Vallejo Ca 
+$    200.00	10/24/2005	ATM Withdrawal -10/24 Mach ID 2816B Redwood Plaza Vallejo Ca 7156
+$     69.39	10/26/2005	Check Crd Purchase 10/25 Target 00003319 Vallejo Ca 
+$     35.00	10/26/2005	Check Crd Purchase 10/24 Kaiser 021 Vallejo Ca 
+$      5.59	10/26/2005	Check Crd Purchase 10/25 USPS 0555110177 Vallejo Ca 
+$     41.15	10/28/2005	Check Crd Purchase 10/26 Albertsons #7254 S6M Vallejo Ca 
+$     58.27	10/31/2005	Check Crd Purchase 10/29 Albertsons #7254 S6M Vallejo Ca 
+$      1.49	10/31/2005	Check Crd Purchase 10/29 The Home Depot 633 Vallejo Ca 
+$     39.01	11/02/2005	Check Crd Purchase 10/31 Albertsons #7254 S6M Vallejo Ca 
+$     64.20	11/08/2005	Check Crd Purchase 11/06 Albertsons #7254 S6M Vallejo Ca 
+$     42.94	11/14/2005	Check Crd Purchase 11/13 Target 00003319 Vallejo Ca 
+$     45.18	11/14/2005	Check Crd Purchase 11/12 Target 00003319 Vallejo Ca 
+$    603.38	11/15/2005	Check Crd Purchase 11/13 Verizon Wrls 08935-01 Fairfield Ca 
+$     10.68	11/15/2005	Check Crd Purchase 11/13 Barnes & Noble #2018 Fairfield Ca 
+$    100.00	11/15/2005	ATM Withdrawal -11/14 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     41.70	11/17/2005	Check Crd Purchase 11/15 Albertsons #7254 S6M Vallejo Ca 
+$     91.23	11/21/2005	Check Crd Purchase 11/19 Best Buy 00001362 Fairfield Ca 
+$     64.41	11/21/2005	Check Crd Purchase 11/19 Best Buy 00001362 Fairfield Ca 
+$    137.37	11/22/2005	Check Crd Purchase 11/20 Albertsons #7254 S6M Vallejo Ca 
+$     81.43	11/22/2005	Check Crd Purchase 11/20 The Home Depot 633 Vallejo Ca 
+$     48.61	11/28/2005	Check Crd Purchase 11/25 Raleys #332 Fairfield Ca 
+$     82.00	11/29/2005	Check Crd Purchase 11/27 Safeway STORE00009894 Vallejo Ca 
+$     11.55	11/29/2005	Check Crd Purchase 11/27 Safeway STORE00009894 Vallejo Ca 
+$     21.00	12/05/2005	Check Crd Purchase 12/03 Kaiser 021 Vallejo Ca 
+$     66.87	12/05/2005	Check Crd Purchase 12/03 Albertsons #7254 S6M Vallejo Ca 
+$     22.65	12/09/2005	Check Crd Purchase 12/07 Safeway Fuel 10009686 Vallejo Ca 
+$     40.00	12/13/2005	ATM Withdrawal -12/12 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+$     42.34	12/13/2005	Check Crd Purchase 12/11 Safeway STORE00009894 Vallejo Ca 
+$     15.75	12/13/2005	Check Crd Purchase 12/11 Radio Shack 00132670 Vallejo Ca 
+$     25.53	12/13/2005	Check Crd Purchase 12/11 Safeway Fuel 10009686 Vallejo Ca 
+$     68.14	12/14/2005	Check Crd Purchase 12/12 Radio Shack 00132670 Vallejo Ca 
+$     20.55	12/20/2005	Check Crd Purchase 12/18 Safeway STORE00009894 Vallejo Ca 
+$     40.00	12/20/2005	ATM Withdrawal -12/18 Mach ID 2822D Redwood Plaza Vallejo Ca 7156
+$     22.07	12/23/2005	Check Crd Purchase 12/21 Safeway Fuel 10009686 Vallejo Ca 
+$      7.99	12/23/2005	Check Crd Purchase 12/21 Safeway STORE00009688 Vallejo Ca 
+$     30.00	12/24/2005	Check Crd Purchase 12/22 Ca Dot-Fastrak Toll Concord Ca 
+$     40.00	12/24/2005	ATM Withdrawal -12/24 Mach ID 2816C Redwood Plaza Vallejo Ca 7156
+$     17.16	12/30/2005	Check Crd Purchase 12/28 Safeway STORE00009894 Vallejo Ca 
+$     27.75	12/31/2005	Check Crd Purchase 12/29 Safeway STORE00009894 Vallejo Ca 
+$     26.21	12/31/2005	Check Crd Purchase 12/29 Safeway STORE00009894 Vallejo Ca 
+
+===========
+$  22792.25 Total Withdrawals for WithdrawlsClassifications.business_travel
+
+	WithdrawlsClassifications.office_supplies
+
+$    181.00	07/22/2005	Check #5265 Invoice #1183 Silverado Valley Electric Office Maintenance
+
+===========
+$    181.00 Total Withdrawals for WithdrawlsClassifications.office_supplies
+
+	WithdrawlsClassifications.repairs
+
+$    145.01	07/19/2005	Check Crd Purchase 07/16 Orchard Supply #291 El Cerrito Ca 
+$    144.68	08/24/2005	Check Crd Purchase 08/22 Sears Roebuck 8368 800-676-5543 Ca 
+
+===========
+$    289.69 Total Withdrawals for WithdrawlsClassifications.repairs
+
+	WithdrawlsClassifications.business_research
+
+$     32.46	03/02/2005	Check Crd Purchase 02/28 Barnes & Noble #2644 Pleasant Hill Ca 
+$     67.91	08/26/2005	Check Crd Purchase 08/24 Eve-Online Services Reykjavik Is 
+$     23.54	08/30/2005	Check Crd Purchase 08/29 Gamefly 888-986-6400 Ca 
+$     23.54	09/30/2005	Check Crd Purchase 09/29 Gamefly 888-986-6400 Ca 
+$     23.54	10/31/2005	Check Crd Purchase 10/29 Gamefly 888-986-6400 Ca 
+$      7.26	10/31/2005	Check Crd Purchase 10/30 Gamefly 888-986-6400 Ca 
+$     38.56	11/30/2005	Check Crd Purchase 11/29 Gamefly 888-986-6400 Ca 
+
+===========
+$    216.81 Total Withdrawals for WithdrawlsClassifications.business_research
+
+	WithdrawlsClassifications.advertising
+
+$     39.95	01/03/2005	Check Crd Purchase 01/02 Clkbank*com Download 800-390-6035 ID 
+$    102.01	01/18/2005	Vz Wireless Vw Vz Serve 050116 Gwen *clark
+$    127.91	01/18/2005	Check Crd Purchase 01/16 Comcast Cable Comm 800-Comcast Ca 
+$     21.60	01/18/2005	Check Crd Purchase 01/16 WWW.Softwrap.Com www.softwrap. Gb 
+$     32.20	01/18/2005	Check Crd Purchase 01/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$      5.60	01/18/2005	Check Crd Purchase 01/14 Sologig/Careerbuilder 888-688-2237 Il 
+$    217.52	01/18/2005	Check Crd Purchase 01/15 SBC Consumer Ph Pmt-Ca 800-750-2355 Tx 
+$     43.33	01/26/2005	Check Crd Purchase 01/25 Sologig/Careerbuilder 888-6882237 Il 
+$   2694.00	01/31/2005	Check Crd Purchase 01/30 America'S S Note Netwo 888-499-7064 Co 
+$     19.95	02/02/2005	Check Crd Purchase 02/01 Careerbuilder Com 773-5273600 Il 
+$     79.98	02/02/2005	Check Crd Purchase 02/01 Careerbuilder Com 773-5273600 Il 
+$     19.95	02/02/2005	Check Crd Purchase 02/01 Careerbuilder Com 773-5273600 Il 
+$    150.00	02/04/2005	Check Crd Purchase 02/03 Careerbuilder Com 773-5273600 Il 
+$    141.96	02/16/2005	Check Crd Purchase 02/14 Dr *sonic Solutions Orderfind.Com MN 
+$    116.42	02/17/2005	Check Crd Purchase 02/17 Comcast Cable Comm 800-Comcast Ca 
+$     32.20	02/18/2005	Check Crd Purchase 02/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     43.33	02/28/2005	Check Crd Purchase 02/25 Sologig/Careerbuilder 888-6882237 Il 
+$    118.86	03/07/2005	Check Crd Purchase 03/06 Comcast Cable Comm 800-Comcast Ca 
+$      9.99	03/07/2005	Check Crd Purchase 03/05 Monster Products 800-Monster Ma 
+$     44.99	03/08/2005	Check Crd Purchase 03/04 Dr *sonic Solutions Orderfind.Com MN 
+$     32.20	03/18/2005	Check Crd Purchase 03/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     19.95	03/25/2005	Check Crd Purchase 03/24 Careerbuilder Com 773-5273600 Il 
+$     43.33	03/28/2005	Check Crd Purchase 03/25 Sologig/Careerbuilder 888-6882237 Il 
+$    128.03	03/29/2005	Check Crd Purchase 03/29 Comcast Cable Comm 800-Comcast Ca 
+$    128.03	04/04/2005	Check Crd Purchase 04/02 Comcast Cable Comm 800-Comcast Ca 
+$      9.99	04/06/2005	Check Crd Purchase 04/05 Monster Products 800-Monster Ma 
+$     49.95	04/11/2005	Check Crd Purchase 04/10 Eharmony.Com 800-263-6133 Ca 
+$     94.97	04/13/2005	Check Crd Purchase 04/12 Careerbuilder Com 773-5273600 Il 
+$     19.95	04/13/2005	Check Crd Purchase 04/12 Careerbuilder Com 773-5273600 Il 
+$    150.00	04/13/2005	Check Crd Purchase 04/12 Careerbuilder Com 773-5273600 Il 
+$     32.20	04/18/2005	Check Crd Purchase 04/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     43.33	04/26/2005	Check Crd Purchase 04/25 Sologig/Careerbuilder 888-688-2237 Il 
+$     19.95	05/02/2005	Check Crd Purchase 04/29 Careerbuilder Com 773-5273600 Il 
+$      9.99	05/06/2005	Check Crd Purchase 05/05 Monster Products 800-Monster Ma 
+$     10.49	05/16/2005	Check Crd Purchase 05/13 2Co.Com 877-294-0273 Oh 
+$     32.20	05/18/2005	Check Crd Purchase 05/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     58.41	05/20/2005	Check Crd Purchase 05/19 Upc*vistaprint.Com 800-721-6214 Ma 
+$     43.33	05/26/2005	Check Crd Purchase 05/25 Sologig/Careerbuilder 888-688-2237 Il 
+$    121.07	06/03/2005	Comcast Comcast 060105 0361201064 HornRay
+$      9.99	06/06/2005	Check Crd Purchase 06/05 Monster Products 800-Monster Ma 
+$     32.20	06/20/2005	Check Crd Purchase 06/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     69.00	06/20/2005	Check Crd Purchase 06/18 WWW.ELEMENT5Info.Com Germany Df 
+$     12.95	06/20/2005	Check Crd Purchase 06/17 AP9*todaysescapes 877-820-6329 Ct 
+$     43.33	06/27/2005	Check Crd Purchase 06/25 Sologig/Careerbuilder 888-688-2237 Il 
+$    124.55	07/05/2005	Check Crd Purchase 07/03 Comcast Cable Comm 800-Comcast Ca 
+$      9.99	07/07/2005	Check Crd Purchase 07/05 Monster Products 800-Monster Ma 
+$     39.95	07/11/2005	Check Crd Purchase 07/09 WWW.ELEMENT5Info.Com Germany Df 
+$     32.20	07/18/2005	Check Crd Purchase 07/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     12.95	07/19/2005	Check Crd Purchase 07/18 AP9*todaysescapes 877-820-6329 Ct 
+$     43.33	07/26/2005	Check Crd Purchase 07/25 Sologig/Careerbuilder 888-688-2237 Il 
+$     45.90	07/28/2005	Check Crd Purchase 07/27 Vitalwerks No Ip Com 702-459-8544 Nv 
+$    220.87	08/01/2005	Check Crd Purchase 07/29 Comcast Cable Comm 800-Comcast Ca 
+$      9.99	08/08/2005	Check Crd Purchase 08/05 Monster Products 800-Monster Ma 
+$     12.95	08/17/2005	Check Crd Purchase 08/16 AP9*todaysescapes 877-820-6329 Ct 
+$     32.20	08/18/2005	Check Crd Purchase 08/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     25.95	08/22/2005	Check Crd Purchase 08/20 Info.Kagi.Com 510-420-5858 Ca 
+$     43.33	08/29/2005	Check Crd Purchase 08/25 Sologig/Careerbuilder 888-688-2237 Il 
+$      4.36	08/31/2005	ebay Inc. Payments 050831 XXXXX9358 Ray Horn
+$      9.99	09/06/2005	Check Crd Purchase 09/05 Monster Products 800-Monster Ma 
+$     12.95	09/16/2005	Check Crd Purchase 09/15 AP9*todaysescapes 877-820-6329 Ct 
+$     32.20	09/19/2005	Check Crd Purchase 09/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     35.00	09/19/2005	Check Crd Purchase 09/16 Acteva.Com Online Even 877-9334730 Ca 
+$    247.85	09/22/2005	Check Crd Purchase 09/21 Comcast Cable Comm 800-Comcast Ca 
+$     43.33	09/26/2005	Check Crd Purchase 09/25 Sologig/Careerbuilder 888-688-2237 Il 
+$    334.46	09/30/2005	Check Crd Purchase 09/29 Verizon Wireless 800-9220204 Nj 
+$      8.27	10/03/2005	ebay Inc. Payments 051001 XXXXX2978 Ray Horn
+$      9.99	10/06/2005	Check Crd Purchase 10/05 Monster Products 800-Monster Ma 
+$    150.00	10/11/2005	Check Crd Purchase 10/07 Careerbuilder Com 773-5273600 Il 
+$     79.98	10/11/2005	Check Crd Purchase 10/07 Careerbuilder Com 773-5273600 Il 
+$     19.95	10/11/2005	Check Crd Purchase 10/07 Careerbuilder Com 773-5273600 Il 
+$     12.95	10/18/2005	Check Crd Purchase 10/17 AP9*todaysescapes 877-820-6329 Ct 
+$     32.20	10/18/2005	Check Crd Purchase 10/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$    190.99	10/24/2005	Check Crd Purchase 10/22 Comcast Cable Comm 800-Comcast Ca 
+$     49.90	10/24/2005	Check Crd Purchase 10/21 Upc*vistaprint.Com 800-721-6214 Ma 
+$     24.95	10/25/2005	Check Crd Purchase 10/24 Vitalwerks No Ip Com 702-459-8544 Nv 
+$     43.33	10/26/2005	Check Crd Purchase 10/25 Sologig Careerbuilder 888-688-2237 Il 
+$      1.58	10/31/2005	ebay Inc. Payments 051031 XXXXX5888 Ray Horn
+$    129.99	11/02/2005	Check Crd Purchase 11/01 Sologig Careerbuilder 888-688-2237 Il 
+$    211.95	11/03/2005	Check Crd Purchase 11/02 Amz*superstore Amzn.Com/Bill Wa 
+$      9.99	11/07/2005	Check Crd Purchase 11/05 Monster Products 800-Monster Ma 
+$     12.95	11/15/2005	Check Crd Purchase 11/14 AP9*todaysescapes 877-820-6329 Ct 
+$     32.20	11/18/2005	Check Crd Purchase 11/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$    190.99	11/21/2005	Check Crd Purchase 11/21 Comcast Cable Comm 800-Comcast Ca 
+$     43.33	11/28/2005	Check Crd Purchase 11/25 Sologig Careerbuilder 888-688-2237 Il 
+$      1.59	12/01/2005	ebay Inc. Payments 051201 XXXXX9858 Ray Horn
+$      9.99	12/06/2005	Check Crd Purchase 12/05 Monster Products 800-Monster Ma 
+$     52.75	12/15/2005	Check Crd Purchase 12/14 Casesonline.Com 508-756-3633 Ma 
+$     93.53	12/20/2005	Check Crd Purchase 12/20 Comcast Cable Comm 800-Comcast Ca 
+$     19.32	12/20/2005	Check Crd Purchase 12/17 Nfi*www.Netflix.Com/CC Netflix.Com Ca 
+$     32.85	12/21/2005	Check Crd Purchase 12/18 WWW.MP3Downloading.Com 18662402481 Mh 
+$     87.41	12/21/2005	Check Crd Purchase 12/19 SBC Consumer Ph Pmt-Ca 800-750-2355 Tx 
+$    103.33	12/21/2005	Vz Wireless Vw Vz Serve 041220 Gwen *clark
+$     35.00	12/27/2005	Check Crd Purchase 12/25 Sologig/Careerbuilder 888-6882237 Il 
+
+===========
+$   8342.15 Total Withdrawals for WithdrawlsClassifications.advertising
+
+	WithdrawlsClassifications.medical_expense
+
+$     20.00	04/15/2005	Check Crd Purchase 04/13 Kaiser Prmnt 210055 Vellejo Ca 
+
+===========
+$     20.00 Total Withdrawals for WithdrawlsClassifications.medical_expense
+
+	WithdrawlsClassifications.computer_hardware_software
+
+$      6.95	01/14/2005	WF Bill Pay Thru Software 121042882Nd
+$      3.00	01/14/2005	WF Banking Thru Software 121042882Nd
+$      3.00	02/14/2005	WF Banking Thru Software 121042882Nd
+$      6.95	02/14/2005	WF Bill Pay Thru Software 121042882Nd
+$      6.95	03/14/2005	WF Bill Pay Thru Software 121042882Nd
+$      3.00	03/14/2005	WF Banking Thru Software 121042882Nd
+$      3.00	04/14/2005	WF Banking Thru Software 121042882Nd
+$      6.95	04/14/2005	WF Bill Pay Thru Software 121042882Nd
+$     90.89	04/18/2005	Check Crd Purchase 04/15 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$    645.00	04/25/2005	Check Crd Purchase 04/21 Dell Catalog Sales L. 800-624-9897 Tx 
+$     45.45	04/29/2005	Check Crd Purchase 04/28 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$    133.12	05/02/2005	Check Crd Purchase 04/29 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$     54.11	05/09/2005	Check Crd Purchase 05/06 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$     24.95	05/09/2005	Check Crd Purchase 05/07 Soe* Station Store 858-537-0898 Ca 
+$    399.00	05/11/2005	Check Crd Purchase 05/10 Macromedia Inc. 800-470-7211 Ca 
+$      6.95	05/13/2005	WF Bill Pay Thru Software 121042882Nd
+$      3.00	05/13/2005	WF Banking Thru Software 121042882Nd
+$     10.81	05/23/2005	Check Crd Purchase 05/20 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$      6.95	06/14/2005	WF Bill Pay Thru Software 121042882Nd
+$      3.00	06/14/2005	WF Banking Thru Software 121042882Nd
+$    120.09	06/23/2005	Check Crd Purchase 06/22 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$    249.97	07/05/2005	Check Crd Purchase 07/02 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$   1500.35	07/05/2005	Check Crd Purchase 07/02 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$     34.63	07/07/2005	Check Crd Purchase 07/06 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$     81.55	07/13/2005	Check Crd Purchase 07/12 Compusa #621 Pleasanton Ca 
+$    140.70	07/14/2005	Check Crd Purchase 07/13 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$      3.00	07/15/2005	WF Banking Thru Software 121042882Nd
+$      6.95	07/15/2005	WF Bill Pay Thru Software 121042882Nd
+$    573.70	07/18/2005	Check Crd Purchase 07/15 Hpshopping.Com 888-999-4747 Ca 
+$    163.11	07/21/2005	Check Crd Purchase 07/19 Bestbuycom 88994009 888-Bestbuy MN 
+$    573.70	07/26/2005	Check Crd Purchase 07/25 Hpshopping.Com 888-999-4747 Ca 
+$    648.23	07/27/2005	Check Crd Purchase 07/26 Bestbuycom 88994009 888-Bestbuy MN 
+$      3.00	08/12/2005	WF Banking Thru Software 121042882Nd
+$     48.68	08/12/2005	Check Crd Purchase 08/11 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$      6.95	08/12/2005	WF Bill Pay Thru Software 121042882Nd
+$    844.25	08/16/2005	Check Crd Purchase 08/15 Software Plus 770-420-2577 Ga 
+$     76.83	08/22/2005	Check Crd Purchase 08/19 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$     89.30	08/26/2005	Check Crd Purchase 08/25 Macromedia Inc. 800-470-7211 Ca 
+$     50.00	09/07/2005	Check Crd Purchase 09/06 Wp-Realvnc Ltd Cambridge Gb 
+$      6.95	09/15/2005	WF Bill Pay Thru Software 121042882Nd
+$    399.00	09/15/2005	Check Crd Purchase 09/14 Macromedia Inc. 800-470-7211 Ca 
+$      3.00	09/15/2005	WF Banking Thru Software 121042882Nd
+$     31.24	09/16/2005	Check Crd Purchase 09/15 Macromedia Inc. 800-470-7211 Ca 
+$     21.64	09/16/2005	Check Crd Purchase 09/15 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$    340.89	09/19/2005	Check Crd Purchase 09/16 Mwave Com 909-8397689 Ca 
+$    306.36	09/26/2005	Check Crd Purchase 09/23 Mti*crucial Technology 800-336-8915 ID 
+$     52.68	10/03/2005	Check Crd Purchase 10/02 Bestbuycom 88994009 888-Bestbuy MN 
+$     65.22	10/04/2005	Check Crd Purchase 10/03 Best Buy/Mht 00001347 Dublin Ca 
+$      6.95	10/17/2005	WF Bill Pay Thru Software 121042882Nd
+$      3.00	10/17/2005	WF Banking Thru Software 121042882Nd
+$     34.95	10/17/2005	Check Crd Purchase 10/16 Dr *qk Smtp Server 952-646-5033 Wa 
+$     10.86	10/19/2005	Check Crd Purchase 10/18 Best Buy/Mht 00001347 Dublin Ca 
+$    795.00	10/21/2005	Check Crd Purchase 10/20 Macromedia Inc. 800-470-7211 Ca 
+$     15.00	10/24/2005	Check Crd Purchase 10/21 Macromedia Inc. 800-470-7211 Ca 
+$     54.11	11/03/2005	Check Crd Purchase 11/02 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$    324.69	11/14/2005	Check Crd Purchase 11/12 Best Buy/Mht 00001354 Pleasant Hill Ca 
+$      3.00	11/15/2005	WF Banking Thru Software 121042882Nd
+$      6.95	11/15/2005	WF Bill Pay Thru Software 121042882Nd
+$     39.95	11/16/2005	Check Crd Purchase 11/15 Intervideo- Win Dvd 866-946-3831 Ca 
+$     50.23	11/23/2005	Check Crd Purchase 11/21 Nero AG Karlsbad Df 
+$     39.95	12/13/2005	Check Crd Purchase 12/09 Techsmith CORPORA01 Of 517-3812300 Mi 
+$      6.95	12/14/2005	WF Bill Pay Thru Software 121042882Nd
+$      3.00	12/14/2005	WF Banking Thru Software 121042882Nd
+
+===========
+$   9299.59 Total Withdrawals for WithdrawlsClassifications.computer_hardware_software
+
+	WithdrawlsClassifications.education_expenses
+
+$    150.00	05/09/2005	Check Crd Purchase 05/06 Vue*allaire Certificat 800-511-3478 MN 
+$    150.00	05/17/2005	Check Crd Purchase 05/16 Vue*allaire Certificat 800-511-3478 MN 
+$     19.00	06/03/2005	Check Crd Purchase 06/02 Toolazyfortrafficschoo 818-515-4543 Ca 
+$    608.98	06/13/2005	Check Crd Purchase 06/10 Devry University 630-571-7700 Il 
+$    150.00	06/14/2005	Check Crd Purchase 06/13 Vue*allaire Certificat 800-511-3478 MN 
+$    199.00	08/17/2005	Check Crd Purchase 08/16 Bb *brainbench 703-674-3356 VA 
+$    681.00	09/19/2005	Check Crd Purchase 09/16 Apa Learning Systems 651-9052600 MN 
+$    810.23	12/16/2005	Check Crd Purchase 12/15 Devry/Oakbrook 630-7063560 Il 
+$    205.30	12/30/2005	Check Crd Purchase 12/28 Mbs Direct Textbooks 800-325-3252 Mo 
+
+===========
+$   2973.51 Total Withdrawals for WithdrawlsClassifications.education_expenses
+
+	WithdrawlsClassifications.banking_fees
+
+$      6.00	01/07/2005	Monthly Service Fee
+$      1.00	01/07/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      1.00	02/07/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      6.00	02/07/2005	Monthly Service Fee
+$      0.76	02/17/2005	Foreign Curr Conv Fee 
+$      6.00	03/07/2005	Monthly Service Fee
+$      1.00	03/07/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      2.00	03/29/2005	Non-Wells Fargo ATM Transaction Fee
+$      6.00	04/07/2005	Monthly Service Fee
+$      1.00	04/07/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      1.00	05/06/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      5.00	05/06/2005	Monthly Service Fee
+$      1.00	06/07/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      5.00	06/07/2005	Monthly Service Fee
+$      5.00	07/08/2005	Monthly Service Fee
+$      1.00	07/08/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      1.00	08/05/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      5.00	08/05/2005	Monthly Service Fee
+$      5.00	09/08/2005	Monthly Service Fee
+$      1.00	09/08/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      1.00	10/07/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      5.00	10/07/2005	Monthly Service Fee
+$     22.00	11/04/2005	Overdraft Fee
+$      5.00	11/07/2005	Monthly Service Fee
+$      1.00	11/07/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$      1.51	11/23/2005	Foreign Curr Conv Fee 
+$      5.00	12/07/2005	Monthly Service Fee
+$      1.00	12/07/2005	Monthly Point-Of-Sale (POS) Purchase Fee
+$     75.00	12/14/2005	Safe Box Annual Fee Ca-WFB1-6515
+
+===========
+$    177.27 Total Withdrawals for WithdrawlsClassifications.banking_fees
+
+	WithdrawlsClassifications.insurance_and_fees
+
+$    130.00	01/06/2005	Ca State Auto Online Pmt 050106 CKF067525984POS HornRay C.
+$    123.00	02/04/2005	Ca State Auto Online Pmt 050204 CKF067525984POS HornRay C.
+$    115.00	03/07/2005	Ca State Auto Online Pmt 050307 CKF067525984POS HornRay C.
+$    950.00	04/29/2005	Ca State Auto Online Pmt 050429 CKF067525984POS HornRay C.
+$      2.13	06/10/2005	Ca State Auto Online Pmt 050610 CKF067525984POS HornRay C.
+$   3503.00	10/07/2005	Check #5270 Nissan Truck Insurance Premium AAA Auto Insurance # AC0567-1 Automobile Insurance Payment
+
+===========
+$   4823.13 Total Withdrawals for WithdrawlsClassifications.insurance_and_fees
+
+	WithdrawlsClassifications.shipping_and_receiveing
+
+$    125.00	03/21/2005	Check Crd Purchase 03/19 Mail Boxes Etc Store 1 925-9349318 Ca 
+$     59.00	09/26/2005	Check Crd Purchase 09/24 Mailboxes Etc 925-934-9318 Ca 
+$      8.18	10/03/2005	Check Crd Purchase 10/01 UPS*1Z43R4T20397154620 800-811-1648 Ga 
+$      5.80	12/22/2005	Check Crd Purchase 12/21 UPS*1Z43R4T20395028010 800-811-1648 Ga 
+$     95.00	12/27/2005	Check Crd Purchase 12/24 Mail Boxes Etc Store 1 Walnut Creek Ca 
+
+===========
+$    292.98 Total Withdrawals for WithdrawlsClassifications.shipping_and_receiveing
+
+	WithdrawlsClassifications.vehicle_purchase
+
+$    378.15	01/20/2005	Check #5251 2002 Nissan Frontier Fireside Thrift Company Automobile (Business) Rent-Lease
+$    378.15	02/23/2005	Check #5254 2002 Nissan Frontier Fireside Thrift Company Automobile (Business) Rent-Lease
+$    378.15	03/22/2005	Check #5257 2002 Nissan Frontier Fireside Thrift Company Automobile (Business) Rent-Lease
+$    700.03	04/29/2005	Chase Automotive Online Pmt 050429 CKF067525984POS HornRay C.
+$    700.03	06/02/2005	Chase Loans 050528 10509115471912 Horn Ray C 00000035462
+$    700.03	07/05/2005	Chase Loans 050630 10509115471912 Horn Ray C 00000035462
+$    700.03	08/02/2005	Chase Loans 050729 10509115471912 Horn Ray C 00000035462
+$    700.03	09/02/2005	Chase Loans 050831 10509115471912 Horn Ray C 00000035462
+$    700.03	10/04/2005	Chase Loans 050930 10509115471912 Horn Ray C 00000035462
+$    700.03	11/02/2005	Chase Loans 051029 10509115471912 Horn Ray C 00000035462
+$    700.03	12/02/2005	Chase Loans 051130 10509115471912 Horn Ray C 00000035462
+
+===========
+$   6734.69 Total Withdrawals for WithdrawlsClassifications.vehicle_purchase
+
+	WithdrawlsClassifications.business_entertainment
+
+$    110.93	05/02/2005	Check Crd Purchase 05/01 Oakland A'S Retail Sou Oakland Ca 
+
+===========
+$    110.93 Total Withdrawals for WithdrawlsClassifications.business_entertainment
+
+	WithdrawlsClassifications.pet_expense
+
+$     89.87	01/24/2005	Check Crd Purchase 01/22 Benicia Cat Clinic 707-7452287 Ca 
+$     26.49	07/11/2005	Check Crd Purchase 07/09 1 800 Petmeds 9549795996 Fl 
+$     28.99	12/15/2005	Check Crd Purchase 12/13 1-800-Petmeds 800-738-6337 Fl 
+
+===========
+$    145.35 Total Withdrawals for WithdrawlsClassifications.pet_expense
+
+	WithdrawlsClassifications.business_utilities
+
+$     59.85	01/19/2005	Vallejo Garbage Util Pmt 9817053 Clark Gwen
+$    492.83	01/20/2005	Pacific Gas/Elec Online Pmt 050120 CKF429598373Neg Clark
+$    163.00	01/31/2005	Check Crd Purchase 01/28 City Of Vallejo (Epos) 707-648-4345 Ca 
+$    312.39	03/01/2005	Pacific Gas/Elec Online Pmt 050301 CKF699179683Neg Clark
+$    241.16	03/29/2005	Pacific Gas/Elec Online Pmt 050329 CKF575245632Neg Clark
+$    390.64	07/19/2005	Pacific Gas/Elec Online Pmt 050719 CKF783653465Neg Clark
+$    246.98	08/18/2005	Pacific Gas/Elec Online Pmt 050818 CKF748608179Neg Clark
+$    392.75	11/03/2005	Pacific Gas/Elec Online Pmt 051103 CKF581061554Neg Clark
+$     59.85	12/21/2005	Vallejo Garbage Util Pmt 9410950 Clark Gwen
+
+===========
+$   2359.45 Total Withdrawals for WithdrawlsClassifications.business_utilities
+
+	WithdrawlsClassifications.petty_cash
+
+$    101.50	03/29/2005	ATM Withdrawal -03/29 Mach ID CO5305 2600 Camino Rampatelco Crsan Ramon Ca 7156
+$   9008.00	04/01/2005	Withdrawal Made In A Branch/Store
+$     40.00	04/12/2005	ATM Withdrawal -04/11 Mach ID 5469O San Ramon San Ramon Ca 7156
+$     40.00	05/06/2005	ATM Withdrawal -05/06 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$    100.00	06/02/2005	ATM Withdrawal -06/02 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$    100.00	07/20/2005	ATM Withdrawal -07/19 Mach ID 0585B 1499 N Main St Walnut Creek Ca 7156
+$    100.00	08/04/2005	ATM Withdrawal -08/04 Mach ID 9984J 1 Airport Drive Oakland Ca 7156
+$      7.85	09/15/2005	ATM Purchase -09/15 Mach ID 2030H 3112 Santa Rita Rd Pleasanton Ca 7156
+$     20.00	09/22/2005	ATM Withdrawal -09/22 Mach ID 0585A 1499 N Main St Walnut Creek Ca 7156
+$    100.00	09/26/2005	ATM Withdrawal -09/26 Mach ID 2030H 3112 Santa Rita Rd Pleasanton Ca 7156
+$    100.00	10/19/2005	ATM Withdrawal -10/19 Mach ID 2030H 3112 Santa Rita Rd Pleasanton Ca 7156
+$    200.00	11/08/2005	ATM Withdrawal -11/08 Mach ID 0445F San Bruno San Bruno Ca 7156
+$    300.00	12/22/2005	ATM Withdrawal -12/21 Mach ID 2666K 3111 Crow Canyon Pl San Ramon Ca 7156
+
+===========
+$  10217.35 Total Withdrawals for WithdrawlsClassifications.petty_cash
+
+	WithdrawlsClassifications.petty_cash_paypal
+
+$    150.00	01/04/2005	Paypal Transfer 050103 5ALJ22AXBJ7V2 Hal Smalltalker Inc.
+$    150.00	01/19/2005	Paypal Transfer 050118 5ALJ22B5SK4Wj Hal Smalltalker Inc.
+$    150.00	01/31/2005	Paypal Transfer 050128 5ALJ22Baumrha Hal Smalltalker Inc.
+$    150.00	02/14/2005	Paypal Transfer 050211 5ALJ22BHSCPG2 Hal Smalltalker Inc.
+$    150.00	02/23/2005	Paypal Transfer 050223 5ALJ22BPJJW2W Hal Smalltalker Inc.
+$    150.00	03/10/2005	Paypal Transfer 050309 5ALJ22BXD8Ces Hal Smalltalker Inc.
+$    150.00	03/21/2005	Paypal Transfer 050319 5ALJ22C4V5V8S Hal Smalltalker Inc.
+$    150.00	04/04/2005	Paypal Transfer 050403 5ALJ22Cchpgye Hal Smalltalker Inc.
+$    150.00	04/18/2005	Paypal Transfer 050416 5ALJ22CKU6U3G Hal Smalltalker Inc.
+$    150.00	04/27/2005	Paypal Transfer 050427 5ALJ22CRHH4Fs Hal Smalltalker Inc.
+$    150.00	05/11/2005	Paypal Transfer 050511 5ALJ22CYXQZW6 Hal Smalltalker Inc.
+$    150.00	05/20/2005	Paypal Transfer 050519 5ALJ22D57GAH8 Hal Smalltalker Inc.
+$    150.00	05/31/2005	Paypal Transfer 050530 5ALJ22Dakpjyc Hal Smalltalker Inc.
+$     58.13	06/06/2005	Paypal Inst Xfer 050606 5ALJ22DE38Shs Hal Smalltalker Inc.
+$    150.00	06/06/2005	Paypal Transfer 050606 5ALJ22DE2Q5Nq Hal Smalltalker Inc.
+$    150.00	06/10/2005	Paypal Transfer 050610 5ALJ22DGE765C Hal Smalltalker Inc.
+$    150.00	06/23/2005	Paypal Transfer 050623 5ALJ22DP8U7Ec Hal Smalltalker Inc.
+$    150.00	07/07/2005	Paypal Transfer 050707 5ALJ22DWE28M8 Hal Smalltalker Inc.
+$    150.00	07/22/2005	Paypal Transfer 050722 5ALJ22E6C9F7G Hal Smalltalker Inc.
+$    150.00	08/03/2005	Paypal Transfer 050803 5ALJ22Ecjcrxw Hal Smalltalker Inc.
+$    150.00	08/08/2005	Paypal Transfer 050808 5ALJ22Eescrrn Hal Smalltalker Inc.
+$    150.00	08/22/2005	Paypal Transfer 050819 5ALJ22EM3QHB4 Hal Smalltalker Inc.
+$    150.00	09/01/2005	Paypal Transfer 050901 5ALJ22Eulaksj Hal Smalltalker Inc.
+$    150.00	09/07/2005	Paypal Transfer 050907 5ALJ22EXQ52J2 Hal Smalltalker Inc.
+$    150.00	09/29/2005	Paypal Transfer 050929 5ALJ22Fcrpwly Hal Smalltalker Inc.
+$    150.00	10/11/2005	Paypal Transfer 051010 5ALJ22FK5Qacn Hal Smalltalker Inc.
+$    150.00	10/21/2005	Paypal Transfer 051021 5ALJ22FRP8L3G Hal Smalltalker Inc.
+$    150.00	10/26/2005	Paypal Transfer 051026 5ALJ22Funcuas Hal Smalltalker Inc.
+$    150.00	11/16/2005	Paypal Transfer 051116 5ALJ22G9ZVFX8 Hal Smalltalker Inc.
+$    150.00	11/30/2005	Paypal Transfer 051130 5ALJ22GKV6Htu Hal Smalltalker Inc.
+$    150.00	12/17/2005	Paypal Transfer 041216 5ALJ22AQCSQY4 Hal Smalltalker Inc.
+$    100.00	12/28/2005	Paypal Transfer 041227 5ALJ22AUM2492 Hal Smalltalker Inc.
+
+===========
+$   4658.13 Total Withdrawals for WithdrawlsClassifications.petty_cash_paypal
+
+	WithdrawlsClassifications.legal_fees
+
+$     39.00	01/10/2005	Check Crd Purchase 01/07 Lexington Law 800-341-8441 Ut 
+$     39.00	02/10/2005	Check Crd Purchase 02/08 Lexington Law 800-341-8441 Ut 
+$     39.00	03/10/2005	Check Crd Purchase 03/08 Lexington Law 800-341-8441 Ut 
+$     39.00	04/07/2005	Check Crd Purchase 04/05 Lexington Law 800-341-8441 Ut 
+$     39.00	05/09/2005	Check Crd Purchase 05/05 Lexington Law 800-341-8441 Ut 
+$     39.00	06/09/2005	Check Crd Purchase 06/07 Lexington Law 800-341-8441 Ut 
+$     39.00	07/08/2005	Check Crd Purchase 07/06 Lexington Law 800-341-8441 Ut 
+$     39.00	08/09/2005	Check Crd Purchase 08/08 Lexington Law 800-341-8441 Ut 
+$     39.00	09/12/2005	Check Crd Purchase 09/08 Lexington Law 800-341-8441 Ut 
+$     39.00	10/07/2005	Check Crd Purchase 10/06 Lexington Law 800-341-8441 Ut 
+$     39.00	11/14/2005	Check Crd Purchase 11/11 Lexington Law 800-341-8441 Ut 
+$     39.00	12/13/2005	Check Crd Purchase 12/09 Lexington Law 800-341-8441 Ut 
+
+===========
+$    468.00 Total Withdrawals for WithdrawlsClassifications.legal_fees
+
+$  95137.74 Total Classified Withdrawals
+================================================================================
+         230518 function calls (229657 primitive calls) in 4.176 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.023    0.023    4.400    4.400 {execfile}
+        1    1.714    1.714    4.377    4.377 reports.py:1(<module>)
+     3545    1.151    0.000    1.552    0.000 __init__.py:137(dict2Obj)
+        1    0.166    0.166    0.412    0.412 floatValue.py:1(<module>)
+        1    0.064    0.064    0.242    0.242 _psyco.py:3(importPsycoIfPossible)
+        1    0.065    0.065    0.214    0.214 AccumulatorHash.py:1(<module>)
+        3    0.081    0.027    0.179    0.060 __init__.py:1(<module>)
+        1    0.029    0.029    0.148    0.148 CooperativeClass.py:3(<module>)
+        1    0.079    0.079    0.144    0.144 __init__.py:16(<module>)
+        1    0.033    0.033    0.119    0.119 inspect.py:24(<module>)
+     4314    0.043    0.000    0.101    0.000 __init__.py:221(__getitem__)
+        1    0.018    0.018    0.068    0.068 tokenize.py:23(<module>)
+        1    0.031    0.031    0.067    0.067 decimal.py:116(<module>)
+        9    0.000    0.000    0.062    0.007 re.py:186(compile)
+        9    0.000    0.000    0.062    0.007 re.py:227(_compile)
+        9    0.000    0.000    0.062    0.007 sre_compile.py:501(compile)
+        1    0.019    0.019    0.051    0.051 uuid.py:45(<module>)
+        1    0.023    0.023    0.050    0.050 support.py:9(<module>)
+        1    0.000    0.000    0.048    0.048 {map}
+        1    0.044    0.044    0.046    0.046 __init__.py:40(<module>)
+    23767    0.046    0.000    0.046    0.000 {method 'startswith' of 'str' objects}
+    27453    0.046    0.000    0.046    0.000 {isinstance}
+    23639    0.045    0.000    0.045    0.000 {method 'replace' of 'str' objects}
+     4314    0.045    0.000    0.045    0.000 __init__.py:223(<lambda>)
+    29355    0.042    0.000    0.042    0.000 __init__.py:417(build_sequence)
+        9    0.000    0.000    0.035    0.004 sre_parse.py:669(parse)
+     66/9    0.002    0.000    0.035    0.004 sre_parse.py:307(_parse_sub)
+    123/9    0.009    0.000    0.035    0.004 sre_parse.py:385(_parse)
+        1    0.017    0.017    0.034    0.034 core.py:34(full)
+        1    0.027    0.027    0.027    0.027 kdictproxy.py:5(<module>)
+        9    0.000    0.000    0.027    0.003 sre_compile.py:486(_code)
+        1    0.026    0.026    0.026    0.026 __init__.py:4(<module>)
+    13575    0.023    0.000    0.023    0.000 decimal.py:509(__new__)
+    278/9    0.008    0.000    0.022    0.002 sre_compile.py:38(_compile)
+    15920    0.022    0.000    0.022    0.000 decimal.py:712(__nonzero__)
+        1    0.020    0.020    0.020    0.020 threading.py:1(<module>)
+        1    0.017    0.017    0.018    0.018 dis.py:1(<module>)
+        1    0.017    0.017    0.017    0.017 profiler.py:10(<module>)
+        1    0.015    0.015    0.015    0.015 core.py:18(<module>)
+     1316    0.004    0.000    0.013    0.000 sre_parse.py:207(get)
+     7630    0.011    0.000    0.011    0.000 __init__.py:258(__call__)
+     1510    0.007    0.000    0.011    0.000 sre_parse.py:188(__next)
+     3818    0.009    0.000    0.010    0.000 decimal.py:3397(__init__)
+      113    0.001    0.000    0.009    0.000 sre_compile.py:184(_compile_charset)
+        1    0.007    0.007    0.009    0.009 QIF.py:6(<module>)
+5165/5008    0.007    0.000    0.007    0.000 {len}
+     4856    0.007    0.000    0.007    0.000 dbutils.py:41(DeadlockWrap)
+      113    0.004    0.000    0.007    0.000 sre_compile.py:213(_optimize_charset)
+     4314    0.006    0.000    0.006    0.000 __init__.py:210(_checkOpen)
+     3828    0.006    0.000    0.006    0.000 AccumulatorHash.py:13(__setitem__)
+     4339    0.006    0.000    0.006    0.000 __init__.py:652(get_isPickleMethodUseStrings)
+        2    0.000    0.000    0.005    0.003 util.py:8(find_library)
+     3545    0.005    0.000    0.005    0.000 __init__.py:546(__getitem__)
+     3546    0.005    0.000    0.005    0.000 __init__.py:658(get_isPickleMethodUseMarshal)
+     3546    0.005    0.000    0.005    0.000 __init__.py:661(get_isPickleMethodUseSafeSerializer)
+     3545    0.005    0.000    0.005    0.000 __init__.py:655(get_isPickleMethodUseBsdDbShelf)
+     3666    0.005    0.000    0.005    0.000 {method 'append' of 'list' objects}
+       52    0.000    0.000    0.005    0.000 ntpath.py:252(exists)
+        9    0.000    0.000    0.005    0.001 sre_compile.py:367(_compile_info)
+  396/132    0.003    0.000    0.005    0.000 sre_parse.py:146(getwidth)
+       52    0.004    0.000    0.004    0.000 {nt.stat}
+     2793    0.004    0.000    0.004    0.000 {method 'join' of 'str' objects}
+     2343    0.003    0.000    0.003    0.000 decimal.py:948(__add__)
+       12    0.000    0.000    0.003    0.000 floatValue.py:10(floatValue)
+     1401    0.003    0.000    0.003    0.000 {method 'split' of 'str' objects}
+       12    0.000    0.000    0.003    0.000 floatValue.py:28(floatAsDollars)
+      734    0.001    0.000    0.003    0.000 sre_parse.py:201(match)
+     1387    0.003    0.000    0.003    0.000 {method 'keys' of 'dict' objects}
+      592    0.002    0.000    0.002    0.000 sre_parse.py:132(__len__)
+     1518    0.002    0.000    0.002    0.000 decimal.py:824(__str__)
+     1387    0.002    0.000    0.002    0.000 QIF.py:110(set_date)
+     1387    0.002    0.000    0.002    0.000 QIF.py:18(__init__)
+        1    0.002    0.002    0.002    0.002 dbutils.py:27(<module>)
+      217    0.001    0.000    0.002    0.000 {setattr}
+     1387    0.002    0.000    0.002    0.000 QIF.py:107(set_yyyy)
+     1518    0.002    0.000    0.002    0.000 decimal.py:1404(__float__)
+     1409    0.002    0.000    0.002    0.000 {method 'has_key' of 'dict' objects}
+        4    0.000    0.000    0.002    0.000 CooperativeClass.py:12(__init__)
+     1387    0.002    0.000    0.002    0.000 QIF.py:88(set_amount)
+     1296    0.002    0.000    0.002    0.000 decimal.py:886(__neg__)
+       48    0.000    0.000    0.002    0.000 CooperativeClass.py:15(__setattr__)
+     1122    0.002    0.000    0.002    0.000 sre_parse.py:136(__getitem__)
+       19    0.001    0.000    0.002    0.000 sre_compile.py:264(_mk_bitmap)
+      718    0.002    0.000    0.002    0.000 QIF.py:95(get_date)
+      333    0.001    0.000    0.001    0.000 sre_parse.py:144(append)
+        7    0.000    0.000    0.001    0.000 __init__.py:222(__new__)
+      633    0.001    0.000    0.001    0.000 {min}
+       34    0.000    0.000    0.001    0.000 CooperativeClass.py:7(second_arg)
+       12    0.000    0.000    0.001    0.000 decimal.py:3523(create_decimal)
+      123    0.001    0.000    0.001    0.000 sre_compile.py:360(_simple)
+       34    0.000    0.000    0.001    0.000 inspect.py:730(getargspec)
+      694    0.001    0.000    0.001    0.000 QIF.py:91(get_amount)
+      572    0.001    0.000    0.001    0.000 AccumulatorHash.py:10(__getitem__)
+      123    0.000    0.000    0.001    0.000 sre_parse.py:140(__getslice__)
+        1    0.000    0.000    0.001    0.001 opcode.py:5(<module>)
+       74    0.000    0.000    0.001    0.000 sre_parse.py:263(_escape)
+       12    0.000    0.000    0.001    0.000 decimal.py:1441(_fix)
+        1    0.000    0.000    0.001    0.001 shelve.py:57(<module>)
+       66    0.000    0.000    0.001    0.000 copy.py:65(copy)
+      278    0.000    0.000    0.000    0.000 sre_parse.py:96(__init__)
+       34    0.000    0.000    0.000    0.000 inspect.py:672(getargs)
+       97    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E1E8E50}
+      313    0.000    0.000    0.000    0.000 sre_compile.py:24(_identityfunction)
+       82    0.000    0.000    0.000    0.000 inspect.py:126(isfunction)
+       60    0.000    0.000    0.000    0.000 __init__.py:285(__new__)
+      271    0.000    0.000    0.000    0.000 {ord}
+       26    0.000    0.000    0.000    0.000 ntpath.py:59(join)
+      235    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+       14    0.000    0.000    0.000    0.000 __init__.py:136(_check_size)
+       44    0.000    0.000    0.000    0.000 sre_parse.py:78(opengroup)
+        1    0.000    0.000    0.000    0.000 support.py:74(PythonFrame)
+       44    0.000    0.000    0.000    0.000 sre_parse.py:89(closegroup)
+       38    0.000    0.000    0.000    0.000 sre_parse.py:231(_class_escape)
+      112    0.000    0.000    0.000    0.000 opcode.py:27(def_op)
+      123    0.000    0.000    0.000    0.000 sre_parse.py:138(__setitem__)
+       82    0.000    0.000    0.000    0.000 {getattr}
+        1    0.000    0.000    0.000    0.000 globalVars.py:1(<module>)
+       18    0.000    0.000    0.000    0.000 struct.py:43(calcsize)
+       34    0.000    0.000    0.000    0.000 inspect.py:51(ismethod)
+       26    0.000    0.000    0.000    0.000 ntpath.py:51(isabs)
+        1    0.000    0.000    0.000    0.000 _endian.py:4(<module>)
+       34    0.000    0.000    0.000    0.000 inspect.py:167(iscode)
+       12    0.000    0.000    0.000    0.000 decimal.py:719(__cmp__)
+       61    0.000    0.000    0.000    0.000 decimal.py:759(__eq__)
+       87    0.000    0.000    0.000    0.000 {max}
+        1    0.000    0.000    0.000    0.000 threading.py:673(__init__)
+        9    0.000    0.000    0.000    0.000 sre_parse.py:184(__init__)
+        4    0.000    0.000    0.000    0.000 __init__.py:83(CFUNCTYPE)
+        1    0.000    0.000    0.000    0.000 threading.py:398(__init__)
+        4    0.000    0.000    0.000    0.000 uuid.py:101(__init__)
+       12    0.000    0.000    0.000    0.000 decimal.py:5059(_convert_other)
+        7    0.000    0.000    0.000    0.000 support.py:170(patch)
+        1    0.000    0.000    0.000    0.000 weakref.py:6(<module>)
+        6    0.000    0.000    0.000    0.000 sre_parse.py:222(isname)
+       15    0.000    0.000    0.000    0.000 {built-in method match}
+       19    0.000    0.000    0.000    0.000 tokenize.py:44(group)
+       50    0.000    0.000    0.000    0.000 __init__.py:522(get_isOpened)
+       58    0.000    0.000    0.000    0.000 {built-in method group}
+       11    0.000    0.000    0.000    0.000 opcode.py:31(name_op)
+        1    0.000    0.000    0.000    0.000 db.py:40(<module>)
+       18    0.000    0.000    0.000    0.000 sre_compile.py:480(isstring)
+       43    0.000    0.000    0.000    0.000 {range}
+       49    0.000    0.000    0.000    0.000 __init__.py:194(_closeCursors)
+       54    0.000    0.000    0.000    0.000 __init__.py:296(__str__)
+       44    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:153(Condition)
+        3    0.000    0.000    0.000    0.000 __init__.py:358(__getattr__)
+        1    0.000    0.000    0.000    0.000 token.py:3(<module>)
+       54    0.000    0.000    0.000    0.000 copy.py:100(_copy_immutable)
+       13    0.000    0.000    0.000    0.000 struct.py:35(_compile)
+       25    0.000    0.000    0.000    0.000 __init__.py:158(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:158(__init__)
+        2    0.000    0.000    0.000    0.000 __init__.py:247(POINTER)
+       32    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 profiler.py:141(run)
+       26    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:57(create_string_buffer)
+        1    0.000    0.000    0.000    0.000 decimal.py:500(Decimal)
+        1    0.000    0.000    0.000    0.000 profiler.py:35(go)
+        2    0.000    0.000    0.000    0.000 __init__.py:420(__getattr__)
+        5    0.000    0.000    0.000    0.000 __init__.py:345(__init__)
+       26    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 opcode.py:35(jrel_op)
+       26    0.000    0.000    0.000    0.000 ntpath.py:116(splitdrive)
+       24    0.000    0.000    0.000    0.000 {method 'index' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+       15    0.000    0.000    0.000    0.000 {locals}
+       32    0.000    0.000    0.000    0.000 {_ctypes.sizeof}
+        3    0.000    0.000    0.000    0.000 __init__.py:365(__getitem__)
+        8    0.000    0.000    0.000    0.000 sre_compile.py:57(fixup)
+        1    0.000    0.000    0.000    0.000 profiler.py:285(PassiveProfiler)
+       23    0.000    0.000    0.000    0.000 {_sre.getlower}
+       12    0.000    0.000    0.000    0.000 copy.py:112(_copy_with_constructor)
+        9    0.000    0.000    0.000    0.000 {_sre.compile}
+        1    0.000    0.000    0.000    0.000 profiler.py:153(start)
+       21    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 decimal.py:3378(Context)
+       25    0.000    0.000    0.000    0.000 __init__.py:525(get_fileName)
+       24    0.000    0.000    0.000    0.000 sre_parse.py:216(isident)
+       24    0.000    0.000    0.000    0.000 __init__.py:180(__del__)
+        1    0.000    0.000    0.000    0.000 __init__.py:477(PYFUNCTYPE)
+        1    0.000    0.000    0.000    0.000 traceback.py:1(<module>)
+        4    0.000    0.000    0.000    0.000 {_ctypes.LoadLibrary}
+        1    0.000    0.000    0.000    0.000 __init__.py:327(CDLL)
+       12    0.000    0.000    0.000    0.000 decimal.py:3496(Etiny)
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:371(PyDLL)
+        1    0.000    0.000    0.000    0.000 __init__.py:382(WinDLL)
+       12    0.000    0.000    0.000    0.000 decimal.py:3500(Etop)
+        1    0.000    0.000    0.000    0.000 __init__.py:406(OleDLL)
+        1    0.000    0.000    0.000    0.000 QIF.py:17(QifItem)
+       16    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 _psyco.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 uuid.py:53(UUID)
+        1    0.000    0.000    0.000    0.000 atexit.py:6(<module>)
+       13    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+       12    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 {hasattr}
+       12    0.000    0.000    0.000    0.000 decimal.py:652(_isnan)
+        1    0.000    0.000    0.000    0.000 {dir}
+       11    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+       10    0.000    0.000    0.000    0.000 __init__.py:341(__call__)
+        9    0.000    0.000    0.000    0.000 sre_parse.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.statread}
+       10    0.000    0.000    0.000    0.000 __init__.py:351(__call__)
+       10    0.000    0.000    0.000    0.000 __init__.py:349(__init__)
+        1    0.000    0.000    0.000    0.000 __init__.py:505(PickledHash)
+       10    0.000    0.000    0.000    0.000 __init__.py:339(__init__)
+        3    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 util.py:4(<module>)
+        8    0.000    0.000    0.000    0.000 AccumulatorHash.py:4(__init__)
+        2    0.000    0.000    0.000    0.000 tokenize.py:46(maybe)
+        1    0.000    0.000    0.000    0.000 _utils.py:1(<module>)
+        2    0.000    0.000    0.000    0.000 opcode.py:39(jabs_op)
+        6    0.000    0.000    0.000    0.000 {issubclass}
+        1    0.000    0.000    0.000    0.000 tokenize.py:45(any)
+        1    0.000    0.000    0.000    0.000 profiler.py:239(do_start)
+        9    0.000    0.000    0.000    0.000 {globals}
+        1    0.000    0.000    0.000    0.000 <string>:2(<module>)
+        2    0.000    0.000    0.000    0.000 os.py:431(__getitem__)
+        1    0.000    0.000    0.000    0.000 {time.time}
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        1    0.000    0.000    0.000    0.000 os.py:442(has_key)
+        1    0.000    0.000    0.000    0.000 threading.py:389(Thread)
+        1    0.000    0.000    0.000    0.000 julian.py:42(<module>)
+        1    0.000    0.000    0.000    0.000 weakref.py:33(WeakValueDictionary)
+        4    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 QIF.py:135(QifReader)
+        1    0.000    0.000    0.000    0.000 __init__.py:278(EnumInstance)
+        1    0.000    0.000    0.000    0.000 atexit.py:37(register)
+        1    0.000    0.000    0.000    0.000 weakref.py:219(WeakKeyDictionary)
+        4    0.000    0.000    0.000    0.000 __init__.py:417(__init__)
+        4    0.000    0.000    0.000    0.000 {method 'iteritems' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:153(_DBWithCursor)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.profiling}
+        2    0.000    0.000    0.000    0.000 {_bsddb.version}
+        2    0.000    0.000    0.000    0.000 {built-in method acquire}
+        3    0.000    0.000    0.000    0.000 __init__.py:101(CFunctionType)
+        1    0.000    0.000    0.000    0.000 threading.py:79(_RLock)
+        1    0.000    0.000    0.000    0.000 threading.py:156(_Condition)
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dictproxy' objects}
+        1    0.000    0.000    0.000    0.000 reports.py:162(WithdrawlsClassifications)
+        1    0.000    0.000    0.000    0.000 shelve.py:76(Shelf)
+        2    0.000    0.000    0.000    0.000 threading.py:39(__init__)
+        1    0.000    0.000    0.000    0.000 AccumulatorHash.py:3(HashedLists)
+        3    0.000    0.000    0.000    0.000 {abs}
+        1    0.000    0.000    0.000    0.000 profiler.py:138(Profiler)
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 reports.py:87(DepositsClassifications)
+        1    0.000    0.000    0.000    0.000 globalVars.py:9(DataFileTypes)
+        1    0.000    0.000    0.000    0.000 threading.py:274(_Semaphore)
+        1    0.000    0.000    0.000    0.000 __init__.py:209(EnumMetaClass)
+        1    0.000    0.000    0.000    0.000 threading.py:339(_Event)
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 threading.py:37(_Verbose)
+        1    0.000    0.000    0.000    0.000 shelve.py:158(BsdDbShelf)
+        1    0.000    0.000    0.000    0.000 threading.py:642(_Timer)
+        1    0.000    0.000    0.000    0.000 {_ctypes.set_conversion_mode}
+        2    0.000    0.000    0.000    0.000 {built-in method release}
+        1    0.000    0.000    0.000    0.000 threading.py:324(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 decimal.py:3363(_ContextManager)
+        1    0.000    0.000    0.000    0.000 threading.py:711(_DummyThread)
+        1    0.000    0.000    0.000    0.000 decimal.py:4663(_WorkRep)
+        1    0.000    0.000    0.000    0.000 profiler.py:271(ActiveProfiler)
+        1    0.000    0.000    0.000    0.000 <string>:2(_iter_mixin)
+        1    0.000    0.000    0.000    0.000 __init__.py:148(py_object)
+        1    0.000    0.000    0.000    0.000 __init__.py:227(c_char_p)
+        1    0.000    0.000    0.000    0.000 threading.py:671(_MainThread)
+        1    0.000    0.000    0.000    0.000 floatValue.py:6(Options)
+        1    0.000    0.000    0.000    0.000 decimal.py:151(DecimalException)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 _endian.py:22(_swapped_meta)
+        1    0.000    0.000    0.000    0.000 __init__.py:376(_FuncPtr)
+        1    0.000    0.000    0.000    0.000 profiler.py:255(ChargeProfiler)
+        1    0.000    0.000    0.000    0.000 __init__.py:337(register_encoder_for_type)
+        1    0.000    0.000    0.000    0.000 support.py:102(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 CooperativeClass.py:11(_Cooperative)
+        1    0.000    0.000    0.000    0.000 <string>:1(DBNotFoundError)
+        1    0.000    0.000    0.000    0.000 decimal.py:4896(_Log10Memoize)
+        1    0.000    0.000    0.000    0.000 inspect.py:562(BlockFinder)
+        1    0.000    0.000    0.000    0.000 __init__.py:416(LibraryLoader)
+        1    0.000    0.000    0.000    0.000 profiler.py:237(FullCompiler)
+        1    0.000    0.000    0.000    0.000 __init__.py:499(PickleMethods)
+        1    0.000    0.000    0.000    0.000 reports.py:1043(main)
+        1    0.000    0.000    0.000    0.000 __init__.py:347(register_decoder_for_type)
+        1    0.000    0.000    0.000    0.000 profiler.py:329(ActivePassiveProfiler)
+        1    0.000    0.000    0.000    0.000 profiler.py:246(RunOnly)
+        1    0.000    0.000    0.000    0.000 weakref.py:198(KeyedRef)
+        1    0.000    0.000    0.000    0.000 decimal.py:241(DivisionImpossible)
+        1    0.000    0.000    0.000    0.000 __init__.py:314(EncodeError)
+        1    0.000    0.000    0.000    0.000 decimal.py:4900(__init__)
+        1    0.000    0.000    0.000    0.000 __init__.py:478(CFunctionType)
+        1    0.000    0.000    0.000    0.000 __init__.py:315(DecodeError)
+        1    0.000    0.000    0.000    0.000 shelve.py:200(DbfilenameShelf)
+        1    0.000    0.000    0.000    0.000 CooperativeClass.py:23(Cooperative)
+        1    0.000    0.000    0.000    0.000 __init__.py:341(_FuncPtr)
+        1    0.000    0.000    0.000    0.000 __init__.py:386(_FuncPtr)
+        1    0.000    0.000    0.000    0.000 decimal.py:275(InvalidContext)
+        1    0.000    0.000    0.000    0.000 __init__.py:412(_FuncPtr)
+        1    0.000    0.000    0.000    0.000 QIF.py:166(get_filepath)
+        1    0.000    0.000    0.000    0.000 decimal.py:225(DivisionByZero)
+        1    0.000    0.000    0.000    0.000 _utils.py:1(getVersionNumber)
+        1    0.000    0.000    0.000    0.000 __init__.py:279(c_wchar)
+        1    0.000    0.000    0.000    0.000 _endian.py:45(BigEndianStructure)
+        1    0.000    0.000    0.000    0.000 __init__.py:210(c_ubyte)
+        1    0.000    0.000    0.000    0.000 tokenize.py:131(TokenError)
+        1    0.000    0.000    0.000    0.000 __init__.py:186(c_float)
+        1    0.000    0.000    0.000    0.000 __init__.py:169(c_ulong)
+        1    0.000    0.000    0.000    0.000 __init__.py:239(c_void_p)
+        1    0.000    0.000    0.000    0.000 decimal.py:215(ConversionSyntax)
+        1    0.000    0.000    0.000    0.000 __init__.py:301(Enum)
+        1    0.000    0.000    0.000    0.000 decimal.py:252(DivisionUndefined)
+        1    0.000    0.000    0.000    0.000 decimal.py:312(Overflow)
+        1    0.000    0.000    0.000    0.000 __init__.py:317(CompressionOption)
+        1    0.000    0.000    0.000    0.000 inspect.py:560(EndOfBlock)
+        1    0.000    0.000    0.000    0.000 __init__.py:157(c_short)
+        1    0.000    0.000    0.000    0.000 tokenize.py:133(StopTokenizing)
+        1    0.000    0.000    0.000    0.000 <string>:2(DBKeyEmptyError)
+        1    0.000    0.000    0.000    0.000 __init__.py:161(c_ushort)
+        1    0.000    0.000    0.000    0.000 decimal.py:350(Underflow)
+        1    0.000    0.000    0.000    0.000 __init__.py:393(HRESULT)
+        1    0.000    0.000    0.000    0.000 __init__.py:190(c_double)
+        1    0.000    0.000    0.000    0.000 decimal.py:186(InvalidOperation)
+        1    0.000    0.000    0.000    0.000 decimal.py:289(Rounded)
+        1    0.000    0.000    0.000    0.000 __init__.py:222(c_char)
+        1    0.000    0.000    0.000    0.000 {thread.get_ident}
+        1    0.000    0.000    0.000    0.000 __init__.py:276(c_wchar_p)
+        1    0.000    0.000    0.000    0.000 __init__.py:217(c_byte)
+        1    0.000    0.000    0.000    0.000 decimal.py:174(Clamped)
+        1    0.000    0.000    0.000    0.000 threading.py:680(_set_daemon)
+        1    0.000    0.000    0.000    0.000 __init__.py:199(c_longlong)
+        1    0.000    0.000    0.000    0.000 decimal.py:1036(__sub__)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.memory}
+        1    0.000    0.000    0.000    0.000 decimal.py:301(Subnormal)
+        1    0.000    0.000    0.000    0.000 __init__.py:165(c_long)
+        1    0.000    0.000    0.000    0.000 __init__.py:203(c_ulonglong)
+        1    0.000    0.000    0.000    0.000 decimal.py:263(Inexact)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 support.py:70(Frame)
+
+

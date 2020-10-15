@@ -1,0 +1,11 @@
+buildPath = 'Z:\\python projects\\adobe-air-deployment-system'
+
+toc1 = [('foo1.PKG', '@archive\\134\\foo1.PKG', 'DATA')]
+
+useConsole = True
+useShelved = True
+
+shelvedFname = 'archive-template.dat'
+
+exeName = 'newArchive.exe'
+

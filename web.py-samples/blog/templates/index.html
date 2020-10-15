@@ -1,0 +1,13 @@
+$def with (posts)
+
+<h1>Blog posts</h1>
+
+<ul>
+$for post in posts:
+    <li>
+        <a href="/view/$post.id">$post.title</a>&nbsp;
+        (<a href="/view/json/$post.id">$post.title as JSON</a>)&nbsp;
+        from $datestr(post.posted_on)&nbsp;
+        <a href="/edit/$post.id">Edit</a>
+    </li>
+</ul>

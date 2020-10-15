@@ -1,0 +1,62 @@
+         1633 function calls in 0.964 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    0.965    0.965 {execfile}
+        1    0.882    0.882    0.964    0.964 ScrambleData.py:2(<module>)
+        1    0.013    0.013    0.042    0.042 core.py:34(full)
+        1    0.015    0.015    0.030    0.030 __init__.py:16(<module>)
+        1    0.029    0.029    0.029    0.029 profiler.py:10(<module>)
+        1    0.006    0.006    0.010    0.010 support.py:9(<module>)
+        1    0.001    0.001    0.010    0.010 scramblelib.py:2(<module>)
+        2    0.001    0.001    0.005    0.002 {method 'join' of 'str' objects}
+        1    0.005    0.005    0.005    0.005 core.py:18(<module>)
+        1    0.004    0.004    0.004    0.004 kdictproxy.py:5(<module>)
+      257    0.002    0.000    0.004    0.000 scramblelib.py:7(<genexpr>)
+     1024    0.003    0.000    0.003    0.000 {chr}
+      257    0.001    0.000    0.002    0.000 scramblelib.py:9(<genexpr>)
+        7    0.000    0.000    0.000    0.000 support.py:175(patch)
+        1    0.000    0.000    0.000    0.000 profiler.py:149(run)
+        1    0.000    0.000    0.000    0.000 profiler.py:35(go)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+        1    0.000    0.000    0.000    0.000 profiler.py:161(start)
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 atexit.py:6(<module>)
+       14    0.000    0.000    0.000    0.000 {setattr}
+       14    0.000    0.000    0.000    0.000 {getattr}
+        1    0.000    0.000    0.000    0.000 profiler.py:293(PassiveProfiler)
+        1    0.000    0.000    0.000    0.000 profiler.py:247(do_start)
+        4    0.000    0.000    0.000    0.000 {hasattr}
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.profiling}
+        1    0.000    0.000    0.000    0.000 atexit.py:37(register)
+        1    0.000    0.000    0.000    0.000 {time.time}
+        1    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {strop.maketrans}
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 profiler.py:146(Profiler)
+        2    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.statread}
+        2    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 ScrambleData.py:6(scrambleFile)
+        2    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 support.py:79(PythonFrame)
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 profiler.py:245(FullCompiler)
+        1    0.000    0.000    0.000    0.000 profiler.py:279(ActiveProfiler)
+        1    0.000    0.000    0.000    0.000 profiler.py:263(ChargeProfiler)
+        1    0.000    0.000    0.000    0.000 support.py:107(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 {built-in method acquire}
+        1    0.000    0.000    0.000    0.000 profiler.py:337(ActivePassiveProfiler)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 profiler.py:254(RunOnly)
+        1    0.000    0.000    0.000    0.000 {method 'has_key' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.memory}
+        1    0.000    0.000    0.000    0.000 support.py:75(Frame)
+        1    0.000    0.000    0.000    0.000 {built-in method release}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

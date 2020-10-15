@@ -1,0 +1,47 @@
+>>> data.keys()
+['data']
+>>> data['data']
+[(vyperlogix.hash.lists.HashedLists) storing 1 keys.]
+>>> data['data'][0]
+(vyperlogix.hash.lists.HashedLists) storing 1 keys.
+>>> data['data'][0].keys()
+['category_list']
+>>> data[data.keys()[0]][0]
+(vyperlogix.hash.lists.HashedLists) storing 1 keys.
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]]
+[(vyperlogix.hash.lists.HashedLists) storing 1 keys.]
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0]
+(vyperlogix.hash.lists.HashedLists) storing 1 keys.
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()
+['categories']
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]
+'categories'
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]]
+[(vyperlogix.hash.lists.HashedLists) storing 1 keys.]
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0]
+(vyperlogix.hash.lists.HashedLists) storing 1 keys.
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()
+['category']
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]
+'category'
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]]
+[(vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2
+ keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys.]
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]].keys()
+Traceback (most recent call last):
+  File "<string>", line 1, in <fragment>
+AttributeError: 'list' object has no attribute 'keys'
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]][0]
+(vyperlogix.hash.lists.HashedLists) storing 2 keys.
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()
+['item', 'title']
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]][0]
+(vyperlogix.hash.lists.HashedLists) storing 2 keys.
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]
+'category'
+>>> data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]]
+[(vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2
+ keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys., (vyperlogix.hash.lists.HashedLists) storing 2 keys.]
+>>> len(data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0][data[data.keys()[0]][0][data[data.keys()[0]][0].keys()[0]][0].keys()[0]][0].keys()[0]])
+31
+>>> 

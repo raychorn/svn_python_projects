@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" 
+	width="800" height="600" initialize="onInit()"
+	>
+	<mx:Script>
+		<![CDATA[
+			import mx.messaging.AbstractConsumer;
+			import mx.collections.ArrayCollection;
+			import mx.rpc.events.ResultEvent;
+			import com.REST.EzHTTPService;
+	
+			private var srvc:EzHTTPService;
+			
+			private var _url:String = 'http://127.0.0.1:8888/catalog/';
+	
+			private function onResult(event:ResultEvent):void {
+				var answerList:*;
+				var value:*;
+				var o:Object = event.result[0]['_id'];
+				try {
+					answerList = ArrayCollection(event.result).getItemAt(0);
+					value = answerList['answer'];
+				} catch (err:Error) {
+					var _answerList:Object = {};
+				}
+			}
+			
+			private function onInit():void {
+				srvc = new EzHTTPService(false,false);
+		
+				srvc.requestObj = new Object();
+				srvc.send('name', _url, onResult);
+			}
+		]]>
+	</mx:Script>
+	<mx:Tree id="tree_list" x="10" y="10" width="30%" height="96%"></mx:Tree>
+	
+</mx:Application>

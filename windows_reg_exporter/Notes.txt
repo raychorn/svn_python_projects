@@ -1,0 +1,2 @@
+--search="'C:\Program Files (x86)'"
+

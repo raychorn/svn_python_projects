@@ -1,0 +1,49 @@
+/* ver 1.4 */
+/* MAIN SITE LINKS */                         
+vzw=http://www.verizonwireless.com
+vzw-secure=https://www.verizonwireless.com           
+business=https://b2b.verizonwireless.com
+myverizon=https://myaccount.verizonwireless.com
+mblogin=https://mblogin.verizonwireless.com
+espanol=http://espanol.vzw.com/enes
+vzwBusiness=https://business.verizonwireless.com
+
+/* OMNITURE */
+aboutus=http://aboutus.vzw.com
+b2b=http://b2b.vzw.com
+support=http://support.vzw.com
+news=http://news.vzw.com
+search=http://search.vzw.com
+
+/* ASPs */
+alerts=http://alerts.vzw.com
+animated=http://animated.messaging.vzw.com/vge
+blackBerryDownload=http://vzam.net/blackberry
+careers=http://www.vzwcareers.com
+familyLocator=http://chaperone.vzw.com
+dashboard=http://dashboard.vzw.com
+enterprizeMsg=http://enterprisemessaging.vzw.com
+entertainment=http://products.verizonwireless.com
+estore=http://phones.verizonwireless.com
+forums=http://community.vzw.com
+hub=http://hub.vzw.com
+locationMgmt=http://locationmanagement.vzw.com
+mobileWeb=http://mobileweb.vzw.com
+pictures=http://picture.vzw.com
+pushtotalk=http://pushtotalk.vzw.com
+rebates=https://wwww.youwirelessrebatecenter.com
+satellite=http://www.vzwsatellite.com
+smartphoneRC=https://smartphones.verizonwireless.com
+textInt=http://text1.vzw.com
+textMessaging=http://text.vzw.com
+vcastMusic=http://vzam.net/vcastmusic
+vzEmail=http://vzemail.vzw.com
+vzNavigator=http://vznavigator.vzw.com
+vskins=http://www.vskins.com
+
+/* VZW */
+media=http://mediastore.verizonwireless.com
+
+/* Other */
+vzBusiness=http://business.verizon.net
+vzComm=http://www22.verizon.com

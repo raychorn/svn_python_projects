@@ -1,0 +1,15 @@
+* Regex is 10% to 40% slower than performing splits to parse timeDurations.
+
+* Regex fails to properly parse "25 days" but does properly parse "25 days, 00:15:30" and "00:15:30".  (Splits are faster than Regex.)
+
+* Character I/O is 2x slower than line I/O.  Embedded \n's cause problems for line I/O and thus character I/O seemed like the better choice.
+
+* Lists of items can be handled faster than hashes of items depending on which language is being used.
+
+* What Perlisms lend themselves to optimizations versus which other-language-isms lend themselves to optimizations ?
+
+* bigtest.txt uses \t\t and \n\n as delimiters whereas single char delimiters work better.
+
+* Embedded text that contain \n should be encoded when developing from bigtest.txt to better simulate cases where data is coming from database.
+
+* Replace Exception, details with Exception: whenever possible reduces runtime by 10.6%.

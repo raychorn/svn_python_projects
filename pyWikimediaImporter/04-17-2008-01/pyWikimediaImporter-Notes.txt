@@ -1,0 +1,10 @@
+pyWikimediaImporter
+
+php -f importTextFile.php --title "put a title here" --user rhorn --command "" --nooverwrite fileName.txt
+
+
+* It would be necessary to traverse all the links from all the pages hanging off index.html.
+* Track the links already handled.
+
+* Build a crawler and crawl the content shoving pages into MediaWiki as they have been seen until all pages have been handled.
+

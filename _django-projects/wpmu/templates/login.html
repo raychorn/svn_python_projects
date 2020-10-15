@@ -1,0 +1,27 @@
+<style>
+	#error_message {
+		color: red;
+		font-weight: bold;
+	}
+</style>
+
+{% block content %}
+
+{% if form.has_errors %}
+    <p id="error_message">Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<form method="post" action="{{ FORM_ACTION }}" enctype="application/x-www-form-urlencoded">
+<table width="100%">
+<tr><td width="20%"><label for="id_username">Username:</label></td><td width="20%">{{ form.username }}</td><td width="*" align="left"><small>(Use your valid Internet Email Address)</small></td></tr>
+<tr><td width="20%"><label for="id_password">Password:</label></td><td width="20%">{{ form.password }}</td><td width="*" align="left"><small>(Use Upper and lower case with special characters)</small></td></tr>
+<tr>
+	<td colspan="3">You are about Login to a Secure SSL Site.  If you encounter any browser related issues in connection with our SSL Cert you may, if you are using FireFox 3.0.x, <a href="https://www.vyperlogix.com/data/certs/cacert.der" target="_blank">click here</a> or <a href="https://www.vyperlogix.com/data/firefox/add-ons/remember_certificate_exception-0.8.0-fx.xpi" target="_blank">click here</a> to resolve those issues.</td>
+</tr>
+</table>
+
+<input id="id_btn_login" type="submit" value="Login" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{% endblock %}

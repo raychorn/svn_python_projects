@@ -1,0 +1,41 @@
+
+/* -- STYLES for 1024 design --*/
+#wideLayout #gn_outside #gn {margin:0 auto;text-align:left;height:35px;width:985px;}
+#wideLayout #gn div ul, #gn div ul li ul {display:block;width:220px;list-style-type:none;padding:0;margin:0;background-color:#000;}
+#wideLayout #gn div ul li, #gn div ul li ul li {display:block;width:220px;vertical-align:bottom;padding:0;margin:0;background:transparent;}
+#wideLayout #gn div.gn_dd {position:absolute;left:-1000em;z-index:500;background:url(/images_b2c/shared/globalnav/s.gif);width:220px;}
+#wideLayout #gn div.gn_dd ul li a:link, #gn div.gn_dd ul li a:visited {display:block;font:bold 12px/16px arial,sans-serif;background:#000;color:#fff;text-decoration:none;padding:7px 24px 7px 24px;}
+#wideLayout #gn div.gn_dd ul li a:hover, #gn div.gn_dd ul li a:active, #gn div.gn_dd ul li a:focus {text-decoration:none;}
+#wideLayout #gn div.gn_dd ul li ul {position:absolute;z-index:500;margin-left:220px;top:0;width:0;overflow:hidden;left:-1000em;background-color:#212121;}
+#wideLayout #gn div.gn_dd ul li ul li a:link, #gn div.gn_dd ul li ul li a:visited {font:normal 11px/14px arial,sans-serif;background:#212121;color:#fff;padding:8px 20px 8px 20px;}
+#wideLayout #gn div.gn_dd ul li ul li a:hover, #gn div.gn_dd ul li ul li a:active, #gn div.gn_dd ul li ul li a:focus {text-decoration:none;background:#990000;color:#fff;}
+#wideLayout #gn div ul li ul li p {padding:10px 0 10px 0;margin:0 20px 0 20px;border-bottom:1px solid #3b3b3b;}
+#wideLayout #gn div.gn_dd ul li a.left_arrow:link,
+#wideLayout #gn div.gn_dd ul li a.left_arrow:visited,
+#wideLayout #gn div.gn_dd ul li a.left_arrow:hover,
+#wideLayout #gn div.gn_dd ul li a.left_arrow:active,
+#wideLayout #gn div.gn_dd ul li a.left_arrow:focus {background-image:url(/images_b2c/shared/globalnav/left_arrow_active.gif);background-repeat:no-repeat;background-position:10px center;}
+#wideLayout #gn div.gn_dd ul li a.right_arrow:link,
+#wideLayout #gn div.gn_dd ul li a.right_arrow:visited,
+#wideLayout #gn div.gn_dd ul li a.right_arrow:hover,
+#wideLayout #gn div.gn_dd ul li a.right_arrow:active,
+#wideLayout #gn div.gn_dd ul li a.right_arrow:focus {background-image:url(/images_b2c/shared/globalnav/right_arrow_active.gif);background-repeat:no-repeat;background-position:206px center;}
+#wideLayout #gn div.gn_dd ul li ul li a.newWindow:link,
+#wideLayout #gn div.gn_dd ul li ul li a.newWindow:visited,
+#wideLayout #gn div.gn_dd ul li ul li a.newWindow:hover,
+#wideLayout #gn div.gn_dd ul li ul li a.newWindow:active,
+#wideLayout #gn div.gn_dd ul li ul li a.newWindow:focus {background-image: url(/images_b2c/shared/elements/newwindow.gif); background-position: 198px center; background-repeat: no-repeat;}
+
+#wideLayout #gn_phones {width:181px;}
+#wideLayout #gn_plans {width:72px;}
+#wideLayout #gn_features {width:180px;}
+#wideLayout #gn_messaging {width:106px;}
+#wideLayout #gn_business {width:92px;}
+#wideLayout #gn_support {width:87px;}
+#wideLayout #gn_myaccount {width:119px;}
+
+#wideLayout #lob {width:500px; }
+#wideLayout #lob a:link, #lob a:visited {padding:11px 20px 0 20px; }
+#wideLayout #residential {width:125px;}
+#wideLayout #business, #wideLayout #business .bus_divider {width:113px;}
+#wideLayout #wireless, #wideLayout #wireless_current {width:109px;}

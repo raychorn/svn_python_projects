@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	creationComplete="init()" 
+	xmlns:controls="vyperlogix.controls.colorPicker.*">
+    <mx:Script>
+        <![CDATA[
+        	import vyperlogix.utils.StringUtils;
+        	import mx.events.FlexEvent;
+
+            private var drawColor:uint = 0xffffff;
+
+            private function init():void{
+                this.setStyle("cornerRadius",0);
+            }
+            
+            private function onCreationComplete_colorSwatch(event:FlexEvent):void {
+            	var colors:ColorSwatch = event.currentTarget as ColorSwatch;
+                colors.addEventListener(ColorSelectEvent.COLOR_SELECTED, selectColor);
+            }
+            
+            public function get selectedColor():String{
+            	var color:String = StringUtils.uintToString(drawColor);
+            	//trace(this.className+'.selectedColor().1 --> color='+color);
+                return color;
+            }
+            
+            private function selectColor(e:ColorSelectEvent):void{
+                drawColor = e.pickedColor;
+            	//trace(this.className+'.selectColor().1 --> drawColor='+drawColor);
+                invalidateDisplayList();
+            }
+            
+            override protected function updateDisplayList(w:Number, h:Number):void{
+                super.updateDisplayList(w,h);
+                graphics.beginFill(drawColor);
+                graphics.drawRect(0,0,w-20,h);
+                graphics.endFill();
+            }
+        ]]>
+    </mx:Script>
+    <controls:ColorSwatch id="colorSwatch" x="0" y="0" width="100%" height="100%" creationComplete="onCreationComplete_colorSwatch(event)"/>
+</mx:Canvas>

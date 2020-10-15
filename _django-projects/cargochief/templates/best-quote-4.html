@@ -1,0 +1,55 @@
+{% extends 'best-quote-recap.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block dialogs %}
+{% endblock %}
+
+{% block recap %}
+                                    Contact:  John Smith, 650-269-4545, JSmith@abcstrawberry.com<br/>
+                                    RFQ Description: Lucky PO 342598 and PO 3216098<br/>
+                                    Origin Location:  Gilroy, CA 95020, Business with a Dock or Forklift, Driver to assist in loading<br/> 
+                                    Stop 1 in Transit:  Milwaukee, WI 51932, Convention Center/Tradeshow, Driver to Assist in unloading<br/>
+                                    Destination Location:  Menasha, WI 54952, Business with a Dock or Forklift, Driver Not assisting in unloading, ~2,235 miles<br/>
+                                    Ready for Pick Up:  April 17, 2012  10:25<br/> 	
+                                    Bid Window From:  April 15, 2012  10:25    To: April 15, 2011 14:25 (4 hour)<br/>
+{% endblock %}
+
+{% block info %}
+                                    <table width="100%">
+                                        <tr>
+                                            <td>
+                                              <b>Drop What Where ?</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            	Enter the Number of Pallet or Pallet positions<br/>
+                                                (equivalents) for each stop and each item
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            	<NOBR><label>Stop 1</label>&nbsp;<input id="drop_what_where_stop1" type="text" max="3"/>&nbsp;<label>+ Destination</label>&nbsp;<input id="drop_what_where_destination1" type="text" max="3"/>&nbsp;<label>= 12 Pallets or Pallet positions, 32 Drums, Strawberry Jam</label></NOBR>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </table>
+{% endblock %}
+
+{% block page-back %}<input id="btn_back" value="Back" class="main_button" onclick="window.location.href = '/best-quote-3.html';"/>&nbsp;&nbsp;&nbsp;&nbsp;{% endblock %}
+
+{% block continue-button-label %}Continue{% endblock %}
+{% block page-href %}/best-quote-5.html{% endblock %}

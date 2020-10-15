@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" title="New Menu Name"
+	currentState="NewDefault">
+	<mx:states>
+		<mx:State name="NewDefault">
+			<mx:RemoveChild target="{hbox1}"/>
+		</mx:State>
+	</mx:states>
+	<mx:Script>
+		<![CDATA[
+			import vyperlogix.utils.StringUtils;
+
+			public const symbol_logged_in:String = 'logged-in';
+			public const symbol_logged_out:String = 'logged-out';
+			
+			[Bindable]			
+			private var _currentState:String = symbol_logged_in;
+			
+			public function get isStateLoggedIn():Boolean {
+				return this._currentState == this.symbol_logged_in;
+			}
+			
+			public function get isStateLoggedOut():Boolean {
+				return this._currentState == this.symbol_logged_out;
+			}
+			
+			private function onCreationComplete_txt_menu_name():void {
+				this.txt_menu_name.setFocus();
+			}
+			
+			private function onKeyDown_txt_menu_name(event:KeyboardEvent):void {
+				this.txt_menu_name.text = StringUtils.ellipsis(this.txt_menu_name.text,50);
+				if (event.charCode == 13) {
+					this.btn_save.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
+				}
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%">
+		<mx:HBox width="100%" horizontalAlign="center" id="hbox1">
+		    <mx:RadioButton id="rbLoggedOut" groupName="LoggedState" visible="false" label="Logged-Out" selected="{this._currentState == this.symbol_logged_out}"/>
+		    <mx:RadioButton id="rbLoggedIn" groupName="LoggedState" visible="false" label="Logged-In" selected="{this._currentState == this.symbol_logged_in}"/>
+		</mx:HBox>
+		<mx:HBox width="100%">
+			<mx:Label text="Enter the Name of the New Menu:"/>
+			<mx:TextInput id="txt_menu_name" htmlText="" width="100%" keyDown="onKeyDown_txt_menu_name(event)" creationComplete="onCreationComplete_txt_menu_name()"/>
+		</mx:HBox>
+		<mx:HBox width="100%" horizontalAlign="center">
+			<mx:Button id="btn_save" label="(Save)"/>
+			<mx:Spacer width="5"/>
+			<mx:Button id="btn_dismiss" label="(Dismiss)"/>
+		</mx:HBox>
+	</mx:VBox>
+</mx:Panel>

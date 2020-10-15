@@ -1,0 +1,6 @@
+def getPyPiClassifiers():
+print 'Get list of Topics from PyPI...'
+
+url = 'http://pypi.python.org/pypi?%3Aaction=list_classifiers'
+res = urllib2.urlopen(url)
+page = res.read()

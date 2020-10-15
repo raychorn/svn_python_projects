@@ -1,0 +1,12 @@
+{% load blog_extras %}
+<!-- search box begin -->
+<div class="right_submenu">
+<div class='menu_header'>Search Our Blog</div>
+<div class="menu_content">
+<form action="{% BLOG_ROOT %}search/" method="post">
+<input type="text" name="query" size="20"></input>
+<input type="submit" value="search blog"></input>
+</form>
+</div>
+</div>
+<!-- search box end -->

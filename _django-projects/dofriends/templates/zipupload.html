@@ -1,0 +1,26 @@
+<style>
+	#error_message {
+		color: red;
+		font-weight: bold;
+	}
+</style>
+
+{% block content %}
+  <div>
+    <h1>Upload a .Zip file containing your Python Source:</h1>
+    <div>
+        <form action="/upload-zip/" method="post"
+              enctype="multipart/form-data">
+          <table width="100%" align="left">
+            {{ form }}
+          </table>
+          <input type="submit" value="Upload ZIP" />
+		  <br/>
+		  <span id="error_message">{{ ERROR_MESSAGE }}</span>
+        </form>
+    </div>
+	<p>It's okay if you have not added all those nifty "__init__.py" files where they should go; we will take care of this for you.</p>
+	<p>Your request will be queued-up with all the other requests we receive and you will receive an email notification once your Egg is ready for you to download.</p>
+	<br/>
+  </div>
+{% endblock %}

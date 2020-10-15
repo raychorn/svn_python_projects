@@ -1,0 +1,173 @@
+
+Z:\python projects\Vyper-Proxy>"Z:\python projects\Vyper-Proxy\dist\VyperProxy.exe" --stop 
+(c). Copyright 1990-2008, Vyper Logix Corp., 
+
+                   All Rights Reserved.
+
+Published under Creative Commons License 
+(http://creativecommons.org/licenses/by-nc/3.0/) 
+restricted to non-commercial educational use only., 
+
+See also: http://www.VyperLogix.com and http://www.pypi.info for details.
+
+THE AUTHOR VYPER LOGIX CORP DISCLAIMS ALL WARRANTIES WITH REGARD TO
+THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS, IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL,
+INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+WITH THE USE OR PERFORMANCE OF THIS SOFTWARE !
+
+USE AT YOUR OWN RISK.
+
+_path=Z:\python projects\Vyper-Proxy\VyperProxyEngine\dist
+_pidPath=Z:\python projects\Vyper-Proxy\VyperProxyEngine\dist\pid
+files=['Z:\\python projects\\Vyper-Proxy\\VyperProxyEngine\\dist\\pid\\pid_08-Jan-2009_20_00_11.txt']
+BEGIN: Z:\python projects\Vyper-Proxy\VyperProxyEngine\dist\pid\pid_08-Jan-2009_20_00_11.txt num=(4)
+	1 :: 6588
+	2 :: 4268
+	3 :: 3132
+	4 :: 1796
+END! Z:\python projects\Vyper-Proxy\VyperProxyEngine\dist\pid\pid_08-Jan-2009_20_00_11.txt
+ <root> <-1> <-1>
+	<Idle> <0> <0>
+	<smss> <608> <4>
+	<csrss> <748> <736>
+	<winlogon> <1032> <800>
+	<services> <852> <808>
+		<OcHealthMon> <2684> <852>
+		<FNPLicensingService> <5032> <852>
+		<alg> <4132> <852>
+		<MsMpEng> <1172> <852>
+		<AppleMobileDeviceService> <1276> <852>
+		<agrsmsvc> <932> <852>
+		<PGPserv> <2836> <852>
+		<ULCDRSvr> <3368> <852>
+		<usnsvc> <4356> <852>
+		<TosIPCSrv> <3344> <852>
+		<TosCoSrv> <3272> <852>
+		<memcached> <2640> <852>
+		<RegSrvc> <2924> <852>
+		<vmware-authd> <3632> <852>
+		<TODDSrv> <3252> <852>
+		<CFSvcs> <2108> <852>
+		<SLsvc> <1532> <852>
+		<LSSrvc> <2588> <852>
+		<EvtEng> <2432> <852>
+		<wdService> <3476> <852>
+		<TNaviSrv> <3140> <852>
+		<pinger> <2860> <852>
+		<mDNSResponder> <2092> <852>
+		<msfwsvc> <3596> <852>
+		<vmnetdhcp> <3740> <852>
+		<vmnat> <3384> <852>
+		<svchost> <1132> <852>
+		<svchost> <1512> <852>
+		<svchost> <1600> <852>
+		<svchost> <2032> <852>
+		<svchost> <1024> <852>
+		<svchost> <1504> <852>
+		<svchost> <2552> <852>
+		<svchost> <2656> <852>
+		<svchost> <2880> <852>
+		<svchost> <2908> <852>
+		<svchost> <2960> <852>
+		<svchost> <3404> <852>
+		<svchost> <3512> <852>
+		<svchost> <1700> <852>
+		<svchost> <5540> <852>
+		<spoolsv> <752> <852>
+		<cvpnd> <2404> <852>
+		<swupdtmr> <3008> <852>
+		<wmpnetwk> <5004> <852>
+		<OcHealthMon> <2684> <852>
+	<iashost> <2732> <1060>
+	<rundll32> <1716> <1104>
+	<python25> <5912> <1164>
+	<upeksvr> <1800> <1212>
+	<explorer> <4224> <1228>
+		<wing> <1164> <4224>
+			<python25> <5912> <1164>
+		<PopMenuStartUp> <6056> <4224>
+		<TPwrMain> <4892> <4224>
+		<sidebar> <5288> <4224>
+		<sidebar> <4368> <4224>
+		<TCrdMain> <2792> <4224>
+		<jusched> <4828> <4224>
+		<pageant> <4876> <4224>
+		<cmd> <3856> <4224>
+		<cmd> <5348> <4224>
+		<vmware-tray> <2988> <4224>
+		<SmoothView> <4864> <4224>
+		<rundll32> <3472> <4224>
+		<GrooveMonitor> <5240> <4224>
+		<PGPtray> <5596> <4224>
+		<wmpnscfg> <3760> <4224>
+		<Acrotray> <4708> <4224>
+		<ItSecMng> <4680> <4224>
+		<ehtray> <5400> <4224>
+		<wmdSync> <2568> <4224>
+		<TOSCDSPD> <4824> <4224>
+		<KeNotify> <4852> <4224>
+		<webdrive> <4812> <4224>
+		<hpwuSchd2> <2888> <4224>
+		<GoogleUpdate> <5636> <4224>
+		<procexp> <5176> <4224>
+		<wlmail> <5440> <4224>
+		<ApacheMonitor> <4912> <4224>
+		<TSVNCache> <4628> <4224>
+	<audiodg> <1484> <1320>
+	<dwm> <1596> <1384>
+	<taskeng> <6008> <1424>
+	<httpd> <2076> <1696>
+	<python> <696> <1796>
+	<CEC_MAIN> <4716> <2776>
+	<python> <5064> <3132>
+	<SearchFilterHost> <4008> <3532>
+	<winssnotify> <6032> <3812>
+	<python> <6352> <4268>
+	<chrome> <6156> <4292>
+	<firefox> <6764> <4432>
+	<psqltray> <2416> <5052>
+	<SynTPHelper> <5144> <5232>
+	<TscHelp> <3928> <6044>
+	<VyperProxyEngine> <6588> <6292>
+		<cmd> <1796> <6588>
+			<python> <696> <1796>
+	<VyperProxy> <1212> <7840>
+		<upeksvr> <1800> <1212>
+	<explorer> <7980> <8056>
+	<lsm> <872> <808>
+	<psqltray> <2416> <5052>
+	<SnagPriv> <5120> <6044>
+	<TscHelp> <3928> <6044>
+	<CEC_MAIN> <4716> <2776>
+	<python> <6352> <4268>
+	<python> <5064> <3132>
+	<lsass> <864> <808>
+	<rundll32> <1716> <1104>
+	<SearchProtocolHost> <8096> <3532>
+	<SearchFilterHost> <4008> <3532>
+	<dwm> <1596> <1384>
+	<smss> <608> <4>
+	<csrss> <748> <736>
+	<csrss> <820> <800>
+	<ehmsas> <5900> <1060>
+	<firefox> <6764> <4432>
+	<SynToshiba> <3176> <5232>
+	<winssnotify> <6032> <3812>
+	<httpd> <2076> <1696>
+	<chrome> <6156> <4292>
+	<winlogon> <1032> <800>
+	<SynTPHelper> <5144> <5232>
+	<explorer> <7980> <8056>
+	<WmiPrvSE> <4508> <1060>
+	<msnmsgr> <5284> <1060>
+	<iashost> <2732> <1060>
+	<audiodg> <1484> <1320>
+	<taskeng> <384> <1424>
+	<taskeng> <6008> <1424>
+pids[0]=6588
+	<VyperProxyEngine> <6588> <6292>
+		<cmd> <1796> <6588>
+			<python> <696> <1796>

@@ -1,0 +1,11 @@
+Table: views_paths
+
+
+Holds the paths that point to the parent for each path.
+
+A path is a clickable entity or any node that does not contain a file.
+
+This table will eliminate the need to traverse the tree for each click.
+
+Make this a by-product of the scan_folders process after each path has been processed determine the parent
+for the path and store that value in the table.

@@ -1,0 +1,2 @@
+compile2.5 > compile2.5.log 2>&1
+

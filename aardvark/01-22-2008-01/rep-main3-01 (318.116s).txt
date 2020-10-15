@@ -1,0 +1,312 @@
+
+Z:\python projects\aardvark>if profile. == profile. goto profiler 
+
+Z:\python projects\aardvark>python -m cProfile -s cumulative main3.py --input=Bigtest.txt 
+(initMetadata).1 :: property_map=({'1': {'18': 4L, '31': 1L, '27': 3L, '17': 2L}})
+(initMetadata).2b :: app_tracking_property_map=({'1': {'96514': 6L}})
+(initMetadata).3b :: installed_apps_property_map=({'1': {'82118': 5L}})
+(initHandlers) :: handlers=({'1': {'27': <function handle_property at 0x00CF7FB0>, '17': <function handle_property at 0x00CF7FB0>, '18': <function handle_property at 0x00CF7FB0>, '31': <function handle_property at 0x00CF7FB0>, '96514': <function handle_app_tracking at 0x00CFB030>, '82118': <function handle_installed_apps at 0x00CFB070>}})
+computer_map=({})
+"10 delete properties"
+[delete from computer_properties with (tablock)	from openrowset(bulk 'Z:\python projects\aardvark\etl_computer_properties.csv', formatfile='Z:\python projects\aardvark\computer_properties_format.xml') as foo where computer_properties.computer_id = foo.computer_id and computer_properties.property_id = foo.property_id]
+
+"20 insert properties"
+[bulk insert computer_properties from 'Z:\python projects\aardvark\etl_computer_properties.csv' with (tablock, batchsize=100000, formatfile='Z:\python projects\aardvark\computer_properties_format.xml')]
+
+"30 delete packages"
+[delete from computers_packages with (tablock) from openrowset (bulk 'Z:\python projects\aardvark\etl_computers_with_packages.csv', formatfile='Z:\python projects\aardvark\computer_ids_format.xml') as foo where computers_packages.computer_id = foo.computer_id]
+
+"40 insert packages"
+[bulk insert computers_packages from 'Z:\python projects\aardvark\etl_computers_packages.csv' with (tablock, batchsize=100000, formatfile='Z:\python projects\aardvark\computers_packages_format.xml')]
+
+"51 truncate tmp_computer_app_tracking"
+[truncate table tmp_computer_app_tracking]
+
+"52 move away unmodified computer app tracking records to tmp_computer_app_tracking"
+[insert into tmp_computer_app_tracking select computer_app_tracking.* from computer_app_tracking left outer join openrowset(bulk 'Z:\python projects\aardvark\etl_computers_with_app_tracking.csv',formatfile='Z:\python projects\aardvark\computer_ids_format.xml') as foo on (computer_app_tracking.computer_id = foo.computer_id) where foo.computer_id is null]
+
+"53 truncate computer_app_tracking"
+[truncate table computer_app_tracking]
+
+"54 remove index on computer_app_tracking"
+[if exists (select 1 from sysindexes where id = object_id('computer_app_tracking') and name = 'index_1' and indid > 0 and indid < 255) drop index computer_app_tracking.index_1]
+
+"55 insert into computer_app_tracking from csv file"
+[insert into computer_app_tracking with (tablock) (computer_id, exe_name, first_used, last_used, total_runs, total_time) select computer_id, exe_name, dateadd(hh, first_used_tzoffset * -1, first_used_datetime), dateadd(hh, last_used_tzoffset * -1, last_used_datetime), total_runs, total_time from openrowset(bulk 'Z:\python projects\aardvark\etl_computer_app_tracking.csv',formatfile='Z:\python projects\aardvark\computer_app_tracking_format.xml') as foo]
+
+"56 insert into computer_app_tracking from tmp_computer_app_tracking"
+[insert into computer_app_tracking with (tablock) (computer_id, exe_name, first_used, last_used, total_runs, total_time) select computer_id, exe_name, first_used, last_used, total_runs, total_time from tmp_computer_app_tracking]
+
+"57 add index to computer_app_tracking"
+[create index index_1 on computer_app_tracking (computer_id asc,exe_name asc)]
+
+"60 update computers.last_app_tracking"
+[update computers with (tablock) set last_app_tracking = current_timestamp from openrowset (bulk 'Z:\python projects\aardvark\etl_computers_with_app_tracking.csv',formatfile='Z:\python projects\aardvark\computer_ids_format.xml') as computers_seen where computers.id = computers_seen.computer_id]
+
+"61 update computers.last_installed_app"
+[update computers with (tablock) set last_installed_app = current_timestamp from openrowset (bulk 'Z:\python projects\aardvark\etl_computers_with_packages.csv',	formatfile='Z:\python projects\aardvark\computer_ids_format.xml') as computers_seen where computers.id = computers_seen.computer_id]
+
+"62 update computers.last_seen"
+[update computers with (tablock) set last_seen = current_timestamp from openrowset (bulk 'Z:\python projects\aardvark\etl_computers_with_properties.csv',formatfile='Z:\python projects\aardvark\computer_ids_format.xml') as computers_seen where computers.id = computers_seen.computer_id]
+
+Time spent doing I/O :: (163.35901022) of (317.85800004)
+         16515717 function calls (16515655 primitive calls) in 318.116 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.007    0.007  318.116  318.116 {execfile}
+        1    0.009    0.009  318.109  318.109 main3.py:1(<module>)
+        1  286.514  286.514  318.009  318.009 main3.py:336(main)
+   499831    3.112    0.000   22.177    0.000 decimal.py:773(__hash__)
+   586717    4.564    0.000   11.310    0.000 decimal.py:516(__new__)
+   499831    1.154    0.000    7.423    0.000 decimal.py:742(__eq__)
+  1673019    6.462    0.000    6.462    0.000 {map}
+   499831    2.923    0.000    6.060    0.000 decimal.py:689(__cmp__)
+   586473    2.427    0.000    5.083    0.000 decimal.py:800(__str__)
+   499831    2.307    0.000    4.374    0.000 decimal.py:1492(__int__)
+    86883    0.664    0.000    1.814    0.000 decimal.py:3092(_string2exact)
+  3020487    1.517    0.000    1.517    0.000 {isinstance}
+   999662    1.121    0.000    1.451    0.000 decimal.py:2184(adjusted)
+   499831    0.623    0.000    1.033    0.000 decimal.py:679(__nonzero__)
+   499831    0.482    0.000    0.653    0.000 decimal.py:2963(_convert_other)
+  1086305    0.589    0.000    0.589    0.000 {method 'join' of 'str' objects}
+1673471/1673462    0.560    0.000    0.560    0.000 {len}
+    86885    0.330    0.000    0.496    0.000 decimal.py:2991(_isnan)
+   499831    0.410    0.000    0.410    0.000 {sum}
+    86883    0.407    0.000    0.407    0.000 {built-in method match}
+   673359    0.379    0.000    0.379    0.000 decimal.py:438(getcontext)
+    86888    0.279    0.000    0.372    0.000 decimal.py:2983(_isinfinity)
+   586718    0.363    0.000    0.363    0.000 {built-in method __new__ of type object at 0x1E1E7E18}
+   499831    0.192    0.000    0.192    0.000 {abs}
+   499831    0.189    0.000    0.189    0.000 {hash}
+   347532    0.176    0.000    0.176    0.000 {built-in method group}
+   173843    0.130    0.000    0.130    0.000 {method 'startswith' of 'str' objects}
+   173773    0.089    0.000    0.089    0.000 {method 'lower' of 'str' objects}
+        1    0.001    0.001    0.079    0.079 __init__.py:1(<module>)
+        1    0.023    0.023    0.078    0.078 adodbapi.py:23(<module>)
+    86921    0.040    0.000    0.040    0.000 {method 'get' of 'dict' objects}
+        1    0.030    0.030    0.039    0.039 __init__.py:5(<module>)
+        1    0.004    0.004    0.015    0.015 __init__.py:8(<module>)
+        1    0.002    0.002    0.009    0.009 pythoncom.py:2(<module>)
+        1    0.005    0.005    0.007    0.007 dynamic.py:17(<module>)
+        2    0.002    0.001    0.007    0.003 pywintypes.py:3(__import_pywin32_system_module__)
+        1    0.002    0.002    0.006    0.006 decimal.py:116(<module>)
+        1    0.000    0.000    0.006    0.006 __init__.py:70(search_function)
+        1    0.006    0.006    0.006    0.006 {__import__}
+        1    0.002    0.002    0.005    0.005 __init__.py:16(<module>)
+        1    0.002    0.002    0.005    0.005 gencache.py:22(<module>)
+        2    0.003    0.002    0.003    0.002 {imp.load_module}
+        2    0.000    0.000    0.003    0.001 re.py:178(compile)
+        2    0.000    0.000    0.003    0.001 re.py:219(_compile)
+        2    0.000    0.000    0.002    0.001 sre_compile.py:501(compile)
+        1    0.000    0.000    0.002    0.002 pywintypes.py:3(<module>)
+        1    0.002    0.002    0.002    0.002 build.py:11(<module>)
+        1    0.001    0.001    0.002    0.002 support.py:9(<module>)
+        1    0.001    0.001    0.002    0.002 glob.py:1(<module>)
+        1    0.001    0.001    0.002    0.002 threading.py:1(<module>)
+        1    0.001    0.001    0.001    0.001 kdictproxy.py:5(<module>)
+        2    0.000    0.000    0.001    0.001 sre_parse.py:669(parse)
+        1    0.001    0.001    0.001    0.001 core.py:18(<module>)
+     10/2    0.000    0.000    0.001    0.001 sre_parse.py:307(_parse_sub)
+     11/2    0.000    0.000    0.001    0.001 sre_parse.py:385(_parse)
+        1    0.000    0.000    0.001    0.001 gencache.py:51(__init__)
+        1    0.001    0.001    0.001    0.001 gencache.py:72(_LoadDicts)
+        2    0.000    0.000    0.001    0.001 sre_compile.py:486(_code)
+     20/2    0.000    0.000    0.001    0.000 sre_compile.py:38(_compile)
+        1    0.001    0.001    0.001    0.001 {_win32sysloader.LoadModule}
+      140    0.000    0.000    0.001    0.000 sre_parse.py:207(get)
+        9    0.000    0.000    0.000    0.000 sre_compile.py:184(_compile_charset)
+        1    0.000    0.000    0.000    0.000 calendar.py:6(<module>)
+      166    0.000    0.000    0.000    0.000 sre_parse.py:188(__next)
+        9    0.000    0.000    0.000    0.000 sre_compile.py:213(_optimize_charset)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:94(mxDateTimeConverter)
+        2    0.000    0.000    0.000    0.000 sre_compile.py:367(_compile_info)
+        1    0.000    0.000    0.000    0.000 __init__.py:2(<module>)
+        1    0.000    0.000    0.000    0.000 winerror.py:4(<module>)
+        4    0.000    0.000    0.000    0.000 decimal.py:2254(__init__)
+    28/10    0.000    0.000    0.000    0.000 sre_parse.py:146(getwidth)
+        2    0.000    0.000    0.000    0.000 sre_compile.py:264(_mk_bitmap)
+        1    0.000    0.000    0.000    0.000 calendar.py:65(_localized_day)
+        1    0.000    0.000    0.000    0.000 decimal.py:2234(Context)
+        1    0.000    0.000    0.000    0.000 string_escape.py:7(<module>)
+       66    0.000    0.000    0.000    0.000 sre_parse.py:201(match)
+      249    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:26(SetupEnvironment)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:946(__init__)
+        1    0.000    0.000    0.000    0.000 {open}
+        1    0.000    0.000    0.000    0.000 threading.py:633(__init__)
+       15    0.000    0.000    0.000    0.000 copy.py:65(copy)
+        1    0.000    0.000    0.000    0.000 {win32api.RegOpenKey}
+       10    0.000    0.000    0.000    0.000 adodbapi.py:950(__setitem__)
+       35    0.000    0.000    0.000    0.000 sre_parse.py:132(__len__)
+        5    0.000    0.000    0.000    0.000 sre_parse.py:222(isname)
+        1    0.000    0.000    0.000    0.000 threading.py:392(__init__)
+        1    0.000    0.000    0.000    0.000 keyword.py:11(<module>)
+        7    0.000    0.000    0.000    0.000 support.py:175(patch)
+        2    0.000    0.000    0.000    0.000 {built-in method load}
+       65    0.000    0.000    0.000    0.000 sre_parse.py:136(__getitem__)
+       58    0.000    0.000    0.000    0.000 {setattr}
+        1    0.000    0.000    0.000    0.000 ntpath.py:252(exists)
+       20    0.000    0.000    0.000    0.000 sre_parse.py:144(append)
+        1    0.000    0.000    0.000    0.000 calendar.py:46(_localized_month)
+        8    0.000    0.000    0.000    0.000 sre_compile.py:360(_simple)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:114(__init__)
+        1    0.000    0.000    0.000    0.000 {nt.stat}
+        8    0.000    0.000    0.000    0.000 sre_parse.py:78(opengroup)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:140(__getslice__)
+       42    0.000    0.000    0.000    0.000 {min}
+        6    0.000    0.000    0.000    0.000 sre_parse.py:263(_escape)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+       20    0.000    0.000    0.000    0.000 sre_parse.py:96(__init__)
+        1    0.000    0.000    0.000    0.000 core.py:121(bind)
+        1    0.000    0.000    0.000    0.000 threading.py:152(Condition)
+       30    0.000    0.000    0.000    0.000 {getattr}
+        5    0.000    0.000    0.000    0.000 {psyco._psyco.locals}
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:64(__init__)
+        1    0.000    0.000    0.000    0.000 decimal.py:507(Decimal)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:89(closegroup)
+        1    0.000    0.000    0.000    0.000 __init__.py:48(normalize_encoding)
+        1    0.000    0.000    0.000    0.000 string_escape.py:29(getregentry)
+        2    0.000    0.000    0.000    0.000 sre_parse.py:184(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:157(__init__)
+        9    0.000    0.000    0.000    0.000 {hasattr}
+       10    0.000    0.000    0.000    0.000 {psyco._psyco.globals}
+        1    0.000    0.000    0.000    0.000 traceback.py:1(<module>)
+        2    0.000    0.000    0.000    0.000 {_win32sysloader.GetModuleFilename}
+       12    0.000    0.000    0.000    0.000 {nt.getcwd}
+       22    0.000    0.000    0.000    0.000 sre_parse.py:216(isident)
+        1    0.000    0.000    0.000    0.000 ntpath.py:59(join)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.proxycode}
+        1    0.000    0.000    0.000    0.000 dynamic.py:152(CDispatch)
+        3    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {win32api.GetFullPathName}
+        1    0.000    0.000    0.000    0.000 {method 'close' of 'file' objects}
+        4    0.000    0.000    0.000    0.000 sre_compile.py:480(isstring)
+        2    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 fnmatch.py:11(<module>)
+       10    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 codecs.py:77(__new__)
+       18    0.000    0.000    0.000    0.000 sre_compile.py:24(_identityfunction)
+        8    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 calendar.py:125(Calendar)
+        6    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 adodbapi.py:146(Timestamp)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:435(Cursor)
+        1    0.000    0.000    0.000    0.000 {cPickle.Unpickler}
+       14    0.000    0.000    0.000    0.000 copy.py:100(_copy_immutable)
+        2    0.000    0.000    0.000    0.000 {_sre.compile}
+        8    0.000    0.000    0.000    0.000 sre_parse.py:138(__setitem__)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:163(pythonTimeConverter)
+       11    0.000    0.000    0.000    0.000 {ord}
+        1    0.000    0.000    0.000    0.000 ntpath.py:51(isabs)
+        1    0.000    0.000    0.000    0.000 threading.py:383(Thread)
+        2    0.000    0.000    0.000    0.000 {imp.get_suffixes}
+        1    0.000    0.000    0.000    0.000 calendar.py:131(__init__)
+        7    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'toordinal' of 'datetime.date' objects}
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        1    0.000    0.000    0.000    0.000 build.py:100(DispatchItem)
+        1    0.000    0.000    0.000    0.000 calendar.py:371(HTMLCalendar)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:63(TimeConverter)
+        1    0.000    0.000    0.000    0.000 calendar.py:254(TextCalendar)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:307(Connection)
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dictproxy' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:411(DispatchBaseClass)
+        1    0.000    0.000    0.000    0.000 threading.py:155(_Condition)
+        2    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:79(_RLock)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:143(Time)
+        5    0.000    0.000    0.000    0.000 adodbapi.py:1138(__init__)
+        1    0.000    0.000    0.000    0.000 calendar.py:495(LocaleTextCalendar)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:113(pythonDateTimeConverter)
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 copy.py:112(_copy_with_constructor)
+        2    0.000    0.000    0.000    0.000 sre_parse.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 build.py:54(MapEntry)
+        2    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 threading.py:39(__init__)
+        1    0.000    0.000    0.000    0.000 string_escape.py:10(Codec)
+        1    0.000    0.000    0.000    0.000 CLSIDToClass.py:18(<module>)
+        1    0.000    0.000    0.000    0.000 threading.py:271(_Semaphore)
+        1    0.000    0.000    0.000    0.000 threading.py:333(_Event)
+        1    0.000    0.000    0.000    0.000 string_escape.py:15(IncrementalEncoder)
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 ntpath.py:116(splitdrive)
+        1    0.000    0.000    0.000    0.000 string_escape.py:19(IncrementalDecoder)
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 calendar.py:530(LocaleHTMLCalendar)
+        2    0.000    0.000    0.000    0.000 calendar.py:51(__init__)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:140(Date)
+        1    0.000    0.000    0.000    0.000 decimal.py:2869(_WorkRep)
+        1    0.000    0.000    0.000    0.000 decimal.py:2219(_ContextManager)
+        1    0.000    0.000    0.000    0.000 calendar.py:20(IllegalMonthError)
+        1    0.000    0.000    0.000    0.000 threading.py:37(_Verbose)
+        2    0.000    0.000    0.000    0.000 calendar.py:70(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:602(_Timer)
+        1    0.000    0.000    0.000    0.000 __init__.py:487(CoClassBaseClass)
+        1    0.000    0.000    0.000    0.000 string_escape.py:23(StreamWriter)
+        1    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 decimal.py:154(DecimalException)
+        1    0.000    0.000    0.000    0.000 threading.py:318(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 __init__.py:115(CDispatch)
+        2    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:188(EventsProxy)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:945(VariantConversionMap)
+        1    0.000    0.000    0.000    0.000 {chr}
+        1    0.000    0.000    0.000    0.000 support.py:107(PsycoFrame)
+        2    0.000    0.000    0.000    0.000 {max}
+        1    0.000    0.000    0.000    0.000 threading.py:671(_DummyThread)
+        1    0.000    0.000    0.000    0.000 support.py:79(PythonFrame)
+        1    0.000    0.000    0.000    0.000 calendar.py:483(TimeEncoding)
+        1    0.000    0.000    0.000    0.000 {built-in method acquire}
+        1    0.000    0.000    0.000    0.000 calendar.py:27(IllegalWeekdayError)
+        1    0.000    0.000    0.000    0.000 {method 'insert' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 decimal.py:225(DivisionByZero)
+        1    0.000    0.000    0.000    0.000 threading.py:631(_MainThread)
+        1    0.000    0.000    0.000    0.000 build.py:85(OleItem)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 build.py:392(VTableItem)
+        1    0.000    0.000    0.000    0.000 decimal.py:254(DivisionUndefined)
+        1    0.000    0.000    0.000    0.000 __init__.py:159(Constants)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:1137(DBAPITypeObject)
+        1    0.000    0.000    0.000    0.000 decimal.py:214(ConversionSyntax)
+        1    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:162(__init__)
+        1    0.000    0.000    0.000    0.000 decimal.py:190(InvalidOperation)
+        1    0.000    0.000    0.000    0.000 calendar.py:137(setfirstweekday)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:216(InterfaceError)
+        1    0.000    0.000    0.000    0.000 decimal.py:319(Overflow)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:213(Warning)
+        1    0.000    0.000    0.000    0.000 decimal.py:280(InvalidContext)
+        1    0.000    0.000    0.000    0.000 decimal.py:243(DivisionImpossible)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:219(DatabaseError)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 build.py:412(LazyDispatchItem)
+        1    0.000    0.000    0.000    0.000 build.py:35(NotSupportedException)
+        1    0.000    0.000    0.000    0.000 decimal.py:307(Subnormal)
+        1    0.000    0.000    0.000    0.000 decimal.py:357(Underflow)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:234(DataError)
+        1    0.000    0.000    0.000    0.000 {method 'has_key' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'iteritems' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 decimal.py:177(Clamped)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:237(NotSupportedError)
+        1    0.000    0.000    0.000    0.000 support.py:75(Frame)
+        1    0.000    0.000    0.000    0.000 decimal.py:294(Rounded)
+        1    0.000    0.000    0.000    0.000 decimal.py:267(Inexact)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:225(OperationalError)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:210(Error)
+        1    0.000    0.000    0.000    0.000 string_escape.py:26(StreamReader)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:222(InternalError)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:228(ProgrammingError)
+        1    0.000    0.000    0.000    0.000 adodbapi.py:231(IntegrityError)
+        1    0.000    0.000    0.000    0.000 threading.py:640(_set_daemon)
+        1    0.000    0.000    0.000    0.000 {built-in method release}
+        1    0.000    0.000    0.000    0.000 {thread.get_ident}
+        1    0.000    0.000    0.000    0.000 {method 'clear' of 'dict' objects}
+
+
+
+Z:\python projects\aardvark>goto end 

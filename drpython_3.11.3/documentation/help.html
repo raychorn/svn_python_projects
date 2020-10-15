@@ -1,0 +1,869 @@
+<?xml version="1.0"  ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<meta name="generator" content="Docutils 0.3.8: http://docutils.sourceforge.net/" />
+<title>DrPython: Help</title>
+<meta name="author" content="Daniel Pozmanter" />
+<meta name="copyright" content="2003-2005 Daniel Pozmanter" />
+<link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="drpython-help">
+<h1 class="title">DrPython: Help</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Daniel Pozmanter</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference" href="mailto:drpython&#64;bluebottle.com">drpython&#64;bluebottle.com</a></td></tr>
+<tr class="field"><th class="docinfo-name">Web site:</th><td class="field-body"><a class="reference" href="http://drpython.sourceforge.net/">http://drpython.sourceforge.net/</a></td>
+</tr>
+<tr><th class="docinfo-name">Copyright:</th>
+<td>2003-2005 Daniel Pozmanter</td></tr>
+<tr class="field"><th class="docinfo-name">License:</th><td class="field-body"><a class="reference" href="gpl.html">GPL</a></td>
+</tr>
+</tbody>
+</table>
+<a class="target" id="top" name="top"></a><p><a class="reference" href="credits.html">Credits</a></p>
+<p><a class="reference" href="thanks.html">Thanks</a></p>
+<div class="contents topic" id="contents">
+<p class="topic-title first"><a name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#introduction" id="id1" name="id1">Introduction</a><ul>
+<li><a class="reference" href="#built-using" id="id2" name="id2">Built Using</a></li>
+<li><a class="reference" href="#donate" id="id3" name="id3">Donate!</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#installation" id="id4" name="id4">Installation</a><ul>
+<li><a class="reference" href="#support" id="id5" name="id5">Support</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#features" id="id6" name="id6">Features</a><ul>
+<li><a class="reference" href="#bookmarks" id="id7" name="id7">Bookmarks</a></li>
+<li><a class="reference" href="#check-syntax" id="id8" name="id8">Check Syntax</a></li>
+<li><a class="reference" href="#encoding-support" id="id9" name="id9">Encoding Support</a></li>
+<li><a class="reference" href="#find-replace" id="id10" name="id10">Find/Replace</a></li>
+<li><a class="reference" href="#find-and-complete" id="id11" name="id11">Find and Complete</a></li>
+<li><a class="reference" href="#go-to-block-class-def" id="id12" name="id12">Go To Block / Class / Def</a></li>
+<li><a class="reference" href="#goto-traceback" id="id13" name="id13">Goto Traceback</a></li>
+<li><a class="reference" href="#indentation-and-tabs" id="id14" name="id14">Indentation and Tabs</a></li>
+<li><a class="reference" href="#shortcuts" id="id15" name="id15">Shortcuts</a></li>
+<li><a class="reference" href="#line-endings" id="id16" name="id16">Line Endings</a></li>
+<li><a class="reference" href="#menu-and-focus-toggling" id="id17" name="id17">Menu And Focus (Toggling)</a></li>
+<li><a class="reference" href="#open-imported-module" id="id18" name="id18">Open Imported Module</a></li>
+<li><a class="reference" href="#pop-up-menu" id="id19" name="id19">Pop Up Menu</a></li>
+<li><a class="reference" href="#rectangular-selection" id="id20" name="id20">Rectangular Selection</a></li>
+<li><a class="reference" href="#regular-expressions" id="id21" name="id21">Regular Expressions</a></li>
+<li><a class="reference" href="#running-a-python-program" id="id22" name="id22">Running a Python Program</a></li>
+<li><a class="reference" href="#shell-commands" id="id23" name="id23">Shell Commands</a></li>
+<li><a class="reference" href="#source-browser" id="id24" name="id24">Source Browser</a></li>
+<li><a class="reference" href="#source-browser-go-to" id="id25" name="id25">Source Browser Go To</a></li>
+<li><a class="reference" href="#status-bar" id="id26" name="id26">Status Bar</a></li>
+<li><a class="reference" href="#tool-bar" id="id27" name="id27">Tool Bar</a></li>
+<li><a class="reference" href="#tracebacks" id="id28" name="id28">Tracebacks</a></li>
+<li><a class="reference" href="#view-in-panel" id="id29" name="id29">View In Panel</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#notes" id="id30" name="id30">Notes</a></li>
+</ul>
+</div>
+<p><strong>Customize and Extend:</strong></p>
+<ul class="simple">
+<li><a class="reference" href="preferences.html">Preferences</a></li>
+<li><a class="reference" href="drscript.html">DrScript</a></li>
+<li><a class="reference" href="plugins.html">Plugins</a></li>
+</ul>
+<div class="section" id="introduction">
+<h1><a class="toc-backref" href="#id1" name="introduction">Introduction</a></h1>
+<p><em>Just what is DrPython?</em></p>
+<p>To start with, DrPython is a Development Environment. It is essentially
+a text editor with built in programming tools, like an integrated
+prompt, text manipulation, and syntax highlighting to name a few.
+The integrated prompt means when you run a python program, 
+DrPython catches the output, takes input, and in general behaves
+like a console window (cmd.exe or rxvt for example).</p>
+<p>DrPython was designed to be a cross-platform Python IDE. 
+The primary purpose was for use in Education, to make teaching
+Python programming easier. It was originally designed based 
+roughly on DrScheme. DrPython is meant to play the same role 
+for Python that DrScheme plays for Scheme.</p>
+<p>The development platform is Linux (Mandrake 10.1 is the 
+current flavor) It has been tested on various flavors of 
+Linux (E.g. Mandrake, Debian, Gentoo, Fedora), Windows 9x,
+Windows NT, Windows XP, and Mac OS X.</p>
+<p>Any platform which supports python 2.3+ and wxPython 2.5.2+ 
+should work.</p>
+<p><em>Is DrPython Free or What?</em></p>
+<p>DrPython is both free and open source software. This means 
+you can download DrPython for free, share it as much as you 
+want, look through the source, whatever. You can even take 
+chunks of code and plop them into your own program (so long 
+as you give proper credit!). You could even start your own 
+branch of DrPython, or rewrite the code to work with another
+language.</p>
+<p>The point of Free/Open Source Software is that the user 
+has the power to use their software as they wish.</p>
+<p>The bummer side of this is that DrPython has no warranty. 
+So if after using DrPython your computer becomes telekinetic 
+and blows up your refrigerator... You can send me a bug report.</p>
+<p>DrPython is released under the GNU Public License.</p>
+<div class="section" id="built-using">
+<h2><a class="toc-backref" href="#id2" name="built-using">Built Using</a></h2>
+<p>For the Program:</p>
+<ul class="simple">
+<li>Python (Guido van Rossum et al.)</li>
+<li>wxWidgets (Julian Smart et al.)</li>
+<li>wxPython (Robin Dunn et al.)</li>
+<li>Scintilla (Neil Hodgson)</li>
+</ul>
+<p>For the Documentation:</p>
+<ul class="simple">
+<li>docutils (David Goodger)</li>
+<li>Syntax-highlighted code blocks for docutils (On ASPN) (Kevin Schluff)</li>
+<li>Silver City (Brian Quinlan)</li>
+</ul>
+<p>Icons from:</p>
+<ul class="simple">
+<li>Klassic New Crisp Icons (Asif Ali Rizwaan)</li>
+<li>Sparkling (Flow)</li>
+<li>Noia (Carles Carbonell Bernado)</li>
+<li>Nuvola (David Vignoni)</li>
+<li>(Some Icons Were Either Created or Edited by Daniel Pozmanter.)</li>
+</ul>
+</div>
+<div class="section" id="donate">
+<h2><a class="toc-backref" href="#id3" name="donate">Donate!</a></h2>
+<p>If you want to show support for DrPython, send a donation our 
+way. A single dollar would be delicious and nutritious:</p>
+<p><a class="reference" href="http://sourceforge.net/donate/index.php?user_id=796750">Donate to Daniel Pozmanter</a></p>
+<p><a class="reference" href="http://sourceforge.net/donate/index.php?group_id=83074">Donate to North Star</a></p>
+<p>Back to the <a class="reference" href="#top">Top</a>.</p>
+</div>
+</div>
+<div class="section" id="installation">
+<h1><a class="toc-backref" href="#id4" name="installation">Installation</a></h1>
+<p>If you are reading this, DrPython should already be installed.
+That being said, you need the following programs to run 
+DrPython: Python 2.0 or newer (tested with 2.2) and the 
+corresponding wxPython. It is really best to get the lastest 
+version of Python and wxPython.</p>
+<p>If you are having trouble running DrPython on Linux/Unix, 
+run the file <tt class="docutils literal"><span class="pre">drpython.lin</span></tt>, or edit the first line of 
+<tt class="docutils literal"><span class="pre">drpython.pyw</span></tt> or <tt class="docutils literal"><span class="pre">drpython.py</span></tt> to read:</p>
+<div class="code-block">
+<span class="p_commentline">#![PATH/TO/PYTHON]/python</span>
+</div>
+<p>(eg: <tt class="docutils literal"><span class="pre">#!/usr/bin/python</span></tt>). (In other words, make the path absolute.)</p>
+<p>If you are still having trouble, go to the DrPython website
+(<a class="reference" href="http://www.sourceforge.net/projects/drpython/">http://www.sourceforge.net/projects/drpython/</a>) and post to 
+the help forum.</p>
+<p>You can manually set the path used for storing preferences:</p>
+<p><tt class="docutils literal"><span class="pre">drpython.pyw</span> <span class="pre">--preferencesbasepath=&quot;the</span> <span class="pre">path&quot;</span></tt></p>
+<p>DrPython will then use preferences in the directory:
+- &quot;the path/.drpython&quot;
+- &quot;the path/drpython&quot; on Windows</p>
+<div class="section" id="support">
+<h2><a class="toc-backref" href="#id5" name="support">Support</a></h2>
+<p>Found a bug? Want to see something change? 
+Have a feature request? Stop by the <a class="reference" href="http://www.sourceforge.net/projects/drpython/">DrPython Sourceforge
+Project Page</a>.
+Post in the forum, or formally submit a bug/feature request.
+I highly recommend starting a discussion on possible 
+features/changes. Part of the power of open source is the 
+power of the users and developers to engage in discourse 
+about a project, its design and its uses.</p>
+</div>
+</div>
+<div class="section" id="features">
+<h1><a class="toc-backref" href="#id6" name="features">Features</a></h1>
+<div class="section" id="bookmarks">
+<h2><a class="toc-backref" href="#id7" name="bookmarks">Bookmarks</a></h2>
+<p>Bookmarks are pretty straighforward: there are Bookmarks, and there are Bookmark Folders.</p>
+<p>A Bookmark is either a file or directory. When it is selected from the menu, if it is a file, it is opened. If it is a directory, an Open Dialog in that directory pops up.</p>
+<p>A Bookmark Folder may contain Bookmarks and/or Bookmark Folders.</p>
+<p>You can only add a Bookmark Folder or Bookmark to a Bookmark Folder.</p>
+<p>To move a Bookmark or a Bookmark Folder (and all it's contents):</p>
+<ol class="arabic simple">
+<li>Single click on the item you want to move.</li>
+<li>Drag it to the item you want it to go immediately after.</li>
+<li>Dragging it to the any item in a folder will cause it 
+to be added directly after that item.</li>
+<li>Dragging it to a folder will cause it to be the first 
+item in that folder.</li>
+</ol>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="check-syntax">
+<h2><a class="toc-backref" href="#id8" name="check-syntax">Check Syntax</a></h2>
+<p>Runs the python built in 'compile', then tabnanny, on the current file. Reports syntax and indentation errors.</p>
+<p>Note that this only checks the syntax for the current file.</p>
+</div>
+<div class="section" id="encoding-support">
+<h2><a class="toc-backref" href="#id9" name="encoding-support">Encoding Support</a></h2>
+<p><strong>The following only applies if your version of wxPython was built with unicode support:</strong></p>
+<p>If you want to use a non ascii encoding (like latin-1 or unicode (utf8)),
+you need to set some preferences first.  (In the event of a bad encoding,
+drpython will warn you via standard output (if the problem is in the file dialog
+or prompt), or via a dialog (if the problem occurs while saving or opening a file).</p>
+<p>DrPython, by default, checks for unicode when opening/saving files,
+and in the Prompt.</p>
+<p>If you want to use a specific encoding, you have two options.</p>
+<ol class="arabic simple">
+<li>You can set the default encoding via Preferences.
+This is the encoding used by default when opening/saving files,
+and the encoding used in the prompt and file dialog.</li>
+<li>For Opening and Saving files, if you use the special python comment:</li>
+</ol>
+<div class="code-block">
+<span class="p_commentline">#&nbsp;-*-&nbsp;coding:&nbsp;xyz&nbsp;-*-</span>
+</div>
+<p>(As detailed in the Python Tutorial).</p>
+<p>DrPython will try the encoding 'xyz' for the file first.</p>
+<p>DrPython, when getting text to open/save
+will go through the following steps:</p>
+<ol class="arabic simple">
+<li>Check for a special comment (coding) (if Auto Detect is enabled).</li>
+<li>Check for Unicode (if Auto Detect is enabled)</li>
+<li>Check for default encoding (if Default Encoding is enabled)</li>
+<li>If no check passes, ensure the text is ascii.</li>
+</ol>
+<p>To disable default encoding, leave it blank.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="find-replace">
+<h2><a class="toc-backref" href="#id10" name="find-replace">Find/Replace</a></h2>
+<p>This is a rather standard/straightforward dialog. However 
+there are some things that stick out.</p>
+<p>Right clicking on the text field will yield a pop up menu. 
+You can insert tab/newline/carriage returns, perform clipboard
+operations, or clear the text.</p>
+<p>You can also access Find/Replace History via the combobox.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="find-and-complete">
+<h2><a class="toc-backref" href="#id11" name="find-and-complete">Find and Complete</a></h2>
+<p>This is a user initiated version of auto complete. 
+DrPython will search the current file for possible 
+completions to the word you are currently typing. 
+It will display these results in a small window. 
+Navigate by using the up and down arrows, or to go faster, 
+page up and page down to go faster, or home and end to skip 
+to the start and end of the list.</p>
+<p>Hitting Enter or Tab will complete the current word with 
+the selection.</p>
+<p>Context Sensitive: Find And Complete stops at the following 
+characters (in addition to whitespace):</p>
+<pre class="literal-block">
+( ) &lt; &gt; [ ] { }
+</pre>
+<p>This means:</p>
+<div class="code-block">
+<span class="p_identifier">tree</span><span class="p_default"><br/>
+</span><span class="p_identifier">dog</span><span class="p_operator">(</span><span class="p_identifier">threat</span><span class="p_operator">)</span><span class="p_default"><br/>
+&nbsp;&nbsp;<br/>
+</span><span class="p_identifier">dogs</span><span class="p_default"><br/>
+</span><span class="p_identifier">dog</span><span class="p_operator">(</span><span class="p_identifier">tre</span>
+</div>
+<p>searching at <tt class="docutils literal"><span class="pre">dog(tre</span></tt> will yield <tt class="docutils literal"><span class="pre">tree,</span> <span class="pre">treat</span></tt>. However:</p>
+<div class="code-block">
+<span class="p_identifier">tree</span><span class="p_default"><br/>
+</span><span class="p_identifier">dog</span><span class="p_operator">(</span><span class="p_identifier">treat</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_identifier">dogs</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_identifier">dog</span><span class="p_operator">(</span>
+</div>
+<p>searching at <tt class="docutils literal"><span class="pre">dog(</span></tt> will yield <tt class="docutils literal"><span class="pre">dog(threat,</span> <span class="pre">dogs</span></tt>.</p>
+<p>Note: Find And Complete is case sensitive.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="go-to-block-class-def">
+<h2><a class="toc-backref" href="#id12" name="go-to-block-class-def">Go To Block / Class / Def</a></h2>
+<p>A few notes. In the code:</p>
+<div class="code-block">
+<span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_identifier">True</span><span class="p_operator">:</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">print</span><span class="p_default">&nbsp;</span><span class="p_string">"Hallo"</span><span class="p_default"><br/>
+</span><span class="p_commentline">#&nbsp;Comment</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_word">print</span><span class="p_default">&nbsp;</span><span class="p_string">"Hello&nbsp;again"</span>
+</div>
+<p>'<tt class="docutils literal"><span class="pre">if</span> <span class="pre">True:</span></tt>' is the start of the block; 
+'<tt class="docutils literal"><span class="pre">print</span> <span class="pre">&quot;Hello</span> <span class="pre">again&quot;</span></tt>' is the end.</p>
+<p>Comments '<tt class="docutils literal"><span class="pre">#</span></tt>' are ignored. For explicitly (joined with a 
+backslash) and implicitly joined lines, every line after the
+first is ignored.</p>
+</div>
+<div class="section" id="goto-traceback">
+<h2><a class="toc-backref" href="#id13" name="goto-traceback">Goto Traceback</a></h2>
+<p>Double clicking a traceback entry in the prompt (the <em>File</em> 
+line in the example below):</p>
+<pre class="literal-block">
+Traceback (most recent call last):
+File &quot;/home/user/Desktop/test.py&quot;, line 6, in ?
+  wd
+NameError: name 'wd' is not defined
+</pre>
+<p>will tell DrPython to open '/home/user/Desktop/test.py' and 
+go to line 6.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="indentation-and-tabs">
+<h2><a class="toc-backref" href="#id14" name="indentation-and-tabs">Indentation and Tabs</a></h2>
+<p>The &quot;Use Tabs&quot; option under &quot;Document&quot; in preferences tells 
+DrPython whether to use tabs (default) or spaces for 
+autoindentation. &quot;Tab Width&quot; under &quot;General&quot; is how many 
+spaces DrPython should consider a &quot;Tab&quot; to be.</p>
+<p>To see what characters the current document uses for 
+indentation, check the statusbar.</p>
+<p>The &quot;Whitespace&quot; menu has entries that allow you to set 
+indentation to tabs or spaces. Setting the indentation for 
+the document to tabs, for example, will replace a set number 
+of spaces with tabs. This operation takes place at the 
+beginning of each line.</p>
+<p>Some programmers prefer (and/or were taught) to use tabs 
+('t') to indent blocks of code. Some use spaces instead.</p>
+<p>The whitespace menu lets you easily switch the type of 
+indentation used in the current file to the type you prefer
+to work with.</p>
+<p>Note: The ClassBrowser only works properly if the current 
+file is using the same type of indentation (tab character 
+or spaces) as is set as the default for DrPython in prefs. 
+DrPython will automatically check for this when you open 
+the Class Browser. To fix a mixed file, use the &quot;Whitespace&quot;
+menu under &quot;Edit&quot;.</p>
+<p>NOTE: If the line endings are mixed, DrPython will not be 
+able to properly fix the indentation. Always set the line 
+endings before setting the indentation type.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="shortcuts">
+<h2><a class="toc-backref" href="#id15" name="shortcuts">Shortcuts</a></h2>
+<p>You can set shortcuts by selecting &quot;Customize Shortcuts&quot; from 
+the Options menu.</p>
+<p>Ignore Keys ignores the modifier keys listed. Only modifier 
+keys are valid. This is primarily for operating systems such 
+as Linux, where the &quot;Meta&quot; key is set to &quot;Num Lock&quot; by default,
+and hence may always be on.</p>
+<p>Note: You can set shortcuts for DrScript menu items. If you 
+have not, or the shortcuts file is somehow out of sync with
+the actual number of DrScripts, DrPython will simply load the
+correct DrScripts, with no default shortcuts. DrScript 
+Shortcuts are stored separately from DrPython Shortcuts.</p>
+<p>If your shortcuts are not working, use &quot;get key&quot; on a shortcut
+to see if a modifier key is constantly present. On Linux, 
+&quot;Meta&quot; may be present. If this is the case, use &quot;Ignore Keys&quot;
+to set &quot;Meta&quot; as a key to ignore.</p>
+<p>For a given shortcut, simply click the &quot;Get Key&quot; Button, 
+and press the keys you wish. It will print the modifiers 
+detected, and the keycode. When you are done, hit &quot;Close&quot;,
+and the keystring will be next to the shortcut.</p>
+<p>Select &quot;Update&quot; to start using the key now. Select &quot;Save&quot; 
+to have DrPython remember the changes.</p>
+<p>Note: The Tab and Enter keys are used for code related
+to indentation in the document, and Enter + the arrow keys
+are used behaviour specific to the prompt.  Setting these
+keys in the shortcuts may cause DrPython to behave incorrectly.</p>
+<p>Note: On some platforms some keys may not register, and thus 
+cannot be used as shortcuts.</p>
+<p>Note: There seems to be a bug where shift + backspace 
+inserts the backspace character. To work around this, 
+&quot;Delete Back Not Line&quot; is assigned to <tt class="docutils literal"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">backspace</span></tt>.
+If you want to insert the backspace character, just set 
+&quot;Delete Back Not Line&quot; to None. If you want to use 
+<tt class="docutils literal"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">backspace</span></tt> for something else, just set it to 
+None, and you should be set.</p>
+<p>The defaults are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th>Key</th>
+<th>Default shortcut</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Ctrl + N</td>
+<td>New File</td>
+</tr>
+<tr><td>Ctrl + O</td>
+<td>Open File</td>
+</tr>
+<tr><td>Ctrl + S</td>
+<td>Save File</td>
+</tr>
+<tr><td>Ctrl + W</td>
+<td>Close File</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>Ctrl + M</td>
+<td>Open Imported Module</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>F9</td>
+<td>Select Previous Document</td>
+</tr>
+<tr><td>F10</td>
+<td>Select Next Document</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>F7</td>
+<td>Open a Python interpreter</td>
+</tr>
+<tr><td>Ctrl + E</td>
+<td>Run current program</td>
+</tr>
+<tr><td>Ctrl + D</td>
+<td>End current program / Python interpreter</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>Ctrl + R</td>
+<td>Replace</td>
+</tr>
+<tr><td>Ctrl + F</td>
+<td>Find</td>
+</tr>
+<tr><td>F3</td>
+<td>Find Next</td>
+</tr>
+<tr><td>Shift + F3</td>
+<td>Find previous</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>Ctrl + G</td>
+<td>Go to line</td>
+</tr>
+<tr><td>Ctrl + B</td>
+<td>Go to block start</td>
+</tr>
+<tr><td>Ctrl + Shift + B</td>
+<td>Go to block end</td>
+</tr>
+<tr><td>Ctrl + F8</td>
+<td>Source Browser Go To</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>Ctrl + Enter</td>
+<td>Find and complete</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>F6</td>
+<td>Toggle view prompt</td>
+</tr>
+<tr><td>F5</td>
+<td>Toggle maximise</td>
+</tr>
+<tr><td>F8</td>
+<td>Toggle source browser</td>
+</tr>
+<tr><td>Ctrl + Shift + W</td>
+<td>Toggle view whitespace</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>Ctrl + P</td>
+<td>Print file</td>
+</tr>
+<tr><td>Ctrl + Shift + P</td>
+<td>Print prompt</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>Ctrl + [</td>
+<td>Comment</td>
+</tr>
+<tr><td>Ctrl + ]</td>
+<td>Uncomment</td>
+</tr>
+<tr><td>Ctrl + I</td>
+<td>Indent</td>
+</tr>
+<tr><td>Ctrl + Shift + I</td>
+<td>Dedent</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td><!--  -->
+</td>
+<td><!--  -->
+</td>
+</tr>
+<tr><td>Ctrl + A</td>
+<td>Select all</td>
+</tr>
+<tr><td>Ctrl + Z</td>
+<td>Undo</td>
+</tr>
+<tr><td>Ctrl + Y</td>
+<td>Redo</td>
+</tr>
+<tr><td>Ctrl + X</td>
+<td>Cut</td>
+</tr>
+<tr><td>Ctrl + C</td>
+<td>Copy</td>
+</tr>
+<tr><td>Ctrl + V</td>
+<td>Paste</td>
+</tr>
+<tr><td>Ctrl + +</td>
+<td>Zoom in</td>
+</tr>
+<tr><td>Ctrl + -</td>
+<td>Zoom out</td>
+</tr>
+<tr><td>Ctrl + Shift + U</td>
+<td>Uppercase</td>
+</tr>
+<tr><td>Ctrl + U</td>
+<td>Lowercase</td>
+</tr>
+</tbody>
+</table>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="line-endings">
+<h2><a class="toc-backref" href="#id16" name="line-endings">Line Endings</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="16%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Unix Mode</td>
+<td>\n</td>
+<td>New line</td>
+</tr>
+<tr><td>Windows Mode</td>
+<td>\r\n</td>
+<td>Carriage return, New line</td>
+</tr>
+<tr><td>Macintosh Mode</td>
+<td>\r</td>
+<td>Carriage return</td>
+</tr>
+</tbody>
+</table>
+<p>Windows mode can make linux hiccup. So Unix Mode is the 
+default (Windows seems to be fine with it.)</p>
+<p>Note: Setting the Line Endings in Preferences does not 
+affect the current open file!</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="menu-and-focus-toggling">
+<h2><a class="toc-backref" href="#id17" name="menu-and-focus-toggling">Menu And Focus (Toggling)</a></h2>
+<p>Some menu items act on the Text Control currently with focus.
+Toggle Whitespace Visible is one such item.</p>
+<p>If the focus is on the File text control, then selecting 
+this menu item will cause the whitespace to either become 
+visible or invisible in that control.</p>
+<p>If the focus is on the prompt, then the whitespace will be 
+toggled in the prompt.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="open-imported-module">
+<h2><a class="toc-backref" href="#id18" name="open-imported-module">Open Imported Module</a></h2>
+<p>DrPython only shows modules which exist. These are either in 
+the current module search path for Python, or in the same 
+directory as the current document.</p>
+<p>Some modules do not exist as files. The integral modules sys 
+and time are two examples. These will not show up in the 
+list of imported modules, even if they are imported in the 
+current document.</p>
+<p>If you type, the typed text is used as a filter for the 
+matching modules. (Use backspace to backtrack). Only matches
+that contain the typed text will be shown. (Case insensitive.)</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="pop-up-menu">
+<h2><a class="toc-backref" href="#id19" name="pop-up-menu">Pop Up Menu</a></h2>
+<p>The Pop Up Menu is the menu that pops up when you right 
+click on the Document, or the Prompt. You can customize 
+this menu to handle DrPython functions, DrScripts, or plugins.</p>
+<p>Note that each item on the Pop Up Menu must have a distinct 
+name for everything to work properly.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="rectangular-selection">
+<h2><a class="toc-backref" href="#id20" name="rectangular-selection">Rectangular Selection</a></h2>
+<p>To activate this feature, use <tt class="docutils literal"><span class="pre">Alt</span></tt> on Windows, 
+<tt class="docutils literal"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Alt</span></tt> on Linux. (If neither works, try <tt class="docutils literal"><span class="pre">Ctrl</span></tt>).</p>
+<p><strong>In Find</strong>: rectangular selection ignores line endings, 
+and does not support the 'Whole Word' flag. It searches line 
+by line.</p>
+<p><strong>In Replace</strong>: the above applies. Also, 'Prompt On Replace'
+is not supported.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="regular-expressions">
+<h2><a class="toc-backref" href="#id21" name="regular-expressions">Regular Expressions</a></h2>
+<p>It is best to consult the python documentation 
+(Under Modules, &quot;re&quot;).</p>
+<p>In short, Regular Expressions provide a fast and powerful 
+method for matching patterns of text. These can be quite 
+useful in programs you write, or simply to find and/or 
+replace text in a given file.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="running-a-python-program">
+<h2><a class="toc-backref" href="#id22" name="running-a-python-program">Running a Python Program</a></h2>
+<p>Open a file, click run, and you are set to go. If your 
+program takes arguments, select &quot;Set Arguments&quot; from the 
+menu or toolbar.</p>
+<p>Note the right field in the status bar tells you if the 
+program is running. Also note that the &quot;End&quot; button is 
+enabled, and &quot;Run&quot;, &quot;Set Arguments&quot;, and &quot;Python Debugger&quot; 
+are disabled.</p>
+<p>When the program has ended, the right status bar field 
+goes blank, &quot;End&quot; is disabled, and &quot;Run&quot;, &quot;Set Arguments&quot;,
+and &quot;Python Debugger&quot; are enabled.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="shell-commands">
+<h2><a class="toc-backref" href="#id23" name="shell-commands">Shell Commands</a></h2>
+<p>To add a shell command, go to the DrScript menu, under 
+Add Script, and select &quot;Shell Command&quot;.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="source-browser">
+<h2><a class="toc-backref" href="#id24" name="source-browser">Source Browser</a></h2>
+<p>The source browser displays classes, defs, imports, and labels.
+Double Clicking (Or, Optionally, Right Clicking) an item
+will set the Document to the line number of that item.</p>
+<p>Separators (Labels) can be added manually
+#---YourLabelHere
+or via the Insert Seperators Dialog.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="source-browser-go-to">
+<h2><a class="toc-backref" href="#id25" name="source-browser-go-to">Source Browser Go To</a></h2>
+<p>A very quick and simple way to move around in a large document.
+If you type, the typed text is used as a filter for the 
+matching classes, defs, and imports.  (Use backspace to 
+backtrack). Only matches that contain the typed text will 
+be shown. (Case insensitive.)</p>
+<p>The typed text is echoed in the top text control. The next 
+two text controls shows the line number of the selected 
+item, as well as the class or function the item is defined in.
+(The filename is used if no class or function is found).</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="status-bar">
+<h2><a class="toc-backref" href="#id26" name="status-bar">Status Bar</a></h2>
+<div class="line-block">
+<div class="line">The Status Bar displays some useful information. The left bar displays:</div>
+<div class="line">[<em>current line</em>] [<em>current column</em>] [<em>line ending type</em>] [<em>insert/overtype</em>] [<em>indentation type</em>]</div>
+<div class="line">The right bar displays program/Python status, for example <tt class="docutils literal"><span class="pre">Running</span> <span class="pre">Python</span> <span class="pre">Interpreter</span></tt>. </div>
+</div>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="tool-bar">
+<h2><a class="toc-backref" href="#id27" name="tool-bar">Tool Bar</a></h2>
+<p>A few notes on customizing the toolbar.</p>
+<ol class="arabic simple">
+<li>When selecting a particular icon for a toolbar item, 
+select the toolbar item from the left list (&quot;Current List&quot;),
+then click the &quot;Change&quot; button for the icon size you want.</li>
+<li>If you specify an icon, this will be loaded instead of the
+default, and instead of any icon file loaded.</li>
+<li>If you select an icon that is a different size than the 
+selected size (16x16, 24x24), the toolbar will not display
+correctly.</li>
+</ol>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="tracebacks">
+<h2><a class="toc-backref" href="#id28" name="tracebacks">Tracebacks</a></h2>
+<p>Tracebacks are the output the python interpreter produces for
+an unhandled exception. This output:</p>
+<pre class="literal-block">
+Traceback (most recent call last):
+  File &quot;/mnt/win_e/docs/prog/drpython/drpython-3.1.2/drpython.py&quot;, line 1840, in OnGoTo
+    v = int(v) - 1
+ValueError: invalid literal for int(): line number
+</pre>
+<p>is produced if you type &quot;line number&quot; into the Goto dialog.</p>
+<p>Now, DrPython handles this exception. However DrPython 
+displays tracebacks in its error dialogs (if there are any)
+for the purposes of transparency. This way, if there is a 
+bug it is easier to report it, and if you are working on a 
+DrScript or a Plugin, this makes it easier to figure out 
+what is going on.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+<div class="section" id="view-in-panel">
+<h2><a class="toc-backref" href="#id29" name="view-in-panel">View In Panel</a></h2>
+<p>View In Panel lets you view any open document (including 
+the current one) in any side panel.</p>
+<p>There are two notes.</p>
+<ol class="arabic simple">
+<li>Only STC shortcuts work in these panels. (The exception 
+is if the split view is of the current document).</li>
+<li>If you view document 1 in document 2, then close document
+1, you need to close the panel in document 2 manually.</li>
+</ol>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+<div class="section" id="notes">
+<h1><a class="toc-backref" href="#id30" name="notes">Notes</a></h1>
+<p>DrPython cannot handle everything.</p>
+<p>If you create more than 100 Panels in any one direction 
+(Left, Right, Top, Bottom), the events will be all messed up.</p>
+<p>If you do not have permission to write to your user's home 
+directory, or the replacement directories DrPython will try
+if your home directory does not exist (eg. <tt class="docutils literal"><span class="pre">C:\</span></tt> or 
+<tt class="docutils literal"><span class="pre">os.environ[&quot;APPDATA&quot;]</span></tt>), then DrPython will not save 
+preferences, and will not keep a recent files list.</p>
+<p>If you run a program with an infinite loop, things will get 
+rather slow. Hit the &quot;End&quot; button on the toolbar, or hit 
+Ctrl+D to end the program being run.</p>
+<p>Please note that if you type the color in for the font style
+dialog, any bad characters (not 0-9 or A-F) will create 
+a warning the moment you enter them. If the string is not
+properly formated ('#' followed by 6 characters), the 
+sliders will be disabled. Upon hitting OK, any invalid 
+color string will be ignored, and DrPython will revert
+to the last value for that color string.</p>
+<p>Back to the <a class="reference" href="#top">Top</a></p>
+</div>
+</div>
+</body>
+</html>

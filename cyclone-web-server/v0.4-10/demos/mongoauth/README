@@ -1,0 +1,6 @@
+User authentication using MongoDB
+http://www.mongodb.org
+
+Before using this example you need to install txmongo.
+git clone http://github.com/fiorix/mongo-async-python-driver.git
+cd mongo-async-python-driver ; python setup.py install

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute"
+	initialize="initApp()" closing="onClosing(event)" 
+	xmlns:sockets="com.HAL.sockets.*" 
+	width="800" height="600" 
+	xmlns:socketViews="com.HAL.sockets.views.*" 
+	xmlns:controls="com.HAL.controls.*" 
+	xmlns:views="com.HAL.views.*">
+
+	<mx:Style source="styles.css"/>
+	<mx:Script source="misc.as"/>
+
+	<mx:Script>
+		<![CDATA[
+			import com.HAL.views.events.FileBrowserFileSelectedEvent;
+			import mx.collections.ArrayCollection;
+			import mx.messaging.messages.IMessage;
+			import mx.messaging.messages.RemotingMessage;
+			import mx.events.CloseEvent;
+			import com.HAL.controls.HtmlToolTip;
+			import mx.managers.ToolTipManager;
+			import com.HAL.views.events.FileBrowserFolderChangedEvent;
+			
+			[Bindable]
+			private var server_address:String = "http://localhost:8000";
+			
+			private static const const_shutdown_command:String = "___SHUTDOWN___";
+			
+			private var the_shutdown_command:String = const_shutdown_command;
+
+			private var command_stack:ArrayCollection = new ArrayCollection()
+			
+			private var command_queue:ArrayCollection = new ArrayCollection()
+			
+			private var s_folder:String = ''
+			
+			private var s_pdf_file:String = ''
+
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+		    
+	        private function initApp(): void {
+	            var param:String = "Hello World!";
+	            
+	            //this.remoteEchoObj.echo( param );
+	            this.command_stack.addItem(this.initApp);
+	            this.remoteShutdownObj.echo( param );
+	            this.command_queue.addItem(this.getContext);
+				ToolTipManager.toolTipClass = HtmlToolTip;
+	        }
+	
+	        private function shutdownApp(): void {
+	            var param:String = this.the_shutdown_command;
+	            
+	            this.command_stack.addItem(this.shutdownApp);
+	            remoteShutdownObj.shutdown( param );
+	        }
+	
+	        private function onResult( re:ResultEvent ): void {
+	        	var func:Function;
+	            var data:String = re.result as String;
+	        	if (this.command_stack.length > 0) {
+	        		func = this.command_stack.removeItemAt(0) as Function;
+	        	}
+	            trace( data );
+	            var rem:Object = re.token.message;
+	            if ( (rem.destination == 'shutdown') && (rem.operation == 'shutdown') && (data == this.the_shutdown_command) ) {
+	            	this.exit();
+	            } else if ( (rem.destination == 'shutdown') && (rem.operation == 'echo') && (data == this.the_shutdown_command) ) {
+	            	this.the_shutdown_command = data;
+		            status_txt.text = 'System Initialized !';
+		            status_txt.toolTip = '';
+	            } else if ( (rem.destination == 'context') && (rem.operation == 'read') ) {
+		            status_txt.text = 'System Read ! + (' + data + ')';
+		            status_txt.toolTip = '';
+		            this.s_folder = data;
+					this.pdfSelector.setFileSystemListDirectory(this.s_folder);
+	            } else {
+		            status_txt.text = 'System Online ! + (' + data + ')';
+		            status_txt.toolTip = data;
+	            }
+	        	if (this.command_queue.length > 0) {
+	        		func = this.command_queue.removeItemAt(0) as Function;
+	        		try {
+	        			func();
+	        		} catch (err:Error) { }
+	        	}
+	        }
+	        
+	        private function onFault( fault:FaultEvent ): void {
+	        	if (this.command_stack.length > 0) {
+	        		var func:Function = this.command_stack.removeItemAt(0) as Function;
+	        		try {
+	        			this.status_txt.text = '';
+	        			func();
+	        			return;
+	        		} catch (err:Error) { }
+	        	}
+	            this.status_txt.text = "System Error - Please repeat the action just attempted.\n";
+	            this.status_txt.toolTip = '';
+	            for ( var d:String in fault.fault ) {
+	               this.status_txt.text += fault.fault[d] + "\n";
+	            }
+	        }
+	        
+			private function onClosing(event:Event):void {
+				this.shutdownApp();
+				if (! event.isDefaultPrevented()) {
+					event.preventDefault();
+				}
+			}
+			
+	        private function testContext(): void {
+	            var param:String = this.pdfSelector.fileList1.directory.nativePath;
+	            
+	            this.command_stack.addItem(this.testContext);
+	            this.remoteContextObj.echo( param );
+	        }
+	
+	        private function setContext(): void {
+	            var param:String = this.pdfSelector.fileList1.directory.nativePath;
+	            
+	            this.command_stack.addItem(this.setContext);
+	            this.remoteContextObj.home( param );
+	        }
+	
+	        private function getContext(): void {
+				this.command_stack.addItem(this.getContext);
+	            this.remoteContextObj.read('');
+	        }
+	
+			private function onFileBrowserFolderChanged(event:FileBrowserFolderChangedEvent):void {
+				this.setContext();
+			}
+			
+	        private function echoProcess(): void {
+	            this.command_stack.addItem(this.echoProcess);
+	            this.remoteProcessObj.echo( this.s_pdf_file);
+	        }
+	
+			private function onFileBrowserFileSelected(event:FileBrowserFileSelectedEvent):void {
+				this.s_pdf_file = event.fileName;
+			}
+					
+	        private function selectedProcess(): void {
+	        	var aFile:File = new File(this.s_pdf_file);
+	        	if (aFile.exists) {
+		            this.command_stack.addItem(this.selectedProcess);
+		            this.remoteProcessObj.selected( this.s_pdf_file);
+	        	} else {
+	        		this.status_txt.text = 'Unable to open "' + this.s_pdf_file + '".';
+	        	}
+	        }
+	
+			private function onClickTestButton():void {
+				this.selectedProcess();
+			}
+			
+	        private function onPDFSelectorCreationComplete():void {
+	        	this.pdfSelector.btn_deleteFolder.visible = false;
+	        	this.pdfSelector.btn_acceptFile.label = 'Export Data';
+	        	this.pdfSelector.btn_acceptFile.toolTip = "Click this button to export data from the currently selected PDF file.";
+	        	this.pdfSelector.btn_cancelFolderBrowser.visible = false;
+	        	this.pdfSelector.btn_navigateNew.visible = false;
+				this.pdfSelector.addEventListener(FileBrowserFolderChangedEvent.FILE_BROWSER_FOLDER_CHANGED, onFileBrowserFolderChanged);
+				this.pdfSelector.addEventListener(FileBrowserFileSelectedEvent.FILE_BROWSER_FILE_SELECTED, onFileBrowserFileSelected);
+				if (this.s_folder.length > 0) {
+					this.pdfSelector.setFileSystemListDirectory(this.s_folder);
+				}
+	        }
+		]]>
+	</mx:Script>
+	
+	<mx:RemoteObject id="remoteEchoObj" destination="echo" endpoint="{this.server_address}">
+    	<mx:method name="echo" result="onResult(event)" fault="onFault(event)"/>
+ 	</mx:RemoteObject>
+ 			
+	<mx:RemoteObject id="remoteContextObj" destination="context" endpoint="{this.server_address}">
+    	<mx:method name="echo" result="onResult(event)" fault="onFault(event)"/>
+    	<mx:method name="home" result="onResult(event)" fault="onFault(event)"/>
+    	<mx:method name="read" result="onResult(event)" fault="onFault(event)"/>
+ 	</mx:RemoteObject>
+ 			
+	<mx:RemoteObject id="remoteProcessObj" destination="process" endpoint="{this.server_address}">
+    	<mx:method name="echo" result="onResult(event)" fault="onFault(event)"/>
+    	<mx:method name="selected" result="onResult(event)" fault="onFault(event)"/>
+ 	</mx:RemoteObject>
+ 			
+	<mx:RemoteObject id="remoteShutdownObj" destination="shutdown" endpoint="{this.server_address}">
+    	<mx:method name="shutdown" result="onResult(event)" fault="onFault(event)"/>
+    	<mx:method name="echo" result="onResult(event)" fault="onFault(event)"/>
+ 	</mx:RemoteObject>
+ 			
+	<mx:ApplicationControlBar id="appBar" x="0" y="0" width="100%" dock="true">
+		<mx:MenuBar id="menuBar" labelField="@label" dataProvider="{this.menuBarCollection}" itemClick="onItemClickMenuBar(event)" creationComplete="onCreationCompleteAppMenuBar()"/>
+		<mx:HBox width="100%" horizontalAlign="center">
+			<mx:Label id="appBar_title" styleName="ApplicationTitleBarLabel" text="PDF Exporter v1.0"/>
+		</mx:HBox>
+	</mx:ApplicationControlBar>
+	<mx:VBox width="99.5%" height="99.5%">
+		<mx:TextArea id="status_txt" fontWeight="bold" width="99.5%" height="20"/>
+		<mx:Button label="Test It !" id="test" click="onClickTestButton()"/>
+		<views:FileBrowser id="pdfSelector" label="PDF File Browser" width="99.5%" height="99.5%" creationComplete="onPDFSelectorCreationComplete()"/>  <!--  backgroundColor="#ffffff" borderColor="#0000ff" borderStyle="outset" -->
+	</mx:VBox>
+</mx:WindowedApplication>

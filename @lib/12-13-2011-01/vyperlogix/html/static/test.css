@@ -1,0 +1,98 @@
+BODY {
+	color: #666666;
+	background-color: #aaaaaa;
+	padding: 10px;
+	margin: 0;
+}
+
+A {
+	color: #178bf2;
+	text-decoration: underline
+}
+
+H1 {
+	color: #178bf2;
+	text-align: center;
+	padding: 10px;
+	margin: 0;
+}
+
+PRE {
+	color: black;
+	background-color: #dddddd;
+	border-left: 2px solid #888888;
+	padding-left: 10px;
+}
+
+.colored {
+	background-color: #ddddff;
+}
+
+.error {
+	color: red;
+}
+
+.form TH {
+	text-align: right;
+}
+
+.info TH {
+	text-align: right;
+}
+
+.report {
+	border-collapse: collapse;
+}
+.report TH {
+	padding: 0 10px 0 10px;	
+}
+.report TD {
+	border-left: 1px solid #ffaaaa;
+	padding: 0 10px 0 10px;	
+}
+.report .number {
+	text-align: right;
+}
+
+#consoleOut {
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+#menu {
+	display: inline;
+	border: 1px solid #ffaaaa;
+	background-color: #eeeeff;
+	padding: 5px;
+}
+#menu A, SPAN {
+	padding: 0 5px 0 5px;
+}
+
+#content {
+	background-color: white;
+	padding: 10px;
+}
+
+#header {
+	border-top: 5px solid #ffaaaa;
+	border-left: 20px solid #ffaaaa;
+	border-right: 20px solid #ffaaaa;
+	border-bottom: 1px solid #ffaaaa;
+	background-color: #eeeeff;
+	border-bottom: 1px solid #ffaaaa;
+}
+
+#middle {
+	padding: 50px;
+}
+
+#footer {
+	display: block;
+	border-top: 1px solid #ffaaaa;
+	border-left: 20px solid #ffaaaa;
+	border-right: 20px solid #ffaaaa;
+	border-bottom: 5px solid #ffaaaa;
+	height: 100px;
+	background: white url("/static/logo.gif") center no-repeat;
+}

@@ -1,0 +1,3421 @@
+For Version 3.10.13:
+Bugs Fixed:
+Properly loads multi line preferences.  (Bug-Report, Thanks bugmenot)
+Autoindent no longer checks for non whitespace lines when determining indent.
+Syncs the prompt with an exact method (waits for correct output)
+    when adding in a startup script.
+Gracefully handles a user opening new prompts faster than wx.Yield can cope.
+Properly handles locale error (Bug-Report, Thanks fstephens2)
+Properly saves prompt.  (Bug-Report, Thanks Franz Steinhausler)
+Only trims whitespace on tab when at the end of the line.
+Fixed bug in drFileDialog that caused the interface to stop working when
+    switching the view from detailed to list.
+Checks indentation type rather than prefs when handling backspace.
+Sets indentation type initially to prefs, checks indentation type when
+    setting up doc prefs.
+Removed superfluous OnRemoveScript in drScriptMenu.py (Bug-Report With Fix, Thanks Franz Steinhausler)
+Strips trailing whitespace on autoindent. (Bug-Report, Thanks Dan Kruger)
+Removed SetTabs from Side Panel Pop Up Menu. (Bug-Report, Thanks Franz Steinhausler)
+In Side Panel Pop Up Menu, Close now works.
+Sets untitled number to -1 on open (Bug-Report, Thanks Franz  Steinhausler)
+Treats NumPad Enter as Enter (Bug-Report, Thanks Franz, indefual)
+Properly handles permission denied error in OpenFile.
+Add Folder works in Edit Script Menu (Bug-Report, Thanks Franz Steinhausler)
+No longer prints indentation type on paste.
+Added a brief README.TXT to note drpython itself does not need to be installed.
+
+Changes:
+The File ComboBox in the File Dialog now contains the listed files
+    in the current directory, rather than recent files.
+About Dialog Title String now size 12.
+
+********************************************************************************************************************************
+For Version 3.10.12:
+Bugs Fixed:
+Properly sets the indentation type in OpenFile.
+Cursor no longer stuck at the editpoint in the prompt.
+Proper keyboard navigation after autoindent.
+
+Changes:
+new setup.py from Christoph:
+    Classifiers, post installation, setup.cfg.
+    (Submitted Patch, Thanks Christoph Zwerschke).
+
+********************************************************************************************************************************
+
+For Version 3.10.11:
+Bugs Fixed:
+Removed unnecessary variable self.needtoindent in drText.
+Indentation: (Bug-Report, Thanks Franz Steinhausler)
+    Off by one error in autoindent fixed.
+    lstrips extraneous whitespace from the next line.
+    tries the current line's indentation first.
+    Checks the indentation level of the previous line and whether or not it has whitespace,
+        and includes that indentation in the autoindent if the user has
+        indented in a relevant manner.
+Minor doc fix for shortcuts.
+Remove trailing whitespace is off by default.
+Added Check for alreadyopen to drbookmark menu (Bug-Report With Fix, Thanks Franz Steinhausler)
+PrefsDialog stores doccomment mode.(Bug-Report With Fix, Thanks Franz Steinhausler)
+Add New, Existing Scripts, Shell Command all function properly with regards to shortcuts.
+    (Bug-Report, Thanks Franz Steinhausler)
+Properly checks for None when running a plugin shortcuts.
+    (Bug-Report, Thanks Franz Steinhausler)
+Updated setup.py with the full version by Christoph.
+    (Submitted Patch, Thanks Christoph Zwerschke)
+    
+Changes:
+Added a default shortcut for Close (Bug-Report/Feature Request With Co-Fix, Thanks widhaya3)
+    Changed the default for toggle view whitespace to control + shift + w.
+    Updated docs.
+
+********************************************************************************************************************************
+
+For Version 3.10.10:
+Bugs Fixed:
+Shortcuts work properly again:
+    Returns -1 instead of 0 at the end RunShortcuts.
+    Handles event.Skip in RunShortcuts if no relevant shortcuts are found.  
+    Reserved stc commands for the prompt only cause an early exit
+        if the target stc is a prompt.
+    cleaned up OnKeyDown in drPrompt.
+Reworked autoindent handling.
+
+Changes:
+Implemented Auto Back Tab for spaces.
+    (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+
+********************************************************************************************************************************
+
+For Version 3.10.9:
+Bugs Fixed:
+Fixed Run, End images on windows.
+Sourcebrowser:
+    regex updated, now compiled on startup rather than on browse.
+    def colour fixed.  (Bug-Report With Fix, Thanks Franz Steinhausler)
+    Now sets level of separators based on the next non whitespace item.
+        (Bug-Report With Co-Fix, Thanks Christoph Zwerschke)
+    Updated Documentation.
+Added Patch to setup.py (Submtited Patch, Thanks Christoph Zwerschke)
+Shortcuts:
+    RunShortcuts now returns the stc command (if applicable).
+        (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+    More flexible code allows for both plugin and stc/frame/drscript items to be run.
+    Fixed drscript shortcuts handling.  (Bug-Report, Thanks Franz Steinhausler)
+    Changed how shortcuts are stored in the string (no whitespace, no commas).
+        (Bug-Report, Thanks Christoph Zwerschke)
+    Changed the get key display.    
+Indentation correction only runs if the text up to the current position is whitespace.
+    (Bug-Report, Thanks Christoph Zwerschke)
+
+Changes:
+You can now set the indentation guide style (for python).
+    (Bug-Report/Feature Request with Co-Fix, Thanks Christoph Zwerschke)
+
+********************************************************************************************************************************
+
+For Version 3.10.8:
+Bugs Fixed:
+Auto Indentation now indents based on the indentation of the last non whitespace line.
+Replace:  From Cursor is now disabled.
+Removed scroll width code from OnModified.
+Fixed drscript menu: arguments to Append.
+Separator Dialog button fix (on windows).  (Bug-Report With Fix, Thanks Christoph Zwerschke)
+Better method of getting the character of interest for context sensitive autoindent.
+Renamed Go To Source Browser bitmap to Source Browser Go To.
+
+Changes:
+Added icons to the menu.  (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+New Icons (From Nuvola 1.0) (Some Edited):
+    Help, Preferences, Customize Pop Up Menu, Customize Shortcuts,
+    Customize ToolBar, Run, End, Exit, 
+    Print File, Print Prompt, Print Setup,
+    Save Prompt Output To File,
+    Cut, Copy, Paste, Delete,
+    Find, Find Next, Find Previous, Replace.
+Edited Open, Open Imported Module Icons.
+Comment Block is now its own Python Style.
+Default is now a transparent bitmap.
+Default shortcut for BackTab is now Shift + Tab. (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+Added Cautionary note about shortcuts to help.
+
+********************************************************************************************************************************
+
+For Version 3.10.7:
+Bugs Fixed:
+Saves favorite colours in the user's preferences directory,
+    instead of the program directory.
+Shortcuts:
+    Reset Shortcuts works properly.
+    ShortcutIsAlreadyTaken returns properly if the shortcut is empty. (Bug-Report, Thanks Franz Steinhausler)
+    Properly loads default stc shortcuts.  (Bug-Report, Thanks Franz Steinhausler)
+Separators are now nested purely based on indentation.  (Bug-Report, Thanks Christoph Zwerschke)
+Separators can now include any amount of whitespace.
+The Configure Plugins, DrScript, Documents, and the Options menus now display shortcuts.
+ExecuteCommands:
+    now preceded by a call to wx.Yield.
+    changed the order of events.
+    increased Usleep to 75.
+    Promptly returns if no commands are given.
+Documentation Grammar Fixes.
+Indentation correction properly checks for spaces.
+Removed .separator.favorite.colours.dat.
+        
+Changes:
+Added SourceBrowser separator info to documentation.
+Menus are now drMenus, Append automatically adds labels.
+New Icon for Close Prompt.
+Optionally Removes Trailing Whitespace (Bug-Report/Feature Request with Co-Fix, Thanks Franz Steinhausler)
+Updated Preferences Documentation.
+Default separator colours.  (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+Reoganized the whitespace menu.  (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+            
+********************************************************************************************************************************
+
+For Version 3.10.6:
+Bugs Fixed:
+Close Panel bug squashed.
+    (Bug-Report, Thanks Franz Steinhausler)
+FileDialog: Now always blanks the combobox when switching directories.
+DrText: Only updates titles if the modification state is changing.
+OpenFile: removed SetTitle Argument, code.
+SourceBrowser:
+    Uniformly adds transparent bitmap, (Bug-Report, Thanks Christoph Zwerschke)
+    New method of adding labels.  (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+    Now uses the correct starting position for separators.
+Minor bug in OnbtnApplyProperty in drPrefsDialog fixed.
+Increased the Usleep time slightly in drPrompt.
+Removed uneccessary styles from default.css
+Shortcuts:
+    Shortcuts are now stored as strings instead of as python objects.
+    Now shortcut handling code ensures no shortcut is called twice.
+    Alt, Meta order is now consistant internally.
+    Shows dialog on all exceptions, not just IOError.
+Fixed Tab Correction Code. (Bug-Report, Thanks Franz Steinhausler)
+Removed unused variable, menuspacestring.
+Fixed Open Imported Module Menu Label.
+        
+Changes:
+Now keeps track of modifications to drTreeDialogs,
+    and prompts the user to save on close.
+SourceBrowser:
+    Allows whitespace after label (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+    Uses a blank bitmap for labels (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+Separators:
+    Added GetValue to drColorPanel.
+    You can now save 5 colours. (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+The Pop Up Menu now displays shortcuts.  (Submitted Patch, Thanks Franz Steinhausler)
+            
+********************************************************************************************************************************
+
+For Version 3.10.5:
+Bugs Fixed:
+Removed Icon File from Preferences Documentation.
+View In Panel Bug Fixed:  No longer destorys the panel when the size is 0.
+Sash Resize:
+    Minor sizing bug fixed with top panel.
+    Checks the proper part of the top tuple when resizing.
+        (Bug-Report, Thanks Franz Steinhausler)
+Adjusted the regular expressions for classes and definitions
+    in the SourceBrowser and SourceBrowserGoTo
+    to be more permissive (and work with multiline declarations).
+removed unused BTN_Y_POS in drSimpleStyleDialog.
+Documentation error fixed in drscript.html.
+Added docutils to help.
+
+Changes:
+DrPrompt:
+    added ExecuteCommands,
+    runs commands separated by '\n' in the prompt.
+    added optional startup script.
+    (Updated Preferences Documentation).
+The Find Dialog text controls are now a bit bigger.
+documentation: 
+    css:  made the code block backgrounds a bit lighter.
+    Now uses SilverCity, and an ASPN recipe by Kevin Schluff
+        to highlight python code for the documentation.
+        (Co-Fix, Thanks to Marek Kubica)
+    Edited help.html
+    Added the wrapper I made, plus the ASPN recipe to documentation directory.
+    (Read the source drdoc.py for details on usage).
+SourceBrowser:
+    You can now add SPE style labels to the source browser:
+    #---Label
+    and
+    #---Label---#Foreground#Background
+    (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+    added convertStyleToColorArray to drProperty.py
+    SourceBrowser uses style colors in document for class/def
+    (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+    Added Insert Separator.
+        
+********************************************************************************************************************************
+
+For Version 3.10.4:
+Bugs Fixed:
+Windows bugfix, in OnSize.
+    (Bug-Report, Thanks Christoph Zwerschke)
+Properly keeps track of panel indexes.
+    (Bug-Report, Thanks Franz Steinhausler)
+Removed unused code in drSidePanelNotebook.
+Checks to ensure a valid selection when changing document/prompt.
+    (Bug-Report, Thanks Franz Steinhausler)
+Proper Menu title for toggle source browser:
+    (Bug-Report With Fix, Thanks Christoph Zwerschke)
+Error Messages for Remembering Sizes and Positions are now more clear.
+    (Bug-Report, Thanks Franz Steinhausler)
+Reworked side panel code with sizing fixes OnPageChanged,
+    and during addition of pages.
+Removed unused debugging code in drEncoding.
+    
+Changes:
+AboutDialog:
+    Messed with the dialog to make gpl.html display nicer.
+Removed dis.html from the documentation.
+Documentation:
+    Now uses docutils.
+    (Thanks Marek Kubica).
+    Edited (through a wrapper python script):
+        To tone down gpl.html, and remove encoding info.
+    I also messed with the css a bit.
+        
+********************************************************************************************************************************
+
+For Version 3.10.3:
+Bugs Fixed:
+in drNotebook.py, calls wx.Yield before OnSize in ClosePanel.
+    (Fixes Windows specific bug) (Bug-Report, Thanks Christoph Zwerschke).  
+Panel error in drShortcutsFile.py fixed.
+            
+Changes:
+Now autodetect encoding first checks for a special comment
+    that gives the encoding, and will try that encoding first.
+    (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+    Updated drPrefsDialog.
+    Updated Help, Preferences Documentation.
+The top panel is back (Bug-Report/Feature Request, Thanks Christoph Zwerschke)
+    View In Top Panel is Back.
+    Updated Preferences Documentation.
+        
+********************************************************************************************************************************
+
+For Version 3.10.2:
+Bugs Fixed:
+Removed Clear Prompt bitmaps.
+Properly handles closed sourcebrowser.
+Minor cleanup in help.html  
+Find From Cursor now just starts at the cursor, and does
+    not limit the search from the cursor on.
+Minor internal fixes for remembering dialog size and position.
+If a file argument to DrPython does not exist,
+    Asks the user if they want to create the file.
+Fixed c++ style order in drKeywords (Bugfix, Thanks Franz Steinhausler)
+    c identifier default style no longer bold.
+wx.Yield Problem fixed in drPrefsDialog.
+    (Bug-Report, Thanks Christoph Zwerschke)
+    (Bug-Report, Thanks Franz Steinhausler)
+        
+Changes:
+Reworked Plugin Events:
+    No uses DrFrame.PBind, PUnbind, and PPost for events,
+        to enable more flexibility,
+        and allow events to be removed with greater ease.   
+Updated Plugins Documentation.
+New Icons for Set Arguments (Bug-Report/Feature Request Thanks Toronto DrPython Project).
+Find From Cursor is now enabled by default.
+Added Remember Panel Sizes to Preferences.
+    Updated Preferences Documenation.
+Updated Plugin List.
+        
+********************************************************************************************************************************
+
+For Version 3.10.1:
+Bugs Fixed:
+Adjusted font size in About Dialog:  System Info Panel.
+Display bug in open file (when in a new tab fixed):
+    (Bug-Report, Thanks Marek Kubica).
+    Now uses DrFrame.OnNew for new tabs.
+Removed unused view in panel methods.
+Reworked Side Panel Sizing to ensure proper sizing on windows:
+    (Bug-Report With Co-Fix, Thanks Toronto DrPython Project).
+"--preferencesbasepath": Now expands '~'.
+    
+Changes:
+DrPython now uses mainpanel.ShowPanel(Position, Index)
+    instead of OnSize when creating a new side panel.
+    ShowPanel's third argument is now True by default.
+    Updated Plugins Documentation.
+Removed Clear Prompt.
+Plugin List:
+    Updated
+    Removed SimpleDebugger, ToDo, ThemeMenu.
+Removed icon file support from the toolbar, preferences.
+        
+********************************************************************************************************************************
+
+For Version 3.10.0:
+Bugs Fixed:
+New Interface:
+    drNotebook:
+        Removed unused menu items in pop up menu for tabs.
+        Binds all events within the class.
+    Removed residual sdi comments.
+    Removed wxpython bug workaround in OnNew (no longer needed).
+    prefs are now no longer updated when switching documents.
+    Now this is only done when updating preferences.
+Checks for extra output in the correct Prompt.
+Preferences Documentation:  Removed duplicates, added wxPython unicode note.        
+wxFileDialog works again (Bug-Report, Thanks Franz Steinhausler) 
+Now raises an exception if there is a bad encoding.
+Removed Non Ascii Character from Changelog (Bug-Report, Thanks Richard Townsend)
+Encoding:
+    Encoding now supported in View In Panel.
+    Encoding now stored in the Document, used for SaveFile, View In Panel.
+    Properly Decodes files when saving.
+Properly updates indentation types when changes line endings.
+Now DrFrame, Dialogs start at wx.DefaultPosition by default.
+    (Bug-Report, Thanks Christoph Zwerschke).
+Minor code cleanup in PrefsDialog.py
+Shortcuts Double Launch Problem Fixed.  (Bug-Report, Thanks Franz Steinhausler)
+    
+Changes:
+No longer uses running bitmap in the statusbar for an active prompt.
+New Interface:
+    Two Side Panels.
+    Each Side Panel, the Document, and the Prompt panels have their
+        own notebooks.
+        mdinotebook -> documentnotebook.
+        Prompt:  New notebook icons for active, inactive running, not running.
+        Running a new process opens a new prompt if one is already running.
+        Added Close Prompt.
+    The Source Browser is no longer a member of DrText (now DrFrame).
+    Removed drPositionChooser Widget.
+    Updated Preferences
+    GetTargetSashWindow -> GetTargetNotebookPage
+    Removed View In Top/Botom Panel.
+    (for preferences.dat:  sourcebrowser.pane -> sourcebrowser.panel).
+    (Single Instance for Side Panels, Prompt)(Bug-Report/Feature Request, Thanks Toronto DrPython Project)  
+    (Tabbed Side Panels)(Bug-Report/Feature Request, Thanks Franz Steinhausler)
+Updated Preferences, Plugins Documentation.
+View In Panel:
+    x -> Close
+    Now uses the default background colour.
+Plugins:
+    AddPluginXFunction (OpenFile, SaveFile, OnClose, OnNew)
+    has been replaced with events.
+    Events are defined as members of DrFrame
+    (DrFrame.EVT_DRPY_DOCUMENT_CHANGED).
+    You can bind functions to these events.
+    Updated Plugins Documentation.
+New AboutDialog:
+    Displays the version, logo at the top.
+    A notebook displays:
+        about: with links to the drpython website, and credits.
+        license agreement: the gpl text.
+        system info: wxPython, Python, Operating system version info.
+    Removed uneccessary spacing in gpl.html.
+    (Bug-Report/Feature Request, Thanks Marek Kubica).
+Update Indentation is now off by default.
+The Margin Width is now determined based on the length of the document
+    When the file is opened and closed, with a one digit of extra room.
+    (Bug-Report/Feature Request, Thanks Marek Kubica). 
+You can now set whether or not to use the margin width in the preferences.
+Added SourceBrowser size as a preference (25% by default).
+    (Bug-Report/Feature Request, Thanks Toronto DrPython Project)   
+        
+********************************************************************************************************************************
+
+For Version 3.9.10:
+Bugs Fixed:
+Only try encoding/unicode detection if wxpython was built with unicode support.
+    Updated Encoding Documentation.
+    (Bug-Report, Thanks Franz Steinhausler).    
+Now uses encoding safe TextWidth method (more accurate) for determining scroll length.
+Properly checks syntax for files with non unix line endings:
+    (Bug-Report, Thanks Marek Kubica).
+    (Bug-Fix, Thanks Thanks Franz Steinhausler).
+os.startfile works properly
+    (Bug-Report, Thanks Marek Kubica).
+Properly prints warning if there is an encoding error with an entry in a directory.
+        
+Changes:
+C++ Styles:
+    Added C Identifier, Global Class, Additional Comment Styles.
+        (Bug-Report Feature Request, Thanks Thanks Franz Steinhausler).
+    Changed the default colour for preprocessor. 
+        
+********************************************************************************************************************************
+
+For Version 3.9.9:
+Bugs Fixed:
+Now checks ascii even if no default encoding is set for file dialog.
+    (Bug-Report, Thanks Marek Kubica).
+When handling trailing spaces, checks to ensure only spaces are chopped,
+    and properly handles lines that include eol characters. 
+Added a section on Encoding support to the Documentation.   
+    
+Changes:
+You can now optionally double click a tab to close it.
+    (Bug-Report/Feature Request, Thanks RunLevelZero).
+Added Optional Auto Refresh to the Source Browser.  
+    (Bug-Report/Feature Request, Thanks Toronto DrPython Project).
+Updated Preferences Documentation.
+        
+********************************************************************************************************************************
+
+For Version 3.9.8:
+Bugs Fixed:
+Moved common Encoding code to drEncoding.
+    Updated OpenFile, SaveFile, OnSavePrompt
+Now safely checks encoding before saving file in SaveFile, OnSavePrompt.
+The prompt no longer segfaults from bad encoding.
+Properly handles empty drscript shortcuts in the menu.
+    (Bug-Report with Co-Fix, Thanks Franz Steinhaulser)
+Append Extension onto Filename if there is no extension
+    Added Default Extension (".py") to preferences.
+    (Bug-Report, Thanks Toronto DrPython Project)
+Fixed Apply Text Property To All Styles in Prompt Preferences.
+Properly handles trailing spaces when adding indentation.
+    (Bug-Report, Thanks Toronto DrPython Project)
+FileDialog:
+    EndAndCheck now uses .GetPath to get the filename.
+    Patch in OnbtnOk fixing the filename on windows.  (Thanks Franz Steinhaulser)
+Fixed changelog error in 3.9.7 (read file twice -> read from file twice, ditto for save).
+    
+Changes:
+Updated Preferences Documentation.  
+        
+********************************************************************************************************************************
+
+For Version 3.9.7:
+Bugs Fixed:
+Properly handles encoded text in the Prompt.
+SaveFile, OnSavePrompt Bug:  Wrote to File Twice! (*Fixed 3.9.8*)
+No longer tries encoding mess in file dialog on non windows platforms.
+Properly handles bad encoding in the file dialog.   
+OpenFile:  Read From File Twice! (*Fixed 3.9.8*)
+Shows all errors in OnSavePrompt.
+References the correct txtDocument for writing encoded text in SaveFile.
+Reorganized file write code in SaveFile, OnSavePrompt.
+OnSaveAs: Checks to see if the save was successful, and resets the filename and returns otherwise.
+
+Changes:
+You can now add Plugin Shortcuts to the menu.
+    (Bug-Report/Feature Request, Thanks Franz Steinhaulser)
+Added DrFrame.PrintTraceback()
+Updated Documentation:  Plugins, Preferences.
+    
+********************************************************************************************************************************
+
+For Version 3.9.6:
+Bugs Fixed:
+SourceBrowser launches again (bad function name for Bind).
+    (Bug-Report, Thanks Peter Mayne)
+drUTF8.py -> drEncoding.py
+No longer double checks syntax during save as.
+    (Bug-Report with Fix, Thanks Franz Steinhaulser)
+pychecker codefixes:
+    drPrefsDialog, pnlLineEndings.
+    duplicate method in drRegularExpressionDialog
+    Bugfix in drOpenImportedModuleDialog (selmoudle -> selmodule)
+    Removed unused variables (and cleaned up relevant code) in:
+        drpython.py (EditRecentFiles, ovrstring, l (3 times),
+            code, pos, txtDocument)
+        drTreeDialog.py (y, frombranchtext)
+        drDragAndDrop.py (doCut)
+        drFileDialog (imagesize)
+        drFindReplaceDialog (doclength, dText (2 times))
+        drNotebook (ID_CLOSE, edge)
+        drPrefsFile (evaltext (2 times))
+        drShortcuts (keycode, keyindex)
+        drSTC (wasnotmixed (2 times)
+    (Submitted pychecker report, Thanks Franz Steinhaulser).
+Cleaned up the menu code in drScriptMenu.py
+stc shortcuts error fixed.
+Documentation fix in Plugins.
+New method of guessing the scroll width that is non ascii friendly (overestimates a bit).   
+Cleaned up DrFrame class, removed arguments for title, preferences,
+    and relevant code in __init__
+Encoding:
+    Properly encodes in the Prompt.
+    Properly encodes in SaveFile, OpenFile, OnSavePrompt.
+    (Bug-Report, Thanks Marek Kubica)
+    Windows File Dialog encoding bug fixed.
+    (Bug-Report, Thanks Marek Kubica)
+Prompt properly handles shortcuts when no program is running.
+File Dialog:
+    Open error with recent files fixed in file dialog.
+    Removed callafter selecting an item in the file dialog.
+
+Changes:
+doc browser:  The default for windows is now os.startfile.
+    ('<os.startfile'> for docbrowser preference).
+    (Bug-Report/Feature Request, Thanks Marek Kubica)
+DrScript menu now displays shortcuts too.
+    (Bug-Report/Feature Request, Thanks Franz Steinhaulser)
+Encoding:
+    Added Default Encoding to preferences
+    Added Encoding Menu to file dialog  
+Updated Documentation
+        
+********************************************************************************************************************************
+
+For Version 3.9.5:
+Bugs Fixed:
+drscript dialog:  Properly adds pydata when adding a folder
+    (Bug-Report, Thanks Franz Steinhaulser)
+no longer reports error activating item if there is no selection.
+py-lint codefixes:
+    Removed unused function CheckBranch from drTreeDialog.py
+    variable error in drPluginDialog.py (parent)
+    Removed unused imports from:
+        drBookmarksDialog.py (os.path)
+        drFileDialog.py (string)
+        drFileDialogPrefs.py (os.path, re, drGetKeyDialog, drShortcuts, drShortcutsFile)
+        drFindReplaceDialog.py (os.path)
+        drPopUp.py (drShortcuts, drShortcutsFile)
+        drPrompt.py (locale)
+        drpython.py (drPopUp, operator)
+        drSetupPreferences.py (os.path)
+        drShortcutsFile.py (wx.stc)
+        drSingleChoiceDialog.py (os, os.path, sys, keyword)
+        drSourceBrowser.py (inspect)
+        drSourceBrowserGoTo.py (string)
+        drSTC.py (locale)
+        drStyleDialog.py (drPreferences)
+        drTabNanny.py (sys, getopt).
+        drText.py (locale)
+        drTreeDialog.py (drFileDialog)
+        lnkDecoderRing.py (struct)
+        (Submitted PyLint report, Thanks Rene Aguirre)
+Spelling Error in northstar.html  (Bug-Report, Thanks Peter Mayne)
+Cleaned Up Menu Ampersands.
+Closes the clipboard if it is already open in drSTC.Paste
+Returns in drText.OnModified if it is a Dynamic DrScript.
+Patches to drFileDialog:
+    in OnFileSelected (filename bug).
+    tab order fix.
+    initially selects listctrl entry
+    extension fix.
+    (Submitted Patches, Thanks Franz Steinhausler).
+    
+Changes:
+You can now right click a selected item to activate it.
+    (Submitted Patch, Thanks Matthew (Endless Cascade of Prawns))
+Now displays the shortcuts for each command in the menu.
+    (Bug-Report/Feature Request With Co-Fix, Thanks Franz Steinhausler)
+    (Updated at startup).
+    Added getmenulabel to DrFrame
+    Added GetShortcutLabel to drShortcuts.drShortcut
+        
+********************************************************************************************************************************
+
+For Version 3.9.4:
+Bugs Fixed:
+SourceBrowser GoTo:
+    Properly shows lines when folded.
+    Code Cleanup.
+Go To Block:  Properly shows lines when folded.
+Prefs Dialog:  Now uses a ListView instead of a ListBox.
+    (Selection works properly on GTK2).
+UnComment now works with C/C++  (Bug-Report with Co-Fix, Thanks Franz Steinhaulser)
+Rewritten sizing code now calculates panel sizes, and corrects if they hide the document.
+
+Changes:
+Added drText.EnsureVisible (overrides default).
+    (checks for folding first).
+Updated Plugin List.
+        
+********************************************************************************************************************************
+
+For Version 3.9.3:
+Bugs Fixed:
+FileDialog:  Fixed menu title in bookmark menu.
+Prompt:  When running the python interpreter, properly
+     syncs output before continuing.
+SingleChoiceDialog:
+    Properly handles uppercase characters.
+    Updated Documentation.
+    Properly handles situations where the text control
+    at the top has the focus.  (Bug-Report, Thanks Franz Steinhaulser)
+Updated GetPluginsDirectory in the Documentation.
+Removed unused NewWindow method in DrFrame.
+Editing DrScripts now updates the recent file menu.
+Changed the second argument in OpenFile to OpenInNewTab.
+Prompt:
+    Fixed encoding error.
+    The prompt now prints encoding errors to standard output,
+        instead of displaying them in the prompt.
+    Removes duplicate commands from command history.
+    if -> elif in OnKeyDown.
+Plugins Menu:
+    setupmenu: Returns if "default.idx" does not exist.
+        (Bug-Report with Co-Fix, Thanks Franz Steinhaulser)
+--preferencesbasepath (Bug-Report with Fix, Thanks Franz Steinhaulser)
+SourceBrowser docusetabs bug fixed.  (Bug-Report with Fix, Thanks Franz Steinhaulser)
+ExecuteWithPython: Removes extra whitespace from the end of commands before running them.
+
+Changes:
+Plugins now have more control over keyboard shortcuts:
+    If a plugin shortcut is found, it will be executed
+    even if an alternative exists in the drpython core.
+    A plugin shortcut can alo pre-empt handling
+    in the prompt by returning 1 at the end of the called function.
+Documentation:
+    Added a useful methods section to plugins.html,
+    detailing a few useful DrFrame methods.
+OpenFile now handles recent files internally.
+Added constants to drSTC:
+    drSTC.PYTHON_FILE = 0
+    drSTC.CPP_FILE = 1
+    drSTC.HTML_FILE = 2
+    drSTC.TEXT_FILE = 3
+    (Bug-Report/Feature Request, Thanks Peter Mayne)
+The Whinge Level for Tab Timmy is now perpetually '1'.
+    (Set in drSTC).
+    (Bug-Report/Feature Request, Thanks Franz Steinhaulser)
+Updated Plugin List.
+    
+********************************************************************************************************************************
+
+For Version 3.9.2:
+Bugs Fixed:
+prefs.docusetabs bug fixed in OpenFile.
+Removed unused argument to drframe block.
+Properly handles no default.idx file (Bug-Report with Co-Fix, Thanks Franz Steinhausler) 
+Edit Index Dialog bug fixed (Bug-Fix, Thanks Franz Steinhausler)
+PrefsDialog: Plugins Default Directory Fix.  (Bug-Report With Fix, Thanks Franz Steinhausler)
+Removed unused about.html from documentation.
+Fixed title in dis files (Bug-Report, Thanks Peter Mayne)
+
+Changes:
+Source Browser Go To is now case insensitive.
+Added DrFrame.GetPreference()
+    as an alternative method for retrieving a preference:
+    eg: DrFrame.GetPreference('doctabwidth', 0)
+    (Bug-Report/Feature Request with Co-Fix, Thanks Peter Mayne)
+Added Bookmark functions to the File Dialog:
+    You can now add the current directory to bookmarks
+    You can now file the current directory in a bookmark folder
+    You can now edit bookmarks from the file dialog
+You can now set the base directory for preferences from the command line:
+    '--preferencesbasedirectory='  (Bug-Report/Feature Request with Co-Fix, Thanks Franz Steinhausler)
+You can now set the String EOL style for Python/C++, and the Prompt.  (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+Added Peter Mayne's updated documentation files (credits.html, drpython.css, dis.html, drscript.html, gpl.html,
+    help.html, plugins.html, preferences.html, thanks.html).
+Updated Documentation.
+    
+********************************************************************************************************************************
+
+For Version 3.9.1:
+Bugs Fixed:
+Documentation error in plugins fixed.
+Style Dialog:  Forgot to update the size array when selecting a style.
+HTML syntax highlighting:  The squiggle is gone.  (Bug-Report, Thanks Peter Mayne)
+    (Bug-Fix, Thanks Franz Steinhausler)
+Context Sensitive Autoindent Only works with python files.
+
+Changes:
+SourceBrowser Go To:
+    Dialog is a bit bigger.
+    Added Line Number, Defined In text controls to the dialog.
+File Types:
+    DrFrame.txtDocument.currentlanguage is now DrFrame.txtDocument.filetype
+    The prompt now has its own eol and tabwidth prefs.
+    For supported filetypes (Python, C/C++, HTML/XML, Text),
+        you can now set:
+        extensions
+        tabwidth
+        usetabs
+        folding
+        eolmode
+        commentstring
+        wordwrap
+        (Bug-Report/Feature Request Thanks Franz Steinhausler and Peter Mayne)
+Updated Documentation.
+    
+********************************************************************************************************************************
+
+For Version 3.9.0:
+Bugs Fixed:
+drPreferences.py:
+    cleaned up GetPreferencesDictionary
+userhomedirectory now always points to '~'.
+cleaned up preferences directory code in InitializeConstants
+Now uses 'APPDATA' envornment variable first on windows machines
+    and follows up with the program directory instead of c:/ or /.
+    (Bug-Report, Thanks Peter Schott, theomurpse, Franz)
+uses 'rb' in drScriptMenu.py
+Properly checks for modification when open a plugin source file.
+Now sets the directory to default only if there are no command line arguments.
+Removed unused DrFrame.OnIdle.
+Go To Blocks: Properly ensures current line is visible if folding is enabled
+File Dialog:  Clears the filename on delete.
+Cancelling "Save As" when closing an untitled document now behaves
+    like "Cancel" instead of "No".
+Only removes extra spaces from the first line when pasting to a document using tabs
+    if the text is being pasted at the beginning of the line.
+        (If no non whitespace characters are found).
+Cleaned up line joing in shortcuts, pop up menu.
+You can now select odd numbers for font size in style dialogs.  (Bug-Report, Thanks Franz Steinhausler)
+GoToTraceback in the Prompt now updates the recent file menu.       
+Sets ddirectory to userhomedirectory if prefs.defaultdirectory does not exist.
+
+Changes:
+Preferences:
+    no longer uses 'exec' in copy, reset, ReadPreferences, or WritePreferences.
+    You can now optionally treat DrFrame.prefs as a dictionary.
+    Style Arrays are now all stored as dictionaries.
+    Variable Names Changed to reflect this.  (PythonStyleArray is now PythonStyleDictionary)
+homedirectory is now userpreferencesdirectory. (homedirectory still exists for backwards compatibility).
+added GetPreferencesDirectory() to DrFrame.
+GetPluginDirectory() is now GetPluginsDirectory() (old version still exists for backwards compatibility).
+Added an icon to the status bar to indicate a program is running.
+Pop Up Menu and ToolBar dialogs are now a bit bigger.
+Icons for Document Tabs are higher contrast.  (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+Added DrFrame.Ask(question, title).
+Added drSingleChoiceDialog.py
+    OpenImportedModule now uses drSingleChoiceDialog
+    OpenImportedModule Properly saves window size (if prefs call for it).
+    (Rewritten OpenImportedModuleDialog using ListView,
+        you can now use keyboard navigation to scroll, etc.)
+    Now simply finds the string, instead of autocomplete.
+    Also made it a bit bigger.  
+Added GetIndentationCharacter to DrSTC.
+Added Source Browser Go To
+    Added to Shortcuts, the Pop Up Menu and Toolbar.
+Added SetupPreferences to General panel in Preferences Dialog:
+    Ability to Import/Export:
+        Preferences, Shortcuts, Pop Up Menu, Toolbar
+        Plugins
+        DrScripts
+        All of the above at once.
+Updated Documentation.
+Find/Replace:
+    Finder is now a member of drSTC.
+    Added Find/Replace in the Prompt.
+    Added drSTC.EnsurePositionIsVisible:
+        (Makes sure the entire selection is visible).
+    Now uses drSTC.EnsurePositionIsVisible instead of EnsureCaretVisible in Find.   
+Remember Window Size and Position is no longer enabled by default.
+    
+********************************************************************************************************************************
+
+For Version 3.8.5:
+Bugs Fixed:
+Removed unused thread import in drPrompt.
+Properly uses statustext in ExecutePython.
+ExecuteWithPython/ExecutePython code has been tuned up.
+Indentation Error in Set Args.
+drNotebook.py:
+    Source Browser: operator is now imported (Bug-Report with Fix, Thanks Franz Steinhausler)
+    View In Panel:  DrText is now imported (Bug-Report with Fix, Thanks Franz Steinhausler)
+removed superfluous code in drToolBarFile.py
+You can now set arguments even if there is no file.
+        
+Changes:
+Added GetActiveSTC to DrFrame.
+drPrompt now Overrides stc.AddText and stc.InsertText,
+    to ensure text can always be added, even in read only mode.
+    (drPrompt now directly calls wx.stc.StyledTextControl.AddText instead of self.AddText)
+Added ExecuteWithPython (to run a command with the python executable).
+Updated Plugin List.
+    
+********************************************************************************************************************************
+
+For Version 3.8.4:
+Bugs Fixed:
+Minor fix in help.html (grammar).
+For Plugin Function Menus (Preferences, Help, About):   
+    Now loads plugin modules only once, and references them via an array when
+    calling member functions.
+Open Imported Module now Refreshes the Recent File Menu
+drPreferences.py:  Uses map and range to create a sequence of empty strings for cleaner code.
+In drPrefsFile.py:  now gets all the evaltext together first, then compiles and executes
+    it all at once in Read, Write Preferences.
+Syntax Check:
+    Properly handles untitled files.
+    Now shows results in a message dialog.  (Bug-Report, Thanks Franz Steinhausler)
+Restores the active Document in SaveAll (Bug-Report With Fix, Thanks Franz Steinhausler)
+Displays an error message when the user tries to do a find previous
+    with regex.  (Bug-Report With Fix, Thanks Franz Steinhausler)
+Properly fixes file separators in drBookmarksDialog.  (Bug-Report With Fix, Thanks Franz Steinhausler)
+Checks if plugin being edited is already open (Bug-Report With Fix, Thanks Franz Steinhausler)
+    (Edited slightly by me).
+        
+Changes:
+Moved drNotebook and related classes to their own file.
+Documents Menu:
+    The Documents menu is alphabetically sorted.
+    The range submenus now show the filenames instead of the document number.
+
+********************************************************************************************************************************
+
+For Version 3.8.3:
+Bugs Fixed:
+drGetBlockInfo:  
+    Properly treats strings.
+    (That is, it now only ignores single line strings
+    if they aren't the first part of the line).
+    Updated Documentation.
+Fixed indentation in drRegularExpressionDialog
+OpenRecent uses x in y instead of try except.
+drPluginDialog:
+    Close Button can now be used with ESC (Patch, Thanks Franz Steinhausler)
+    Cleaned up uneeded close function, constants.
+    Only Lists Plugins not in the current index. (Patch, Thanks Franz Steinhausler)
+drPluginMenu:
+    No longer lists loaded plugins.  (Patch, Thanks Franz Steinhausler)
+Properly Copies PyData when moving Folders in drTreeDialog. (Bug-Report, Thanks Franz Steinhausler)
+
+********************************************************************************************************************************
+
+For Version 3.8.2:
+Bugs Fixed:
+drGetBlockInfo:
+    Properly handles implicitly joined lines with extra parenthesis
+        after the initial line.
+    Properly returns last valid line, instead of last line in file.
+    Rewrote handling of explicit line joining.
+    Properly removes triple quoted strings.
+    Properly removes single line triple quoted strings.
+    Sets STCFocus in GoToBlockStart, GoToBlockEnd.
+    Now removes all comments.
+    Now removes all strings.
+    Removes explicit line joining first.
+    Updated Documentation.
+Inserts '-i' argument in proper location when running the python interpreter by itself.
+Minor changes in sizing code:  replaced map(lambda with map(local function
+Now checks for already open when opening an imported module.
+    
+Changes:
+Added GetAlreadyOpen() to DrFrame.
+    Added in Drag and Drop, OnOpen, OnOpenRecent
+
+********************************************************************************************************************************
+
+For Version 3.8.1:
+Bugs Fixed:
+Removed uneccessary argument in drGetGlockInfo
+Prefs Dialog is bigger, vertical scroolbars are longer.
+drTreeDialog:
+    Sizer error fixed in drTreeDialog, drBookmarksDialog, drScriptDialog.
+    Removed uneeded wxPython 2.4.x compatibility code in drTreeDialog
+    Rewrote Drag and Drop moving code for drTreeDialog
+    Sorting now uses a home brewed method, so as to work where wx.TreeCtrl.SortChildren
+        Does not.
+    Properly saves drscript menu changes.
+In OnOpen, removed needless try, except statement, replaced with x in y statement.
+except statement in SaveFile now catches all errors.
+returns on exception in SaveFile.
+except statement in OpenFile now catches all errors.
+    
+Changes:
+drGetBlockInfo now handles implicitly joined lines.
+
+********************************************************************************************************************************
+
+For Version 3.8.0:
+Bugs Fixed:
+Restored cut out text in comments of drpython.py
+drTreeDialog:
+    Removed wxPython 2.4.x compatibility code from bookmarks/drscript dialogs.
+    BuildTreeFromString functions now take the same arguments.
+Fixed menu grouping in shortcuts.
+Runs OnModified after restoring from backup.
+Find Dialog:  Restores focus to text control after using the pop up menu.
+Properly changes addstring, stc.SetUseTabs, drSTC.indentation type when switching
+    the indentation type.  (Bug-Report, Thanks Franz Steinhausler)
+Properly handles regular expression not found in Find/Replace Dialog.
+    (Bug-Report with Fix, Thanks Franz Steinhausler)
+Removed superfluous code in OnCleanUpSpaces.
+SetToTabs and SetToSpaces now both take an unaltered tabwidth as an argument.
+Now removes properly extra spaces when Setting indentation to tabs.
+Title for Preferences page fixed.
+Now shows "search string not found" if occurances replaced == 0.
+    (Bug-Report, Thanks Franz Steinhausler)
+Properly updates indentation type on undo/redo/delete text.
+    
+Changes:
+Bookmarks, DrScript now use a single base class (drTreeDialog):
+    Added Sort function to drTreeDialog.
+Edit DrScript Dialog now sorted.  (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+Added GoTo:
+    Block Start/End
+    Def Start/End
+    Class Start/End
+    Added to Shortcuts, Pop Up Menu, Toolbar
+    Changed Default Shortcuts for GoTo Block Start/End, and Toggle Source Browser
+    Updated Documentation
+Cleaned Up Shortcuts Documentation
+'-t' (warn on mixed indentation) is now a default python argument.
+New Plugin Functions:
+    Added AddPluginOnNewFunction, to run code whenever "OnNew" is called,
+        without overriding the function.
+    Added AddPluginOnCloseFunction, runs code at the end of OnClose.
+    Added AddPluginOnOpenFunction, runs code at the start or end of DrFrame.OpenFile
+    Added AddPluginOnSaveFunction, runs code at the start or end of DrFrame.SaveFile
+        (Help with how to implement the Functions in discussion:
+        Bug-Report Feature Request with Co-Fix, Thanks Franz Steinhausler).
+    Updated Documentation.
+Added Toggle Fold to Menu, Shortcuts, Pop Up, Toolbar (Bug-Report/Feature Request, Thanks Jon Schull)
+Check indentation on Open is now a preference.
+    It behaves the same way as check line endings on open.
+    (Bug-Report/Feature Request, Thanks Franz Steinhausler).
+Added optional extension restrictions for Check Syntax on Save (Bug-Report/Feature Request, Thanks Franz Steinhausler).
+
+********************************************************************************************************************************
+
+For Version 3.7.9:
+Bugs Fixed:
+Index error in OpenImportedModule fixed.  (Bug-Report, Thanks Franz Steinhausler)
+Checks if drscript file is already open on edit.  (Bug-Report, Thanks Franz Steinhausler)
+
+Changes:
+Drag and Drop, you now set the default drag action (cut or copy),
+    and the other option can be executed by holding down control.
+    (Bug-Report/Feature Request, Thanks Matthew Thornely)
+Updated Documentation.
+Updated Plugin List.
+
+********************************************************************************************************************************
+
+For Version 3.7.8:
+Bugs Fixed:
+Now shows what is producing the output, tabnanny or compile.
+Open Imported Module:
+    No longer adds (or subtracts) empty entries.
+    Parse function properly handles keywords such as 'as'.
+    Properly handles from, ignores '*', allows from directories:
+        eg from from wx.lib import dialogs
+        will let you choose from wx.lib and wx.lib.dialogs.
+    Only shows modules that exist.
+    Updated Documentation.
+Paste from Edit Menu, Pop Up Menu now call drSTC.Paste
+Edit Menu: Copy, Cut, Paste, Delete now also work in Prompt.
+
+Changes:
+Rearranged options for Add in Bookmarks Dialog.
+Bookmarks, DrScript dialogs are bigger.
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.7.7:
+Bugs Fixed:
+Bugfix in drShortcuts (stc) (Bug-Report with Fix, Thanks Franz Steinhausler)
+SetToSpaces variable bug fixed.  (Bug-Report with Fix, Thanks Franz Steinhausler)
+regex fix in OpenFile.  (Bug-Report with Fix, Thanks Franz Steinhausler)
+eol fix in OpenFile.  (Bug-Report with Fix, Thanks Franz Steinhausler)
+Removed code that replaces all 1's with 0's in Paste.
+Fixed bug where extra spaces are removed whenever SetToTabs is called. (*Spelling Error, Fixed for 3.8.0)
+    (In Paste, and in Set Indentation to Tabs).
+Sets STC Focus in Document in OnNew.
+Plugin Menus (preferences, help, about) code cleanup:  now derived from base class.
+Properly sorts plugin menus (preferences, help, about).  (Bug-Report, Thanks Franz Steinhausler)
+Properly handles selected text in drSTC.Paste()
+Open Imported Module:
+    Properly Removes duplicates.
+    Removes empty entries.
+    Properly handles commas.
+    
+Changes:
+Added Check Syntax Feature.
+    Checks for syntax, indentation errors.  (uses compile, tabnanny).
+    Added to the toolbar, shortcuts, pop up menu.
+    Added to the default toolbar selection.
+    Added Check Syntax on Save to Preferences.  (Bug-Report/Feature Request, Thanks RunLevelZero)
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.7.6:
+Bugs Fixed:
+Properly handles mixed line endings (Bug-Report with Fix, Thanks Franz Steinhausler)
+Properly detects unix/mac line endings (Bug-Report with Fix, Thanks Franz Steinhausler)
+extra '/' in homedirectory fixed. (Bug-Report with Fix, Thanks Franz Steinhausler)
+removed locale error in drText
+removed superfluous import in drText
+shorcuts code cleaned up: stc is now found at the beginning of RunShortcuts
+Now formats for indentation on paste (incorporated from Franz Steinhausler's CopyCutPasteExtend
+    Plugin, Version 1.0.7)
+STCCOMMANDLIST only stored once in DrFrame, instead of in each DrText instance.
+    
+Changes:
+Added SetToTabs, SetToSpaces, to make messing around with indentation more modular.
+About Dialog now shows os info, wxPython info (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+DrText and DrPrompt are now the proud children of DrStyledTextControl
+Plugin Menus:  Preferences, Help, About now in alphabetical order.  (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+Updated Plugin List.
+
+********************************************************************************************************************************
+
+For Version 3.7.5:
+Bugs Fixed:
+File Dialog:  Now properly handles .lnk files on windows
+lnkDecoder:  Properly removes strings with invalid characters
+Properly shows EOL characters too if view whitespace is on by default.
+Sets up preferences for document, prompt, in OnNew.
+Removed old preferences from documentation.
+No longer resets whitespace when updating preferences.
+
+Changes:
+Grouped Line Endings with General in Preferences Dialog.
+Added View EOL with whitespace to prefs. (Bug-Report/Feature Request: Thanks RunLevelZero)
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.7.4:
+Bugs Fixed:
+Properly handles non ascii characters in the plugin list.
+lnk (and desktop) files properly reset the file combobox if they point to a directory.
+Updated Changelog 3.7.3
+
+Changes:
+Added '>' to View In Panel menu items.
+Added support for KDE desktop entries.
+Updated Plugin List.
+Updated Credits (Donations).
+Refreshes Source Browser on Open, Close.
+
+********************************************************************************************************************************
+
+For Version 3.7.3:
+Bugs Fixed:
+Fixed update prefs bug in dr text regarding the addchar for autoindent.
+Default directory bug (general and plugins where switched in reset).
+
+Changes:
+Set Indentation to Tabs removes space indentation less than
+    the tabwidth.
+Shortcuts now work in split view if it is a view of the current document.
+Changes to default directory when loading preferences.
+Updated Documentation.
+Updated Plugin List.
+Updated Credits, Donations (*Added in 3.7.4*).
+
+********************************************************************************************************************************
+
+For Version 3.7.2:
+Bugs Fixed:
+DrScript default directory bug fixed (Bug-Report, Thanks Franz Steinhausler)
+Minor Autoindent with spaces bug fixed.
+Updates statustext on set indentation.
+
+Changes:
+Added "Use File's Indentation" to preferences.
+    On by default.
+    Updated Documentation.
+Updated Plugin List.
+
+********************************************************************************************************************************
+
+For Version 3.7.1:
+Bugs Fixed:
+Constant Wildcard value saved in prefs dialog.
+Fixed filter parsing in file dialog.
+Selects the tab under the pop up menu to ensure the correct tab is referenced.  (Bug-Report, Thanks Greg Smith).
+Bug Workaround:  Assigned Shift + Backspace to "Delete Back Not Line".  (Bug-Report, Thanks Greg Smith).
+    Added a note to the Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.7.0:
+Bugs Fixed:
+File Dialog:  Index error in loop building wildcard array.
+Encoding:  Error Opening Files with Swedish (Unicode) Text.
+    (Bug-Report, Thanks  Bo Jangeborg).
+
+Changes:
+Drag and Drop:
+    Optional Drag and Drop Support for Text
+        Thanks to Robin Dunn for the code (modified slightly/integrated by Dan).
+        (Bug-Report/Feature Request, Matthew Thornely)
+    Drag and Drop of Files now works in the prompt too.
+Preferences:
+    Dialog:
+        Removed Images from listbook.
+            Removed extra bitmaps.
+        Redid Listbook with a simple listbox, and sizing code.
+        Now all Panels are based off of the PrefsPanel base class.
+        Cleaned Up Code (Corrected Labels, etc).
+        Removed Text Type from the Prompt Preferences Panel.
+        Moved Styles to the Top of Preferences for All Panels.
+        Moved File Dialog Settings to its own Panel.
+    Added Drag and Drop to Preferences:
+        Drag Files, Drop Files and Text
+        Drag and Drop Files and Text
+        Drag and Drop Files Only
+        Cut on Drag
+        Copy on Drag
+    Added Auto Refresh on Save to Source Browser.
+    File Dialog:
+        Added a wildcard editor
+        Added constant wildcard
+        Added lnk replace table editor
+Now updates plugin list from the website, which automatically updates version numbers.
+Added lnk support for linux using replace strings.
+    Replace strings use Regular Expressions.  By Default, set to guess default linux setup
+    (/mnt/win_x) where x is a lowercase drive letter.
+
+********************************************************************************************************************************
+
+For Version 3.6.12:
+Bugs Fixed:
+Mistyped the bugfix for the plugin index dialog (Bug-Report with Fix,  Thanks Franz Steinhausler)
+Ditto for the Finder addition in OnClose (Bug-Report with Fix,  Thanks Franz Steinhausler)
+Fixed SourceBrowser error handling triple quoted strings.
+SourceBrowser now handles single and double triple quoted strings.
+
+Changes:
+Updated Plugin List.
+
+********************************************************************************************************************************
+
+For Version 3.6.11:
+Bugs Fixed:
+Style Dialogs:
+    Now look nice with wx 2.5.3.1 on Windows (Bug-Report, Thanks Franz Steinhausler),
+        and on GTK2.
+    GTK2: Redid events a bit so the color panel properly responds to the sliders.
+properly loads default directory (Bug-Report with Fix, Thanks Gregory Smith)
+No longer tries to autoreload files on drag and drop.  (Bug-Report, Thanks Gregory Smith)
+Mixed Line ending in status text fixed.  (Bug-Report, Thanks Gregory Smith)
+Properly moves plugins around in index file  (Bug-Report with Fix, Thanks Franz Steinhausler)
+Properly copies Regex for Find/Replace between documents  (Bug-Report with Fix, Thanks Franz Steinhausler)
+Retains Finder info when closing a document  (Bug-Report with Fix, Thanks Franz Steinhausler)
+Plugin Install Wizard:  Syncs pluginlabellist with list control in Run().
+
+********************************************************************************************************************************
+
+For Version 3.6.10:
+Bugs Fixed:
+UnComment no longer adds an extra line.  (Bug-Report, Thanks Matthew Thornley)
+Comment properly handles no selection.  (Bug-Report, Thanks Franz Steinhausler).
+Properly saves default directory.  (Bug-Report, Thanks Richard Townsend).
+
+Changes:
+File Dialog:
+    Added support for windows shortcut files (*.lnk).
+        (On Windows, Local Files Only).
+    You can now change directories with the directory text control.
+Prompt only acts like a prompt if a program is running, otherwise acts
+    like a text control. (Bug-Report/Feature Request, Thanks Matthew Thornley)
+Updated Plugin List.
+
+********************************************************************************************************************************
+
+For Version 3.6.9:
+Bugs Fixed:
+uncommented Bind:  OnLeftDown
+context sensitive autoindent:
+    compile regex's in __init__
+    works with win line endings. (Bug-Report, Thanks Matthew Thornley)
+Comment Region:
+     now works with mac line endings.
+    goes to the start of the commented region after commenting.
+
+Changes:
+You can now set the comment string in prefs.
+Updated UnComment.
+You can set the comment type:
+    comment at the start of the line, or the word.
+    comment at the start of the word does not
+        comment blank lines.
+    (Bug-Report/Feature Request, Thanks Matthew Thornley)
+Updated Documentation.
+Updated Plugin List.
+
+********************************************************************************************************************************
+
+For Version 3.6.8:
+Bugs Fixed:
+Only norms path if not http address (Bug-Report, Thanks Steve Holden)
+wx.FileDialog now has proper Save button, Overwrite prompt
+    (Bug-Report with Co-Fix, Thanks Matthew Thornley)
+Properly quotes file argument in OnRun.
+Proper handling of extra arguments in OnRun.
+Handles non-existant files properly for program argument.
+drText Indentation properly handles (event is None), tabs->spaces, spaces->tabs, none.
+Prompt now also allows deselect with cursor.
+Drag and Drop Files:
+    Sets document to 0 for first file if current is untitled.
+    No longer sets modified untitled to -1.
+OpenFile only sets untitled number if not opening in a new tab.
+Removed read access code in OpenFile.
+
+Changes:
+Shows console command as first line in prompt (Bug-Report/Feature Request, Thanks Matthew Thornley)
+Added AutoWrap to Find/Replace preferences (Bug-Report/Feature Request, Thanks Matthew Thornley)
+
+********************************************************************************************************************************
+
+For Version 3.6.7:
+Bugs Fixed:
+(Credits Error Fixed, Changelog Too).
+EOL Mode is now only set during stc initialization for drText.
+print statement in soucre browser -> message dialog
+drText:
+    Indentation detection error fixed
+    Faster Indentation checking on delete/undo/redo.
+Sets untitled number after checking for read/access errors in open file.
+
+Changes:
+source browser: Focus is set in the document on activation (Bug-Report/Feature Request, Thanks Franz Steinhausler).
+Checks for read access in OpenFile
+
+********************************************************************************************************************************
+
+For Version 3.6.6:
+Bugs Fixed:
+OnFormat re's compiled at startup.
+setDocumentTo no longer resets eolmode.
+    (This is the very unexpected result of a lot of debugging stemming
+    from a seemingly unrelated bug report from Franz Steinhausler [Thanks!]).
+STC Shortcuts are now read properly even if a new shortcut has been added.
+Proper argument for OnPositionChanged in OnModified in drText.
+Faster Indentation Checking for statustext in drText
+    (Only checks modified text.  Checks full text on delete/undo/redo).
+
+Changes:
+Find and Complete Patch, now stops at '.', orders matches by proximity.  (Thanks Martinho DOS SANTOS).
+Added Line Duplicate to stc shortcuts (Bug-Report/Feature Request with Co-Fix, Thanks Franz Steinhausler). (*Fixed 3.6.7*)
+Updated Plugin List
+Write Access Error Patch (Thanks, Franz Steinhausler).
+Added Rectangle Selecion to stc shortcuts (Bug-Report/Feature Request with Co-Fix, Thanks Franz Steinhausler). (*Fixed 3.6.7*)
+    Added defaults for rectangle selection
+    removed "home display extend", 'line end display extend' default shortcuts.
+
+********************************************************************************************************************************
+
+For Version 3.6.5:
+Bugs Fixed:
+Source Browser works again (Bug-Report With Fix, Thanks Franz Steinhausler).
+    (And Bug-Report Richard Townsend).
+End of Document Reached dialog works again.
+re compile now takes place in drtext init instead of in check indentation.
+on position changed is not called from onModified during an event anymore.
+
+Changes:
+Submitted Patch Speed up indent/dedent region (Thanks Franz Steinhausler).
+Added identifier characters to indentation strings in statustext.
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.6.4:
+Bugs Fixed:
+No longer shows default.idx in Load From Index menu.
+Save All: Now shows a message dialog when there are no modified documents.
+Prefs Dialog: btnCancel -> btnClose
+Check Indentation now correctly handles mixed indentation that is not immediately preceeded
+    by an end-of-line.  (Bug-Report, Thanks Franz Steinhausler).
+Find:  You can now use the ESC key to cancel the continue dialog.
+    (Bug-Report/Feature Request, Thanks Franz Steinhausler).
+
+Changes:
+Added Help button to Preferences Dialog.
+Double Clicking a file entry in a traceback causes drpython
+    to open the file at the line specified.  (Bug-Report/Feature Request, Thanks Matthew Thornley).
+Check Indentation is now a member of DrText.
+Now uses Check Indentation in OnPositionChanged.
+
+********************************************************************************************************************************
+
+For Version 3.6.3:
+Bugs Fixed:
+OnClose: Only clears the document if it is the only one left.
+PluginDialog:
+    Downloads now done one byte at a time.
+    Download updating now occurs before total is incremented in loop.
+    Update Plugin List Dialog:
+        Removed the Done status text, and the close button.
+        Automatically closes on successful completion.
+    Select Plugin Dialog:
+        Keyword is now default (windows)
+        Properly processes enter (windows)
+        Properly handles keyword search.
+        Properly handles invalid ascii values in Plugin List.
+    Updated Plugin List.
+    wx.ShowMessage -> drScrolledMessageDialog.ShowMessage
+
+********************************************************************************************************************************
+
+For Version 3.6.2:
+Bugs Fixed:
+Correctly Unpacks Files from Zip (Bug-Report, Thanks Franz Steinhausler).
+Added Encoding support back into the core as a preference (Bug-Report, Thanks Bo Jangeborg)
+    Also added back encoding support to the prompt (same preference).
+SavePrompt now uses correct file dialog.
+No longer maximizes when updating preferences.
+
+Changes:
+Encoding support is now a single preference.
+Updated Preferences Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.6.1:
+Bugs Fixed:
+Fixed credits/changelog error from 3.6.0
+Plugin Install Wizard:  variable not defined error in local install (Bug-Report, Thanks Franz Steinhausler).
+
+Changes:
+You can now use the default wx.FileDialog instead of the DrPython Version.
+Added A Search Function to the Select Plugins Dialog.
+SaveFile now assumes it can make a backup by default.
+SaveFile now takes the document array index as the first argument.
+Being Prompted in OnSaveAll is now optional.
+Updated Preferences Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.6.0:
+Bugs Fixed:
+Re Dialog:
+    Insert Normal Text Indentation Fixed.
+    File Dialog Bug Fixed (Bug-Report, Thanks Franz Steinhausler).
+Plugins:  On Install, always handles default.idx does not exist.
+ScrolledMessage Dialog argument bug fixed. (Bug-Report with Fix, Thanks Franz Steinhausler).
+Properly sets eol mode in Open (Bug-Report with Fix, Thanks Dan Kruger).
+Default printing tabwidth is now 4.
+Correctly Handles Already Open File in OnOpen (Bug-Report, Thanks Franz Steinhausler).
+IsMaximized Bug Fixed. (Bug-Report With Fix, Thanks Franz Steinhausler).
+Open Imported Module:
+    Handles Indented Import Statements (Bug-Report, Thanks Dan Kruger).
+    Handles variables named "import" properly.
+    Handles special case 'wx' properly  (Bug-Report,  Thanks Michael Stather).
+        Handles any case where __init__.py is used to import a directory.
+SourceBrowser now handles triple quoted strings. (Bug-Report, Thanks Dan Kruger).
+Only shows recent files for Main Open Dialog.
+Windows homedirectory error.  (Bug-Report With Fix, Thanks Dariusz Mikuiski).
+Properly handles default preferences in ReadPreferences.
+Properly handles urls in web browser. (Bug-Report, Thanks dataangel).
+Now remembers main window size and position in preferences.
+    (Bug-Report/Feature Request, Thanks Michael Stather).
+Removed useless prompt.Show() code in panel sizing.
+Assert Error (Scintilla Editor.cxx Line 1825) Work Around.  (Bug-Report, Thanks dataangel).
+Prefs Dialog:  AutoIndent -> Auto Indent.
+Error if cursor moved near start or end of document in find next/previous chain.
+    (Bug-Report, Thanks Franz Steinhausler).
+Search String Not Found now works properly for regular Find.
+patch to make bitmap directory handling cleaner.  (Submitted Patch, Thanks Radoslaw Stachowiak)
+No longer runs find next, or find previous if there is no search string (Bug-Report, Thanks Franz Steinhausler).
+Removed superfluous variable in drPrompt.
+Code a bit more efficient in OnIdle in drPrompt.
+
+Changes:
+Plugins:
+    plugins.dat -> default.idx
+    Configure Plugins Dialog -> Configure Plugins Menu
+    No Longer Loads Plugin on Install.
+    Downloads updated list of plugins from sourceforge servers.
+    New Install Wizard:
+        Download Plugins From SourceForge
+        Install From Zip
+        Only Allows Install From Index if .idx file exists.
+    New UnInstall Wizard:
+        Removes Plugin from any Index Files it is referenced in.
+            Removes the indexfile itself if it is empty.
+        Optionally Removes Preferences and Shortcuts File for each Plugin.
+    New Dialog for Editing Indexes.
+Added ShowMessage(parent, message, title) to drScrolledMessageDialog.
+    Updated Files.
+Credits:
+    Everyone is listed under Contributors.
+    Also changed the colors a bit, and some of the text.
+    Numbers for all Bug-Reports, etc.
+Added AutoReload.  (Bug-Report/Feature Request with Co-Fix, Thanks Franz Steinhausler).(*Fixed*)
+View In Panel now goes to the current line in the target document.
+Find now stops at the Start/End of the Document, and promts to continue.
+Open Imported Module:
+    Now Ctrl + m by default.
+    Double Clicking now activates.
+Updated Shortcuts Documentation.
+Added drpython.ico to bitmaps directory.
+Added support for distutils (Submitted setup.py, manifest.in, Thanks Radoslaw Stachowiak)
+
+********************************************************************************************************************************
+
+For Version 3.5.9:
+Bugs Fixed:
+File Dialog:
+    Now checks to see if file exists in file dialog. (Bug-Report, Thanks dataangel).
+    Now checks for lnk files, warns the user. (Bug-Report, Thanks dataangel).
+    Properly handles typed in files.
+Default shortcuts now work properly when there is no shortcuts file.
+DrScript Menu Editor Dialog was broken.  Fixed.
+
+********************************************************************************************************************************
+
+For Version 3.5.8:
+Bugs Fixed:
+Non-STC shortcuts are disabled in View In Panel.
+
+Changes:
+Added View In Panel.
+    You can view any open document in any side panel.
+    Panels now have labels.
+    Panels now have distinct background color.
+    Panels now have close buttons.
+Removed Split View.
+Updated ToolBar Icons.
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.5.7:
+Bugs Fixed:
+Now sets horizontal scroll when creating a split view panel.
+Preferences Documentation: removed old preferences.
+Windows NT ToolBar Crash fixed.  (Bug-Report with Co-Fix, Thanks gero).
+DrScript Dialog:  Handles empty script file properly.
+
+Changes:
+Added the file dialog wildcard to prefs.
+Preferences Documentation:  Added a table of contents.
+
+********************************************************************************************************************************
+
+For Version 3.5.6:
+Bugs Fixed:
+Panel selection bug fixed.
+Open Imported Module now searches the same directory as the current file first for matching modules.
+Replace Prompt On Selection Skip Bug Fixed (Bug-Report, Thanks Dan Kruger).
+Fixed documentation. (Fixed some minor spelling errors, accuracy errors in help.html).
+
+********************************************************************************************************************************
+
+For Version 3.5.5:
+Bugs Fixed:
+Select None residual code removed from drShortcuts.py (Bug-Report with Fix, Thanks Chris Wilson).
+Split sizes correctly again.
+Now resets STC shortcuts in Shortcuts Dialog.
+Fixed OnClose Error with targetPosition.
+Open Imported Module now removes duplicates.
+Now checks to see if custom toolbar file exists, and creates it if it does not
+    when adding plugin icons.  (Bug-Report, Thanks Greg Wilson).
+Removed undeeded code in OnCancel in drFileDialog.
+
+Changes:
+Open Imported Module:
+    Sorts ModuleList
+    New Dialog with Keyboard navigation.
+
+********************************************************************************************************************************
+
+For Version 3.5.4:
+Bugs Fixed:
+Removed unused sizertarget code.
+moved document creation, sizing to top of OnNew.
+Panels:  Only calls OnSize code if the size has changed.
+    (Calling with None overrides).
+Sourcebrowser crashed if set to atuomatically load:  (Bug-Report with Fix, Thanks Chris Wilson).
+OnTextChnaged -> OnTextChanged:  (Bug-Report, Thanks Chris Wilson).
+Added rectanglefind to reset in drFinder (Bug-Report, Thanks Franz Steinhausler).
+Off By One Error in Rectangle Find (Bug-Report, Thanks Franz Steinhausler).
+No more internal find error -> Now sets findpos to -1.
+Find Button not enabled when there is selected text. (Bug-Report with Fix, Thanks Chris Wilson).
+In OnSize, only calculates length once for all arrays.
+
+Changes:
+Added Open Imported Module (Bug-Report/Feature Request, Thanks Chris Wilson).
+Added ToolBar Icons for Open Imported Module.
+
+********************************************************************************************************************************
+
+For Version 3.5.3:
+Bugs Fixed:
+Properly updates tab icons OnClose.
+Selection is None bug in drFindReplaceDialog.py.
+
+Changes:
+Find/Replace in Rectangular Selection (Bug-Report/Feature Request, Thanks Franz Steinhausler).
+Added a relevant section to the docs.
+
+********************************************************************************************************************************
+
+For Version 3.5.2:
+Bugs Fixed:
+Now only refreshes side panels.
+Now calls OnModified automatically on load of first document.
+Rewritten code in setDocumentTo, OnNew
+Calls OnModified in OpenFile instead of OnPositionChanged.
+Now Only does OnSize code for Panels if the length of the
+    Array for each Position is greater than 0.
+(ToolBar Sizing):  Fix!  Check on Linux!
+Now uses SetToolBar instead of adding to sizer, 
+    for correct ToolBar display (Bug-Report, Thanks Richard Townsend).
+Fixed credits (bur-report -> bug-report).
+
+Changes:
+Now shows active document via the bitrmap (Bug-Report/Feature Request, Thanks Franz Steinhausler).
+Modified icons for "modified, unmodified", added active variants.
+
+********************************************************************************************************************************
+
+For Version 3.5.1:
+Bugs Fixed:
+drPrefsDialog:  wx.SHAPED -> wx.EXPAND to ensure proper text display.  (Bug-Report with Fix, Thanks Franz Steinhausler).
+No longer messes with the title in a split view (Bug-Report, Thanks Franz Steinhausler).
+No longer takes Index as an argument for drSplitTextPanel.
+
+Changes:
+Rewritten Prefs code now uses regex to scan preferences file.
+
+********************************************************************************************************************************
+
+For Version 3.5.0:
+Bugs Fixed:
+OnSize in mdinotebook now Refreshes notebook (to make sure display is correct).
+Now calls to OnPositionChanged in OnFormat.* use None as the argument.
+Faster OpenFile:
+    Removed useless ConvertEOLs call.
+    For each line ending type:  removed multiple eolist search with .count,
+                                replace with a single re search.
+    File type re compiles now done on init instead of on open.
+    Rewritten, faster horizontal scroll code.
+    Removed superfluous statusbar code.
+Moved drScrolledMessageDialog import statement.
+Find/Replace no longer searches if the Search For Field is empty.  (Bug-Report/Feature Request, Thanks Franz Steinhausler).
+drText:  Searches for [Modified] instead of *
+When changing the document, sets modified document titles to [Modified] instead of '*' (Bug-Report, Thanks Franz Steinhausler).
+No longer erases text on indent, properly handles dedent, (Bug-Report, Co-Fix, Thanks Franz Steinhausler).
+Updated credits.
+Now Uses drFileDialog in DrScript Menu.
+DrScript Dialog now syncs the shortcuts file when saving.  (Bug-Report, Thanks Franz Steinhausler).
+Shortcuts Dialog:  Now only adds plugins to list if they export shortcuts (Bug-Report, Thanks Franz Steinhausler).
+Updated Icon for Toggle Prompt (16x16).
+PrefsDialog:  "Icon size:" renamed "Toolbar Icon Size:"
+
+Changes:
+Prompt now takes up the entire bottom.
+Sizing Code:
+    Now uses Move, SetSize instead of SetDefaultSize and Layout
+    Sash Code now smaller, cleaner.
+    SashDrag now only for center bottom, prompt top, panel sides.
+        You now have to create a panel to resize it.
+    Added Top, Bottom, now all side panels (Top, Bottom, Left, Right) and the center
+        are in their own panel.
+    Now uses a Sash Window instead of a SashLayout Window.
+    Removed LeftIsVisible, RightIsVisible Code.
+    Side Panels are now arrays, you can now have multiple panels on each side.
+    0 is now Left, 1 is now Right for Panel Position.
+    Updated ShowSourceBrowser Code.
+    No Longer needs AppendPanel, ClearPanel Functions.
+    Added TogglePanel, ShowPanel, IsVisible Functions.
+drText:  Moved regex compile to document creation to speed up indentation code in OnPositionChanged.
+Line Endings:  Now uses regex instead of builtin ConvertEOLs.  It is now much faster.
+Removed Encoding Code.
+drScrolledMessageDialog is now smaller.
+Replaced direct drScrolledMessageDialog statements with calls to DrFrame.ShowMessage in drpython.py
+Default Prompt Size is now 50.
+Preferences:
+    Rewritten code now uses a dictionary to read, write, copy, and reset preferences.
+Added Position Chooser Widget for Selecting Panel Position.
+Added Split Horizontal, Split Vertical:  Splits Text Horizontally, Vertically.
+    Split Text Panels close automatically if they are sized to 0 using the Sash.
+    Added to Shortcuts, Pop Up Menu, Toolbar
+    Added Icons.
+Updated Documentation.
+Removed Select None (Same as Home).
+Added Top/Bottom Panel Size to Preferences.
+
+********************************************************************************************************************************
+
+For Version 3.4.9:
+Bugs Fixed:
+Now properly handles manually set sizes in style dialog.
+Save Customized ToolBar now works (Bug-Report, Thanks Richard Townsend).
+Find And Complete no longer runs if there is no word.
+
+********************************************************************************************************************************
+
+For Version 3.4.8:
+Bugs Fixed:
+Fixed changelog/credits error.
+Autoindent works correctly again (Bug-Report with Fix, Thanks Franz Steinhausler)
+
+Changes:
+You can now manually type in the size in the style dialog.  (Bug-Report/Feature Request, Thanks Franz Steinhausler)
+
+********************************************************************************************************************************
+
+For Version 3.4.7:
+Bugs Fixed:
+Took out unneeded sash border at top of document.
+No longer autoindents after find and complete (Bug-Report, Thanks Franz Steinhausler)
+Updates status text properly again (Bug-Report with Fix, Thanks Franz Steinhausler)
+Now sets document to already open file instead of warning user.  (Bug-Report with Fix, Franz Steinhausler) (*Fixed*)
+Normalizes filenames in drag and drop (Bug-Report with Fix, Thanks Franz Steinhausler) (*Fixed*)
+Clicking in selected text now clears the selection (Bug-Report/Feature Request, Richard Townsend).
+File Dialog:
+    Normalizes path for txtDirectory (Bug-Report, Thanks Franz Steinhausler)
+    Makes sure there is no duplicate slash after returning to root directory. (Bug-Report, Thanks Franz Steinhausler)
+Find no longer skips a match when switching direction (Bug-Report, Thanks Franz Steinhausler)
+Properly remembers selected panel in preferences dialog.
+
+********************************************************************************************************************************
+
+For Version 3.4.6:
+Bugs Fixed:
+Now loads default shortcuts correctly if there is no shortcuts file.
+Moved Bind Statements down in init function for drPanel.
+Fixed parenthesis matching code.
+Now always updates tabs (if update tabs is selected in preferences).
+Removed unused argument in bookmarks menu append in file dialog.
+notebook.top renamed to notebook.center.
+
+Changes:
+Moved folding above syntax highlighting in View Menu.
+Parenthesis Matching is now optional.
+
+********************************************************************************************************************************
+
+For Version 3.4.5:
+Bugs Fixed:
+Removed dependency version from comments.
+Style Dialog:
+    Indent error in style dialog fixed.
+    Behaves better on font error (Bug Report, Thanks Dan Uznanski).
+    Sizing for color sliders fixed.
+Prefs Dialog ListBook Now aligned Left.
+FileDialog:
+    Arrows point in the correct direction.
+    Sorts modified time correctly.
+    Sorts Down by default.
+
+********************************************************************************************************************************
+
+For Version 3.4.4:
+Bugs Fixed:
+Now sets to current document on save all (Bug-Report, Thanks Franz Steinhausler)
+Updates tabs modified status correctly.
+No longer toggles maximize on preferences.
+No longer destroys menu items, simply removes them (Fixes Segfault on GTK2).
+Updates Range on Find Next/Previous. (Bug-Report, Thanks Franz Steinhausler)
+Find Previous Bug fixed. (Bug-Report, Thanks Franz Steinhausler)
+
+********************************************************************************************************************************
+
+For Version 3.4.3:
+Bugs Fixed:
+Proper size for Prefs Dialog with GTK2.
+Apply Property to All Styles Now Works, applies to ALL Types. (Python, C++, HTML):
+    Sets the normal text as default for each Type.
+On Font Error, displays font.
+Properly loads preferences again(Removed check for version number).
+Only updates tabs if changing modified status.
+Only calls OnPosition Changed from modified.
+Save All only saves modified files (Bug-Report, Thanks Franz Steinhausler)
+Drag and Drop filename error fixed (Bug-Report With Fix, Thanks Franz Steinhausler)
+If font is not in fontlist, try to guess lowercase, capitalized versions.
+Now uses users homedirectory if SetDirectory fails for file dialog.
+Now uses same icon for Toggle Prompt, prompt.
+
+********************************************************************************************************************************
+
+For Version 3.4.2:
+Bugs Fixed:
+File Dialog:
+    Changed button order.
+    Now uses homedirectory on load, if given directory does not exist.
+Removed outdated version number in prefsfile.py (no longer writes version number).
+
+Changes:
+Added 'Look In' Button to the File Dialog.  (Bug-Report/Feature Request Tom De Muer).
+Added Save On Run to Preferences. (Bug-Report/Feature Request, Dominique Buenzli).
+
+********************************************************************************************************************************
+
+For Version 3.4.1:
+Bugs Fixed:
+Updates Documents Menu OnClose.
+Get Key Dialog now processes tab/enter events (Bug-Report with Fix, Thanks Christian Daven)
+Find Error Switching Documents (Bug-Report, Thanks Franz Steinhausler)
+Changed sizing to Fit() in Prefs Dialog.
+Minor credits spacing update.
+
+********************************************************************************************************************************
+
+For Version 3.4.0:
+Bugs Fixed:
+SourceBrowser now freezes interface/thaws during browse (Submitted Patch, Thanks Christian Daven)
+name error fixed in toolbar dialog.
+Sets Current Directory to Active Tab (Bug-Report/Feature Request Franz Steinhausler)
+Fixed Recent Files Bug (Bug-Report, Thanks Jean Luc Damnet).
+Minor internal switch from os.path.split to os.path.basename.
+Initialize Plugins Path at the start of the init function of DrFrame.
+Added Close All Documents, All Other Documents to Shortcuts.
+Fixed First, Last Document option in Pop Up Menu.
+
+Changes:
+New File Dialog:
+    New Icons for Folders, Files, Commands
+    Access to Bookmarks, Recent File Menu
+    Back/Forward Buttons
+    Delete File Button
+Information Menu now Help Menu
+New Icons For Bookmarks Dialog.
+File Modified State now indicated by an icon in tabs, '[modified]' in title.
+Added Save All
+Removed Window Width, Window Height from Prefs.
+Now Optionally Remembers Window Size, Dialog Sizes and Positions (For Main Dialogs).
+Plugins:
+    Added Plugin Documentation to the Help Menu.
+    Added Plugin Preferences to the Options Menu.
+    Added Plugin About to the Help Menu.
+Moved Edit Bookmarks, Edit DrScript Menu to the Options Menu.
+Preferences Dialog now has a Listbook instead of a Notebook.
+Tabs -> Documents
+Moved Documents Menu to MenuBar.
+Now lists all Documents in the Documents Menu.
+Added Update Indentation to Prefs.
+Added Check Indentation Type to the Whitespace Menu.
+
+********************************************************************************************************************************
+
+For Version 3.3.7:
+Bugs Fixed:
+Indent/Dedent:  Two Submitted Patches by Christian Daven
+Prompt was scroll happy. (Bug-Report Dominique Buenzli)
+
+********************************************************************************************************************************
+
+For Version 3.3.6:
+Bugs Fixed:
+Fixed Preferences Dialog Bug (Did not launch) (Thanks:
+    Dominique Buenzli{Bug-Report}
+    Jean Luc Damnet{Bug Report With Fix})
+
+********************************************************************************************************************************
+
+For Version 3.3.5:
+Bugs Fixed:
+Removed arrow code from drText.py
+Icons:  Removed Background on Linux for some icons. (Switched Black->White).
+Renamed Show Class Browser -> Toggle Source Browser
+Drag And Drop File now updates recent file list.
+
+********************************************************************************************************************************
+
+For Version 3.3.4:
+Bugs Fixed:
+Find:
+    Properly updates position for RE find.
+    Properly updates RE flag.
+No longer shows blank filename when closing a file.
+
+Changes:
+Scrolls to Current Line on Prompt Output.
+
+********************************************************************************************************************************
+
+For Version 3.3.3:
+Bugs Fixed:
+No longer warns on failed encoding (Bug-Report, thanks Jean Luc Damnet)
+PrefsDialog: Documentation:
+    Correct Title for Doc Browse.
+    No longer hides readonly files. (Bug-Report, thanks Dominique Buenzli and Ulf Wostner)
+ShortcutsDialog:  Index error fixed.
+No longer loads commented out add * functions in plugins (Bug-Report, Thanks Franz Steinhausler)
+alphabetized shortcuts list.
+
+********************************************************************************************************************************
+
+For Version 3.3.2:
+Bugs Fixed:
+Shortcuts Dialog now handles plugin with no shortcuts correctly.
+Load Plugins From Index menu now only shows unloaded indexes (Bug-Report, Thanks Franz Steinhausler)
+Cleaned up ToolBar/Pop Up Menu dialog code.
+Shortcut Dialogs now only show plugin if the plugin has added functions (Bug-Report, Thanks Franz Steinhausler)
+In Prompt, Shortcuts did not handle direction keys correctly.  (With help via bug-report, Thanks Franz Steinhausler)
+Nasty Close Error Fixed (Bug-Report, Thanks Franz Steinhausler))
+ClassBrowser browse error when there is no text.
+Mac SashWindow Display Error (Document, Prompt, ClassBrowser
+    did not display properly).  (Huge Thanks to the Dogged Testing of Dominique Buenzli)
+Now uses AssignImageList, instead of SetImageList in Bookmarks Dialog.
+classbrowser: No longer highlights text on activate
+removed unused drSash class.
+RE error in Find now protected against.
+RE Find Next now wraps with a warning.
+Sourcebrowser now None instead of 0 by default.
+PluginDialog now sorts plugins/indexes alphabetically (Bug-Report, Thanks Franz Steinhausler)
+Find Dialog now has an empty string as the first entry in history to aid selection.
+First Tab, Last Tab now work correctly  (With help via bug-report with fix, Thanks Franz Steinhausler).
+
+Changes:
+Speed Optimization in drText for Find (Thanks Franz Steinhausler)
+    (also added to drPrompt).
+Added Tab Menu (Bug-Report/Feature Request, Franz Steinhausler)
+Updated Tab Pop Up Menu.
+Now uses icons in classbrowser.
+Uses regular expressions to parse for classbrowser, now much faster.
+ClassBrowser has been renamed sourcebrowser.
+SourceBrowser also checks for import statements.
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.3.1:
+Bugs Fixed:
+Shortcuts Dialog:
+    Reset now updates selected shortcut.
+    Properly handles new version of a plugin having extra shortcuts.
+
+Changes:
+Dialogs are now set automatically using SetSizerAndFit,
+    so there is no need for extra code for different platforms.
+
+********************************************************************************************************************************
+
+For Version 3.3.0:
+Bugs Fixed:
+Now, if a keycode is not recognized for stc, it is run through drpython
+    instead of through the stc. (Bug-Report, Thanks Franz Steinhausler)
+Statustext only changed (section 1) in one function.
+Check indentation has been rewritten. (*Spelling Update*)
+Fixed error message in classbrowser.
+Fixed Clean Up Indentation.
+Error in SetupToolBar is no longer fatal.
+Shortcuts dialog width 640.
+Removed print statements from Shortcuts Dialog.
+replaced themedefault with icondefault.
+Save on Close Prompt now include quotes, Untitled if filename is empty
+Save on Exit Prompt for each file when closing. (Bug-Report, thanks Franz Steinhausler)
+Start/End of Document dialog now shows find text. (Bug-Report, thanks Franz Steinhausler)
+Alphabetized Help.
+Find Next/Previous now wraps with a warning.
+Added note on Shell Commands to documentation.
+
+Changes:
+Reworked the Preferences Dialog
+Reworked the StyleDialog:
+    Now two dialogs: drStyleDialog for Document and Prompt (multiple),
+    drSimpleStyleDialog for other styles (single).
+StatusBar no longer displays menu help strings,
+    also displays insert/overtype, indentation, divided into 2 visible sections instead of 3.
+ToolBar:
+    Reworked the ToolBar Dialog.
+    You can now add STC commands, Plugins, and DrScripts to the ToolBar.
+    ToolBar Loading function is now faster, uses a single array isntead of building a dictionary.
+    You can now specify icons for every item on the toolbar.
+Plugins:
+    Added AddPluginToolBarFunction, and AddPluginFunction (which adds all three).
+    You can now write a default Install script that will be automatically called by drpython
+        on plugin install.
+    You can now write an UnInstall method automatically called by drpython on
+        plugin uninstall.
+    Added AddPluginIcon, RemovePluginIcon, to facilitate setting default icons
+        during install/uninstall.
+Removed Find/Replace in Files. (Removed Documentation too).
+Added GetFilename() to drText, returns "Untitled" or filename.
+Updated Documentation: Plugins, ToolBar, StatusBar
+Cleaned up indentation menu.
+Added GetPluginDirectory() to DrFrame.
+Now notes contributors in credits.
+Now shows untitled numbers.
+Changed default current line highlight color, default brace match colors.
+
+********************************************************************************************************************************
+
+For Version 3.2.5:
+Bugs Fixed:
+Drag and Drop variable error (Bug-Report With Fix, Thanks Franz Steinhausler)
+Combobox in Shortcuts/Pop Up Menu dialogs now readonly (Bug-Report With Fix, Thanks Franz Steinhausler)
+Fixed a small bug when initializing plugins (if there was an error with shortcuts).
+Error updating new plugin shortcuts (Bug-Report, Thanks Franz Steinhausler)
+No longer creates empty shortcut files for plugins with no shortcuts.
+Error writing/updating pluging shortcuts (shortcut name error) (Bug-Report, Thanks Franz Steinhausler)
+
+Changes:
+Now keeps user from loading the same plugin twice.
+
+********************************************************************************************************************************
+
+For Version 3.2.4:
+Bugs Fixed:
+Now sets stc shortcuts for all documents. (Bug-Report, Thanks Franz Steinhausler)
+Added <Insert Separator> to standard list in pop up menu dialog.
+    (Bug-Report, Thanks Franz Steinhausler)
+Find All now sorts in ascending order. (Bug-Report, Thanks Franz Steinhausler)
+Cleanup up Drag and Drop code, added already open check. (Bug-Report, Thanks Franz Steinhausler)
+Bug-WorkAround for Assert Error on Linux.
+Toolbar repeated itself. (Bug-Report, Thanks Franz Steinhausler)
+Removed 2 unused constants.
+toolbar dialog:
+    No longer moves items around on add/remove
+    added <Insert Separator> to list.
+Plugin Shortcuts are now properly updated.
+updates STCUseDefault if neccessary on save in Shortcuts Dialog.
+Find Dialog:
+    self.lastpos -> self.findpos
+    Now handles find next, find previous correctly if you move the cursor.
+
+Changes:
+Franz added Configure Plugins, Customize Shortcuts, Pop Up Menu, and Toolbar to
+    Shortcuts and the Pop Up Menu.
+Added above to the toolbar too. (And New Icons for Each).
+Changed the default colors for matched brace.
+
+********************************************************************************************************************************
+
+For Version 3.2.3:
+Bugs Fixed:
+DrPluginDialog error (did not remove shortcuts code from OnBoxClick).
+ShortcutsFile.py error, now UnComment, Toggle View Whitespace can be customized.
+Minor grammatical fix in drpython.py
+Did not load changed stc shortcuts (Bug-Report With Fix, Thanks Franz Steinhausler)
+Toolbar dialog error (Bug-Report, Thanks Franz Steinhausler)
+Shortcuts typo kept del word right from working (Bug-Report, Thanks Franz Steinhausler).
+Closed all open files when overwriting a plugin (Fixed).
+Updated Documentation.
+
+Changes:
+You can now update plugin shortcuts.
+
+********************************************************************************************************************************
+
+For Version 3.2.2:
+Bugs Fixed:
+Removed commented out code in drPopUp.py
+DrPopUpMenu now loads all pop up menu functions
+    for each plugin, even if the plugin is not loaded.
+ShortcutsDialog now resets shortcut panel on list.
+You can now save STC Shortcuts. (Bug-Report, thanks Franz Steinhausler).
+Plugin Dialog: "Edit" Now "Edit Plugin"
+Update:
+    Now updates prompt size.
+    Now updates highlight current line.
+
+Changes:
+You can now set all shortcuts from the shortcuts dialog.
+
+********************************************************************************************************************************
+
+For Version 3.2.1:
+Bugs Fixed:
+Char Right Extend now works.
+ShortcutsFile bugfix (Bug-Report with Fix, Thanks Nathan Jones).
+/bin/env now /usr/bin/env (Bug-Report with Fix, Thanks Ulf Wostner).
+
+********************************************************************************************************************************
+
+For Version 3.2.0:
+Bugs Fixed:
+Still referenced themes for icon file browse.
+Major find next/previous bug fixed.(Bug-Report, Thanks Franz Steinhausler).
+unused import in drPopUpDialog.
+findtext is always highlighted.
+stopped writing version number in shortcuts.
+select none now implemented as home.
+Now handles insert character bug in findtextctrl (Bug-Report, Co-Fix, Thanks Franz Steinhausler).
+Fixed invalid text control in prefs dialog error handling
+    (prompt, doc: txttabwidth -> txtmarginwidth).
+Only changes size if prefs for default size where changed.
+Synchronizes DrScript Shortcut Names on Rename.
+syntax error: AddPluginPopUpMenuFunction
+Fixed Reload bug (when file was modified).
+Find Previous End of Document -> Start of Document.
+Fixed find previous/next bug near start/end of document.
+
+Changes:
+Added "Under Cursor" to Find/Replace Options.
+Save now saves and updates:
+    Preferences, Shortcuts, Toolbar, PopUpMenu
+Shortcuts Dialog:
+    Rewritten, new interface
+    Same basic interface as popup dialog.
+    Shows Key in addition to Keycode.
+Shortcuts:
+    You can now set all STC commands via shortcuts.
+PopUpMenu:
+    You can now add all STC commands to the pop up menu.
+Preferences:
+    Added Highlight Current Line (Code for highlighting submitted by Franz Steinhausler).
+    Removed enable warnings (only used in find/replace in files, where the warning SHOULD exist).
+    Added Caret Width (Bug-Report, Feature Request Franz Steinhausler).
+    Changed default color for brace-no-match
+    Added browse buttons to each item for Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.1.5:
+Bugs Fixed:
+Re Dialog: Now uses re.escape when inserting normal text.
+Side Pane Preference now stored correctly.
+Cut out unused findtext, replacetext, findpos, findflags variables.
+Find Next/Previous:
+    Skipped on Find Previous.
+    Switching from Find Previous to Find Next messed up.
+    Find Previous now finds first instance of find text.
+Shortcuts:
+    No longer says shortcut already taken if shortcut is None. (Bug-Report, Thanks Franz Steinhausler).
+    Now allows you to erase the shortcut for a given function. (Bug-Report, Thanks Franz Steinhausler).
+Scripts:
+    Function Arguments proper in OnLeftUp. (Bug-Report, Thanks Franz Steinhausler).
+    You can now rename script titles. (Bug-Report, Thanks Franz Steinhausler).
+RecentFile List now has consistent folder separators (Bug-Report, Thanks Franz Steinhausler).
+cleaned up OnOpen.
+
+********************************************************************************************************************************
+
+For Version 3.1.4:
+Bugs Fixed:
+Now checks for existance of .pyc file on plugin uninstall.
+python interpreter now launched unbuffered.
+cleaned up python launching code.
+no longer sorts history for Find.
+Find history now lists last item first.
+SetHistory for drFindTextCtrl now automatically clears history if there is any.
+Now removes duplicates when appending to history (reshuffling the item
+    to the top of the list).
+Now checks to see if drpython is being imported before running (Bug-Report With Fix, Thanks Franz Steinhausler).
+    in drpython.py (used my own fix for drpython.pyw).
+(Fixed Franz's name in Changelog For Version 3.1.3)
+Rewrote bits of runcommand, changed arguments to make it more efficient.
+spelling error fixed in plugins.html.
+
+Changes:
+DrFrame.Execute/ExecutePython:
+    Added DrFrame.ExecutePython,
+        which also has an optional command argument.
+    Added optional statustext argument for.
+Added Plugin Note to Credits.
+
+********************************************************************************************************************************
+
+For Version 3.1.3:
+Bugs Fixed:
+Used Try/Except where if/else statement more appropriate
+    in drShortcuts.py (Bug-Report with Fix, Thanks Franz Steinhausler)
+Scrolled Message Dialog now closes on <ESC> by default. (Bug-Report/Feature Request Franz Steinhausler).
+
+Changes:
+Find/Replace:
+    Uses ComboBox instead of Menu for History (Bug-Report/Feature Request Franz Steinhausler).
+    Right Click Menu Accesible from a Button (Bug-Report/Feature Request Franz Steinhausler).
+    Added History to InFiles Dialogs.
+
+********************************************************************************************************************************
+
+For Version 3.1.2:
+Bugs Fixed:
+Plugin Dialog:  Overwrite Index File Bug Fixed.
+Shortcuts Dialog:
+    MultipleChoiceDialog Error fixed.
+    MultipleChoiceDialog size fixed on windows.
+    Tells you the name of the shortcut
+        if the key combination is already being used.
+Context Sensitive AutoIndent:
+    Does not dedent if '\' is the last character on the line.
+PluginDialog:
+    Now checks to see if the shortcut is already taken
+    when adding a new shortcut.
+drScrolledMessageDialog:
+    Now has position, size arguments.
+Cleaned Up Traceback Code.
+
+Changes:
+drScrolledMessageDialog:
+    Now automatically displays a traceback if one occurs.
+Updated documentation.
+
+********************************************************************************************************************************
+
+For Version 3.1.1:
+Bugs Fixed:
+Handles removed DrScript on the PopUpMenu.
+Context Sensitive AutoIndent now uses regular expressions, and
+    properly handles statements such as "return 1"
+
+Changes:
+Context Sensitive AutoIndent now handles "pass", "continue", and "raise".
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.1.0:
+Bugs Fixed:
+Drag And Drop Bug Fixed (Bug-Report, Thanks Franz Steinhausler)
+Documentation now encloses urls in quotes, prepends "file:///"
+    for about, help (Bug-Report plus fix, Thanks Franz Steinhausler)
+Unused variable used for filename in WriteRecentFiles(bug-report, Franz Steinhaulser)
+Old pref hanging around in drGetKeyDialog (bug-report, Franz Steinhausler)
+15 Codefixes in drpython.py, Thanks Franz Steinhalser!
+1 Codefix in drPrompt.py, Thanks Franz Steinhalser
+3 Codefixes in drText.py, Thanks Franz Steinhalser
+OpenFile:
+    uses os.path.abspath to ensure an absolute filepath.
+Bookmarks:
+    Dialog: OnLeftUp, uses correct icons for folders.
+    Dialog: OnLeftUp, correctly handles drop into a folder.
+    Now handles empty folder correctly
+    Dialog: Now allows empty folders, and empty bookmarks to be written.
+    Dialog: Handles user erasing folder character.
+sys was imported twice.
+DrScript:
+    indentation error fixed with example script count.
+    documentation reflects new namespace.
+    documentation shows import statements.
+cleanup up function order in drpython.py, drScriptDialog.py
+Removed Sessions from Documentation.
+PopUp Code cleanup in drPrompt.py, drText.py
+Handles bad itrem on pop up menu.
+Shortcuts: extra keys no longer bound for copy, paste (Bug-Report With Fix, thanks Franz Steinhaulser)
+Added Cut, Copy, Paste, Delete to the Edit Menu (Bug-Report With Fix, thanks Franz Steinhaulser)
+Cleaned up DoBuiltin Code (uses ID instead of string).
+Now uses drFindTextCtrl in Find/Replace In Files.
+Filename in the tab incorrectly labelled as changed on open for plain text files.
+
+Changes:
+Updated Credits.
+Removed Shell Menu.
+Removed Shell Menu from Documentation.
+Removed Chop.
+Removed Chop from Documentation.
+DrScript:
+    New Edit DrScript Menu Dialog
+    You can now organize DrScripts Into Folders
+    You can now add shell commands as DrScripts
+    organized examples into folders.
+alphabetized lists for PopUp Menu/ToolBar dialogs
+optional context sensitive auto indent.
+New Scrolled Message Dialog:
+    <ENTER> closes the dialog.
+    replaced all wx.lib.dialogs.ScrolledMessageDialog with drScrolledMessageDialog.ScrolledMessageDialog.
+Pop Up Menu:
+    No longer removes items currently in pop up menu from program list.
+    You can now add DrScripts to the Pop Up Menu
+    You can now add Plugin Functions to the Pop Up Menu
+    Only adds the plugin to the menu if currently loaded (If you uninstall,
+        it will still show up until you restart).
+    Updated relevant documentation.
+Split "Edit" Menu into "Edit" and "Search" Menus.
+Added Find History to Find/Replace Dialog.
+
+********************************************************************************************************************************
+
+For Version 3.0.8:
+Bugs Fixed:
+EOL problem with Dynamic DrScript (Bug-report, Fix (edited), thanks Franz Steinhausler).
+Changelog, Comments: (francescoa -> Franz Steinhausler)
+Run W/Debugger Leftover bug: Toolbar (Bug-report, thanks Ronald Hollwarth).
+ClassBrowser problem with bad indentation fixed. (Refresh did not work properly
+    self.mixed was not updated.)
+
+Changes:
+Reorganized Credits, categories and alphabetical order.
+
+********************************************************************************************************************************
+
+For Version 3.0.7:
+Bugs Fixed:
+DrSript examples updated to new wx namespace.
+classbrowser sorting bug fixed
+    (bug-report with fix, thanks Franz Steinhausler).
+
+Changes:
+Updated Credits.
+
+********************************************************************************************************************************
+
+For Version 3.0.6:
+Bugs Fixed:
+ClassBrowser Visible By Default now works on file open.
+Cleaned up some find code in OnMenuFind.
+
+Changes:
+Added DrFrame.ShowClassBrowser function (shows classbrowser no matter what).
+
+********************************************************************************************************************************
+
+For Version 3.0.5:
+Bugs Fixed:
+ClassBrowser:
+    Uses eol instead of "\n" for def for classbrowser.
+    got rid of highlighting bug.
+
+Changes:
+ClassBrowser:
+    If folding:  uses EnsureVisible instead of unfolding everything.
+    Only highlights keyword and definition, still searches for arguments.
+    Show ClassBrowser -> Toggle ClassBrowser
+    Added Visible By Default to Preferences.
+    import statement no longer in function.
+Preferences:
+    Visible on startup -> Visible By Default
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 3.0.4:
+Bugs Fixed:
+Class Browser:
+    .ClassBrowser now a member of txtDocument
+        (You can use the classbrowser on multiple files.)
+    Close On Activate now works for panes.
+    Prefs: Changed classbrowserpositon to classbrowser pane.
+
+Changes:
+Removed the class browser dialog.
+
+********************************************************************************************************************************
+
+For Version 3.0.3:
+Bugs Fixed:
+Homedirectory check (and os.mkdir if necessary) (bug-report, thanks Sean McKay).
+(*grammar update for version 3.0.0 changelog*)
+
+********************************************************************************************************************************
+
+For Version 3.0.2:
+Bugs Fixed:
+Handles no plugins directory. (bug-report, thanks Thomas Klinger).
+Handles no "plugins.dat"
+
+Changes:
+Plugins Dialog: Save -> Save Index
+Made plugins docs a bit clearer.
+
+********************************************************************************************************************************
+
+For Version 3.0.1:
+Bugs Fixed:
+Plugins:
+    Properly handles situation where no shortcut exists.
+    Properly determines if a plugin has shortcut support.
+GetKeyDialog:
+    now has a clear button.
+    properly handles empty strings.
+
+********************************************************************************************************************************
+
+For Version 3.0.0:
+Bugs Fixed:
+Bookmarks dialog wxTreeCtrl GetFirstChild Bug Squashed.
+    Uses correct call for correct version of wxPython
+Bookmarks dialog wxTreeCtrl No Bookmarks Bug Squashed.
+    Now defaults to root item when no item is selected if
+    there are no other bookmarks.
+Help Dialog now non-modal (bug-report/feature request, thanks Keith Nash).
+C++/Html Style bug fixed (STC.SetEdgeColour)
+Replace Prompt Dialog has a rpoper frame in windows.
+Class Browser comments bug fixed.
+Speed Optimization/Code cleanup in DrPrefsDialog.
+Removed some superflusous code for word wrap on windows.
+Cleaned up code commented out during cvs changes.
+Fixed some workaround code.
+Fixed bug in OpenRecent.
+Minor optimization in drToolbarDialog.py, drPopUpMenuDialog.py
+Whitespace fix in drPrefsDialog.py
+Properly updates file list OnSaveAs.
+Fixed shortcuts bug in loop.
+removed pyc files from examples/DrScript directory
+Warning on RE compiling for Find/Replace in Files.
+Workaround for Tab Title bug.
+Fixed event type for shortcuts in main frame.
+Line Endings Detected Properly in linux.
+Line Endings Status now updated on set to default.
+If document has mixed indentation, class browser still warns the user,
+    but now displays anyway using the user's default indentation type.
+Class Browser now properly detects indentation (rewritten using regular expressions).
+Class Browser now handles different kinds of line endings.
+Shortcuts Dialog only alerts the user if the same key binding is being used
+    if the key binding not for the currently selected function.
+Toolbar and Menu are now updated from a single function.
+Cursor color bug fixed.
+Removed superfluous logfile code.
+Now refreshes tab siz on Save As.
+Find/Replace/Goto now makes sure folded lines are visible. (bug-report, thanks John Bell)(*grammar update*)
+Tab selection on close now works properly.
+
+Changes:
+Internal Changes:
+    Switched to "wx" namespace.
+    Removed drBoolean.py.
+    Removed "readme.txt"
+    Switched to Bind method for events.
+    all menus are now members of DrFrame.
+    The wx.STC bug work around for control characters has been removed.
+        in wxPython 2.5.1.x, it is no longer needed.
+    The filename is now part of txtDocument.
+    use os.path.split instead of "".find for filename.
+    txtDocumentsArray -> txtDocumentArray
+    txtPromptsArray -> txtPromptArray
+Removed Loggers.
+Removed Startup File and psyco support.
+DrPython is now Only MDI.
+DrPython now uses a Sash Window instead of Sizers.
+Added File drag and drop support (submitted code by Slim Amamou)
+Added two side panes (left and right).
+Class Browser can now be a dialog/ left pane/ right pane.
+Updates Tab filename
+Removed window list.
+Plugins:
+    All plugins listed in <HomeDirectory>/plugins/plugins.dat are loaded.
+    Added Configure Plugins Dialog
+    Support for Index Files, to load groups of plugins.
+    Default directory added to preferences.
+    You can add a plugin to the pop up menu.
+    You can set the shortcut, or let the user set shortcuts
+        via the configure plugins dialog.
+    OnPreferences, OnAbout, OnHelp let the plugin designer
+        write preferences/about/help code, and launch it
+        from DrPython.
+    The user can directly edit plugins.
+View Whitespace now shows end of line characters.
+    This no longer causes the display error it used to in wxPython 2.5.1.x
+Updated Documentation.
+Preferences Dialog:
+    Added a wxChoiceBox for easier navigation.
+    Preferences are now in alphabetical order.
+    Remembers last panel
+Added Side Panes to Preferences.
+Now sets the directory to the directory currently selected on browse
+    in the find/replace in files dialog.
+Default Directories Preferences point to the user's home directory, or to
+    the appropriate directory in examples.
+Find/Replace Dialog:
+    Added Pop Up Menu:  Insert Special Characters, Cut, 
+    Copy, Paste, Delete, Clear Text.
+    Removed Clear Buttons
+    Changed button placement.
+    Options are now persistent.
+        Separate options persist for Find/Replace.
+        Options are reset if Find/Replace Options are changed.
+Added Pop Up menu, Keybindings to Switcheroo Dialog.
+Dynamic DrScript:
+    text is now persistent.
+    dialog is bigger.
+Context Sensitive Find and Complete.
+Help, About Dialogs are now solely launched with the native web browser.
+GetKeyDialog now displays current shortcut for the selected function.
+Removed example files for Themes, preference files.
+Added functions for adding panels to the left or right pane
+    whether or not something else is already there.
+Switcheroo now imported in the function.
+Components Removed, and Reimplemented as plugins:
+    Python Debugger Support
+    Sessions
+    Documentation Bookmarks
+    Themes
+    AutoGotoOnTraceback
+    Insert Traceback
+    Switcheroo
+Autoindent now indents one extra level when following a ':' (Thanks, bug-report/feature request Vincent Foley-Bourgon)
+DrPython now handles multiple file arguments.
+
+********************************************************************************************************************************
+
+For Version 2.4.6:
+Bugs Fixed:
+Spelling error fixed in ChangeLog.
+limodou: saving doc.cstyle.verbatim lost '<' in drPrefsFile.py
+limodou: double &t in View menu
+limodou: when make a new finder, copy the old finder's value to it
+Incorporated patch (thanks John Bell) that makes textctrls larger
+    for window width/height.
+Find and Complete (properly finds current word) (bug-report, thanks limodou).
+Find and Complete is now Case Sensitive.
+Find and Complete now grabs the whole word (bug-report, thanks limodou).
+Huge Open Error With Encoding Fixed. (bug-report, thanks John Bell).
+Find And Complete now uses correct re syntax
+    (bug-report, thanks Chris Wilson, bug-fix, thanks limodou).
+European Keyboard Support Removed (bug-report with diagnostic test, thanks Pawel Dzierzanowski).
+Clean Up Spaces/Tabs now only affects indentation (bug-report, thanks limodou).
+
+Changes:
+limodou: when save a file prompt its filename in saving dialog
+limodou: switch document with copy previous finder to the current
+    drpython:  (persistant find across documents)
+Changed Credits Format
+
+********************************************************************************************************************************
+
+For Version 2.4.5:
+Bugs Fixed:
+(forgot to add the thanks!)
+Put the fixed help.html file in the correct directory.
+limodou: Saving each file's encoding in txtDocument.locale
+You can now resize the find/replace in files prompt dialog.
+Added Chop Beginning/End to ToolBar
+If the user allows for autodetection, updates syntax highlighting OnSaveAs.
+
+Changes:
+limodou: If defaultdirectory is empty, then use the last recent file's dir
+    (drpython: only if no default is set in preferences)
+added pref for european keyboard, skips event when both control and alt are pressed.
+Find and Complete
+Updated Documentation
+
+********************************************************************************************************************************
+
+For Version 2.4.4:
+Bugs Fixed:
+Does not save properly due to bug in encoding code (Erased File!).
+Selection for Indent/Dedent, Coment/Uncomment now works properly (bug-report with fix, thanks Chris Wilson)(*added the thanks*)
+limodou fixed a minor error in help.html regarding the line ending for windows.
+
+********************************************************************************************************************************
+
+For Version 2.4.3:
+Bugs Fixed:
+Encoding (locale) stored in each txtDocument and txtPrompt instance.
+
+Changes:
+You can now select which matches to replace in a file
+    (Double Clicking a match gives you the option of removing that match from
+    the list of matches replaced in the given file.)
+limodou: Added auto detect utf-8 encoding.
+Updated Documentation
+Added Run Shell Command In Prompt to Shell Menu.
+
+********************************************************************************************************************************
+
+For Version 2.4.2:
+Bugs Fixed:
+Fixed error opening file with "<None>" selected as encoding.
+Fixed problems undoing replace in files.
+
+Changes:
+Replace In Files: Added a dialog to show all matches in each file
+
+********************************************************************************************************************************
+
+For Version 2.4.1:
+Bugs Fixed:
+The default for encoding is now "<None>"
+Fixed Shell error with <Current Directory> and <Current File>
+Encoding menu now only sets mode for writing files, and writing to prompt.
+limodou: Unicode can be run in two versions of wxPython(unicode or non-unicode)
+limodou: switch tab when tabbed file is plain text will correctly invoke highlightmenu.Check() function limodou
+drpython:  edited GetText, SetText Functions, renamed, put in alphabetical order.
+Load prefs default encoding fix.
+
+********************************************************************************************************************************
+
+For Version 2.4.0:
+Bugs Fixed:
+Duplicate number for constant in drPrefsDialog.py
+Used Set Control Char Symbol.  DrPython no longer gets tripped up by ascii characters under 32.
+superfluous code removed in updatePreferences()
+DrPython Icon File (.dif) is now DrPython Icon Set (.dis)
+Remove superfluous code in drScriptDialog.py
+Caught possible exception in OnCloseW with windowlist
+Now runs with wxPython 2.5.1.5 (Subject to Implementation Limitations in
+    2.5.1.5:  Check the website for more information)
+"fixed" is now the default font for the prompt in linux.
+Removed superfluous code in drShortcutsFile.py
+Fixed indentation problems with DrScript shortcuts in drShortcuts.py
+DrScript Shortcuts were broken (did not load properly), now fixed.
+Reworked the loop that evaluates keyboard shortcuts in drShortcuts.py
+Updates DrScript Examples when this option is selected in Preferences.
+Properly handles built in shortcuts in Dynamic DrScript Dialog.
+Find In Files now handles already open files correctly when selected.
+Find In Selection now uses the whole document if there is no selection.
+Properly Supports use of spaces for indentation with the class browser,
+    thanks to Chris Wilson for the bug-report.
+Properly saves preferences with wxPython 2.5.1.5
+Handles New Script filename correctly.
+Documentation Bookmarks Menu Fixed (Dialog Launch Error during "Edit Bookmarks").
+limodou:  Fixed reference bug in drToolBar.py
+
+Changes:
+Support for Syntax Highlighting for C/C++, HTML, Plain Text Added.
+    You can save style preferences for each file type.
+Added C/C++ HTML types to wildcard for file dialog.
+Autodetects syntax highlighting by extension (option to turn this off in preferences).
+Shell Menu Added.
+    Runs shell commands in the prompt.
+    You can attach keyboard shortcuts to shell menu items.
+    Added to Prefs
+Added Austin Acton to Credits (Mandrake Packages).
+Unicode/Locale Encoding Support (Thanks to limodou for the submissions)
+    Added to Edit Menu.
+    Encodes text sent to a process from the prompt.
+    Added to Prefs
+Added Chop
+Updated Documentation
+
+********************************************************************************************************************************
+
+For Version 2.3.5:
+Bugs Fixed:
+Updated Credits.
+Fixed an SDI error opening recent files. (Bug report, thanks Ivar Marohombsar).
+Fixed DrScript documentation.
+Updated documentation to reflect drpython.lin changes made in 2.2.0
+
+Changes:
+New Default Font (Lucida) for Document and Prompt on non windows systems.
+
+********************************************************************************************************************************
+
+For Version 2.3.4:
+Bugs Fixed:
+Errors with running programs (bug report, thanks Bo Jangeborg)(*Name Added for 2.3.5*).
+    (inputstream/errorstream errors due to bad indentation).
+Did not open files correctly in SDI mode.
+Now gives txtDocument focus (or txtPrompt if only the prompt is visible) when updating prefs.
+
+********************************************************************************************************************************
+
+For Version 2.3.3:
+Bugs Fixed:
+Dynamic DrScript was broken:  Now fixed.
+Recent Files Bug Fixed (Bug Report, Thanks Stephen Anderson)
+Fixed spacing in drpython.py
+Session:Folding State Bug Fixed (Bug Report, Thanks Stephen Anderson)
+Overrode builtin wxStyledTextControl.SetText for prompt.
+
+Changes:
+Added DrFrame.ShowPrompt()
+    updated Print End Of Line Characters In Prompt DrScript.
+
+********************************************************************************************************************************
+
+For Version 2.3.2:
+Bugs Fixed:
+Removed extra .xvpics directory created by the gimp (smaller download).
+Prefs: with find/replace in files did not properly save prefs.
+Find/Replace in Files only worked if promot on replace was enabled.
+
+Changes:
+Reworked DrScript, made variable names more consistant,
+    vastly simpler.
+Updated Docs
+
+********************************************************************************************************************************
+
+For Version 2.3.1:
+Bugs Fixed:
+Cancel Buton in Find/Replace In Files Dialog closed the entire Program!
+
+********************************************************************************************************************************
+
+For Version 2.3.0:
+Bugs Fixed:
+Dedent did not work properly with mac file format.
+Autotraceback with badfilename caught.
+Removed some superfluous code.
+Now automatically checks for inconsistant line endings in files on open. (Bug Report, Thanks Stephen Anderson)
+Now lets you select any line ending mode when the line endings are mixed.
+Indent/Dedent now support spaces as well as tabs.
+Autobackup now works.
+Now defaults for win/mac line endings work properly. (Bug Report, Thanks Stephen Anderson)
+    Actually two bugs, one in OpenFile, one in drText.  In an abstract sense, it is one bug. So also:
+    (Bug Report With Fix, Thanks Stephen Anderson)
+Typos in drFindReplaceDialog.py variabgle names fixed.
+If there is a parse error finding the filename for autotraceback, DrPython now aborts the traceback.
+Did not behave correctly opening a file in bookmarks in mdi mode.
+Updates Save state status in title properly when switching to and from mdi mode.
+Bug work around with multiple files and prompt is visible status.
+Updated dialog language in pop up menu dialog feedback.
+Properly closes file when there is only one file open in mdi mode.
+Remove startup script now behaves correctly, does not try to close the current file unless
+    that file is the startup script file.
+Now Properly keeps view whitespace setting for each open tab in mdi mode.
+Cleaned up pop up menu dialog code, it was going through an unnecessary loop on update.
+Properly updates arguments array during Set Program Arguments.
+Updated the example scripts for Run in Terminal.
+Minor bug removing "<Separator>" in Pop Up and ToolBar dialogs.
+Changed the way Items are removed from the ToolBar.
+DrScript: Prompt_Text and Prompt_Selection Now work properly.
+Regular Expression Dialog:  Insert Normal Text Now works properly (Backslash bug fixed).
+Made Character -> Character (Single Quoted String) in Prefs (Thanks Ruben Baumann).
+    Made prefs style text a little clearer in general.
+Reset panel now works for general: recent files limit.
+SetupPrefsFile -> SetupPrefsDocument
+DrScript: Fixed Switcheroo in Selection.
+Now decrements the current tab position on close.
+
+Changes:
+Added psyco support to the startup script.
+    Updated Docs
+Moved "File Format" Menu to new "Whitespace" Menu in "Edit", renamed it "Line Endings"
+    Changed prefs to reflect this.
+    Updated Docs
+    Reflects line endings in the status bar.
+Changed Docs, Doc Bookmarks to Reflect wxWindows -> wxWidgets Name Change.
+    Changed Shortcuts, PopUp command lists to reflect this.
+Line Endings now reflected in the status bar.  Mix is used if the file is mixed.
+    Line Endings Menu no longer uses radio menu items.
+Default tabwidth is now 4.
+DrPython now keeps track of all open windows.
+Find In Files Support Added.
+    Double Clicking a File opens the file in DrPython, then performs the find operation on that file.
+Replace in Files Added.  Only Supports RE Operations.  Allows the User to Undo Replace In Files.
+    Allows user to choose whether or not to be prompted on each file.
+    Double Clicking a File opens the file in DrPython, then performs the find operation on that file.
+        If a Replace Operation has taken place, and no undo has occured, then the matched
+            file will perform a find operation on the "Replace With" text.
+Added Customize ToolBar Dialog
+    Changed ToolBar file method.
+    You can now specifiy a defualt Icon ("<Default></Default>") in your icon file/theme.
+Replace In Files/Find In Files added to Pop Up Menu Selection.
+Sessions:
+    Added Quick Save Session
+    Added Load Session
+    Sessions Save: Open Files, And for Each File: Program Arguments, Folding State if folding is enabled.
+    Recent Sessions List
+DrScript:
+    Prompt_Text and Prompt_Selection automatically toggle the prompt visible when used as returns.
+    Added Print End Of Line Characters In Prompt example script.
+    Vastly Simplified DrScripts in General.
+Now Checks to see if a file is already open.
+Default Iconsize is now 24.
+Added Dynamic DrScript:  Run Python Code in the current DrPython process.
+Added Sessions, Replace In Files to Preferences.
+Reworked Shortcuts Code.  Nowadding new shortcuts will be MUCH easier
+    for future versions.
+Updated Documentation for Preferences, Find/Replace in Files, and Sessions
+Added Check Indentation:
+    Checks to see if the current file has indentation, and if so, does it use tabs, spaces, or both?
+    Auto checks indentation when displaying the class browser.
+Updated Documentation for Indentation.
+
+********************************************************************************************************************************
+
+For Version 2.2.9:
+Bugs Fixed:
+Nasty filename error editing startup script.
+DrScript messed up with Document, changed Document to Document_Control.  (Noted in Documentation).
+    Updated DrScripts as neccessary.
+
+********************************************************************************************************************************
+
+For Version 2.2.8:
+Bugs Fixed:
+Fixed a variable bug loading default shortcuts (Thanks Stephen Anderson for the bug report).
+
+********************************************************************************************************************************
+
+For Version  2.2.7:
+Bugs Fixed:
+Removed superfluous code in drpython.py, several dialogs.
+programdirectory and homedirectory now consistent in use of path separators at the end.
+Pop Up Menu works in prompt again.
+Localized Variables in all files.
+Prompt on Replace for Regular Expression Operation has been fixed.
+Prompt on Replace now properly keeps new position even when the user skips a replace operation.
+minor changelog aesthetic fix.
+Replaced txtFile with txtDocument in all files for consistency.
+Selecting the tab with keyboard shortcuts now properly changes tabs.
+
+Changes:
+Updated Documentation
+Speeded Up the Shortcuts Dialog, made the code cleaner.
+Use of wxYield to make dialog opening cleaner.
+
+********************************************************************************************************************************
+
+For Version  2.2.6:
+Bugs Fixed:
+Pop Up Menu Dialog works again.
+
+********************************************************************************************************************************
+
+For Version  2.2.5:
+Bugs Fixed:
+Correct Size for Customize Pop Up Menu Dialog on windows.
+No longer has superfluous slash when editing example scripts.
+Auto Goto For Traceback no longer switched on by default.
+Now updates current directory on save prompt.
+Custom Pop Up Menu now works on all open tabs in MDI mode.
+
+Changes:
+Updated Credits
+Added insert traceback to the "Edit" menu.
+
+********************************************************************************************************************************
+
+For Version  2.2.4:
+Bugs Fixed:
+Now properly sets tab text on Save As in mdi mode.
+Now finds most recent file in autogoto for traceback.
+
+Changes:
+Auto Goto For Traceback now works opens files if they are not currently open.
+    (Only for MDI mode.  In SDI mode, opens files in a new window regardless.)
+(Updated Documentation, Credits)*->This was added in after the fact.  I forgot to add it when I initially released.
+
+********************************************************************************************************************************
+
+For Version 2.2.3:
+Bugs Fixed:
+Load Themes Bug Fixed.  (self -> self.parent when copying old prefs)
+Sets tab title correctly on restore from backup
+classbrowser now correctly adds classes/definitions that span more than one line.
+Does not try to backup a file on save as.  (Will still back up if the save as operation saves the file
+    with the same path/name as before.)
+PromptIsVisible variable now set correctly on Open.
+Fixed bug in toggle prompt when there is no toolbar.
+
+Changes:
+Now keeps focus in Prompt or in Document when switching tabs.
+Added a right click menu to the tabs in mdi mode.
+You can now customize the right-click pop-up menu for DrPython.
+Now reports Line, Column instead of raw position in Replace.
+
+********************************************************************************************************************************
+
+For Version 2.2.2:
+Bugs Fixed:
+Defaults now set for tab traversal.
+MDI mode now checks all currently open tabs to see if any need to be saved on close.
+DrPython no longer empties the undo buffer after each save.
+Now properly adds filename, logfilename to their respective arrays on open when not in a new window.
+Autoupdate for classbrowser now functions correctly.
+
+Changes:
+Move Scripts is now "Rename | Move Scripts".
+    You can now rename scripts.
+Added Close Tabs Menu:
+    Close All Tabs
+    Close All Other Tabs
+
+********************************************************************************************************************************
+
+For Version 2.2.1:
+Bugs Fixed:
+Removed Superfluous Slash when loading Example Scripts.
+Remove Script Now Works Properly When Example Scripts are enabled.
+Now handles an empty shortcuts file.
+Now sets ignore Meta on linux systems as the default for shortcuts.
+
+Changes:
+Autodetect now checks to see if DrPython Version is at least the last version a change was made.
+
+********************************************************************************************************************************
+
+For Version 2.2.0:
+Bugs Fixed:
+Needlessly references GetParent() in drText.py
+Changed "C<e>dric" to "Cedric" to ensure compatibility with python's encoding standard. (In drThemeMenu.py) (*Non Ascii Character removed, drpython 3.10.0*)
+Removed some superfluous code in drpython.py
+Fixed focus bug, bad variable bug:  You can now insert a Regular Expression into the prompt.
+ClassBrowser now automatically refreshes whenever it regains the focus.
+Version number now correct in drpython.py comments.
+OnModified in Prompt now works, set to self rather than parent.
+Added Quotes to strings in the Reporting of the Number of Replace Operations.
+Changed Sizing for Switcheroo Dialog on Windows.
+Made RE dialog clearer, removed status bar.
+Moved Save Title Change to SaveFile, so it is no longer set on an error.
+Reload no longer affects recent file menu, and now correctly sets the save state notification in the title.
+Properly sets the Prefs Dialog prefs viariable after each update.
+Fixed brace matching code in drText.py
+updated dependencies notation in comments in drpython.py
+updated readme.txt
+removed some superfluous code in drScriptMenu.py
+Insert N Repetitions in RE no longer checks for an integer value (you can now type "9,15" for example).
+Autoscroll in prompt removed.
+Now Sets End Of Line Mode correctly for prompt.
+
+Changes:
+Added toolbar to the sizer rather than directly to the frame.  I could then clean up the update prefs code.
+Replaced .GetParent() with .parent in drPrompt.py, drText.py
+Moved Some process Handling Code to drPrompt.py from drpython.py (OnIdle, self.process, self.pid, self.writeposition, self.editposition)
+Added Optional MDI mode to Prefs.
+    MDI mode supports opening multiple files, with a prompt/process for each file.
+Changed menu items which launch dialogs to read "original text" + "..."
+Now keeps track of line number, column in status bar.
+Buttons in dialogs no longer expand when you maximize.
+Reworked interface a wee bit for drShortcutsDialog.
+Changed function call to variable for prompt output pipe, speeding up the prompt a bit.
+Added Save Prompt Output to File.
+drpython.lin now works from any directory.
+Changed DrScript Variables, text-> Document_Text, selection-> Document_Selection, frame-> Frame.
+    Added: Document, Prompt, Prompt_Text, Prompt_Selection, Filename.
+Added traceback to DrScript error dialogs.
+Added Prompt on Replace to Regular Expression Replace.
+Clear Button Now Sets the focus to the corresponding text control.
+Added Find Previous.  (Does not work for Regular Expression Searches.
+Added the ability to enable or disable feedback messages, and warnings to prefs.
+DrPython now optionally backs up your files each time you save.
+Added Restore From Backup to File Menu.
+Added backup files to wildcard.
+Added optional Always prompt on exit to prefs.
+Added GetEndOfLineCharacter() to both drPrompt.py and drText.py for use in DrScript.
+Changed Run In Terminal Example Scripts So they behave like Run in DrPython:
+    You set the arguments, and they remain each time you call run in terminal.
+Created a wxObject calls "DrScript" (attached to "Frame").  You can either include it directly,
+    or via Frame.  The object provides a separate namespace for DrScript variables
+    the user wants to persist for the run of the main program.
+        Added function .VariableExists("variablename") to DrScript.  Returns True if "variablename"
+        is a member of DrScript.
+Added "Load Example Scripts" to Prefs under "DrScript"
+User can now move DrScripts around.
+Added Auto Goto for Traceback in prompt(added to prefs):  If enabled, if a traceback is found when
+    the program exits, DPython automatically scrolls to the last line cited in the traceback
+    (only when running a file)  Currently only works on the current file.
+Switcheroo Default is now Ctrl-Alt-S
+Find Again is now Find Next
+Added Save Prompt Output To File, Restore From Backup, Next Tab, Previous Tab, First Tab, Last Tab,
+    Find Previous, Insert Regular Expression, Set Log File, Insert Logger, Insert String Logger, Insert
+    Arbitrary Arguments Logger, Remove All Loggers, Preferences, Help, Python Docs, WxWindows
+    Docs, Regular Expression Howto to Shortcuts.
+Shortcuts now automatically detects and (if necessary) updates user's shortcuts file.
+
+********************************************************************************************************************************
+
+For Version 2.1.9:
+Bugs Fixed:
+Did not properly load themes.  Thanks Cédric Delfosse.
+Reset Panel now works for printing.
+Preferences Dialog Now Behaves Correctly, and on launch reflects current preferences,
+    and only updates drpython preferences on explicit request.
+Reworked Reset Just This Panel Code, made it cleaner.
+
+Changes:
+Defaults for Find/Replace Changed:  From Cursor no longer default.
+Added Scroll Extra Page to Preferences for Document and Prompt.
+Added Use Tabs Option to Prompt.
+Updated Documentation.
+
+********************************************************************************************************************************
+
+For Version 2.1.8:
+Bugs Fixed:
+Properly saves preference for default option in find/replace dialog: Regular Expression
+
+Changes:
+Added Match: Start/End of document, Word Boundary, and Not Word Boundary to RE Dialog.
+Also added: A Set of Characters, Positive, Negative Lookbehind assertions.
+
+********************************************************************************************************************************
+
+For Version 2.1.7:
+Bugs Fixed:
+Correct Version Number.
+
+Changes:
+Added Or, Group, Positive, Negative Lookahead Assertions to RE Dialog.
+Also added any decimal (not decimal) whitespace (not whitespace) alphanumeric (not alphanumeric).
+Added '|' check to insert normal text.
+
+********************************************************************************************************************************
+
+For Version 2.1.6:
+Bugs Fixed:
+Fixed an absentminded error in Bookmarks.
+
+********************************************************************************************************************************
+
+For Version 2.1.5:
+Bugs Fixed:
+Fixed Remove for DrScript
+Remove, Edit for DrScript and DrLogger now handles an empty list
+No longer says your bookmarks file is messed up when it doesn't exist.
+
+Changes:
+Added Custom Bookmarks to Information Menu.
+
+********************************************************************************************************************************
+
+For Version 2.1.4:
+Bugs Fixed:
+Bookmarks: Drag and Drop Move  Now supports wxArt.
+Classbrowser now works properly if you use spaces instead of tabs
+In Prefs Dialog:  "Margin Width" now reads "Line Number Margin Width" in
+    prompt as well in as document.
+
+Changes:
+Updated Documentation
+Added wxYield() at appropriate points.
+Added Arbitrary Logger
+Added DrLogger Menu, with custom loggers.
+Reworked Logger code.
+Added Ensure Caret Visible, so txtFile scrolls somewhat in the direction of text if it is off the screen.
+
+********************************************************************************************************************************
+
+For Version 2.1.3:
+Bugs Fixed:
+Removed superfluous code in drRegularExpressionDialog.py
+Save/Save As now leave the window title alone if no save occurs.
+Fixed bug with clean up indentation, now works fine.
+
+Changes:
+(Updated Documentation)*->This was added in after the fact.  I forgot to add it when I initially released.
+User can now save blank files.
+Added wxArt to bookmarks dialog.
+Added browse button to documentation preferences for setting the browser.
+Moved Cean Up Indentation to "Edit->Indentation"
+Moved Go To to "View"
+Added some menu separators to "Options", "Information"
+Made the line width code faster in OnOpen
+Only allows "In Selection" if there is selected text.
+Added Busy Cursors to File Open, Line Ending Format, Folding, Clean Up Tabs
+Removed depdendence on win32all on windows, use wxProcess_Kill instead.
+
+********************************************************************************************************************************
+
+For Version 2.1.2:
+Bugs Fixed:
+Now properly sets End Of Line Mode to Default on File Open.
+Fixed bug in insert Regular Expression.
+Flags Set Correctly for Switcheroo.
+Fixed bug in class browser, now handles lines joined with a backslash.
+Fixed autoscoll in prompt so it only autoscrolls once after all output has been piped.
+
+Changes:
+Changed "Help" Menu to "Information" Menu
+Added "View Help With Browser" to "Documentation" in Prefs.
+Added "Reset Panel" to each panel in Prefs.
+    Changed "Reset" to "Reset All"
+Added Clear Buttons to Find/Replace.
+Cleaned up update code in drPrefsDialog.
+Changed "Print" panel to "Printing" panel.
+Added All Find/Replace/Switcheroo options to Preferences
+    User can set defaults.
+(Added Regular Expression HowTo to Information Menu, Preferences)* -> "Custom Item" Removed.  Oops, never actually made this change
+Changed Scrolling/Size for drPrefsDialog
+Redid Switcheroo with sizers
+Switcheroo is no longer modal
+Disabled Find Backwards for Replace Dialog
+Setting use tabs to False in preferences will tell the document to insert spaces instead of tabs
+    when the user hits the tab key.
+Added Indentation Guides to Document/Preferences.  Uses "Normal" for foreground/background. 
+
+********************************************************************************************************************************
+
+For Version 2.1.1:
+Bugs Fixed:
+Proper default for documentation browser on windows.
+Cancel button now works in drRegularExpressionDialog.
+In RE Search:Find Next, start from the end of the last RE, rather than
+    the start of the last RE + 1.
+RE Dialog size set correctly in windows.
+Added Code to Load/Save Regular Expressions.
+
+Changes:
+Added Insert n Repetitions to RE Dialog
+Changed RE Dialog to a wxFrame, changed from a button interface to a menu interface.
+
+********************************************************************************************************************************
+
+For Version 2.1.0:
+Bugs Fixed:
+Printing now prints spaces correctly.
+Default tabwidth for printing and general are now the same (8).
+Printing now prints strings preceded by an ampersand ("&nbsp;", "&lt;", etc) correctly.
+Made "***" lines consistent in Changelog.
+Removed superfluous code in updatePrefs
+Moved import os to the import statements used before setting the home directory.
+Removed some superfluous html in help.html
+Save State Now updates correctly:  Fixed bug in drText.py
+Updating preferences: word wrap (prompt and document) now handles update of line numbers.
+OpenFile now handles update of line numbers if word wrap is in effect.
+Prompt On Replace Code now uses quotes.
+Cleaned up OnGoTo Code.
+Fixed Find Code, now properly increments for find next, sets proper value for initial find.
+Replace now properly keeps track of number of replacements if prompt on replace is in effect.
+
+Changes:
+Now loads Bookmarks Dialog, About, Help,
+    Preferences, Customize Shortcuts, and the ClassBrowser on first use
+    rather than on program load.
+Added Python, WxWindows documentation to preferences, Help.
+Rearranged Help menu a little.
+ToolBar can now be removed during runtime.
+Wordwrap now default for prompt.
+Added Use Styles to Prompt and Document.  Now, you can use styles, use only
+    normal and caret foreground, or not use styling at all.
+Added Loggers: Write Linenumber, and (optionally) a string  to a log file
+    (the current file + ".log" by default) at locations specified by the user.
+Prompt now autoscrolls on output (once output is finished.)
+Prompt On Replace Dialog now stays wherever the user moves it to
+    the next time it pops up during a replace operation.
+Added Regular Expression Support to Find, Replace.
+    Added A Basic Regular Expression Dialog To Find,Replace, Edit Menu.
+Updated Documentation
+
+********************************************************************************************************************************
+
+For Version 2.0.7:
+Bugs Fixed:
+Printing without line numbers now works properly.
+Fixed bug after clear recent file list in DestroyRecentFileList called from OnOpen.
+
+********************************************************************************************************************************
+
+For Version 2.0.6:
+Bugs Fixed:
+Fixed Documentation:
+    help.html: spelling error
+    all html: made "Back To" links work properly.
+Updated Credits, gave credit to Mike Foord for his bug report/feature request
+    and his fix.  (Oops.  He wanted the tabs->spaces change, and noted that
+    the tabsize for cleanup tabs was hard-coded (a bug, fixed in 2.0.3).
+Only Adds DrScript to Customize Shortcuts if there are DrScripts loaded.
+
+Changes:
+Added "Support" to help.html
+
+********************************************************************************************************************************
+
+For Version 2.0.5:
+Bugs Fixed:
+Made sure all Modal Dialogs are destroyed after they are closed.
+Shortcuts can now only be set through the "GetKey" dialog.
+event.Skip() for Shortcuts now works properly.
+Printing works again. (Oops.  Accidentally Commented Out.)
+Changed Zoom Shortcuts to Number Pad.
+Removed Psyco support.
+
+Changes:
+Added Shortcut Support for DrScript
+Updated Documentation
+
+********************************************************************************************************************************
+
+For Version 2.0.4:
+Bugs Fixed:
+Toolbar no longer updates when icon size is changed to 0
+homedirectory code now works in the event of no home directory on windows
+default size and font set during a failed font lookup now apply to the preview box
+fixed no toolbar code in OnClose
+
+Changes:
+Added Startup Script to Options
+Added Psyco support to Startup Script
+margin width now reads: line number margin width in drPreferencesDialog
+Updated Documentation
+
+********************************************************************************************************************************
+
+For Version 2.0.3:
+Bugs Fixed:
+File Dialog now defaults to .py on linux AND windows.
+Replaced parenthesis with quotes in findreplace-dialog "string not found" dialog.
+Fixed Clean Up Tabs Code
+Fixed toolbar/menu update when there is no toolbar.
+Fixed Problem with Find Flags in Find Next.
+Fixed DrScript Documentation:  "#returns" reads better.
+Shift+Tab Now functions as "Backtab" instead of Newline.
+Bad Pathname for programdirectory and bitmapdirectory on windows systems.  Thanks Bjorn Breid.
+Now sets font AND size to default when a bad font is loaded from preferences or a theme.
+
+Changes:
+Add Select All, Select None to the Edit Menu under Select
+Removed compiled/object python filetypes from default wildcard.
+Reworked Clean Up Tabs into Clean Up Indentation, now you can go spaces->tabs or tabs->spaces.
+Added Use Tabs to Preferences
+Autoindent now uses spaces or tabs based on the user's preference
+Updated Documentation
+Changed Default Uncomment shortcut from Ctrl+Shift+']' to Ctrl+']' to better match Comment.
+Customize Shortcuts Checks to See if shortcuts are already being used when using "GetKey"
+Optimized some code in drpython.py, DrText.py, and DrPrinter.py with map, zfill, and expand tabs instead of while loops.
+removed superfluous preferences.dat from main directory.
+
+********************************************************************************************************************************
+
+For Version 2.0.2:
+Bugs Fixed:
+prompt code (OnIdle) slimmed down, now faster.
+font not in fontlist bug fixed.
+reset now resets icon file too
+colors fixed in aqua theme
+fixed html links in help.html
+removed some unneccessary code in drText.py
+In the "Hit a Key" dialog, now leaves customize shortcut text field blank if the user does not select a key
+customize shortcuts now handles all keys.
+event code changed in DrText.py and drPrompt.py to handle all shortcut keys
+default shortcuts now work on windows
+shortcuts documentation updated
+updated comments in example scripts.
+
+********************************************************************************************************************************
+
+For Version 2.0.1:
+Bugs Fixed:
+Tab Width now works for Printing.
+
+********************************************************************************************************************************
+
+For Version 2.0.0:
+Bugs Fixed:
+Autoindent/Newline code reworked.  Now scrolls properly.
+Comment Region used to mess up the line about the selected region.  Fixed.
+Ucomment Region fixed
+Preferences:  Prompt is Visible Behaves
+Scrolling problem fixed in txtFile now fixed for txtPrompt
+License now spelled correctly in comments
+Autoindent now only counts tabs up to first non whitespace character
+Rewrote Code for sizing/showing txtFile and txtPrompt
+Fixed improper reporting of error on when setting default directory
+on toggle prompt, focus now given to txtFile or txtPrompt
+Error check toolbar bitmap loading
+Default directory code fixed
+
+Changes:
+Updated Documentation
+Documentation images now smaller
+Changelog Format Changed
+Preferences File Format Changed to markup language format, Defaults now loaded from code.
+Selection now stored as a single preference
+Code is now more Modular.
+You can now maximize select directory dialogs
+You can now open multiple files at a time
+MenuBar Rearranged
+    Changed Search to Edit
+    Added View Menu
+    Added Change Case
+    Added Indentation
+    Added Zoom
+    Add Undo/Redo
+File names and import statements have been changed for dialogs.
+File Dialog:  Now views all python source file types at once.
+You can set ToolBar size to 0
+You can load custom bitmaps for the ToolBar
+Update no longer closes preferences window
+Cancel button now reads "close"
+Preferences Rearranged
+    Main -> General
+    File -> Document
+Redid Preferences Dialog interface with wxFlexGridSizer
+Added Text Styles to Prompt
+Added Window size to Preferences
+Preferences Dialog is now resizable
+Apply font/size now work on style line number
+You can now set margnin width (linenumbers) for Document and Prompt
+Toggle Whitespace now works on the text control with focus (works on document and prompt)
+wordwrap, whitespace is visible added to preferences for prompt
+Default Shortcuts Changed
+Added a second field to the StatusBar for Program Status
+Icon/ToolBar bitmap format changed to png
+Default colors changed
+Printing Support
+    Print File
+    Print Prompt
+    Print Setup
+    Preferences stores tabwidth, whether or not to use line numbers
+    Print File, Prompt added to ToolBar
+Added DrScript:
+    run custom python scripts from the program menu,
+    optionally takes frame, text, selection as arguments,
+    optionally sets new values for text, selection via return statements
+Added Classbrowser
+    activating an item goes to that item in the document,
+    optionally closes the classbrowser window
+    Unfolds on activate
+Added Bookmarks (you can bookmark either directories or files)
+    Drag and Drop support for moving bookmarks/bookmark folders
+Added Themes
+    Stores style information for Document, Prompt, Classbrowser Dialog, Bookmarks Dialog,
+    and stores the list of icons being used.
+Created a Find/Replace Dialog:
+    supports forwards/backwards, match case, whole words, in selection, from cursor
+    hitting enter now acts the same in linux as in windows
+Added in selection support to switcheroo
+Added support for custom shortcuts
+Added Indent/Dedent Region to menu
+Added Folding support to Document
+    Added foldingstyle to document
+
+********************************************************************************************************************************
+
+For Version 1.1.7:
+Bugs Fixed:
+Removed scrolls to current line when hitting <ENTER>.
+Fixed path problem with finding bitmaps.  Thanks Guillermo Fernandez.
+
+********************************************************************************************************************************
+
+For Version 1.1.6:
+Bugs Fixed:
+View whitespace was broken.  Took away view line-endings.
+Now only adds arguments if they exist.
+
+Changes:
+Scrolls to current line when hitting <ENTER>
+Added Comment, UnComment Out Region.
+
+********************************************************************************************************************************
+
+For Version 1.1.5:
+Bugs Fixed:
+caught exception with os.environ["APPDATA"]
+
+Changes:
+updated documentation
+
+********************************************************************************************************************************
+
+For Version 1.1.4:
+Bugs Fixed:
+(Bug request:  Anonymous)
+If a user does not have a home directory on windows,
+drpython will now try to use the path os.environ["APPDATA"]
+first, then resort it c:\ if nothing is found.
+
+Changes:
+Updated Documentation: OS support.
+
+********************************************************************************************************************************
+
+For Version 1.1.3:
+Bugs Fixed:
+Really nasty infinite loop with replace-all fixed.  Now works fine.
+
+Changes:
+Added North Star Blurb to Help.
+
+********************************************************************************************************************************
+
+For Version 1.1.2:
+Bugs Fixed:
+Did not adjust horizontal scrollbar on modify/open if text length exceeded
+    scroll width.  Horizontal scrollbar now dynamic (with extra padding).
+updatepreferences.py changed the preference file even if the user said no.
+autoindent misbehaved.  It indented automatically when it shouldn't.
+remove all breakpoints did not remove visual indicators of break points if
+    lines were edited between breakpoint creation and removal.
+
+Changes:
+Removed "Make Background Universal",
+    Added "Apply Text Property To All Styles"
+    which allows the font, size, foreground and background of the "Normal" style
+    to be applied to all styles except "Line Number", "Caret Foreground", and "Selection"
+
+********************************************************************************************************************************
+
+For Version 1.1.1:
+Bugs Fixed:
+Did not clear prompt when a program was not running.
+Did not keep current directory with open/save.
+
+Changes:
+
+********************************************************************************************************************************
+
+For Version 1.1.0:
+Bugs Fixed:
+Prompt got ugly when lines were too long - switched to word wrap.
+Out of sync problem has been greatly reduced, practically non-existant.
+    The speed problem came from updating the styled text control.
+    DrPython now uses a much faster method.
+    The result is that the lag has been reduced to almost nothing.
+    DrPython also used to skip output as a result of the lag.
+    This no longer is a problem.
+Replace-all infinite loop fixed.
+Preferences -> Save : wrote caret foreground incorrectly.
+When opening a file, incorrectly reset the status of run buttons.
+Reload button/menu did not work.
+Changed home directory in preferences dialog on open
+Added some code to use the systems root directory when a home directory cannot be found.
+
+Changes:
+Clear Prompt: Feature Request Carsten Eckelmann
+Added Selection Foreground/Background to Preferences
+Added Small Script to update a users preferences file from version 1.0.8 to 1.1.0
+
+********************************************************************************************************************************
+
+For Version 1.0.8:
+Bugs Fixed:
+Replaced rstrip('\n') with rstrip():  Thanks Christof Ecker.
+
+Known Bugs:
+Out of sync while running python prompt alone, or program in interactive mode.
+
+********************************************************************************************************************************
+
+For Version 1.0.7:
+Bugs Fixed:
+Added code to handle no Booleans:  Thanks Christof Ecker.
+Fixed bug with pathnames that include spaces for running a program.
+Fixed bug with single-line files and file format.
+
+Known Bugs:
+Out of sync while running python prompt alone, or program in interactive mode.
+
+********************************************************************************************************************************
+
+For Version 1.0.6:
+Bugs Fixed:
+Removed the linux install check, added a linux-launcher instead.
+Updated Documentation accordingly
+
+Changes:
+Check Save State on Run/Debug: Feature Request Carsten Eckelmann
+
+Known Bugs:
+Out of sync while running python prompt alone, or program in interactive mode.
+
+********************************************************************************************************************************
+
+For Version 1.0.5:
+Bugs Fixed:
+Updated Documentation With Unix/Linux Specific Notes:  Thanks Carsten Ecklemann.
+Added Bash Script to check Unix/Linux install.
+Cut a jpg down to size.
+Fixed Notes pertaining to running python in Documentation and in Program.
+
+Known Bugs:
+Out of sync while running python prompt alone, or program in interactive mode.
+
+********************************************************************************************************************************
+
+For Version 1.0.4:
+Bugs Fixed:
+Fixed error setting program directory:  Thanks to Mark Rees.
+DrPython now properly keeps track of the current directory when opening/saving.
+
+Changes:
+Goto scrolls so the target line is at the top of the screen.
+Scrapped drVerboseDialog for wxScrolledMessageDialog.
+Updated Documentation.
+
+Known Bugs:
+Out of sync while running python prompt alone, or program in interactive mode.
+
+********************************************************************************************************************************
+
+For Version 1.0.3:
+Bugs Fixed:
+Updated Documentation.
+Made changelog format clearer.
+Fixed Does not properly set savestate/undo state on open in new window if file format was changed.
+Fixed savestate/undo state not properly set on normal file open.
+Fixed index error in font style dialog, updated error handling for color strings.
+
+Known Bugs:
+Out of sync while running python prompt alone, or program in interactive mode.
+
+********************************************************************************************************************************
+
+For Version 1.0.2:
+Bugs Fixed:
+Fixed Current directory not set to current open file when running.
+Cleaned up code in drpython.py and drpython.pyw, removed superflous code in drHelp.py
+
+Changes:
+Added line ending code, plus optional checking.
+Added Relevant Help.
+Added F5 Toggles maximization.
+
+Known Bugs:
+Out of sync while running python prompt alone, or program in interactive mode.
+
+********************************************************************************************************************************
+
+For Version 1.0.1:
+Bugs Fixed:
+
+Fixed Does not toggle prompt on icon size change.
+Fixed prompt toggle not properly set in pref, should be based on file rather than current state.
+Fixed Does not apply default directory to save dialog.
+Fixed Home and Page-Up buttons take you past edit position in prompt.
+Fixed Prompt misbehaves on max recent commands.
+Some unused code removed.
+
+Changes:
+Find/Replace now uses selected text as find text, and the old find text hangs around.
+
+Known Bugs:
+Out of sync while running python prompt alone, or program in interactive mode.
+Frequency:  Rare.
+Severity:  Minor, only seems to affect output of python prompt text (sys.ps1).

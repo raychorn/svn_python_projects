@@ -1,0 +1,6 @@
+192.168.15.4 -v -p 22 -u root -w Compaq123 -s "c:\@vm1\Helloworld" -d "/root/@1" -i -k
+
+
+?? Can paramiko be made to use a private key file ?
+
+?? Can pagent be made to use a private key file ?

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" 
+	width="400" height="150" 
+	creationComplete="onInit()">
+	<mx:Script>
+		<![CDATA[
+			import com.HAL.Alert.AlertPopUp;
+            import mx.managers.PopUpManager;
+            
+            private var _callback:Function;
+            
+            [Bindable]
+            private var _parentPath:String = '';
+            
+            public function set callback(callbackFunc:Function):void {
+            	this._callback = callbackFunc;
+            }
+            
+            public function get callback():Function {
+            	return this._callback;
+            }
+            
+            public function set pathName(pathName:String):void {
+            	this._parentPath = pathName;
+            }
+            
+            public function get pathName():String {
+            	return this._parentPath;
+            }
+            
+            private function onInit():void {
+            	this.focusManager.setFocus(this.folderName);
+            }
+            
+            private function processInput():void {
+                PopUpManager.removePopUp(this);
+                if (this._callback is Function) {
+                	try {
+                		var name:String = this._parentPath;
+                		if (name.substr(name.length-1) != File.separator) {
+                			name += File.separator;
+                		}
+                		var pName:String = this.folderName.text.replace(File.separator,'');
+                		name += pName;
+                		this._callback(name);
+                	} catch (err:Error) { }
+                }
+            }
+            
+            private function processCancel():void {
+            	PopUpManager.removePopUp(this);
+            }
+            
+            private function onKeyUpFolderName(event:KeyboardEvent):void {
+            	if (event.charCode == 13) {
+            		this.processInput();
+	//            	AlertPopUp.info('event.charCode=(' + event.charCode + ')','onKeyUpFolderName');
+            	} else if (event.charCode == 27) {
+            		this.processCancel();
+            	}
+            }
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%" borderColor="#0000ff" borderStyle="solid">
+	    <mx:Form>
+	    	<mx:Label text="{this._parentPath}" toolTip="This is the folder within which your new folder will reside."/>
+            <mx:TextInput id="folderName" minWidth="{this.width*.9}" width="100%" toolTip="Enter the name of the new folder you wish to create." keyUp="onKeyUpFolderName(event)"/>
+	    </mx:Form>
+	    <mx:HBox width="100%" horizontalAlign="center"> 
+	        <mx:Button click="processInput();" label="Submit" toolTip="Click this button to create the new folder name."/> 
+	        <mx:Button label="Cancel" click="processCancel()" toolTip="Click this button to cancel the action of creating a new folder."/> 
+	    </mx:HBox> 
+	</mx:VBox>
+</mx:TitleWindow>

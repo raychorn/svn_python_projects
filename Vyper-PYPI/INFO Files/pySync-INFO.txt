@@ -1,0 +1,29 @@
+Metadata-Version: 1.0
+Name: pySync
+Version: 1.0
+Author: Ray C Horn
+Author-email: raychorn at hotmail com
+Maintainer: Ray C Horn
+Maintainer-email: raychorn at hotmail com
+Home-page: http://python2.near-by.info/index.php?option=com_user&view=login
+Download-url: http://python2.near-by.info/index.php?option=com_docman&task=doc_download&gid=20&&Itemid=71
+Summary: pySync is a multi-threaded program that maintains syncronization between two sets of folders or directories.
+License: GPL restricted to non-commercial educational use only.
+Description: See the full description here
+        http://python2.near-by.info
+        
+        Disclaimer: The author of this program makes no warranty as to the suitability
+        of this program for any purpose whatsoever nor is there any warranty to as to
+        whether this program will be able to properly handle your specific needs.
+        
+        (c). Copyright 2007-2008, Ray C Horn (raychorn@hotmail.com) and Hierarchical
+        Applications Limited, Inc., All Rights Reserved.
+        
+        This software package and all contents contained herein may not be used for any
+        commercial purpose whatsoever however it may be used for educational purposes so
+        long as the end-goal or end-product is of a non-commercial purpose and there was
+        never any intent to use this package to generate any income of any kind.
+        
+        You may not redistribute this package without prior written permission from the
+        author.
+Platform: Windows, Python 2.5.2

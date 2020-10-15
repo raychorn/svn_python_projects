@@ -1,0 +1,15 @@
+* Handle Remember Me.
+
+* Handle tracking of the IP address from which a user logged in - suppress logins from more than one IP address at a time.
+
+* Handle unique filter for NewsFlash items.
+
+* Fix the Breadcrumbs when downloading Python Downloads and navigating articles.
+
+* Add more Administrative functions - Sections and Categories, Article management.
+
+* Add voting functions for articles.
+
+DONE! * Add captcha to the Login/Register/Problems forms.
+
+DONE! * Add tiny_mce to the Problem form.

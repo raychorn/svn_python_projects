@@ -1,0 +1,44 @@
+{% if user.is_authenticated %}
+<script>
+var limitSize  = 150;//10.24
+function changePic(){
+    var a =  document.getElementById('id_avatar').value;
+    var b =  document.getElementById('showimg');
+    b.src = a;
+}
+
+function checkImgSize(obj){
+    imgFileSize = Math.round(obj.fileSize/1024*100)/100;
+    if(limitSize<imgFileSize){
+        alert("{% trans 'Images limit ' %}"+limitSize.toString()+"K,{% trans 'current is ' %}"+imgFileSize+"K");
+        var a =  document.getElementById('id_avatar')
+        refreshUploader(a);                                 
+        return false;
+    }
+}
+//empty input type=file value
+function refreshUploader(who)
+{
+    var who2= who.cloneNode(false);
+    who2.onchange= who.onchange;// events are not cloned 
+    who.parentNode.replaceChild(who2,who);
+} 
+
+</script>
+ 
+  <form action="" method="post" enctype="multipart/form-data">
+  
+<table width="400" border="0" cellspacing="0" cellpadding="0">
+  <tr><th><label for="id_filename">{% trans 'Title' %}:</label></th><td><input type="text" name="filename" size="20" value="" maxlength="50" ></td></tr>
+  <tr><th><label for="id_avatar">{% trans 'Select' %}:</label></th><td><input type="file" name="avatar" id="id_avatar" onchange="changePic();" /> <input type="submit" value="{% trans 'Upload' %}" /></td></tr>
+  <tr><td colspan="2">
+    {% trans 'Preview' %}<br/>
+    <img src="" border="1" id="showimg" onload="checkImgSize(this)" />
+    </td></tr>
+  </table>
+</form>
+
+
+{% endif %}
+
+

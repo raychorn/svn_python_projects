@@ -1,0 +1,1 @@
+main.py --dir=c:\ --search=b*.rb

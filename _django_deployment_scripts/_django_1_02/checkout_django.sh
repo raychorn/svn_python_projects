@@ -1,0 +1,1 @@
+svn checkout --non-interactive --username molten_deploy --password 33uGudra https://svn.dyn-o-saur.com:8443/svn/repo1/trunk/python/Django-1.0.2-final

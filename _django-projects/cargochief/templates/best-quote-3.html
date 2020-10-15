@@ -1,0 +1,84 @@
+{% extends 'best-quote-recap.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block dialogs %}
+{% endblock %}
+
+{% block recap %}
+                                    Contact:  John Smith, 650-269-4545, JSmith@abcstrawberry.com<br/>
+                                    RFQ Description: Lucky PO 342598 and PO 3216098<br/>
+                                    Origin Location:  Gilroy, CA 95020, Business with a Dock or Forklift, Driver to assist in loading<br/> 
+                                    Stop 1 in Transit:  Milwaukee, WI 51932, Convention Center/Tradeshow, Driver to Assist in unloading<br/>
+                                    Destination Location:  Menasha, WI 54952, Business with a Dock or Forklift, Driver Not assisting in unloading, ~2,235 miles<br/>
+                                    Ready for Pick Up:  April 17, 2012  10:25<br/> 	
+                                    Bid Window From:  April 15, 2012  10:25    To: April 15, 2011 14:25 (4 hour)<br/>
+{% endblock %}
+
+{% block info %}
+                                    <table width="100%">
+                                        <tr>
+                                            <td>
+                                              <b>Truck Load or Partial Truck Load Details</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            	<table width="100%">
+                                                	<tr>
+                                                    	<td align="left">
+                                                        	<label>Packaging</label>
+                                                        </td>
+                                                    	<td align="left">
+                                                        	<label>Total Weight</label><br/>
+                                                            <small>In Pounds</small>
+                                                        </td>
+                                                    	<td align="left">
+                                                        	<label>Space Needed</label>
+                                                        </td>
+                                                    	<td align="left">
+                                                        	<label>Description of Goods</label>
+                                                        </td>
+                                                    	<td align="left">
+                                                        	<a href="#">Another Item Type</a>
+                                                        </td>
+                                                    </tr>
+                                                	<tr>
+                                                    	<td>
+                                                        	<select id="select_truck_load_or_partial_packaging">
+                                                            	<option></option>
+                                                            </select>
+                                                        </td>
+                                                    	<td>
+                                                        	<input id="truck_load_or_partial_total_weight" max="5"/>
+                                                        </td>
+                                                    	<td>
+                                                        	<select id="select_truck_load_or_partial_space_needed">
+                                                            	<option></option>
+                                                            </select>
+                                                        </td>
+                                                    	<td>
+                                                        	<input id="truck_load_or_partial_descr" max="15"/>
+                                                        </td>
+                                                    	<td>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+{% endblock %}
+
+{% block page-back %}<input id="btn_back" value="Back" class="main_button" onclick="window.location.href = '/best-quote-2.html';"/>&nbsp;&nbsp;&nbsp;&nbsp;{% endblock %}
+
+{% block continue-button-label %}Continue{% endblock %}
+{% block page-href %}/best-quote-4.html{% endblock %}

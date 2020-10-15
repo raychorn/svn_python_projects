@@ -1,0 +1,3 @@
+--input="Z:\Ray Horn\Wells Fargo\2009\0285742623" --clear
+
+--input="F:\@Vyper Logix Corp\@Projects\python\pyPDF Samples" --clear

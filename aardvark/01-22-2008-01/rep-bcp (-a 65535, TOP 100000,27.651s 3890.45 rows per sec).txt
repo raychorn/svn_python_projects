@@ -1,0 +1,279 @@
+
+Z:\python projects\aardvark>if . == . goto Bigtest 
+
+Z:\python projects\aardvark>python -m cProfile -s cumulative bcp.py --output=Bigtest.txt 
+
+Starting copy...
+1000 rows successfully bulk-copied to host-file. Total received: 1000
+1000 rows successfully bulk-copied to host-file. Total received: 2000
+1000 rows successfully bulk-copied to host-file. Total received: 3000
+1000 rows successfully bulk-copied to host-file. Total received: 4000
+1000 rows successfully bulk-copied to host-file. Total received: 5000
+1000 rows successfully bulk-copied to host-file. Total received: 6000
+1000 rows successfully bulk-copied to host-file. Total received: 7000
+1000 rows successfully bulk-copied to host-file. Total received: 8000
+1000 rows successfully bulk-copied to host-file. Total received: 9000
+1000 rows successfully bulk-copied to host-file. Total received: 10000
+1000 rows successfully bulk-copied to host-file. Total received: 11000
+1000 rows successfully bulk-copied to host-file. Total received: 12000
+1000 rows successfully bulk-copied to host-file. Total received: 13000
+1000 rows successfully bulk-copied to host-file. Total received: 14000
+1000 rows successfully bulk-copied to host-file. Total received: 15000
+1000 rows successfully bulk-copied to host-file. Total received: 16000
+1000 rows successfully bulk-copied to host-file. Total received: 17000
+1000 rows successfully bulk-copied to host-file. Total received: 18000
+1000 rows successfully bulk-copied to host-file. Total received: 19000
+1000 rows successfully bulk-copied to host-file. Total received: 20000
+1000 rows successfully bulk-copied to host-file. Total received: 21000
+1000 rows successfully bulk-copied to host-file. Total received: 22000
+1000 rows successfully bulk-copied to host-file. Total received: 23000
+1000 rows successfully bulk-copied to host-file. Total received: 24000
+1000 rows successfully bulk-copied to host-file. Total received: 25000
+1000 rows successfully bulk-copied to host-file. Total received: 26000
+1000 rows successfully bulk-copied to host-file. Total received: 27000
+1000 rows successfully bulk-copied to host-file. Total received: 28000
+1000 rows successfully bulk-copied to host-file. Total received: 29000
+1000 rows successfully bulk-copied to host-file. Total received: 30000
+1000 rows successfully bulk-copied to host-file. Total received: 31000
+1000 rows successfully bulk-copied to host-file. Total received: 32000
+1000 rows successfully bulk-copied to host-file. Total received: 33000
+1000 rows successfully bulk-copied to host-file. Total received: 34000
+1000 rows successfully bulk-copied to host-file. Total received: 35000
+1000 rows successfully bulk-copied to host-file. Total received: 36000
+1000 rows successfully bulk-copied to host-file. Total received: 37000
+1000 rows successfully bulk-copied to host-file. Total received: 38000
+1000 rows successfully bulk-copied to host-file. Total received: 39000
+1000 rows successfully bulk-copied to host-file. Total received: 40000
+1000 rows successfully bulk-copied to host-file. Total received: 41000
+1000 rows successfully bulk-copied to host-file. Total received: 42000
+1000 rows successfully bulk-copied to host-file. Total received: 43000
+1000 rows successfully bulk-copied to host-file. Total received: 44000
+1000 rows successfully bulk-copied to host-file. Total received: 45000
+1000 rows successfully bulk-copied to host-file. Total received: 46000
+1000 rows successfully bulk-copied to host-file. Total received: 47000
+1000 rows successfully bulk-copied to host-file. Total received: 48000
+1000 rows successfully bulk-copied to host-file. Total received: 49000
+1000 rows successfully bulk-copied to host-file. Total received: 50000
+1000 rows successfully bulk-copied to host-file. Total received: 51000
+1000 rows successfully bulk-copied to host-file. Total received: 52000
+1000 rows successfully bulk-copied to host-file. Total received: 53000
+1000 rows successfully bulk-copied to host-file. Total received: 54000
+1000 rows successfully bulk-copied to host-file. Total received: 55000
+1000 rows successfully bulk-copied to host-file. Total received: 56000
+1000 rows successfully bulk-copied to host-file. Total received: 57000
+1000 rows successfully bulk-copied to host-file. Total received: 58000
+1000 rows successfully bulk-copied to host-file. Total received: 59000
+1000 rows successfully bulk-copied to host-file. Total received: 60000
+1000 rows successfully bulk-copied to host-file. Total received: 61000
+1000 rows successfully bulk-copied to host-file. Total received: 62000
+1000 rows successfully bulk-copied to host-file. Total received: 63000
+1000 rows successfully bulk-copied to host-file. Total received: 64000
+1000 rows successfully bulk-copied to host-file. Total received: 65000
+1000 rows successfully bulk-copied to host-file. Total received: 66000
+1000 rows successfully bulk-copied to host-file. Total received: 67000
+1000 rows successfully bulk-copied to host-file. Total received: 68000
+1000 rows successfully bulk-copied to host-file. Total received: 69000
+1000 rows successfully bulk-copied to host-file. Total received: 70000
+1000 rows successfully bulk-copied to host-file. Total received: 71000
+1000 rows successfully bulk-copied to host-file. Total received: 72000
+1000 rows successfully bulk-copied to host-file. Total received: 73000
+1000 rows successfully bulk-copied to host-file. Total received: 74000
+1000 rows successfully bulk-copied to host-file. Total received: 75000
+1000 rows successfully bulk-copied to host-file. Total received: 76000
+1000 rows successfully bulk-copied to host-file. Total received: 77000
+1000 rows successfully bulk-copied to host-file. Total received: 78000
+1000 rows successfully bulk-copied to host-file. Total received: 79000
+1000 rows successfully bulk-copied to host-file. Total received: 80000
+1000 rows successfully bulk-copied to host-file. Total received: 81000
+1000 rows successfully bulk-copied to host-file. Total received: 82000
+1000 rows successfully bulk-copied to host-file. Total received: 83000
+1000 rows successfully bulk-copied to host-file. Total received: 84000
+1000 rows successfully bulk-copied to host-file. Total received: 85000
+1000 rows successfully bulk-copied to host-file. Total received: 86000
+1000 rows successfully bulk-copied to host-file. Total received: 87000
+1000 rows successfully bulk-copied to host-file. Total received: 88000
+1000 rows successfully bulk-copied to host-file. Total received: 89000
+1000 rows successfully bulk-copied to host-file. Total received: 90000
+1000 rows successfully bulk-copied to host-file. Total received: 91000
+1000 rows successfully bulk-copied to host-file. Total received: 92000
+1000 rows successfully bulk-copied to host-file. Total received: 93000
+1000 rows successfully bulk-copied to host-file. Total received: 94000
+1000 rows successfully bulk-copied to host-file. Total received: 95000
+1000 rows successfully bulk-copied to host-file. Total received: 96000
+1000 rows successfully bulk-copied to host-file. Total received: 97000
+1000 rows successfully bulk-copied to host-file. Total received: 98000
+1000 rows successfully bulk-copied to host-file. Total received: 99000
+1000 rows successfully bulk-copied to host-file. Total received: 100000
+
+100000 rows copied.
+Network packet size (bytes): 32576
+Clock Time (ms.) Total     : 25704  Average : (3890.45 rows per sec.)
+bcp "SELECT TOP 100000 qr.computerid, COALESCE(qr.resultstext, lqr.resultstext) as resultstext, qr.sequence, qr.id as property_id, qr.siteid FROM countrywide.dbo.questionresults as qr with (nolock) INNER JOIN countrywide.dbo.computers with (nolock) ON (computers.computerid = qr.computerid AND computers.isdeleted = 0) LEFT OUTER JOIN countrywide.dbo.longquestionresults as lqr with (nolock) on (qr.siteid = lqr.siteid AND qr.id = lqr.id AND qr.computerid = lqr.computerid) WHERE qr.siteid = 1 AND qr.IsFailure = 0 AND ((qr.siteid = 1 AND qr.id = 27)OR (qr.siteid = 1 AND qr.id = 96514)OR (qr.siteid = 1 AND qr.id = 18)OR (qr.siteid = 1 AND qr.id = 82118)OR (qr.siteid = 1 AND qr.id = 31)OR (qr.siteid = 1 AND qr.id = 17)) AND qr.resultscount < 700" queryout Bigtest.txt -f datafmt.xml -a 65535 -Saracari -Usa -Pfooblah
+
+
+(main) :: len(glob)=(169377248)
+(main) :: len(toks)=(100001)
+
+(main) :: t=(['1152563503', 'Win2000 5.0.2195\n', '00000000B760DE98', '18', '1'])
+
+(main) :: t=(['1152563503', 'BWW00009260M87X.CFC.ten-net.net\n', '00000000B760DEA1', '27', '1'])
+
+(main) :: t=(['1152563503', '10.104.154.17\n', '00000000B760DEA5', '31', '1'])
+
+(main) :: t=(['1147349435', 'BW2C3550KHAJ\n', '00000000B760E370', '17', '1'])
+
+(main) :: t=([''])
+
+
+
+(ioTimeAnalysis) :: Category: "parseFile" = (0.578000068665)
+(ioTimeAnalysis) :: Category: "doBCP" = (25.8440001011)
+(ioTimeAnalysis) :: Category: "readFile" = (0.609999895096)
+(main) :: Time spent doing I/O :: (27.0320000648)
+         1756 function calls (1694 primitive calls) in 27.651 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.005    0.005   27.651   27.651 {execfile}
+        1    0.007    0.007   27.646   27.646 bcp.py:1(<module>)
+        1   27.628   27.628   27.628   27.628 bcp.py:196(main)
+        1    0.002    0.002    0.006    0.006 decimal.py:116(<module>)
+        1    0.002    0.002    0.005    0.005 __init__.py:16(<module>)
+        1    0.000    0.000    0.002    0.002 re.py:178(compile)
+        1    0.000    0.000    0.002    0.002 re.py:219(_compile)
+        1    0.000    0.000    0.002    0.002 sre_compile.py:501(compile)
+        1    0.001    0.001    0.002    0.002 support.py:9(<module>)
+        1    0.001    0.001    0.001    0.001 threading.py:1(<module>)
+        1    0.001    0.001    0.001    0.001 kdictproxy.py:5(<module>)
+        1    0.001    0.001    0.001    0.001 core.py:18(<module>)
+        1    0.000    0.000    0.001    0.001 sre_parse.py:669(parse)
+      9/1    0.000    0.000    0.001    0.001 sre_parse.py:307(_parse_sub)
+     10/1    0.000    0.000    0.001    0.001 sre_parse.py:385(_parse)
+        1    0.000    0.000    0.001    0.001 sre_compile.py:486(_code)
+     19/1    0.000    0.000    0.001    0.001 sre_compile.py:38(_compile)
+      133    0.000    0.000    0.000    0.000 sre_parse.py:207(get)
+        1    0.000    0.000    0.000    0.000 __init__.py:70(search_function)
+      158    0.000    0.000    0.000    0.000 sre_parse.py:188(__next)
+        1    0.000    0.000    0.000    0.000 {__import__}
+        4    0.000    0.000    0.000    0.000 decimal.py:2254(__init__)
+        7    0.000    0.000    0.000    0.000 sre_compile.py:184(_compile_charset)
+        3    0.000    0.000    0.000    0.000 decimal.py:516(__new__)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:367(_compile_info)
+        7    0.000    0.000    0.000    0.000 sre_compile.py:213(_optimize_charset)
+     27/9    0.000    0.000    0.000    0.000 sre_parse.py:146(getwidth)
+  429/420    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 decimal.py:2234(Context)
+       61    0.000    0.000    0.000    0.000 sre_parse.py:201(match)
+        1    0.000    0.000    0.000    0.000 string_escape.py:7(<module>)
+      190    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        3    0.000    0.000    0.000    0.000 decimal.py:438(getcontext)
+        1    0.000    0.000    0.000    0.000 threading.py:633(__init__)
+       15    0.000    0.000    0.000    0.000 copy.py:65(copy)
+       35    0.000    0.000    0.000    0.000 sre_parse.py:132(__len__)
+       75    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        5    0.000    0.000    0.000    0.000 sre_parse.py:222(isname)
+        7    0.000    0.000    0.000    0.000 support.py:175(patch)
+        1    0.000    0.000    0.000    0.000 threading.py:392(__init__)
+       65    0.000    0.000    0.000    0.000 sre_parse.py:136(__getitem__)
+       58    0.000    0.000    0.000    0.000 {setattr}
+       19    0.000    0.000    0.000    0.000 sre_parse.py:144(append)
+        8    0.000    0.000    0.000    0.000 sre_compile.py:360(_simple)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:78(opengroup)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:140(__getslice__)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+       40    0.000    0.000    0.000    0.000 {min}
+        6    0.000    0.000    0.000    0.000 sre_parse.py:263(_escape)
+       31    0.000    0.000    0.000    0.000 {isinstance}
+        1    0.000    0.000    0.000    0.000 threading.py:152(Condition)
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+       19    0.000    0.000    0.000    0.000 sre_parse.py:96(__init__)
+       37    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        5    0.000    0.000    0.000    0.000 decimal.py:2983(_isinfinity)
+        5    0.000    0.000    0.000    0.000 {psyco._psyco.locals}
+        8    0.000    0.000    0.000    0.000 sre_parse.py:89(closegroup)
+        2    0.000    0.000    0.000    0.000 decimal.py:2991(_isnan)
+        1    0.000    0.000    0.000    0.000 decimal.py:507(Decimal)
+       29    0.000    0.000    0.000    0.000 {getattr}
+        1    0.000    0.000    0.000    0.000 core.py:121(bind)
+        1    0.000    0.000    0.000    0.000 threading.py:157(__init__)
+        1    0.000    0.000    0.000    0.000 string_escape.py:29(getregentry)
+        1    0.000    0.000    0.000    0.000 traceback.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:48(normalize_encoding)
+       22    0.000    0.000    0.000    0.000 sre_parse.py:216(isident)
+        8    0.000    0.000    0.000    0.000 {psyco._psyco.globals}
+        1    0.000    0.000    0.000    0.000 sre_parse.py:184(__init__)
+        2    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.proxycode}
+        1    0.000    0.000    0.000    0.000 codecs.py:77(__new__)
+        8    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        5    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        8    0.000    0.000    0.000    0.000 sre_parse.py:138(__setitem__)
+        4    0.000    0.000    0.000    0.000 {hasattr}
+       14    0.000    0.000    0.000    0.000 copy.py:100(_copy_immutable)
+        7    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+       12    0.000    0.000    0.000    0.000 sre_compile.py:24(_identityfunction)
+        2    0.000    0.000    0.000    0.000 sre_compile.py:480(isstring)
+        1    0.000    0.000    0.000    0.000 threading.py:383(Thread)
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        1    0.000    0.000    0.000    0.000 {map}
+        4    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E1E7E18}
+        7    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        8    0.000    0.000    0.000    0.000 {ord}
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dictproxy' objects}
+        1    0.000    0.000    0.000    0.000 {_sre.compile}
+        4    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:155(_Condition)
+        2    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:79(_RLock)
+        1    0.000    0.000    0.000    0.000 copy.py:112(_copy_with_constructor)
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 threading.py:333(_Event)
+        2    0.000    0.000    0.000    0.000 threading.py:39(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:271(_Semaphore)
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 decimal.py:2869(_WorkRep)
+        1    0.000    0.000    0.000    0.000 threading.py:602(_Timer)
+        2    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 string_escape.py:10(Codec)
+        1    0.000    0.000    0.000    0.000 decimal.py:154(DecimalException)
+        1    0.000    0.000    0.000    0.000 threading.py:37(_Verbose)
+        1    0.000    0.000    0.000    0.000 support.py:107(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 decimal.py:2219(_ContextManager)
+        1    0.000    0.000    0.000    0.000 support.py:79(PythonFrame)
+        1    0.000    0.000    0.000    0.000 threading.py:671(_DummyThread)
+        1    0.000    0.000    0.000    0.000 decimal.py:225(DivisionByZero)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:318(_BoundedSemaphore)
+        2    0.000    0.000    0.000    0.000 {max}
+        1    0.000    0.000    0.000    0.000 string_escape.py:19(IncrementalDecoder)
+        1    0.000    0.000    0.000    0.000 string_escape.py:15(IncrementalEncoder)
+        1    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method acquire}
+        1    0.000    0.000    0.000    0.000 decimal.py:254(DivisionUndefined)
+        1    0.000    0.000    0.000    0.000 threading.py:631(_MainThread)
+        1    0.000    0.000    0.000    0.000 decimal.py:280(InvalidContext)
+        1    0.000    0.000    0.000    0.000 decimal.py:190(InvalidOperation)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 decimal.py:214(ConversionSyntax)
+        1    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 decimal.py:319(Overflow)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 string_escape.py:23(StreamWriter)
+        1    0.000    0.000    0.000    0.000 decimal.py:243(DivisionImpossible)
+        1    0.000    0.000    0.000    0.000 decimal.py:307(Subnormal)
+        1    0.000    0.000    0.000    0.000 decimal.py:357(Underflow)
+        1    0.000    0.000    0.000    0.000 decimal.py:177(Clamped)
+        1    0.000    0.000    0.000    0.000 support.py:75(Frame)
+        1    0.000    0.000    0.000    0.000 decimal.py:267(Inexact)
+        1    0.000    0.000    0.000    0.000 string_escape.py:26(StreamReader)
+        1    0.000    0.000    0.000    0.000 decimal.py:294(Rounded)
+        1    0.000    0.000    0.000    0.000 {thread.get_ident}
+        1    0.000    0.000    0.000    0.000 threading.py:640(_set_daemon)
+        1    0.000    0.000    0.000    0.000 {built-in method release}
+
+
+
+Z:\python projects\aardvark>goto end 

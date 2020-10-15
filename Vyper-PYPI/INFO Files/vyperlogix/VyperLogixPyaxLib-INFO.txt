@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: VyperLogixPyaxLib
+Version: 0.9.7.2
+Author: Vyper Logix Corp.
+Author-email: support@vyperlogix.com
+Maintainer: Vyper Logix Corp.
+Maintainer-email: support@vyperlogix.com
+Home-page: http://www.vyperlogix.com
+Download-url: http://code.google.com/p/sfpyax/
+Summary: VyperLogixPyaxLib is based on a LaunchPad package known as "pyax".
+License: Same License as the orginal "pyax" which is GNU GPL v2 as stated at https://launchpad.net/pyax
+Description: 
+VyperLogixPyaxLib is based on a LaunchPad package known as "pyax".
+        
+See also: http://www.pypi.info and http://www.vyperlogix.com
+        
+Disclaimer: Vyper Logix Corp. makes no warranty as to the suitability
+of this program for any purpose whatsoever nor is there any warranty to as to
+whether this program will be able to properly handle your specific needs.
+        
+(c). Copyright 2008-2009, Vyper Logix Corp, All Rights Reserved.
+        
+Be advised this Package is being distributed without source source code will be made available to all who make such a request in writing.
+        
+This Package is being maintained by an automated system known as Vyper-PYPI(tm) whose purpose it is
+to ensure this Package remains in the PYPI with the proper information as defined by the Publisher
+of this package.

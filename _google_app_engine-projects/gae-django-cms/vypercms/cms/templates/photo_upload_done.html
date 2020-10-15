@@ -1,0 +1,7 @@
+<script type="text/javascript">
+parent.document.getElementById("src").value = "{{ photo_url }}" ;
+parent.document.getElementById("alt").value = "{{ photo_title }}" ;
+parent.document.getElementById("title").value = "{{ photo_title }}" ;
+parent.ImageDialog.showPreviewImage("{{ photo_url }}");
+</script>
+<ul><li>{% trans 'Images Upload Success' %}</li></ul>

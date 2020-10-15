@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<resource>
+  <object class="wxFrame" name="myFrame">
+    <object class="wxStaticBitmap" name="myBitmap">
+      <bitmap>assets\logo\close-up-python-sticking_~gwil21015.jpg</bitmap>
+    </object>
+  </object>
+</resource>

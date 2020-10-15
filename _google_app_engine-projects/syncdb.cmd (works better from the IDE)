@@ -1,0 +1,14 @@
+@echo off
+
+if %1. == . goto error
+
+cd %1
+..\do_django manage.py syncdb
+cd ..
+goto done
+
+:error
+echo Nothing to do !
+
+:done
+

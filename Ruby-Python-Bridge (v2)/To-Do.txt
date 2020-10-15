@@ -1,0 +1,15 @@
+Production Ready Requirements: (Not sure how much of this is minimally required.)
+ 
+**1). Install ReverseProxy (coded - needs testing and validation)
+**2). Hammer on it with 50 Ruby Clients to make sure it works with this load. (coded and requires some tweaking).
+3). Migrate code to a Linux test server - using Ubuntu 8.04 and CentOS 5.1.
+4). Test Bridge when hosted off the machine where Ruby runs - production seems to use two servers which means we would have to deploy 2 instances of the Bridge or the Bridge needs to be deployed to a central server of its own.
+5). Install a Security Layer for Encryption using Blowfish - this requires digging up some Ruby code and some testing.
+6). Package Python code into a mode that does not require Python to be installed where the Bridge runs - I can do this for Windows now however I would need to spend some time making sure this can be done for Linux deployments also.
+ 
+Nice to have(s):
+ 
+1). Integrate into ActiveSalesForce and throw out the older code that doesn't work.
+ 
+
+** Indicates those items that are done and shipped.

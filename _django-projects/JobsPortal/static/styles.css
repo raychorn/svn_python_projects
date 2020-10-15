@@ -1,0 +1,169 @@
+/* CSS file */
+/* CSS file */
+@font-face {
+	src: url("assets/fonts/NeoSansIntel.ttf");
+	fontFamily: NeoSansIntel;
+}
+
+@font-face {
+	src: url("assets/fonts/NeoSansIntel-Medium.ttf");
+	fontFamily: NeoSansIntelMedium;
+}
+
+@font-face {
+	src: url("assets/fonts/GARA.TTF");
+	fontFamily: Garamond;
+}
+
+@font-face {
+	src: url("assets/fonts/NeoSansIntel-Light.ttf");
+	fontFamily: NeoSansIntelLight;
+}
+
+global
+{
+ 	color: blue; 
+	fontFamily: Arial;
+	fontSize: 12px;
+ 	themeColor: red; 
+}
+
+/*
+//------------------------------
+//  Application
+//------------------------------
+*/
+Application
+{
+	backgroundColor: white;
+	paddingTop: 0px;
+	paddingLeft: 0px;
+	paddingRight: 0px;
+	paddingBottom: 0px; 
+}
+
+Panel {
+	borderStyle: inset;
+	borderColor: #ff0000;
+	borderAlpha: 1;
+	borderThicknessLeft: 5;
+	borderThicknessTop: 0;
+	borderThicknessBottom: 5;
+	borderThicknessRight: 5;
+	cornerRadius: 0;
+	headerHeight: 20;
+	backgroundAlpha: 1;
+	highlightAlphas: 0, 0;
+	headerColors: #ff0000, #ff0000;
+	footerColors: #ff0000, #ff0000;
+	backgroundColor: #ffffff;
+	shadowDistance: 4;
+	shadowDirection: right;
+	dropShadowColor: #ff0000;
+	titleStyleName: "mypanelTitle";
+}
+
+.mypanelTitle {
+	letterSpacing: 1;
+	color: #ffffff;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+}
+
+MenuBar {
+	cornerRadius: 0;
+	letterSpacing: 0;
+	backgroundAlpha: 1;
+	backgroundColor: #990100;
+	borderColor: #ff0000;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1;
+	fillColors: #ff2300, #ff1a00;
+	rollOverColor: #990100;
+	selectionColor: #000000;
+	color: #ffffff;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff;
+	themeColor: #ff0000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textIndent: 0;
+}
+
+.MenuItemRenderer {
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+
+.SmartMenuBar {
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+
+.SmartMenuBarRollOver {
+	backgroundColor: #9a0101;
+	color: #ffffff;
+}
+
+.SmartMenuBarFlyout {
+	backgroundColor: #000000;
+	color: #ffffff;
+	fontWeight: bold;
+}
+
+.SmartMenuBarFlyoutRollOver {
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+
+.SmartMenuBarItemLabel {
+	fontWeight: bold;
+	paddingLeft: 8;
+	paddingTop: 8;
+	backgroundColor: #cc1a00;
+	color: #ffffff;
+}
+
+SmartMenuBarTest {
+	cornerRadius: 0;
+	letterSpacing: 0;
+	backgroundAlpha: 1;
+	backgroundColor: #990100;
+	borderColor: #ff0000;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1;
+	fillColors: #ff2300, #ff1a00;
+	rollOverColor: #990100;
+	selectionColor: #000000;
+	color: #ffffff;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff;
+	themeColor: #ff0000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textIndent: 0;
+}
+
+SmartMenuItemRenderer {
+	cornerRadius: 0;
+	letterSpacing: 0;
+	backgroundAlpha: 1;
+	backgroundColor: #990100;
+	borderColor: #ff0000;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1;
+	fillColors: #ff2300, #ff1a00;
+	rollOverColor: #990100;
+	selectionColor: #000000;
+	color: #ffffff;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff;
+	themeColor: #ff0000;
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	textIndent: 0;
+}

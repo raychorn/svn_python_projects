@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+var requiredMajorVersion = 10;
+var requiredMinorVersion = 2;
+var requiredRevision = 0;
+var hasReqestedVersion = false;
+include_js("{{ insecure_endpoint }}/static/swfObject.js",
+	function () {
+	    var s=generate_flash_content(10,0,0,'{{ insecure_endpoint }}/static/air-badge/badge.swf?serial={{ serial }}&appname={{ air_id }}&appurl=http://downloads.vyperlogix.com/{{ air_id }}/personal/{{ air_id }}.air&airversion=2.5&imageurl={{ insecure_endpoint }}/static/air-badge/sample-{{ air_id }}.jpg',217,180,'vlcLogo','vlcLogo','white','{{ insecure_endpoint }}','','21st Century Innovation with Vyper Logix Corp.'); 
+	    var c = document.getElementById('flashContainer');
+	    if (c) {
+			c.innerHTML = s;
+		}
+	}
+);
+</script>
+{% endblock %}
+
+{% block css %}
+<style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	color: #000000;
+}
+.twoColElsLtHdr #_container_ { 
+	width: 990;
+	background: #FFFFFF;
+	margin: 0 0; 
+	border: 0px solid #000000;
+	text-align: left;
+} 
+.twoColElsLtHdr #header { 
+	background: #FFFFFF; 
+	padding: 0 10px;
+} 
+.twoColElsLtHdr #header h1 {
+	margin: 0;
+	padding: 10px 0;
+}
+.twoColElsLtHdr #sidebar1 {
+	float: left; 
+	width: 12em; 
+	background: #FFFFFF;
+	padding: 15px 0;
+}
+.twoColElsLtHdr #sidebar1 h3, .twoColElsLtHdr #sidebar1 p {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.twoColElsLtHdr #mainContent {
+	margin: 0 1.5em 0 13em; 
+} 
+.twoColElsLtHdr #footer { 
+	padding: 0 10px;
+	background:#FFFFFF;
+} 
+.twoColElsLtHdr #footer p {
+	margin: 0;
+	padding: 10px 0;
+}
+.fltrt {
+	float: right;
+	margin-left: 8px;
+}
+.fltlft {
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat {
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+--> 
+</style>
+<!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColElsLtHdr #sidebar1 { padding-top: 30px; }
+.twoColElsLtHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+</style>
+<![endif]-->
+{% endblock %}
+
+{% block include-css %}'/static/css.css'{% endblock %}
+
+{% block container %}
+<div class="twoColElsLtHdr">
+<div id="_container_">
+  <div id="header">
+	<p>{{ message }}</p>
+  </div> <!-- end #header -->
+  <div id="sidebar1">
+    <h3></h3>
+    <p></p>
+  </div> <!-- end #sidebar1 -->
+  <div id="mainContent">
+	</div> <!-- end #mainContent -->
+	<br class="clearfloat" />
+   <div id="footer">
+		<div id="messages">
+		<p align="left">{{ message2 }}</p>
+		</div>
+		
+		<div id="warning3" class="align-center">
+		</div>
+  </div> <!-- end #footer -->
+</div> <!-- end #container -->
+</div>
+
+<noscript>
+<table id="messageTable">
+<tr>
+	<td>
+	</td>
+</tr>
+</table>
+</noscript>
+
+{% endblock %}
+

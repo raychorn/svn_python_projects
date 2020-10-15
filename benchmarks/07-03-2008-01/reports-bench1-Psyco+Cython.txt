@@ -1,0 +1,99 @@
+(ioTimeAnalysis) :: Category: "splitter" = (2.05199980736)
+(ioTimeAnalysis) :: Category: "replacer" = (0.253000020981)
+(ioTimeAnalysis) :: Category: "str_replacer2a" = (9968.58999991)
+(ioTimeAnalysis) :: Category: "str_replacer" = (6.5)
+(ioTimeAnalysis) :: Category: "str_replacer2" = (2.45300006866)
+(ioTimeAnalysis) :: Category: "regexer" = (173.970000029)
+(ioTimeAnalysis) :: Category: "regexer2" = (155.506000042)
+
+
+Time spent doing I/O :: (10309.3239999)
+         79200288 function calls (79200265 primitive calls) in 10310.204 CPU seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.007    0.007 10310.204 10310.204 {execfile}
+        1    0.210    0.210 10310.197 10310.197 benchmark1.py:1(<module>)
+        1 10042.806 10042.806 10309.915 10309.915 benchmark1.py:38(main)
+ 19799802   74.581    0.000  267.104    0.000 re.py:273(filter)
+ 19799802  128.088    0.000  192.523    0.000 sre_parse.py:784(expand_template)
+ 19799802   32.509    0.000   32.509    0.000 {built-in method group}
+ 19799803   31.938    0.000   31.938    0.000 {method 'join' of 'str' objects}
+        1    0.016    0.016    0.049    0.049 _psyco.py:3(importPsycoIfPossible)
+        1    0.003    0.003    0.033    0.033 __init__.py:16(<module>)
+        1    0.001    0.001    0.015    0.015 support.py:9(<module>)
+        1    0.014    0.014    0.014    0.014 kdictproxy.py:5(<module>)
+        1    0.014    0.014    0.014    0.014 core.py:18(<module>)
+        1    0.007    0.007    0.007    0.007 ioTimeAnalysis.py:1(<module>)
+      198    0.003    0.000    0.005    0.000 re.py:267(_subx)
+      198    0.002    0.000    0.003    0.000 re.py:247(_compile_repl)
+        1    0.003    0.003    0.003    0.003 _psyco.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 re.py:186(compile)
+        1    0.000    0.000    0.002    0.002 re.py:227(_compile)
+        1    0.000    0.000    0.002    0.002 sre_compile.py:501(compile)
+        1    0.000    0.000    0.001    0.001 sre_compile.py:486(_code)
+        1    0.000    0.000    0.001    0.001 sre_parse.py:669(parse)
+      3/1    0.000    0.000    0.001    0.001 sre_parse.py:307(_parse_sub)
+      4/1    0.000    0.000    0.001    0.001 sre_parse.py:385(_parse)
+      8/1    0.001    0.000    0.001    0.001 sre_compile.py:38(_compile)
+      199    0.001    0.000    0.001    0.000 {method 'get' of 'dict' objects}
+       32    0.000    0.000    0.000    0.000 sre_parse.py:188(__next)
+       22    0.000    0.000    0.000    0.000 sre_parse.py:207(get)
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:40(ioTimeAnalysisReport)
+        1    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:26(ioTimeAnalysis)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:367(_compile_info)
+  104/100    0.000    0.000    0.000    0.000 {len}
+     11/4    0.000    0.000    0.000    0.000 sre_parse.py:146(getwidth)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:697(parse_template)
+       24    0.000    0.000    0.000    0.000 sre_parse.py:201(match)
+        7    0.000    0.000    0.000    0.000 support.py:170(patch)
+       65    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       15    0.000    0.000    0.000    0.000 sre_parse.py:132(__len__)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+       27    0.000    0.000    0.000    0.000 sre_parse.py:136(__getitem__)
+        2    0.000    0.000    0.000    0.000 sre_parse.py:184(__init__)
+        8    0.000    0.000    0.000    0.000 sre_parse.py:144(append)
+        7    0.000    0.000    0.000    0.000 ioTimeAnalysis.py:7(initIOTime)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 new.py:5(<module>)
+       18    0.000    0.000    0.000    0.000 {min}
+        3    0.000    0.000    0.000    0.000 sre_compile.py:360(_simple)
+       14    0.000    0.000    0.000    0.000 {setattr}
+       14    0.000    0.000    0.000    0.000 {getattr}
+        3    0.000    0.000    0.000    0.000 sre_parse.py:140(__getslice__)
+        1    0.000    0.000    0.000    0.000 core.py:117(bind)
+        7    0.000    0.000    0.000    0.000 {isinstance}
+        8    0.000    0.000    0.000    0.000 sre_parse.py:96(__init__)
+        2    0.000    0.000    0.000    0.000 sre_compile.py:480(isstring)
+        1    0.000    0.000    0.000    0.000 os.py:442(has_key)
+        3    0.000    0.000    0.000    0.000 __init__.py:1(<module>)
+        5    0.000    0.000    0.000    0.000 {_sre.getlower}
+        7    0.000    0.000    0.000    0.000 {method 'has_key' of 'dict' objects}
+        5    0.000    0.000    0.000    0.000 __future__.py:71(__init__)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:78(opengroup)
+        5    0.000    0.000    0.000    0.000 {ord}
+        1    0.000    0.000    0.000    0.000 sre_parse.py:89(closegroup)
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.proxycode}
+        1    0.000    0.000    0.000    0.000 sre_parse.py:704(literal)
+        3    0.000    0.000    0.000    0.000 sre_parse.py:138(__setitem__)
+        1    0.000    0.000    0.000    0.000 str_replace2.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 str_replace.py:1(<module>)
+        2    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 kdictproxy.py:108(compactdictproxy)
+        1    0.000    0.000    0.000    0.000 {_sre.compile}
+        2    0.000    0.000    0.000    0.000 {max}
+        1    0.000    0.000    0.000    0.000 __future__.py:70(_Feature)
+        1    0.000    0.000    0.000    0.000 support.py:15(warning)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 support.py:74(PythonFrame)
+        1    0.000    0.000    0.000    0.000 support.py:102(PsycoFrame)
+        1    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 support.py:70(Frame)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {chr}
+
+

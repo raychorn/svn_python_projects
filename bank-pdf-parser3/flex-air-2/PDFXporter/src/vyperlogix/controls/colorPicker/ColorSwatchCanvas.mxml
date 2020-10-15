@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel 
+	xmlns:mx="http://www.adobe.com/2006/mxml" title="Color Chooser" 
+	width="100%" height="100%" 
+	backgroundColor="white" 
+	styleName="PreferencesPanel"
+	xmlns:controls="vyperlogix.controls.colorPicker.*">
+	<mx:Script>
+		<![CDATA[
+			import vyperlogix.menu.builder.MenuController;
+			
+			private function onClick_btn_randomColor(event:MouseEvent):void {
+				var aColor:String = MenuController.getRandomColor();
+				MenuController.applyNewColorScheme(aColor);
+				MenuController.mySO.data.color = aColor;
+				MenuController.mySO.flush();
+				this.btn_dismiss.dispatchEvent(new MouseEvent(MouseEvent.CLICK))
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%">
+		<controls:ColorChooser id="colors" width="100%" height="100%"/>
+		<mx:Spacer height="150"/>
+		<mx:HBox width="100%">
+			<mx:Label text="Choose the color from the swatch above to continue."/>
+		</mx:HBox>
+		<mx:HBox width="100%">
+			<mx:Button id="btn_randomColor" label="Random Color" click="onClick_btn_randomColor(event)"/>
+			<mx:Spacer width="10%"/>
+			<mx:Button id="btn_dismiss" label="Cancel"/>
+		</mx:HBox>
+	</mx:VBox>
+</mx:Panel>

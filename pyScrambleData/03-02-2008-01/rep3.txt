@@ -1,0 +1,33 @@
+         72659627 function calls in 63.629 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   63.629   63.629 <string>:1(<module>)
+        1    0.000    0.000   63.629   63.629 ScrambleData.py:5(scrambleFile)
+        2    0.000    0.000    0.000    0.000 ntpath.py:252(exists)
+        1   34.647   34.647   63.628   63.628 scramblelib.py:5(scrambleFile)
+ 24219871    9.602    0.000    9.602    0.000 {chr}
+        1    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+ 24219871   12.788    0.000   12.788    0.000 {method 'write' of 'file' objects}
+        1    0.001    0.001    0.001    0.001 {nt.remove}
+        2    0.000    0.000    0.000    0.000 {nt.stat}
+        2    0.000    0.000    0.000    0.000 {open}
+ 24219871    6.590    0.000    6.590    0.000 {ord}
+
+
+Note: Reduced the code that previously performed the following:
+
+x = ord(ch)
+y = x | 0x80
+z = chr(y)
+
+with the following:
+
+z = chr(ord(ch) | 0x80)
+
+
+For a savings of 65.402 - 63.629 = 1.773 or 2.71%

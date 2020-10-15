@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block include-css %}'http://media.vyperlogix.com/gae/vyperlogixcorp/static/main.css'{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+{% if IS_NOT_LOGGED_IN %}
+{% endif %}
+            <table id="container" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="top" id="main_content_holder">
+                	<div id="main_background"></div>
+                    <div id="main_background2">&nbsp;Stay tuned for the DjangoCloud&trade; - Coming Soon !!!</div>
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+{% endif %}
+                <div style="clear: both">&nbsp;</div>
+                <div style="clear: both; padding-top:0px;">&nbsp;</div>
+                        <div id="shipment_container">              
+                                        
+                                <div class="bubble">
+                                <div class="rectangle"><div class="header_font">Vyper Logix does Django !!!</div></div>
+                                <div class="triangle-l">&nbsp;</div>
+                                
+                                <div class="info">
+                                
+                              <div class="right_box"><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/images/django-image-outline(333x151).jpg" width="200" /></div>
+                                	<UL id="django_cloud_info" style="list-style-type:square">
+                                        <li ><NOBR>Instant Access !!!</NOBR></li>
+                                        <li ><NOBR>Instant Database !!!</NOBR></li>
+                                        <li ><NOBR>Instant Web-App !!!</NOBR></li>
+                                        <li ><NOBR>Completely functional Application Framework.</NOBR></li>
+                                        <li ><NOBR>Just one mouse click away...</NOBR></li>
+                                        <li ><NOBR>Get Your Django Application Online now !!!</NOBR></li>
+                                        <li ><NOBR>Reduce your development cost !!!</NOBR></li>
+                                        <li ><NOBR>Reduce your time to market !!!</NOBR></li>
+                                	</UL>
+                                <br/>
+                                
+{% if IS_NOT_HIDDEN %}
+                                <center>
+                                    <a href="#" class="anchor_learn_more" onclick="not_yet_implemented();">Learn More</a>
+                                </center>
+{% endif %}
+                                
+                                </div>
+                                </div>
+                        </div> 
+                         <div id="django_rightside_container">              
+                                        
+                                <div class="bubble">
+                                <div class="rectangle"><div class="header_font">Need Programming Support?</div></div>
+                                <div class="triangle-l"></div>
+                                
+                                <div class="infoRight">
+                                	<table width="100%" style="display:inline; padding-left: -20px;">
+                                		<tr>
+                                			<td align="left">
+			                                	<UL id="django_programmer_info" style="list-style-type:square">
+			                                        <li><NOBR>Django Guru's !!!</NOBR></li>
+			                                        <li>Let our Django Gurus do all the work for you !!!</li>
+			                                        <li>We build and maintain your databases !!!</li>
+			                                        <li>We deploy all your Django Apps !!!</li>
+			                                        <li>Instant Scalability !!!</li>
+			                                        <li>Instant Revenues !!!</li>
+			                                	</UL>
+                                			</td>
+                                			<td align="right"><img src="http://media.vyperlogix.com/gae/vyperlogixcorp/static/images/programmer(206x240).jpg" width="190"/></td>
+                                		</tr>
+                                	</table>
+{% if IS_NOT_HIDDEN %}
+                                <div class="left_box_right">
+	                              <input name="" type="button" value="FIND A LOAD" class="main_button_orange" onclick="not_yet_implemented();"/>
+                                </div>
+{% endif %}
+                                
+{% if IS_NOT_HIDDEN %}
+                                <center>
+                                    <a href="#" class="anchor_learn_more" onclick="not_yet_implemented();">Learn More</a>
+                                </center>
+{% endif %}
+                                
+                                </div>
+                                </div>
+                        </div>
+                </td>
+              </tr>
+            </table>   
+{% endblock %}

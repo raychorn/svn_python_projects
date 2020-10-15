@@ -1,0 +1,9 @@
+REM syncdb (sqlite3)
+
+--ds -s
+
+REM run web service (sqlite3)
+
+--ds 127.0.0.1:9999
+
+

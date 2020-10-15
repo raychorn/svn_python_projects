@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: Tue Oct 14 10:40:13 2003\n"
+"PO-Revision-Date: 2003-10-14 10:40+0200\n"
+"Last-Translator: <mimisando@virgilio.it>\n"
+"Language-Team: ITALIANO <it@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: dirssync/dirssync/dirssync.py:53
+msgid "Remote"
+msgstr "Remoto"
+
+#: dirssync/dirssync/dirssync.py:54
+msgid "Local"
+msgstr "Locale"
+
+#: dirssync/dirssync/dirssync.py:69
+msgid "comparison based on the modification time"
+msgstr "confronto basato su data e ora dell'ultima modifica"
+
+#: dirssync/dirssync/dirssync.py:73
+msgid "comparison based on the file size (bigger is the winner)"
+msgstr "confronto basato sulla dimensione del file (il più grande vince)"
+
+#: dirssync/dirssync/dirssync.py:108
+msgid "Exploring local "
+msgstr "Esplorazione in locale "
+
+#: dirssync/dirssync/dirssync.py:119
+msgid "Exploring remote "
+msgstr "Esplorazione in remoto "
+
+#: dirssync/dirssync/dirssync.py:151
+msgid "to "
+msgstr "su "
+
+#: dirssync/dirssync/dirssync.py:151 dirssync/dirssync/dirssync.py:155
+#: dirssync/dirssync/dirssync.py:180 dirssync/dirssync/dirssync.py:182
+#: dirssync/dirssync/dirssync.py:414 dirssync/dirssync/dirssync.py:501
+#: dirssync/dirssync/dirssync.py:505 dirssync/dirssync/dirssync.py:506
+#: dirssync/dirssync/dirssync.py:535 dirssync/dirssync/dirssync.py:538
+msgid "yes"
+msgstr "si"
+
+#: dirssync/dirssync/dirssync.py:155 dirssync/dirssync/dirssync.py:180
+#: dirssync/dirssync/dirssync.py:182
+msgid "on "
+msgstr "su"
+
+#: dirssync/dirssync/dirssync.py:190
+msgid "Analysis is starting..."
+msgstr "Inizio analisi..."
+
+#: dirssync/dirssync/dirssync.py:209
+msgid "....with..."
+msgstr "....con...."
+
+#: dirssync/dirssync/dirssync.py:209
+msgid "Comparing "
+msgstr "Confronto "
+
+#: dirssync/dirssync/dirssync.py:218
+msgid "Analysis ended."
+msgstr "Analisi terminata."
+
+#: dirssync/dirssync/dirssync.py:239 dirssync/dirssync/dirssync.py:261
+msgid "Inputs"
+msgstr "Inputs"
+
+#: dirssync/dirssync/dirssync.py:240 dirssync/dirssync/dirssync.py:262
+msgid "Transfer list"
+msgstr "Lista trasferimenti"
+
+#: dirssync/dirssync/dirssync.py:241 dirssync/dirssync/dirssync.py:263
+msgid "Log"
+msgstr "Log"
+
+#: dirssync/dirssync/dirssync.py:264
+msgid "Options"
+msgstr "Opzioni"
+
+#: dirssync/dirssync/dirssync.py:270
+msgid "&New\t"
+msgstr "&Nuovo\t"
+
+#: dirssync/dirssync/dirssync.py:271
+msgid "&Open\t"
+msgstr "&Apri\t"
+
+#: dirssync/dirssync/dirssync.py:272
+msgid "&Save\t"
+msgstr "&Salva\t"
+
+#: dirssync/dirssync/dirssync.py:274
+msgid "&Exit\t"
+msgstr "&Esci\t"
+
+#: dirssync/dirssync/dirssync.py:276
+msgid "&File"
+msgstr "&File"
+
+#: dirssync/dirssync/dirssync.py:279
+msgid "&About\t"
+msgstr "&Informazioni su Directories Synchronizer\t"
+
+#: dirssync/dirssync/dirssync.py:280
+msgid "&Help"
+msgstr "&Aiuto"
+
+#: dirssync/dirssync/dirssync.py:303 dirssync/dirssync/dirssync.py:317
+msgid "Choose a file"
+msgstr "Scegliere un file"
+
+#: dirssync/dirssync/dirssync.py:329
+msgid ""
+"Directories Synchronizer is a Python and wxPython application\n"
+"written by Vincent Delft under the GPL license!\n"
+"\n"
+"Feel free to propose your ideas to improve this application\n"
+"by visiting http://DirsSync.sourceforge.net\n"
+"or\n"
+"by sending a Email at vincent_delft@yahoo.com"
+msgstr ""
+"Directories Synchronizer è un'applicazione Python e wxPython\n"
+"scritta da Vincent Delft sotto licenza GPL!\n"
+"\n"
+"Sentiti libero di proporre le tue idee per migliorare questa applicazione\n"
+"visitando http://DirsSync.sourceforge.net\n"
+"o\n"
+"inviando una Email all'indirizzo vincent_delft@yahoo.com"
+
+#: dirssync/dirssync/dirssync.py:330
+msgid "About Directories Synchronizer"
+msgstr "Informazioni su Directories Synchronizer"
+
+#: dirssync/dirssync/dirssync.py:362
+msgid "SYNCHRONISE"
+msgstr "SINCRONIZZA"
+
+#: dirssync/dirssync/dirssync.py:371
+msgid "Transfer"
+msgstr "Trasfeisci"
+
+#: dirssync/dirssync/dirssync.py:372
+msgid "Action"
+msgstr "Azione"
+
+#: dirssync/dirssync/dirssync.py:373
+msgid "From"
+msgstr "Da"
+
+#: dirssync/dirssync/dirssync.py:374
+msgid "To"
+msgstr "A"
+
+#: dirssync/dirssync/dirssync.py:419
+msgid "... failed"
+msgstr "... fallito"
+
+#: dirssync/dirssync/dirssync.py:424
+msgid "Transfer is starting ...."
+msgstr "Inizio trasferimento ...."
+
+#: dirssync/dirssync/dirssync.py:439
+msgid "Transfer ended!"
+msgstr "Transferimento terminato!"
+
+#: dirssync/dirssync/dirssync.py:502 dirssync/dirssync/dirssync.py:503
+msgid "no"
+msgstr "no"
+
+#: dirssync/dirssync/dirssync.py:516 dirssync/dirssync/dirssync.py:750
+msgid "DeleteSelectedItem"
+msgstr "EliminaVoceSelezionata"
+
+#: dirssync/dirssync/dirssync.py:517
+msgid "Delete All Items"
+msgstr "Elimina Tutte Le Voci"
+
+#: dirssync/dirssync/dirssync.py:518
+msgid "Print All"
+msgstr "Stampa Tutto"
+
+#: dirssync/dirssync/dirssync.py:570
+msgid "Clear"
+msgstr "Svuota"
+
+#: dirssync/dirssync/dirssync.py:609 dirssync/dirssync/dirssync.py:611
+msgid "Browse"
+msgstr "Sfoglia"
+
+#: dirssync/dirssync/dirssync.py:615
+msgid "Add Job"
+msgstr "Aggiungi Confronto"
+
+#: dirssync/dirssync/dirssync.py:634
+msgid "Next>>"
+msgstr "Avanti>>"
+
+#: dirssync/dirssync/dirssync.py:674
+msgid "Input Error"
+msgstr "Errore di Input"
+
+#: dirssync/dirssync/dirssync.py:674
+msgid "You must specify the local and remote directory."
+msgstr "E' necessario specificare le directory Locale e Remota."
+
+#: dirssync/dirssync/dirssync.py:712
+msgid "Input mismatch"
+msgstr "Input non corretto"
+
+#: dirssync/dirssync/dirssync.py:712
+msgid "The local and remote directories are the same"
+msgstr "Le directory locale e remota coincidono"
+
+#: dirssync/dirssync/dirssync.py:789
+msgid "File Comparison method :"
+msgstr "Metodo di confronto tra files:"
+
+#: dirssync/dirssync/dirssync.py:797
+msgid "Local to Remote"
+msgstr "Da Locale a Remoto"
+
+#: dirssync/dirssync/dirssync.py:805
+msgid "Remote to Local"
+msgstr "Da Remoto a Locale"
+
+#: dirssync/dirssync/dirssync.py:811
+msgid "Delete (one-way)"
+msgstr "Elimina (un solo senso)"
+
+#: dirssync/dirssync/dirssync.py:840
+msgid "Directories Synchronizer"
+msgstr "Directories Synchronizer"
+

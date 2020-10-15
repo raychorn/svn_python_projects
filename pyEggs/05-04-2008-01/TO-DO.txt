@@ -1,0 +1,37 @@
+* Remove all .pyo files at the end of the compile.
+* Make the sources.txt file match the actual contents of the eggs.
+
+Bugs:
+
+--enc=simple cause --nosource to fail - this is not a bug, however it is a feature.
+
+GUI:
+
+* Registration Database that lives at nearbyin
+* Command Line requires some undocumented options --username and --password
+OR
+* Just a UUID as the first parameter that comes from the Registration database.
+
+Encrypted PYC Files are not difficult however the problem now is to execute the imported PYC after it has been decrypted.
+
+Might be easier than was thought... See also: http://www.python.org/dev/peps/pep-0302/
+
+def load_module(self, fullname):
+            ispkg, code = self._get_code(fullname)
+            mod = sys.modules.setdefault(fullname, imp.new_module(fullname))
+            mod.__file__ = "<%s>" % self.__class__.__name__
+            mod.__loader__ = self
+            if ispkg:
+                mod.__path__ = []
+            exec code in mod.__dict__
+            return mod
+
+See also: (Example of executing a code object)
+
+    from types import CodeType as code
+    exec code(0, 5, 8, 0, "hello moshe", (), (), (), "", "", 0, "") 
+
+Simply load the code object as a "code" object via the typical .pyc loader then "exec" the code object.
+
+Samples of importing a code object from a .pyc file is here:
+"Z:\@myFiles\@Python\!.pyc Research (Encrypted PYC Files)\The structure of .pyc files"

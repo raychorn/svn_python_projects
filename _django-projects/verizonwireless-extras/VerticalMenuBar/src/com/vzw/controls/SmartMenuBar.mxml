@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" styleName="SmartMenuBar"
+	creationComplete="onCreationComplete()" 
+	>
+	<mx:Script>
+		<![CDATA[
+			import com.vzw.menu.builder.MenuController;
+			import vyperlogix.utils.StringUtils;
+			import vyperlogix.utils.ObjectUtils;
+			import mx.utils.ObjectProxy;
+			import vyperlogix.utils.XMLUtils;
+			import vyperlogix.controls.Alert.AlertPopUp;
+			import mx.controls.TextArea;
+			import mx.collections.XMLListCollection;
+			import mx.collections.ArrayCollection;
+			
+			public const ALIGN_RIGHT:String = 'right';
+			public const ALIGN_LEFT:String = 'left';
+			
+			private var _dataProvider:ArrayCollection = new ArrayCollection();
+
+			private var _labelField:String = 'label';
+			private var _alignField:String = 'align';
+			private var _urlField:String = 'url';
+			private var _handCursorField:String = 'handCursor';
+			
+			private var _menuItemWidthField:String = 'menuItemWidth';
+			private var _menuItemWidth:Number = 200;
+
+			private var _urlPrefix:String = '';
+
+			private var _mbParent:DisplayObject;
+
+			private var _myParent:*;
+
+			private var _isDebugger:Boolean;
+			private var _debugger:TextArea;
+
+			private var _debug_level:Object = {};
+
+			public function set dataProvider(dataProvider:*):void {
+				if (this._dataProvider != dataProvider) {
+					if (dataProvider is Array) {
+						this._dataProvider = new ArrayCollection(dataProvider);
+					} else if (dataProvider is ArrayCollection) {
+						this._dataProvider = dataProvider;
+					} else if (dataProvider is XML) {
+						this._dataProvider = XMLUtils.convertXmlToArrayCollection(dataProvider);
+					} else if (dataProvider is XMLList) {
+						var x:XMLList = dataProvider as XMLList;
+						var s:String = x.toXMLString();
+						this._dataProvider = XMLUtils.convertXmlToArrayCollection(s);
+					} else if (dataProvider == {}) {
+						this._dataProvider = new ArrayCollection();
+					} else if (dataProvider) {
+						AlertPopUp.errorNoOkay(this.className + ' :: ' + '1. Cannot pass an object other than Array, ArrayCollection, XML or XMLList into the dataProvider setter for SmartMenuBar object.','ERROR');
+					}
+				}
+			}
+			
+			public function get dataProvider():ArrayCollection {
+				return this._dataProvider;
+			}
+			
+			public function set labelField(labelField:String):void {
+				if (this._labelField != labelField) {
+					this._labelField = labelField;
+				}
+			}
+			
+			public function get labelField():String {
+				return this._labelField;
+			}
+			
+			public function set alignField(alignField:String):void {
+				if (this._alignField != alignField) {
+					this._alignField = alignField;
+				}
+			}
+			
+			public function get alignField():String {
+				return this._alignField;
+			}
+			
+			public function set urlField(urlField:String):void {
+				if (this._urlField != urlField) {
+					this._urlField = urlField;
+				}
+			}
+			
+			public function get urlField():String {
+				return this._urlField;
+			}
+			
+			public function set handCursorField(handCursorField:String):void {
+				if (this._handCursorField != handCursorField) {
+					this._handCursorField = handCursorField;
+				}
+			}
+			
+			public function get handCursorField():String {
+				return this._handCursorField;
+			}
+			
+			public function set mbParent(mbParent:DisplayObject):void {
+				this._mbParent = mbParent;
+			}
+			
+			public function get mbParent():DisplayObject {
+				return this._mbParent;
+			}
+			
+			public function set myParent(myParent:*):void {
+				this._myParent = myParent;
+			}
+			
+			public function get myParent():* {
+				return this._myParent;
+			}
+
+			public function set debugger(debugger:TextArea):void {
+				this._debugger = debugger;
+			}
+			
+			public function get debugger():TextArea {
+				return this._debugger;
+			}
+			
+			public function set isDebugger(isDebugger:Boolean):void {
+				this._isDebugger = isDebugger;
+			}
+			
+			public function get isDebugger():Boolean {
+				return this._isDebugger;
+			}
+			
+			public function set debugLevel(debug_level:Object):void {
+				this._debug_level = debug_level;
+				if (debug_level[this.className]) {
+					this.isDebugger = debug_level[this.className] == true;
+				}
+			}
+			
+			public function get debugLevel():Object {
+				return this._debug_level;
+			}
+			
+			public override function set enabled(enabled:Boolean):void {
+				super.enabled = enabled;
+			}
+			
+			public override function get enabled():Boolean {
+				return super.enabled;
+			}
+			
+			public function set urlPrefix(urlPrefix:String):void {
+				if (this._urlPrefix != urlPrefix) {
+					this._urlPrefix = urlPrefix;
+				}
+			}
+			
+			public function get urlPrefix():String {
+				return this._urlPrefix;
+			}
+			
+			public function dismissAllFlyouts():void {
+				var aMenuBarItem:SmartMenuBarItem;
+				var children:Array = this.container.getChildren();
+				for (var i:String in children) {
+					if (children[i] is SmartMenuBarItem) {
+						aMenuBarItem = children[i];
+						aMenuBarItem.dissmissFlyout();
+					}
+				}
+			}
+			
+			public function adminAllFlyouts(toggle:Boolean):void {
+				var aMenuBarItem:SmartMenuBarItem;
+				var children:Array = this.container.getChildren();
+				for (var i:String in children) {
+					if (children[i] is SmartMenuBarItem) {
+						aMenuBarItem = children[i];
+						aMenuBarItem.isAdminMode = toggle;
+					}
+				}
+			}
+			
+			private function onCreationComplete():void {
+				MenuController.reloadMenus_callback = this.reloadMenus;
+				if (this._dataProvider.length > 0) {
+					this._mbParent = this.parent;
+					var o:Array = this._dataProvider.source;
+					try {
+						if (o is Array) {
+							var anItem:Object;
+							var aLabel:String;
+							var anAlign:String;
+							var aHandCursor:String;
+							var items:Array = o as Array;
+							var aMenuBarItem:SmartMenuBarItem;
+							for (var i:String in items) {
+								anItem = items[i];
+								try { aLabel = anItem[this._labelField]; aLabel = ((aLabel == null) ? '' : aLabel); } catch (e:Error) { aLabel = '';}
+								try { anAlign = anItem[this._alignField]; anAlign = ((anAlign == null) ? '' : anAlign); } catch (e:Error) { anAlign = '';}
+								try { aHandCursor = anItem[this._handCursorField]; aHandCursor = ((aHandCursor == null) ? '' : aHandCursor); } catch (e:Error) { aHandCursor = '';}
+								if (this.isDebugger) {
+									this._debugger.text = this.className + ' :: aLabel=(' + aLabel + ')' + ', anAlign=(' + anAlign + ')' + ', aHandCursor=(' + aHandCursor + ')' + '\n' + this._debugger.text; 
+								}
+								aMenuBarItem = new SmartMenuBarItem();
+								var oO:Object = (anItem is ObjectProxy) ? anItem.valueOf() : anItem;
+								aMenuBarItem.id = aMenuBarItem.className + '_' + i;
+								aMenuBarItem.dataProvider = oO;
+								aMenuBarItem.urlPrefix = this._urlPrefix;
+								aMenuBarItem.percentHeight = 100.0;
+								aMenuBarItem.percentWidth = 100.0;
+								aMenuBarItem.mbParent = this._mbParent;
+								aMenuBarItem.debugger = this._debugger;
+								aMenuBarItem.debugLevel = this._debug_level;
+								aMenuBarItem.controller = this;
+								aMenuBarItem.rightAligned = (anAlign == this.ALIGN_RIGHT);
+								aMenuBarItem.handCursor = aHandCursor.toLowerCase() == 'true';
+								aMenuBarItem.myParent = this;
+								aMenuBarItem.isAdminMode = MenuController._isAdminMode;
+								if (this.isDebugger) {
+									this._debugger.text = this.className + ' :: enabled=(' + this.enabled + ')' + '\n' + this._debugger.text; 
+								}
+								this.container.addChild(aMenuBarItem);
+							}
+						} else {
+							AlertPopUp.errorNoOkay(this.className + ' :: ' + '#2 :: Cannot process a dataProvider that does not conform to the standard for the MenuBar object.','ERROR');
+						}
+					} catch (e:Error) {
+						var stackTrace:String = e.getStackTrace();
+						AlertPopUp.errorNoOkay(this.className + ' :: ' + '#1 :: Cannot process a dataProvider that does not conform to the standard for the MenuBar object.\nReason: \n' + e.message + '\n','ERROR');
+					}
+				}
+			}
+			
+			private function graph_objects(parent:*):Array {
+				var aChild:*;
+				var object_graph:Array = [];
+				var children:ArrayCollection = parent.visible_popUps as ArrayCollection;
+				for (var i:int = 0; i < children.length; i++) {
+					aChild = children[i];
+					object_graph.push([aChild,this.graph_objects(aChild)]);
+					aChild.dissmissFlyout();
+				}
+				return object_graph;
+			}
+			
+			public function reloadMenus():void {
+				var children:Array = this.container.getChildren();
+				if (children.length > 0) {
+					var i:int = -1;
+					var objects:Array = [];
+					var aChild:*;
+					var object_graph:Array = [];
+					for (i = 0; i < children.length; i++) {
+						aChild = children[i];
+						if (aChild.has_visible_popUps) {
+							objects.push(aChild);
+						}
+					}
+					if (objects.length > 0) {
+						for (i = 0; i < objects.length; i++) {
+							object_graph.push(this.graph_objects(objects[i]));
+						}
+					}
+				}
+				this.container.removeAllChildren();
+				this.onCreationComplete();
+			}
+		]]>
+	</mx:Script>
+	<mx:HBox id="container" width="100%" height="100%">
+	</mx:HBox>
+</mx:Canvas>

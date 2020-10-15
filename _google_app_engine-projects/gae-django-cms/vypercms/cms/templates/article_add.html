@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Add new" %}{% endblock %}
+
+{% block content %}
+
+<!-- TinyMCE -->
+<script type="text/javascript" src="/tinymce/tiny_mce.js"></script>
+<script type="text/javascript" src="/tinymce/tiny_mce_conf.js"></script>
+<!-- /TinyMCE -->
+
+<h1>{% trans "Add new" %}</h1>
+
+<form name="form1" action="" method="post">
+{% trans "Categories" %}：<select name="cate">
+{% for each in categories %}
+  <option value="{{ each.key }}" {% ifequal each.key cate %}selected{% endifequal %} >{{ each.name|safe }}</option>
+{% endfor %}
+</select><br/>
+{% trans "title" %}：<input name="title" type="text" value="{{ title }}" size="40" maxlength="60" />
+{% if title_exist %}
+ <span style="color:red;">{% trans "The title already exists, you can not add the same title" %}</span>
+{% endif %}
+<br/>
+{% trans "content" %}：<br/>
+<div>
+    <textarea name="content"  style="height:330px; width:630px;" id="id_content">{{ content }}</textarea>
+</div><br/>
+{% trans "tags" %}：<input name="tags" type="text" value="{{ tags }}" size="60" maxlength="80" onchange="value = checktags(value);" />
+<br/><br/>
+	<input type="submit" name="save" value="Submit" />
+	<input type="reset" name="reset" value="Reset" />
+
+</form>
+
+{% ifequal syntaxhighlighter '1' %}
+how to use syntaxhighlighter for your code:<br/>
+Edit HTML source , put your code in < pre>< /pre> and set the prev tag "class = brush: xxxxxx;" <br/>
+eg.<br/>
+<img src="/media/images/code_eg.gif"><br/><br/>
+<b>Brush aliases list</b>:<br/><br/>
+
+<table style="width: 500px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="BACKGROUND-COLOR: #eeeeee">
+<th style="width: 150px;">Brush name</th><th style="width: 200px;">Brush aliases</th><th style="width: 150px;">File name</th>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>Bash/shell</td>
+<td>bash, shell</td>
+<td>shBrushBash.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>C#</td>
+<td>c-sharp, csharp</td>
+<td>shBrushCSharp.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>C++</td>
+<td>cpp, c</td>
+<td>shBrushCpp.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>CSS</td>
+<td>css</td>
+<td>shBrushCss.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>Delphi</td>
+<td>delphi, pas, pascal</td>
+<td>shBrushDelphi.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>Diff</td>
+<td>diff, patch</td>
+<td>shBrushDiff.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>Groovy</td>
+<td>groovy</td>
+<td>shBrushGroovy.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>JavaScript</td>
+<td>js, jscript, javascript</td>
+<td>shBrushJScript.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>Java</td>
+<td>java</td>
+<td>shBrushJava.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>Perl</td>
+<td>perl, pl</td>
+<td>shBrushPerl.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>PHP</td>
+<td>php</td>
+<td>shBrushPhp.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>Plain Text</td>
+<td>plain, text</td>
+<td>shBrushPlain.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>Python</td>
+<td>py, python</td>
+<td>shBrushPython.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>Ruby</td>
+<td>rails, ror, ruby</td>
+<td>shBrushRuby.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>Scala</td>
+<td>scala</td>
+<td>shBrushScala.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>SQL</td>
+<td>sql</td>
+<td>shBrushSql.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #ffffff">
+<td>Visual Basic</td>
+<td>vb, vbnet</td>
+<td>shBrushVb.js</td>
+</tr>
+<tr style="BACKGROUND-COLOR: #f8f8f8">
+<td>XML</td>
+<td>xml, xhtml, xslt, html, xhtml</td>
+<td>shBrushXml.js</td>
+</tr>
+</tbody>
+</table>
+{% endifequal %}
+
+{% endblock %}

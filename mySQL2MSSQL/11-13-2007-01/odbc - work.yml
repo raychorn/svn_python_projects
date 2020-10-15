@@ -1,0 +1,11 @@
+source:
+  connection_string: Driver={MySQL ODBC 3.51 Driver};Server=192.168.105.67;Port=3306;Database=reports_development;User=root;Password=foobarbaz;Option=3;
+
+dest:
+  connection_string: DRIVER={SQL Server};SERVER=MURRE\DEV2005;DATABASE=reports_development;CommandTimeout=0;UID=sa;PWD=peekab00
+
+type_conversions:
+  int: int
+  str: varchar
+  str: text
+  

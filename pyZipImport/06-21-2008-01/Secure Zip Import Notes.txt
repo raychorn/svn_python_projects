@@ -1,0 +1,2 @@
+It would be far easier to remove the Encrypted Zip from the normal Import sys.path and build a separate import path from which
+modules can be imported until the import mechanism can be better understood.

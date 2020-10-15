@@ -1,0 +1,31 @@
+# To-Do:
+
+# Community Version
+
+# 3 HTTP 1.1 Web Apps
+# 1 Proxy (127.0.0.1,8888)
+
+# Professional Version
+
+# 6 HTTP 1.1 Web Apps
+# 1 Proxy into 2 Proxies (0.0.0.0,any ports)
+
+# Enterprise Version
+
+# Unlimited HTTP 1.1 Web Apps
+# Unlimited Proxies into 2 Proxies max 4 Levels Deep (0.0.0.0,any ports)
+
+# Proxies Definition:
+
+# IP Address
+# Port Number
+
+# GUI Functions:
+
+# Start Proxies
+# Stop Proxies
+
+# Django Support
+
+# Start Django Apps
+# Stop Django Apps

@@ -1,0 +1,53 @@
+SERVERNAME=http://WCA10408LDVSAMD.uswin.ad.vzwcorp.com:7001
+SECURE=https://WCA10408LDVSAMD.uswin.ad.vzwcorp.com:7002
+MYACCOUNTDOMAINSSL = https://WCA10408LDVSAMD.uswin.ad.vzwcorp.com:7002 
+MYBUSINESSDOMAINSSL = http://b2bdev.idc.vzwcorp.com
+SUPPORT= http://stage-support.vzw.com
+BILLING_AND_ACCOUNT =http://stage-support.vzw.com/billing
+PHONES_AND_DEVICES = http://stage-support.vzw.com/phones
+FEATURES_AND_SERVICES = http://stage-support.vzw.com/features
+CALLING_PLANS_AND_COVERAGE = http://stage-support.vzw.com/plans
+FAQ_INDEX_PAGE =http://stage-support.vzw.com/faqs/index.html
+INTERNATIONAL_SERVICES = http://stage-b2b.vzw.com/international/inside_us.html
+MEDIASTORE = http://WCA10408LDVSAMD.uswin.ad.vzwcorp.com:7001/global/entertainment+and+apps/media+store
+MUSIC_URL = http://products.vzw.com/index.aspx?id=music_vcast
+MUSIC_HOW_TO_URL = http://products.vzw.com/index.aspx?id=music_vcast_how2start
+MUSIC_VIEW_ALL_URL=http://products.vzw.com/index.aspx?id=fnd_music_all
+RINGTONES_URL = http://products.vzw.com/index.aspx?id=music_ringtone
+RINGBACKTONES_URL =https://ringbacktones.vzw.com
+MUSIC_URL=http://products.vzw.com/index.aspx?id=music_vcast
+MUSIC_HOWTO_URL =http://products.vzw.com/index.aspx?id=music_vcast_how2start
+MUSIC_VIEWALL_URL=http://products.vzw.com/index.aspx?id=fnd_music_all
+GAMES_URL=http://products.vzw.com/index.aspx?id=games
+TOOLSANDAPPS_URL=http://products.vzw.com/index.aspx?id=fnd_toolsApps
+WALLPAPERS_URL=http://picture.vzw.com/pub/premiumcontent/overview.do?
+VIDEO_URL=http://products.vzw.com/index.aspx?id=video
+VIDEO_HOWTO_URL=http://products.vzw.com/index.aspx?id=video_how
+VIDEO_VIEWALL_URL=http://products.vzw.com/index.aspx?id=video_browse
+MOBILETV_URL=http://products.vzw.com/index.aspx?id=mobileTV
+MOBILETV_PROGRAM_URL=http://products.vzw.com/index.aspx?id=mobileTV
+MOBILETV_HOWTO_URL=http://products.vzw.com/index.aspx?id=mobileTV
+MOBILEWEB_EMAIL_URL=http://products.vzw.com/index.aspx?id=fnd_mobileWE
+MOBILEWEB_URL=http://products.vzw.com/index.aspx?id=news_web
+MESSAGING_URL = https://products.vzw.com/index.aspx?id=messaging
+TXTMESSAGING_URL = https://text.vzw.com/customer_site/jsp/overview.jsp
+TXTMESSAGING_SEND_URL = https://text.vzw.com/customer_site/jsp/messaging_lo.jsp
+TXTMESSAGING_HOWTO_URL =http://products.vzw.com/index.aspx?id=messaging_txt_how
+TXTMESSAGING_INTERNATIONAL_URL =https://text1.vzw.com/text/jsp/txtintl_overview.jsp 
+PIXMESSAGING_URL=https://picture.vzw.com/login.do
+PIXMESSAGING_SEND_URL = https://picture.vzw.com/pub/guestComposer/guestCreate.do?mediaType=free
+PIXMESSAGING_HOWTO_URL =http://products.vzw.com/index.aspx?id=messaging_pixflix_pic_how
+TXTMESSAGING_INTERNATIONAL_URL = https://text1.vzw.com/text/jsp/txtintl_overview.jsp 
+PIXMESSAGING_MANAGE_URL = http://picture.vzw.com/pub/gallery.do
+MOBILEIM_URL=http://products.vzw.com/index.aspx?id=messaging_im
+MESSAGING_MOBILEEMAIL.URL=http://products.vzw.com/index.aspx?id=messaging_email
+TXTALERTS_URL=https://alerts.vzw.com/guest/verizon/overview.do 
+TXTALERTS_HOWTO_URL =http://products.vzw.com/index.aspx?id=news_alerts_how
+TXTALERTS_VIEWALL_URL=https://alerts.vzw.com/guest/verizon/DisplayDashboard.do 
+TXTMESSAGING_URL=https://text.vzw.com/customer_site/jsp/overview.jsp
+TXTMESSAGING_SEND_URL=https://text.vzw.com/customer_site/jsp/messaging_lo.jsp
+TXTMESSAGING_HOWTO_URL = https://text.vzw.com/customer_site/jsp/messaging_lo.jsp
+WSS_B2B = http://stage-b2b.vzw.com
+
+
+

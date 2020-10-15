@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Script>
+		<![CDATA[
+			import mx.events.ListEvent;
+			import mx.controls.FileSystemEnumerationMode;
+			import com.HAL.views.events.FileBrowserFolderChangedEvent;
+			import com.HAL.views.events.FileBrowserFileSelectedEvent;
+			import com.HAL.utils.FileUtils;
+			import com.HAL.utils.FileListUtils;
+			
+			[Event(name="FileBrowserFolderChanged", type="com.HAL.views.events.FileBrowserFolderChangedEvent")]
+			[Event(name="FileBrowserFileSelectedEvent", type="com.HAL.views.events.FileBrowserFileSelectedEvent")]
+
+			private var _toolTipCache:Object = {};
+	
+			private var _current_file_name:String = '';
+
+			private function onClickAcceptFileButton():void {
+			}
+			
+			private function onClickCancelFolderBrowserButton():void {
+			}
+			
+			private function refreshNavigationButtons():void {
+				var isAtRoot:Boolean = FileListUtils.isFileListAtRoot(this.fileList1);
+				this.btn_acceptFile.enabled = this.btn_navigateUp.enabled = (isAtRoot == false);
+				this.btn_navigateUp.styleName = ((this.btn_navigateUp.enabled) ? 'EnabledButton' : 'DisabledButton');
+				this._toolTipCache[this.btn_navigateUp.id+'_'+((this.btn_navigateUp.enabled) ? 'EnabledButton' : 'DisabledButton')] = this.btn_navigateUp.toolTip; 
+				this.btn_navigateUp.toolTip = ((this.btn_navigateUp.enabled) ? this._toolTipCache[this.btn_navigateUp.id+'_EnabledButton'] : 'This button has been disabled.  Navigate to a folder that is one level lower than the current folder to enable this button or Navigate to the HOME folder.');
+			}
+	
+			private function initFileSystemList():void {
+				var toks:Array = this._current_file_name.split(File.separator);
+				toks.pop();
+				var pathName:String = toks.join(File.separator);
+				if (pathName.length > 0) {
+					this.fileList1.directory = new File(FileUtils.correctFolderSpec(pathName));
+				}
+			}
+			
+			public function setFileSystemListDirectory(pathName:String):void {
+				this.fileList1.directory = new File(FileUtils.correctFolderSpec(pathName));
+				this.refreshNavigationButtons();
+			}
+						
+			private function onClickNavigateHomeButton():void {
+				this.initFileSystemList();
+				this.refreshNavigationButtons();
+			}
+				
+			private function onClickNavigateUpButton():void {
+				this.fileList1.navigateUp();
+				this.refreshNavigationButtons();
+			}
+			
+			private function onClickNavigateNewButton():void {
+			}
+			
+			private function onClickDeleteItemButton():void {
+			}
+			
+			private function onChangeFileSystemList(event:ListEvent):void {
+				//this.btn_deleteFolder.enabled = this.isSelectedItemDeletable();
+				this.refreshNavigationButtons();
+			}
+			
+			private function onCreationCompleteFileSystemList():void {
+				this.refreshNavigationButtons();
+			}
+			
+			private function onDoubleClickFileSystemList(event:MouseEvent):void {
+				this.refreshNavigationButtons();
+				this.dispatchEvent(new FileBrowserFolderChangedEvent(FileBrowserFolderChangedEvent.FILE_BROWSER_FOLDER_CHANGED, this.fileList1.directory.nativePath));
+			}
+			
+			private function myPDFFilterFunction(file:File):Boolean {
+				return file.extension == 'pdf';
+			}
+			
+			private function onFileChoose(event:*):void {
+				// +++ Check this !
+				this.dispatchEvent(new FileBrowserFileSelectedEvent(FileBrowserFileSelectedEvent.FILE_BROWSER_FILE_SELECTED, this.fileList1.directory.nativePath));
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:VBox width="100%" height="100%">
+		<mx:HBox width="100%">
+			<mx:VBox width="100%" horizontalAlign="center">
+				<mx:Label id="fileBrowserTitle" text="{this.label}"/>
+			</mx:VBox>
+		</mx:HBox>
+		<mx:HBox id="hboxFileList1" width="100%" height="95%">
+			<mx:VBox height="100%">
+				<mx:FileSystemList id="fileList1" height="95%" enumerationMode="{FileSystemEnumerationMode.FILES_AND_DIRECTORIES}" filterFunction="myPDFFilterFunction" fileChoose="onFileChoose(event)" change="onChangeFileSystemList(event)" doubleClick="onDoubleClickFileSystemList(event)" creationComplete="onCreationCompleteFileSystemList()"/>
+			</mx:VBox>
+			<mx:VBox>
+				<mx:HBox>
+					<mx:Button id="btn_navigateHome" toolTip="Click this button to navigate to the home folder, this is the folder you began with." click="onClickNavigateHomeButton()" icon="@Embed(source='assets/images/navigateHome.gif')"/>
+					<mx:Button id="btn_navigateUp" toolTip="Click this button to navigate to the parent folder for the currently selected folder." click="onClickNavigateUpButton()" upIcon="@Embed(source='assets/images/navigateUp.gif')" overIcon="@Embed(source='assets/images/navigateUp.gif')" disabledIcon="@Embed(source='assets/images/navigateUpDisabled.gif')"/>
+					<mx:Button id="btn_navigateNew" toolTip="Click this button to create a new folder in the currently selected folder." click="onClickNavigateNewButton()" upIcon="@Embed(source='assets/images/navigateNew.gif')" overIcon="@Embed(source='assets/images/navigateNew.gif')" disabledIcon="@Embed(source='assets/images/navigateNewDisabled.gif')"/>
+					<mx:Button id="btn_deleteFolder" scaleX="0.5" scaleY="0.5" enabled="false" toolTip="Click this button to delete the currently selected file or folder." buttonDown="onClickDeleteItemButton()" click="onClickDeleteItemButton()" upIcon="@Embed(source='assets/images/delete_folder.gif')" overIcon="@Embed(source='assets/images/delete_folder.gif')" disabledIcon="@Embed(source='assets/images/delete_folder_disabled.gif')"/>
+				</mx:HBox>
+				<mx:Button id="btn_acceptFile" label="Export the Package" click="onClickAcceptFileButton()" toolTip="Click this button to export the package '' into the current desintation folder '{this.fileList1.directory.nativePath}'."/>
+				<mx:Button id="btn_cancelFolderBrowser" label="Cancel" click="onClickCancelFolderBrowserButton()" toolTip="Click this button to Return to the Archives/Packages List."/>
+			</mx:VBox>
+		</mx:HBox>
+	</mx:VBox>
+</mx:Canvas>

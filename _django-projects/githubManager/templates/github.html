@@ -1,0 +1,587 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	$(document).ready(function() {
+
+		$('#id_docfile').change(function(){
+			$('#input_file_to_upload').val($(this).val());
+		});
+		
+		$('#help_id_rsa_keys').click(function(){
+			handle_id_rsa_alert();
+		});
+		
+		$('#help_id_rsa_keys2').click(function(){
+			handle_id_rsa_alert();
+		});
+	
+		$('INPUT[type="file"]').change(function () {
+			var ext = this.value;
+			try {
+				ext = this.value.match(/\.(.+)$/)[1];
+			} catch (e) {
+			}
+			switch (ext) {
+				case 'zip':
+				case 'id_rsa':
+					$('#btn_submit').removeAttr("disabled", "disabled");
+					break;
+				default:
+					$('#input_file_to_upload').val('');
+					$('#btn_submit').attr('disabled', 'disabled');
+					alert('You can upload only ZIP and id_rsa files otherwise you should consider using the Github site to upload single files.');
+					this.value = '';
+			}
+		});
+	
+		$('#input_file_to_upload').val('');
+		$('#btn_submit').attr('disabled', 'disabled');
+
+		$("#input_login_username").labelify({ labelledClass: "labelHighlight" });
+		$("#input_login_password").labelify({ labelledClass: "labelHighlight" });
+		
+		$("#myLoginForm").validate();
+		$("#input_login_password").keyup(function() {
+			$(this).valid();
+		});
+		
+		$('#input_new_repo_name').val('{{ suggested_repo_name }}');
+		
+		//$('#btn_process_files').attr('disabled', 'disabled');
+		
+		$("#select_target_repo").change(function() {
+			label_push_to_github_button($(this));
+			//alert( 'Handler for .change() called for text=('+text+') and value=('+value+').' );
+		});
+		
+		$('#select_target_repo option[value=-1]').attr('selected','selected');
+		
+		$("#div_files_list button").each(function( index ) {
+			//console.log( '(1) '+index + ": " + $(this).attr('disabled') );
+		});
+		/*
+		*/
+		$("#div_files_list button").removeAttr("disabled", "disabled");
+
+		$("#div_files_list button").each(function( index ) {
+			//console.log( '(2) '+index + ": " + $(this).attr('disabled') );
+		});
+  	});
+	
+	function label_push_to_github_button(__this__) {
+		var selected = __this__.find("option:selected");
+		var text = selected.text();
+		var value = selected.val();
+		var lbl = 'PUSH TO GITHUB REPO ('+text+')';
+		if (text.indexOf('Choose...') > -1) {
+			lbl = 'PUSH TO GITHUB';
+		}
+		$("#div_files_list button").html(lbl).attr('title',lbl).removeAttr("disabled", "disabled");
+	}
+	
+	function handle_id_rsa_alert() {
+		alert('For Windows Users:\n\n(1).Open PuttyGen.\n(2).Click Load.\n(3).Load your private key.\n(4).Go to Conversions->Export OpenSSH and export your private key into id_rsa file.\n(5).Upload id_rsa file using the link below.\n\nFor Linux Users:\n(1).Upload your id_rsa and id_rsa.pub files using the link below.');
+	}
+	
+	function get_selected_repo() {
+		var selected = $("#select_target_repo").find("option:selected");
+		var text = selected.text();
+		var value = selected.val();
+		return value;
+	}
+	
+	function handle_drop_file(id) {
+		var __data__ = {'id':id};
+		$.ajax({
+			type: 'POST',
+			url: '/remove/file/',
+			data: __data__,
+			success: function (data) {
+				var __item__;
+				var content= '<p><NOBR>Nothing to process, you should begin to think about uploading some ZIP files...</NOBR></p>';
+				$("#div_files_list").html(content);
+				$("#div_file_upload_form_message").show();
+				$("#div_file_upload_form").hide();
+				var items = [];
+				var toks;
+				if (data['documents']) {
+					var i;
+					var doc;
+					var has_full_load = (data['has_full_load']) ? true : false;
+					//has_full_load = (has_full_load == 'True') ? true : false;
+					var num_documents = data['documents'].length;
+					for (i = 0; i < num_documents; i++) {
+						doc = data['documents'][i];
+						if (doc['docfile'] && doc['id']) {
+							toks = doc['docfile']['name'].split('/');
+							__item__ = '<li><button id="btn_remove_file'+doc['id']+'" onclick="handle_drop_file('+doc['id']+');" class="fancy_button_placeholder" title="REMOVE">REMOVE</button>';
+							if ( (doc['docfile']['fname'] != 'id_rsa') && (doc['docfile']['fname'] != 'id_rsa.pub') ) {
+								__item__ += '&nbsp;<button id="btn_choose_file'+doc['id']+'" onclick="handle_choose_file('+doc['id']+',"'+doc['docfile']['fname']+'");" class="fancy_button_placeholder" title="PUSH TO GITHUB">PUSH TO GITHUB</button>';
+							}
+							__item__ += '&nbsp;<a href="'+doc['docfile']['url']+'">'+toks[toks.length-1]+'</a></li>';
+							items[items.length] = __item__;
+						}
+					}
+					if (items.length > 0) {
+						content = '<ul>' + items.join('') + '</ul>';
+						if ( (!has_full_load) && (num_documents) ) {
+							content2 = '<p>You should upload an <a id="help_id_rsa_keys2" href="#">id_rsa and id_rsa.pub</a> files for an existing key otherwise the system will simply create a new key-pair and this could result in an extra Public key you may not be able to use going forward.  Just a thought...</p>';
+							$("#div_rsa_help_info").html(content2);
+						}
+						$("#div_files_list").html(content);
+						$('#help_id_rsa_keys2').click(function(){
+							handle_id_rsa_alert();
+						});
+
+						//$("#div_files_list_x").show();
+					} else {
+						//$("#div_files_list_x").hide();
+					}
+					if (has_full_load) {
+						$("#div_file_upload_form_message").show();
+						$("#div_file_upload_form").hide();
+					} else {
+						$("#div_file_upload_form_message").hide();
+						$("#div_file_upload_form").show();
+					}
+				}
+			},
+			 error: function(ts) { 
+                alert(ts.responseText);
+            },
+			dataType: 'json'
+		});			
+	}
+	
+	function onclick_login_button() {
+		$("#login_button").hide();
+		$("#ajaxBusyLogin").show();
+	}
+	
+	function onclick_unlink_button() {
+		$("#unlink_button").hide();
+		$("#ajaxBusyUnlink").show();
+	}
+	
+	function signal_uploading_file() {
+		$('#btn_submit').attr('disabled', 'disabled');
+		$('#file_button_container').hide();
+		$("#ajaxBusyUploadingFile").show();
+	}
+	
+	function handle_make_new_repo() {
+		var rname = $('#input_new_repo_name').val();
+		if ( (rname) && (rname.length > 0) ) {
+			var repos = [];
+			{% for repo in GITHUB_REPO_LIST %}
+				repos[repos.length] = '{{ repo.name }}';
+			{% endfor %}
+			var __found__ = false;
+			for (var i=0; i < repos.length; i++) {
+				if (repos[i] == rname) {
+					__found__ = true;
+					break;
+				}
+			}
+			if (__found__) {
+				alert('Unable to Make a new Repo of the same name as one that already exists, try being more unique.');
+				return;
+			}
+
+			$("#btn_make_new_repo button").attr("disabled", "disabled");
+			var __data__ = {'name':rname};
+			$.ajax({
+				type: 'POST',
+				url: '/github/make/repo/',
+				data: __data__,
+				success: function (data) {
+					$("#btn_make_new_repo").removeAttr("disabled", "disabled");
+
+					var content= '<button id="btn_make_new_repo" onclick="handle_make_new_repo();" class="fancy_button_placeholder" title="MAKE NEW GITHUB REPO">MAKE NEW GITHUB REPO</button>&nbsp;<input id="input_new_repo_name" type="text" size="60" />';
+					$("#div_github_repos_list").html(content);
+
+					var i;
+					var repo;
+					var repos = data.GITHUB_REPOS;
+					
+					content = '<BR/>';
+					
+					var sel = $("#select_target_repo");
+					if (sel.length == 0) {
+						content += '<select id="select_target_repo">';
+						content += '<option value="-1">Choose...</option>';
+						for (i = 0; i < repos.length; i++) {
+							repo = repos[i];
+							content += '<option value="' + repo.id + '">' + repo.name + '</option>';
+						}
+						content += '</select>';
+						$("#div_github_repos_list").html(content);
+
+						content = '';
+						
+						var documents = data.documents;
+						var HAS_AVAILABLE_GITHUB_REPOS = data.HAS_AVAILABLE_GITHUB_REPOS;
+						var has_full_load = data.has_full_load;
+						var num_documents = data.num_documents;
+						
+						if (documents && HAS_AVAILABLE_GITHUB_REPOS) {
+							content += '<ul>';
+							var doc;
+							for (i = 0; i < documents.length; i++) {
+								doc = documents[i];
+								if ( (doc.docfile.fname != 'id_rsa') && (doc.docfile.fname != 'id_rsa.pub') ) {
+									content += '<li><NOBR>';
+									content += '<button id="btn_choose_file'+doc.id+'" onclick="handle_choose_file('+doc.id+',"'+doc.docfile.fname+'");" class="fancy_button_placeholder" title="PUSH TO GITHUB">PUSH TO GITHUB</button>';
+									content += '&nbsp;<a href="'+doc.docfile.url+'" target="_blank">'+doc.docfile.fname+'</a></NOBR></li>';
+								}
+							}
+							content += '</ul>';
+							if (has_full_load && num_documents > 0) {
+							} else {
+								content2 = '<p>You should upload an <a id="help_id_rsa_keys2" href="#">id_rsa and id_rsa.pub</a> file for an existing key otherwise the system will simply create a new key-pair and this could result in an extra Public key you may not be able to use going forward.  Just a thought...</p>';
+								$("#div_rsa_help_info").html(content2);
+							}
+						} else {
+							if (!HAS_AVAILABLE_GITHUB_REPOS) {
+								content += '<p>Make a GitHub Repo to proceed.</p>';
+							} else {
+								content += '<p>Nothing to process, you should begin to think about uploading some ZIP files...</p>';
+							}
+						}
+
+						$("#div_files_list").html(content);
+						$("#div_files_list button").attr("disabled", "disabled");
+						
+						//$("#select_target_repo").find('option').attr("selected","");
+
+						$("#select_target_repo").change(function() {
+							label_push_to_github_button($(this));
+							//alert( 'Handler for .change() called for text=('+text+') and value=('+value+').' );
+						});
+						
+					} else {
+						sel.empty();
+						sel.append('<option value="-1">Choose...</option>');
+						for (i = 0; i < repos.length; i++) {
+							repo = repos[i];
+							sel.append('<option value="' + repo.id + '">' + repo.name + '</option>');
+						}
+					}
+
+					//alert('data='+data);
+				},
+				 error: function(ts) { 
+					$("#btn_make_new_repo").removeAttr("disabled", "disabled");
+					alert(ts.responseText);
+				},
+				dataType: 'json'
+			});			
+		} else {
+			alert('Unable to Make a new Repo unless you enter the name of the repo.');
+		}
+	}
+
+	function handle_choose_file(file_id,filename) {
+		var val = get_selected_repo();
+		if (val == -1) {
+			//alert('You have not selected a target repo or you need to make a repo and then select it.');
+		} else {
+		}
+		handle_push_files(file_id,filename);
+	}
+	
+	function handle_push_files(file_id,filename) {
+		// -u=username -d=directory -f=filename -g=git@github.com:raychorn/MyRailsApp.git
+		var username = $('#github_username').html();
+		if (!username || !file_id || !filename) {
+			if (!username) {
+				alert('Missing username !!!');
+				return;
+			}
+			if (!file_id) {
+				alert('Missing file_id !!!');
+				return;
+			}
+			if (!filename) {
+				alert('Missing filename !!!');
+				return;
+			}
+		}
+		var repoid = get_selected_repo();
+		if (repoid == -1) {
+			//console.log( '(repoid)=('+repoid + ")");
+		}
+		$("#div_files_list button").attr("disabled", "disabled");
+		var __data__ = {'file_id':file_id, 'filename':filename, 'repoid':repoid};
+		$.ajax({
+			type: 'POST',
+			url: '/push/file/',
+			data: __data__,
+			success: function (data) {
+				$("#div_files_list button").removeAttr("disabled", "disabled");
+				alert('data='+data);
+			},
+			 error: function(ts) { 
+				$("#div_files_list button").removeAttr("disabled", "disabled");
+                alert(ts.responseText);
+            },
+			dataType: 'json'
+		});			
+	}
+
+
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+
+    <table id="container" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr height="50px">
+            <td>
+                <b>GitHub</b>
+            </td>
+        </tr>
+{% if IS_NOT_LOGGED_IN %}
+        <tr>
+            <td>
+                <p>Please <a href="/" target="_top">get a user account</a> to use this part of the site.</p>
+            </td>
+        </tr>
+{% endif %}
+{% if IS_LOGGED_IN %}
+    {% if IS_GITHUB_USER %}
+        <tr>
+            <td>
+            	<table width="100%">
+                	<tr>
+                    	<td width="50%" valign="top">
+                            <p>Linked to the following Github User Account:</p>
+                            <UL>
+                                <LI>{{ GITHUB_USER.name }}</LI>
+                                <LI id="github_username">{{ GITHUB_USER.username }}</LI>
+                                <LI>{{ GITHUB_USER.email }}</LI>
+                            </UL>
+                        </td>
+                        <td width="50%" valign="top">
+                            <p>Public SSH Keys associated with your Github Account: <a id="help_id_rsa_keys" href="#">(???)</a></p>
+                            <UL>
+                                {% for key in GITHUB_USER_KEYS %}
+                                    <LI><input id="rb_github_key_{{ key.id }}" type="radio" name="rb_github_keys" style="display:none;"/>{{ key.title }}&nbsp;({{ key.verified }})</LI>
+                                {% endfor %}
+                                <LI style="display:none;"><input id="rb_github_key_000" type="radio" name="rb_github_keys"/>Make a new key-pair for each ZIP file.</LI>
+                            </UL>
+                        </td>
+                    	<td valign="top">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<table>
+                	<tr>
+                    	<td>
+                            <form id="myUnlinkForm" action="/unlink/github/user/" enctype="application/x-www-form-urlencoded" method="post">
+                            {% csrf_token %}
+                            	<input type="hidden" name="username" value="{{ GITHUB_USER.username }}"/>
+                            	<input type="hidden" name="email" value="{{ GITHUB_USER.email }}"/>
+                                <input id="unlink_button" name="Go" type="submit" value=" Unlink Github Account " class="main_button" onclick="onclick_unlink_button()"/>
+                            </form>
+                        </td>
+                    	<td>
+                            <div id="ajaxBusyUnlink" style="display:none;"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<table width="100%">
+                	<tr>
+                    	<td width="100%" valign="top">
+                            <div class="datagrid">
+                            	<table>
+                                    <thead>
+                                    	<tr>
+                                        	<th><b>Remove Uploaded Files</b></th>
+                                            <th><b>Choose your Target Repo:</b></th>
+                                            <th><b>Actions</b></th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot style="display:none;"><tr><td colspan="3">
+                                    	<div id="paging"><ul><li><a href="#"><span>Previous</span></a></li><li><a href="#" class="active"><span>1</span></a></li><li><a href="#"><span>2</span></a></li><li><a href="#"><span>3</span></a></li><li><a href="#"><span>4</span></a></li><li><a href="#"><span>5</span></a></li><li><a href="#"><span>Next</span></a></li></ul></div></tr>
+                                    </tfoot>
+                                    <tbody>
+                                    	<tr class="alt">
+                                        	<td width="33%">
+                                                <div id="div_files_list1">
+                                                    {% if documents %}
+                                                        <ul>
+                                                        {% for document in documents %}
+                                                            <li><NOBR><button id="btn_remove_file{{ document.id }}" onclick="handle_drop_file({{ document.id }});" class="fancy_button_placeholder" title="REMOVE">REMOVE "{{ document.docfile.fname }}"</button></NOBR></li>
+                                                        {% endfor %}
+                                                        </ul>
+                                                    {% endif %}
+                                                </div>
+                                            </td>
+                                            <td width="33%">
+                                                <div id="div_github_repos_list">
+                                                    {% if HAS_AVAILABLE_GITHUB_REPOS %}
+                                                        <select id="select_target_repo">
+                                                            <option value="-1">Choose...</option>
+                                                                {% for repo in GITHUB_REPOS %}
+                                                                    <option value="{{ repo.id }}">{{ repo.name }}</option>
+                                                                {% endfor %}
+                                                        </select>
+                                                    {% else %}
+                                                        <button id="btn_make_new_repo" onclick="handle_make_new_repo();" class="fancy_button_placeholder" title="MAKE NEW GITHUB REPO">MAKE NEW GITHUB REPO</button>&nbsp;<input id="input_new_repo_name" type="text" size="60" />
+                                                    {% endif %}
+                                                </div>
+                                            </td>
+                                            <td width="33%">
+                                                <div id="div_files_list">
+                                                    {% if documents and HAS_AVAILABLE_GITHUB_REPOS %}
+                                                        <ul>
+                                                        {% for document in documents %}
+                                                            {% if document.docfile.fname != 'id_rsa' and document.docfile.fname != 'id_rsa.pub' %}
+                                                                <li><NOBR>
+                                                                <button id="btn_choose_file{{ document.id }}" onclick="handle_choose_file({{ document.id }},'{{ document.docfile.fname }}');" class="fancy_button_placeholder" title="PUSH TO GITHUB">PUSH TO GITHUB</button>
+                                                                &nbsp;<a href="{{ document.docfile.url }}" target="_blank">{{ document.docfile.fname }}</a></NOBR></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        </ul>
+                                                    {% else %}
+                                                        {% if not HAS_AVAILABLE_GITHUB_REPOS %}
+                                                            <p>Make a GitHub Repo to proceed.</p>
+                                                        {% else %}
+                                                            <p>Nothing to process, you should begin to think about uploading some ZIP files...</p>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                            	</table>
+                            </div>
+                        </td>
+                    	<td id="ajaxBusyUploadingFile" style="display:none;">
+                            <div><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<div id="div_rsa_help_info">
+                    {% if has_full_load and num_documents > 0 %}
+                    {% else %}
+                        <p>You should upload an <a id="help_id_rsa_keys2" href="#">id_rsa and id_rsa.pub</a> file for an existing key otherwise the system will simply create a new key-pair and this could result in an extra Public key you may not be able to use going forward.  Just a thought...</p>
+                    {% endif %}
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<table width="100%">
+                	<tr>
+                    	<td width="50%">
+                            <span id="span_selected_file_id" style="display:none;"></span>
+                            <span id="span_selected_file"></span>
+                        </td>
+                        <td width="50%">
+                            <div id="div_files_list_x" style="display:none;">
+                                {% if documents %}
+                                	<button id="btn_process_files" onclick="handle_push_files();" title="PUSH TO GITHUB">PUSH TO GITHUB</button>
+                                {% endif %}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            	<div id="div_file_upload_form_message" style="display: {% if has_full_load %}inline{% else %}none{% endif %}">
+                    <p><b>One (1) ZIP and One (1) id_rsa are all you can handle at one time.  Time to push the button to make this happen or change the files you wish to use.</b></p>
+                </div>
+            	<div id="div_file_upload_form" style="display: {% if has_full_load %}none{% else %}inline{% endif %}">
+                    <form action="{{ action }}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <p>{{ form.non_field_errors }}</p>
+                        <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+                        <p>
+                            <p>Upload ZIP and id_rsa File(s)</p>
+                            {{ form.docfile.errors }}
+                            <input id="input_file_to_upload" type="text" size="60" />
+                            <div class="file_button_container">{{ form.docfile }}</div>
+                        </p>
+                        <p><input id="btn_submit" type="submit" value="Upload File to Github" title="Upload ZIP and id_rsa File(s)..." onClick="signal_uploading_file()" /></p>
+                    </form>
+                </div>
+            </td>
+        </tr>
+    {% else %}
+        <tr>
+            <td>
+            	<p>Please provide your Github Credentials below so we can link to your Github User Account; this is required at this time.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form id="myLoginForm" action="/link/github/user/" enctype="application/x-www-form-urlencoded" method="post">
+                {% csrf_token %}
+                <table width="100%">
+                    <tr>
+                        <td align="left">
+                            <table width="100%">
+                                <tr>
+                                    <td width="10%" align="right" valign="middle"><NOBR><b><span id="label_login_username">Github Username</span>:</b></NOBR></td>
+                                    <td width="*" align="left"><NOBR><input id="input_login_username" name="username" type="text" title="Enter Your Github Username." size="30" class="required" /></NOBR></td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="right" valign="middle"><NOBR><b><span id="label_login_password">Password</span>:</b></NOBR></td>
+                                    <td align="left">
+                                        <NOBR>
+                                            <input id="input_login_password" type="password" name="password" title="Enter Your Github Password." size="40" class="password" />
+                                            <div class="password-meter">
+                                                <div class="password-meter-message"> </div>
+                                                <div class="password-meter-bg">
+                                                    <div class="password-meter-bar"></div>
+                                                </div>
+                                            </div>
+                                        </NOBR>
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<td>
+                                        <input id="login_button" name="Go" type="submit" value=" Link to Github " class="main_button" onclick="onclick_login_button()"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="bottom">
+                            <div id="ajaxBusyLogin" style="display:none;"><img src="/static/activity/ajax-loader.gif" border="0" /></div>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </td>
+        </tr>
+    {% endif %}
+{% endif %}
+        <tr>
+            <td>
+            </td>
+        </tr>
+    </table>   
+{% endblock %}

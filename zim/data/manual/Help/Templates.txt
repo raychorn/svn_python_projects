@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== Templates ======
+
+Zim uses templates when exporting pages. This way you can for example write your website in zim and export it to HTML using the layout and style definition of you choice.
+
+Templates are also used to initalize new pages.
+
+===== Templates for export =====
+
+For a list of templates for exporting see [[Help:Export]] and subpages. 
+
+===== Template options =====
+
+Templates can also set template options that influence the generated output, by setting key-value pairs like in the example below. A list of available template options for a output format can be found at [[Help:Export]] and subpages.
+
+===== Special templates =====
+
+**"_New"**
+This template is used to initialize new pages. The default contains a header with the page name and a the date at which the page was created.
+
+===== Customizing =====
+
+Templates are located in ''/usr/share/zim/templates/'' and ''~/.local/share/zim/templates'' by default. You can add templates you use more often there. To modify a template copy it to the ''~/.local/...'' directory and edit it.
+
+Template syntax:
+
+
+
+'''
+[% var %]                   # interpolates a variable
+
+[% IF var %] ... [% END %]  # conditionals
+
+[% IF var %]
+	...
+[% ELSE %]
+	...
+[% END %]
+
+[% FOREACH name = var ]     # loop
+... [% name %] ...
+[% END %]
+
+[% strftime("%c") %]		# current time stamp
+[% strftime("%c", var) %]   # date from variable
+'''
+
+
+'''
+[% options.option_name = value %] # set the template option option_name to value
+'''
+
+Available variables:
+
+'''
+zim.version		# version of zim
+
+page.name		# complete page name
+page.namespace		# namespace
+page.basename		# last part of the page name
+page.title		# 
+'''
+''first heading in the page or the basename''
+''page.heading		# first heading in the page''
+''page.body		# content of the page (without the leading heading)''
+''page.links		# list of page objects for pages linked in this page''
+''page.backlinks		# ''''list of page objects for pages linking to this page''
+''page.properties		# dict with page properties''
+
+''# These special pages have the same properties as the 'page' object''
+''pages.index		# the index page generated when exporting''
+''pages.home		# the home page''
+''pages.next		# the next page in the index (if any)''
+''pages.previous		# the previous page in the index (if any)''
+
+''options			# dict where format specific options can be set''
+
+Functions available:
+
+'''
+url(link)			# turns a zim link into an URL
+strftime(template, date)	# format a date
+'''
+

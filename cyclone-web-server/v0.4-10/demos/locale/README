@@ -1,0 +1,20 @@
+generate pot translation file:
+    xgettext --language=Python --keyword=_:1,2 -d mytest templates/index.html
+
+    note that xgettext may fail while parsing html elements like:
+     <input type="submit" value="{{ _('bla') }}" />
+
+    try --language=Php or something.
+
+merge against existing pot file:
+    msgmerge old.po mytest.po > new.po
+    mv new.po mytest.po
+
+compile:
+    msgfmt mytest.po -o locale/{lang}/LC_MESSAGES/mytest.mo
+    
+    (real case):
+    msgfmt po/pt_BR.po -o locale/pt_BR/LC_MESSAGES/mytest.mo
+
+run the server:
+    twistd -ny server.tac

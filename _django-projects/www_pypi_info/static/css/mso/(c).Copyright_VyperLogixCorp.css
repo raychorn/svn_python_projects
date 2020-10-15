@@ -1,0 +1,58 @@
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	color:yellow;
+	font-family:"Calibri","sans-serif";}
+ p.MsoError, li.MsoError, div.MsoError
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	color: red;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+span.z-TopofFormChar
+	{mso-style-name:"z-Top of Form Char";
+	mso-style-link:"z-Top of Form";
+	font-family:"Arial","sans-serif";
+	display:none;}
+span.z-BottomofFormChar
+	{mso-style-name:"z-Bottom of Form Char";
+	mso-style-link:"z-Bottom of Form";
+	font-family:"Arial","sans-serif";
+	display:none;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}

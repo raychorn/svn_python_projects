@@ -1,0 +1,801 @@
+================
+ Preferences
+================
+
+.. _Help: help.html
+
+Back to Help_
+
+.. _Top:
+
+There are several things you need to know about how preferences
+behave.
+
+First is the file format. Preferences are stored in a markup
+text format. This means if new preferences are added in future
+versions, you will not need to change the format, or run some 
+utility on your preferences file. 
+
+.. contents::
+
+Import/Export
+==============
+
+At the bottom of the General Panel, there is an innocuous 
+little button titled "Setup Preferences". This launches a 
+dialog that allows you to import/export:
+
+- preferences, shortcuts, the pop up menu, the toolbar;
+- plugins;
+- drscripts;
+- all of the above.
+
+This is to facilitate setting up a specific environment. 
+(Eg you can distribute SillyDefaults.zip, which includes the 
+preferences, plugins, and drscripts you want all recipients 
+to have installed.)
+
+**WARNING: Importing Will Overwrite!**
+
+DrPython will overwrite any duplicates on import. This means:
+
+- Preferences will be overwritten.
+- Ditto shortcuts, the pop up menu, and the toolbar.
+- Which Plugins are loaded at startup, and any duplicates,
+  will be overwritten.
+- The drscript menu will be overwritten.
+- Also, any duplicates will overwritten.
+
+After importing, you must restart DrPython to see the changes.
+
+When Exporting, DrPython will store drscripts in the 
+preferences directory (in the zip file). The directory 
+structure will mirror the menu. This means that when you 
+then import drscripts, they will be physically located in 
+your preferences directory, under 'drscripts'.
+
+Back to the Top_
+
+Bookmarks
+==========
+
+This tells DrPython how the Edit Bookmarks Dialog should look.
+Also applies to Documentation Bookmarks.
+
+Style
+------
+
+This sets how the Edit Bookmarks Dialog appears (foreground 
+and background color, font, size, underline/bold/italics).
+
+Back to the Top_
+
+Document
+=========
+
+This is "DrFrame.txtDocument". It is the text control that has
+the text of the currently open file.
+
+Show Line Numbers
+------------------
+
+Sets whether or not DrPython shows line numbers.
+
+Remove Trailing Whitespace
+----------------------------
+
+Automatically removes trailing spaces and tabs from each line on save.
+
+Autoindent
+-----------
+
+Chooses the auto indentation method:
+
+| **None**: Leave Well Enough Alone!
+| **Normal**:  Adds the number of tabs up to the first n
+  on-whitespace character in the previous line on every 
+  new line.
+| **Context Sensitive**:  Same as Normal, but adds an extra 
+  indent after ':', and dedents after the following 
+  statements: ``return``, ``break``, ``pass``, ``continue``,
+  ``raise``.
+  
+AutoReload
+-----------
+
+Automatically check (OnActivation of DrPython) if any open 
+files have been modified by an outside source. It then 
+prompts the user to reload the file. If not, the modification
+time for the document (in program) is reset.
+
+Update Indentation
+-------------------
+
+Updates indentation type whenever the document is modified.
+Displays the type in the status bar. (->Type)
+
+Use File's Indentation
+-----------------------
+
+If on, use the indentation type of the loaded file. 
+(Only runs on Open). In other words: if the default 
+indentation type is tabs but you load a file that uses 
+spaces, DrPython will use spaces for indentation for that 
+document, while still using tabs as the default for other 
+documents.
+
+Use Tabs
+---------
+
+If checked, uses tabs '\t' when you hit the tab key, and for
+autoindent. If not, uses the number of spaces specified in 
+tabwidth.
+
+Word Wrap
+----------
+
+Does not show the horizontal scroolbar, and "wraps" lines 
+that are rather long around so they appear as more than one 
+line.
+
+Whitespace is Visible on Startup
+---------------------------------
+
+When DrPython starts up, automatically toggles whitespace 
+is visible.
+
+Use Indentation Guides
+-----------------------
+
+This optionally draws vertical lines, visually connecting 
+levels of indentation.
+
+Long Line Indicator Column
+---------------------------
+
+Set a column to indicate you have gone past a particular 
+position (79, for example). Using a negative number tells 
+DrPython to highlight the text past the specified position,
+instead of drawing a column. 0 tells DrPython not to draw 
+anything.
+
+Scroll Extra Page
+------------------
+
+This tells DrPython to set the vertical scroll range to one 
+page more than the length of the current document.
+
+Highlight Current Line
+-----------------------
+
+Highlights the current line using the Background from the 
+Caret Style.
+
+Comment Mode
+-------------
+
+Sets where DrPython places the comment string. If Start of 
+Line, then at the start of every line in the selected region.
+If Start of Word, then at the start of the first word of 
+every line in the selected region.
+
+Default Syntax Highlighting
+----------------------------
+
+Highlight text not recognized via extension THIS WAY.
+
+Only Use Default Syntax Highlighting
+-------------------------------------
+
+Only use the syntax highlighting specified above, no 
+matter what extension a file has.
+
+Style
+------
+
+This sets how different kinds of text appear (foreground 
+and background color, font, size, underline/bold/italics).
+You can choose to Not use styles at all, use them, or use 
+only "Normal" and "Caret Foreground"
+
+Back to the Top_
+
+Documentation
+==============
+
+This sets the behavior of the built in help, and external 
+documentation.
+
+Browser
+--------
+
+The preferred browser for viewing the documentation. 
+(On Windows, the default is "<os.startfile>", which uses the 
+default Windows browser).
+
+Python Docs
+-------------
+
+The Official Python Documentation. Sets the location.
+
+wxWidgets Docs
+---------------
+
+The wxWidgets Documentation. Sets the location.
+
+Regular Expression Howto
+-------------------------
+
+A guide to regular expressions for Python programmers.
+
+Back to the Top_
+
+
+Drag and Drop
+==============
+
+This sets the behaviour of drag and drop in DrPython.
+
+Drag and Drop Mode
+-------------------
+
+This can be set to one of three values:
+ **Drag: Files Only, Drop: Files and Text**
+   Turns off Text Drag, but allows you to drag text 
+   from outside of the program.
+ **Drag: Files and Text, Drop: Files and Text**
+   Turns on Text Drag and Drop
+ **Drag and Drop Files Only**
+   Completely Turns off Text Drag and Drop.
+
+Drag and Drop Text Mode
+------------------------
+
+Sets the whether Dragging and Dropping Text within DrPython 
+is by default a cut or a copy operation. The secondary 
+behaviour can be executed when the control key is down.
+
+Back to the Top_
+
+DrScript
+=========
+
+This sets the behavior of Adding/Creating a Script.
+
+Default Directory
+------------------
+
+This tells DrPython what directory to set the Add/New Script
+Dialog to.
+
+Style
+------
+
+This sets how the Move/Rename Scripts Dialog appears 
+(foreground and background color, font, size, 
+underline/bold/italics).
+
+Load Examples
+--------------
+
+Loads all example scripts from the DrPython program 
+directory, and places them in a submenu of DrScript. 
+Note that disabling this option will remove any Shortcuts 
+for these Scripts. (If you subsequently update DrScript 
+Shortcuts)
+
+Back to the Top_
+
+File Dialog
+============
+
+This sets the behaviour of file dialogs in DrPython.
+
+Default Extension (".py")
+--------------------------
+
+If no extension is given, append '.py' onto the end.
+(Enabled by default).
+
+Use wx.FileDialog
+-------------------
+
+If you want to use the default wxPython File Dialog, 
+check this option. Only the wildcard preference will 
+be used in this case.
+ 
+Wildcard
+---------
+
+This is the string used by wxPython to determine what file
+types to show. The format is 
+``DescriptionA|ExtensionPatternA1;ExtensionPatternA2|DescriptionB|ExtensionPatternB1;ExtensionPatternB2``
+
+'|' separates File Types. Here is an example:
+``Python Files (*.py *.pyw)|*.py;*.pyw|All Files (*)|*``
+
+You can use the editor to add entries to the wildcard string.
+
+If all entries are removed, ``All Files (*)|*`` is 
+automatically set as the wildcard. 
+
+Constant Wildcard
+------------------
+
+You can set this in the wildcard editor. It is simply a 
+pattern (eg ``*.py``) that is always visible, no matter 
+what file type is selected in the file dialog.
+ 
+Windows Shortcut Replace Table
+-------------------------------
+
+This is only needed/used on non-Windows systems.
+
+This contains info for replacing strings found in Windows
+shortcuts (\*.lnk) with the correct paths. So for example,
+if your ``C:`` drive is mounted on ``/mnt/win_c``,
+you could enter "C" for Windows Pattern, and "/mnt/win_c"
+for Replace String.
+
+The Replace Table uses regular expressions for the Windows
+Pattern, and two special characters for the Replace String.
+So the entry:
+
+| ``Windows Pattern: "[A-D]"``
+| ``Replace String: "/mnt/win/@"``
+
+would replace any drive A-D (eg ``C:`` with ``/mnt/win/c``)
+with the lowercase matching string. If the Replace String 
+was ``/mnt/win_&``, it would yield ``/mnt/win_C``.
+
+Any valid regular expression will work for the Windows Pattern. 
+
+Back to the Top_
+
+File Types
+===========
+
+These preferences apply to the document depending on which
+file type is active.
+
+Extensions
+-----------
+
+These are the file extensions that are recognized for each
+file type. Separate with commas (eg 'py,pyw,c,h').
+
+Comment String
+---------------
+
+This is the string used to comment out selected regions of code.
+
+Use Tabs
+---------
+
+If checked, uses tabs ``\t`` when you hit the tab key, and 
+for autoindent. If not, uses the number of spaces specified 
+in tabwidth.
+
+Word Wrap
+----------
+
+Does not show the horizontal scroolbar, and "wraps" lines 
+that are rather long around so they appear as more than one 
+line.
+
+Folding
+--------
+
+Allows the document to "Fold". This lets you hide or show 
+lines of a "block" (eg a class, function or an "if" 
+statement).
+
+Tab Width
+----------
+
+This tells DrPython how big to make tabs look (``\t``). 
+For example, 8 will make a single tab look like 8 spaces.
+
+Line Ending Format
+-------------------
+
+The default is UNIX (``\n``). You can also select Windows
+(``\r\n``) or Mac (``\r``).
+
+Back to the Top_
+
+Find/Replace
+=============
+
+Most of these are the defaults for the 
+Find/Replace/Switcheroo Dialogs. The last governs the 
+find/replace dialog behaviour.
+
+Regular Expression
+-------------------
+
+Evaluates the search text as a regular expression. Only 
+searches forward.
+
+Match Case
+-----------
+
+Case-Sensitive Search.
+
+Find Backwards
+---------------
+
+Search from the end of the target text.
+
+Whole Word
+-----------
+
+Only match whole words (whitespace on either side).
+
+In Selection
+-------------
+
+If there is selected text, then only search within 
+the selected text.
+
+From Cursor
+------------
+
+Search from the current position in the document, rather
+than from the start.
+
+Prompt on Replace
+------------------
+
+Prompt the user on each replace operation, and let the user
+decide whether or not to replace the target text, or skip it.
+
+Auto Wrap
+----------
+
+If on, when the start/end of the document is reached during
+find, automatically wrap around.
+
+Under Cursor
+-------------
+
+The Find/Replace Dialog sets the word under the cursor as 
+the findtext if no text is selected.
+
+Back to the Top_
+
+General
+========
+
+These apply to the program as a whole.
+
+Remember Window Size And Position
+----------------------------------
+
+Remembers the size and position of the DrPython window.
+
+Remember Dialog Sizes and Positions
+------------------------------------
+
+Remembers the sizes and positions of all main dialogs.
+
+Remember Panel Sizes
+---------------------
+
+Remembers the sizes of the prompt, and the left and right
+side panels.
+
+Auto Detect Encoding
+-------------------------------
+
+Automatically detects an encoding (for open/save documents) specified with a special comment.
+Also automatically detects Unicode, and encodes the Opening and 
+Saving of documents, saving the Prompt text, and sending 
+prompt text to the currently running program. (Only if 
+wxPython was built with Unicode Support).
+
+Default Encoding
+------------------
+
+This is the encoding used by default. (If Auto Detect is 
+enabled, DrPython will try unicode first). You can manually
+enter an encoding, leave it blank to disable, or select 
+from the list of encodings: the default locale (if available),
+ascii, latin-1, utf-8, and utf-16. (Only if wxPython was 
+built with Unicode Support).
+
+Save On Run
+------------
+
+Automatically saves the current document before running.
+
+Check Syntax On Save
+---------------------
+
+Runs Check Syntax on a file after it has been saved. 
+Unlike running this from the menu, it does not provide any
+feedback if no errors are found. 
+
+Check Syntax: Only On Extensions
+---------------------------------
+
+Restricts checking syntax on save to the exact extensions
+listed. The format is extensions only (no period), 
+separated by spaces (eg): ``py`` ``pyw`` ``python`` will 
+only run check syntax on save (if it is enabled) on files
+with the  extensions ``py``, ``pyw``, or ``python``. 
+
+Prompt On Save All
+-------------------
+
+Prompt before saving all modified documents.
+
+Double Click To Close Tab
+--------------------------
+Clicking a tab in the notebook will close that tab.
+
+Max Number of Recent Files
+---------------------------
+
+This tells DrPython how many recent files to keep track of.
+0 is the least you can enter, and will cause DrPython to 
+ignore recent files. 
+
+View Line Endings With Whitespace
+-----------------------------------
+
+View end of line characters when whitespace is visible.
+
+Check Line Ending Format on Open
+---------------------------------
+
+This tells DrPython to check to see if your default line
+ending is used as the line ending when you open a file. 
+
+Check Indentation Type on Open
+-------------------------------
+This tells DrPython to check to see if your default 
+indentation type is being used in the opened file. 
+
+Python Arguments
+-----------------
+This sends the given arguments directly to Python when you
+run a file, debug a file, or run the Python interpreter on
+its own. A common argument is ``-i``. This will tell Python
+to switch to interactive mode after the current file has 
+finished running. More arguments can be found in the Python 
+documentation, or by typing ``python -h`` at the command 
+prompt.
+
+Icon Size
+-----------
+
+This tells DrPython how big the toolbar needs to be. 
+Selecting 0 will (on restart) tell DrPython to not load the 
+ToolBar at all.
+
+Default Directory
+------------------
+
+This tells DrPython where to look for files initially.
+Once a file has been opened, DrPython sets the current 
+directory to the file's directory. 
+
+Enable Feedback
+----------------
+
+This allows pop up windows to tell you if operations were
+successful. (For example, successfully updated preferences).
+
+Always Prompt On Exit
+----------------------
+
+This tells DrPython to always ask if the user wants to exit,
+even if there is no current file, or the current file has 
+been saved. 
+
+Backup File On Save
+--------------------
+
+Whenever you save a file, before DrPython writes to the file,
+it will make a renamed copy (the filename with .bak attached)
+in the same folder.
+
+Back to the Top_
+
+Plugins
+========
+
+These are the preferences for configuring plugins.
+
+Default Directory
+------------------
+
+The default directory for installing plugins and plugin 
+indexes.
+
+Back to the Top_
+
+Print
+======
+
+These are the preferences for printing.
+
+Document Line Numbers
+----------------------
+
+This tells DrPython whether or not to print line numbers 
+when printing the current file.
+
+Prompt Line Numbers
+--------------------
+
+This tells DrPython whether or not to print line numbers 
+when printing the text of the prompt.
+
+Tab Width
+----------
+
+This tells DrPython how big to make tabs look (``\t``) when 
+printing. For example, 5 will make a single tab look like 
+5 spaces.
+
+Back to the Top_
+
+Prompt
+=======
+
+This is ``DrFrame.txtPrompt``. It is the text control that 
+has the input and output of the currently running program.
+
+Line Number Margin Width
+-------------------------
+
+Sets the margin width in pixels for linenumbers.
+
+Visible By Default
+--------------------
+
+If True, tells DrPython to show the prompt by default for
+each document. 
+
+Use Tabs
+---------
+
+If checked, uses tabs ``\t`` when you hit the tab key. 
+If not, uses the number of spaces specified in tabwidth.
+
+Tab Width
+----------
+
+This tells DrPython how big to make tabs look (``\t``).
+For example, 8 will make a single tab look like 8 spaces. 
+
+Line Ending Format
+-------------------
+
+The default is UNIX (``\n``). You can also select Windows
+(``\r\n``) or Mac (``\r``). 
+
+Word Wrap
+----------
+
+Does not show the horizontal scrollbar, and "wraps" lines 
+that are rather long around so they appear as more than 
+one line.
+
+Whitespace is Visible on Startup
+---------------------------------
+
+When DrPython starts up, automatically toggles whitespace 
+is visible. 
+
+Scroll Extra Page
+------------------
+
+This tells DrPython to set the vertical scroll range to 
+one page more than the length of the prompt. 
+
+Vertical Size
+--------------
+
+Sets the percentage size of the prompt vs the document 
+when the prompt is visible. 25% for the prompt means 75% 
+for the document. 
+
+Style
+-------
+
+This sets how different kinds of text appear (foreground 
+and background color, font, size, underline/bold/italics).
+
+You can choose to not use styles at all, use them, or use 
+only "Normal" and "Caret Foreground". 
+
+Back to the Top_
+
+Startup Script
+---------------
+
+This is a set of commands run in the prompt
+after launching the python interpreter.
+
+Simply leave it blank to disable.
+
+Back to the Top_
+
+Side Panels
+============
+
+This sets the defaults for the side panels.
+
+Left Panel Size
+----------------
+
+The default size (percentage of the total window) for the
+left panel. 
+
+Right Panel Size
+------------------
+
+The default size (percentage of the total window) for the 
+right panel.
+
+Top Panel Size
+------------------
+
+The default size (percentage of the total window) for the 
+top panel. 
+
+Back to the Top_
+
+Source Browser
+===============
+
+This tells DrPython how the source browser looks and acts.
+
+Position
+---------
+
+Have the Source Browser appear in a panel to the left, right or 
+top of the current document. 
+
+Visible By Default
+-------------------
+
+If True, tells DrPython to show the source browser by default
+for each document. 
+
+Close On Activate
+-------------------
+
+When you activate an item (select it with a double click, 
+or with the keyboard), this tells DrPython whether or not 
+to close the Source Browser window. 
+
+Sorted (Alphabetical)
+----------------------
+
+This tells DrPython whether or not to sort 
+classes/functions/import statements alphabetically, or leave 
+them in the order they appear in the program. 
+
+Style
+------
+
+This sets how the source browser appears (foreground and 
+background color, font, size, underline/bold/italics). 
+
+Auto Refresh on Save
+---------------------
+
+Automatically refreshes the source browser on save.
+
+Auto Refresh
+--------------
+
+Automatically refreshes the source browser whenever the 
+document is modified. (This can severely impact performance
+for large files.) 
+    
+Back to the Top_

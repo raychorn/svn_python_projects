@@ -1,0 +1,38 @@
+{% comment %} 
+Copyright (c) 2006-2007, PreFab Software Inc.
+
+Copyright (c) 2006, Andrew Gwozdziewycz <apgwoz@gmail.com>
+All rights reserved. 
+{% endcomment %}
+
+
+{% extends "blog/blog_base.html" %}
+
+{% load blog_extras %}
+
+{% block "browsertitle" %}
+Tags
+{% endblock %}
+
+{% block "contentbody" %}
+{% if not alpha_list and not popular_list %}
+No tags found
+{% else %}
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width='50%'>
+<b>Alphabetical:</b><br /><br />
+{% for tag in alpha_list %}
+<a href="{% BLOG_ROOT %}tag/{{ tag.0 }}/" rel='tag'>{{ tag.0 }} <small>({{ tag.1 }})</small></a> <br />
+{% endfor %}
+</td>
+<td width='50%'>
+<b>Popular:</b><br /><br />
+{% for tag in popular_list %}
+<a href="{% BLOG_ROOT %}tag/{{ tag.1 }}/" rel='tag'>{{ tag.1 }} <small>({{ tag.0 }})</small></a> <br />
+{% endfor %}
+</td>
+</tr>
+</table>
+{% endif %}
+{% endblock %}

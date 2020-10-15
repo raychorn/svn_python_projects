@@ -1,0 +1,352 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pyui.layouts</title>
+<style type="text/css"><!--
+TT { font-family: lucidatypewriter, lucida console, courier }
+--></style></head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pyui.html"><font color="#ffffff">pyui</font></a>.layouts</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/projects/pyuicvs/pyui/layouts.py">c:\projects\pyuicvs\pyui\layouts.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;PyUI<br>
+#&nbsp;Copyright&nbsp;(C)&nbsp;2001-2002&nbsp;Sean&nbsp;C.&nbsp;Riley<br>
+#&nbsp;<br>
+#&nbsp;This&nbsp;library&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or<br>
+#&nbsp;modify&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;version&nbsp;2.1&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+#&nbsp;License&nbsp;as&nbsp;published&nbsp;by&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation.<br>
+#&nbsp;<br>
+#&nbsp;This&nbsp;library&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+#&nbsp;but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+#&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the&nbsp;GNU<br>
+#&nbsp;Lesser&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+#&nbsp;<br>
+#&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+#&nbsp;License&nbsp;along&nbsp;with&nbsp;this&nbsp;library;&nbsp;if&nbsp;not,&nbsp;write&nbsp;to&nbsp;the&nbsp;Free&nbsp;Software<br>
+#&nbsp;Foundation,&nbsp;Inc.,&nbsp;59&nbsp;Temple&nbsp;Place,&nbsp;Suite&nbsp;330,&nbsp;Boston,&nbsp;MA&nbsp;&nbsp;02111-1307&nbsp;&nbsp;USA</tt></p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="pyui.layouts.html#LayoutManager">LayoutManager</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pyui.layouts.html#AbsoluteLayoutManager">AbsoluteLayoutManager</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pyui.layouts.html#BorderLayoutManager">BorderLayoutManager</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pyui.layouts.html#FlowLayoutManager">FlowLayoutManager</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pyui.layouts.html#GridLayoutManager">GridLayoutManager</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pyui.layouts.html#TableLayoutManager">TableLayoutManager</a>
+</font></dt></dl>
+</dd>
+</dl>
+ 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="AbsoluteLayoutManager">class <strong>AbsoluteLayoutManager</strong></a>(<a href="pyui.layouts.html#LayoutManager">LayoutManager</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>absolute&nbsp;layout&nbsp;manager<br>
+uses&nbsp;direct&nbsp;co-ordinates&nbsp;in&nbsp;a&nbsp;virtual&nbsp;space&nbsp;specified&nbsp;when&nbsp;created<br>
+option&nbsp;must&nbsp;be&nbsp;specified&nbsp;as&nbsp;a&nbsp;(x,y)&nbsp;tuple&nbsp;when&nbsp;adding&nbsp;children<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="AbsoluteLayoutManager-__init__"><strong>__init__</strong></a>(self, w<font color="#909090">=100</font>, h<font color="#909090">=100</font>)</dt></dl>
+
+<dl><dt><a name="AbsoluteLayoutManager-begin"><strong>begin</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="AbsoluteLayoutManager-canResize"><strong>canResize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="AbsoluteLayoutManager-end"><strong>end</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="AbsoluteLayoutManager-placeChild"><strong>placeChild</strong></a>(self, child, option)</dt></dl>
+
+<dl><dt><a name="AbsoluteLayoutManager-setPanel"><strong>setPanel</strong></a>(self, panel)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = '<font color="#c040c0">\n</font>    absolute layout manager<font color="#c040c0">\n</font>    uses direct co-...cified as a (x,y) tuple when adding children<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.layouts'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.layouts.html#LayoutManager">LayoutManager</a>:<br>
+<dl><dt><a name="AbsoluteLayoutManager-destroy"><strong>destroy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="AbsoluteLayoutManager-scanChild"><strong>scanChild</strong></a>(self, child, option)</dt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BorderLayoutManager">class <strong>BorderLayoutManager</strong></a>(<a href="pyui.layouts.html#LayoutManager">LayoutManager</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Border&nbsp;layout&nbsp;manager<br>
+preserves&nbsp;one-dimensional&nbsp;sizes&nbsp;of&nbsp;children<br>
+will&nbsp;not&nbsp;change&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;parent<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="BorderLayoutManager-__init__"><strong>__init__</strong></a>(self, padding<font color="#909090">=2</font>)</dt></dl>
+
+<dl><dt><a name="BorderLayoutManager-begin"><strong>begin</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BorderLayoutManager-canResize"><strong>canResize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BorderLayoutManager-destroy"><strong>destroy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BorderLayoutManager-placeChild"><strong>placeChild</strong></a>(self, child, option)</dt></dl>
+
+<dl><dt><a name="BorderLayoutManager-scanChild"><strong>scanChild</strong></a>(self, child, option)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>CENTER</strong> = 5<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>EAST</strong> = 2<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>NORTH</strong> = 3<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>SOUTH</strong> = 4<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>WEST</strong> = 1<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>__doc__</strong> = 'Border layout manager<font color="#c040c0">\n</font>    preserves one-dimensio...n<font color="#c040c0">\n</font>    will not change the size of the parent<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.layouts'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.layouts.html#LayoutManager">LayoutManager</a>:<br>
+<dl><dt><a name="BorderLayoutManager-end"><strong>end</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BorderLayoutManager-setPanel"><strong>setPanel</strong></a>(self, panel)</dt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FlowLayoutManager">class <strong>FlowLayoutManager</strong></a>(<a href="pyui.layouts.html#LayoutManager">LayoutManager</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Flow&nbsp;layout&nbsp;manager<br>
+preserves&nbsp;sizes&nbsp;of&nbsp;children&nbsp;-&nbsp;horizontal&nbsp;layout<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="FlowLayoutManager-__init__"><strong>__init__</strong></a>(self, padding<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="FlowLayoutManager-begin"><strong>begin</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FlowLayoutManager-canResize"><strong>canResize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FlowLayoutManager-placeChild"><strong>placeChild</strong></a>(self, child, option)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>NEWLINE</strong> = 1<dd><tt>int(x[,&nbsp;base])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;string&nbsp;or&nbsp;number&nbsp;to&nbsp;an&nbsp;integer,&nbsp;if&nbsp;possible.&nbsp;&nbsp;A&nbsp;floating&nbsp;point<br>
+argument&nbsp;will&nbsp;be&nbsp;truncated&nbsp;towards&nbsp;zero&nbsp;(this&nbsp;does&nbsp;not&nbsp;include&nbsp;a&nbsp;string<br>
+representation&nbsp;of&nbsp;a&nbsp;floating&nbsp;point&nbsp;number!)&nbsp;&nbsp;When&nbsp;converting&nbsp;a&nbsp;string,&nbsp;use<br>
+the&nbsp;optional&nbsp;base.&nbsp;&nbsp;It&nbsp;is&nbsp;an&nbsp;error&nbsp;to&nbsp;supply&nbsp;a&nbsp;base&nbsp;when&nbsp;converting&nbsp;a<br>
+non-string.</tt></dl>
+
+<dl><dt><strong>__doc__</strong> = 'Flow layout manager<font color="#c040c0">\n</font>    preserves sizes of children - horizontal layout<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.layouts'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.layouts.html#LayoutManager">LayoutManager</a>:<br>
+<dl><dt><a name="FlowLayoutManager-destroy"><strong>destroy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FlowLayoutManager-end"><strong>end</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FlowLayoutManager-scanChild"><strong>scanChild</strong></a>(self, child, option)</dt></dl>
+
+<dl><dt><a name="FlowLayoutManager-setPanel"><strong>setPanel</strong></a>(self, panel)</dt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GridLayoutManager">class <strong>GridLayoutManager</strong></a>(<a href="pyui.layouts.html#LayoutManager">LayoutManager</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Grid&nbsp;layout&nbsp;manager<br>
+resizes&nbsp;children&nbsp;in&nbsp;to&nbsp;a&nbsp;grid<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GridLayoutManager-__init__"><strong>__init__</strong></a>(self, columns, rows, padding<font color="#909090">=3</font>)</dt></dl>
+
+<dl><dt><a name="GridLayoutManager-begin"><strong>begin</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GridLayoutManager-placeChild"><strong>placeChild</strong></a>(self, child, option)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = 'Grid layout manager<font color="#c040c0">\n</font>    resizes children in to a grid<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.layouts'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.layouts.html#LayoutManager">LayoutManager</a>:<br>
+<dl><dt><a name="GridLayoutManager-canResize"><strong>canResize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GridLayoutManager-destroy"><strong>destroy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GridLayoutManager-end"><strong>end</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GridLayoutManager-scanChild"><strong>scanChild</strong></a>(self, child, option)</dt></dl>
+
+<dl><dt><a name="GridLayoutManager-setPanel"><strong>setPanel</strong></a>(self, panel)</dt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LayoutManager">class <strong>LayoutManager</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>base&nbsp;class&nbsp;for&nbsp;all&nbsp;layout&nbsp;managers<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LayoutManager-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LayoutManager-begin"><strong>begin</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LayoutManager-canResize"><strong>canResize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LayoutManager-destroy"><strong>destroy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LayoutManager-end"><strong>end</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LayoutManager-placeChild"><strong>placeChild</strong></a>(self, child, option)</dt></dl>
+
+<dl><dt><a name="LayoutManager-scanChild"><strong>scanChild</strong></a>(self, child, option)</dt></dl>
+
+<dl><dt><a name="LayoutManager-setPanel"><strong>setPanel</strong></a>(self, panel)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = 'base class for all layout managers<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.layouts'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TableLayoutManager">class <strong>TableLayoutManager</strong></a>(<a href="pyui.layouts.html#LayoutManager">LayoutManager</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Has&nbsp;a&nbsp;table&nbsp;grid.&nbsp;children&nbsp;can&nbsp;be&nbsp;placed&nbsp;into&nbsp;the&nbsp;grid&nbsp;and&nbsp;take&nbsp;up<br>
+rectangular&nbsp;sections&nbsp;of&nbsp;multiple&nbsp;cells.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="TableLayoutManager-__init__"><strong>__init__</strong></a>(self, w, h, padding<font color="#909090">=2</font>)</dt></dl>
+
+<dl><dt><a name="TableLayoutManager-begin"><strong>begin</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TableLayoutManager-placeChild"><strong>placeChild</strong></a>(self, child, option)</dt><dd><tt>placing&nbsp;children&nbsp;in&nbsp;the&nbsp;grid&nbsp;takes&nbsp;an&nbsp;x,y&nbsp;position&nbsp;and&nbsp;a&nbsp;width&nbsp;and&nbsp;height<br>
+in&nbsp;cells&nbsp;that&nbsp;the&nbsp;child&nbsp;takes&nbsp;up.&nbsp;If&nbsp;a&nbsp;cell&nbsp;is&nbsp;occupied&nbsp;a&nbsp;child&nbsp;cannot&nbsp;be<br>
+placed&nbsp;there.</tt></dd></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = 'Has a table grid. children can be placed into th...<font color="#c040c0">\n</font>    rectangular sections of multiple cells.<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.layouts'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.layouts.html#LayoutManager">LayoutManager</a>:<br>
+<dl><dt><a name="TableLayoutManager-canResize"><strong>canResize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TableLayoutManager-destroy"><strong>destroy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TableLayoutManager-end"><strong>end</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TableLayoutManager-scanChild"><strong>scanChild</strong></a>(self, child, option)</dt></dl>
+
+<dl><dt><a name="TableLayoutManager-setPanel"><strong>setPanel</strong></a>(self, panel)</dt></dl>
+
+</td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><strong>__file__</strong> = r'.\pyui\layouts.pyc'<br>
+<strong>__name__</strong> = 'pyui.layouts'</td></tr></table>
+</body></html>

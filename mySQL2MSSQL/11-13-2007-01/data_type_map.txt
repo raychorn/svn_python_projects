@@ -1,0 +1,14 @@
+bigint unsigned=bigint
+text=varchar(MAX)
+float=float
+bigint=bigint
+smallint=smallint
+mediumint unsigned=int
+timestamp=bigint
+date=datetime
+integer=int
+smallint unsigned=int
+double=real
+tinyint=tinyint
+mediumint=int
+tinyint unsigned=int

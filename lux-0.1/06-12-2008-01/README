@@ -1,0 +1,63 @@
+
+This directory contains "Lux" - a (very slightly) modified version of
+the programming language Lua, extended with a number of libraries.
+
+
+WHAT IS LUX
+
+Lux aims to be a small, portable, and flexible scripting environment,
+with bindings to a number of other languages.  Besides the designer's
+goal to have Lua provide scripting for C, C++, etc, Lux also offers a
+way to write code once, and then use the result in Tcl, Python, Perl,
+and so on.  Given that a key goal of Lux is to facilitate deployment,
+the Lua core engine has been re-packaged into a single C source file.
+
+
+WHAT'S IN A NAME
+
+I have resisted the temptation to rename everything "Lux", since this
+would then ultimately have to be carried through over the entire API.
+For the time being most new code - such as all the different language
+bindings - has the text "lua" in it.  This should not be construed as
+an attempt to misrepresent the origins of Lua vs. Lux.
+
+
+DOWNLOADS AND INSTALLATION
+
+This is work in progress, installation instructions and documentation
+are not yet available, other than what is at the following URL:
+	http://www.equi4.com/lux/
+
+As general rule, "lux-N.M.tar.gz" is source code release version N.M,
+while "lux-XYZ.tar.gz" are the most recent compiles for platform XYZ.
+The source code release includes an "examples/" directory.
+
+
+TECHNICAL SUPPORT
+
+I am not offering support at this early stage of development - but am
+most definitely interested in getting feedback about this Lux system.
+Bug reports, and expecially bug fixes and porting modifications, will
+be gratefully accepted, merged into the code, and acknowledged.
+
+
+CREDITS AND COPYRIGHTS
+
+This software builds upon the Lua scripting language, as developed by
+Waldemar Celes, Roberto Ierusalimschy and Luiz Henrique de Figueiredo
+at TeCGraf, the Computer Graphics Technology Group of PUC-Rio Brazil:
+	http://www.tecgraf.puc-rio.br/lua/
+Without their work and Lua's open source release, Lux wouldn't exist.
+Lua's (BSD-ish) license can be found on the web at the following URL:
+	http://www.tecgraf.puc-rio.br/lua/copyright.html
+
+My own code is in the public domain.  You may use and copy it freely.
+
+The responsibility for the use of this material resides entirely with
+you.  I make no warranty of any kind concerning this material, nor do
+I make any claim as to the suitability of Lux for any application. 
+
+
+-- Jean-Claude Wippler <jcw@equi4.com>
+   Mission Impossible 5oftware Team
+

@@ -1,0 +1,10 @@
+python manage.py syncdb
+
+python manage.py runserver
+
+python manage.py startapp polls
+
+python manage.py sql polls
+
+python manage.py validate polls
+

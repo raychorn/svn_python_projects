@@ -1,0 +1,54 @@
+Some random remarks:
+
+(FS) ... Franz Steinhauesler
+(AB) ... Antonio Barbosa
+
+by Franz Steinhaeusler:
+
+Priority 1 (highest):
+  - test on linux ("segmentation fault" happens often on program exit)
+  - make some controls more userfriendly, as in windows on gtk.
+      listctrl, listbox, combobox should have more keyboard support.
+  - tackle the bug entries on sourceforge.
+  - default prefs: use spaces (PEP 263) and use wx.Filemanager.
+  - some problems in findautocomplete plugin on gtk.
+  - a user reported about problems in UTF-8.
+  - put edit scripts to DrScript Menu?
+  - put edit bookmarsk to Bookmarks Menu?
+  - after close file, the active tab should be the one on the right side (now it is the one on the left side)
+      for that I made a script, but it should be default behaviour.
+
+Priority 2 (would be useful):
+  - update doku for new plugins
+  - correct the find procedure, sometimes a string is not found, althought
+      it is in the text. I have to track it down, when it happens.
+      Most often that happens, when changing the text (paste, delete) and then do a search next or previous.
+      Simplyfing the procedure.
+  - add "Posititon Marker" to the core (most programs have it by default).
+
+Priority 3 (when time):
+  - tackle the feature request entries on sourceforge.
+  - use icons from tango project (already three people gave me that hint).
+  - Add a "What's new" to DrPyhton help (if a say 1.66 is released, it should show all new features/fixes in that 
+      version. A more button could show previous changes.
+  - split export/import files to drscrips, drplugins and preferences as it was before.
+  
+Priority 4 (when much time):
+  - add a function (Check for updates on drpython) (automatically and/or manually (setup switch))
+  - add a function (Check for updates on plugins) (automatically and/or manually (setup switch))
+  - install plugins from sourceforge
+  - assign plugin shortcuts right away?
+
+Priority 5(lowest):
+  - download and install plugins or core automatically, if a update is found.
+  - write a second "SearchInFiles" (a simple one) and add it to the core.
+
+
+--------
+
+by ...:
+
+--------
+
+by ... :)
+  

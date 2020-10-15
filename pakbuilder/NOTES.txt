@@ -1,0 +1,4 @@
+192.168.15.4 -v -p 22 -u root -w Compaq123 -s "c:\@vm1\Helloworld" -d "/root/@1" -a "/root/@1" -n Helloworld3 -b 115 -i -k
+
+
+16.83.121.250 -v -p 22 -u root -w Compaq@123 -d "collector/wrapper.conf" -f "server=y,suspend=n,address=8004" -r

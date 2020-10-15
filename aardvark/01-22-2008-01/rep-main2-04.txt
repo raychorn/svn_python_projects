@@ -1,0 +1,18 @@
+
+Z:\python projects\aardvark>if 2. == . goto end 
+
+Z:\python projects\aardvark>if 2. == 2. goto method2 
+
+Z:\python projects\aardvark>main.py --profile --psyco --input2=Z:\project-aardvark\bigtest.txt 
+Using Method #2
+_lineCount=(25617905)
+         3 function calls in 124.056 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  124.056  124.056 <string>:1(<module>)
+        1  124.056  124.056  124.056  124.056 main.py:29(main2)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

@@ -1,0 +1,4 @@
+* Store the nodes in mySQL.
+
+* Read nodes back in order of who the parent is, -1 parent first then traverse down the list to the next parent from the previous node name.
+

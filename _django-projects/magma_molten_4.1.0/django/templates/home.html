@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>{{ the_title }}</title>
+<link href="{{ MEDIA_URL }}/pagination.css" media="screen" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" media="print" href="{{ MEDIA_URL }}/print.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<META HTTP-EQUIV="Expires" CONTENT="{{ EXPIRES_ON }}">
+<META HTTP-EQUIV="Last-Modified" CONTENT="{{ MODIFIED_ON }}">
+
+<script src="{{ MEDIA_URL }}/prototype.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}/effects.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}/dragdrop.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}/controls.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}/application.js" type="text/javascript"></script>
+
+<script language="JavaScript" type="text/javascript" src="{{ MEDIA_URL }}/anchorpos.js"></script>
+<script language="JavaScript" type="text/javascript" src="{{ MEDIA_URL }}/viewport.js"></script>
+<script language="JavaScript" type="text/javascript" src="{{ MEDIA_URL }}/AC_OETags.js"></script>
+
+<style>
+{{ default_css }}
+</style>
+
+<script language="JavaScript" type="text/javascript">
+    _resize_callback = null;
+    window.onresize = function() {
+        if (_resize_callback) {
+          try {
+              _resize_callback();
+          } catch(e) { alert('ERROR in window.OnReSize_Callback().'); };
+        }
+    }
+    
+	function getUUID$() {
+		return (new Date().getTime() + "" + Math.floor(65535 * Math.random()));
+	}
+	
+	function findArrayItemsContaining(a, what, start) {
+		var f = 0;
+		if (start) {
+			startWhere = start 
+		}
+		else {
+			startWhere = 0;
+		}
+		what = ((what != null) ? what.toString() : '');
+		var nWhat = what.length;
+		for(f=startWhere; f < a.length; f++) {
+			if (a[f].toString().substr(0,nWhat) == what) {
+				return f;
+			}
+		}
+		return -1;
+	}
+
+    function setCookie(name, value, path){
+        return document.cookie=name+"="+escape(value)+"; path="+path;
+    }
+	
+    function getCookie(name){
+      var dc=document.cookie;
+      var prefix=name+"=";
+      var begin=dc.lastIndexOf(prefix);
+      if(begin==-1) return null;
+      var end=dc.indexOf(";", begin);
+      if(end==-1) end=dc.length;
+      return unescape(dc.substring(begin+prefix.length, end));
+    }
+    _old_main_width = -1;
+    _old_sidebar_display = -1;
+    function clicked_sidebar_control() {
+      td = $('sidebar');
+	  try {
+	      _old_sidebar_display = td.style.display;
+	  } catch (e) {
+	      _old_sidebar_display = '';
+	  }
+	  try {
+	      td.style.display = 'none';
+	  } catch (e) {
+	  	return;
+	  }
+      
+      td = $('sidebar2');
+	  try {
+	      td.style.display = _old_sidebar_display;
+	      td.style.background = '#AEA7A1';
+	  } catch (e) {
+	  }
+      
+      m = $('main');
+	  try {
+	      _old_main_width = m.style.width;
+	  } catch (e) {
+	  }
+	  try {
+	      m.style.width = '100%';
+	  } catch (e) {
+	  }
+      setCookie('sidebar_state', 0, '/');
+    }
+    
+    function clicked_sidebar_control2() {
+      td = $('sidebar');
+	  try {
+	      td.style.display = _old_sidebar_display;
+	  } catch (e) {
+	  	if (td) {
+	      td.style.display = '';
+		}
+	  }
+      
+      td = $('sidebar2');
+	  try {
+	      td.style.display = 'none';
+	  } catch (e) {
+	  }
+
+      m = $('main');
+	  try {
+	      m.style.width = _old_main_width;
+	  } catch (e) {
+	  }
+      setCookie('sidebar_state', 1, '/');
+    }
+	
+	function redirectBrowserToUrl(aURL) {
+		if (!!aURL) {
+			window.location.href = aURL;
+		}
+	}
+	
+	function get_sort_dtate_parms() {
+		var url = getCookie('sort_state');
+		var parms = '';
+		if ( (url != null) && (url.length > 0) ) {
+			var toks = url.split('?');
+			parms = '?' + toks[toks.length-1];
+		}
+		return parms;
+	}
+	
+	function switch_to_list_beta() {
+		setCookie('beta_view_state', 1, '/');
+		var parms = get_sort_dtate_parms();
+		redirectBrowserToUrl('/cases/list_beta' + parms);
+	}
+	
+	function switch_to_classic_view() {
+		setCookie('beta_view_state', 0, '/');
+		var parms = get_sort_dtate_parms();
+		redirectBrowserToUrl('/cases/list' + parms);
+	}
+	
+	function switch_to_support_cases() {
+	    if (getCookie('beta_view_state') == 1) {
+	       switch_to_list_beta(); 
+	    } else {
+	       switch_to_classic_view(); 
+	    }
+	}
+	
+	{{ JAVASCRIPT_CODE }}
+</script>
+
+</head><body>
+	
+		<div id="header">
+	  		<span id="logo">
+<a href="http://www.magma-da.com/"><img alt="Magma Design Automation, Inc." src="{{ IMAGES_URL }}magma_logo.gif" width="346" height="39"></a>
+</span>
+
+<ul id="nav">{{ NAV_CONTENT }}</ul>
+
+<noscript>
+<div id="JS"
+style="background:#ff887a;margin:1em;padding:0.5em;">WARNING:
+JavaScript is turned off in your web browser. Turn it on to take full
+advantage of MOLTEN site (see <a href="/FAQ.html#JavaScript"
+target="_new">FAQ for help</a>), then refresh this page.</div>
+</noscript>
+
+{{ LOGOUT_CONTENT }}
+		
+		</div>
+	
+  <table id="container">
+ 	  	<tbody><tr>
+ 	  		<td id="main" style="position: relative;" valign="top">
+	<div style="text-align: right; margin-right: -30px; margin-top: -10px;">
+		<img alt="Sidebar_background_corner" src="{{ IMAGES_URL }}sidebar_background_corner.gif">
+	</div>
+	  
+{{ MAIN_CONTENT }}
+
+				<div id="footer">
+				 <div id="footer_links">
+  <a href="/" target="_top">Home</a> | <a href="/home/custom/" target="_top">Customized Home Page</a> | <a href="/cases/index/" target="_top">Support Cases</a> | <a href="/solutions/index/" target="_top">Solutions</a> |
+  <a href="/contact/settings/" target="_top">Account</a> | <a href="/FAQ/" target="_blank">FAQ</a> | <a href="mailto:molten_feedback@magma-da.com">Report Problems</a>
+</div>
+MOLTEN, Version: <a href="/CHANGELOG/" target="_top">{{ MOLTEN_VERSION }}</a>, 
+
+<br>
+<div id="magma_locations">
+<a href="http://www.magma-da.com.cn/">Magma China</a> | 
+<a href="http://www.magma-da.co.jp/">Magma Japan</a> | 
+<a href="http://www.magma-da.com.tw/">Magma Taiwan</a>
+</div>		
+				</div>
+			
+ 	  		</td>
+			
+				<td style="" id="sidebar" valign="top">
+	                          <table width="100%">
+	                            <tbody><tr>
+	                              <td id="td_sidebar_control" title="Click to close sidebar." onclick="clicked_sidebar_control()" bgcolor="#aea7a1" height="30">
+	                                <img src="{{ IMAGES_URL }}next.gif">
+	                              </td>
+	                            </tr>
+	                            <tr>
+	                              <td valign="top">
+										{{ MOLTEN_TIPS_CONTENT }}
+									</td>
+	                            </tr>
+	                          </tbody></table>
+				</td>
+				<td id="sidebar2" style="display: none;" valign="top">
+	                          <table>
+	                            <tbody><tr>
+	                              <td title="Click to open sidebar." onclick="clicked_sidebar_control2()" bgcolor="#aea7a1">
+	                                <img src="{{ IMAGES_URL }}back.gif">
+	                              </td>
+	                            </tr>
+	                          </tbody></table>
+				</td>
+			
+ 	  	</tr>
+    </tbody></table>
+<script src="{{ MEDIA_URL }}/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1508721-1";
+urchinTracker();
+</script>
+		
+<script language="JavaScript" type="text/javascript">
+    if (getCookie('sidebar_state') == 0) {
+       clicked_sidebar_control(); 
+    } else {
+       clicked_sidebar_control2(); 
+    }
+</script>
+</body></html>

@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	$(document).ready(function() {
+		function get_applications() {
+			__data__ = {};
+			$.ajax({
+				type: 'POST',
+				url: '/get/applications/',
+				data: __data__,
+				success: function (data) {
+					var itemval= '<option value="-1">Choose...</option>';
+					$("#select_applications").html(itemval);
+					for (item in data) {
+						itemval= '<option value="'+data[item]+'">'+data[item]+'</option>';
+						$("#select_applications").append(itemval);
+					}
+				},
+				dataType: 'json'
+			});			
+		}
+		setTimeout(function(){get_applications();},500);
+		
+		$("#select_applications").change(function () {
+			var str = "";
+			$("#select_applications option:selected").each(function () {
+				str += $(this).text() + " ";
+			  });
+		});
+		
+		// +++
+		// +++
+	});
+
+	function add_application(name,servername) {
+		__data__ = {'name':name,'servername':servername};
+		$.ajax({
+			type: 'POST',
+			url: '/add/application/',
+			data: __data__,
+			success: function (data) {
+				var itemval= '<option value="-1">Choose...</option>';
+				$("#select_applications").html(itemval);
+				for (item in data) {
+					itemval= '<option value="'+data[item]+'">'+data[item]+'</option>';
+					$("#select_applications").append(itemval);
+				}
+			},
+			dataType: 'json'
+		});			
+	}
+
+	function remove_application(name) {
+		__data__ = {'name':name};
+		$.ajax({
+			type: 'POST',
+			url: '/remove/application/',
+			data: __data__,
+			success: function (data) {
+				var itemval= '<option value="-1">Choose...</option>';
+				$("#select_applications").html(itemval);
+				for (item in data) {
+					itemval= '<option value="'+data[item]+'">'+data[item]+'</option>';
+					$("#select_applications").append(itemval);
+				}
+			},
+			dataType: 'json'
+		});			
+	}
+
+	function handle_add_application_to_list() {
+		$("#div_add_application_dialog").show();
+		$("#div_remove_application_button").hide();
+		$("#div_add_application_button").hide();
+		$('#input_application_name').focus();
+	}
+	
+	function handle_drop_application_from_list() {
+		var name = $("#select_applications").val();
+		remove_application(name);
+	}
+	
+	function cancel_application_details() {
+		$("#div_add_application_dialog").hide();
+		$("#div_remove_application_button").show();
+		$("#div_add_application_button").show();
+	}
+	
+	function handle_submit_application_details() {
+		cancel_application_details();
+		var name = $("#input_application_name").attr('value');
+		var servername = $("#input_application_servername").attr('value');
+		add_application(name,servername);
+	}
+	
+	function handle_cancel_application_details() {
+		cancel_application_details();
+	}
+	
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block include-css %}'/static/main.css'{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+{% if IS_LOGGED_IN %}
+    <table id="container" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <b>APPS</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            	<table>
+                	<tr>
+                    	<td><div id="div_applications"><select id="select_applications"></select></div></td>
+                    	<td>
+                        	<div id="div_applications_controls">
+                            	<table>
+                                	<tr>
+                                    	<td>
+                                            <div id="div_add_application_button">
+                                                <button id="btn_add_application" onclick="handle_add_application_to_list();" title="ADD">(+)</button>
+                                            </div>
+                                        </td>
+                                    	<td>
+                                            <div id="div_add_application_dialog" style="display:none;">
+                                            	<table>
+                                                	<tr>
+                                                    	<td>
+                                                        	<label>App Name:</label>&nbsp;<input id="input_application_name" name="name" type="text" maxlength="20"/>
+                                                        </td>
+                                                    </tr>
+                                                	<tr>
+                                                    	<td>
+                                                        	<label>Your Domain Name:</label>&nbsp;<input id="input_application_servername" name="servername" type="text" maxlength="20"/>
+                                                        </td>
+                                                    </tr>
+                                                	<tr>
+                                                    	<td>
+                                                        	<b>OR</b>
+                                                        </td>
+                                                    </tr>
+                                                	<tr>
+                                                    	<td>
+                                                        	<label>Our Domain Name:</label>&nbsp;<input id="input_application_servername2" name="servername2" type="text" maxlength="20"/>.djangocloud.vyperlogix.com
+                                                        </td>
+                                                    </tr>
+                                                	<tr>
+                                                    	<td>
+                                                            <NOBR><button onclick="handle_submit_application_details();">(SAVE)</button>&nbsp;<button onclick="handle_cancel_application_details();">(X)</button></NOBR>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    	<td>
+                                            <div id="div_remove_application_button">
+                                                <button id="btn_remove_application" onclick="handle_drop_application_from_list();" title="REMOVE">(-)</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+        </tr>
+    </table>   
+{% endif %}
+{% endblock %}

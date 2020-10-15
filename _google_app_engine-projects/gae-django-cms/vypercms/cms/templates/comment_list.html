@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Comment list" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Comment list" %}</h1>
+
+  {% for each in object_list %}
+  <fieldset style="width:600px; margin:0 auto; padding:0px;FLOAT: left;">
+  <legend>
+  {{ forloop.revcounter }} <a name="{{ each.key.id }}"></a>&clubs; <a href="{% if each.site %}{{ each.site }}{% else %}/{% endif %}" target="_blank">{{ each.name }}</a> @ {{ each.EST_time|date:"Y-m-d H:i:s" }}
+  {% if user.is_superuser %}
+  email:{{ each.email }}
+  <a href="{% url cms.views.delete_comment key=each.key %}" onclick="return p_del();">{% trans "Delete" %}</a><br/>
+  {% endif %}
+  </legend>
+  {{ each.content }}<br/>
+  </fieldset>
+  {% endfor %}
+
+<div style="CLEAR: both;"></div>
+<div>
+  {% if has_previous %}
+    <a href="{% url cms.views.list_comment %}?page={{ previous }}">&lt;-{% trans "Previous" %}</a>
+  {% endif %}
+  {% if has_next %}
+    <a href="{% url cms.views.list_comment %}?page={{ next }}">{% trans "Next" %}-&gt;</a>
+  {% endif %}
+</div>
+<br/>
+{% endblock %}
+
+{% block same_cat %}{% endblock %}
+
+{% block random_cat %}
+&clubs; {{ random_cate_arts.0.cate.name }}<br/>
+{% for each in random_cate_arts %}
+&nbsp;&bull;&nbsp;<a href="{% url cms.views.show_article keyid=each.key.id %}">{{ each.title }}</a><br/>
+{% endfor %}
+{% endblock %}
+
+{% block links %}{% endblock %}

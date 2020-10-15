@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>{{ the_title }} | Login</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<META HTTP-EQUIV="Expires" CONTENT="{{ EXPIRES_ON }}">
+<META HTTP-EQUIV="Last-Modified" CONTENT="{{ MODIFIED_ON }}">
+<script src="{{ MEDIA_URL }}/prototype.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}/effects.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}/dragdrop.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}/controls.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}/application.js" type="text/javascript"></script>
+<style>
+{{ default_css }}
+</style>
+</head><body class="blank">
+	<div id="blank_container">
+	<div id="login_container">
+<img alt="Magma Design Automation, Inc." src="{{ IMAGES_URL }}magma_logo.gif" width="346" height="39">
+{{ FAILURE }}
+{{ CONTENT }}
+{{ BREADCRUMBS }}
+</div>
+<script type="text/javascript" charset="utf-8">
+	// Used to pass in the user's time, so we can display dates correctly. 
+	var expected_value = 12345;
+	setCookie('cookie_test', expected_value, '/');
+	var cookie = getCookie('cookie_test');
+	if (cookie != expected_value) {
+		alert('Please turn your cookies on to use this site.');
+	}
+
+	var currentTime = new Date();
+	$('contact_time').value = currentTime.getTimezoneOffset();
+</script>
+	</div>
+<script src="{{ MEDIA_URL }}/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1508721-1";
+urchinTracker();
+</script>
+		
+</body></html>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageBuilderCanvas 
+	xmlns="com.HAL.views.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" height="100%" initialize="onInitialize()" creationComplete="onInit()">
+	<mx:Script>
+		<![CDATA[
+			import com.HAL.views.events.ArchiveBuilderAcceptedEvent;
+			import mx.events.FileEvent;
+			import com.HAL.views.events.PackageBuilderCheckPackageNameEvent;
+			import com.HAL.utils.ArrayCollectionUtils;
+			import mx.collections.ArrayCollection;
+			import com.HAL.utils.StringUtils;
+			import mx.events.ToolTipEvent;
+			import mx.events.FlexEvent;
+			
+			[Event(name="archiveBuilderAccepted", type="com.HAL.views.events.ArchiveBuilderAcceptedEvent")]
+
+			public static const _packageFileExtension:String = '.EXE';
+
+			private var _knownValidPackages:ArrayCollection = new ArrayCollection();
+			
+			private var _fileListIsRefreshing:Boolean = false;
+			
+			private function postInitAcceptPackageButton():void {
+				this.btn_acceptPackage.label = StringUtils.replaceAll(this.btn_acceptPackage.label,'Package','Archive');
+				this.btn_acceptPackage.toolTip = StringUtils.replaceAll(this.btn_acceptPackage.toolTip,'Package','Archive');
+				this.btn_acceptPackage.toolTip = StringUtils.replaceAll(this.btn_acceptPackage.toolTip,'package','Archive');
+				this.btn_acceptPackage.addEventListener(MouseEvent.CLICK, onClickAcceptArchive);
+			}
+			
+			private function postInitFileListHBox():void {
+				this.hbox_filelist.toolTip = StringUtils.replaceAll(this.hbox_filelist.toolTip,'Package','Archive');
+				this.hbox_filelist.toolTip = StringUtils.replaceAll(this.hbox_filelist.toolTip,'package','Archive');
+			}
+			
+			private function postInitListGridToggleHeader():void {
+				this.listGrid.label_toggleHeader = StringUtils.replaceAll(this.listGrid.label_toggleHeader,'Package','Archive');
+				this.listGrid.label_toggleHeader = StringUtils.replaceAll(this.listGrid.label_toggleHeader,'package','Archive');
+			}
+
+			private function postInitListGridListWidget():void {
+				this.listGrid.listWidget.toolTip = StringUtils.replaceAll(this.listGrid.listWidget.toolTip,'Package','Archive');
+				this.listGrid.listWidget.toolTip = StringUtils.replaceAll(this.listGrid.listWidget.toolTip,'package','Archive');
+				this.listGrid.listWidget.toolTip = StringUtils.replaceAll(this.listGrid.listWidget.toolTip,'Archive list','Package list');
+			}
+
+			private function postInitListGridInputWidget():void {
+				this.listGrid.input_packageName.toolTip = StringUtils.replaceAll(this.listGrid.input_packageName.toolTip,'Package','Archive');
+				this.listGrid.input_packageName.toolTip = StringUtils.replaceAll(this.listGrid.input_packageName.toolTip,'package','Archive');
+			}
+
+			private function postInitAddToButton():void {
+				this.btn_addToPackage.toolTip = StringUtils.replaceAll(this.btn_addToPackage.toolTip,'Package','Archive');
+				this.btn_addToPackage.toolTip = StringUtils.replaceAll(this.btn_addToPackage.toolTip,'package','Archive');
+			}
+
+			private function postInitRemoveFromButton():void {
+				this.btn_removeFromPackage.toolTip = StringUtils.replaceAll(this.btn_removeFromPackage.toolTip,'Package','Archive');
+				this.btn_removeFromPackage.toolTip = StringUtils.replaceAll(this.btn_removeFromPackage.toolTip,'package','Archive');
+			}
+
+			private function refreshFileList():void {
+				if (this._fileListIsRefreshing == true) {
+					this.fileList1.callLater(this.fileList1.refresh);
+					this._fileListIsRefreshing = false;
+				}
+			}
+			
+			private function requestFileListRefresh():void {
+				if (this._fileListIsRefreshing == false) {
+					this.fileList1.callLater(this.refreshFileList);
+					this._fileListIsRefreshing = true;
+				}
+			}
+			
+			private function callbackArchiveBuilderCheckPackageName(obj:Object):void {
+				var fileExists:Boolean = obj.item;
+				if (fileExists) {
+					this._knownValidPackages.addItem(obj.source);
+					this.fileList1.callLater(this.requestFileListRefresh);
+				}
+			}
+			
+			private function filterPackages(file:File):Boolean {
+				if (file.isDirectory) {
+					return true;
+				} else if (file.name.toUpperCase().indexOf(PackageBuilderCanvas._packageFileExtension) > -1) {
+					var i:int = ArrayCollectionUtils.findIndexOfItem(this._knownValidPackages,'nativePath',file.nativePath);
+					if (i == -1) {
+						this.dispatchEvent(new PackageBuilderCheckPackageNameEvent(PackageBuilderCheckPackageNameEvent.TYPE_PACKAGE_BUILDER_CHECK_PACKAGE_NAME,file.nativePath,this.callbackArchiveBuilderCheckPackageName));
+					}
+					var j:int = ArrayCollectionUtils.findIndexOfItem(this.listGrid.list_dataProvider, 'nativePath', file.nativePath);
+					var isAlreadySelected:Boolean = (j > -1);
+					return ( (i > -1) && (isAlreadySelected == false) );
+				}
+				return false;
+			}
+			
+			private function onFileListDirectoryChange(event:FileEvent):void {
+			}
+			
+			private function refreshAddRemoveButtonsFunc():void {
+				var aFile:File = File(this.fileList1.selectedItem);
+				if (aFile != null) {
+					this.btn_addToPackage.enabled = (this.isPossiblyPackage(aFile) == true);
+					var errorString:String = (((this.btn_addToPackage.enabled) || (aFile.isDirectory)) ? '' : 'Cannot add "' + aFile.nativePath + '" to the Archive you are building because' + ((aFile.isDirectory) ? ' the selected item is a Directory and at this time only Package files (.PKG) can be added to an Archive' : ((this.isPossiblyPackage(aFile) == false) ? ' because the selected item is known to be something other than a Package and at this time only Packages can be added to an Archive' : ' due to an unknown problem')) + '.');
+					this.errorString = '';
+					this.callLater(this.showNotice, [errorString]);
+				}
+			}
+			
+			private function onClickAcceptArchive(event:MouseEvent):void {
+				this.dispatchEvent(new ArchiveBuilderAcceptedEvent(ArchiveBuilderAcceptedEvent.TYPE_ARCHIVE_BUILDER_ACCEPTED, this.listGrid.input_packageName.text, this.listGrid.list_dataProvider.source));
+			}
+			
+			private function postInitFileListWidget():void {
+				this.fileList1.filterFunction = this.filterPackages;
+				this.fileList1.addEventListener(FileEvent.DIRECTORY_CHANGE, onFileListDirectoryChange);
+			}
+			
+			private function postInit():void {
+				this.btn_acceptPackage.callLater(this.postInitAcceptPackageButton);
+				this.hbox_filelist.callLater(this.postInitFileListHBox);
+				this.listGrid.callLater(this.postInitListGridToggleHeader);
+				this.listGrid.listWidget.callLater(this.postInitListGridListWidget);
+				this.listGrid.input_packageName.callLater(this.postInitListGridInputWidget);
+				this.btn_addToPackage.callLater(this.postInitAddToButton);
+				this.btn_removeFromPackage.callLater(this.postInitRemoveFromButton);
+				this.fileList1.callLater(this.postInitFileListWidget);
+			}
+			
+			private function onInit():void {
+				this.callLater(postInit);
+			}
+			
+			private function onInitialize():void {
+				super.packageFileExtension = _packageFileExtension;
+				super.refreshAddRemoveButtons = this.refreshAddRemoveButtonsFunc;
+			}
+		]]>
+	</mx:Script>
+</PackageBuilderCanvas>

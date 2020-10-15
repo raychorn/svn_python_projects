@@ -1,0 +1,68 @@
+archive: None -> <Module archive J:\@Research\@Python\PyInstaller 1.5.1\pyinstaller-1.5.1\archive.pyc imports=[('marshal', 0, 0, -1), ('struct', 0, 0, -1), ('imp', 0, 0, -1), ('sys', 0, 0, -1), ('iu', 0, 0, -1), ('imp', 1, 0, -1), ('os', 1, 1, -1), ('zlib', 1, 1, -1), ('AES', 1, 1, -1), ('os', 1, 1, -1)] binaries=[] datas=[]>
+marshal: None -> <Module marshal None imports=[] binaries=[] datas=[]>
+struct: None -> <Module struct C:\Python25\lib\struct.pyc imports=[('_struct', 0, 0, -1), ('_struct.Struct', 0, 0, -1), ('_struct.error', 0, 0, -1)] binaries=[] datas=[]>
+imp: None -> <Module imp None imports=[] binaries=[] datas=[]>
+sys: None -> <Module sys None imports=[] binaries=[] datas=[]>
+iu: None -> <Module iu J:\@Research\@Python\PyInstaller 1.5.1\pyinstaller-1.5.1\iu.pyc imports=[('sys', 0, 0, -1), ('imp', 0, 0, -1), ('marshal', 0, 0, -1), ('zipimport', 0, 0, -1), ('win32api', 1, 0, -1), ('__builtin__', 1, 0, -1), ('posix', 1, 1, -1), ('posix.stat', 1, 1, -1), ('posix.getcwd', 1, 1, -1), ('posix.environ', 1, 1, -1), ('posix.listdir', 1, 1, -1), ('nt', 1, 1, -1), ('nt.stat', 1, 1, -1), ('nt.getcwd', 1, 1, -1), ('nt.environ', 1, 1, -1), ('nt.listdir', 1, 1, -1), ('dos', 1, 1, -1), ('dos.stat', 1, 1, -1), ('dos.getcwd', 1, 1, -1), ('dos.environ', 1, 1, -1), ('dos.listdir', 1, 1, -1), ('os2', 1, 1, -1), ('os2.stat', 1, 1, -1), ('os2.getcwd', 1, 1, -1), ('os2.environ', 1, 1, -1), ('os2.listdir', 1, 1, -1), ('mac', 1, 1, -1), ('mac.stat', 1, 1, -1), ('mac.getcwd', 1, 1, -1), ('mac.environ', 1, 1, -1), ('mac.listdir', 1, 1, -1)] binaries=[] datas=[]>
+os: None -> <Module os C:\Python25\lib\os.pyc imports=[('sys', 0, 0, -1), ('errno', 0, 0, -1), ('posix', 0, 1, -1), ('posix.*', 0, 1, -1), ('posix', 0, 1, -1), ('posix._exit', 0, 1, -1), ('posixpath', 0, 1, -1), ('posix', 0, 1, -1), ('nt', 0, 1, -1), ('nt.*', 0, 1, -1), ('nt', 0, 1, -1), ('nt._exit', 0, 1, -1), ('ntpath', 0, 1, -1), ('nt', 0, 1, -1), ('os2', 0, 1, -1), ('os2.*', 0, 1, -1), ('os2', 0, 1, -1), ('os2._exit', 0, 1, -1), ('ntpath', 0, 1, -1), ('os2emxpath', 0, 1, -1), ('_emx_link', 0, 1, -1), ('_emx_link.link', 0, 1, -1), ('os2', 0, 1, -1), ('mac', 0, 1, -1), ('mac.*', 0, 1, -1), ('mac', 0, 1, -1), ('mac._exit', 0, 1, -1), ('macpath', 0, 1, -1), ('mac', 0, 1, -1), ('ce', 0, 1, -1), ('ce.*', 0, 1, -1), ('ce', 0, 1, -1), ('ce._exit', 0, 1, -1), ('ntpath', 0, 1, -1), ('ce', 0, 1, -1), ('riscos', 0, 1, -1), ('riscos.*', 0, 1, -1), ('riscos', 0, 1, -1), ('riscos._exit', 0, 1, -1), ('riscospath', 0, 1, -1), ('riscos', 0, 1, -1), ('os.path', 0, 0, -1), ('os.path.curdir', 0, 0, -1), ('os.path.pardir', 0, 0, -1), ('os.path.sep', 0, 0, -1), ('os.path.pathsep', 0, 0, -1), ('os.path.defpath', 0, 0, -1), ('os.path.extsep', 0, 0, -1), ('os.path.altsep', 0, 0, -1), ('os.path.devnull', 0, 0, -1), ('UserDict', 0, 1, -1), ('riscosenviron', 0, 1, -1), ('riscosenviron._Environ', 0, 1, -1), ('copy_reg', 0, 0, -1), ('os.path', 1, 0, -1), ('os.path.join', 1, 0, -1), ('os.path.isdir', 1, 0, -1), ('os.path.islink', 1, 0, -1), ('popen2', 1, 0, -1), ('popen2', 1, 0, -1), ('popen2', 1, 0, -1)] binaries=[] datas=[]>
+zlib: None -> <Module zlib None imports=[] binaries=[] datas=[]>
+AES: None -> None
+  DEL AES
+_struct: None -> <Module _struct None imports=[] binaries=[] datas=[]>
+zipimport: None -> <Module zipimport None imports=[] binaries=[] datas=[]>
+win32api: None -> <Module win32api C:\Python25\lib\site-packages\win32\win32api.pyd imports=[] binaries=[] datas=[]>
+__builtin__: None -> <Module __builtin__ None imports=[] binaries=[] datas=[]>
+posix: None -> None
+  DEL posix
+posix: None -> None
+  DEL posix
+posix: None -> None
+  DEL posix
+posix: None -> None
+  DEL posix
+posix: None -> None
+  DEL posix
+nt: None -> <Module nt None imports=[] binaries=[] datas=[]>
+errno: None -> <Module errno None imports=[] binaries=[] datas=[]>
+posix: None -> None
+  DEL posix
+posix: None -> None
+  DEL posix
+posix: None -> None
+  DEL posix
+posix: None -> None
+  DEL posix
+posixpath: None -> <Module posixpath C:\Python25\lib\posixpath.pyc imports=[('os', 0, 0, -1), ('stat', 0, 0, -1), ('pwd', 1, 1, -1), ('pwd', 1, 1, -1), ('re', 1, 1, -1)] binaries=[] datas=[]>
+posix: None -> None
+  DEL posix
+ntpath: None -> <Module ntpath C:\Python25\lib\ntpath.pyc imports=[('os', 0, 0, -1), ('stat', 0, 0, -1), ('sys', 0, 0, -1), ('nt', 0, 0, -1), ('nt._getfullpathname', 0, 0, -1), ('string', 1, 0, -1)] binaries=[] datas=[]>
+os2emxpath: None -> <Module os2emxpath C:\Python25\lib\os2emxpath.pyc imports=[('os', 0, 0, -1), ('stat', 0, 0, -1), ('string', 1, 0, -1)] binaries=[] datas=[]>
+_emx_link: None -> None
+  DEL _emx_link
+_emx_link: None -> None
+  DEL _emx_link
+UserDict: None -> <Module UserDict C:\Python25\lib\UserDict.pyc imports=[('copy', 1, 0, -1)] binaries=[] datas=[]>
+copy_reg: None -> <Module copy_reg C:\Python25\lib\copy_reg.pyc imports=[('types', 0, 0, -1), ('types.ClassType', 0, 0, -1)] binaries=[] datas=[]>
+popen2: None -> <Module popen2 C:\Python25\lib\popen2.pyc imports=[('os', 0, 0, -1), ('sys', 0, 0, -1)] binaries=[] datas=[]>
+stat: None -> <Module stat C:\Python25\lib\stat.pyc imports=[] binaries=[] datas=[]>
+pwd: None -> None
+  DEL pwd
+pwd: None -> None
+  DEL pwd
+re: None -> <Module re C:\Python25\lib\re.pyc imports=[('sys', 0, 0, -1), ('sre_compile', 0, 0, -1), ('sre_parse', 0, 0, -1), ('copy_reg', 0, 0, -1), ('sre_constants', 1, 0, -1), ('sre_constants.BRANCH', 1, 0, -1), ('sre_constants.SUBPATTERN', 1, 0, -1)] binaries=[] datas=[]>
+sre_compile: None -> <Module sre_compile C:\Python25\lib\sre_compile.pyc imports=[('_sre', 0, 0, -1), ('sys', 0, 0, -1), ('sre_constants', 0, 0, -1), ('sre_constants.*', 0, 0, -1), ('array', 1, 0, -1), ('sre_parse', 1, 1, -1)] binaries=[] datas=[]>
+sre_parse: None -> <Module sre_parse C:\Python25\lib\sre_parse.pyc imports=[('sys', 0, 0, -1), ('sre_constants', 0, 0, -1), ('sre_constants.*', 0, 0, -1)] binaries=[] datas=[]>
+sre_constants: None -> <Module sre_constants C:\Python25\lib\sre_constants.pyc imports=[] binaries=[] datas=[]>
+_sre: None -> <Module _sre None imports=[] binaries=[] datas=[]>
+array: None -> <Module array None imports=[] binaries=[] datas=[]>
+types: None -> <Module types C:\Python25\lib\types.pyc imports=[('sys', 0, 0, -1), ('_types', 0, 0, -1)] binaries=[] datas=[]>
+_types: None -> <Module _types None imports=[] binaries=[] datas=[]>
+string: None -> <Module string C:\Python25\lib\string.pyc imports=[('re', 0, 0, -1), ('strop', 0, 0, -1), ('strop.maketrans', 0, 0, -1), ('strop.lowercase', 0, 0, -1), ('strop.uppercase', 0, 0, -1), ('strop.whitespace', 0, 0, -1)] binaries=[] datas=[]>
+strop: None -> <Module strop None imports=[] binaries=[] datas=[]>
+copy: None -> <Module copy C:\Python25\lib\copy.pyc imports=[('types', 0, 0, -1), ('copy_reg', 0, 0, -1), ('copy_reg.dispatch_table', 0, 0, -1), ('org.python.core', 0, 0, -1), ('org.python.core.PyStringMap', 0, 0, -1), ('repr', 1, 0, -1), ('repr', 1, 0, -1), ('sys', 1, 1, -1)] binaries=[] datas=[]>
+org: None -> None
+  DEL org
+org: None -> None
+  DEL org
+repr: None -> <Module repr C:\Python25\lib\repr.pyc imports=[('__builtin__', 0, 0, -1), ('itertools', 0, 0, -1), ('itertools.islice', 0, 0, -1)] binaries=[] datas=[]>
+itertools: None -> <Module itertools None imports=[] binaries=[] datas=[]>

@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+	function onclick_join_button() {
+		window.location.href = 'join.html';
+	}
+	
+	function onclick_remember_me_text() {
+		var target = $('#cb_remember_me');
+		if ( (target) && (target.length > 0) ) {
+			if (target.attr('checked') == 'checked') {
+				target.removeAttr('checked');
+			} else {
+				target.attr('checked','checked');
+			}
+		}
+	}
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block include-css %}'/static/main.css'{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+<!-- Slide #1 -->
+            <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="top" id="main_content_holder">
+                
+                   <div id="main_background">
+                   		<div id="main_sign_in_holder">
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+                        LOG IN &nbsp; 
+                        <input id="input_login_enter_email" type="text" title="Enter Your Email" size="30" /><br/><br/>
+                        <input id="input_login_enter_password" type="text" title="Enter Your Password" size="30" /><br/><br/>
+                        <input name="" id="cb_remember_me" type="checkbox" value="" class="main_checkbox" /><span class="main_checkbox" onclick="onclick_remember_me_text();">Remember Me</span>&nbsp; &nbsp; &nbsp;  
+                        <input name="Go" type="button" value="Go" class="main_button" onclick="not_yet_implemented();"/>&nbsp; 
+{% endif %}
+                        </div>
+
+<div class="logos">
+<img src="/static/images/logo.png" width="100" height="101" />
+</div>
+                        <div style="clear: both"></div>
+                   
+                   <div id="main_sign_in_holder2">
+                        Cargo Chief, uniquely consolidating freight brokers, load boards and other consolidators of trucking services, with the greatest reach, offers the best value in trucking with improved quality of service for shippers while assisting carriers to fill the 28% of trucks that are running empty today.
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+                        <span class="join_button"><input name="Join" type="button" value="Join" class="main_button" onclick="onclick_join_button()" /></span>
+{% endif %}
+					</div>
+
+                   </div>
+                <div style="clear: both; padding-top:25px;"></div>
+                        <div id="shipment_container">              
+                                        
+                                <div class="bubble">
+                                <div class="rectangle"><div class="header_font">Got A Shipment Ready To Go?</div></div>
+                                <div class="triangle-l"></div>
+                                
+                                <div class="info">
+                                
+                                <p>
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+                                <div class="left_box">
+                              <input id="input_from_zip" type="text" title="From ZIP" size="20" /><br/><br/>
+                              <input id="input_to_zip" type="text" title="To ZIP" size="20" /><br/><br/>
+                              <input name="" type="button" value="GET FREE QUOTE" class="main_button_orange" onclick="not_yet_implemented();"/>
+                              </div>
+{% endif %}
+                              <div class="right_box"><img src="/static/images/pallets.png" width="200" height="126" /></div>
+                                </p>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+{% if IS_PRODUCTION_WEB_SERVER %}
+                                <BR/>
+                                <BR/>
+{% endif %}
+{% if isUsingAndroid %}
+                                <BR/>
+                                <BR/>
+{% endif %}
+{% if isUsingChromeOrWebKit %}
+                                <BR/>
+                                <BR/>
+{% endif %}
+                                	<UL style="list-style-type:square">
+                                        <li ><NOBR>Save 40%+</NOBR></li>
+                                        <li ><NOBR>Best chance to get the empty backhaul</NOBR></li>
+                                        <li ><NOBR>Real Time Location Status; LTL & TL</NOBR></li>
+                                	</UL>
+                                <br/>
+                                
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+                                <center>
+                                    <a href="#" class="anchor_learn_more" onclick="not_yet_implemented();">Learn More</a>
+                                </center>
+{% endif %}
+                                
+                                </div>
+                                </div>
+                        </div> 
+                         <div id="filltruck_container">              
+                                        
+                                <div class="bubble">
+                                <div class="rectangle"><div class="header_font">Need to Fill Your Truck?</div></div>
+                                <div class="triangle-l"></div>
+                                
+                                <div class="info">
+                                
+                                <p>
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+                                <div class="left_box_right">
+                              <input name="" type="button" value="FIND A LOAD" class="main_button_orange" onclick="not_yet_implemented();"/>
+                              </div>
+{% endif %}
+                              <div class="right_box_right"><img src="/static/images/truck.png" width="300" height="117" /></div>
+                                </p>
+                                <BR/>
+                                <BR/>
+{% if IS_PRODUCTION_WEB_SERVER %}
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+{% endif %}
+                                <BR/>
+                                <BR/>
+{% endif %}
+{% if isUsingAndroid %}
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+{% endif %}
+{% if isUsingOpera %}
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+{% endif %}
+{% if isUsingFireFox %}
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+{% endif %}
+{% if isUsingChromeOrWebKit %}
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+                                <BR/>
+{% endif %}
+                                	<UL style="list-style-type:square">
+                                        <li ><NOBR>Book wasted space</NOBR></li>
+                                        <li ><NOBR>A 2/3 full truck, consumes 95% of the costs</NOBR></li>
+                                        <li ><NOBR>Efficiently get profitable small accounts</NOBR></li>
+                                	</UL>
+                                
+                                <br/>
+                                
+{% if IS_NOT_PRODUCTION_WEB_SERVER %}
+                                <center>
+                                    <a href="#" class="anchor_learn_more" onclick="not_yet_implemented();">Learn More</a>
+                                </center>
+{% endif %}
+                                
+                                </div>
+                                </div>
+                        </div>
+                </td>
+              </tr>
+            </table>   
+{% endblock %}

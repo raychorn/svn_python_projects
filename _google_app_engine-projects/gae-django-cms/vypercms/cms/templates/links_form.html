@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Create links" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Create links" %}</h1>
+<a href="{% url cms.views.list_links %}">{% trans "Back to listing" %}</a>
+
+<form action="" method="post">
+  <table>
+    {{ form.as_table }}
+    <tr><td colspan="2">
+      <input type="submit"
+        value="{% if object %}{% trans 'Apply changes' %}{% else %}{% trans 'Create' %}{% endif %}" />
+    </td></tr>
+  </table>
+</form>
+
+{% endblock %}

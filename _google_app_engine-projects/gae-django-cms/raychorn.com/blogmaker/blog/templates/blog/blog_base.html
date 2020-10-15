@@ -1,0 +1,100 @@
+{% load blog_extras %}
+{% load prefab_tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{% block "browsertitle" %}{% endblock %} - SiteName</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% setting 'MEDIA_URL' %}css/blog.css" />
+{% block "extrastyle" %}
+{% endblock %}
+<link rel="alternate" title="Latest Posts" href="{% setting 'BLOG_ROOT' %}feeds/posts/" type="application/rss+xml" />
+<link rel="alternate" title="Latest Comments" href="{% setting 'BLOG_ROOT' %}feeds/comments/" type="application/rss+xml" />
+</head>
+
+<body class="base">
+<table class="main" cellpadding="0" cellspacing="0">
+<!-- headers begin -->
+<tr><div class="branding"><a href="{% setting 'BLOG_ROOT' %}">SiteName and Branding</a></div>
+</tr>
+<!-- headers end -->
+
+<!-- left menus start -->
+<tr>
+<td class='left_side' valign='top'>
+
+{% include "blog/includes/recent_posts.html" %}
+
+{% block "taglist" %}
+{% endblock %}
+
+</td>
+<!-- left menus end -->
+
+<!-- main content begin -->
+<td class='center' valign='top'> 
+<div class="subcenter">
+{% include "blog/includes/blog_nav.html" %}
+
+<div class="content_body">
+
+{% block "contentbody" %}
+{% endblock %}
+
+</div>
+</div>
+</td>
+<!-- main content end -->
+
+
+<!-- right menus begin -->
+<td class='right_side' valign='top'>
+
+{% block "blog_search" %}
+{% include "blog/includes/blog_search.html" %}
+{% endblock %}
+
+<!-- feeds submenu begin -->
+<div class="right_submenu_half">
+<div class='menu_header'>Blog Feeds</div>
+<div class="menu_content">
+<a href="{% setting 'BLOG_ROOT' %}feeds/posts/" title="Latest Posts" class='menu_content'>
+<img src='{% setting 'MEDIA_URL' %}images/rss-button.gif' border='0' height='11' alt='rss'></img>
+ Posts
+</a>
+<br />
+<a href="{% setting 'BLOG_ROOT' %}feeds/comments/" title="Latest Comments" class='menu_content'>
+<img src='{% setting 'MEDIA_URL' %}images/rss-button.gif' border='0' height='11' alt='rss'></img>
+ Comments
+</a>
+</div>
+</div>
+</div>
+<!-- feeds submenu end -->
+
+{% get_yearly_archive as archive_list %}
+{% if archive_list %}
+<!-- blog archive submenu begin -->
+<div class="right_submenu_half">
+<div class='menu_header'>Blog Archives</div>
+<div class='menu_content'>
+{% for d in archive_list %}
+<a href="{% setting 'BLOG_ROOT' %}{{ d.year }}/{{ d|date:"m" }}/" class='menu_content'>{{ d|date:"M Y" }}
+</a>
+<br />
+{% endfor %}
+</div>
+</div>
+</div>
+<!-- blog archive submenu end -->
+{% endif %}
+</td>
+</tr>
+</table>
+
+</body>
+</html>

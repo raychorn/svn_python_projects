@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title %}PDFXporter v{{version}}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+var requiredMajorVersion = 10;
+var requiredMinorVersion = 1;
+var requiredRevision = 0;
+</script>
+<script src="{{insecure_endpoint}}/static/air-badge/AC_RunActiveContent.js" type="text/javascript"></script>
+<script language="JavaScript1.2" type="text/javascript">
+var hasReqestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+</script>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block include-css %}'/static/css.css'{% endblock %}
+
+{% block container %}
+<div class="align-left">
+	<p>This is a pre-Alpha Trial Release of PDFXporter v{{version}} (Windows Only) produced and marketed by 
+		<a href="http://vyperlogix.com/pdfxporter/"><b>Vyper Logix Corp.</b></a>
+	.</p>
+	<p>Click the <a href="http://downloads.vyperlogix.com/pdfxporter/enterprise/PDFXporter.exe" target="_top">Download Link</a> to get started with the Enterprise Version.</p>
+	<p>Click the Installation Badge below to get started with the Personal Version (you will be able to upgrade later if you wish).</p>
+<script language="JavaScript1.2" type="text/javascript">
+if (hasReqestedVersion) {
+	AC_FL_RunContent(
+		'codebase','http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab',
+		'width','217',
+		'height','180',
+		'id','badge',
+		'align','middle',
+		'src','{{insecure_endpoint}}/static/air-badge/badge',
+		'quality','high',
+		'bgcolor','#FFFFFF',
+		'name','badge',
+		'allowscriptaccess','all',
+		'pluginspage','http://www.macromedia.com/go/getflashplayer',
+		'flashvars','appname=PDFXporter Personal&appurl=http://downloads.vyperlogix.com/pdfxporter/personal/PDFXporter.air&airversion=2.5&imageurl={{insecure_endpoint}}/static/air-badge/sample.jpg',
+		'movie','{{insecure_endpoint}}/static/air-badge/badge' ); 
+		//end AC code
+} else {  // flash is too old or we can't detect the plugin
+	var alternateContent = '<table id="messageTable"><tr><td>'
+	+ 'This application requires the following be installed:<ol>'
+	+ '<li><a href="http://adobe.com/go/getair/">Adobe&#174; AIR&#8482; Runtime</a></li>'
+	+ '<li><a href="{{insecure_endpoint}}/download-sir/PDFXporter.air">PDFXporter Personal</a></li>'
+	+ '</ol>Please click on each link in the order above to complete the installation process.</td></tr></table>';
+	document.write(alternateContent);  // insert non-flash content
+}
+</script>
+	<p>The pre-Alpha Trial Release of PDFXporter v{{version}} allows you to test certain functions of PDFXporter however future releases will do the following:
+	<UL>
+		<LI>Upload Bank Statement PDF Documents from your Bank.</LI>
+		<LI>Download Data in the form of the following:
+			<UL>
+				<LI>.XLS</LI>
+				<LI>.CSV</LI>
+				<LI>Reports (Income and Expense)
+					<UL>
+						<LI>Support Documentation for yoru IRS Tax Filings</LI>
+					</UL>
+				</LI>
+				<LI>Charts</LI>
+				<LI>Graphs</LI>
+			</UL>
+		</LI>
+		<LI>Itemized Income and Expense Data Elements.</LI>
+		<LI>Detailed PDF Reports for an entire Tax Year or any Time Period.</LI>
+		<LI>Cloud-based Database of your Bank Statement PDF Documents.</LI>
+	</UL>
+	</p>
+	<p>Click the <a href="http://downloads.vyperlogix.com/pdfxporter/enterprise/PDFXporter.exe" target="_top">Download Link</a> to get started with the Enterprise Version.</p>
+</div>
+
+<noscript>
+<table id="messageTable">
+<tr>
+	<td>
+	This application requires the following be installed:
+	<ol>
+		<li><a href="http://adobe.com/go/getair/">Adobe&#174; AIR&#8482; Runtime</a></li>
+		<li><a href="http://downloads.vyperlogix.com/pdfxporter/personal/PDFXporter.air">PDFXporter Personal</a></li>
+	</ol>
+	Please click on each link in the order above to complete the installation process.
+	</td>
+</tr>
+</table>
+</noscript>
+
+<div id="messages">
+<p align="left">{{ message }}</p>
+</div>
+
+<div id="warning3" class="align-center">
+	<small>Please email <a href="mailto:pdfxporter.support@vyperlogix.com" class="smarterwiki-linkify">PDFXporter Support Department</a> if you are having problems with the site.<br>
+	Cookies and JavaScript must be enabled.</small>
+</div>
+{% endblock %}

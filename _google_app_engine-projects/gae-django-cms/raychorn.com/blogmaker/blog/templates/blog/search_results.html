@@ -1,0 +1,33 @@
+{% comment %} 
+Copyright (c) 2006-2007, PreFab Software Inc.
+
+Copyright (c) 2006, Andrew Gwozdziewycz <apgwoz@gmail.com>
+All rights reserved. 
+{% endcomment %}
+
+
+{% extends "blog/blog_base.html" %}
+
+{% load blog_extras %}
+
+{% block "browsertitle" %}
+Search results containing 
+{% for term in query %}
+{% if not forloop.last %}
+'{{ term }}',
+{% else %}
+{% if forloop.last %}
+'{{ term }}'
+{% endif %}{% endif %}
+{% endfor %}
+{% endblock %}
+
+{% block "contentbody" %}
+{% for object in object_list %}
+{% include "blog/includes/post.html" %}
+{% endfor %}
+{% endblock %}
+
+{% block "taglist" %}
+{% include "blog/includes/popular_tags.html" %}
+{% endblock %}

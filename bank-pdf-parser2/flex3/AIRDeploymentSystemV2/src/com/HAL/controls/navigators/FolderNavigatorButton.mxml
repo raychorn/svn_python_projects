@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="{this.btn_openBrowser.height}">
+	<mx:constraintRows>
+		<mx:ConstraintRow id="Canvas1_row1" height="74%"/>
+		<mx:ConstraintRow id="Canvas1_row2" height="26%"/>
+	</mx:constraintRows>
+	<mx:Script>
+		<![CDATA[
+			import com.HAL.controls.navigators.events.FolderNavigatorClosedEvent;
+			import com.HAL.Alert.AlertPopUp;
+			
+			[Bindable]
+			private var _isClosed:Boolean = true;
+
+			[Bindable]
+			private var _proposedHomeFolder:String = '';
+
+			[Bindable]
+			private var _proposedHomeFolderTooltip:String = '';
+
+			private const _defaultHomeFolderTooltip:String = '<br><br>Click this button a second time to close the folder browser and lock-in the selected folder as the new Home Folder.';
+ 
+			[Event(name="folderNavigatorClosed", type="com.HAL.controls.navigators.events.FolderNavigatorClosedEvent")]
+			
+			public function set isClosed(isClosed:Boolean):void {
+				this._isClosed = isClosed;
+			}
+			
+			public function get isClosed():Boolean {
+				return this._isClosed;
+			}
+			public function set proposedHomeFolderTooltip(proposedHomeFolderTooltip:String):void {
+				this._proposedHomeFolderTooltip = proposedHomeFolderTooltip;
+			}
+			
+			public function get proposedHomeFolderTooltip():String {
+				return ((this.isClosed == false) ? this._proposedHomeFolderTooltip : 'Click this button to open the Folder Navigator to navigate to another home folder or to locate other Archives and Packages.  ' + this._defaultHomeFolderTooltip);
+			}
+			
+			public function set proposedHomeFolder(folderName:String):void {
+				this._proposedHomeFolder = folderName;
+				this._proposedHomeFolderTooltip = ((this._proposedHomeFolder.length > 0) ? '<br><br>At the moment, the new Home Path of "' + this._proposedHomeFolder + '" would be used if this button is clicked now.' : '');
+			}
+			
+			public function get proposedHomeFolder():String {
+				return this._proposedHomeFolder;
+			}
+
+			private function onClickOpenBrowser():void {
+				var isBaseState:Boolean = false;
+				if (this.parentApplication.currentState == null) {
+					isBaseState = true;
+				} else if ( (this.parentApplication.currentState.length == 0) || (this.parentApplication.currentState == this.parentApplication.baseState) ) {
+					isBaseState = true;
+				}
+				this.parentApplication.currentState = ((isBaseState) ? 'FolderNavigatorState' : this.parentApplication.baseState);
+				if ( (this.parentApplication.currentState == null) || (this.parentApplication.currentState == this.parentApplication.baseState) ) {
+					this.isClosed = true;
+					this.dispatchEvent(new FolderNavigatorClosedEvent(FolderNavigatorClosedEvent.TYPE_FOLDER_NAVIGATOR_CLOSED));
+				} else {
+					this.isClosed = false;
+				}
+			} 
+		]]>
+	</mx:Script>
+	<mx:Button x="0" y="0" id="btn_openBrowser" width="21" height="21" toolTip="{this.proposedHomeFolderTooltip}" icon="@Embed(source='assets/images/file_folders_cabinet.png')" click="onClickOpenBrowser()"/>
+</mx:Canvas>

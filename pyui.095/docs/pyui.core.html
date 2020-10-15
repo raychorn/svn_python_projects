@@ -1,0 +1,80 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pyui.core</title>
+<style type="text/css"><!--
+TT { font-family: lucidatypewriter, lucida console, courier }
+--></style></head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pyui.html"><font color="#ffffff">pyui</font></a>.core</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/projects/pyuicvs/pyui/core.py">c:\projects\pyuicvs\pyui\core.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;PyUI<br>
+#&nbsp;Copyright&nbsp;(C)&nbsp;2001-2002&nbsp;Sean&nbsp;C.&nbsp;Riley<br>
+#&nbsp;<br>
+#&nbsp;This&nbsp;library&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or<br>
+#&nbsp;modify&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;version&nbsp;2.1&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+#&nbsp;License&nbsp;as&nbsp;published&nbsp;by&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation.<br>
+#&nbsp;<br>
+#&nbsp;This&nbsp;library&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+#&nbsp;but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+#&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the&nbsp;GNU<br>
+#&nbsp;Lesser&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+#&nbsp;<br>
+#&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+#&nbsp;License&nbsp;along&nbsp;with&nbsp;this&nbsp;library;&nbsp;if&nbsp;not,&nbsp;write&nbsp;to&nbsp;the&nbsp;Free&nbsp;Software<br>
+#&nbsp;Foundation,&nbsp;Inc.,&nbsp;59&nbsp;Temple&nbsp;Place,&nbsp;Suite&nbsp;330,&nbsp;Boston,&nbsp;MA&nbsp;&nbsp;02111-1307&nbsp;&nbsp;USA</tt></p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pyui.colors.html">pyui.colors</a><br>
+<a href="pyui.themes.comic.html">pyui.themes.comic</a><br>
+<a href="pyui.themes.future.html">pyui.themes.future</a><br>
+</td><td width="25%" valign=top><a href="pyui.themes.green.html">pyui.themes.green</a><br>
+<a href="os.html">os</a><br>
+<a href="pyui.html">pyui</a><br>
+</td><td width="25%" valign=top><a href="string.html">string</a><br>
+<a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="pyui.themes.win2k.html">pyui.themes.win2k</a><br>
+</td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt><a name="-draw"><strong>draw</strong></a>()</dt><dd><tt>fills&nbsp;the&nbsp;background&nbsp;and&nbsp;draws&nbsp;the&nbsp;widgets.<br>
+(public)</tt></dd></dl>
+ <dl><dt><a name="-init"><strong>init</strong></a>(w, h, renderer<font color="#909090">='p3d'</font>, fullscreen<font color="#909090">=0</font>, title<font color="#909090">=''</font>)</dt><dd><tt>Initialize&nbsp;pyui.&nbsp;Will&nbsp;set&nbsp;to&nbsp;fullscreen&nbsp;if&nbsp;specified.&nbsp;default&nbsp;is&nbsp;to&nbsp;run&nbsp;in&nbsp;a&nbsp;window.<br>
+This&nbsp;will&nbsp;return&nbsp;a&nbsp;Desktop&nbsp;Object.<br>
+(public)</tt></dd></dl>
+ <dl><dt><a name="-loadPyuiImage"><strong>loadPyuiImage</strong></a>(filename)</dt><dd><tt>This&nbsp;loads&nbsp;an&nbsp;image&nbsp;file&nbsp;from&nbsp;the&nbsp;images&nbsp;directory&nbsp;in&nbsp;the&nbsp;pyui&nbsp;install.<br>
+The&nbsp;directory&nbsp;pyui/images&nbsp;holds&nbsp;general&nbsp;images&nbsp;used&nbsp;in&nbsp;pyui&nbsp;that&nbsp;are&nbsp;not<br>
+application&nbsp;specific.</tt></dd></dl>
+ <dl><dt><a name="-quit"><strong>quit</strong></a>()</dt><dd><tt>Sets&nbsp;the&nbsp;running&nbsp;flag&nbsp;so&nbsp;that&nbsp;the&nbsp;application&nbsp;knows&nbsp;to&nbsp;quit.<br>
+(public)</tt></dd></dl>
+ <dl><dt><a name="-run"><strong>run</strong></a>(callback<font color="#909090">=None</font>)</dt></dl>
+ <dl><dt><a name="-update"><strong>update</strong></a>()</dt><dd><tt>Process&nbsp;events&nbsp;from&nbsp;the&nbsp;renderer,&nbsp;and&nbsp;events&nbsp;posted&nbsp;by&nbsp;users&nbsp;or&nbsp;widgets.<br>
+Will&nbsp;return&nbsp;1&nbsp;if&nbsp;execution&nbsp;should&nbsp;continue,&nbsp;0&nbsp;if&nbsp;we&nbsp;should&nbsp;exit.<br>
+(public)</tt></dd></dl>
+ <dl><dt><a name="-version"><strong>version</strong></a>()</dt><dd><tt>return&nbsp;the&nbsp;version&nbsp;number&nbsp;of&nbsp;pyui</tt></dd></dl>
+</td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><strong>__file__</strong> = r'.\pyui\core.pyc'<br>
+<strong>__name__</strong> = 'pyui.core'<br>
+<strong>gDesktop</strong> = None<br>
+<strong>gRenderer</strong> = None<br>
+<strong>gVersion</strong> = 0.94999999999999996</td></tr></table>
+</body></html>

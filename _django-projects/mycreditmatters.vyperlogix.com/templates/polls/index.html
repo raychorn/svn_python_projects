@@ -1,0 +1,25 @@
+<h2> Please give us feedback on why you didn't order
+with us today:</h2><p></p>
+{% if latest_poll_list %}
+    <ul>
+    <form action="/polls/{{ poll.id }}/vote/" method="post">
+    {% for poll in latest_poll_list %}
+        <h3>{{ poll.num }}. {{ poll.question }}</h3>
+        <ul>
+        {% for choice in poll.choice_set.all %}
+            {% if poll.is_choice_radio(choice.choice) %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+                <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
+            {% else %}
+                <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
+                <input type="text" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+            {% endif %}
+        {% endfor %}
+        </ul>
+    {% endfor %}
+        <input type="submit" value="Submit" />
+    </form>
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

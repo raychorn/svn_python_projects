@@ -1,0 +1,19 @@
+         621608 function calls in 13.706 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   13.706   13.706 <string>:1(<module>)
+        1    0.000    0.000   13.706   13.706 ScrambleData.py:5(scrambleFile)
+        1    0.000    0.000    0.000    0.000 ntpath.py:252(exists)
+        1    1.130    1.130   13.706   13.706 scramblelib.py:15(scrambleFile)
+   310797   10.136    0.000   11.103    0.000 scramblelib.py:9(scrambleLine)
+        2    1.081    0.540    1.081    0.540 {method 'close' of 'file' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+   310799    1.024    0.000    1.024    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.331    0.331    0.331    0.331 {method 'write' of 'file' objects}
+        1    0.000    0.000    0.000    0.000 {nt.stat}
+        2    0.005    0.002    0.005    0.002 {open}
+
+

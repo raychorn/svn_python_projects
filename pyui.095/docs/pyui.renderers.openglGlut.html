@@ -1,0 +1,1787 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pyui.renderers.openglGlut</title>
+<style type="text/css"><!--
+TT { font-family: lucidatypewriter, lucida console, courier }
+--></style></head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pyui.html"><font color="#ffffff">pyui</font></a>.<a href="pyui.renderers.html"><font color="#ffffff">renderers</font></a>.openglGlut</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/projects/pyuicvs/pyui/renderers/openglglut.py">c:\projects\pyuicvs\pyui\renderers\openglglut.py</a></font></td></tr></table>
+    <p><tt>&nbsp;GLUT&nbsp;renderer</tt></p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="FixTk.html">FixTk</a><br>
+<a href="PIL.ImagePalette.html">PIL.ImagePalette</a><br>
+<a href="_imaging.html">_imaging</a><br>
+</td><td width="25%" valign=top><a href="pyui.renderers.openglBase.html">pyui.renderers.openglBase</a><br>
+<a href="os.html">os</a><br>
+<a href="pyui.html">pyui</a><br>
+</td><td width="25%" valign=top><a href="string.html">string</a><br>
+<a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="pyui.renderers.openglBase.html#OpenGLBase">pyui.renderers.openglBase.OpenGLBase</a>(<a href="pyui.renderer3d.html#Renderer3DBase">pyui.renderer3d.Renderer3DBase</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pyui.renderers.openglGlut.html#OpenGLGlut">OpenGLGlut</a>
+</font></dt></dl>
+</dd>
+</dl>
+ 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OpenGLGlut">class <strong>OpenGLGlut</strong></a>(<a href="pyui.renderers.openglBase.html#OpenGLBase">pyui.renderers.openglBase.OpenGLBase</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&nbsp;openGL&nbsp;renderer.&nbsp;Uses&nbsp;the&nbsp;PyOpenGL&nbsp;extensions.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pyui.renderers.openglGlut.html#OpenGLGlut">OpenGLGlut</a></dd>
+<dd><a href="pyui.renderers.openglBase.html#OpenGLBase">pyui.renderers.openglBase.OpenGLBase</a></dd>
+<dd><a href="pyui.renderer3d.html#Renderer3DBase">pyui.renderer3d.Renderer3DBase</a></dd>
+<dd><a href="pyui.rendererBase.html#RendererBase">pyui.rendererBase.RendererBase</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="OpenGLGlut-__init__"><strong>__init__</strong></a>(self, w, h, fullscreen, title)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-draw"><strong>draw</strong></a>(self, windows)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getModifiers"><strong>getModifiers</strong></a>(self)</dt><dd><tt>NOTE:&nbsp;GLUT&nbsp;does&nbsp;not&nbsp;detect&nbsp;the&nbsp;CONTROL&nbsp;key!!!!&nbsp;BUG!!</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-loadTexture"><strong>loadTexture</strong></a>(self, filename, label<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-onKeyDown"><strong>onKeyDown</strong></a>(self, key, x, y)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-onKeyUp"><strong>onKeyUp</strong></a>(self, key, x, y)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-onMotion"><strong>onMotion</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-onMouse"><strong>onMouse</strong></a>(self, button, state, x, y)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-onSpecialDown"><strong>onSpecialDown</strong></a>(self, key, x, y)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-onSpecialUp"><strong>onSpecialUp</strong></a>(self, key, x, y)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-quit"><strong>quit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-run"><strong>run</strong></a>(self, callback<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-runMe"><strong>runMe</strong></a>(self)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = ' openGL renderer. Uses the PyOpenGL extensions.<font color="#c040c0">\n</font>    '<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>__module__</strong> = 'pyui.renderers.openglGlut'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<dl><dt><strong>name</strong> = 'GLUT'<dd><tt>str(object)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;nice&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;object.<br>
+If&nbsp;the&nbsp;argument&nbsp;is&nbsp;a&nbsp;string,&nbsp;the&nbsp;return&nbsp;value&nbsp;is&nbsp;the&nbsp;same&nbsp;object.</tt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.renderers.openglBase.html#OpenGLBase">pyui.renderers.openglBase.OpenGLBase</a>:<br>
+<dl><dt><a name="OpenGLGlut-ReSizeGLScene"><strong>ReSizeGLScene</strong></a>(self, Width, Height)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-clear"><strong>clear</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-createFont"><strong>createFont</strong></a>(self, fontName, fontSize, flags)</dt><dd><tt>Create&nbsp;a&nbsp;font.&nbsp;returns&nbsp;a&nbsp;handle.&nbsp;NOTE:&nbsp;This&nbsp;wont&nbsp;work&nbsp;on&nbsp;LINUX!!!!</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-createFont_OLD"><strong>createFont_OLD</strong></a>(self, fontName, fontSize, flags)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-dirtyCollidingWindows"><strong>dirtyCollidingWindows</strong></a>(self, inRect)</dt><dd><tt>Dont&nbsp;do&nbsp;dirty&nbsp;rects&nbsp;in&nbsp;3D</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-do_text"><strong>do_text</strong></a>(self, text, position, color, font)</dt><dd><tt>Draw&nbsp;some&nbsp;text&nbsp;to&nbsp;the&nbsp;screen&nbsp;using&nbsp;a&nbsp;bitmapped&nbsp;font</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-do_text_OLD"><strong>do_text_OLD</strong></a>(self, text, position, color, font)</dt><dd><tt>This&nbsp;text&nbsp;method&nbsp;uses&nbsp;the&nbsp;old&nbsp;GLUT&nbsp;rendering&nbsp;instead&nbsp;of&nbsp;True&nbsp;Type&nbsp;fonts.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-drawGradient"><strong>drawGradient</strong></a>(self, rect, c1, c2, c3, c4)</dt><dd><tt>Draws&nbsp;a&nbsp;gradient&nbsp;rectangle</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-drawImage"><strong>drawImage</strong></a>(self, rect, filename, pieceRect<font color="#909090">=None</font>)</dt><dd><tt>Draws&nbsp;an&nbsp;image&nbsp;at&nbsp;a&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-drawImageRotated"><strong>drawImageRotated</strong></a>(self, rect, filename, rotDegrees<font color="#909090">=0</font>, textureEffect<font color="#909090">=0</font>)</dt><dd><tt>Draws&nbsp;an&nbsp;image&nbsp;at&nbsp;a&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-drawLine"><strong>drawLine</strong></a>(self, x1, y1, x2, y2, color)</dt><dd><tt>Draws&nbsp;a&nbsp;line</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-drawRect"><strong>drawRect</strong></a>(self, color, rect)</dt><dd><tt>Fills&nbsp;a&nbsp;rectangle&nbsp;with&nbsp;the&nbsp;specified&nbsp;color.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-drawText"><strong>drawText</strong></a>(self, text, pos, color, font<font color="#909090">=None</font>)</dt><dd><tt>Draws&nbsp;the&nbsp;text&nbsp;on&nbsp;the&nbsp;screen&nbsp;in&nbsp;the&nbsp;specified&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-getScreenSize"><strong>getScreenSize</strong></a>(self)</dt><dd><tt>&nbsp;Returns&nbsp;(width,&nbsp;height)&nbsp;of&nbsp;the&nbsp;scene&nbsp;viewport</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-getTextSize"><strong>getTextSize</strong></a>(self, text, font<font color="#909090">=None</font>)</dt><dd><tt>gets&nbsp;the&nbsp;width&nbsp;and&nbsp;height&nbsp;of&nbsp;a&nbsp;piece&nbsp;of&nbsp;text.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-getTextSize_OLD"><strong>getTextSize_OLD</strong></a>(self, text, font<font color="#909090">=None</font>)</dt><dd><tt>This&nbsp;text&nbsp;method&nbsp;uses&nbsp;the&nbsp;old&nbsp;GLUT&nbsp;rendering&nbsp;instead&nbsp;of&nbsp;True&nbsp;Type&nbsp;fonts.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-loadImage"><strong>loadImage</strong></a>(self, filename, label<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-packColor"><strong>packColor</strong></a>(self, r, g, b, a<font color="#909090">=255</font>)</dt><dd><tt>pack&nbsp;the&nbsp;rgb&nbsp;triplet&nbsp;into&nbsp;a&nbsp;color</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-setClipping"><strong>setClipping</strong></a>(self, rect<font color="#909090">=None</font>)</dt><dd><tt>set&nbsp;the&nbsp;clipping&nbsp;rectangle&nbsp;for&nbsp;the&nbsp;main&nbsp;screen.&nbsp;defaults&nbsp;to&nbsp;clearing&nbsp;the&nbsp;clipping&nbsp;rectangle.<br>
+NOTE:&nbsp;isn't&nbsp;working...</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-setWindowOrigin"><strong>setWindowOrigin</strong></a>(self, winX, winY)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setup2D"><strong>setup2D</strong></a>(self)</dt><dd><tt>Setup&nbsp;everything&nbsp;on&nbsp;the&nbsp;opengl&nbsp;Stack&nbsp;to&nbsp;draw&nbsp;in&nbsp;2D&nbsp;in&nbsp;a&nbsp;way&nbsp;that&nbsp;can&nbsp;be&nbsp;torn&nbsp;down&nbsp;later.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-teardown2D"><strong>teardown2D</strong></a>(self)</dt><dd><tt>tear&nbsp;down&nbsp;the&nbsp;2D&nbsp;stuff&nbsp;to&nbsp;revert&nbsp;to&nbsp;the&nbsp;previous&nbsp;state.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-update"><strong>update</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.renderer3d.html#Renderer3DBase">pyui.renderer3d.Renderer3DBase</a>:<br>
+<dl><dt><a name="OpenGLGlut-addGeometryNode"><strong>addGeometryNode</strong></a>(self, objectHandle, bone<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-addGeometryPiece"><strong>addGeometryPiece</strong></a>(self, node, iType, info, offset, ypr, effect<font color="#909090">=''</font>, effectParams<font color="#909090">={}</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-addToWorld"><strong>addToWorld</strong></a>(self, worldHandle, objectHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-attachController"><strong>attachController</strong></a>(self, objectHandle, controllerType, boneName)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-attachObject"><strong>attachObject</strong></a>(self, objectHandle, toObjectHandle, connectionPointName<font color="#909090">=''</font>, toConnectionPointName<font color="#909090">=''</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-attachView"><strong>attachView</strong></a>(self, windowHandle, viewHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-attachWindow"><strong>attachWindow</strong></a>(self, windowHandle, xoffset, yoffset, objectHandle, viewHandle, nodeName)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-createEmptyBody"><strong>createEmptyBody</strong></a>(self, xyz<font color="#909090">=(0.0, 0.0, 0.0)</font>, label<font color="#909090">='emptyBody'</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-createObject"><strong>createObject</strong></a>(self, model)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-createView"><strong>createView</strong></a>(self, world)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-createWorld"><strong>createWorld</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-destroyFont"><strong>destroyFont</strong></a>(self, fontHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-destroyObject"><strong>destroyObject</strong></a>(self, handle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-destroyView"><strong>destroyView</strong></a>(self, viewHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-destroyWorld"><strong>destroyWorld</strong></a>(self, worldHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-detachController"><strong>detachController</strong></a>(self, objectHandle, controllerHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-detachObject"><strong>detachObject</strong></a>(self, objectHandle, fromObjectHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-detachWindow"><strong>detachWindow</strong></a>(self, windowHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-dumpCache"><strong>dumpCache</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getCameraDir"><strong>getCameraDir</strong></a>(self, viewHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getCameraPos"><strong>getCameraPos</strong></a>(self, viewHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getCameraYPR"><strong>getCameraYPR</strong></a>(self, viewHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getDesktopWindow"><strong>getDesktopWindow</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getNodeEffect"><strong>getNodeEffect</strong></a>(self, node, num)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getNodeProjectedPos"><strong>getNodeProjectedPos</strong></a>(self, nodeHandle, viewHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getObjectNode"><strong>getObjectNode</strong></a>(self, objectHandle, nodeName, LODLevel)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getObjectProjectedPos"><strong>getObjectProjectedPos</strong></a>(self, objectHandle, viewHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-loadAnimation"><strong>loadAnimation</strong></a>(self, animation)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-loadMusic"><strong>loadMusic</strong></a>(self, waveFileName)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-loadSound"><strong>loadSound</strong></a>(self, waveFileName)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-moveCamera"><strong>moveCamera</strong></a>(self, viewHandle, offset)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-moveObject"><strong>moveObject</strong></a>(self, objectHandle, delta, moveRate, turnRate<font color="#909090">=0</font>, onCompleted<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-moveObjectTo"><strong>moveObjectTo</strong></a>(self, objectHandle, location, moveRate, turnRate<font color="#909090">=0</font>, onCompleted<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-pickView"><strong>pickView</strong></a>(self, viewHandle, xy)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-playMusic"><strong>playMusic</strong></a>(self, waveFileName, completionCallback<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-playSound"><strong>playSound</strong></a>(self, waveFileName, completionCallback<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-removeFromWorld"><strong>removeFromWorld</strong></a>(self, worldHandle, objectHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-rotateObject"><strong>rotateObject</strong></a>(self, objectHandle, delta, turnRate, onCompleted<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-rotateObjectTo"><strong>rotateObjectTo</strong></a>(self, objectHandle, orientation, turnRate, onCompleted<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setCameraPos"><strong>setCameraPos</strong></a>(self, viewHandle, pos)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setCameraYPR"><strong>setCameraYPR</strong></a>(self, viewHandle, YPR)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setController"><strong>setController</strong></a>(self, controllerHandle, **parms)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setEffectParameters"><strong>setEffectParameters</strong></a>(self, effect, parms)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setLightParameters"><strong>setLightParameters</strong></a>(self, viewHandle, YPR)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setObjectAnimation"><strong>setObjectAnimation</strong></a>(self, objectHandle, animation, onCompleted<font color="#909090">=None</font>, blendTime<font color="#909090">=0.0</font>, loop<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setObjectPos"><strong>setObjectPos</strong></a>(self, objectHandle, pos)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setObjectScale"><strong>setObjectScale</strong></a>(self, objectHandle, scale)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setObjectYPR"><strong>setObjectYPR</strong></a>(self, objectHandle, YPR)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setViewParameters"><strong>setViewParameters</strong></a>(self, viewHandle, parameters)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setViewProjectionMode"><strong>setViewProjectionMode</strong></a>(self, viewHandle, projectionMode)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setWindowEffect"><strong>setWindowEffect</strong></a>(self, windowHandle, effectName)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-stopMusic"><strong>stopMusic</strong></a>(self, waveFileName)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-stopSound"><strong>stopSound</strong></a>(self, waveFileName)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-toggleDebugInfo"><strong>toggleDebugInfo</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-updateWorld"><strong>updateWorld</strong></a>(self, worldHandle)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pyui.rendererBase.html#RendererBase">pyui.rendererBase.RendererBase</a>:<br>
+<dl><dt><a name="OpenGLGlut-addRect"><strong>addRect</strong></a>(self, rect)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-createWindow"><strong>createWindow</strong></a>(self, title)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-describeWindow"><strong>describeWindow</strong></a>(self, windowHandle, drawList)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-destroyWindow"><strong>destroyWindow</strong></a>(self, windowHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-doesDirtyRects"><strong>doesDirtyRects</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-drawView"><strong>drawView</strong></a>(self, rect, handle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-getImageSize"><strong>getImageSize</strong></a>(self, filename)</dt><dd><tt>Return&nbsp;the&nbsp;width&nbsp;and&nbsp;height&nbsp;of&nbsp;the&nbsp;image</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-getMustFill"><strong>getMustFill</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-moveToFront"><strong>moveToFront</strong></a>(self, windowHandle)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-moveWindow"><strong>moveWindow</strong></a>(self, windowHandle, x, y)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-readTimer"><strong>readTimer</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setBackMethod"><strong>setBackMethod</strong></a>(self, drawBackMethod, *args)</dt><dd><tt>Set&nbsp;the&nbsp;method&nbsp;used&nbsp;to&nbsp;draw&nbsp;the&nbsp;background.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-setDrawList"><strong>setDrawList</strong></a>(self, drawList)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setMustFill"><strong>setMustFill</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OpenGLGlut-setWindowTitle"><strong>setWindowTitle</strong></a>(self, title)</dt><dd><tt>sets&nbsp;the&nbsp;title&nbsp;of&nbsp;the&nbsp;OS&nbsp;main&nbsp;window.</tt></dd></dl>
+
+<dl><dt><a name="OpenGLGlut-unpackColor"><strong>unpackColor</strong></a>(self, color)</dt></dl>
+
+</td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt><a name="-glAccum"><strong>glAccum</strong></a>(...)</dt><dd><tt><a href="#-glAccum">glAccum</a>(op,&nbsp;value)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glAlphaFunc"><strong>glAlphaFunc</strong></a>(...)</dt><dd><tt><a href="#-glAlphaFunc">glAlphaFunc</a>(func,&nbsp;ref)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glAreTexturesResident"><strong>glAreTexturesResident</strong></a>(...)</dt><dd><tt><a href="#-glAreTexturesResident">glAreTexturesResident</a>(textures[])&nbsp;-&gt;&nbsp;residences</tt></dd></dl>
+ <dl><dt><a name="-glArrayElement"><strong>glArrayElement</strong></a>(...)</dt><dd><tt><a href="#-glArrayElement">glArrayElement</a>(i)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glBegin"><strong>glBegin</strong></a>(...)</dt><dd><tt><a href="#-glBegin">glBegin</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glBindTexture"><strong>glBindTexture</strong></a>(...)</dt><dd><tt><a href="#-glBindTexture">glBindTexture</a>(target,&nbsp;texture)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glBitmap"><strong>glBitmap</strong></a>(...)</dt><dd><tt><a href="#-glBitmap">glBitmap</a>(width,&nbsp;height,&nbsp;xorig,&nbsp;yorig,&nbsp;xmove,&nbsp;ymove,&nbsp;bitmap)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glBlendFunc"><strong>glBlendFunc</strong></a>(...)</dt><dd><tt><a href="#-glBlendFunc">glBlendFunc</a>(sfactor,&nbsp;dfactor)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glCallList"><strong>glCallList</strong></a>(...)</dt><dd><tt><a href="#-glCallList">glCallList</a>(list)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glCallLists"><strong>glCallLists</strong></a>(...)</dt><dd><tt><a href="#-glCallLists">glCallLists</a>(lists[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glClear"><strong>glClear</strong></a>(...)</dt><dd><tt><a href="#-glClear">glClear</a>(mask)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glClearAccum"><strong>glClearAccum</strong></a>(...)</dt><dd><tt><a href="#-glClearAccum">glClearAccum</a>(red,&nbsp;green,&nbsp;blue,&nbsp;alpha)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glClearColor"><strong>glClearColor</strong></a>(...)</dt><dd><tt><a href="#-glClearColor">glClearColor</a>(red,&nbsp;green,&nbsp;blue,&nbsp;alpha)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glClearDepth"><strong>glClearDepth</strong></a>(...)</dt><dd><tt><a href="#-glClearDepth">glClearDepth</a>(depth)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glClearIndex"><strong>glClearIndex</strong></a>(...)</dt><dd><tt><a href="#-glClearIndex">glClearIndex</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glClearStencil"><strong>glClearStencil</strong></a>(...)</dt><dd><tt><a href="#-glClearStencil">glClearStencil</a>(s)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glClipPlane"><strong>glClipPlane</strong></a>(...)</dt><dd><tt><a href="#-glClipPlane">glClipPlane</a>(plane,&nbsp;equation[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3b"><strong>glColor3b</strong></a>(...)</dt><dd><tt><a href="#-glColor3b">glColor3b</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3bv"><strong>glColor3bv</strong></a>(...)</dt><dd><tt><a href="#-glColor3bv">glColor3bv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3d"><strong>glColor3d</strong></a>(...)</dt><dd><tt><a href="#-glColor3d">glColor3d</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3dv"><strong>glColor3dv</strong></a>(...)</dt><dd><tt><a href="#-glColor3dv">glColor3dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3f"><strong>glColor3f</strong></a>(...)</dt><dd><tt><a href="#-glColor3f">glColor3f</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3fv"><strong>glColor3fv</strong></a>(...)</dt><dd><tt><a href="#-glColor3fv">glColor3fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3i"><strong>glColor3i</strong></a>(...)</dt><dd><tt><a href="#-glColor3i">glColor3i</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3iv"><strong>glColor3iv</strong></a>(...)</dt><dd><tt><a href="#-glColor3iv">glColor3iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3s"><strong>glColor3s</strong></a>(...)</dt><dd><tt><a href="#-glColor3s">glColor3s</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3sv"><strong>glColor3sv</strong></a>(...)</dt><dd><tt><a href="#-glColor3sv">glColor3sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3ub"><strong>glColor3ub</strong></a>(...)</dt><dd><tt><a href="#-glColor3ub">glColor3ub</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3ubv"><strong>glColor3ubv</strong></a>(...)</dt><dd><tt><a href="#-glColor3ubv">glColor3ubv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3ui"><strong>glColor3ui</strong></a>(...)</dt><dd><tt><a href="#-glColor3ui">glColor3ui</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3uiv"><strong>glColor3uiv</strong></a>(...)</dt><dd><tt><a href="#-glColor3uiv">glColor3uiv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3us"><strong>glColor3us</strong></a>(...)</dt><dd><tt><a href="#-glColor3us">glColor3us</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor3usv"><strong>glColor3usv</strong></a>(...)</dt><dd><tt><a href="#-glColor3usv">glColor3usv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4b"><strong>glColor4b</strong></a>(...)</dt><dd><tt><a href="#-glColor4b">glColor4b</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4bv"><strong>glColor4bv</strong></a>(...)</dt><dd><tt><a href="#-glColor4bv">glColor4bv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4d"><strong>glColor4d</strong></a>(...)</dt><dd><tt><a href="#-glColor4d">glColor4d</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4dv"><strong>glColor4dv</strong></a>(...)</dt><dd><tt><a href="#-glColor4dv">glColor4dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4f"><strong>glColor4f</strong></a>(...)</dt><dd><tt><a href="#-glColor4f">glColor4f</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4fv"><strong>glColor4fv</strong></a>(...)</dt><dd><tt><a href="#-glColor4fv">glColor4fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4i"><strong>glColor4i</strong></a>(...)</dt><dd><tt><a href="#-glColor4i">glColor4i</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4iv"><strong>glColor4iv</strong></a>(...)</dt><dd><tt><a href="#-glColor4iv">glColor4iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4s"><strong>glColor4s</strong></a>(...)</dt><dd><tt><a href="#-glColor4s">glColor4s</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4sv"><strong>glColor4sv</strong></a>(...)</dt><dd><tt><a href="#-glColor4sv">glColor4sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4ub"><strong>glColor4ub</strong></a>(...)</dt><dd><tt><a href="#-glColor4ub">glColor4ub</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4ubv"><strong>glColor4ubv</strong></a>(...)</dt><dd><tt><a href="#-glColor4ubv">glColor4ubv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4ui"><strong>glColor4ui</strong></a>(...)</dt><dd><tt><a href="#-glColor4ui">glColor4ui</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4uiv"><strong>glColor4uiv</strong></a>(...)</dt><dd><tt><a href="#-glColor4uiv">glColor4uiv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4us"><strong>glColor4us</strong></a>(...)</dt><dd><tt><a href="#-glColor4us">glColor4us</a>(red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColor4usv"><strong>glColor4usv</strong></a>(...)</dt><dd><tt><a href="#-glColor4usv">glColor4usv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorMask"><strong>glColorMask</strong></a>(...)</dt><dd><tt><a href="#-glColorMask">glColorMask</a>(red,&nbsp;gree,&nbsp;blue,&nbsp;alpha)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorMaterial"><strong>glColorMaterial</strong></a>(...)</dt><dd><tt><a href="#-glColorMaterial">glColorMaterial</a>(face,&nbsp;mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointer"><strong>glColorPointer</strong></a>(...)</dt><dd><tt><a href="#-glColorPointer">glColorPointer</a>(size,&nbsp;type,&nbsp;stride,&nbsp;pointer)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointerb"><strong>glColorPointerb</strong></a>(...)</dt><dd><tt><a href="#-glColorPointerb">glColorPointerb</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointerd"><strong>glColorPointerd</strong></a>(...)</dt><dd><tt><a href="#-glColorPointerd">glColorPointerd</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointerf"><strong>glColorPointerf</strong></a>(...)</dt><dd><tt><a href="#-glColorPointerf">glColorPointerf</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointeri"><strong>glColorPointeri</strong></a>(...)</dt><dd><tt><a href="#-glColorPointeri">glColorPointeri</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointers"><strong>glColorPointers</strong></a>(...)</dt><dd><tt><a href="#-glColorPointers">glColorPointers</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointerub"><strong>glColorPointerub</strong></a>(...)</dt><dd><tt><a href="#-glColorPointerub">glColorPointerub</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointerui"><strong>glColorPointerui</strong></a>(...)</dt><dd><tt><a href="#-glColorPointerui">glColorPointerui</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glColorPointerus"><strong>glColorPointerus</strong></a>(...)</dt><dd><tt><a href="#-glColorPointerus">glColorPointerus</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glCopyPixels"><strong>glCopyPixels</strong></a>(...)</dt><dd><tt><a href="#-glCopyPixels">glCopyPixels</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;type)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glCopyTexImage1D"><strong>glCopyTexImage1D</strong></a>(...)</dt><dd><tt><a href="#-glCopyTexImage1D">glCopyTexImage1D</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;x,&nbsp;y,&nbsp;width,&nbsp;border)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glCopyTexImage2D"><strong>glCopyTexImage2D</strong></a>(...)</dt><dd><tt><a href="#-glCopyTexImage2D">glCopyTexImage2D</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;border)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glCopyTexSubImage1D"><strong>glCopyTexSubImage1D</strong></a>(...)</dt><dd><tt><a href="#-glCopyTexSubImage1D">glCopyTexSubImage1D</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;x,&nbsp;y,&nbsp;width)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glCopyTexSubImage2D"><strong>glCopyTexSubImage2D</strong></a>(...)</dt><dd><tt><a href="#-glCopyTexSubImage2D">glCopyTexSubImage2D</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;x,&nbsp;y,&nbsp;width,&nbsp;height)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glCullFace"><strong>glCullFace</strong></a>(...)</dt><dd><tt><a href="#-glCullFace">glCullFace</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDeleteLists"><strong>glDeleteLists</strong></a>(...)</dt><dd><tt><a href="#-glDeleteLists">glDeleteLists</a>(list,&nbsp;range)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDeleteTextures"><strong>glDeleteTextures</strong></a>(...)</dt><dd><tt><a href="#-glDeleteTextures">glDeleteTextures</a>(textures[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDepthFunc"><strong>glDepthFunc</strong></a>(...)</dt><dd><tt><a href="#-glDepthFunc">glDepthFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDepthMask"><strong>glDepthMask</strong></a>(...)</dt><dd><tt><a href="#-glDepthMask">glDepthMask</a>(flag)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDepthRange"><strong>glDepthRange</strong></a>(...)</dt><dd><tt><a href="#-glDepthRange">glDepthRange</a>(zNear,&nbsp;zFar)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDisable"><strong>glDisable</strong></a>(...)</dt><dd><tt><a href="#-glDisable">glDisable</a>(cap)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDisableClientState"><strong>glDisableClientState</strong></a>(...)</dt><dd><tt><a href="#-glDisableClientState">glDisableClientState</a>(array)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawArrays"><strong>glDrawArrays</strong></a>(...)</dt><dd><tt><a href="#-glDrawArrays">glDrawArrays</a>(mode,&nbsp;first,&nbsp;count)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawBuffer"><strong>glDrawBuffer</strong></a>(...)</dt><dd><tt><a href="#-glDrawBuffer">glDrawBuffer</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawElements"><strong>glDrawElements</strong></a>(...)</dt><dd><tt><a href="#-glDrawElements">glDrawElements</a>(mode,&nbsp;count,&nbsp;type,&nbsp;indices)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawElementsub"><strong>glDrawElementsub</strong></a>(...)</dt><dd><tt><a href="#-glDrawElementsub">glDrawElementsub</a>(mode,&nbsp;indices[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawElementsui"><strong>glDrawElementsui</strong></a>(...)</dt><dd><tt><a href="#-glDrawElementsui">glDrawElementsui</a>(mode,&nbsp;indices[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawElementsus"><strong>glDrawElementsus</strong></a>(...)</dt><dd><tt><a href="#-glDrawElementsus">glDrawElementsus</a>(mode,&nbsp;indices[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawPixels"><strong>glDrawPixels</strong></a>(...)</dt><dd><tt><a href="#-glDrawPixels">glDrawPixels</a>(width,&nbsp;height,&nbsp;format,&nbsp;type,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawPixelsb"><strong>glDrawPixelsb</strong></a>(...)</dt><dd><tt><a href="#-glDrawPixelsb">glDrawPixelsb</a>(format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawPixelsf"><strong>glDrawPixelsf</strong></a>(...)</dt><dd><tt><a href="#-glDrawPixelsf">glDrawPixelsf</a>(format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawPixelsi"><strong>glDrawPixelsi</strong></a>(...)</dt><dd><tt><a href="#-glDrawPixelsi">glDrawPixelsi</a>(format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawPixelss"><strong>glDrawPixelss</strong></a>(...)</dt><dd><tt><a href="#-glDrawPixelss">glDrawPixelss</a>(format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawPixelsub"><strong>glDrawPixelsub</strong></a>(...)</dt><dd><tt><a href="#-glDrawPixelsub">glDrawPixelsub</a>(format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawPixelsui"><strong>glDrawPixelsui</strong></a>(...)</dt><dd><tt><a href="#-glDrawPixelsui">glDrawPixelsui</a>(format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glDrawPixelsus"><strong>glDrawPixelsus</strong></a>(...)</dt><dd><tt><a href="#-glDrawPixelsus">glDrawPixelsus</a>(format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEdgeFlag"><strong>glEdgeFlag</strong></a>(...)</dt><dd><tt><a href="#-glEdgeFlag">glEdgeFlag</a>(flag)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEdgeFlagPointer"><strong>glEdgeFlagPointer</strong></a>(...)</dt><dd><tt><a href="#-glEdgeFlagPointer">glEdgeFlagPointer</a>(stride,&nbsp;pointer)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEdgeFlagPointerb"><strong>glEdgeFlagPointerb</strong></a>(...)</dt><dd><tt><a href="#-glEdgeFlagPointerb">glEdgeFlagPointerb</a>(pointer[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEdgeFlagv"><strong>glEdgeFlagv</strong></a>(...)</dt><dd><tt><a href="#-glEdgeFlagv">glEdgeFlagv</a>(flag)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEnable"><strong>glEnable</strong></a>(...)</dt><dd><tt><a href="#-glEnable">glEnable</a>(cap)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEnableClientState"><strong>glEnableClientState</strong></a>(...)</dt><dd><tt><a href="#-glEnableClientState">glEnableClientState</a>(array)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEnd"><strong>glEnd</strong></a>(...)</dt><dd><tt><a href="#-glEnd">glEnd</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEndList"><strong>glEndList</strong></a>(...)</dt><dd><tt><a href="#-glEndList">glEndList</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalCoord1d"><strong>glEvalCoord1d</strong></a>(...)</dt><dd><tt><a href="#-glEvalCoord1d">glEvalCoord1d</a>(u)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalCoord1dv"><strong>glEvalCoord1dv</strong></a>(...)</dt><dd><tt><a href="#-glEvalCoord1dv">glEvalCoord1dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalCoord1f"><strong>glEvalCoord1f</strong></a>(...)</dt><dd><tt><a href="#-glEvalCoord1f">glEvalCoord1f</a>(u)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalCoord1fv"><strong>glEvalCoord1fv</strong></a>(...)</dt><dd><tt><a href="#-glEvalCoord1fv">glEvalCoord1fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalCoord2d"><strong>glEvalCoord2d</strong></a>(...)</dt><dd><tt><a href="#-glEvalCoord2d">glEvalCoord2d</a>(u,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalCoord2dv"><strong>glEvalCoord2dv</strong></a>(...)</dt><dd><tt><a href="#-glEvalCoord2dv">glEvalCoord2dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalCoord2f"><strong>glEvalCoord2f</strong></a>(...)</dt><dd><tt><a href="#-glEvalCoord2f">glEvalCoord2f</a>(u,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalCoord2fv"><strong>glEvalCoord2fv</strong></a>(...)</dt><dd><tt><a href="#-glEvalCoord2fv">glEvalCoord2fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalMesh1"><strong>glEvalMesh1</strong></a>(...)</dt><dd><tt><a href="#-glEvalMesh1">glEvalMesh1</a>(mode,&nbsp;i1,&nbsp;i2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalMesh2"><strong>glEvalMesh2</strong></a>(...)</dt><dd><tt><a href="#-glEvalMesh2">glEvalMesh2</a>(mode,&nbsp;i1,&nbsp;i2,&nbsp;j1,&nbsp;j2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalPoint1"><strong>glEvalPoint1</strong></a>(...)</dt><dd><tt><a href="#-glEvalPoint1">glEvalPoint1</a>(i)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glEvalPoint2"><strong>glEvalPoint2</strong></a>(...)</dt><dd><tt><a href="#-glEvalPoint2">glEvalPoint2</a>(i,&nbsp;j)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFeedbackBuffer"><strong>glFeedbackBuffer</strong></a>(...)</dt><dd><tt><a href="#-glFeedbackBuffer">glFeedbackBuffer</a>(size,&nbsp;type)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFinish"><strong>glFinish</strong></a>(...)</dt><dd><tt><a href="#-glFinish">glFinish</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFlush"><strong>glFlush</strong></a>(...)</dt><dd><tt><a href="#-glFlush">glFlush</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFog"><strong>glFog</strong></a> = glFogfv(...)</dt><dd><tt><a href="#-glFogfv">glFogfv</a>(pname,&nbsp;params[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFogf"><strong>glFogf</strong></a>(...)</dt><dd><tt><a href="#-glFogf">glFogf</a>(pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFogfv"><strong>glFogfv</strong></a>(...)</dt><dd><tt><a href="#-glFogfv">glFogfv</a>(pname,&nbsp;params[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFogi"><strong>glFogi</strong></a>(...)</dt><dd><tt><a href="#-glFogi">glFogi</a>(pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFogiv"><strong>glFogiv</strong></a>(...)</dt><dd><tt><a href="#-glFogiv">glFogiv</a>(pname,&nbsp;params[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFrontFace"><strong>glFrontFace</strong></a>(...)</dt><dd><tt><a href="#-glFrontFace">glFrontFace</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glFrustum"><strong>glFrustum</strong></a>(...)</dt><dd><tt><a href="#-glFrustum">glFrustum</a>(left,&nbsp;right,&nbsp;bottom,&nbsp;top,&nbsp;zNear,&nbsp;zFar)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glGenLists"><strong>glGenLists</strong></a>(...)</dt><dd><tt><a href="#-glGenLists">glGenLists</a>(range)&nbsp;-&gt;&nbsp;listBase</tt></dd></dl>
+ <dl><dt><a name="-glGenTextures"><strong>glGenTextures</strong></a>(...)</dt><dd><tt><a href="#-glGenTextures">glGenTextures</a>(n)&nbsp;-&gt;&nbsp;textures</tt></dd></dl>
+ <dl><dt><a name="-glGetBoolean"><strong>glGetBoolean</strong></a> = glGetBooleanv(...)</dt><dd><tt><a href="#-glGetBooleanv">glGetBooleanv</a>(pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetBooleanv"><strong>glGetBooleanv</strong></a>(...)</dt><dd><tt><a href="#-glGetBooleanv">glGetBooleanv</a>(pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetClipPlane"><strong>glGetClipPlane</strong></a>(...)</dt><dd><tt><a href="#-glGetClipPlane">glGetClipPlane</a>(plane)&nbsp;-&gt;&nbsp;equation</tt></dd></dl>
+ <dl><dt><a name="-glGetDouble"><strong>glGetDouble</strong></a> = glGetDoublev(...)</dt><dd><tt><a href="#-glGetDoublev">glGetDoublev</a>(pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetDoublev"><strong>glGetDoublev</strong></a>(...)</dt><dd><tt><a href="#-glGetDoublev">glGetDoublev</a>(pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetFloat"><strong>glGetFloat</strong></a> = glGetFloatv(...)</dt><dd><tt><a href="#-glGetFloatv">glGetFloatv</a>(pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetFloatv"><strong>glGetFloatv</strong></a>(...)</dt><dd><tt><a href="#-glGetFloatv">glGetFloatv</a>(pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetInteger"><strong>glGetInteger</strong></a> = glGetIntegerv(...)</dt><dd><tt><a href="#-glGetIntegerv">glGetIntegerv</a>(pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetIntegerv"><strong>glGetIntegerv</strong></a>(...)</dt><dd><tt><a href="#-glGetIntegerv">glGetIntegerv</a>(pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetLightfv"><strong>glGetLightfv</strong></a>(...)</dt><dd><tt><a href="#-glGetLightfv">glGetLightfv</a>(light,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetLightiv"><strong>glGetLightiv</strong></a>(...)</dt><dd><tt><a href="#-glGetLightiv">glGetLightiv</a>(light,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetMapdv"><strong>glGetMapdv</strong></a>(...)</dt><dd><tt><a href="#-glGetMapdv">glGetMapdv</a>(target,&nbsp;query)&nbsp;-&gt;&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-glGetMapfv"><strong>glGetMapfv</strong></a>(...)</dt><dd><tt><a href="#-glGetMapfv">glGetMapfv</a>(target,&nbsp;query)&nbsp;-&gt;&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-glGetMapiv"><strong>glGetMapiv</strong></a>(...)</dt><dd><tt><a href="#-glGetMapiv">glGetMapiv</a>(target,&nbsp;query)&nbsp;-&gt;&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-glGetMaterialfv"><strong>glGetMaterialfv</strong></a>(...)</dt><dd><tt><a href="#-glGetMaterialfv">glGetMaterialfv</a>(face,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetMaterialiv"><strong>glGetMaterialiv</strong></a>(...)</dt><dd><tt><a href="#-glGetMaterialiv">glGetMaterialiv</a>(face,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetPixelMapfv"><strong>glGetPixelMapfv</strong></a>(...)</dt><dd><tt><a href="#-glGetPixelMapfv">glGetPixelMapfv</a>(map)&nbsp;-&gt;&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-glGetPixelMapuiv"><strong>glGetPixelMapuiv</strong></a>(...)</dt><dd><tt><a href="#-glGetPixelMapuiv">glGetPixelMapuiv</a>(map)&nbsp;-&gt;&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-glGetPixelMapusv"><strong>glGetPixelMapusv</strong></a>(...)</dt><dd><tt><a href="#-glGetPixelMapusv">glGetPixelMapusv</a>(map)&nbsp;-&gt;&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-glGetPolygonStipple"><strong>glGetPolygonStipple</strong></a>(...)</dt><dd><tt><a href="#-glGetPolygonStipple">glGetPolygonStipple</a>()&nbsp;-&gt;&nbsp;packed&nbsp;stipple</tt></dd></dl>
+ <dl><dt><a name="-glGetPolygonStippleub"><strong>glGetPolygonStippleub</strong></a>(...)</dt><dd><tt><a href="#-glGetPolygonStippleub">glGetPolygonStippleub</a>()&nbsp;-&gt;&nbsp;stipple[][]</tt></dd></dl>
+ <dl><dt><a name="-glGetString"><strong>glGetString</strong></a>(...)</dt><dd><tt><a href="#-glGetString">glGetString</a>(name)&nbsp;-&gt;&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-glGetTexEnvfv"><strong>glGetTexEnvfv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexEnvfv">glGetTexEnvfv</a>(target,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetTexEnviv"><strong>glGetTexEnviv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexEnviv">glGetTexEnviv</a>(target,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetTexGendv"><strong>glGetTexGendv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexGendv">glGetTexGendv</a>(coord,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetTexGenfv"><strong>glGetTexGenfv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexGenfv">glGetTexGenfv</a>(coord,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetTexGeniv"><strong>glGetTexGeniv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexGeniv">glGetTexGeniv</a>(coord,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImage"><strong>glGetTexImage</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImage">glGetTexImage</a>(target,&nbsp;level,&nbsp;format,&nbsp;type)&nbsp;-&gt;&nbsp;pixels</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImageb"><strong>glGetTexImageb</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImageb">glGetTexImageb</a>(target,&nbsp;level,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImaged"><strong>glGetTexImaged</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImagef">glGetTexImagef</a>(target,&nbsp;level,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImagef"><strong>glGetTexImagef</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImagef">glGetTexImagef</a>(target,&nbsp;level,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImagei"><strong>glGetTexImagei</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImagei">glGetTexImagei</a>(target,&nbsp;level,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImages"><strong>glGetTexImages</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImages">glGetTexImages</a>(target,&nbsp;level,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImageub"><strong>glGetTexImageub</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImageub">glGetTexImageub</a>(target,&nbsp;level,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImageui"><strong>glGetTexImageui</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImageui">glGetTexImageui</a>(target,&nbsp;level,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glGetTexImageus"><strong>glGetTexImageus</strong></a>(...)</dt><dd><tt><a href="#-glGetTexImageus">glGetTexImageus</a>(target,&nbsp;level,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glGetTexLevelParameterfv"><strong>glGetTexLevelParameterfv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexLevelParameterfv">glGetTexLevelParameterfv</a>(target,&nbsp;level,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetTexLevelParameteriv"><strong>glGetTexLevelParameteriv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexLevelParameteriv">glGetTexLevelParameteriv</a>(target,&nbsp;level,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetTexParameterfv"><strong>glGetTexParameterfv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexParameterfv">glGetTexParameterfv</a>(target,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glGetTexParameteriv"><strong>glGetTexParameteriv</strong></a>(...)</dt><dd><tt><a href="#-glGetTexParameteriv">glGetTexParameteriv</a>(target,&nbsp;pname)&nbsp;-&gt;&nbsp;params</tt></dd></dl>
+ <dl><dt><a name="-glHint"><strong>glHint</strong></a>(...)</dt><dd><tt><a href="#-glHint">glHint</a>(target,&nbsp;mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndex"><strong>glIndex</strong></a> = glIndexd(...)</dt><dd><tt><a href="#-glIndexd">glIndexd</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexMask"><strong>glIndexMask</strong></a>(...)</dt><dd><tt><a href="#-glIndexMask">glIndexMask</a>(mask)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexPointer"><strong>glIndexPointer</strong></a>(...)</dt><dd><tt><a href="#-glIndexPointer">glIndexPointer</a>(type,&nbsp;stride,&nbsp;pointer)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexPointerb"><strong>glIndexPointerb</strong></a>(...)</dt><dd><tt><a href="#-glIndexPointerub">glIndexPointerub</a>(pointer[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexPointerd"><strong>glIndexPointerd</strong></a>(...)</dt><dd><tt><a href="#-glIndexPointerd">glIndexPointerd</a>(pointer[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexPointerf"><strong>glIndexPointerf</strong></a>(...)</dt><dd><tt><a href="#-glIndexPointerf">glIndexPointerf</a>(pointer[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexPointeri"><strong>glIndexPointeri</strong></a>(...)</dt><dd><tt><a href="#-glIndexPointeri">glIndexPointeri</a>(pointer[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexPointers"><strong>glIndexPointers</strong></a>(...)</dt><dd><tt><a href="#-glIndexPointers">glIndexPointers</a>(pointer[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexPointerub"><strong>glIndexPointerub</strong></a>(...)</dt><dd><tt><a href="#-glIndexPointerub">glIndexPointerub</a>(pointer[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexd"><strong>glIndexd</strong></a>(...)</dt><dd><tt><a href="#-glIndexd">glIndexd</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexdv"><strong>glIndexdv</strong></a>(...)</dt><dd><tt><a href="#-glIndexdv">glIndexdv</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexf"><strong>glIndexf</strong></a>(...)</dt><dd><tt><a href="#-glIndexf">glIndexf</a>(d)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexfv"><strong>glIndexfv</strong></a>(...)</dt><dd><tt><a href="#-glIndexfv">glIndexfv</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexi"><strong>glIndexi</strong></a>(...)</dt><dd><tt><a href="#-glIndexi">glIndexi</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexiv"><strong>glIndexiv</strong></a>(...)</dt><dd><tt><a href="#-glIndexiv">glIndexiv</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexs"><strong>glIndexs</strong></a>(...)</dt><dd><tt><a href="#-glIndexs">glIndexs</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexsv"><strong>glIndexsv</strong></a>(...)</dt><dd><tt><a href="#-glIndexsv">glIndexsv</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexub"><strong>glIndexub</strong></a>(...)</dt><dd><tt><a href="#-glIndexub">glIndexub</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIndexubv"><strong>glIndexubv</strong></a>(...)</dt><dd><tt><a href="#-glIndexubv">glIndexubv</a>(c)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glInitNames"><strong>glInitNames</strong></a>(...)</dt><dd><tt><a href="#-glInitNames">glInitNames</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glInterleavedArrays"><strong>glInterleavedArrays</strong></a>(...)</dt><dd><tt><a href="#-glInterleavedArrays">glInterleavedArrays</a>(format,&nbsp;stride,&nbsp;pointer)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIsEnabled"><strong>glIsEnabled</strong></a>(...)</dt><dd><tt><a href="#-glIsEnabled">glIsEnabled</a>(cap)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glIsList"><strong>glIsList</strong></a>(...)</dt><dd><tt><a href="#-glIsList">glIsList</a>(list)&nbsp;-&gt;&nbsp;boolean</tt></dd></dl>
+ <dl><dt><a name="-glIsTexture"><strong>glIsTexture</strong></a>(...)</dt><dd><tt><a href="#-glIsTexture">glIsTexture</a>(texture)&nbsp;-&gt;&nbsp;boolean</tt></dd></dl>
+ <dl><dt><a name="-glLight"><strong>glLight</strong></a> = glLightfv(...)</dt><dd><tt><a href="#-glLightfv">glLightfv</a>(light,&nbsp;pname,&nbsp;params)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLightModel"><strong>glLightModel</strong></a> = glLightModelfv(...)</dt><dd><tt><a href="#-glLightModelfv">glLightModelfv</a>(pname,&nbsp;params)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLightModelf"><strong>glLightModelf</strong></a>(...)</dt><dd><tt><a href="#-glLightModelf">glLightModelf</a>(pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLightModelfv"><strong>glLightModelfv</strong></a>(...)</dt><dd><tt><a href="#-glLightModelfv">glLightModelfv</a>(pname,&nbsp;params)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLightModeli"><strong>glLightModeli</strong></a>(...)</dt><dd><tt><a href="#-glLightModeli">glLightModeli</a>(pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLightModeliv"><strong>glLightModeliv</strong></a>(...)</dt><dd><tt><a href="#-glLightModeliv">glLightModeliv</a>(pname,&nbsp;params)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLightf"><strong>glLightf</strong></a>(...)</dt><dd><tt><a href="#-glLightf">glLightf</a>(light,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLightfv"><strong>glLightfv</strong></a>(...)</dt><dd><tt><a href="#-glLightfv">glLightfv</a>(light,&nbsp;pname,&nbsp;params)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLighti"><strong>glLighti</strong></a>(...)</dt><dd><tt><a href="#-glLighti">glLighti</a>(light,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLightiv"><strong>glLightiv</strong></a>(...)</dt><dd><tt><a href="#-glLightiv">glLightiv</a>(light,&nbsp;pname,&nbsp;params)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLineStipple"><strong>glLineStipple</strong></a>(...)</dt><dd><tt><a href="#-glLineStipple">glLineStipple</a>(factor,&nbsp;pattern)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLineWidth"><strong>glLineWidth</strong></a>(...)</dt><dd><tt><a href="#-glLineWidth">glLineWidth</a>(width)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glListBase"><strong>glListBase</strong></a>(...)</dt><dd><tt><a href="#-glListBase">glListBase</a>(base)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLoadIdentity"><strong>glLoadIdentity</strong></a>(...)</dt><dd><tt><a href="#-glLoadIdentity">glLoadIdentity</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLoadMatrixd"><strong>glLoadMatrixd</strong></a>(...)</dt><dd><tt><a href="#-glLoadMatrixd">glLoadMatrixd</a>(matrix)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLoadMatrixf"><strong>glLoadMatrixf</strong></a>(...)</dt><dd><tt><a href="#-glLoadMatrixf">glLoadMatrixf</a>(matrix)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLoadName"><strong>glLoadName</strong></a>(...)</dt><dd><tt><a href="#-glLoadName">glLoadName</a>(name)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glLogicOp"><strong>glLogicOp</strong></a>(...)</dt><dd><tt><a href="#-glLogicOp">glLogicOp</a>(opcode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMap1d"><strong>glMap1d</strong></a>(...)</dt><dd><tt><a href="#-glMap1d">glMap1d</a>(target,&nbsp;u1,&nbsp;u2,&nbsp;points[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMap1f"><strong>glMap1f</strong></a>(...)</dt><dd><tt><a href="#-glMap1f">glMap1f</a>(target,&nbsp;u1,&nbsp;u2,&nbsp;points[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMap2d"><strong>glMap2d</strong></a>(...)</dt><dd><tt><a href="#-glMap2d">glMap2d</a>(target,&nbsp;u1,&nbsp;u2,&nbsp;v1,&nbsp;v2,&nbsp;points[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMap2f"><strong>glMap2f</strong></a>(...)</dt><dd><tt><a href="#-glMap2f">glMap2f</a>(target,&nbsp;u1,&nbsp;u2,&nbsp;v1,&nbsp;v2,&nbsp;points[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMapGrid1d"><strong>glMapGrid1d</strong></a>(...)</dt><dd><tt><a href="#-glMapGrid1d">glMapGrid1d</a>(un,&nbsp;u1,&nbsp;u2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMapGrid1f"><strong>glMapGrid1f</strong></a>(...)</dt><dd><tt><a href="#-glMapGrid1f">glMapGrid1f</a>(un,&nbsp;u1,&nbsp;u2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMapGrid2d"><strong>glMapGrid2d</strong></a>(...)</dt><dd><tt><a href="#-glMapGrid2d">glMapGrid2d</a>(un,&nbsp;u1,&nbsp;u2,&nbsp;vn,&nbsp;v1,&nbsp;v2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMapGrid2f"><strong>glMapGrid2f</strong></a>(...)</dt><dd><tt><a href="#-glMapGrid2f">glMapGrid2f</a>(un,&nbsp;u1,&nbsp;u2,&nbsp;vn,&nbsp;v1,&nbsp;v2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMaterial"><strong>glMaterial</strong></a> = glMaterialfv(...)</dt><dd><tt><a href="#-glMaterialfv">glMaterialfv</a>(face,&nbsp;pname,&nbsp;params[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMaterialf"><strong>glMaterialf</strong></a>(...)</dt><dd><tt><a href="#-glMaterialf">glMaterialf</a>(face,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMaterialfv"><strong>glMaterialfv</strong></a>(...)</dt><dd><tt><a href="#-glMaterialfv">glMaterialfv</a>(face,&nbsp;pname,&nbsp;params[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMateriali"><strong>glMateriali</strong></a>(...)</dt><dd><tt><a href="#-glMateriali">glMateriali</a>(face,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMaterialiv"><strong>glMaterialiv</strong></a>(...)</dt><dd><tt><a href="#-glMaterialiv">glMaterialiv</a>(face,&nbsp;pname,&nbsp;params[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMatrixMode"><strong>glMatrixMode</strong></a>(...)</dt><dd><tt><a href="#-glMatrixMode">glMatrixMode</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMultMatrixd"><strong>glMultMatrixd</strong></a>(...)</dt><dd><tt><a href="#-glMultMatrixd">glMultMatrixd</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glMultMatrixf"><strong>glMultMatrixf</strong></a>(...)</dt><dd><tt><a href="#-glMultMatrixf">glMultMatrixf</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNewList"><strong>glNewList</strong></a>(...)</dt><dd><tt><a href="#-glNewList">glNewList</a>(list,&nbsp;mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3b"><strong>glNormal3b</strong></a>(...)</dt><dd><tt><a href="#-glNormal3b">glNormal3b</a>(nx,&nbsp;ny,&nbsp;nz)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3bv"><strong>glNormal3bv</strong></a>(...)</dt><dd><tt><a href="#-glNormal3bv">glNormal3bv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3d"><strong>glNormal3d</strong></a>(...)</dt><dd><tt><a href="#-glNormal3d">glNormal3d</a>(nx,&nbsp;ny,&nbsp;nz)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3dv"><strong>glNormal3dv</strong></a>(...)</dt><dd><tt><a href="#-glNormal3dv">glNormal3dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3f"><strong>glNormal3f</strong></a>(...)</dt><dd><tt><a href="#-glNormal3f">glNormal3f</a>(nx,&nbsp;ny,&nbsp;nz)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3fv"><strong>glNormal3fv</strong></a>(...)</dt><dd><tt><a href="#-glNormal3fv">glNormal3fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3i"><strong>glNormal3i</strong></a>(...)</dt><dd><tt><a href="#-glNormal3i">glNormal3i</a>(nx,&nbsp;ny,&nbsp;nz)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3iv"><strong>glNormal3iv</strong></a>(...)</dt><dd><tt><a href="#-glNormal3iv">glNormal3iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3s"><strong>glNormal3s</strong></a>(...)</dt><dd><tt><a href="#-glNormal3s">glNormal3s</a>(nx,&nbsp;ny,&nbsp;nz)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormal3sv"><strong>glNormal3sv</strong></a>(...)</dt><dd><tt><a href="#-glNormal3sv">glNormal3sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormalPointer"><strong>glNormalPointer</strong></a>(...)</dt><dd><tt><a href="#-glNormalPointer">glNormalPointer</a>(size,&nbsp;type,&nbsp;stride,&nbsp;pointer)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormalPointerb"><strong>glNormalPointerb</strong></a>(...)</dt><dd><tt>glNormalPointerub(pointer[][3])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormalPointerd"><strong>glNormalPointerd</strong></a>(...)</dt><dd><tt><a href="#-glNormalPointerd">glNormalPointerd</a>(pointer[][3])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormalPointerf"><strong>glNormalPointerf</strong></a>(...)</dt><dd><tt><a href="#-glNormalPointerf">glNormalPointerf</a>(pointer[][3])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormalPointeri"><strong>glNormalPointeri</strong></a>(...)</dt><dd><tt><a href="#-glNormalPointeri">glNormalPointeri</a>(pointer[][3])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glNormalPointers"><strong>glNormalPointers</strong></a>(...)</dt><dd><tt><a href="#-glNormalPointers">glNormalPointers</a>(pointer[][3])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glOrtho"><strong>glOrtho</strong></a>(...)</dt><dd><tt><a href="#-glOrtho">glOrtho</a>(left,&nbsp;right,&nbsp;bottom,&nbsp;top,&nbsp;zNear,&nbsp;zFar)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPassThrough"><strong>glPassThrough</strong></a>(...)</dt><dd><tt><a href="#-glPassThrough">glPassThrough</a>(token)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPixelMapfv"><strong>glPixelMapfv</strong></a>(...)</dt><dd><tt><a href="#-glPixelMapfv">glPixelMapfv</a>(map,&nbsp;values)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPixelMapuiv"><strong>glPixelMapuiv</strong></a>(...)</dt><dd><tt><a href="#-glPixelMapuiv">glPixelMapuiv</a>(map,&nbsp;values)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPixelMapusv"><strong>glPixelMapusv</strong></a>(...)</dt><dd><tt><a href="#-glPixelMapusv">glPixelMapusv</a>(map,&nbsp;values)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPixelStoref"><strong>glPixelStoref</strong></a>(...)</dt><dd><tt><a href="#-glPixelStoref">glPixelStoref</a>(pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPixelStorei"><strong>glPixelStorei</strong></a>(...)</dt><dd><tt><a href="#-glPixelStorei">glPixelStorei</a>(pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPixelTransferf"><strong>glPixelTransferf</strong></a>(...)</dt><dd><tt><a href="#-glPixelTransferf">glPixelTransferf</a>(name,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPixelTransferi"><strong>glPixelTransferi</strong></a>(...)</dt><dd><tt><a href="#-glPixelTransferi">glPixelTransferi</a>(name,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPixelZoom"><strong>glPixelZoom</strong></a>(...)</dt><dd><tt><a href="#-glPixelZoom">glPixelZoom</a>(xfactor,&nbsp;yfactor)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPointSize"><strong>glPointSize</strong></a>(...)</dt><dd><tt><a href="#-glPointSize">glPointSize</a>(size)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPolygonMode"><strong>glPolygonMode</strong></a>(...)</dt><dd><tt><a href="#-glPolygonMode">glPolygonMode</a>(face,&nbsp;mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPolygonOffset"><strong>glPolygonOffset</strong></a>(...)</dt><dd><tt><a href="#-glPolygonOffset">glPolygonOffset</a>(factor,&nbsp;units)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPolygonStipple"><strong>glPolygonStipple</strong></a>(...)</dt><dd><tt><a href="#-glPolygonStipple">glPolygonStipple</a>(mask)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPolygonStippleub"><strong>glPolygonStippleub</strong></a>(...)</dt><dd><tt><a href="#-glPolygonStippleub">glPolygonStippleub</a>(mask[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPopAttrib"><strong>glPopAttrib</strong></a>(...)</dt><dd><tt><a href="#-glPopAttrib">glPopAttrib</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPopClientAttrib"><strong>glPopClientAttrib</strong></a>(...)</dt><dd><tt><a href="#-glPopClientAttrib">glPopClientAttrib</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPopMatrix"><strong>glPopMatrix</strong></a>(...)</dt><dd><tt><a href="#-glPopMatrix">glPopMatrix</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPopName"><strong>glPopName</strong></a>(...)</dt><dd><tt><a href="#-glPopName">glPopName</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPrioritizeTextures"><strong>glPrioritizeTextures</strong></a>(...)</dt><dd><tt><a href="#-glPrioritizeTextures">glPrioritizeTextures</a>(textures[],&nbsp;priorities[])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPushAttrib"><strong>glPushAttrib</strong></a>(...)</dt><dd><tt><a href="#-glPushAttrib">glPushAttrib</a>(mask)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPushClientAttrib"><strong>glPushClientAttrib</strong></a>(...)</dt><dd><tt><a href="#-glPushClientAttrib">glPushClientAttrib</a>(mask)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPushMatrix"><strong>glPushMatrix</strong></a>(...)</dt><dd><tt><a href="#-glPushMatrix">glPushMatrix</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glPushName"><strong>glPushName</strong></a>(...)</dt><dd><tt><a href="#-glPushName">glPushName</a>(name)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos2d"><strong>glRasterPos2d</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos2d">glRasterPos2d</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos2dv"><strong>glRasterPos2dv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos2dv">glRasterPos2dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos2f"><strong>glRasterPos2f</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos2f">glRasterPos2f</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos2fv"><strong>glRasterPos2fv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos2fv">glRasterPos2fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos2i"><strong>glRasterPos2i</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos2i">glRasterPos2i</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos2iv"><strong>glRasterPos2iv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos2iv">glRasterPos2iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos2s"><strong>glRasterPos2s</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos2s">glRasterPos2s</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos2sv"><strong>glRasterPos2sv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos2sv">glRasterPos2sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos3d"><strong>glRasterPos3d</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos3d">glRasterPos3d</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos3dv"><strong>glRasterPos3dv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos3dv">glRasterPos3dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos3f"><strong>glRasterPos3f</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos3f">glRasterPos3f</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos3fv"><strong>glRasterPos3fv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos3fv">glRasterPos3fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos3i"><strong>glRasterPos3i</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos3i">glRasterPos3i</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos3iv"><strong>glRasterPos3iv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos3iv">glRasterPos3iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos3s"><strong>glRasterPos3s</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos3s">glRasterPos3s</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos3sv"><strong>glRasterPos3sv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos3sv">glRasterPos3sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos4d"><strong>glRasterPos4d</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos4d">glRasterPos4d</a>(x,&nbsp;y,&nbsp;z,&nbsp;w)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos4dv"><strong>glRasterPos4dv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos4dv">glRasterPos4dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos4f"><strong>glRasterPos4f</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos4f">glRasterPos4f</a>(x,&nbsp;y,&nbsp;z,&nbsp;w)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos4fv"><strong>glRasterPos4fv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos4fv">glRasterPos4fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos4i"><strong>glRasterPos4i</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos4i">glRasterPos4i</a>(x,&nbsp;y,&nbsp;z,&nbsp;w)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos4iv"><strong>glRasterPos4iv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos4iv">glRasterPos4iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos4s"><strong>glRasterPos4s</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos4s">glRasterPos4s</a>(x,&nbsp;y,&nbsp;z,&nbsp;w)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRasterPos4sv"><strong>glRasterPos4sv</strong></a>(...)</dt><dd><tt><a href="#-glRasterPos4sv">glRasterPos4sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glReadBuffer"><strong>glReadBuffer</strong></a>(...)</dt><dd><tt><a href="#-glReadBuffer">glReadBuffer</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glReadPixels"><strong>glReadPixels</strong></a>(...)</dt><dd><tt><a href="#-glReadPixels">glReadPixels</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format,&nbsp;type)&nbsp;-&gt;&nbsp;pixels</tt></dd></dl>
+ <dl><dt><a name="-glReadPixelsb"><strong>glReadPixelsb</strong></a>(...)</dt><dd><tt><a href="#-glReadPixelsb">glReadPixelsb</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glReadPixelsd"><strong>glReadPixelsd</strong></a>(...)</dt><dd><tt><a href="#-glReadPixelsd">glReadPixelsd</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glReadPixelsf"><strong>glReadPixelsf</strong></a>(...)</dt><dd><tt><a href="#-glReadPixelsf">glReadPixelsf</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glReadPixelsi"><strong>glReadPixelsi</strong></a>(...)</dt><dd><tt><a href="#-glReadPixelsi">glReadPixelsi</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glReadPixelss"><strong>glReadPixelss</strong></a>(...)</dt><dd><tt><a href="#-glReadPixelss">glReadPixelss</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glReadPixelsub"><strong>glReadPixelsub</strong></a>(...)</dt><dd><tt><a href="#-glReadPixelsub">glReadPixelsub</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glReadPixelsui"><strong>glReadPixelsui</strong></a>(...)</dt><dd><tt><a href="#-glReadPixelsui">glReadPixelsui</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glReadPixelsus"><strong>glReadPixelsus</strong></a>(...)</dt><dd><tt><a href="#-glReadPixelsus">glReadPixelsus</a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;format)&nbsp;-&gt;&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][]</tt></dd></dl>
+ <dl><dt><a name="-glRectd"><strong>glRectd</strong></a>(...)</dt><dd><tt><a href="#-glRectd">glRectd</a>(x1,&nbsp;y1,&nbsp;x2,&nbsp;y2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRectdv"><strong>glRectdv</strong></a>(...)</dt><dd><tt><a href="#-glRectdv">glRectdv</a>(p1,&nbsp;p2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRectf"><strong>glRectf</strong></a>(...)</dt><dd><tt><a href="#-glRectf">glRectf</a>(x1,&nbsp;y1,&nbsp;x2,&nbsp;y2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRectfv"><strong>glRectfv</strong></a>(...)</dt><dd><tt><a href="#-glRectfv">glRectfv</a>(p1,&nbsp;p2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRecti"><strong>glRecti</strong></a>(...)</dt><dd><tt><a href="#-glRecti">glRecti</a>(x1,&nbsp;y1,&nbsp;x2,&nbsp;y2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRectiv"><strong>glRectiv</strong></a>(...)</dt><dd><tt><a href="#-glRectiv">glRectiv</a>(p1,&nbsp;p2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRects"><strong>glRects</strong></a>(...)</dt><dd><tt><a href="#-glRects">glRects</a>(x1,&nbsp;y1,&nbsp;x2,&nbsp;y2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRectsv"><strong>glRectsv</strong></a>(...)</dt><dd><tt><a href="#-glRectsv">glRectsv</a>(p1,&nbsp;p2)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRenderMode"><strong>glRenderMode</strong></a>(...)</dt><dd><tt><a href="#-glRenderMode">glRenderMode</a>(mode)&nbsp;-&gt;&nbsp;None&nbsp;|&nbsp;FeedbackBuffer&nbsp;|&nbsp;SelectBuffer</tt></dd></dl>
+ <dl><dt><a name="-glRotate"><strong>glRotate</strong></a> = glRotated(...)</dt><dd><tt><a href="#-glRotated">glRotated</a>(angle,&nbsp;x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRotated"><strong>glRotated</strong></a>(...)</dt><dd><tt><a href="#-glRotated">glRotated</a>(angle,&nbsp;x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glRotatef"><strong>glRotatef</strong></a>(...)</dt><dd><tt><a href="#-glRotatef">glRotatef</a>(angle,&nbsp;x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glScale"><strong>glScale</strong></a> = glScaled(...)</dt><dd><tt><a href="#-glScaled">glScaled</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glScaled"><strong>glScaled</strong></a>(...)</dt><dd><tt><a href="#-glScaled">glScaled</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glScalef"><strong>glScalef</strong></a>(...)</dt><dd><tt><a href="#-glScalef">glScalef</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glScissor"><strong>glScissor</strong></a>(...)</dt><dd><tt><a href="#-glScissor">glScissor</a>(x,&nbsp;y,&nbsp;width,&nbsp;height)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glSelectBuffer"><strong>glSelectBuffer</strong></a>(...)</dt><dd><tt><a href="#-glSelectBuffer">glSelectBuffer</a>(size)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glShadeModel"><strong>glShadeModel</strong></a>(...)</dt><dd><tt><a href="#-glShadeModel">glShadeModel</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glStencilFunc"><strong>glStencilFunc</strong></a>(...)</dt><dd><tt><a href="#-glStencilFunc">glStencilFunc</a>(func,&nbsp;ref,&nbsp;mask)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glStencilMask"><strong>glStencilMask</strong></a>(...)</dt><dd><tt><a href="#-glStencilMask">glStencilMask</a>(mask)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glStencilOp"><strong>glStencilOp</strong></a>(...)</dt><dd><tt><a href="#-glStencilOp">glStencilOp</a>(fail,&nbsp;zfail,&nbsp;zpass)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord1d"><strong>glTexCoord1d</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord1d">glTexCoord1d</a>(s)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord1dv"><strong>glTexCoord1dv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord1dv">glTexCoord1dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord1f"><strong>glTexCoord1f</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord1f">glTexCoord1f</a>(s)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord1fv"><strong>glTexCoord1fv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord1fv">glTexCoord1fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord1i"><strong>glTexCoord1i</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord1i">glTexCoord1i</a>(s)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord1iv"><strong>glTexCoord1iv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord1iv">glTexCoord1iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord1s"><strong>glTexCoord1s</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord1s">glTexCoord1s</a>(s)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord1sv"><strong>glTexCoord1sv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord1sv">glTexCoord1sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord2d"><strong>glTexCoord2d</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord2d">glTexCoord2d</a>(s,&nbsp;t)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord2dv"><strong>glTexCoord2dv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord2dv">glTexCoord2dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord2f"><strong>glTexCoord2f</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord2f">glTexCoord2f</a>(s,&nbsp;t)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord2fv"><strong>glTexCoord2fv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord2fv">glTexCoord2fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord2i"><strong>glTexCoord2i</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord2i">glTexCoord2i</a>(s,&nbsp;t)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord2iv"><strong>glTexCoord2iv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord2iv">glTexCoord2iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord2s"><strong>glTexCoord2s</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord2s">glTexCoord2s</a>(s,&nbsp;t)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord2sv"><strong>glTexCoord2sv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord2sv">glTexCoord2sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord3d"><strong>glTexCoord3d</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord3d">glTexCoord3d</a>(s,&nbsp;t,&nbsp;r)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord3dv"><strong>glTexCoord3dv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord3dv">glTexCoord3dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord3f"><strong>glTexCoord3f</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord3f">glTexCoord3f</a>(s,&nbsp;t,&nbsp;r)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord3fv"><strong>glTexCoord3fv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord3fv">glTexCoord3fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord3i"><strong>glTexCoord3i</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord3i">glTexCoord3i</a>(s,&nbsp;t,&nbsp;r)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord3iv"><strong>glTexCoord3iv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord3iv">glTexCoord3iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord3s"><strong>glTexCoord3s</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord3s">glTexCoord3s</a>(s,&nbsp;t,&nbsp;r)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord3sv"><strong>glTexCoord3sv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord3sv">glTexCoord3sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord4d"><strong>glTexCoord4d</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord4d">glTexCoord4d</a>(s,&nbsp;t,&nbsp;r,&nbsp;q)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord4dv"><strong>glTexCoord4dv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord4dv">glTexCoord4dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord4f"><strong>glTexCoord4f</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord4f">glTexCoord4f</a>(s,&nbsp;t,&nbsp;r,&nbsp;q)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord4fv"><strong>glTexCoord4fv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord4fv">glTexCoord4fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord4i"><strong>glTexCoord4i</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord4i">glTexCoord4i</a>(s,&nbsp;t,&nbsp;r,&nbsp;q)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord4iv"><strong>glTexCoord4iv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord4iv">glTexCoord4iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord4s"><strong>glTexCoord4s</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord4s">glTexCoord4s</a>(s,&nbsp;t,&nbsp;r,&nbsp;q)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoord4sv"><strong>glTexCoord4sv</strong></a>(...)</dt><dd><tt><a href="#-glTexCoord4sv">glTexCoord4sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoordPointer"><strong>glTexCoordPointer</strong></a>(...)</dt><dd><tt><a href="#-glTexCoordPointer">glTexCoordPointer</a>(size,&nbsp;type,&nbsp;stride,&nbsp;pointer)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoordPointerb"><strong>glTexCoordPointerb</strong></a>(...)</dt><dd><tt>glTexCoordPointerub(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoordPointerd"><strong>glTexCoordPointerd</strong></a>(...)</dt><dd><tt><a href="#-glTexCoordPointerd">glTexCoordPointerd</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoordPointerf"><strong>glTexCoordPointerf</strong></a>(...)</dt><dd><tt><a href="#-glTexCoordPointerf">glTexCoordPointerf</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoordPointeri"><strong>glTexCoordPointeri</strong></a>(...)</dt><dd><tt><a href="#-glTexCoordPointeri">glTexCoordPointeri</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexCoordPointers"><strong>glTexCoordPointers</strong></a>(...)</dt><dd><tt><a href="#-glTexCoordPointers">glTexCoordPointers</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexEnvf"><strong>glTexEnvf</strong></a>(...)</dt><dd><tt><a href="#-glTexEnvf">glTexEnvf</a>(target,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexEnvfv"><strong>glTexEnvfv</strong></a>(...)</dt><dd><tt><a href="#-glTexEnvfv">glTexEnvfv</a>(target,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexEnvi"><strong>glTexEnvi</strong></a>(...)</dt><dd><tt><a href="#-glTexEnvi">glTexEnvi</a>(target,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexEnviv"><strong>glTexEnviv</strong></a>(...)</dt><dd><tt><a href="#-glTexEnviv">glTexEnviv</a>(target,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexGen"><strong>glTexGen</strong></a> = glTexGendv(...)</dt><dd><tt><a href="#-glTexGendv">glTexGendv</a>(coord,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexGend"><strong>glTexGend</strong></a>(...)</dt><dd><tt><a href="#-glTexGend">glTexGend</a>(coord,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexGendv"><strong>glTexGendv</strong></a>(...)</dt><dd><tt><a href="#-glTexGendv">glTexGendv</a>(coord,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexGenf"><strong>glTexGenf</strong></a>(...)</dt><dd><tt><a href="#-glTexGenf">glTexGenf</a>(coord,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexGenfv"><strong>glTexGenfv</strong></a>(...)</dt><dd><tt><a href="#-glTexGenfv">glTexGenfv</a>(coord,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexGeni"><strong>glTexGeni</strong></a>(...)</dt><dd><tt><a href="#-glTexGeni">glTexGeni</a>(coord,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexGeniv"><strong>glTexGeniv</strong></a>(...)</dt><dd><tt><a href="#-glTexGeniv">glTexGeniv</a>(coord,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage1D"><strong>glTexImage1D</strong></a>(...)</dt><dd><tt><a href="#-glTexImage1D">glTexImage1D</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;width,&nbsp;border,&nbsp;format,&nbsp;type,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage1Db"><strong>glTexImage1Db</strong></a>(...)</dt><dd><tt><a href="#-glTexImage1Db">glTexImage1Db</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage1Df"><strong>glTexImage1Df</strong></a>(...)</dt><dd><tt><a href="#-glTexImage1Df">glTexImage1Df</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage1Di"><strong>glTexImage1Di</strong></a>(...)</dt><dd><tt><a href="#-glTexImage1Di">glTexImage1Di</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage1Ds"><strong>glTexImage1Ds</strong></a>(...)</dt><dd><tt><a href="#-glTexImage1Ds">glTexImage1Ds</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage1Dub"><strong>glTexImage1Dub</strong></a>(...)</dt><dd><tt><a href="#-glTexImage1Dub">glTexImage1Dub</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage1Dui"><strong>glTexImage1Dui</strong></a>(...)</dt><dd><tt><a href="#-glTexImage1Dui">glTexImage1Dui</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage1Dus"><strong>glTexImage1Dus</strong></a>(...)</dt><dd><tt><a href="#-glTexImage1Dus">glTexImage1Dus</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage2D"><strong>glTexImage2D</strong></a>(...)</dt><dd><tt><a href="#-glTexImage2D">glTexImage2D</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;width,&nbsp;height,&nbsp;border,&nbsp;format,&nbsp;type,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage2Db"><strong>glTexImage2Db</strong></a>(...)</dt><dd><tt><a href="#-glTexImage2Db">glTexImage2Db</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage2Df"><strong>glTexImage2Df</strong></a>(...)</dt><dd><tt><a href="#-glTexImage2Df">glTexImage2Df</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage2Di"><strong>glTexImage2Di</strong></a>(...)</dt><dd><tt><a href="#-glTexImage2Di">glTexImage2Di</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage2Ds"><strong>glTexImage2Ds</strong></a>(...)</dt><dd><tt><a href="#-glTexImage2Ds">glTexImage2Ds</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage2Dub"><strong>glTexImage2Dub</strong></a>(...)</dt><dd><tt><a href="#-glTexImage2Dub">glTexImage2Dub</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage2Dui"><strong>glTexImage2Dui</strong></a>(...)</dt><dd><tt><a href="#-glTexImage2Dui">glTexImage2Dui</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexImage2Dus"><strong>glTexImage2Dus</strong></a>(...)</dt><dd><tt><a href="#-glTexImage2Dus">glTexImage2Dus</a>(target,&nbsp;level,&nbsp;internalFormat,&nbsp;border,&nbsp;format,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexParameter"><strong>glTexParameter</strong></a> = glTexParameterfv(...)</dt><dd><tt><a href="#-glTexParameterfv">glTexParameterfv</a>(target,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexParameterf"><strong>glTexParameterf</strong></a>(...)</dt><dd><tt><a href="#-glTexParameterf">glTexParameterf</a>(target,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexParameterfv"><strong>glTexParameterfv</strong></a>(...)</dt><dd><tt><a href="#-glTexParameterfv">glTexParameterfv</a>(target,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexParameteri"><strong>glTexParameteri</strong></a>(...)</dt><dd><tt><a href="#-glTexParameteri">glTexParameteri</a>(target,&nbsp;pname,&nbsp;param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexParameteriv"><strong>glTexParameteriv</strong></a>(...)</dt><dd><tt><a href="#-glTexParameteriv">glTexParameteriv</a>(target,&nbsp;pname,&nbsp;v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage1D"><strong>glTexSubImage1D</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage1D">glTexSubImage1D</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;width,&nbsp;format,&nbsp;type,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage1Db"><strong>glTexSubImage1Db</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage1Db">glTexSubImage1Db</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage1Df"><strong>glTexSubImage1Df</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage1Df">glTexSubImage1Df</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage1Di"><strong>glTexSubImage1Di</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage1Di">glTexSubImage1Di</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage1Ds"><strong>glTexSubImage1Ds</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage1Ds">glTexSubImage1Ds</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage1Dub"><strong>glTexSubImage1Dub</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage1Dub">glTexSubImage1Dub</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage1Dui"><strong>glTexSubImage1Dui</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage1Dui">glTexSubImage1Dui</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage1Dus"><strong>glTexSubImage1Dus</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage1Dus">glTexSubImage1Dus</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[]&nbsp;|&nbsp;pixels[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage2D"><strong>glTexSubImage2D</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage2D">glTexSubImage2D</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;width,&nbsp;height,&nbsp;format,&nbsp;type,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage2Db"><strong>glTexSubImage2Db</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage2Db">glTexSubImage2Db</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage2Df"><strong>glTexSubImage2Df</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage2Df">glTexSubImage2Df</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage2Di"><strong>glTexSubImage2Di</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage2Di">glTexSubImage2Di</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage2Ds"><strong>glTexSubImage2Ds</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage2Ds">glTexSubImage2Ds</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage2Dub"><strong>glTexSubImage2Dub</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage2Dub">glTexSubImage2Dub</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage2Dui"><strong>glTexSubImage2Dui</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage2Dui">glTexSubImage2Dui</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTexSubImage2Dus"><strong>glTexSubImage2Dus</strong></a>(...)</dt><dd><tt><a href="#-glTexSubImage2Dus">glTexSubImage2Dus</a>(target,&nbsp;level,&nbsp;xoffset,&nbsp;yoffset,&nbsp;format,&nbsp;type,&nbsp;pixels[][]&nbsp;|&nbsp;pixels[][][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTranslate"><strong>glTranslate</strong></a> = glTranslated(...)</dt><dd><tt><a href="#-glTranslated">glTranslated</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTranslated"><strong>glTranslated</strong></a>(...)</dt><dd><tt><a href="#-glTranslated">glTranslated</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glTranslatef"><strong>glTranslatef</strong></a>(...)</dt><dd><tt><a href="#-glTranslatef">glTranslatef</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex2d"><strong>glVertex2d</strong></a>(...)</dt><dd><tt><a href="#-glVertex2d">glVertex2d</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex2dv"><strong>glVertex2dv</strong></a>(...)</dt><dd><tt><a href="#-glVertex2dv">glVertex2dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex2f"><strong>glVertex2f</strong></a>(...)</dt><dd><tt><a href="#-glVertex2f">glVertex2f</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex2fv"><strong>glVertex2fv</strong></a>(...)</dt><dd><tt><a href="#-glVertex2fv">glVertex2fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex2i"><strong>glVertex2i</strong></a>(...)</dt><dd><tt><a href="#-glVertex2i">glVertex2i</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex2iv"><strong>glVertex2iv</strong></a>(...)</dt><dd><tt><a href="#-glVertex2iv">glVertex2iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex2s"><strong>glVertex2s</strong></a>(...)</dt><dd><tt><a href="#-glVertex2s">glVertex2s</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex2sv"><strong>glVertex2sv</strong></a>(...)</dt><dd><tt><a href="#-glVertex2sv">glVertex2sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex3d"><strong>glVertex3d</strong></a>(...)</dt><dd><tt><a href="#-glVertex3d">glVertex3d</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex3dv"><strong>glVertex3dv</strong></a>(...)</dt><dd><tt><a href="#-glVertex3dv">glVertex3dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex3f"><strong>glVertex3f</strong></a>(...)</dt><dd><tt><a href="#-glVertex3f">glVertex3f</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex3fv"><strong>glVertex3fv</strong></a>(...)</dt><dd><tt><a href="#-glVertex3fv">glVertex3fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex3i"><strong>glVertex3i</strong></a>(...)</dt><dd><tt><a href="#-glVertex3i">glVertex3i</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex3iv"><strong>glVertex3iv</strong></a>(...)</dt><dd><tt><a href="#-glVertex3iv">glVertex3iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex3s"><strong>glVertex3s</strong></a>(...)</dt><dd><tt><a href="#-glVertex3s">glVertex3s</a>(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex3sv"><strong>glVertex3sv</strong></a>(...)</dt><dd><tt><a href="#-glVertex3sv">glVertex3sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex4d"><strong>glVertex4d</strong></a>(...)</dt><dd><tt><a href="#-glVertex4d">glVertex4d</a>(x,&nbsp;y,&nbsp;z,&nbsp;w)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex4dv"><strong>glVertex4dv</strong></a>(...)</dt><dd><tt><a href="#-glVertex4dv">glVertex4dv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex4f"><strong>glVertex4f</strong></a>(...)</dt><dd><tt><a href="#-glVertex4f">glVertex4f</a>(x,&nbsp;y,&nbsp;z,&nbsp;w)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex4fv"><strong>glVertex4fv</strong></a>(...)</dt><dd><tt><a href="#-glVertex4fv">glVertex4fv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex4i"><strong>glVertex4i</strong></a>(...)</dt><dd><tt><a href="#-glVertex4i">glVertex4i</a>(x,&nbsp;y,&nbsp;z,&nbsp;w)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex4iv"><strong>glVertex4iv</strong></a>(...)</dt><dd><tt><a href="#-glVertex4iv">glVertex4iv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex4s"><strong>glVertex4s</strong></a>(...)</dt><dd><tt><a href="#-glVertex4s">glVertex4s</a>(x,&nbsp;y,&nbsp;z,&nbsp;w)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertex4sv"><strong>glVertex4sv</strong></a>(...)</dt><dd><tt><a href="#-glVertex4sv">glVertex4sv</a>(v)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertexPointer"><strong>glVertexPointer</strong></a>(...)</dt><dd><tt><a href="#-glVertexPointer">glVertexPointer</a>(size,&nbsp;type,&nbsp;stride,&nbsp;pointer)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertexPointerb"><strong>glVertexPointerb</strong></a>(...)</dt><dd><tt>glVertexPointerub(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertexPointerd"><strong>glVertexPointerd</strong></a>(...)</dt><dd><tt><a href="#-glVertexPointerd">glVertexPointerd</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertexPointerf"><strong>glVertexPointerf</strong></a>(...)</dt><dd><tt><a href="#-glVertexPointerf">glVertexPointerf</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertexPointeri"><strong>glVertexPointeri</strong></a>(...)</dt><dd><tt><a href="#-glVertexPointeri">glVertexPointeri</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glVertexPointers"><strong>glVertexPointers</strong></a>(...)</dt><dd><tt><a href="#-glVertexPointers">glVertexPointers</a>(pointer[][])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glViewport"><strong>glViewport</strong></a>(...)</dt><dd><tt><a href="#-glViewport">glViewport</a>(x,&nbsp;y,&nbsp;width,&nbsp;height)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBeginCurve"><strong>gluBeginCurve</strong></a>(...)</dt><dd><tt><a href="#-gluBeginCurve">gluBeginCurve</a>(nobj)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBeginPolygon"><strong>gluBeginPolygon</strong></a>(...)</dt><dd><tt><a href="#-gluBeginPolygon">gluBeginPolygon</a>(tess)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBeginSurface"><strong>gluBeginSurface</strong></a>(...)</dt><dd><tt><a href="#-gluBeginSurface">gluBeginSurface</a>(nobj)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBeginTrim"><strong>gluBeginTrim</strong></a>(...)</dt><dd><tt><a href="#-gluBeginTrim">gluBeginTrim</a>(nobj)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild1DMipmaps"><strong>gluBuild1DMipmaps</strong></a>(...)</dt><dd><tt><a href="#-gluBuild1DMipmaps">gluBuild1DMipmaps</a>(target,&nbsp;components,&nbsp;width,&nbsp;format,&nbsp;type,&nbsp;data)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild1DMipmapsb"><strong>gluBuild1DMipmapsb</strong></a>(...)</dt><dd><tt><a href="#-gluBuild1DMipmapsb">gluBuild1DMipmapsb</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild1DMipmapsf"><strong>gluBuild1DMipmapsf</strong></a>(...)</dt><dd><tt><a href="#-gluBuild1DMipmapsf">gluBuild1DMipmapsf</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild1DMipmapsi"><strong>gluBuild1DMipmapsi</strong></a>(...)</dt><dd><tt><a href="#-gluBuild1DMipmapsi">gluBuild1DMipmapsi</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild1DMipmapss"><strong>gluBuild1DMipmapss</strong></a>(...)</dt><dd><tt><a href="#-gluBuild1DMipmapss">gluBuild1DMipmapss</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild1DMipmapsub"><strong>gluBuild1DMipmapsub</strong></a>(...)</dt><dd><tt><a href="#-gluBuild1DMipmapsub">gluBuild1DMipmapsub</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild1DMipmapsui"><strong>gluBuild1DMipmapsui</strong></a>(...)</dt><dd><tt><a href="#-gluBuild1DMipmapsui">gluBuild1DMipmapsui</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild1DMipmapsus"><strong>gluBuild1DMipmapsus</strong></a>(...)</dt><dd><tt><a href="#-gluBuild1DMipmapsus">gluBuild1DMipmapsus</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild2DMipmaps"><strong>gluBuild2DMipmaps</strong></a>(...)</dt><dd><tt><a href="#-gluBuild2DMipmaps">gluBuild2DMipmaps</a>(target,&nbsp;components,&nbsp;width,&nbsp;height,&nbsp;format,&nbsp;type,&nbsp;data)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild2DMipmapsb"><strong>gluBuild2DMipmapsb</strong></a>(...)</dt><dd><tt><a href="#-gluBuild2DMipmapsb">gluBuild2DMipmapsb</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild2DMipmapsf"><strong>gluBuild2DMipmapsf</strong></a>(...)</dt><dd><tt><a href="#-gluBuild2DMipmapsf">gluBuild2DMipmapsf</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild2DMipmapsi"><strong>gluBuild2DMipmapsi</strong></a>(...)</dt><dd><tt><a href="#-gluBuild2DMipmapsi">gluBuild2DMipmapsi</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild2DMipmapss"><strong>gluBuild2DMipmapss</strong></a>(...)</dt><dd><tt><a href="#-gluBuild2DMipmapss">gluBuild2DMipmapss</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild2DMipmapsub"><strong>gluBuild2DMipmapsub</strong></a>(...)</dt><dd><tt><a href="#-gluBuild2DMipmapsub">gluBuild2DMipmapsub</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild2DMipmapsui"><strong>gluBuild2DMipmapsui</strong></a>(...)</dt><dd><tt><a href="#-gluBuild2DMipmapsui">gluBuild2DMipmapsui</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluBuild2DMipmapsus"><strong>gluBuild2DMipmapsus</strong></a>(...)</dt><dd><tt><a href="#-gluBuild2DMipmapsus">gluBuild2DMipmapsus</a>(target,&nbsp;components,&nbsp;format,&nbsp;pixels)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluCylinder"><strong>gluCylinder</strong></a>(...)</dt><dd><tt><a href="#-gluCylinder">gluCylinder</a>(qobj,&nbsp;baseRadius,&nbsp;topRadius,&nbsp;height,&nbsp;slices,&nbsp;stacks)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluDeleteNurbsRenderer"><strong>gluDeleteNurbsRenderer</strong></a>(...)</dt><dd><tt><a href="#-gluDeleteNurbsRenderer">gluDeleteNurbsRenderer</a>(nobj)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluDeleteQuadric"><strong>gluDeleteQuadric</strong></a>(...)</dt><dd><tt><a href="#-gluDeleteQuadric">gluDeleteQuadric</a>(quadObject)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluDeleteTess"><strong>gluDeleteTess</strong></a>(...)</dt><dd><tt><a href="#-gluDeleteTess">gluDeleteTess</a>(tess)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluDisk"><strong>gluDisk</strong></a>(...)</dt><dd><tt><a href="#-gluDisk">gluDisk</a>(qobj,&nbsp;innerRadius,&nbsp;outerRadius,&nbsp;slices,&nbsp;loops)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluEndCurve"><strong>gluEndCurve</strong></a>(...)</dt><dd><tt><a href="#-gluEndCurve">gluEndCurve</a>(nobj)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluEndPolygon"><strong>gluEndPolygon</strong></a>(...)</dt><dd><tt><a href="#-gluEndPolygon">gluEndPolygon</a>(tess)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluEndSurface"><strong>gluEndSurface</strong></a>(...)</dt><dd><tt><a href="#-gluEndSurface">gluEndSurface</a>(nobj)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluEndTrim"><strong>gluEndTrim</strong></a>(...)</dt><dd><tt><a href="#-gluEndTrim">gluEndTrim</a>(nobj)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluErrorString"><strong>gluErrorString</strong></a>(...)</dt><dd><tt><a href="#-gluErrorString">gluErrorString</a>(errCode)&nbsp;-&gt;&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-gluGetNurbsProperty"><strong>gluGetNurbsProperty</strong></a>(...)</dt><dd><tt><a href="#-gluGetNurbsProperty">gluGetNurbsProperty</a>(nobj,&nbsp;property)&nbsp;-&gt;&nbsp;value</tt></dd></dl>
+ <dl><dt><a name="-gluGetString"><strong>gluGetString</strong></a>(...)</dt><dd><tt><a href="#-gluGetString">gluGetString</a>(name)&nbsp;-&gt;&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-gluGetTessProperty"><strong>gluGetTessProperty</strong></a>(...)</dt><dd><tt><a href="#-gluGetTessProperty">gluGetTessProperty</a>(tess,&nbsp;which)&nbsp;-&gt;&nbsp;value</tt></dd></dl>
+ <dl><dt><a name="-gluLoadSamplingMatrices"><strong>gluLoadSamplingMatrices</strong></a>(...)</dt><dd><tt><a href="#-gluLoadSamplingMatrices">gluLoadSamplingMatrices</a>(nobj,&nbsp;modelMatrix,&nbsp;projMatrix,&nbsp;viewport)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluLookAt"><strong>gluLookAt</strong></a>(...)</dt><dd><tt><a href="#-gluLookAt">gluLookAt</a>(eyex,&nbsp;eyey,&nbsp;eyez,&nbsp;centerx,&nbsp;centery,&nbsp;centerz,&nbsp;upx,&nbsp;upy,&nbsp;upz)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluNewNurbsRenderer"><strong>gluNewNurbsRenderer</strong></a>(...)</dt><dd><tt><a href="#-gluNewNurbsRenderer">gluNewNurbsRenderer</a>()&nbsp;-&gt;&nbsp;GLUnurbs</tt></dd></dl>
+ <dl><dt><a name="-gluNewQuadric"><strong>gluNewQuadric</strong></a>(...)</dt><dd><tt><a href="#-gluNewQuadric">gluNewQuadric</a>()&nbsp;-&gt;&nbsp;GLUquadric</tt></dd></dl>
+ <dl><dt><a name="-gluNewTess"><strong>gluNewTess</strong></a>(...)</dt><dd><tt><a href="#-gluNewTess">gluNewTess</a>()&nbsp;-&gt;&nbsp;GLUtesselator</tt></dd></dl>
+ <dl><dt><a name="-gluNextContour"><strong>gluNextContour</strong></a>(...)</dt><dd><tt><a href="#-gluNextContour">gluNextContour</a>(tess,&nbsp;type)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluNurbsCallback"><strong>gluNurbsCallback</strong></a>(...)</dt><dd><tt><a href="#-gluNurbsCallback">gluNurbsCallback</a>(qobj,&nbsp;which,&nbsp;func)</tt></dd></dl>
+ <dl><dt><a name="-gluNurbsCurve"><strong>gluNurbsCurve</strong></a>(...)</dt><dd><tt><a href="#-gluNurbsCurve">gluNurbsCurve</a>(nobj,&nbsp;knot,&nbsp;ctlarray,&nbsp;type)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluNurbsProperty"><strong>gluNurbsProperty</strong></a>(...)</dt><dd><tt><a href="#-gluNurbsProperty">gluNurbsProperty</a>(nobj,&nbsp;property,&nbsp;value)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluNurbsSurface"><strong>gluNurbsSurface</strong></a>(...)</dt><dd><tt><a href="#-gluNurbsSurface">gluNurbsSurface</a>(nobj,&nbsp;sknot,&nbsp;tknot,&nbsp;ctlarray,&nbsp;type)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluOrtho2D"><strong>gluOrtho2D</strong></a>(...)</dt><dd><tt><a href="#-gluOrtho2D">gluOrtho2D</a>(left,&nbsp;right,&nbsp;bottom,&nbsp;top)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluPartialDisk"><strong>gluPartialDisk</strong></a>(...)</dt><dd><tt><a href="#-gluPartialDisk">gluPartialDisk</a>(qobj,&nbsp;innerRadius,&nbsp;outerRadius,&nbsp;slices,&nbsp;loops,&nbsp;startAngle,&nbsp;sweepAngle)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluPerspective"><strong>gluPerspective</strong></a>(...)</dt><dd><tt><a href="#-gluPerspective">gluPerspective</a>(fovy,&nbsp;aspect,&nbsp;zNear,&nbsp;zFar)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluPwlCurve"><strong>gluPwlCurve</strong></a>(...)</dt><dd><tt><a href="#-gluPwlCurve">gluPwlCurve</a>(nobj,&nbsp;array,&nbsp;type)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluQuadricCallback"><strong>gluQuadricCallback</strong></a>(...)</dt><dd><tt><a href="#-gluQuadricCallback">gluQuadricCallback</a>(qobj,&nbsp;which,&nbsp;func)</tt></dd></dl>
+ <dl><dt><a name="-gluQuadricDrawStyle"><strong>gluQuadricDrawStyle</strong></a>(...)</dt><dd><tt><a href="#-gluQuadricDrawStyle">gluQuadricDrawStyle</a>(quadObject,&nbsp;drawStyle)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluQuadricNormals"><strong>gluQuadricNormals</strong></a>(...)</dt><dd><tt><a href="#-gluQuadricNormals">gluQuadricNormals</a>(quadObject,&nbsp;normals)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluQuadricOrientation"><strong>gluQuadricOrientation</strong></a>(...)</dt><dd><tt><a href="#-gluQuadricOrientation">gluQuadricOrientation</a>(quadObject,&nbsp;orientation)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluQuadricTexture"><strong>gluQuadricTexture</strong></a>(...)</dt><dd><tt><a href="#-gluQuadricTexture">gluQuadricTexture</a>(quadObject,&nbsp;textureCoords)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluScaleImage"><strong>gluScaleImage</strong></a>(...)</dt><dd><tt><a href="#-gluScaleImage">gluScaleImage</a>(format,&nbsp;widthin,&nbsp;heightin,&nbsp;typein,&nbsp;datain,&nbsp;widthout,&nbsp;heightout,&nbsp;typeout)&nbsp;-&gt;&nbsp;dataout</tt></dd></dl>
+ <dl><dt><a name="-gluScaleImageb"><strong>gluScaleImageb</strong></a>(...)</dt><dd><tt><a href="#-gluScaleImageb">gluScaleImageb</a>(format,&nbsp;datain,&nbsp;widthout,&nbsp;heightout)&nbsp;-&gt;&nbsp;dataout</tt></dd></dl>
+ <dl><dt><a name="-gluScaleImagef"><strong>gluScaleImagef</strong></a>(...)</dt><dd><tt><a href="#-gluScaleImagef">gluScaleImagef</a>(format,&nbsp;datain,&nbsp;widthout,&nbsp;heightout)&nbsp;-&gt;&nbsp;dataout</tt></dd></dl>
+ <dl><dt><a name="-gluScaleImagei"><strong>gluScaleImagei</strong></a>(...)</dt><dd><tt><a href="#-gluScaleImagei">gluScaleImagei</a>(format,&nbsp;datain,&nbsp;widthout,&nbsp;heightout)&nbsp;-&gt;&nbsp;dataout</tt></dd></dl>
+ <dl><dt><a name="-gluScaleImages"><strong>gluScaleImages</strong></a>(...)</dt><dd><tt><a href="#-gluScaleImages">gluScaleImages</a>(format,&nbsp;datain,&nbsp;widthout,&nbsp;heightout)&nbsp;-&gt;&nbsp;dataout</tt></dd></dl>
+ <dl><dt><a name="-gluScaleImageub"><strong>gluScaleImageub</strong></a>(...)</dt><dd><tt><a href="#-gluScaleImageub">gluScaleImageub</a>(format,&nbsp;datain,&nbsp;widthout,&nbsp;heightout)&nbsp;-&gt;&nbsp;dataout</tt></dd></dl>
+ <dl><dt><a name="-gluScaleImageui"><strong>gluScaleImageui</strong></a>(...)</dt><dd><tt><a href="#-gluScaleImageui">gluScaleImageui</a>(format,&nbsp;datain,&nbsp;widthout,&nbsp;heightout)&nbsp;-&gt;&nbsp;dataout</tt></dd></dl>
+ <dl><dt><a name="-gluScaleImageus"><strong>gluScaleImageus</strong></a>(...)</dt><dd><tt><a href="#-gluScaleImageus">gluScaleImageus</a>(format,&nbsp;datain,&nbsp;widthout,&nbsp;heightout)&nbsp;-&gt;&nbsp;dataout</tt></dd></dl>
+ <dl><dt><a name="-gluSphere"><strong>gluSphere</strong></a>(...)</dt><dd><tt><a href="#-gluSphere">gluSphere</a>(qobj,&nbsp;radius,&nbsp;slices,&nbsp;stacks)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluTessBeginContour"><strong>gluTessBeginContour</strong></a>(...)</dt><dd><tt><a href="#-gluTessBeginContour">gluTessBeginContour</a>(tess)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluTessBeginPolygon"><strong>gluTessBeginPolygon</strong></a>(...)</dt><dd><tt><a href="#-gluTessBeginPolygon">gluTessBeginPolygon</a>(tess,&nbsp;polygon_data)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluTessCallback"><strong>gluTessCallback</strong></a>(...)</dt><dd><tt><a href="#-gluTessCallback">gluTessCallback</a>(tess,&nbsp;which,&nbsp;pyfunc)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;error&nbsp;callbacks&nbsp;GLU_TESS_ERROR&nbsp;and&nbsp;GLU_TESS_ERROR_BEGIN&nbsp;cannot&nbsp;be&nbsp;set&nbsp;by<br>
+gluTessCallback,&nbsp;instead&nbsp;an&nbsp;exception&nbsp;is&nbsp;thrown&nbsp;when&nbsp;an&nbsp;error&nbsp;occurs&nbsp;with&nbsp;the<br>
+exception&nbsp;value&nbsp;set&nbsp;to&nbsp;a&nbsp;tuple&nbsp;(errno,&nbsp;polygon_data)</tt></dd></dl>
+ <dl><dt><a name="-gluTessEndContour"><strong>gluTessEndContour</strong></a>(...)</dt><dd><tt><a href="#-gluTessEndContour">gluTessEndContour</a>(tess)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluTessEndPolygon"><strong>gluTessEndPolygon</strong></a>(...)</dt><dd><tt><a href="#-gluTessEndPolygon">gluTessEndPolygon</a>(tess)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluTessNormal"><strong>gluTessNormal</strong></a>(...)</dt><dd><tt><a href="#-gluTessNormal">gluTessNormal</a>(tess,&nbsp;x,&nbsp;y,&nbsp;z)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluTessProperty"><strong>gluTessProperty</strong></a>(...)</dt><dd><tt><a href="#-gluTessProperty">gluTessProperty</a>(tess,&nbsp;which,&nbsp;value)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-gluTessVertex"><strong>gluTessVertex</strong></a>(...)</dt><dd><tt><a href="#-gluTessVertex">gluTessVertex</a>(tess,&nbsp;coords,&nbsp;data)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutAddMenuEntry"><strong>glutAddMenuEntry</strong></a>(...)</dt><dd><tt><a href="#-glutAddMenuEntry">glutAddMenuEntry</a>(label,&nbsp;value)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutAddSubMenu"><strong>glutAddSubMenu</strong></a>(...)</dt><dd><tt><a href="#-glutAddSubMenu">glutAddSubMenu</a>(label,&nbsp;submenu)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutAttachMenu"><strong>glutAttachMenu</strong></a>(...)</dt><dd><tt><a href="#-glutAttachMenu">glutAttachMenu</a>(button)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutBitmapCharacter"><strong>glutBitmapCharacter</strong></a>(...)</dt><dd><tt><a href="#-glutBitmapCharacter">glutBitmapCharacter</a>(font,&nbsp;character)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutBitmapLength"><strong>glutBitmapLength</strong></a>(...)</dt><dd><tt><a href="#-glutBitmapLength">glutBitmapLength</a>(font,&nbsp;string)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutBitmapWidth"><strong>glutBitmapWidth</strong></a>(...)</dt><dd><tt><a href="#-glutBitmapWidth">glutBitmapWidth</a>(font,&nbsp;character)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutButtonBoxFunc"><strong>glutButtonBoxFunc</strong></a>(...)</dt><dd><tt><a href="#-glutButtonBoxFunc">glutButtonBoxFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutChangeToMenuEntry"><strong>glutChangeToMenuEntry</strong></a>(...)</dt><dd><tt><a href="#-glutChangeToMenuEntry">glutChangeToMenuEntry</a>(item,&nbsp;label,&nbsp;value)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutChangeToSubMenu"><strong>glutChangeToSubMenu</strong></a>(...)</dt><dd><tt><a href="#-glutChangeToSubMenu">glutChangeToSubMenu</a>(item,&nbsp;label,&nbsp;submenu)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutCopyColormap"><strong>glutCopyColormap</strong></a>(...)</dt><dd><tt><a href="#-glutCopyColormap">glutCopyColormap</a>(win)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutCreateMenu"><strong>glutCreateMenu</strong></a>(...)</dt><dd><tt><a href="#-glutCreateMenu">glutCreateMenu</a>(func)&nbsp;-&gt;&nbsp;menu</tt></dd></dl>
+ <dl><dt><a name="-glutCreateSubWindow"><strong>glutCreateSubWindow</strong></a>(...)</dt><dd><tt><a href="#-glutCreateSubWindow">glutCreateSubWindow</a>(win,&nbsp;x,&nbsp;y,&nbsp;width,&nbsp;height)&nbsp;-&gt;&nbsp;win</tt></dd></dl>
+ <dl><dt><a name="-glutCreateWindow"><strong>glutCreateWindow</strong></a>(...)</dt><dd><tt><a href="#-glutCreateWindow">glutCreateWindow</a>(title)&nbsp;-&gt;&nbsp;win</tt></dd></dl>
+ <dl><dt><a name="-glutDestroyMenu"><strong>glutDestroyMenu</strong></a>(...)</dt><dd><tt><a href="#-glutDestroyMenu">glutDestroyMenu</a>(menu)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutDestroyWindow"><strong>glutDestroyWindow</strong></a>(...)</dt><dd><tt><a href="#-glutDestroyWindow">glutDestroyWindow</a>(win)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutDetachMenu"><strong>glutDetachMenu</strong></a>(...)</dt><dd><tt><a href="#-glutDetachMenu">glutDetachMenu</a>(button)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutDeviceGet"><strong>glutDeviceGet</strong></a>(...)</dt><dd><tt><a href="#-glutDeviceGet">glutDeviceGet</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutDialsFunc"><strong>glutDialsFunc</strong></a>(...)</dt><dd><tt><a href="#-glutDialsFunc">glutDialsFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutDisplayFunc"><strong>glutDisplayFunc</strong></a>(...)</dt><dd><tt><a href="#-glutDisplayFunc">glutDisplayFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutEnterGameMode"><strong>glutEnterGameMode</strong></a>(...)</dt><dd><tt><a href="#-glutEnterGameMode">glutEnterGameMode</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutEntryFunc"><strong>glutEntryFunc</strong></a>(...)</dt><dd><tt><a href="#-glutEntryFunc">glutEntryFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutEstablishOverlay"><strong>glutEstablishOverlay</strong></a>(...)</dt><dd><tt><a href="#-glutEstablishOverlay">glutEstablishOverlay</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutExtensionSupported"><strong>glutExtensionSupported</strong></a>(...)</dt><dd><tt><a href="#-glutExtensionSupported">glutExtensionSupported</a>(name)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+ <dl><dt><a name="-glutForceJoystickFunc"><strong>glutForceJoystickFunc</strong></a>(...)</dt><dd><tt><a href="#-glutForceJoystickFunc">glutForceJoystickFunc</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutFullScreen"><strong>glutFullScreen</strong></a>(...)</dt><dd><tt><a href="#-glutFullScreen">glutFullScreen</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutGameModeGet"><strong>glutGameModeGet</strong></a>(...)</dt><dd><tt><a href="#-glutGameModeGet">glutGameModeGet</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutGameModeString"><strong>glutGameModeString</strong></a>(...)</dt><dd><tt><a href="#-glutGameModeString">glutGameModeString</a>(string)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutGet"><strong>glutGet</strong></a>(...)</dt><dd><tt><a href="#-glutGet">glutGet</a>(type)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutGetColor"><strong>glutGetColor</strong></a>(...)</dt><dd><tt><a href="#-glutGetColor">glutGetColor</a>(ndx,&nbsp;component)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutGetMenu"><strong>glutGetMenu</strong></a>(...)</dt><dd><tt><a href="#-glutGetMenu">glutGetMenu</a>()&nbsp;-&gt;&nbsp;mene</tt></dd></dl>
+ <dl><dt><a name="-glutGetModifiers"><strong>glutGetModifiers</strong></a>(...)</dt><dd><tt><a href="#-glutGetModifiers">glutGetModifiers</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutGetWindow"><strong>glutGetWindow</strong></a>(...)</dt><dd><tt><a href="#-glutGetWindow">glutGetWindow</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutHideOverlay"><strong>glutHideOverlay</strong></a>(...)</dt><dd><tt><a href="#-glutHideOverlay">glutHideOverlay</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutHideWindow"><strong>glutHideWindow</strong></a>(...)</dt><dd><tt><a href="#-glutHideWindow">glutHideWindow</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutIconifyWindow"><strong>glutIconifyWindow</strong></a>(...)</dt><dd><tt><a href="#-glutIconifyWindow">glutIconifyWindow</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutIdleFunc"><strong>glutIdleFunc</strong></a>(...)</dt><dd><tt><a href="#-glutIdleFunc">glutIdleFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutIgnoreKeyRepeat"><strong>glutIgnoreKeyRepeat</strong></a>(...)</dt><dd><tt><a href="#-glutIgnoreKeyRepeat">glutIgnoreKeyRepeat</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutInit"><strong>glutInit</strong></a>(...)</dt><dd><tt><a href="#-glutInit">glutInit</a>(argv)&nbsp;-&gt;&nbsp;argv</tt></dd></dl>
+ <dl><dt><a name="-glutInitDisplayMode"><strong>glutInitDisplayMode</strong></a>(...)</dt><dd><tt><a href="#-glutInitDisplayMode">glutInitDisplayMode</a>(mode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutInitDisplayString"><strong>glutInitDisplayString</strong></a>(...)</dt><dd><tt><a href="#-glutInitDisplayString">glutInitDisplayString</a>(string)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutInitWindowPosition"><strong>glutInitWindowPosition</strong></a>(...)</dt><dd><tt><a href="#-glutInitWindowPosition">glutInitWindowPosition</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutInitWindowSize"><strong>glutInitWindowSize</strong></a>(...)</dt><dd><tt><a href="#-glutInitWindowSize">glutInitWindowSize</a>(width,&nbsp;height)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutJoystickFunc"><strong>glutJoystickFunc</strong></a>(...)</dt><dd><tt><a href="#-glutJoystickFunc">glutJoystickFunc</a>(func,&nbsp;poll_interval)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutKeyboardFunc"><strong>glutKeyboardFunc</strong></a>(...)</dt><dd><tt><a href="#-glutKeyboardFunc">glutKeyboardFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutKeyboardUpFunc"><strong>glutKeyboardUpFunc</strong></a>(...)</dt><dd><tt><a href="#-glutKeyboardUpFunc">glutKeyboardUpFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutLayerGet"><strong>glutLayerGet</strong></a>(...)</dt><dd><tt><a href="#-glutLayerGet">glutLayerGet</a>(type)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutLeaveGameMode"><strong>glutLeaveGameMode</strong></a>(...)</dt><dd><tt><a href="#-glutLeaveGameMode">glutLeaveGameMode</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutMainLoop"><strong>glutMainLoop</strong></a>(...)</dt><dd><tt><a href="#-glutMainLoop">glutMainLoop</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutMenuStateFunc"><strong>glutMenuStateFunc</strong></a>(...)</dt><dd><tt><a href="#-glutMenuStateFunc">glutMenuStateFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutMenuStatusFunc"><strong>glutMenuStatusFunc</strong></a>(...)</dt><dd><tt><a href="#-glutMenuStatusFunc">glutMenuStatusFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutMotionFunc"><strong>glutMotionFunc</strong></a>(...)</dt><dd><tt><a href="#-glutMotionFunc">glutMotionFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutMouseFunc"><strong>glutMouseFunc</strong></a>(...)</dt><dd><tt><a href="#-glutMouseFunc">glutMouseFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutOverlayDisplayFunc"><strong>glutOverlayDisplayFunc</strong></a>(...)</dt><dd><tt><a href="#-glutOverlayDisplayFunc">glutOverlayDisplayFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutPassiveMotionFunc"><strong>glutPassiveMotionFunc</strong></a>(...)</dt><dd><tt><a href="#-glutPassiveMotionFunc">glutPassiveMotionFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutPopWindow"><strong>glutPopWindow</strong></a>(...)</dt><dd><tt><a href="#-glutPopWindow">glutPopWindow</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutPositionWindow"><strong>glutPositionWindow</strong></a>(...)</dt><dd><tt><a href="#-glutPositionWindow">glutPositionWindow</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutPostOverlayRedisplay"><strong>glutPostOverlayRedisplay</strong></a>(...)</dt><dd><tt><a href="#-glutPostOverlayRedisplay">glutPostOverlayRedisplay</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutPostRedisplay"><strong>glutPostRedisplay</strong></a>(...)</dt><dd><tt><a href="#-glutPostRedisplay">glutPostRedisplay</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutPostWindowOverlayRedisplay"><strong>glutPostWindowOverlayRedisplay</strong></a>(...)</dt><dd><tt><a href="#-glutPostWindowOverlayRedisplay">glutPostWindowOverlayRedisplay</a>(win)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutPostWindowRedisplay"><strong>glutPostWindowRedisplay</strong></a>(...)</dt><dd><tt><a href="#-glutPostWindowRedisplay">glutPostWindowRedisplay</a>(win)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutPushWindow"><strong>glutPushWindow</strong></a>(...)</dt><dd><tt><a href="#-glutPushWindow">glutPushWindow</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutRemoveMenuItem"><strong>glutRemoveMenuItem</strong></a>(...)</dt><dd><tt><a href="#-glutRemoveMenuItem">glutRemoveMenuItem</a>(item)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutRemoveOverlay"><strong>glutRemoveOverlay</strong></a>(...)</dt><dd><tt><a href="#-glutRemoveOverlay">glutRemoveOverlay</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutReportErrors"><strong>glutReportErrors</strong></a>(...)</dt><dd><tt><a href="#-glutReportErrors">glutReportErrors</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutReshapeFunc"><strong>glutReshapeFunc</strong></a>(...)</dt><dd><tt><a href="#-glutReshapeFunc">glutReshapeFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutReshapeWindow"><strong>glutReshapeWindow</strong></a>(...)</dt><dd><tt><a href="#-glutReshapeWindow">glutReshapeWindow</a>(width,&nbsp;height)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSetColor"><strong>glutSetColor</strong></a>(...)</dt><dd><tt><a href="#-glutSetColor">glutSetColor</a>(cell,&nbsp;red,&nbsp;green,&nbsp;blue)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSetCursor"><strong>glutSetCursor</strong></a>(...)</dt><dd><tt><a href="#-glutSetCursor">glutSetCursor</a>(cursor)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSetIconTitle"><strong>glutSetIconTitle</strong></a>(...)</dt><dd><tt><a href="#-glutSetIconTitle">glutSetIconTitle</a>(title)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSetKeyRepeat"><strong>glutSetKeyRepeat</strong></a>(...)</dt><dd><tt><a href="#-glutSetKeyRepeat">glutSetKeyRepeat</a>(repeatMode)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSetMenu"><strong>glutSetMenu</strong></a>(...)</dt><dd><tt><a href="#-glutSetMenu">glutSetMenu</a>(menu)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSetWindow"><strong>glutSetWindow</strong></a>(...)</dt><dd><tt><a href="#-glutSetWindow">glutSetWindow</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSetWindowTitle"><strong>glutSetWindowTitle</strong></a>(...)</dt><dd><tt><a href="#-glutSetWindowTitle">glutSetWindowTitle</a>(title)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSetupVideoResizing"><strong>glutSetupVideoResizing</strong></a>(...)</dt><dd><tt><a href="#-glutSetupVideoResizing">glutSetupVideoResizing</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutShowOverlay"><strong>glutShowOverlay</strong></a>(...)</dt><dd><tt><a href="#-glutShowOverlay">glutShowOverlay</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutShowWindow"><strong>glutShowWindow</strong></a>(...)</dt><dd><tt><a href="#-glutShowWindow">glutShowWindow</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidCone"><strong>glutSolidCone</strong></a>(...)</dt><dd><tt><a href="#-glutSolidCone">glutSolidCone</a>(base,&nbsp;height,&nbsp;slices,&nbsp;stacks)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidCube"><strong>glutSolidCube</strong></a>(...)</dt><dd><tt><a href="#-glutSolidCube">glutSolidCube</a>(size)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidDodecahedron"><strong>glutSolidDodecahedron</strong></a>(...)</dt><dd><tt><a href="#-glutSolidDodecahedron">glutSolidDodecahedron</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidIcosahedron"><strong>glutSolidIcosahedron</strong></a>(...)</dt><dd><tt><a href="#-glutSolidIcosahedron">glutSolidIcosahedron</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidOctahedron"><strong>glutSolidOctahedron</strong></a>(...)</dt><dd><tt><a href="#-glutSolidOctahedron">glutSolidOctahedron</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidSphere"><strong>glutSolidSphere</strong></a>(...)</dt><dd><tt><a href="#-glutSolidSphere">glutSolidSphere</a>(radius,&nbsp;slices,&nbsp;stacks)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidTeapot"><strong>glutSolidTeapot</strong></a>(...)</dt><dd><tt><a href="#-glutSolidTeapot">glutSolidTeapot</a>(size)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidTetrahedron"><strong>glutSolidTetrahedron</strong></a>(...)</dt><dd><tt><a href="#-glutSolidTetrahedron">glutSolidTetrahedron</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSolidTorus"><strong>glutSolidTorus</strong></a>(...)</dt><dd><tt><a href="#-glutSolidTorus">glutSolidTorus</a>(innerRadius,&nbsp;outerRadius,&nbsp;size,&nbsp;rings)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSpaceballButtonFunc"><strong>glutSpaceballButtonFunc</strong></a>(...)</dt><dd><tt><a href="#-glutSpaceballButtonFunc">glutSpaceballButtonFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSpaceballMotionFunc"><strong>glutSpaceballMotionFunc</strong></a>(...)</dt><dd><tt><a href="#-glutSpaceballMotionFunc">glutSpaceballMotionFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSpaceballRotateFunc"><strong>glutSpaceballRotateFunc</strong></a>(...)</dt><dd><tt><a href="#-glutSpaceballRotateFunc">glutSpaceballRotateFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSpecialFunc"><strong>glutSpecialFunc</strong></a>(...)</dt><dd><tt><a href="#-glutSpecialFunc">glutSpecialFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSpecialUpFunc"><strong>glutSpecialUpFunc</strong></a>(...)</dt><dd><tt><a href="#-glutSpecialUpFunc">glutSpecialUpFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutStopVideoResizing"><strong>glutStopVideoResizing</strong></a>(...)</dt><dd><tt><a href="#-glutStopVideoResizing">glutStopVideoResizing</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutStrokeCharacter"><strong>glutStrokeCharacter</strong></a>(...)</dt><dd><tt><a href="#-glutStrokeCharacter">glutStrokeCharacter</a>(font,&nbsp;character)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutStrokeLength"><strong>glutStrokeLength</strong></a>(...)</dt><dd><tt><a href="#-glutStrokeLength">glutStrokeLength</a>(font,&nbsp;string)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutStrokeWidth"><strong>glutStrokeWidth</strong></a>(...)</dt><dd><tt><a href="#-glutStrokeWidth">glutStrokeWidth</a>(font,&nbsp;character)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutSwapBuffers"><strong>glutSwapBuffers</strong></a>(...)</dt><dd><tt><a href="#-glutSwapBuffers">glutSwapBuffers</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutTabletButtonFunc"><strong>glutTabletButtonFunc</strong></a>(...)</dt><dd><tt><a href="#-glutTabletButtonFunc">glutTabletButtonFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutTabletMotionFunc"><strong>glutTabletMotionFunc</strong></a>(...)</dt><dd><tt><a href="#-glutTabletMotionFunc">glutTabletMotionFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutTimerFunc"><strong>glutTimerFunc</strong></a>(...)</dt><dd><tt><a href="#-glutTimerFunc">glutTimerFunc</a>(millis,&nbsp;func,&nbsp;state)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutUseLayer"><strong>glutUseLayer</strong></a>(...)</dt><dd><tt><a href="#-glutUseLayer">glutUseLayer</a>(layer)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutVideoPan"><strong>glutVideoPan</strong></a>(...)</dt><dd><tt><a href="#-glutVideoPan">glutVideoPan</a>(x,&nbsp;y,&nbsp;width,&nbsp;height)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutVideoResize"><strong>glutVideoResize</strong></a>(...)</dt><dd><tt><a href="#-glutVideoResize">glutVideoResize</a>(x,&nbsp;y,&nbsp;width,&nbsp;height)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutVideoResizeGet"><strong>glutVideoResizeGet</strong></a>(...)</dt><dd><tt><a href="#-glutVideoResizeGet">glutVideoResizeGet</a>(param)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutVisibilityFunc"><strong>glutVisibilityFunc</strong></a>(...)</dt><dd><tt><a href="#-glutVisibilityFunc">glutVisibilityFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWarpPointer"><strong>glutWarpPointer</strong></a>(...)</dt><dd><tt><a href="#-glutWarpPointer">glutWarpPointer</a>(x,&nbsp;y)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWindowStatusFunc"><strong>glutWindowStatusFunc</strong></a>(...)</dt><dd><tt><a href="#-glutWindowStatusFunc">glutWindowStatusFunc</a>(func)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireCone"><strong>glutWireCone</strong></a>(...)</dt><dd><tt><a href="#-glutWireCone">glutWireCone</a>(base,&nbsp;height,&nbsp;slices,&nbsp;stacks)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireCube"><strong>glutWireCube</strong></a>(...)</dt><dd><tt><a href="#-glutWireCube">glutWireCube</a>(size)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireDodecahedron"><strong>glutWireDodecahedron</strong></a>(...)</dt><dd><tt><a href="#-glutWireDodecahedron">glutWireDodecahedron</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireIcosahedron"><strong>glutWireIcosahedron</strong></a>(...)</dt><dd><tt><a href="#-glutWireIcosahedron">glutWireIcosahedron</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireOctahedron"><strong>glutWireOctahedron</strong></a>(...)</dt><dd><tt><a href="#-glutWireOctahedron">glutWireOctahedron</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireSphere"><strong>glutWireSphere</strong></a>(...)</dt><dd><tt><a href="#-glutWireSphere">glutWireSphere</a>(radius,&nbsp;slices,&nbsp;stacks)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireTeapot"><strong>glutWireTeapot</strong></a>(...)</dt><dd><tt><a href="#-glutWireTeapot">glutWireTeapot</a>(size)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireTetrahedron"><strong>glutWireTetrahedron</strong></a>(...)</dt><dd><tt><a href="#-glutWireTetrahedron">glutWireTetrahedron</a>()&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-glutWireTorus"><strong>glutWireTorus</strong></a>(...)</dt><dd><tt><a href="#-glutWireTorus">glutWireTorus</a>(innerRadius,&nbsp;outerRadius,&nbsp;size,&nbsp;rings)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-isNumberType"><strong>isNumberType</strong></a>(...)</dt><dd><tt><a href="#-isNumberType">isNumberType</a>(a)&nbsp;--&nbsp;Return&nbsp;1&nbsp;if&nbsp;a&nbsp;has&nbsp;a&nbsp;numeric&nbsp;type,&nbsp;and&nbsp;zero&nbsp;otherwise.</tt></dd></dl>
+ <dl><dt><a name="-isSequenceType"><strong>isSequenceType</strong></a>(...)</dt><dd><tt><a href="#-isSequenceType">isSequenceType</a>(a)&nbsp;--&nbsp;Return&nbsp;1&nbsp;if&nbsp;a&nbsp;has&nbsp;a&nbsp;sequence&nbsp;type,&nbsp;and&nbsp;zero&nbsp;otherwise.</tt></dd></dl>
+</td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><strong>ADAPTIVE</strong> = 1<br>
+<strong>AFFINE</strong> = 0<br>
+<strong>ANTIALIAS</strong> = 1<br>
+<strong>BICUBIC</strong> = 3<br>
+<strong>BILINEAR</strong> = 2<br>
+<strong>CONTAINER</strong> = 2<br>
+<strong>DEBUG</strong> = 0<br>
+<strong>EXTENSION</strong> = {}<br>
+<strong>EXTENT</strong> = 1<br>
+<strong>FLIP_LEFT_RIGHT</strong> = 0<br>
+<strong>FLIP_TOP_BOTTOM</strong> = 1<br>
+<strong>FLOYDSTEINBERG</strong> = 3<br>
+<strong>GLUT_ACCUM</strong> = 4<br>
+<strong>GLUT_ACTIVE_ALT</strong> = 4<br>
+<strong>GLUT_ACTIVE_CTRL</strong> = 2<br>
+<strong>GLUT_ACTIVE_SHIFT</strong> = 1<br>
+<strong>GLUT_ALPHA</strong> = 8<br>
+<strong>GLUT_API_VERSION</strong> = 3<br>
+<strong>GLUT_BITMAP_8_BY_13</strong> = 3<br>
+<strong>GLUT_BITMAP_9_BY_15</strong> = 2<br>
+<strong>GLUT_BITMAP_HELVETICA_10</strong> = 6<br>
+<strong>GLUT_BITMAP_HELVETICA_12</strong> = 7<br>
+<strong>GLUT_BITMAP_HELVETICA_18</strong> = 8<br>
+<strong>GLUT_BITMAP_TIMES_ROMAN_10</strong> = 4<br>
+<strong>GLUT_BITMAP_TIMES_ROMAN_24</strong> = 5<br>
+<strong>GLUT_BLUE</strong> = 2<br>
+<strong>GLUT_CURSOR_BOTTOM_LEFT_CORNER</strong> = 19<br>
+<strong>GLUT_CURSOR_BOTTOM_RIGHT_CORNER</strong> = 18<br>
+<strong>GLUT_CURSOR_BOTTOM_SIDE</strong> = 13<br>
+<strong>GLUT_CURSOR_CROSSHAIR</strong> = 9<br>
+<strong>GLUT_CURSOR_CYCLE</strong> = 5<br>
+<strong>GLUT_CURSOR_DESTROY</strong> = 3<br>
+<strong>GLUT_CURSOR_FULL_CROSSHAIR</strong> = 102<br>
+<strong>GLUT_CURSOR_HELP</strong> = 4<br>
+<strong>GLUT_CURSOR_INFO</strong> = 2<br>
+<strong>GLUT_CURSOR_INHERIT</strong> = 100<br>
+<strong>GLUT_CURSOR_LEFT_ARROW</strong> = 1<br>
+<strong>GLUT_CURSOR_LEFT_RIGHT</strong> = 11<br>
+<strong>GLUT_CURSOR_LEFT_SIDE</strong> = 14<br>
+<strong>GLUT_CURSOR_NONE</strong> = 101<br>
+<strong>GLUT_CURSOR_RIGHT_ARROW</strong> = 0<br>
+<strong>GLUT_CURSOR_RIGHT_SIDE</strong> = 15<br>
+<strong>GLUT_CURSOR_SPRAY</strong> = 6<br>
+<strong>GLUT_CURSOR_TEXT</strong> = 8<br>
+<strong>GLUT_CURSOR_TOP_LEFT_CORNER</strong> = 16<br>
+<strong>GLUT_CURSOR_TOP_RIGHT_CORNER</strong> = 17<br>
+<strong>GLUT_CURSOR_TOP_SIDE</strong> = 12<br>
+<strong>GLUT_CURSOR_UP_DOWN</strong> = 10<br>
+<strong>GLUT_CURSOR_WAIT</strong> = 7<br>
+<strong>GLUT_DEPTH</strong> = 16<br>
+<strong>GLUT_DEVICE_IGNORE_KEY_REPEAT</strong> = 610<br>
+<strong>GLUT_DEVICE_KEY_REPEAT</strong> = 611<br>
+<strong>GLUT_DISPLAY_MODE_POSSIBLE</strong> = 400<br>
+<strong>GLUT_DOUBLE</strong> = 2<br>
+<strong>GLUT_DOWN</strong> = 0<br>
+<strong>GLUT_ELAPSED_TIME</strong> = 700<br>
+<strong>GLUT_ENTERED</strong> = 1<br>
+<strong>GLUT_FULLY_COVERED</strong> = 3<br>
+<strong>GLUT_FULLY_RETAINED</strong> = 1<br>
+<strong>GLUT_GAME_MODE_ACTIVE</strong> = 0<br>
+<strong>GLUT_GAME_MODE_DISPLAY_CHANGED</strong> = 6<br>
+<strong>GLUT_GAME_MODE_HEIGHT</strong> = 3<br>
+<strong>GLUT_GAME_MODE_PIXEL_DEPTH</strong> = 4<br>
+<strong>GLUT_GAME_MODE_POSSIBLE</strong> = 1<br>
+<strong>GLUT_GAME_MODE_REFRESH_RATE</strong> = 5<br>
+<strong>GLUT_GAME_MODE_WIDTH</strong> = 2<br>
+<strong>GLUT_GREEN</strong> = 1<br>
+<strong>GLUT_HAS_DIAL_AND_BUTTON_BOX</strong> = 603<br>
+<strong>GLUT_HAS_JOYSTICK</strong> = 612<br>
+<strong>GLUT_HAS_KEYBOARD</strong> = 600<br>
+<strong>GLUT_HAS_MOUSE</strong> = 601<br>
+<strong>GLUT_HAS_OVERLAY</strong> = 802<br>
+<strong>GLUT_HAS_SPACEBALL</strong> = 602<br>
+<strong>GLUT_HAS_TABLET</strong> = 604<br>
+<strong>GLUT_HIDDEN</strong> = 0<br>
+<strong>GLUT_INDEX</strong> = 1<br>
+<strong>GLUT_INIT_DISPLAY_MODE</strong> = 504<br>
+<strong>GLUT_INIT_WINDOW_HEIGHT</strong> = 503<br>
+<strong>GLUT_INIT_WINDOW_WIDTH</strong> = 502<br>
+<strong>GLUT_INIT_WINDOW_X</strong> = 500<br>
+<strong>GLUT_INIT_WINDOW_Y</strong> = 501<br>
+<strong>GLUT_JOYSTICK_AXES</strong> = 615<br>
+<strong>GLUT_JOYSTICK_BUTTONS</strong> = 614<br>
+<strong>GLUT_JOYSTICK_BUTTON_A</strong> = 1<br>
+<strong>GLUT_JOYSTICK_BUTTON_B</strong> = 2<br>
+<strong>GLUT_JOYSTICK_BUTTON_C</strong> = 4<br>
+<strong>GLUT_JOYSTICK_BUTTON_D</strong> = 8<br>
+<strong>GLUT_JOYSTICK_POLL_RATE</strong> = 616<br>
+<strong>GLUT_KEY_DOWN</strong> = 103<br>
+<strong>GLUT_KEY_END</strong> = 107<br>
+<strong>GLUT_KEY_F1</strong> = 1<br>
+<strong>GLUT_KEY_F10</strong> = 10<br>
+<strong>GLUT_KEY_F11</strong> = 11<br>
+<strong>GLUT_KEY_F12</strong> = 12<br>
+<strong>GLUT_KEY_F2</strong> = 2<br>
+<strong>GLUT_KEY_F3</strong> = 3<br>
+<strong>GLUT_KEY_F4</strong> = 4<br>
+<strong>GLUT_KEY_F5</strong> = 5<br>
+<strong>GLUT_KEY_F6</strong> = 6<br>
+<strong>GLUT_KEY_F7</strong> = 7<br>
+<strong>GLUT_KEY_F8</strong> = 8<br>
+<strong>GLUT_KEY_F9</strong> = 9<br>
+<strong>GLUT_KEY_HOME</strong> = 106<br>
+<strong>GLUT_KEY_INSERT</strong> = 108<br>
+<strong>GLUT_KEY_LEFT</strong> = 100<br>
+<strong>GLUT_KEY_PAGE_DOWN</strong> = 105<br>
+<strong>GLUT_KEY_PAGE_UP</strong> = 104<br>
+<strong>GLUT_KEY_REPEAT_DEFAULT</strong> = 2<br>
+<strong>GLUT_KEY_REPEAT_OFF</strong> = 0<br>
+<strong>GLUT_KEY_REPEAT_ON</strong> = 1<br>
+<strong>GLUT_KEY_RIGHT</strong> = 102<br>
+<strong>GLUT_KEY_UP</strong> = 101<br>
+<strong>GLUT_LAYER_IN_USE</strong> = 801<br>
+<strong>GLUT_LEFT</strong> = 0<br>
+<strong>GLUT_LEFT_BUTTON</strong> = 0<br>
+<strong>GLUT_LUMINANCE</strong> = 512<br>
+<strong>GLUT_MENU_IN_USE</strong> = 1<br>
+<strong>GLUT_MENU_NOT_IN_USE</strong> = 0<br>
+<strong>GLUT_MENU_NUM_ITEMS</strong> = 300<br>
+<strong>GLUT_MIDDLE_BUTTON</strong> = 1<br>
+<strong>GLUT_MULTISAMPLE</strong> = 128<br>
+<strong>GLUT_NORMAL</strong> = 0<br>
+<strong>GLUT_NORMAL_DAMAGED</strong> = 804<br>
+<strong>GLUT_NOT_VISIBLE</strong> = 0<br>
+<strong>GLUT_NUM_BUTTON_BOX_BUTTONS</strong> = 607<br>
+<strong>GLUT_NUM_DIALS</strong> = 608<br>
+<strong>GLUT_NUM_MOUSE_BUTTONS</strong> = 605<br>
+<strong>GLUT_NUM_SPACEBALL_BUTTONS</strong> = 606<br>
+<strong>GLUT_NUM_TABLET_BUTTONS</strong> = 609<br>
+<strong>GLUT_OVERLAY</strong> = 1<br>
+<strong>GLUT_OVERLAY_DAMAGED</strong> = 805<br>
+<strong>GLUT_OVERLAY_POSSIBLE</strong> = 800<br>
+<strong>GLUT_OWNS_JOYSTICK</strong> = 613<br>
+<strong>GLUT_PARTIALLY_RETAINED</strong> = 2<br>
+<strong>GLUT_RED</strong> = 0<br>
+<strong>GLUT_RGB</strong> = 0<br>
+<strong>GLUT_RGBA</strong> = 0<br>
+<strong>GLUT_RIGHT_BUTTON</strong> = 2<br>
+<strong>GLUT_SCREEN_HEIGHT</strong> = 201<br>
+<strong>GLUT_SCREEN_HEIGHT_MM</strong> = 203<br>
+<strong>GLUT_SCREEN_WIDTH</strong> = 200<br>
+<strong>GLUT_SCREEN_WIDTH_MM</strong> = 202<br>
+<strong>GLUT_SINGLE</strong> = 0<br>
+<strong>GLUT_STENCIL</strong> = 32<br>
+<strong>GLUT_STEREO</strong> = 256<br>
+<strong>GLUT_STROKE_MONO_ROMAN</strong> = 1<br>
+<strong>GLUT_STROKE_ROMAN</strong> = 0<br>
+<strong>GLUT_TRANSPARENT_INDEX</strong> = 803<br>
+<strong>GLUT_UP</strong> = 1<br>
+<strong>GLUT_VIDEO_RESIZE_HEIGHT</strong> = 909<br>
+<strong>GLUT_VIDEO_RESIZE_HEIGHT_DELTA</strong> = 905<br>
+<strong>GLUT_VIDEO_RESIZE_IN_USE</strong> = 901<br>
+<strong>GLUT_VIDEO_RESIZE_POSSIBLE</strong> = 900<br>
+<strong>GLUT_VIDEO_RESIZE_WIDTH</strong> = 908<br>
+<strong>GLUT_VIDEO_RESIZE_WIDTH_DELTA</strong> = 904<br>
+<strong>GLUT_VIDEO_RESIZE_X</strong> = 906<br>
+<strong>GLUT_VIDEO_RESIZE_X_DELTA</strong> = 902<br>
+<strong>GLUT_VIDEO_RESIZE_Y</strong> = 907<br>
+<strong>GLUT_VIDEO_RESIZE_Y_DELTA</strong> = 903<br>
+<strong>GLUT_VISIBLE</strong> = 1<br>
+<strong>GLUT_WINDOW_ACCUM_ALPHA_SIZE</strong> = 114<br>
+<strong>GLUT_WINDOW_ACCUM_BLUE_SIZE</strong> = 113<br>
+<strong>GLUT_WINDOW_ACCUM_GREEN_SIZE</strong> = 112<br>
+<strong>GLUT_WINDOW_ACCUM_RED_SIZE</strong> = 111<br>
+<strong>GLUT_WINDOW_ALPHA_SIZE</strong> = 110<br>
+<strong>GLUT_WINDOW_BLUE_SIZE</strong> = 109<br>
+<strong>GLUT_WINDOW_BUFFER_SIZE</strong> = 104<br>
+<strong>GLUT_WINDOW_COLORMAP_SIZE</strong> = 119<br>
+<strong>GLUT_WINDOW_CURSOR</strong> = 122<br>
+<strong>GLUT_WINDOW_DEPTH_SIZE</strong> = 106<br>
+<strong>GLUT_WINDOW_DOUBLEBUFFER</strong> = 115<br>
+<strong>GLUT_WINDOW_FORMAT_ID</strong> = 123<br>
+<strong>GLUT_WINDOW_GREEN_SIZE</strong> = 108<br>
+<strong>GLUT_WINDOW_HEIGHT</strong> = 103<br>
+<strong>GLUT_WINDOW_NUM_CHILDREN</strong> = 118<br>
+<strong>GLUT_WINDOW_NUM_SAMPLES</strong> = 120<br>
+<strong>GLUT_WINDOW_PARENT</strong> = 117<br>
+<strong>GLUT_WINDOW_RED_SIZE</strong> = 107<br>
+<strong>GLUT_WINDOW_RGBA</strong> = 116<br>
+<strong>GLUT_WINDOW_STENCIL_SIZE</strong> = 105<br>
+<strong>GLUT_WINDOW_STEREO</strong> = 121<br>
+<strong>GLUT_WINDOW_WIDTH</strong> = 102<br>
+<strong>GLUT_WINDOW_X</strong> = 100<br>
+<strong>GLUT_WINDOW_Y</strong> = 101<br>
+<strong>GLUT_XLIB_IMPLEMENTATION</strong> = 13<br>
+<strong>GLU_AUTO_LOAD_MATRIX</strong> = 100200<br>
+<strong>GLU_BEGIN</strong> = 100100<br>
+<strong>GLU_CCW</strong> = 100121<br>
+<strong>GLU_CULLING</strong> = 100201<br>
+<strong>GLU_CW</strong> = 100120<br>
+<strong>GLU_DISPLAY_MODE</strong> = 100204<br>
+<strong>GLU_DOMAIN_DISTANCE</strong> = 100217<br>
+<strong>GLU_EDGE_FLAG</strong> = 100104<br>
+<strong>GLU_END</strong> = 100102<br>
+<strong>GLU_ERROR</strong> = 100103<br>
+<strong>GLU_EXTENSIONS</strong> = 100801<br>
+<strong>GLU_EXTERIOR</strong> = 100123<br>
+<strong>GLU_FILL</strong> = 100012<br>
+<strong>GLU_FLAT</strong> = 100001<br>
+<strong>GLU_INCOMPATIBLE_GL_VERSION</strong> = 100903<br>
+<strong>GLU_INSIDE</strong> = 100021<br>
+<strong>GLU_INTERIOR</strong> = 100122<br>
+<strong>GLU_INVALID_ENUM</strong> = 100900<br>
+<strong>GLU_INVALID_VALUE</strong> = 100901<br>
+<strong>GLU_LINE</strong> = 100011<br>
+<strong>GLU_MAP1_TRIM_2</strong> = 100210<br>
+<strong>GLU_MAP1_TRIM_3</strong> = 100211<br>
+<strong>GLU_NONE</strong> = 100002<br>
+<strong>GLU_NURBS_ERROR1</strong> = 100251<br>
+<strong>GLU_NURBS_ERROR10</strong> = 100260<br>
+<strong>GLU_NURBS_ERROR11</strong> = 100261<br>
+<strong>GLU_NURBS_ERROR12</strong> = 100262<br>
+<strong>GLU_NURBS_ERROR13</strong> = 100263<br>
+<strong>GLU_NURBS_ERROR14</strong> = 100264<br>
+<strong>GLU_NURBS_ERROR15</strong> = 100265<br>
+<strong>GLU_NURBS_ERROR16</strong> = 100266<br>
+<strong>GLU_NURBS_ERROR17</strong> = 100267<br>
+<strong>GLU_NURBS_ERROR18</strong> = 100268<br>
+<strong>GLU_NURBS_ERROR19</strong> = 100269<br>
+<strong>GLU_NURBS_ERROR2</strong> = 100252<br>
+<strong>GLU_NURBS_ERROR20</strong> = 100270<br>
+<strong>GLU_NURBS_ERROR21</strong> = 100271<br>
+<strong>GLU_NURBS_ERROR22</strong> = 100272<br>
+<strong>GLU_NURBS_ERROR23</strong> = 100273<br>
+<strong>GLU_NURBS_ERROR24</strong> = 100274<br>
+<strong>GLU_NURBS_ERROR25</strong> = 100275<br>
+<strong>GLU_NURBS_ERROR26</strong> = 100276<br>
+<strong>GLU_NURBS_ERROR27</strong> = 100277<br>
+<strong>GLU_NURBS_ERROR28</strong> = 100278<br>
+<strong>GLU_NURBS_ERROR29</strong> = 100279<br>
+<strong>GLU_NURBS_ERROR3</strong> = 100253<br>
+<strong>GLU_NURBS_ERROR30</strong> = 100280<br>
+<strong>GLU_NURBS_ERROR31</strong> = 100281<br>
+<strong>GLU_NURBS_ERROR32</strong> = 100282<br>
+<strong>GLU_NURBS_ERROR33</strong> = 100283<br>
+<strong>GLU_NURBS_ERROR34</strong> = 100284<br>
+<strong>GLU_NURBS_ERROR35</strong> = 100285<br>
+<strong>GLU_NURBS_ERROR36</strong> = 100286<br>
+<strong>GLU_NURBS_ERROR37</strong> = 100287<br>
+<strong>GLU_NURBS_ERROR4</strong> = 100254<br>
+<strong>GLU_NURBS_ERROR5</strong> = 100255<br>
+<strong>GLU_NURBS_ERROR6</strong> = 100256<br>
+<strong>GLU_NURBS_ERROR7</strong> = 100257<br>
+<strong>GLU_NURBS_ERROR8</strong> = 100258<br>
+<strong>GLU_NURBS_ERROR9</strong> = 100259<br>
+<strong>GLU_OUTLINE_PATCH</strong> = 100241<br>
+<strong>GLU_OUTLINE_POLYGON</strong> = 100240<br>
+<strong>GLU_OUTSIDE</strong> = 100020<br>
+<strong>GLU_OUT_OF_MEMORY</strong> = 100902<br>
+<strong>GLU_PARAMETRIC_ERROR</strong> = 100216<br>
+<strong>GLU_PARAMETRIC_TOLERANCE</strong> = 100202<br>
+<strong>GLU_PATH_LENGTH</strong> = 100215<br>
+<strong>GLU_POINT</strong> = 100010<br>
+<strong>GLU_SAMPLING_METHOD</strong> = 100205<br>
+<strong>GLU_SAMPLING_TOLERANCE</strong> = 100203<br>
+<strong>GLU_SILHOUETTE</strong> = 100013<br>
+<strong>GLU_SMOOTH</strong> = 100000<br>
+<strong>GLU_TESS_BEGIN</strong> = 100100<br>
+<strong>GLU_TESS_BEGIN_DATA</strong> = 100106<br>
+<strong>GLU_TESS_BOUNDARY_ONLY</strong> = 100141<br>
+<strong>GLU_TESS_COMBINE</strong> = 100105<br>
+<strong>GLU_TESS_COMBINE_DATA</strong> = 100111<br>
+<strong>GLU_TESS_COORD_TOO_LARGE</strong> = 100155<br>
+<strong>GLU_TESS_EDGE_FLAG</strong> = 100104<br>
+<strong>GLU_TESS_EDGE_FLAG_DATA</strong> = 100110<br>
+<strong>GLU_TESS_END</strong> = 100102<br>
+<strong>GLU_TESS_END_DATA</strong> = 100108<br>
+<strong>GLU_TESS_ERROR</strong> = 100103<br>
+<strong>GLU_TESS_ERROR1</strong> = 100151<br>
+<strong>GLU_TESS_ERROR2</strong> = 100152<br>
+<strong>GLU_TESS_ERROR3</strong> = 100153<br>
+<strong>GLU_TESS_ERROR4</strong> = 100154<br>
+<strong>GLU_TESS_ERROR5</strong> = 100155<br>
+<strong>GLU_TESS_ERROR6</strong> = 100156<br>
+<strong>GLU_TESS_ERROR7</strong> = 100157<br>
+<strong>GLU_TESS_ERROR8</strong> = 100158<br>
+<strong>GLU_TESS_ERROR_DATA</strong> = 100109<br>
+<strong>GLU_TESS_MAX_COORD</strong> = 9.9999999999999998e+149<br>
+<strong>GLU_TESS_MISSING_BEGIN_CONTOUR</strong> = 100152<br>
+<strong>GLU_TESS_MISSING_BEGIN_POLYGON</strong> = 100151<br>
+<strong>GLU_TESS_MISSING_END_CONTOUR</strong> = 100154<br>
+<strong>GLU_TESS_MISSING_END_POLYGON</strong> = 100153<br>
+<strong>GLU_TESS_NEED_COMBINE_CALLBACK</strong> = 100156<br>
+<strong>GLU_TESS_TOLERANCE</strong> = 100142<br>
+<strong>GLU_TESS_VERTEX</strong> = 100101<br>
+<strong>GLU_TESS_VERTEX_DATA</strong> = 100107<br>
+<strong>GLU_TESS_WINDING_ABS_GEQ_TWO</strong> = 100134<br>
+<strong>GLU_TESS_WINDING_NEGATIVE</strong> = 100133<br>
+<strong>GLU_TESS_WINDING_NONZERO</strong> = 100131<br>
+<strong>GLU_TESS_WINDING_ODD</strong> = 100130<br>
+<strong>GLU_TESS_WINDING_POSITIVE</strong> = 100132<br>
+<strong>GLU_TESS_WINDING_RULE</strong> = 100140<br>
+<strong>GLU_UNKNOWN</strong> = 100124<br>
+<strong>GLU_U_STEP</strong> = 100206<br>
+<strong>GLU_VERSION</strong> = 100800<br>
+<strong>GLU_VERSION_1_1</strong> = 1<br>
+<strong>GLU_VERSION_1_2</strong> = 1<br>
+<strong>GLU_VERTEX</strong> = 100101<br>
+<strong>GLU_V_STEP</strong> = 100207<br>
+<strong>GL_2D</strong> = 1536<br>
+<strong>GL_2_BYTES</strong> = 5127<br>
+<strong>GL_3D</strong> = 1537<br>
+<strong>GL_3D_COLOR</strong> = 1538<br>
+<strong>GL_3D_COLOR_TEXTURE</strong> = 1539<br>
+<strong>GL_3_BYTES</strong> = 5128<br>
+<strong>GL_4D_COLOR_TEXTURE</strong> = 1540<br>
+<strong>GL_4_BYTES</strong> = 5129<br>
+<strong>GL_ACCUM</strong> = 256<br>
+<strong>GL_ACCUM_ALPHA_BITS</strong> = 3419<br>
+<strong>GL_ACCUM_BLUE_BITS</strong> = 3418<br>
+<strong>GL_ACCUM_BUFFER_BIT</strong> = 512<br>
+<strong>GL_ACCUM_CLEAR_VALUE</strong> = 2944<br>
+<strong>GL_ACCUM_GREEN_BITS</strong> = 3417<br>
+<strong>GL_ACCUM_RED_BITS</strong> = 3416<br>
+<strong>GL_ADD</strong> = 260<br>
+<strong>GL_ALL_ATTRIB_BITS</strong> = 1048575<br>
+<strong>GL_ALPHA</strong> = 6406<br>
+<strong>GL_ALPHA12</strong> = 32829<br>
+<strong>GL_ALPHA16</strong> = 32830<br>
+<strong>GL_ALPHA4</strong> = 32827<br>
+<strong>GL_ALPHA8</strong> = 32828<br>
+<strong>GL_ALPHA_BIAS</strong> = 3357<br>
+<strong>GL_ALPHA_BITS</strong> = 3413<br>
+<strong>GL_ALPHA_SCALE</strong> = 3356<br>
+<strong>GL_ALPHA_TEST</strong> = 3008<br>
+<strong>GL_ALPHA_TEST_FUNC</strong> = 3009<br>
+<strong>GL_ALPHA_TEST_REF</strong> = 3010<br>
+<strong>GL_ALWAYS</strong> = 519<br>
+<strong>GL_AMBIENT</strong> = 4608<br>
+<strong>GL_AMBIENT_AND_DIFFUSE</strong> = 5634<br>
+<strong>GL_AND</strong> = 5377<br>
+<strong>GL_AND_INVERTED</strong> = 5380<br>
+<strong>GL_AND_REVERSE</strong> = 5378<br>
+<strong>GL_ATTRIB_STACK_DEPTH</strong> = 2992<br>
+<strong>GL_AUTO_NORMAL</strong> = 3456<br>
+<strong>GL_AUX0</strong> = 1033<br>
+<strong>GL_AUX1</strong> = 1034<br>
+<strong>GL_AUX2</strong> = 1035<br>
+<strong>GL_AUX3</strong> = 1036<br>
+<strong>GL_AUX_BUFFERS</strong> = 3072<br>
+<strong>GL_BACK</strong> = 1029<br>
+<strong>GL_BACK_LEFT</strong> = 1026<br>
+<strong>GL_BACK_RIGHT</strong> = 1027<br>
+<strong>GL_BITMAP</strong> = 6656<br>
+<strong>GL_BITMAP_TOKEN</strong> = 1796<br>
+<strong>GL_BLEND</strong> = 3042<br>
+<strong>GL_BLEND_DST</strong> = 3040<br>
+<strong>GL_BLEND_SRC</strong> = 3041<br>
+<strong>GL_BLUE</strong> = 6405<br>
+<strong>GL_BLUE_BIAS</strong> = 3355<br>
+<strong>GL_BLUE_BITS</strong> = 3412<br>
+<strong>GL_BLUE_SCALE</strong> = 3354<br>
+<strong>GL_BYTE</strong> = 5120<br>
+<strong>GL_C3F_V3F</strong> = 10788<br>
+<strong>GL_C4F_N3F_V3F</strong> = 10790<br>
+<strong>GL_C4UB_V2F</strong> = 10786<br>
+<strong>GL_C4UB_V3F</strong> = 10787<br>
+<strong>GL_CCW</strong> = 2305<br>
+<strong>GL_CLAMP</strong> = 10496<br>
+<strong>GL_CLEAR</strong> = 5376<br>
+<strong>GL_CLIENT_ALL_ATTRIB_BITS</strong> = -1<br>
+<strong>GL_CLIENT_ATTRIB_STACK_DEPTH</strong> = 2993<br>
+<strong>GL_CLIENT_PIXEL_STORE_BIT</strong> = 1<br>
+<strong>GL_CLIENT_VERTEX_ARRAY_BIT</strong> = 2<br>
+<strong>GL_CLIP_PLANE0</strong> = 12288<br>
+<strong>GL_CLIP_PLANE1</strong> = 12289<br>
+<strong>GL_CLIP_PLANE2</strong> = 12290<br>
+<strong>GL_CLIP_PLANE3</strong> = 12291<br>
+<strong>GL_CLIP_PLANE4</strong> = 12292<br>
+<strong>GL_CLIP_PLANE5</strong> = 12293<br>
+<strong>GL_COEFF</strong> = 2560<br>
+<strong>GL_COLOR</strong> = 6144<br>
+<strong>GL_COLOR_ARRAY</strong> = 32886<br>
+<strong>GL_COLOR_ARRAY_POINTER</strong> = 32912<br>
+<strong>GL_COLOR_ARRAY_SIZE</strong> = 32897<br>
+<strong>GL_COLOR_ARRAY_STRIDE</strong> = 32899<br>
+<strong>GL_COLOR_ARRAY_TYPE</strong> = 32898<br>
+<strong>GL_COLOR_BUFFER_BIT</strong> = 16384<br>
+<strong>GL_COLOR_CLEAR_VALUE</strong> = 3106<br>
+<strong>GL_COLOR_INDEX</strong> = 6400<br>
+<strong>GL_COLOR_INDEXES</strong> = 5635<br>
+<strong>GL_COLOR_LOGIC_OP</strong> = 3058<br>
+<strong>GL_COLOR_MATERIAL</strong> = 2903<br>
+<strong>GL_COLOR_MATERIAL_FACE</strong> = 2901<br>
+<strong>GL_COLOR_MATERIAL_PARAMETER</strong> = 2902<br>
+<strong>GL_COLOR_WRITEMASK</strong> = 3107<br>
+<strong>GL_COMPILE</strong> = 4864<br>
+<strong>GL_COMPILE_AND_EXECUTE</strong> = 4865<br>
+<strong>GL_CONSTANT_ATTENUATION</strong> = 4615<br>
+<strong>GL_COPY</strong> = 5379<br>
+<strong>GL_COPY_INVERTED</strong> = 5388<br>
+<strong>GL_COPY_PIXEL_TOKEN</strong> = 1798<br>
+<strong>GL_CULL_FACE</strong> = 2884<br>
+<strong>GL_CULL_FACE_MODE</strong> = 2885<br>
+<strong>GL_CURRENT_BIT</strong> = 1<br>
+<strong>GL_CURRENT_COLOR</strong> = 2816<br>
+<strong>GL_CURRENT_INDEX</strong> = 2817<br>
+<strong>GL_CURRENT_NORMAL</strong> = 2818<br>
+<strong>GL_CURRENT_RASTER_COLOR</strong> = 2820<br>
+<strong>GL_CURRENT_RASTER_DISTANCE</strong> = 2825<br>
+<strong>GL_CURRENT_RASTER_INDEX</strong> = 2821<br>
+<strong>GL_CURRENT_RASTER_POSITION</strong> = 2823<br>
+<strong>GL_CURRENT_RASTER_POSITION_VALID</strong> = 2824<br>
+<strong>GL_CURRENT_RASTER_TEXTURE_COORDS</strong> = 2822<br>
+<strong>GL_CURRENT_TEXTURE_COORDS</strong> = 2819<br>
+<strong>GL_CW</strong> = 2304<br>
+<strong>GL_DECAL</strong> = 8449<br>
+<strong>GL_DECR</strong> = 7683<br>
+<strong>GL_DEPTH</strong> = 6145<br>
+<strong>GL_DEPTH_BIAS</strong> = 3359<br>
+<strong>GL_DEPTH_BITS</strong> = 3414<br>
+<strong>GL_DEPTH_BUFFER_BIT</strong> = 256<br>
+<strong>GL_DEPTH_CLEAR_VALUE</strong> = 2931<br>
+<strong>GL_DEPTH_COMPONENT</strong> = 6402<br>
+<strong>GL_DEPTH_FUNC</strong> = 2932<br>
+<strong>GL_DEPTH_RANGE</strong> = 2928<br>
+<strong>GL_DEPTH_SCALE</strong> = 3358<br>
+<strong>GL_DEPTH_TEST</strong> = 2929<br>
+<strong>GL_DEPTH_WRITEMASK</strong> = 2930<br>
+<strong>GL_DIFFUSE</strong> = 4609<br>
+<strong>GL_DITHER</strong> = 3024<br>
+<strong>GL_DOMAIN</strong> = 2562<br>
+<strong>GL_DONT_CARE</strong> = 4352<br>
+<strong>GL_DOUBLE</strong> = 5130<br>
+<strong>GL_DOUBLEBUFFER</strong> = 3122<br>
+<strong>GL_DRAW_BUFFER</strong> = 3073<br>
+<strong>GL_DRAW_PIXEL_TOKEN</strong> = 1797<br>
+<strong>GL_DST_ALPHA</strong> = 772<br>
+<strong>GL_DST_COLOR</strong> = 774<br>
+<strong>GL_EDGE_FLAG</strong> = 2883<br>
+<strong>GL_EDGE_FLAG_ARRAY</strong> = 32889<br>
+<strong>GL_EDGE_FLAG_ARRAY_POINTER</strong> = 32915<br>
+<strong>GL_EDGE_FLAG_ARRAY_STRIDE</strong> = 32908<br>
+<strong>GL_EMISSION</strong> = 5632<br>
+<strong>GL_ENABLE_BIT</strong> = 8192<br>
+<strong>GL_EQUAL</strong> = 514<br>
+<strong>GL_EQUIV</strong> = 5385<br>
+<strong>GL_EVAL_BIT</strong> = 65536<br>
+<strong>GL_EXP</strong> = 2048<br>
+<strong>GL_EXP2</strong> = 2049<br>
+<strong>GL_EXTENSIONS</strong> = 7939<br>
+<strong>GL_EYE_LINEAR</strong> = 9216<br>
+<strong>GL_EYE_PLANE</strong> = 9474<br>
+<strong>GL_FALSE</strong> = 0<br>
+<strong>GL_FASTEST</strong> = 4353<br>
+<strong>GL_FEEDBACK</strong> = 7169<br>
+<strong>GL_FEEDBACK_BUFFER_POINTER</strong> = 3568<br>
+<strong>GL_FEEDBACK_BUFFER_SIZE</strong> = 3569<br>
+<strong>GL_FEEDBACK_BUFFER_TYPE</strong> = 3570<br>
+<strong>GL_FILL</strong> = 6914<br>
+<strong>GL_FLAT</strong> = 7424<br>
+<strong>GL_FLOAT</strong> = 5126<br>
+<strong>GL_FOG</strong> = 2912<br>
+<strong>GL_FOG_BIT</strong> = 128<br>
+<strong>GL_FOG_COLOR</strong> = 2918<br>
+<strong>GL_FOG_DENSITY</strong> = 2914<br>
+<strong>GL_FOG_END</strong> = 2916<br>
+<strong>GL_FOG_HINT</strong> = 3156<br>
+<strong>GL_FOG_INDEX</strong> = 2913<br>
+<strong>GL_FOG_MODE</strong> = 2917<br>
+<strong>GL_FOG_START</strong> = 2915<br>
+<strong>GL_FRONT</strong> = 1028<br>
+<strong>GL_FRONT_AND_BACK</strong> = 1032<br>
+<strong>GL_FRONT_FACE</strong> = 2886<br>
+<strong>GL_FRONT_LEFT</strong> = 1024<br>
+<strong>GL_FRONT_RIGHT</strong> = 1025<br>
+<strong>GL_GEQUAL</strong> = 518<br>
+<strong>GL_GREATER</strong> = 516<br>
+<strong>GL_GREEN</strong> = 6404<br>
+<strong>GL_GREEN_BIAS</strong> = 3353<br>
+<strong>GL_GREEN_BITS</strong> = 3411<br>
+<strong>GL_GREEN_SCALE</strong> = 3352<br>
+<strong>GL_HINT_BIT</strong> = 32768<br>
+<strong>GL_INCR</strong> = 7682<br>
+<strong>GL_INDEX_ARRAY</strong> = 32887<br>
+<strong>GL_INDEX_ARRAY_POINTER</strong> = 32913<br>
+<strong>GL_INDEX_ARRAY_STRIDE</strong> = 32902<br>
+<strong>GL_INDEX_ARRAY_TYPE</strong> = 32901<br>
+<strong>GL_INDEX_BITS</strong> = 3409<br>
+<strong>GL_INDEX_CLEAR_VALUE</strong> = 3104<br>
+<strong>GL_INDEX_LOGIC_OP</strong> = 3057<br>
+<strong>GL_INDEX_MODE</strong> = 3120<br>
+<strong>GL_INDEX_OFFSET</strong> = 3347<br>
+<strong>GL_INDEX_SHIFT</strong> = 3346<br>
+<strong>GL_INDEX_WRITEMASK</strong> = 3105<br>
+<strong>GL_INT</strong> = 5124<br>
+<strong>GL_INTENSITY</strong> = 32841<br>
+<strong>GL_INTENSITY12</strong> = 32844<br>
+<strong>GL_INTENSITY16</strong> = 32845<br>
+<strong>GL_INTENSITY4</strong> = 32842<br>
+<strong>GL_INTENSITY8</strong> = 32843<br>
+<strong>GL_INVALID_ENUM</strong> = 1280<br>
+<strong>GL_INVALID_OPERATION</strong> = 1282<br>
+<strong>GL_INVALID_VALUE</strong> = 1281<br>
+<strong>GL_INVERT</strong> = 5386<br>
+<strong>GL_KEEP</strong> = 7680<br>
+<strong>GL_LEFT</strong> = 1030<br>
+<strong>GL_LEQUAL</strong> = 515<br>
+<strong>GL_LESS</strong> = 513<br>
+<strong>GL_LIGHT0</strong> = 16384<br>
+<strong>GL_LIGHT1</strong> = 16385<br>
+<strong>GL_LIGHT2</strong> = 16386<br>
+<strong>GL_LIGHT3</strong> = 16387<br>
+<strong>GL_LIGHT4</strong> = 16388<br>
+<strong>GL_LIGHT5</strong> = 16389<br>
+<strong>GL_LIGHT6</strong> = 16390<br>
+<strong>GL_LIGHT7</strong> = 16391<br>
+<strong>GL_LIGHTING</strong> = 2896<br>
+<strong>GL_LIGHTING_BIT</strong> = 64<br>
+<strong>GL_LIGHT_MODEL_AMBIENT</strong> = 2899<br>
+<strong>GL_LIGHT_MODEL_LOCAL_VIEWER</strong> = 2897<br>
+<strong>GL_LIGHT_MODEL_TWO_SIDE</strong> = 2898<br>
+<strong>GL_LINE</strong> = 6913<br>
+<strong>GL_LINEAR</strong> = 9729<br>
+<strong>GL_LINEAR_ATTENUATION</strong> = 4616<br>
+<strong>GL_LINEAR_MIPMAP_LINEAR</strong> = 9987<br>
+<strong>GL_LINEAR_MIPMAP_NEAREST</strong> = 9985<br>
+<strong>GL_LINES</strong> = 1<br>
+<strong>GL_LINE_BIT</strong> = 4<br>
+<strong>GL_LINE_LOOP</strong> = 2<br>
+<strong>GL_LINE_RESET_TOKEN</strong> = 1799<br>
+<strong>GL_LINE_SMOOTH</strong> = 2848<br>
+<strong>GL_LINE_SMOOTH_HINT</strong> = 3154<br>
+<strong>GL_LINE_STIPPLE</strong> = 2852<br>
+<strong>GL_LINE_STIPPLE_PATTERN</strong> = 2853<br>
+<strong>GL_LINE_STIPPLE_REPEAT</strong> = 2854<br>
+<strong>GL_LINE_STRIP</strong> = 3<br>
+<strong>GL_LINE_TOKEN</strong> = 1794<br>
+<strong>GL_LINE_WIDTH</strong> = 2849<br>
+<strong>GL_LINE_WIDTH_GRANULARITY</strong> = 2851<br>
+<strong>GL_LINE_WIDTH_RANGE</strong> = 2850<br>
+<strong>GL_LIST_BASE</strong> = 2866<br>
+<strong>GL_LIST_BIT</strong> = 131072<br>
+<strong>GL_LIST_INDEX</strong> = 2867<br>
+<strong>GL_LIST_MODE</strong> = 2864<br>
+<strong>GL_LOAD</strong> = 257<br>
+<strong>GL_LOGIC_OP</strong> = 3057<br>
+<strong>GL_LOGIC_OP_MODE</strong> = 3056<br>
+<strong>GL_LUMINANCE</strong> = 6409<br>
+<strong>GL_LUMINANCE12</strong> = 32833<br>
+<strong>GL_LUMINANCE12_ALPHA12</strong> = 32839<br>
+<strong>GL_LUMINANCE12_ALPHA4</strong> = 32838<br>
+<strong>GL_LUMINANCE16</strong> = 32834<br>
+<strong>GL_LUMINANCE16_ALPHA16</strong> = 32840<br>
+<strong>GL_LUMINANCE4</strong> = 32831<br>
+<strong>GL_LUMINANCE4_ALPHA4</strong> = 32835<br>
+<strong>GL_LUMINANCE6_ALPHA2</strong> = 32836<br>
+<strong>GL_LUMINANCE8</strong> = 32832<br>
+<strong>GL_LUMINANCE8_ALPHA8</strong> = 32837<br>
+<strong>GL_LUMINANCE_ALPHA</strong> = 6410<br>
+<strong>GL_MAP1_COLOR_4</strong> = 3472<br>
+<strong>GL_MAP1_GRID_DOMAIN</strong> = 3536<br>
+<strong>GL_MAP1_GRID_SEGMENTS</strong> = 3537<br>
+<strong>GL_MAP1_INDEX</strong> = 3473<br>
+<strong>GL_MAP1_NORMAL</strong> = 3474<br>
+<strong>GL_MAP1_TEXTURE_COORD_1</strong> = 3475<br>
+<strong>GL_MAP1_TEXTURE_COORD_2</strong> = 3476<br>
+<strong>GL_MAP1_TEXTURE_COORD_3</strong> = 3477<br>
+<strong>GL_MAP1_TEXTURE_COORD_4</strong> = 3478<br>
+<strong>GL_MAP1_VERTEX_3</strong> = 3479<br>
+<strong>GL_MAP1_VERTEX_4</strong> = 3480<br>
+<strong>GL_MAP2_COLOR_4</strong> = 3504<br>
+<strong>GL_MAP2_GRID_DOMAIN</strong> = 3538<br>
+<strong>GL_MAP2_GRID_SEGMENTS</strong> = 3539<br>
+<strong>GL_MAP2_INDEX</strong> = 3505<br>
+<strong>GL_MAP2_NORMAL</strong> = 3506<br>
+<strong>GL_MAP2_TEXTURE_COORD_1</strong> = 3507<br>
+<strong>GL_MAP2_TEXTURE_COORD_2</strong> = 3508<br>
+<strong>GL_MAP2_TEXTURE_COORD_3</strong> = 3509<br>
+<strong>GL_MAP2_TEXTURE_COORD_4</strong> = 3510<br>
+<strong>GL_MAP2_VERTEX_3</strong> = 3511<br>
+<strong>GL_MAP2_VERTEX_4</strong> = 3512<br>
+<strong>GL_MAP_COLOR</strong> = 3344<br>
+<strong>GL_MAP_STENCIL</strong> = 3345<br>
+<strong>GL_MATRIX_MODE</strong> = 2976<br>
+<strong>GL_MAX_ATTRIB_STACK_DEPTH</strong> = 3381<br>
+<strong>GL_MAX_CLIENT_ATTRIB_STACK_DEPTH</strong> = 3387<br>
+<strong>GL_MAX_CLIP_PLANES</strong> = 3378<br>
+<strong>GL_MAX_EVAL_ORDER</strong> = 3376<br>
+<strong>GL_MAX_LIGHTS</strong> = 3377<br>
+<strong>GL_MAX_LIST_NESTING</strong> = 2865<br>
+<strong>GL_MAX_MODELVIEW_STACK_DEPTH</strong> = 3382<br>
+<strong>GL_MAX_NAME_STACK_DEPTH</strong> = 3383<br>
+<strong>GL_MAX_PIXEL_MAP_TABLE</strong> = 3380<br>
+<strong>GL_MAX_PROJECTION_STACK_DEPTH</strong> = 3384<br>
+<strong>GL_MAX_TEXTURE_SIZE</strong> = 3379<br>
+<strong>GL_MAX_TEXTURE_STACK_DEPTH</strong> = 3385<br>
+<strong>GL_MAX_VIEWPORT_DIMS</strong> = 3386<br>
+<strong>GL_MODELVIEW</strong> = 5888<br>
+<strong>GL_MODELVIEW_MATRIX</strong> = 2982<br>
+<strong>GL_MODELVIEW_STACK_DEPTH</strong> = 2979<br>
+<strong>GL_MODULATE</strong> = 8448<br>
+<strong>GL_MULT</strong> = 259<br>
+<strong>GL_N3F_V3F</strong> = 10789<br>
+<strong>GL_NAME_STACK_DEPTH</strong> = 3440<br>
+<strong>GL_NAND</strong> = 5390<br>
+<strong>GL_NEAREST</strong> = 9728<br>
+<strong>GL_NEAREST_MIPMAP_LINEAR</strong> = 9986<br>
+<strong>GL_NEAREST_MIPMAP_NEAREST</strong> = 9984<br>
+<strong>GL_NEVER</strong> = 512<br>
+<strong>GL_NICEST</strong> = 4354<br>
+<strong>GL_NONE</strong> = 0<br>
+<strong>GL_NOOP</strong> = 5381<br>
+<strong>GL_NOR</strong> = 5384<br>
+<strong>GL_NORMALIZE</strong> = 2977<br>
+<strong>GL_NORMAL_ARRAY</strong> = 32885<br>
+<strong>GL_NORMAL_ARRAY_POINTER</strong> = 32911<br>
+<strong>GL_NORMAL_ARRAY_STRIDE</strong> = 32895<br>
+<strong>GL_NORMAL_ARRAY_TYPE</strong> = 32894<br>
+<strong>GL_NOTEQUAL</strong> = 517<br>
+<strong>GL_NO_ERROR</strong> = 0<br>
+<strong>GL_OBJECT_LINEAR</strong> = 9217<br>
+<strong>GL_OBJECT_PLANE</strong> = 9473<br>
+<strong>GL_ONE</strong> = 1<br>
+<strong>GL_ONE_MINUS_DST_ALPHA</strong> = 773<br>
+<strong>GL_ONE_MINUS_DST_COLOR</strong> = 775<br>
+<strong>GL_ONE_MINUS_SRC_ALPHA</strong> = 771<br>
+<strong>GL_ONE_MINUS_SRC_COLOR</strong> = 769<br>
+<strong>GL_OR</strong> = 5383<br>
+<strong>GL_ORDER</strong> = 2561<br>
+<strong>GL_OR_INVERTED</strong> = 5389<br>
+<strong>GL_OR_REVERSE</strong> = 5387<br>
+<strong>GL_OUT_OF_MEMORY</strong> = 1285<br>
+<strong>GL_PACK_ALIGNMENT</strong> = 3333<br>
+<strong>GL_PACK_LSB_FIRST</strong> = 3329<br>
+<strong>GL_PACK_ROW_LENGTH</strong> = 3330<br>
+<strong>GL_PACK_SKIP_PIXELS</strong> = 3332<br>
+<strong>GL_PACK_SKIP_ROWS</strong> = 3331<br>
+<strong>GL_PACK_SWAP_BYTES</strong> = 3328<br>
+<strong>GL_PASS_THROUGH_TOKEN</strong> = 1792<br>
+<strong>GL_PERSPECTIVE_CORRECTION_HINT</strong> = 3152<br>
+<strong>GL_PIXEL_MAP_A_TO_A</strong> = 3193<br>
+<strong>GL_PIXEL_MAP_A_TO_A_SIZE</strong> = 3257<br>
+<strong>GL_PIXEL_MAP_B_TO_B</strong> = 3192<br>
+<strong>GL_PIXEL_MAP_B_TO_B_SIZE</strong> = 3256<br>
+<strong>GL_PIXEL_MAP_G_TO_G</strong> = 3191<br>
+<strong>GL_PIXEL_MAP_G_TO_G_SIZE</strong> = 3255<br>
+<strong>GL_PIXEL_MAP_I_TO_A</strong> = 3189<br>
+<strong>GL_PIXEL_MAP_I_TO_A_SIZE</strong> = 3253<br>
+<strong>GL_PIXEL_MAP_I_TO_B</strong> = 3188<br>
+<strong>GL_PIXEL_MAP_I_TO_B_SIZE</strong> = 3252<br>
+<strong>GL_PIXEL_MAP_I_TO_G</strong> = 3187<br>
+<strong>GL_PIXEL_MAP_I_TO_G_SIZE</strong> = 3251<br>
+<strong>GL_PIXEL_MAP_I_TO_I</strong> = 3184<br>
+<strong>GL_PIXEL_MAP_I_TO_I_SIZE</strong> = 3248<br>
+<strong>GL_PIXEL_MAP_I_TO_R</strong> = 3186<br>
+<strong>GL_PIXEL_MAP_I_TO_R_SIZE</strong> = 3250<br>
+<strong>GL_PIXEL_MAP_R_TO_R</strong> = 3190<br>
+<strong>GL_PIXEL_MAP_R_TO_R_SIZE</strong> = 3254<br>
+<strong>GL_PIXEL_MAP_S_TO_S</strong> = 3185<br>
+<strong>GL_PIXEL_MAP_S_TO_S_SIZE</strong> = 3249<br>
+<strong>GL_PIXEL_MODE_BIT</strong> = 32<br>
+<strong>GL_POINT</strong> = 6912<br>
+<strong>GL_POINTS</strong> = 0<br>
+<strong>GL_POINT_BIT</strong> = 2<br>
+<strong>GL_POINT_SIZE</strong> = 2833<br>
+<strong>GL_POINT_SIZE_GRANULARITY</strong> = 2835<br>
+<strong>GL_POINT_SIZE_RANGE</strong> = 2834<br>
+<strong>GL_POINT_SMOOTH</strong> = 2832<br>
+<strong>GL_POINT_SMOOTH_HINT</strong> = 3153<br>
+<strong>GL_POINT_TOKEN</strong> = 1793<br>
+<strong>GL_POLYGON</strong> = 9<br>
+<strong>GL_POLYGON_BIT</strong> = 8<br>
+<strong>GL_POLYGON_MODE</strong> = 2880<br>
+<strong>GL_POLYGON_OFFSET_FACTOR</strong> = 32824<br>
+<strong>GL_POLYGON_OFFSET_FILL</strong> = 32823<br>
+<strong>GL_POLYGON_OFFSET_LINE</strong> = 10754<br>
+<strong>GL_POLYGON_OFFSET_POINT</strong> = 10753<br>
+<strong>GL_POLYGON_OFFSET_UNITS</strong> = 10752<br>
+<strong>GL_POLYGON_SMOOTH</strong> = 2881<br>
+<strong>GL_POLYGON_SMOOTH_HINT</strong> = 3155<br>
+<strong>GL_POLYGON_STIPPLE</strong> = 2882<br>
+<strong>GL_POLYGON_STIPPLE_BIT</strong> = 16<br>
+<strong>GL_POLYGON_TOKEN</strong> = 1795<br>
+<strong>GL_POSITION</strong> = 4611<br>
+<strong>GL_PROJECTION</strong> = 5889<br>
+<strong>GL_PROJECTION_MATRIX</strong> = 2983<br>
+<strong>GL_PROJECTION_STACK_DEPTH</strong> = 2980<br>
+<strong>GL_PROXY_TEXTURE_1D</strong> = 32867<br>
+<strong>GL_PROXY_TEXTURE_2D</strong> = 32868<br>
+<strong>GL_Q</strong> = 8195<br>
+<strong>GL_QUADRATIC_ATTENUATION</strong> = 4617<br>
+<strong>GL_QUADS</strong> = 7<br>
+<strong>GL_QUAD_STRIP</strong> = 8<br>
+<strong>GL_R</strong> = 8194<br>
+<strong>GL_R3_G3_B2</strong> = 10768<br>
+<strong>GL_READ_BUFFER</strong> = 3074<br>
+<strong>GL_RED</strong> = 6403<br>
+<strong>GL_RED_BIAS</strong> = 3349<br>
+<strong>GL_RED_BITS</strong> = 3410<br>
+<strong>GL_RED_SCALE</strong> = 3348<br>
+<strong>GL_RENDER</strong> = 7168<br>
+<strong>GL_RENDERER</strong> = 7937<br>
+<strong>GL_RENDER_MODE</strong> = 3136<br>
+<strong>GL_REPEAT</strong> = 10497<br>
+<strong>GL_REPLACE</strong> = 7681<br>
+<strong>GL_RETURN</strong> = 258<br>
+<strong>GL_RGB</strong> = 6407<br>
+<strong>GL_RGB10</strong> = 32850<br>
+<strong>GL_RGB10_A2</strong> = 32857<br>
+<strong>GL_RGB12</strong> = 32851<br>
+<strong>GL_RGB16</strong> = 32852<br>
+<strong>GL_RGB4</strong> = 32847<br>
+<strong>GL_RGB5</strong> = 32848<br>
+<strong>GL_RGB5_A1</strong> = 32855<br>
+<strong>GL_RGB8</strong> = 32849<br>
+<strong>GL_RGBA</strong> = 6408<br>
+<strong>GL_RGBA12</strong> = 32858<br>
+<strong>GL_RGBA16</strong> = 32859<br>
+<strong>GL_RGBA2</strong> = 32853<br>
+<strong>GL_RGBA4</strong> = 32854<br>
+<strong>GL_RGBA8</strong> = 32856<br>
+<strong>GL_RGBA_MODE</strong> = 3121<br>
+<strong>GL_RIGHT</strong> = 1031<br>
+<strong>GL_S</strong> = 8192<br>
+<strong>GL_SCISSOR_BIT</strong> = 524288<br>
+<strong>GL_SCISSOR_BOX</strong> = 3088<br>
+<strong>GL_SCISSOR_TEST</strong> = 3089<br>
+<strong>GL_SELECT</strong> = 7170<br>
+<strong>GL_SELECTION_BUFFER_POINTER</strong> = 3571<br>
+<strong>GL_SELECTION_BUFFER_SIZE</strong> = 3572<br>
+<strong>GL_SET</strong> = 5391<br>
+<strong>GL_SHADE_MODEL</strong> = 2900<br>
+<strong>GL_SHININESS</strong> = 5633<br>
+<strong>GL_SHORT</strong> = 5122<br>
+<strong>GL_SMOOTH</strong> = 7425<br>
+<strong>GL_SPECULAR</strong> = 4610<br>
+<strong>GL_SPHERE_MAP</strong> = 9218<br>
+<strong>GL_SPOT_CUTOFF</strong> = 4614<br>
+<strong>GL_SPOT_DIRECTION</strong> = 4612<br>
+<strong>GL_SPOT_EXPONENT</strong> = 4613<br>
+<strong>GL_SRC_ALPHA</strong> = 770<br>
+<strong>GL_SRC_ALPHA_SATURATE</strong> = 776<br>
+<strong>GL_SRC_COLOR</strong> = 768<br>
+<strong>GL_STACK_OVERFLOW</strong> = 1283<br>
+<strong>GL_STACK_UNDERFLOW</strong> = 1284<br>
+<strong>GL_STENCIL</strong> = 6146<br>
+<strong>GL_STENCIL_BITS</strong> = 3415<br>
+<strong>GL_STENCIL_BUFFER_BIT</strong> = 1024<br>
+<strong>GL_STENCIL_CLEAR_VALUE</strong> = 2961<br>
+<strong>GL_STENCIL_FAIL</strong> = 2964<br>
+<strong>GL_STENCIL_FUNC</strong> = 2962<br>
+<strong>GL_STENCIL_INDEX</strong> = 6401<br>
+<strong>GL_STENCIL_PASS_DEPTH_FAIL</strong> = 2965<br>
+<strong>GL_STENCIL_PASS_DEPTH_PASS</strong> = 2966<br>
+<strong>GL_STENCIL_REF</strong> = 2967<br>
+<strong>GL_STENCIL_TEST</strong> = 2960<br>
+<strong>GL_STENCIL_VALUE_MASK</strong> = 2963<br>
+<strong>GL_STENCIL_WRITEMASK</strong> = 2968<br>
+<strong>GL_STEREO</strong> = 3123<br>
+<strong>GL_SUBPIXEL_BITS</strong> = 3408<br>
+<strong>GL_T</strong> = 8193<br>
+<strong>GL_T2F_C3F_V3F</strong> = 10794<br>
+<strong>GL_T2F_C4F_N3F_V3F</strong> = 10796<br>
+<strong>GL_T2F_C4UB_V3F</strong> = 10793<br>
+<strong>GL_T2F_N3F_V3F</strong> = 10795<br>
+<strong>GL_T2F_V3F</strong> = 10791<br>
+<strong>GL_T4F_C4F_N3F_V4F</strong> = 10797<br>
+<strong>GL_T4F_V4F</strong> = 10792<br>
+<strong>GL_TEXTURE</strong> = 5890<br>
+<strong>GL_TEXTURE_1D</strong> = 3552<br>
+<strong>GL_TEXTURE_2D</strong> = 3553<br>
+<strong>GL_TEXTURE_ALPHA_SIZE</strong> = 32863<br>
+<strong>GL_TEXTURE_BINDING_1D</strong> = 32872<br>
+<strong>GL_TEXTURE_BINDING_2D</strong> = 32873<br>
+<strong>GL_TEXTURE_BIT</strong> = 262144<br>
+<strong>GL_TEXTURE_BLUE_SIZE</strong> = 32862<br>
+<strong>GL_TEXTURE_BORDER</strong> = 4101<br>
+<strong>GL_TEXTURE_BORDER_COLOR</strong> = 4100<br>
+<strong>GL_TEXTURE_COMPONENTS</strong> = 4099<br>
+<strong>GL_TEXTURE_COORD_ARRAY</strong> = 32888<br>
+<strong>GL_TEXTURE_COORD_ARRAY_POINTER</strong> = 32914<br>
+<strong>GL_TEXTURE_COORD_ARRAY_SIZE</strong> = 32904<br>
+<strong>GL_TEXTURE_COORD_ARRAY_STRIDE</strong> = 32906<br>
+<strong>GL_TEXTURE_COORD_ARRAY_TYPE</strong> = 32905<br>
+<strong>GL_TEXTURE_ENV</strong> = 8960<br>
+<strong>GL_TEXTURE_ENV_COLOR</strong> = 8705<br>
+<strong>GL_TEXTURE_ENV_MODE</strong> = 8704<br>
+<strong>GL_TEXTURE_GEN_MODE</strong> = 9472<br>
+<strong>GL_TEXTURE_GEN_Q</strong> = 3171<br>
+<strong>GL_TEXTURE_GEN_R</strong> = 3170<br>
+<strong>GL_TEXTURE_GEN_S</strong> = 3168<br>
+<strong>GL_TEXTURE_GEN_T</strong> = 3169<br>
+<strong>GL_TEXTURE_GREEN_SIZE</strong> = 32861<br>
+<strong>GL_TEXTURE_HEIGHT</strong> = 4097<br>
+<strong>GL_TEXTURE_INTENSITY_SIZE</strong> = 32865<br>
+<strong>GL_TEXTURE_INTERNAL_FORMAT</strong> = 4099<br>
+<strong>GL_TEXTURE_LUMINANCE_SIZE</strong> = 32864<br>
+<strong>GL_TEXTURE_MAG_FILTER</strong> = 10240<br>
+<strong>GL_TEXTURE_MATRIX</strong> = 2984<br>
+<strong>GL_TEXTURE_MIN_FILTER</strong> = 10241<br>
+<strong>GL_TEXTURE_PRIORITY</strong> = 32870<br>
+<strong>GL_TEXTURE_RED_SIZE</strong> = 32860<br>
+<strong>GL_TEXTURE_RESIDENT</strong> = 32871<br>
+<strong>GL_TEXTURE_STACK_DEPTH</strong> = 2981<br>
+<strong>GL_TEXTURE_WIDTH</strong> = 4096<br>
+<strong>GL_TEXTURE_WRAP_S</strong> = 10242<br>
+<strong>GL_TEXTURE_WRAP_T</strong> = 10243<br>
+<strong>GL_TRANSFORM_BIT</strong> = 4096<br>
+<strong>GL_TRIANGLES</strong> = 4<br>
+<strong>GL_TRIANGLE_FAN</strong> = 6<br>
+<strong>GL_TRIANGLE_STRIP</strong> = 5<br>
+<strong>GL_TRUE</strong> = 1<br>
+<strong>GL_UNPACK_ALIGNMENT</strong> = 3317<br>
+<strong>GL_UNPACK_LSB_FIRST</strong> = 3313<br>
+<strong>GL_UNPACK_ROW_LENGTH</strong> = 3314<br>
+<strong>GL_UNPACK_SKIP_PIXELS</strong> = 3316<br>
+<strong>GL_UNPACK_SKIP_ROWS</strong> = 3315<br>
+<strong>GL_UNPACK_SWAP_BYTES</strong> = 3312<br>
+<strong>GL_UNSIGNED_BYTE</strong> = 5121<br>
+<strong>GL_UNSIGNED_INT</strong> = 5125<br>
+<strong>GL_UNSIGNED_SHORT</strong> = 5123<br>
+<strong>GL_V2F</strong> = 10784<br>
+<strong>GL_V3F</strong> = 10785<br>
+<strong>GL_VENDOR</strong> = 7936<br>
+<strong>GL_VERSION</strong> = 7938<br>
+<strong>GL_VERSION_1_1</strong> = 1<br>
+<strong>GL_VERTEX_ARRAY</strong> = 32884<br>
+<strong>GL_VERTEX_ARRAY_POINTER</strong> = 32910<br>
+<strong>GL_VERTEX_ARRAY_SIZE</strong> = 32890<br>
+<strong>GL_VERTEX_ARRAY_STRIDE</strong> = 32892<br>
+<strong>GL_VERTEX_ARRAY_TYPE</strong> = 32891<br>
+<strong>GL_VIEWPORT</strong> = 2978<br>
+<strong>GL_VIEWPORT_BIT</strong> = 2048<br>
+<strong>GL_XOR</strong> = 5382<br>
+<strong>GL_ZERO</strong> = 0<br>
+<strong>GL_ZOOM_X</strong> = 3350<br>
+<strong>GL_ZOOM_Y</strong> = 3351<br>
+<strong>ID</strong> = []<br>
+<strong>MESH</strong> = 4<br>
+<strong>MIME</strong> = {}<br>
+<strong>MODES</strong> = ['1', 'CMYK', 'F', 'I', 'L', 'P', 'RGB', 'RGBA', 'RGBX', 'YCbCr']<br>
+<strong>NEAREST</strong> = 0<br>
+<strong>NONE</strong> = 0<br>
+<strong>NORMAL</strong> = 0<br>
+<strong>OPEN</strong> = {}<br>
+<strong>ORDERED</strong> = 1<br>
+<strong>PERSPECTIVE</strong> = 2<br>
+<strong>QUAD</strong> = 3<br>
+<strong>RASTERIZE</strong> = 2<br>
+<strong>ROTATE_180</strong> = 3<br>
+<strong>ROTATE_270</strong> = 4<br>
+<strong>ROTATE_90</strong> = 2<br>
+<strong>SAVE</strong> = {}<br>
+<strong>SEQUENCE</strong> = 1<br>
+<strong>VERSION</strong> = '1.1.2'<br>
+<strong>WEB</strong> = 0<br>
+<strong>__file__</strong> = r'.\pyui\renderers\openglGlut.pyc'<br>
+<strong>__name__</strong> = 'pyui.renderers.openglGlut'</td></tr></table>
+</body></html>

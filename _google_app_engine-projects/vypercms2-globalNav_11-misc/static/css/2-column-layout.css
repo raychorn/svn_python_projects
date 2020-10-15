@@ -1,0 +1,31 @@
+.mask{
+   position: relative;
+   overflow: hidden;
+   margin: 0px auto;
+   width: 100%;
+   background-color: white;
+}
+.col1{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 180;
+   left: 0%;
+   background-color: white;
+}
+.col2{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 350;
+   left: 1%;
+   background-color: white;
+}
+.col3{
+   position: relative;
+   overflow: hidden;
+   float: right;
+   width: 400;
+   left: 0;
+   background-color: white;
+}

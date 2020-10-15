@@ -1,0 +1,7 @@
+Your Email address has been changed {{ TO_FROM }} "{{ NEW_EMAIL }}".
+
+You may return to {{ SITE_LINK }} to upgrade your {{ PRODUCT_NAME }} to take www.pypi.info to the next level whenever you wish.
+
+<a href="http://www.vyperlogix.com" target="_blank">Vyper Logix Corp.</a>
+
+{{ CONFIDENTIALITYNOTICE }}

@@ -1,0 +1,6 @@
+* Ship the entire Python25 folder hierarchy via SVN hosted on near-by.info.
+
+* wxBuilder shells out to make .EXE using py2Exe.
+
+* Minimal Python editor with support for Vyper Logix Library.
+

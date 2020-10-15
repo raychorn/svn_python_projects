@@ -1,0 +1,23 @@
+{% load currenttimetag %}
+{% get_current_time "%Y-%M-%d %I:%M %p" as my_current_time %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% if google_site_verification %}
+    <meta name="google-site-verification" content="{{ google_site_verification }}" />
+{% endif %}
+    <link rel="alternate" type="application/rss+xml" title="VyperBlog News" href="/feeds/rss/">
+    <title>{{ title }} &copy;RayCHorn.Com, All Rights Reserved. ({{ my_current_time }})</title>
+</head>
+<frameset rows="90,*" frameborder="no" border="0" framespacing="0">
+  <frame src="{{ topFrame }}" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frame src="{{ mainFrame }}" name="mainFrame" id="mainFrame" title="mainFrame" />
+</frameset>
+<noframes><body><B>Your browser <U>cannot</U> handle this site.</B></body></noframes>
+</html>

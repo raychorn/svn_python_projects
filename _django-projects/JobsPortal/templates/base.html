@@ -1,0 +1,339 @@
+{% load currenttimetag %}
+{% get_current_time "%Y-%M-%d %I:%M %p" as my_current_time %}
+{% get_current_time "%Y" as my_current_year %}
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
+    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
+    lang="{% firstof LANGUAGE_CODE 'en' %}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}{% endblock %} &copy;VyperLogix Jobs Portal {{ air_id }} v{{version}}, All Rights Reserved. ({{ my_current_time }})</title>
+    {% block css %}
+      <!--[if IE]>
+      <![endif]-->
+    {% endblock %}
+<link rel="icon" 
+      type="image/png" 
+      href="/static/images/VyperLogixCorp-icon(60x57).png" />
+
+	<script type="text/javascript" src="/static/js/dynamic.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/labelify/jquery.labelify-passwords.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery.form/jquery.form.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery.validate/jquery.validate.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery.validate/additional-methods.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery-validate.password/jquery.validate.password.js"></script>
+	<script type="text/javascript" src="/static/js/00_constants.js"></script>
+	<script type="text/javascript" src="/static/js/01_objectExplainer.js"></script>
+	<script type="text/javascript" src="/static/js/02_AnchorPosition.js"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery.qtip.custom/jquery.qtip.min.js"></script>
+    {% block js %}
+    {% endblock %}
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-9863220-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+ 
+	<script type="text/javascript">
+		var __default_options__ = {html:'',options:{minWidth:700,minHeight:500,width:700,height:500,modal:true}};
+		var ___options___ = {
+			'/':__default_options__
+		};
+		var ___pageSelector___ = null;
+		
+		var __url__ = '{{ url }}';
+
+		$(document).ready(function() {
+			include_css('http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/start/jquery-ui.css');
+			include_css('/static/js/jquery/jquery-validate.password/jquery.validate.password.css');
+			include_css('/static/js/jquery/jquery.qtip.custom/jquery.qtip.min.css');
+			
+			function getCookie(name) {
+				var cookieValue = null;
+				if (document.cookie && document.cookie != '') {
+					var cookies = document.cookie.split(';');
+					for (var i = 0; i < cookies.length; i++) {
+						var cookie = jQuery.trim(cookies[i]);
+						// Does this cookie string begin with the name we want?
+						if (cookie.substring(0, name.length + 1) == (name + '=')) {
+							cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+							break;
+						}
+					}
+				}
+				return cookieValue;
+			}
+			var csrftoken = getCookie('csrftoken');
+	
+			function csrfSafeMethod(method) {
+				// these HTTP methods do not require CSRF protection
+				return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+			}
+
+			function sameOrigin(url) {
+				// test that a given url is a same-origin URL
+				// url could be relative or scheme relative or absolute
+				var host = document.location.host; // host + port
+				var protocol = document.location.protocol;
+				var sr_origin = '//' + host;
+				var origin = protocol + sr_origin;
+				// Allow absolute or scheme relative URLs to same origin
+				return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+					(url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+					// or any other URL that isn't scheme relative or absolute i.e relative.
+					!(/^(\/\/|http:|https:).*/.test(url));
+			}
+
+			$.ajaxSetup({
+				beforeSend: function(xhr, settings) {
+					if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
+						// Send the token to same-origin, relative URLs only.
+						// Send the token only if the method warrants CSRF protection
+						// Using the CSRFToken value acquired earlier
+						xhr.setRequestHeader("X-CSRFToken", csrftoken);
+					}
+				}
+			});
+
+			try {
+				include_css('/static/main.css');
+			} catch (e) {}
+			var href_tokens = window.location.href.split('/');
+			___pageSelector___ = href_tokens[href_tokens.length-1];
+			___pageSelector___ = (___pageSelector___.length == 0) ? '/' : ___pageSelector___;
+			//var options = ___options___[___pageSelector___];
+
+			var __icons__ = [
+				'<a href="http://www.vyperlogix.com" target="_top"><img src="/static/images/VyperLogixCorp-icon(60x57).png" height="101" /></a>'
+			];
+			var __iconNum__ = __icons__.length-1;
+			var __iconElement__ = $("#logo");
+			function change_site_icon() {
+				if (__iconElement__) {
+					__iconElement__.html(__icons__[__iconNum__]);
+					__iconNum__++;
+					if (__iconNum__ > __icons__.length-1) {
+						__iconNum__ = 0;
+					}
+					setTimeout(function(){change_site_icon();},5000);
+				}
+			}
+			
+			if (__url__ == 'index.html') {
+				if (__icons__.length > 1) {
+					setTimeout(function(){change_site_icon();},5000);
+				}
+			} else {
+				$("#logo").hide();
+			}
+			
+			$("#popUpDialog").hide();
+			$("#popUpDialog").dialog({
+				autoOpen: false,
+				minWidth:600, 
+				minHeight:200, 
+				width:600, 
+				height:500
+			});
+
+			function change_login_href() {
+				if (window.location.href.indexOf('/?Go=+++++Login+++++') > -1) {
+					window.location.href = '/';
+				} else {
+					setTimeout(function(){change_login_href();},250);
+				}
+			}
+			setTimeout(function(){change_login_href();},250);
+
+			/* */
+			//$('body').append('<div id="ajaxBusy"><img src="/static/activity/ajax-loader.gif" border="0" /></div>');
+			$('#ajaxBusy').css({
+				display:"none",
+				margin:"0px",
+				paddingLeft:"0px",
+				paddingRight:"0px",
+				paddingTop:"0px",
+				paddingBottom:"0px",
+				position: "absolute",
+				top: "40px",
+				left: "0px",
+				width:"auto"
+			});
+			$(document).ajaxStart(function(){ 
+				var pos = $('#btn_logout').position();
+				if (!pos) {
+					pos = $('#btn_login').position();
+				}
+				$('#ajaxBusy').css({"left":(pos.left+90)+"px"});
+				$('#ajaxBusy').show(); 
+			}).ajaxStop(function(){ 
+				$('#ajaxBusy').hide();
+			});
+			
+			var num_users = parseInt('{{ NUM_USERS }}');
+			if (num_users < 1) {
+				$('#span_login_button').hide();
+				$('#span_register_button').show();
+			} else {
+				$('#span_login_button').show();
+				$('#span_register_button').hide();
+			}
+			
+			function clear_messages(url) {
+				var __data__ = {};
+				$.ajax({
+					type: 'GET',
+					url: '/clear/messages/',
+					data: __data__,
+					success: function (data) {
+						window.location=url;
+					},
+					 error: function(ts) { 
+						alert(ts.responseText);
+					},
+					dataType: 'json'
+				});			
+			}
+	
+			$('#navigation a').click(function(){
+				var that = this;
+				clear_messages(that.href);
+				return false;
+  			});
+			
+  		});
+		
+	function onclick_logout() {
+		$("#div_logout_button").hide();
+		//$("#ajaxBusy").show();
+		window.location.href = '/logout/user/';
+	}
+	
+	function not_yet_implemented() {
+		alert('Not Yet Implemented !!!\nCheck back again for more...');
+	}
+
+    </script>
+
+    {% block extra-head %}{% endblock %}
+  </head>
+
+<body>
+<header>
+	<div>
+      <table id="navigation_content_holder" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+        <td valign="top" align="left">
+            <div id="logo">
+                <a href="http://www.vyperlogix.com" target="_top"><img src="/static/images/VyperLogixCorp-icon(60x57).png" height="101" /></a>
+            </div>
+        
+            <!--start of navigation_holder-->
+            <div style="padding-left:0px;">
+                <div id="navigation"> 
+{% if url != '' %}
+                  <span class="navigation"><a id="anchor_navbar_home" href="/?GO=HOME" target="_top">HOME</a> </span>
+{% else %}
+                  <span class="navigation"><a id="anchor_navbar_home" href="/?GO=HOME" target="_top">&lt;HOME&gt;</a> </span>
+{% endif %}
+{% if IS_LOGGED_IN %}
+{% if url != 'jobs.html' %}
+                      <span class="navigation">
+                        <a id="anchor_navbar_github" href="/jobs.html" target="_top">Job Seekers</a> 
+                      </span>
+{% else %}
+                        <span class="navigation"><span id="disabled">&lt;Job Seekers&gt;</span></span>
+{% endif %}
+{% endif %}
+                </div>
+          </div>
+        </td>
+        <td width="*" valign="top" align="right">
+{% if IS_NOT_LOGGED_IN and url == '' %}
+            <div>
+                <span id="span_login_button"><input id="btn_login" name="Login" type="button" value="Login" class="main_button_wide_orange" onclick="onclick_request_login_dialog();" /></span>
+                <span id="span_register_button"><input name="Register" type="button" value="Register" class="main_button_wide_orange" onclick="onclick_request_register_dialog();" /></span>
+            </div>
+{% endif %}
+{% if IS_LOGGED_IN %}
+            <div id="div_logout_button">
+                <span id="welcome_text">Welcome back, {{ USER_NAME }}</span>&nbsp;&nbsp;
+                <span><input id="btn_logout" name="Logout" type="button" value="Logout" class="main_button_wide_orange" onclick="onclick_logout();" /></span>
+            </div>
+{% endif %}
+        </td>
+        </tr>
+        <tr>
+        	<td bgcolor="white">
+            	<span id="ERROR_MESSAGE">{{ ERROR }}{{ ERROR_MESSAGE }}</span>
+            </td>
+        </tr>
+        <tr>
+        	<td bgcolor="white">
+            	<span id="STATUS_MESSAGE">{{ STATUS }}{{ STATUS_MESSAGE }}</span>
+            </td>
+        </tr>
+        <tr>
+        	<td bgcolor="white">
+<div id="ajaxBusy"><img src="/static/activity/ajax-loader.gif" width="60" border="0" /></div>
+            </td>
+        </tr>
+      </table>
+	</div>
+    
+    <div style="clear: both"></div>
+</header>
+<div id="popUpDialog" title="???" style="display:none;">
+	<p id="popup_dialog_content"></p>
+</div>
+<div>{% block container %}{% endblock %}</div>
+<div style="clear: both;"></div>
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="footer_content_holder">
+  <tr>
+    <td>
+    <div class="footer_left_box">
+    <div class="footer_font">&copy;&nbsp;{{ my_current_year }} VyperLogix Jobs Portal&trade;&nbsp;<a href="http://www.vyperlogix.com" target="_top">VyperLogix.Com</a>, All rights reserved.<BR/>All References to VyperLogix are Copyrighted/Trademarks by and of <a href="http://www.vyperlogix.com" target="_top">VyperLogix</a>.</div>
+    </div>
+    
+     <div class="footer_right_box">
+    <div class="footer_font">
+{% if url != 'terms-of-use.html' %}
+            <a href="/terms-of-use.html" target="_top">Terms of Use</a>&nbsp;&nbsp; 
+{% endif %}
+{% if IS_NOT_HIDDEN %}
+            <a href="#" onclick="not_yet_implemented();">Privacy Policy</a>&#32;&#32; &#124; &#32;&#32;
+{% endif %}
+{% if IS_NOT_HIDDEN %}
+            <a href="#" onclick="not_yet_implemented();">Site Map</a>&#32;&#32; &#124; &#32;&#32;
+{% endif %}
+{% if url != 'contact.html' %}
+            <a href="/contact.html" target="_top">Contact</a> 
+{% endif %}
+{% if IS_NOT_HIDDEN %}
+            <br/><br/>
+            <a href="#" onclick="not_yet_implemented();"><img src="/static/images/facebook.png" width="32" height="32" border="0" /></a>
+             <a href="#" onclick="not_yet_implemented();"><img src="/static/images/twitter.png" width="32" height="32" border="0" /></a>
+             <a href="#" onclick="not_yet_implemented();"><img src="/static/images/youtube.png" width="32" height="32" border="0" /></a>
+            </div>
+{% endif %}
+    </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

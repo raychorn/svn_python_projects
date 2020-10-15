@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TextInput xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="init()">
+	<mx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+
+			private var focus_F:Boolean = false;
+			private var _cursorPos:int;
+			private var _t:Timer;
+			private var _xPos:int = 0;
+
+			private const _RIGHT:int = 1;
+			private const _LEFT:int = 2;
+			private const _SPEED:int = 0;
+			private const _REPEAT:int = 1;
+			private const _PROTOCOL:String = "://";
+
+
+
+
+			/**
+			 * Setup Listeners and cursor position
+			 */
+
+			private function init():void {
+				super.doubleClickEnabled = true;
+				this.addEventListener(Event.CHANGE, onDataChange);
+				this.addEventListener(FocusEvent.MOUSE_FOCUS_CHANGE, onFocus);
+				this.addEventListener(KeyboardEvent.KEY_DOWN, onKey);
+				this.addEventListener(MouseEvent.CLICK, onMouse);
+				this.addEventListener(MouseEvent.DOUBLE_CLICK, onDoubleClick);
+			}
+
+
+
+
+			private function onMouse(e:MouseEvent):void {
+
+				var si:int = super.selectionEndIndex - super.selectionBeginIndex;
+				if (si > 0) {
+					focus_F = true;
+					return;
+				}
+
+				_cursorPos = super.selectionBeginIndex;
+				_pCursorPos = _cursorPos;
+
+				super.editable = true;
+
+				if (!focus_F) {
+					focus_F = !focus_F;
+					_xPos = 1;
+					_cursorPos = super.text.length;
+					selectAll();
+				} else {
+					_xPos = 0;
+					unSelectAll();
+				}
+
+			}
+
+
+
+
+			private function _selectRange(l:int, r:int):void {
+				super.setSelection(l, r);
+			}
+
+
+
+
+			private function unSelectAll():void {
+				super.setSelection(_cursorPos, _cursorPos);
+			}
+
+
+
+
+			private function selectAll():void {
+				super.setSelection(0, super.text.length);
+			}
+
+
+
+
+			private function onKey(e:KeyboardEvent):void {
+				//trace("keycode: " + e.keyCode);
+				//trace("e: " + e);
+
+				if (!e.ctrlKey && !e.shiftKey)
+					_xPos = 0;
+
+				switch (e.keyCode) {
+
+					case 35:
+						// End Key
+						endKey(e);
+						break;
+
+					case 36:
+						// Home Key
+						homeKey(e);
+						break;
+
+					case 37:
+						// Left Arrow
+						onLeftArrow(e);
+						break;
+
+					case 38:
+						// Up Arrow
+						break;
+
+					case 39:
+						// _RIGHT Arrow
+						onRightArrow(e);
+						break;
+
+					case 40:
+						// Down Arrow
+						break;
+				}
+
+			}
+
+
+
+
+			private function homeKey(e:KeyboardEvent):void {
+				_cursorPos = 0;
+			}
+
+
+
+
+			private function endKey(e:KeyboardEvent):void {
+				_cursorPos = super.text.length;
+			}
+
+
+
+
+			private function onDataChange(e:Event):void {
+				_cursorPos = super.selectionBeginIndex;
+			}
+
+
+
+
+			private function onFocus(e:FocusEvent):void {
+				focus_F = false;
+				unSelectAll();
+				super.editable = false;
+			}
+
+
+
+
+			/****************************************************
+			 * Set cursor left
+			 ****************************************************/
+
+			private function onLeftArrow(e:KeyboardEvent):void {
+				// Goto new symbol on the left and highlight
+				if (e.ctrlKey && e.shiftKey) {
+					onLCtrlShift();
+					return;
+				}
+
+				_xPos = 0;
+
+				if (e.ctrlKey && !e.shiftKey) {
+					onLCtrl();
+					return;
+				}
+				_cursorPos = super.selectionBeginIndex - _RIGHT;
+			}
+
+
+
+
+			private function onDoubleClick(e:MouseEvent):void {
+				var i:int = _cursorPos - _LEFT;
+				while (i >= 0) {
+					var l:int = getPositioning(i);
+					if (l != -1)
+						break;
+					--i;
+				}
+				i = _cursorPos + _RIGHT;
+				while (i <= super.text.length) {
+					var r:int = getPositioning(i, 1);
+					if (r != -1)
+						break;
+					++i;
+				}
+
+
+				//trace("l: "+l+" r: "+r);
+				if (l > r) {
+					selectAll();
+					return;
+				}
+				this._selectRange(l, r);
+			}
+
+
+
+
+			private function onLCtrlShift():void {
+				var sbi:int = super.selectionBeginIndex;
+				var sei:int = super.selectionEndIndex;
+				for (var i:int = _cursorPos - _LEFT; i >= 0; --i) {
+					var a:int = getPositioning(i);
+					if (a != -1) {
+
+						if (_xPos == 1) {
+							//trace("L1");
+							if (a <= sbi) {
+								//trace("L1 A");
+								_xPos = 0;
+								setCursorPos(a, _pCursorPos);
+									//setCursorPos(a, a);
+							} else {
+								setCursorPos(a, sbi);
+							}
+							//trace("a: "+a+" sbi: "+sbi+" sei: "+sei);
+							break;
+						} else {
+							//trace("L2");
+							_xPos = -1;
+						}
+						//trace("L3");
+						setCursorPos(a, sei);
+						//trace("a: "+a+" sbi: "+sbi+" sei: "+sei);
+						break;
+					}
+				}
+			}
+
+
+			private var _pCursorPos:int;
+
+
+
+
+			private function onRCtrlShift():void {
+				var sei:int = super.selectionEndIndex;
+				var sbi:int = super.selectionBeginIndex;
+
+				for (var i:int = _cursorPos + _RIGHT; i <= super.text.length; ++i) {
+					var a:int = getPositioning(i, 1);
+					if (a != -1) {
+						if (_xPos == -1) {
+							//trace("R1");
+							if (a >= sei) {
+								//trace("R1 A");
+								_xPos = 0;
+								//setCursorPos(a, a);
+								setCursorPos(_pCursorPos, a);
+							} else {
+								setCursorPos(a, sei);
+							}
+							//trace("a: "+a+" sbi: "+sbi+" sei: "+sei);
+							break;
+						} else {
+							//trace("R2");
+							_xPos = 1;
+						}
+						//trace("R3");
+						setCursorPos(a, sbi);
+						//trace("a: "+a+" sbi: "+sbi+" sei: "+sei);
+						break;
+					}
+				}
+			}
+
+
+
+
+			private function onLCtrl():void {
+				for (var i:int = _cursorPos - _LEFT; i >= 0; --i) {
+					var a:int = getPositioning(i);
+					if (a != -1) {
+						setCursorPos(a);
+						break;
+					}
+				}
+			}
+
+
+
+
+			private function setCursorPos(l:int, r:int = -1):void {
+				var ss:* = super.setSelection;
+				if (r == -1)
+					r = l;
+
+				var f:Function = function(e:TimerEvent):void {
+						ss(l, r);
+					}
+				_cursorPos = l;
+				_t = new Timer(_SPEED, _REPEAT);
+				_t.addEventListener(TimerEvent.TIMER, f);
+				_t.start();
+			}
+
+
+
+
+			private function onSetCursorPos(e:TimerEvent):void {
+				super.setSelection(_cursorPos, _cursorPos);
+			}
+
+
+
+
+			/****************************************************
+			 * Set cursor right
+			 ****************************************************/
+
+
+			private function onRightArrow(e:KeyboardEvent):void {
+				// Goto new symbol on the left and highlight
+				if (e.ctrlKey && e.shiftKey) {
+					onRCtrlShift();
+					return;
+				}
+
+				_xPos = 0;
+
+				if (e.ctrlKey && !e.shiftKey) {
+					onRCtrl();
+					return;
+				}
+
+				_cursorPos = super.selectionBeginIndex - 1;
+			}
+
+
+
+
+			private function onRCtrl():void {
+				for (var i:int = _cursorPos + _RIGHT; i <= super.text.length; ++i) {
+					var a:int = getPositioning(i, 1);
+					if (a != -1) {
+						setCursorPos(a);
+						break;
+					}
+				}
+			}
+
+
+
+
+			private function getPositioning(i:int, d:int = -1):int {
+				var start:int = super.text.indexOf(_PROTOCOL) + _LEFT;
+
+				if (isSymbol(i)) {
+					if (i > start) {
+						return i + _RIGHT;
+							//return true;
+					}
+
+					if (i == start) {
+						return start + _RIGHT;
+							//return true;
+					}
+
+					if (i < start && d < 0) {
+						return 0;
+							//return true;
+					}
+				}
+				return -1;
+			}
+
+
+
+
+			private function isSymbol(cp:int):Boolean {
+				var cc:Number = super.text.charCodeAt(cp);
+				// If isAlpha or isNumeric
+				if ((cc >= 48 && cc <= 57) || (cc >= 97 && cc <= 122))
+					return false;
+				return true;
+			}
+
+
+
+
+			override public function get text():String {
+				return super.text;
+			}
+
+
+
+
+			override public function set text(s:String):void {
+				super.text = s;
+			}
+		]]>
+	</mx:Script>
+</mx:TextInput>

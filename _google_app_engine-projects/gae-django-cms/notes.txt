@@ -1,0 +1,361 @@
+
+--host 127.0.0.1 --port 8088 --clear_datastore True "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\vypercms2-globalNav_11"
+
+appcfg.py update "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\vypercms2-globalNav_11"
+
+===========================================================================================================================================
+
+usage: dev_appserver.py [-h] [--host HOST] [--port PORT]
+                        [--admin_host ADMIN_HOST] [--admin_port ADMIN_PORT]
+                        [--auth_domain AUTH_DOMAIN] [--storage_path PATH]
+                        [--log_level {debug,info,warning,critical,error}]
+                        [--max_module_instances MAX_MODULE_INSTANCES]
+                        [--use_mtime_file_watcher [USE_MTIME_FILE_WATCHER]]
+                        [--php_executable_path PATH]
+                        [--php_remote_debugging [PHP_REMOTE_DEBUGGING]]
+                        [--python_startup_script PYTHON_STARTUP_SCRIPT]
+                        [--python_startup_args PYTHON_STARTUP_ARGS]
+                        [--blobstore_path BLOBSTORE_PATH]
+                        [--mysql_host MYSQL_HOST] [--mysql_port MYSQL_PORT]
+                        [--mysql_user MYSQL_USER]
+                        [--mysql_password MYSQL_PASSWORD]
+                        [--mysql_socket MYSQL_SOCKET]
+                        [--datastore_path DATASTORE_PATH]
+                        [--clear_datastore [CLEAR_DATASTORE]]
+                        [--datastore_consistency_policy {consistent,random,time}]
+                        [--require_indexes [REQUIRE_INDEXES]]
+                        [--auto_id_policy {sequential,scattered}]
+                        [--logs_path LOGS_PATH]
+                        [--show_mail_body [SHOW_MAIL_BODY]]
+                        [--enable_sendmail [ENABLE_SENDMAIL]]
+                        [--smtp_host SMTP_HOST] [--smtp_port SMTP_PORT]
+                        [--smtp_user SMTP_USER]
+                        [--smtp_password SMTP_PASSWORD]
+                        [--prospective_search_path PROSPECTIVE_SEARCH_PATH]
+                        [--clear_prospective_search [CLEAR_PROSPECTIVE_SEARCH]]
+                        [--search_indexes_path SEARCH_INDEXES_PATH]
+                        [--clear_search_indexes [CLEAR_SEARCH_INDEXES]]
+                        [--enable_task_running [ENABLE_TASK_RUNNING]]
+                        [--allow_skipped_files [ALLOW_SKIPPED_FILES]]
+                        [--api_port API_PORT]
+                        [--automatic_restart [AUTOMATIC_RESTART]]
+                        [--dev_appserver_log_level {debug,info,warning,critical,error}]
+                        [--skip_sdk_update_check [SKIP_SDK_UPDATE_CHECK]]
+                        [--default_gcs_bucket_name DEFAULT_GCS_BUCKET_NAME]
+                        yaml_files [yaml_files ...]
+
+positional arguments:
+  yaml_files
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+Common:
+  --host HOST           host name to which application modules should bind
+                        (default: localhost)
+  --port PORT           lowest port to which application modules should bind
+                        (default: 8080)
+  --admin_host ADMIN_HOST
+                        host name to which the admin server should bind
+                        (default: localhost)
+  --admin_port ADMIN_PORT
+                        port to which the admin server should bind (default:
+                        8000)
+  --auth_domain AUTH_DOMAIN
+                        name of the authorization domain to use (default:
+                        gmail.com)
+  --storage_path PATH   path to the data (datastore, blobstore, etc.)
+                        associated with the application. (default: None)
+  --log_level {debug,info,warning,critical,error}
+                        the log level below which logging messages generated
+                        by application code will not be displayed on the
+                        console (default: info)
+  --max_module_instances MAX_MODULE_INSTANCES
+                        the maximum number of runtime instances that can be
+                        started for a particular module - the value can be an
+                        integer, in what case all modules are limited to that
+                        number of instances or a comma-seperated list of
+                        module:max_instances e.g. "default:5,backend:3"
+                        (default: None)
+  --use_mtime_file_watcher [USE_MTIME_FILE_WATCHER]
+                        use mtime polling for detecting source code changes -
+                        useful if modifying code from a remote machine using a
+                        distributed file system (default: False)
+
+PHP:
+  --php_executable_path PATH
+                        path to the PHP executable (default: None)
+  --php_remote_debugging [PHP_REMOTE_DEBUGGING]
+                        enable XDebug remote debugging (default: False)
+
+Python:
+  --python_startup_script PYTHON_STARTUP_SCRIPT
+                        the script to run at the startup of new Python runtime
+                        instances (useful for tools such as debuggers.
+                        (default: None)
+  --python_startup_args PYTHON_STARTUP_ARGS
+                        the arguments made available to the script specified
+                        in --python_startup_script. (default: None)
+
+Blobstore API:
+  --blobstore_path BLOBSTORE_PATH
+                        path to directory used to store blob contents
+                        (defaults to a subdirectory of --storage_path if not
+                        set) (default: None)
+
+Cloud SQL:
+  --mysql_host MYSQL_HOST
+                        host name of a running MySQL server used for simulated
+                        Google Cloud SQL storage (default: localhost)
+  --mysql_port MYSQL_PORT
+                        port number of a running MySQL server used for
+                        simulated Google Cloud SQL storage (default: 3306)
+  --mysql_user MYSQL_USER
+                        username to use when connecting to the MySQL server
+                        specified in --mysql_host and --mysql_port or
+                        --mysql_socket (default: )
+  --mysql_password MYSQL_PASSWORD
+                        passpord to use when connecting to the MySQL server
+                        specified in --mysql_host and --mysql_port or
+                        --mysql_socket (default: )
+  --mysql_socket MYSQL_SOCKET
+                        path to a Unix socket file to use when connecting to a
+                        running MySQL server used for simulated Google Cloud
+                        SQL storage (default: None)
+
+Datastore API:
+  --datastore_path DATASTORE_PATH
+                        path to a file used to store datastore contents
+                        (defaults to a file in --storage_path if not set)
+                        (default: None)
+  --clear_datastore [CLEAR_DATASTORE]
+                        clear the datastore on startup (default: False)
+  --datastore_consistency_policy {consistent,random,time}
+                        the policy to apply when deciding whether a datastore
+                        write should appear in global queries (default: time)
+  --require_indexes [REQUIRE_INDEXES]
+                        generate an error on datastore queries that requires a
+                        composite index not found in index.yaml (default:
+                        False)
+  --auto_id_policy {sequential,scattered}
+                        the type of sequence from which the datastore stub
+                        assigns automatic IDs. NOTE: Sequential IDs are
+                        deprecated. This flag will be removed in a future
+                        release. Please do not rely on sequential IDs in your
+                        tests. (default: scattered)
+
+Logs API:
+  --logs_path LOGS_PATH
+                        path to a file used to store request logs (defaults to
+                        a file in --storage_path if not set) (default: None)
+
+Mail API:
+  --show_mail_body [SHOW_MAIL_BODY]
+                        logs the contents of e-mails sent using the Mail API
+                        (default: False)
+  --enable_sendmail [ENABLE_SENDMAIL]
+                        use the "sendmail" tool to transmit e-mail sent using
+                        the Mail API (ignored if --smpt_host is set) (default:
+                        False)
+  --smtp_host SMTP_HOST
+                        host name of an SMTP server to use to transmit e-mail
+                        sent using the Mail API (default: )
+  --smtp_port SMTP_PORT
+                        port number of an SMTP server to use to transmit
+                        e-mail sent using the Mail API (ignored if --smtp_host
+                        is not set) (default: 25)
+  --smtp_user SMTP_USER
+                        username to use when connecting to the SMTP server
+                        specified in --smtp_host and --smtp_port (default: )
+  --smtp_password SMTP_PASSWORD
+                        password to use when connecting to the SMTP server
+                        specified in --smtp_host and --smtp_port (default: )
+
+Prospective Search API:
+  --prospective_search_path PROSPECTIVE_SEARCH_PATH
+                        path to a file used to store the prospective search
+                        subscription index (defaults to a file in
+                        --storage_path if not set) (default: None)
+  --clear_prospective_search [CLEAR_PROSPECTIVE_SEARCH]
+                        clear the prospective search subscription index
+                        (default: False)
+
+Search API:
+  --search_indexes_path SEARCH_INDEXES_PATH
+                        path to a file used to store search indexes (defaults
+                        to a file in --storage_path if not set) (default:
+                        None)
+  --clear_search_indexes [CLEAR_SEARCH_INDEXES]
+                        clear the search indexes (default: False)
+
+Task Queue API:
+  --enable_task_running [ENABLE_TASK_RUNNING]
+                        run "push" tasks created using the taskqueue API
+                        automatically (default: True)
+
+Miscellaneous:
+  --allow_skipped_files [ALLOW_SKIPPED_FILES]
+                        make files specified in the app.yaml "skip_files" or
+                        "static" handles readable by the application.
+                        (default: False)
+  --api_port API_PORT   port to which the server for API calls should bind
+                        (default: 0)
+  --automatic_restart [AUTOMATIC_RESTART]
+                        restart instances automatically when files relevant to
+                        their module are changed (default: True)
+  --dev_appserver_log_level {debug,info,warning,critical,error}
+                        the log level below which logging messages generated
+                        by the development server will not be displayed on the
+                        console (this flag is more useful for diagnosing
+                        problems in dev_appserver.py rather than in
+                        application code) (default: info)
+  --skip_sdk_update_check [SKIP_SDK_UPDATE_CHECK]
+                        skip checking for SDK updates (if false, use
+                        .appcfg_nag to decide) (default: False)
+  --default_gcs_bucket_name DEFAULT_GCS_BUCKET_NAME
+                        default Google Cloud Storgage bucket name (default:
+                        None)
+
+===========================================================================================================================================
+
+--port=8888 "C:\Documents and Settings\c0horra\My Documents\@myFiles\python-projects\gae-django-cms\vypercms2-json-editor"
+
+--port=8888 "C:\Documents and Settings\c0horra\My Documents\@myFiles\python-projects\gae-django-cms\vypercms2-globalNav"
+
+--port=8888 --clear_datastore "C:\Documents and Settings\c0horra\My Documents\@myFiles\python-projects\gae-django-cms\vypercms2-globalNav"
+
+--address=127.0.0.1 --port=8888 --clear_datastore  "Z:\python projects\_google_app_engine-projects\gae-django-cms\vypercms2-globalNav"
+
+--address=127.0.0.1 --port=8888 --clear_datastore  "Z:\python projects\_google_app_engine-projects\gae-django-cms\vypercms2-globalNav_11"
+
+--address=0.0.0.0 --port=8888 "Z:\python projects\_google_app_engine-projects\gae-django-cms\vypercms2-globalNav_11"
+
+--address=0.0.0.0
+
+--smtp_host=smtp.gmail.com --smtp_port=587 --smtp_user=raychorn@gmail.com --smtp_password=peekab00
+
+appcfg.py update "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\gae-django-cms\cargochief"
+
+update "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+--address=127.0.0.1 --port=8888 "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\gae-django-cms\cargochief"
+
+--address=127.0.0.1 --port=8888 "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\gae-django-cms\pdfxporter"
+
+--email=raychorn@gmail.com update "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\gae-django-cms\cargochief"
+
+===================================================================
+
+http://127.0.0.1:8888/rest/users/register/raychorn/peekab00/
+
+# issue this to make sure there is an admin user...
+
+http://127.0.0.1:8888/users/check/admin/
+
+# issue this to open the standard Django Admin interface.
+
+http://127.0.0.1:8888/admin/
+
+http://127.0.0.1:8888/rest/users/register/raychorn%40gmail.com/103136174d231aabe18feaf9afc92f/json/
+
+http://127.0.0.1:8888/users/register/confirm/41ac277b-6ed4-410b-910d-7e2c0cce09fa/
+
+===================================================================
+
+To-Do:
+
+* Login more than once - disallowed !
+
+===================================================================
+
+j:\Python2557(Stackless)-09-02-2010\Python25\lib\site-packages\pastedeploy-1.3.2-py2.5.egg\paste\__init__.py:4: UserWarning: Module simplejson was already imported from j:\@Vyper Logix Corp\@Projects\python-projects\_google_appengine_1.7.0\lib\simplejson\simplejson\__init__.pyc, but j:\python2557(stackless)-09-02-2010\python25\lib\site-packages\simplejson-2.0.5-py2.5-win32.egg is being added to sys.path
+  import pkg_resources
+Runs a development application server for an application.
+
+dev_appserver.py [options] <application root>
+
+Application root must be the path to the application to run in this server.
+Must contain a valid app.yaml or app.yml file.
+
+Options:
+  --address=ADDRESS, -a ADDRESS
+                             Address to which this server should bind. (Default
+                             localhost).
+  --clear_datastore, -c      Clear the Datastore on startup. (Default false)
+  --debug, -d                Use debug logging. (Default false)
+  --help, -h                 View this helpful message.
+  --port=PORT, -p PORT       Port for the server to run on. (Default 8080)
+
+  --allow_skipped_files      Allow access to files matched by app.yaml's
+                             skipped_files (default False)
+  --auth_domain              Authorization domain that this app runs in.
+                             (Default gmail.com)
+  --backends                 Run the dev_appserver with backends support
+                             (multiprocess mode).
+  --blobstore_path=DIR       Path to directory to use for storing Blobstore
+                             file stub data.
+  --clear_prospective_search Clear the Prospective Search subscription index
+                             (Default false).
+  --datastore_path=DS_FILE   Path to file to use for storing Datastore file
+                             stub data.
+                             (Default c:\users\admini~1\appdata\local\temp\dev_appserver.datastore)
+  --debug_imports            Enables debug logging for module imports, showing
+                             search paths used for finding modules and any
+                             errors encountered during the import process.
+  --default_partition        Default partition to use in the APPLICATION_ID.
+                             (Default dev)
+  --disable_static_caching   Never allow the browser to cache static files.
+                             (Default enable if expiration set in app.yaml)
+  --disable_task_running     When supplied, tasks will not be automatically
+                             run after submission and must be run manually
+                             in the local admin console.
+  --enable_sendmail          Enable sendmail when SMTP not configured.
+                             (Default false)
+  --high_replication         Use the high replication datastore consistency
+                             model. (Default false).
+  --history_path=PATH        Path to use for storing Datastore history.
+                             (Default c:\users\admini~1\appdata\local\temp\dev_appserver.datastore.history)
+  --multiprocess_min_port    When running in multiprocess mode, specifies the
+                             lowest port value to use when choosing ports. If
+                             set to 0, select random ports.
+                             (Default 9000)
+  --mysql_host=HOSTNAME      MySQL database host.
+                             Used by the Cloud SQL (rdbms) stub.
+                             (Default 'localhost')
+  --mysql_port=PORT          MySQL port to connect to.
+                             Used by the Cloud SQL (rdbms) stub.
+                             (Default 3306)
+  --mysql_user=USER          MySQL user to connect as.
+                             Used by the Cloud SQL (rdbms) stub.
+                             (Default )
+  --mysql_password=PASSWORD  MySQL password to use.
+                             Used by the Cloud SQL (rdbms) stub.
+                             (Default '')
+  --mysql_socket=PATH        MySQL Unix socket file path.
+                             Used by the Cloud SQL (rdbms) stub.
+                             (Default '')
+  --persist_logs             Enables storage of all request and application
+                             logs to enable later access. (Default false).
+  --require_indexes          Disallows queries that require composite indexes
+                             not defined in index.yaml.
+  --show_mail_body           Log the body of emails in mail stub.
+                             (Default false)
+  --skip_sdk_update_check    Skip checking for SDK updates. If false, fall back
+                             to opt_in setting specified in .appcfg_nag
+                             (Default false)
+  --smtp_host=HOSTNAME       SMTP host to send test mail to.  Leaving this
+                             unset will disable SMTP mail sending.
+                             (Default '')
+  --smtp_port=PORT           SMTP port to send test mail to.
+                             (Default 25)
+  --smtp_user=USER           SMTP user to connect as.  Stub will only attempt
+                             to login if this field is non-empty.
+                             (Default '').
+  --smtp_password=PASSWORD   Password for SMTP server.
+                             (Default '')
+  --task_retry_seconds       How long to wait in seconds before retrying a
+                             task after it fails during execution.
+                             (Default '30')
+  --use_sqlite               Use the new, SQLite based datastore stub.
+                             (Default false)
+

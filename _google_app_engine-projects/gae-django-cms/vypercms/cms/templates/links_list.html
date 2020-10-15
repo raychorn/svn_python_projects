@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "links listing" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "links listing" %}</h1>
+<a href="{% url cms.views.add_links %}">{% trans "Create links" %}</a>
+
+<ul>
+  {% for each in object_list %}
+    <li>
+      [{{ each.name }}]<a href="{{ each.url }}" target="_blank">{{ each.url }}</a>
+      <a href="{% url cms.views.edit_links key=each.key %}">{% trans "Edit" %}</a>
+      <a href="{% url cms.views.delete_links key=each.key %}">{% trans "Delete" %}</a>
+    </li>
+  {% endfor %}
+</ul>
+<div style="CLEAR: both;"></div>
+<div>
+  {% if has_previous %}
+    <a href="{% url cms.views.list_links %}?page={{ previous }}">&lt;-{% trans "Previous" %}</a>
+  {% endif %}
+  {% if has_next %}
+    <a href="{% url cms.views.list_links %}?page={{ next }}">{% trans "Next" %}-&gt;</a>
+  {% endif %}
+</div>
+{% endblock %}

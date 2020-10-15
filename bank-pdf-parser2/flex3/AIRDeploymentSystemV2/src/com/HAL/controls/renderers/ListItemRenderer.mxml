@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" creationComplete="onInit()">
+	<mx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			private function onInit():void {
+				
+			}
+			
+			private function onCreationCompleteItemLabel(event:FlexEvent):void {
+				
+			}
+			
+			private function onAddedToStageItemLabel(event:Event):void {
+				
+			}
+			
+	//		private override function invalidateDisplayList():void {
+				
+	//		}
+		]]>
+	</mx:Script>
+	<mx:Label id="labelItem" text="{data.label}" color="#ff0000" addedToStage="onAddedToStageItemLabel(event)" creationComplete="onCreationCompleteItemLabel(event)"/>
+</mx:VBox>

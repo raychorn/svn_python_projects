@@ -1,0 +1,71 @@
+
+Z:\python projects\aardvark>if 1pbind. == 1. goto method1			REM does Method1 using Psyco... 
+
+Z:\python projects\aardvark>if 1pbind. == 1nop. goto method1nop		REM does Method1 not using Psyco and not using Profiler... 
+
+Z:\python projects\aardvark>if 1pbind. == 1v. goto method1v			REM does Method1 using Psyco on old file... 
+
+Z:\python projects\aardvark>if 1pbind. == 1np. goto method1np			REM does Method1 using external Profiler... 
+
+Z:\python projects\aardvark>if 1pbind. == 1p. goto method1p			REM does Method1 using no Psyco... 
+
+Z:\python projects\aardvark>if 1pbind. == 2. goto method2			REM does Method2 using old file... 
+
+Z:\python projects\aardvark>if 1pbind. == o. goto output			REM does Shelve Method on SQL Server ResultSet... 
+
+Z:\python projects\aardvark>if 1pbind. == r. goto reader			REM reads shelved data... 
+
+Z:\python projects\aardvark>if 1pbind. == timeRe. goto timeRe			REM time the re versus split for timeDurations... 
+
+Z:\python projects\aardvark>if 1pbind. == 1pFull. goto method1psycoFull	REM does Method1 using Psyco=full... 
+
+Z:\python projects\aardvark>if 1pbind. == 1plog. goto method1psycoLog		REM does Method1 using Psyco=log... 
+
+Z:\python projects\aardvark>if 1pbind. == 1pbind. goto method1psycoBind	REM does Method1 using Psyco=bind... 
+
+Z:\python projects\aardvark>main.py --profile --psyco=bind         --input=Bigtest.txt 
+Using Method #1
+_property_dict=({'18': 4L, '31': 1L, '27': 3L, '17': 2L})
+_handlers=({96514: <function handle_app_tracking at 0x00B6FBB0>, '27': <function handle_property at 0x00B6F930>, '17': <function handle_property at 0x00B6F930>, 82118: <function handle_installed_apps at 0x00B6FB70>, '18': <function handle_property at 0x00B6F930>, '31': <function handle_property at 0x00B6F930>})
+_subMethod1=(3)
+et=(0.25)
+Time spent doing I/O :: (0.25), _ioBeginTime=([1192658093.1689999]), _ioEndTime=([1192658093.4189999])
+         17181169 function calls in 314.123 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  314.123  314.123 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:48(normalize_encoding)
+        1    0.000    0.000    0.002    0.002 __init__.py:70(search_function)
+        1    0.000    0.000    0.000    0.000 codecs.py:77(__new__)
+  8341190   14.429    0.000   30.692    0.000 decorators.py:9(__call__)
+  1001276    8.036    0.000   10.611    0.000 main.py:244(splitTimeDuration)
+   913962    0.519    0.000    0.519    0.000 main.py:273(calcDaysSecs)
+  1001276    0.454    0.000    0.454    0.000 main.py:276(calcHoursSecs)
+  1001276    0.425    0.000    0.425    0.000 main.py:279(calcMinsSecs)
+  1001276    4.254    0.000   16.264    0.000 main.py:283(countTotalSeconds)
+        1  283.429  283.429  314.123  314.123 main.py:502(main)
+        1    0.000    0.000    0.000    0.000 string_escape.py:10(Codec)
+        1    0.000    0.000    0.000    0.000 string_escape.py:15(IncrementalEncoder)
+        1    0.000    0.000    0.000    0.000 string_escape.py:19(IncrementalDecoder)
+        1    0.000    0.000    0.000    0.000 string_escape.py:23(StreamWriter)
+        1    0.000    0.000    0.000    0.000 string_escape.py:26(StreamReader)
+        1    0.000    0.000    0.000    0.000 string_escape.py:29(getregentry)
+        1    0.000    0.000    0.000    0.000 string_escape.py:7(<module>)
+        1    0.002    0.002    0.002    0.002 {__import__}
+        1    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E1E7E18}
+        1    0.000    0.000    0.000    0.000 {isinstance}
+  1001276    0.390    0.000    0.390    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        3    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+  2919613    2.186    0.000    2.186    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.globals}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.locals}
+
+
+
+Z:\python projects\aardvark>goto end 

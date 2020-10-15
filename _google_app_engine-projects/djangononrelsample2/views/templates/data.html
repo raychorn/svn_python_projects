@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+</script>
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block include-css %}'/static/main.css'{% endblock %}
+
+{% block extra-content %}
+{% endblock %}
+
+{% block container %}
+            <table id="container" width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="top" id="main_content_holder">
+		    <div class="container_12 container_cloud">
+{% if IS_NOT_LOGGED_IN %}
+			<h1 class="pagetitle">DATA - NO DATA AVAILABLE UNTIL YOU LOGIN</h1>
+{% else %}
+			<h1 class="pagetitle">DATA - CLICK TO CREATE OR VIEW DATA</h1>
+{% endif %}
+			<NOBR>===================================================================</NOBR><br/>
+			<li ><NOBR>DEBUG: IS_NOT_LOGGED_IN={{ IS_NOT_LOGGED_IN }}</NOBR></li>
+			<li ><NOBR>DEBUG: current_user={{ current_user }}</NOBR></li>
+			<li ><NOBR>DEBUG: action={{ action }}</NOBR></li>
+			<li ><NOBR>DEBUG: HAS_DATABASE={{ HAS_DATABASE }}</NOBR></li>
+			<li ><NOBR>DEBUG: debug={{ debug }}</NOBR></li>
+			<NOBR>===================================================================</NOBR><br/>
+			<p>&nbsp;</p>
+{% if IS_NOT_LOGGED_IN %}
+			<h2>Not Yet Logged-In</h2>
+			<li ><NOBR>Click on the &sect; menu item to Login !!!</NOBR></li>
+{% else %}
+    {% if HAS_DATABASE %}
+			    <p>DATA GOES HERE</p>
+{% if url == '/data/' %}
+			    <p>The create database function should be a background process displaying progress as it runs however this is just a demo so that was not done yet.</p>
+                            <form method="post" action="/createdata/" enctype="application/x-www-form-urlencoded">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Reset Database" />
+                                    </td>
+                                </tr>
+                            </table>
+                            </form>
+{% endif %}
+        {% if HAS_ITEM %}
+			    <textarea rows="20" cols="80" readonly>{{ item }}</textarea><br/>
+			    <a href="/data/" target="_top">Go back</a>
+	{% else %}
+			    <ol>
+			    {% for item in items %}
+				<li><a href="/get/data/{{ item.statename }}/" target="_top">{{ item.statename }}</a></li>
+			    {% endfor %}
+			    </ol>
+        {% endif %}
+    {% else %}
+			    <p>The create database function should be a background process displaying progress as it runs however this is just a demo so that was not done yet.</p>
+                            <form method="post" action="/createdata/" enctype="application/x-www-form-urlencoded">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Create Database" />
+                                    </td>
+                                </tr>
+                            </table>
+                            </form>
+    {% endif %}
+{% endif %}
+			<p><NOBR>Note: Some of the content on this page is for demonstration purposes and is not intended for production use.</NOBR></p>
+                    </div>
+                </td>
+              </tr>
+            </table>   
+{% endblock %}

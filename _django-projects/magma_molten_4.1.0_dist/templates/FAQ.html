@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>{{ the_title }}</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="Expires" CONTENT="{{ EXPIRES_ON }}">
+    <META HTTP-EQUIV="Last-Modified" CONTENT="{{ MODIFIED_ON }}">
+
+	<script src="{{ MEDIA_URL }}/prototype.js" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}/effects.js" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}/dragdrop.js" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}/controls.js" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}/application.js" type="text/javascript"></script>
+<style>
+{{ default_css }}
+div.auto_complete {
+width: 350px;
+background: #fff;
+z-index:100;
+margin-top:100px;
+}
+div.auto_complete ul {
+border:1px solid #888;
+margin:0;
+padding:0;
+width:100%;
+list-style-type:none;
+}
+div.auto_complete ul li {
+margin:0;
+padding:3px;
+}
+div.auto_complete ul li.selected { background-color: #ffb; }
+div.auto_complete ul strong.highlight { color: #800; margin:0;
+padding:0;
+}
+</style>
+</head><body>
+<div id="header"> <span id="logo"><a href="https://molten.magma-da.com/"><img style="border: 0px solid ; width: 346px; height: 39px;" alt="Magma Design Automation, Inc." src="{{ IMAGES_URL }}magma_logo.gif"></a></span></div>
+<table style="text-align: left; width: 734px; height: 214px;" border="0" cellpadding="4" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="width: 20px;" colspan="1" rowspan="8"></td>
+      <td style="text-align: center; height: 100px;"><font size="2" face="Verdana"><big><big>MOLTEN
+FAQ</big></big></font></td>
+      <td style="width: 20px;" colspan="1" rowspan="8"></td>
+    </tr>
+    <tr>
+      <td style="height: 50px;"><font size="2" face="Verdana">The purpose of this FAQ is to provide user
+information about Magma's MOLTEN site</font></td>
+    </tr>
+    <tr>
+      <td>
+      <font size="2" face="Verdana"><b><u>How
+to connect to MOLTEN site, What are browser requirements?</u></b></font>
+      <p><font size="2" face="Verdana">To
+connect to MOLTEN site, point your web browser to:</font></p>
+      <p><font size="2" face="Verdana"><a href="http://molten.magma-da.com/">http://molten.magma-da.com</a></font></p>
+      <p><font size="2" face="Verdana">Your
+browser needs to support cookies and
+allow JavaScript and Java. <br>
+      <br>
+If your browser doesn't allow JavaScript and
+Java you will not be able to post comments and attach files to cases.</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td><font size="2" face="Verdana"><b><u>How
+do I login to MOLTEN? What Username / Password should I use?</u></b></font>
+      <p><font size="2" face="Verdana">Generally,
+your email address is your Username, Password is generated for you
+during registration process.</font></p>
+      <p><font size="2" face="Verdana">If you
+don't have a MOLTEN account, you should request one by registering: <br>
+go to MOLTEN home page, select "sign Up"
+(https://molten.magma-da.com/contact/signup)<br>
+Once we receive your registration request we will process it in next 24
+hours. <br>
+You will receive an email with your account information.</font></p>
+      <p><font size="2" face="Verdana">If you
+forget your password, you can always retrieve it by clicking on "Forgot
+Your Password?"<br>
+Password will be sent to your email address.</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td><font size="2" face="Verdana"><b><u>Where
+do I report problems with MOLTEN site?</u></b></font>
+      <p><font size="2" face="Verdana">Most
+of
+the MOLTEN errors are self-detected! </font></p>
+      <p><font size="2" face="Verdana">If
+such
+exception occurs, you will see on the web page minimal information
+about the error and action that will take place.
+MOLTEN will also generate and display on the web page a unique Support
+ID #. <br>
+      <br>
+You can Support ID # reference in the future correspondence with Magma
+support team in regards to the error that occurred.
+When error occurs, you don't need to do anything except log the Support
+ID for your reference. <br>
+      <br>
+MOLTEN support team will receive the email with error details and they
+will start working on a resolution ASAP. Once problem is solved you
+will receive an email from MOLTEN support team..</font></p>
+      <p><font size="2" face="Verdana">You
+can
+also report problems with the site by sending email to <a href="mailto:molten-support@magma-da.com">molten-support@magma-da.com</a></font></p>
+      <font size="2" face="Verdana"><span style="font-weight: bold; text-decoration: underline;"></span></font></td>
+    </tr>
+    <tr>
+      <td><font size="2" face="Verdana"><span style="font-weight: bold; text-decoration: underline;">Can I
+open a new case or add comments to existing case using only email?<br>
+      </span>Yes, you can create new MOLTEN case using only
+email.
+Also, you can add comments to existing MOLTEN case using only email.
+Here is how:<br>
+      <br>
+a. To open new case or to add comment to existing case, send email to
+sfmolten at magma-da.com<br>
+      <br>
+b. The subject of the email will become the subject on the case.<br>
+      <br>
+c. (Optional) By specifying the version number, product, component, and
+operating system of the product, the email to case functionality has
+the ability to automatically populate those respective fields in the
+system, thus utilizing the case assignment rules.<br>
+      <br>
+To use this feature enter the field name followed by a colon and then
+enter the value you want for this field. Each field should be on it's
+own line.<br>
+      <br>
+d. An acknowledgment will be sent back once the email is converted to a
+case.<br>
+      <br>
+e. The email subject will contain a reference tag at the end of the
+subject line.<br>
+      <br>
+Example:<br>
+RE: Thank you for filing your Case [ ref:00D32QQ.500332evu:ref ]<br>
+      <br>
+f. You can then reply to this email. Any replies to this email will be
+added as a case comment to the case that this corresponds to.</font></td>
+    </tr>
+    <tr>
+      <td><font size="2" face="Verdana"><span style="font-weight: bold; text-decoration: underline;"><a name="HowToSearch"></a>How to search in MOLTEN?</span><br>
+      <br>
+Default search for phrase is AND between words; for example if you
+search for clock skew you will get all solutions that have both
+â€œclockâ€� and â€œskewâ€� words inside
+(all words must match). <br>
+      <br>
+You can change this default behavior using one or more the following:<br>
+      <br>
+      </font>
+      <ul>
+        <li><font size="2" face="Verdana">Exact
+phrase: use double quotes (â€œ), like â€œclock
+skewâ€�</font></li>
+        <li><font size="2" face="Verdana">Any
+word: use keyword OR (must be uppercase) to separate words, like clock
+OR skew to get solutions that have one or more search words inside.</font></li>
+        <li><font size="2" face="Verdana">Wildcard
+search: use â€œquestion markâ€� (?) for single
+character, like clo?k</font></li>
+        <li><font size="2" face="Verdana">Wildcard
+search: use â€œstarâ€� (*) for multi-character wild
+card searches, like clo*</font></li>
+        <li><font size="2" face="Verdana">Boolean
+search: you can use keywords AND, OR and NOT (all uppercase) to create
+complex Boolean searches, like (macro AND fixed) NOT location</font></li>
+      </ul>
+      <font size="2" face="Verdana"><br>
+      </font></td>
+    </tr>
+    <tr>
+      <td><font size="2" face="Verdana">
+      <br>
+      <br>
+      <br>
+      <a href="/" onClick="window.close();">Home</a>|<a href="mailto:molten-support@magma-da.com">Report Problems</a>
+      <br>
+      <br>
+      <br>
+      <a href="http://www.magma-da.com.cn/">Magma China</a>|
+      <a href="http://www.magma-da.co.jp/">Magma Japan</a>|
+      <a href="http://www.magma-da.com.tw/">Magma Taiwan</a>
+      </font></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</body></html>

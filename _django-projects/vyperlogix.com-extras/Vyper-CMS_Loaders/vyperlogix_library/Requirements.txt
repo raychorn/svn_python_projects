@@ -1,0 +1,10 @@
+* Static Content can change every time the docs are generated.
+
+* Config File that specifies the following items:
+
+* Static content path based on the Django Path.
+
+* This program needs to be a Django App because it has to interact with the Django Models.
+
+* Anchors needs to be changed dynamically using BeautifulSoup.
+

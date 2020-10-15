@@ -1,0 +1,8 @@
+python manage.py syncdb
+
+python manage.py dumpdata
+
+python manage.py runserver --settings=settings --noreload 127.0.0.1:9999
+
+# http://127.0.0.1:9999/heatmaps/
+

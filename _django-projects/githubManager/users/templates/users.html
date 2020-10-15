@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}SVN-Cloud v{{version}}{% endblock %}
+
+{% block extra-head %}
+<script language="JavaScript1.2" type="text/javascript">
+var requiredMajorVersion = 10;
+var requiredMinorVersion = 1;
+var requiredRevision = 0;
+</script>
+<script src="{{insecure_endpoint}}/static/air-badge/AC_RunActiveContent.js" type="text/javascript"></script>
+<script language="JavaScript1.2" type="text/javascript">
+var hasReqestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+</script>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block include-css %}'/static/css.css'{% endblock %}
+
+{% block container %}
+<div class="align-left">
+	<p>This is the default interface for SVN-Cloud Users v{{version}}.</p>
+	<UL>
+	{% for key,value in apiMap.items %}
+		<LI><p>
+		{% if value.1 %}
+		    <form method="post" action="{{ value.0 }}" enctype="application/x-www-form-urlencoded">
+		    <table>
+			{% if value.2 %}
+			    {% for i in value.2 %}
+				<tr>
+				    <td>
+					<NOBR>{{ i }}:&nbsp;<input type="text" name="{{ i }}" /></NOBR>
+				    </td>
+				</tr>
+			    {% endfor %}
+			{% endif %}
+			<tr>
+			    <td>
+				<input type="submit" value="{{ key }}" />
+			    </td>
+			</tr>
+		    </table>
+		    </form>
+		{% else %}
+		    <a href="{{ value.0 }}" target="_top">{{ key }}</a>
+		{% endif %}
+		</p></LI>
+	{% endfor %}
+	</UL>
+</div>
+
+<noscript>
+<table id="messageTable">
+<tr>
+	<td>
+	</td>
+</tr>
+</table>
+</noscript>
+
+<div id="messages">
+<p align="left">{{ message }}</p>
+</div>
+
+<div id="warning3" class="align-center">
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% comment %} 
+Copyright (c) 2006-2007, PreFab Software Inc.
+
+Copyright (c) 2006, Andrew Gwozdziewycz <apgwoz@gmail.com>
+All rights reserved. 
+{% endcomment %}
+
+
+{% load blog_extras %}
+{% load prefab_tags %}
+
+{% get_popular_tags 10 as popular_tags %}
+{% if popular_tags %}
+<!-- tag list begin -->
+<div class="menu">
+<div class="menu_header"><a href="{% BLOG_ROOT %}tag/" class="black">Tag List</a></div>
+<div class="menu_content">
+{% for t in popular_tags %}
+<a href="{% BLOG_ROOT %}tag/{{ t.1 }}/" rel='tag' title="{{ t.1 }}" class='menu_content'>{{ t.1 }} <small>({{ t.0 }})</small>
+</a>
+<br />
+{% endfor %}
+</div>
+</div>
+<!-- tag list end -->
+{% endif %}

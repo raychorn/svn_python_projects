@@ -1,0 +1,132 @@
+<?xml version="1.0"  ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; " />
+<meta name="generator" content="Docutils 0.3.8: http://docutils.sourceforge.net/" />
+<title>DrScript</title>
+<link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="drscript">
+<h1 class="title">DrScript</h1>
+<p>Back to <a class="reference" href="help.html">Help</a></p>
+<a class="target" id="top" name="top"></a><p>DrScript is vaguely modeled after Script-Fu in The Gimp
+(a <em>VERY</em> powerful open source image manipulation program, 
+used on the images in DrPython).</p>
+<p>You can add any Python file you want to the DrPython menu 
+under the heading DrScript. Simply select &quot;Add Existing Script&quot;.</p>
+<p>To start from scratch, select &quot;Add New Script&quot; to add a new 
+script to the menu, then open it for editing. (You will have 
+to select the filename).</p>
+<p>To add a Shell Command, select &quot;Add Shell Command&quot;. Note that:</p>
+<ul class="simple">
+<li><em>Current Directory</em> is replaced with the directory of the 
+currently open file.</li>
+<li><em>Current File</em> is replaced with the current open file.</li>
+<li><em>Current File</em> can only be used as an argument.</li>
+<li>You can either run the command in the prompt (default), 
+or run it using wx.Shell().</li>
+</ul>
+<p>You can select &quot;Dynamic DrScript&quot; from the menu to type in a
+DrScript right away (without saving it to a file). Dynamic 
+DrScripts are parsed in the same way as a saved DrScript.</p>
+<p>Whether you select &quot;Add New Script&quot; or &quot;Add Existing Script&quot;,
+you must select a title for your script. This is what you will
+see on the DrScript submenu.</p>
+<p>You can also move scripts Around on the menu once you have 
+added them. (Moving scripts around updates and saves all of
+your shortcuts.)</p>
+<p>When shortcuts have been added to the menu, they can then be
+seen in the customize shortcuts dialog, and you can bind keys
+to your custom scripts.</p>
+<p>Now you are ready to script! It is advisable to make the 
+first line or so read.. code-block:: Python</p>
+<blockquote>
+#drscript</blockquote>
+<p>just as a reminder.</p>
+<p>Now let's look at an example DrScript. Let's say you want to
+write a script which adds &quot;with ducks&quot; to the selected text.</p>
+<div class="code-block">
+<span class="p_commentline">#drscript</span><span class="p_default"><br/>
+</span><span class="p_identifier">DrDocument</span><span class="p_operator">.</span><span class="p_identifier">SetSelectedText</span><span class="p_operator">(</span><span class="p_identifier">DrDocument</span><span class="p_operator">.</span><span class="p_identifier">GetSelectedText</span><span class="p_operator">()</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"&nbsp;with&nbsp;ducks!"</span><span class="p_operator">)</span>
+</div>
+<p>First let's look at what this does. Let's say I select the 
+text &quot;The Philosopher shares his epipheny&quot;. I then select 
+&quot;Add With Ducks&quot; from the DrScript submenu. Viola! The text 
+now reads &quot;The Philosopher shares his epipheny with ducks!&quot;</p>
+<p>Back to the program. DrPython will run the code in the 
+DrScript exactly as if it were written into the source of 
+DrPython itself! The difference is that there are special 
+keywords DrPython recognizes.</p>
+<p>You can choose from:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>DrFrame</td>
+<td>which gives access to DrPython internals (DrFrame)</td>
+</tr>
+<tr><td>DrScript</td>
+<td>a wxObject attached to DrFrame to hold persistant variables.</td>
+</tr>
+<tr><td>DrFilename</td>
+<td>the current filename (of the active tab if in mdi mode)</td>
+</tr>
+<tr><td>DrDocument</td>
+<td>gives access to the Document wxStyledTextControl</td>
+</tr>
+<tr><td>DrPrompt</td>
+<td>gives access to the Prompt wxStyledTextControl</td>
+</tr>
+</tbody>
+</table>
+<p>You could choose DrFrame for several reasons. If you want a 
+dialog, all you have to do is.. code-block:: Python</p>
+<blockquote>
+wx.TextEntryDialog(DrFrame, &quot;Replace What?:&quot;, &quot;Replace All In Selection&quot;, &quot;&quot;)</blockquote>
+<p>In other words, it is perfect for functions that require a 
+wxFrame as an argument.</p>
+<p>You can also access DrPython internals.. code-block:: Python</p>
+<blockquote>
+Frame.txtDocument.GetTextLength()</blockquote>
+<p>Of course, you could also write.. code-block:: Python</p>
+<blockquote>
+DrDocument.GetTextLength()</blockquote>
+<p>Now if you wanted to set a variable in one script, then use 
+it in another, you would write in the first:</p>
+<div class="code-block">
+<span class="p_commentline">#drscript</span><span class="p_default"><br/>
+</span><span class="p_commentline">#SetWhoRoars</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">import</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_identifier">d</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_operator">.</span><span class="p_identifier">TextEntryDialog</span><span class="p_operator">(</span><span class="p_identifier">DrFrame</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"Who&nbsp;Roars?"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">"Determine&nbsp;Who&nbsp;Roars"</span><span class="p_operator">,</span><span class="p_default">&nbsp;</span><span class="p_string">""</span><span class="p_operator">)</span><span class="p_default"><br/>
+</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_operator">(</span><span class="p_identifier">d</span><span class="p_operator">.</span><span class="p_identifier">ShowModal</span><span class="p_operator">()</span><span class="p_default">&nbsp;</span><span class="p_operator">==</span><span class="p_default">&nbsp;</span><span class="p_identifier">wx</span><span class="p_operator">.</span><span class="p_identifier">ID_OK</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;</span><span class="p_identifier">DrScript</span><span class="p_operator">.</span><span class="p_identifier">WhoRoars</span><span class="p_default">&nbsp;</span><span class="p_operator">=</span><span class="p_default">&nbsp;</span><span class="p_identifier">d</span><span class="p_operator">.</span><span class="p_identifier">GetValue</span><span class="p_operator">()</span>
+</div>
+<p>and in the second:</p>
+<div class="code-block">
+<span class="p_commentline">#drscript</span><span class="p_default"><br/>
+</span><span class="p_commentline">#AddRoar</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_word">if</span><span class="p_default">&nbsp;</span><span class="p_identifier">DrScript</span><span class="p_operator">.</span><span class="p_identifier">VariableExists</span><span class="p_operator">(</span><span class="p_string">"WhoRoars"</span><span class="p_operator">):</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrDocument</span><span class="p_operator">.</span><span class="p_identifier">SetSelectedText</span><span class="p_operator">(</span><span class="p_identifier">DrDocument</span><span class="p_operator">.</span><span class="p_identifier">GetSelectedText</span><span class="p_operator">()</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"&nbsp;roared&nbsp;the&nbsp;"</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_identifier">DrScript</span><span class="p_operator">.</span><span class="p_identifier">WhoRoars</span><span class="p_operator">)</span><span class="p_default"><br/>
+</span><span class="p_word">else</span><span class="p_operator">:</span><span class="p_default"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p_identifier">DrDocument</span><span class="p_operator">.</span><span class="p_identifier">SetSelectedText</span><span class="p_operator">(</span><span class="p_identifier">DrDocument</span><span class="p_operator">.</span><span class="p_identifier">GetSelectedText</span><span class="p_operator">()</span><span class="p_default">&nbsp;</span><span class="p_operator">+</span><span class="p_default">&nbsp;</span><span class="p_string">"&nbsp;roared&nbsp;the&nbsp;Mouse"</span><span class="p_operator">)</span>
+</div>
+<p>You can also set the text for either the Prompt or Document.
+For example:</p>
+<div class="code-block">
+<span class="p_commentline">#drscript</span><span class="p_default"><br/>
+</span><span class="p_commentline">#AddWithDucks</span><span class="p_default"><br/>
+<br/>
+</span><span class="p_identifier">DrPrompt</span><span class="p_operator">.</span><span class="p_identifier">SetText</span><span class="p_operator">(</span><span class="p_identifier">DrDocument</span><span class="p_operator">.</span><span class="p_identifier">GetSelectedText</span><span class="p_operator">()+</span><span class="p_default">&nbsp;</span><span class="p_string">"&nbsp;with&nbsp;ducks!"</span><span class="p_operator">)</span>
+</div>
+<p>This code will set the prompt text to the document selection
+plus the string &quot;with ducks!&quot;.</p>
+</div>
+</body>
+</html>

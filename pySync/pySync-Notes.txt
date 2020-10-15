@@ -1,0 +1,11 @@
+Compares two folders and performs sync functions to copy files not on either and update files changed on the other.
+
+* Multi-threaded
+* One thread each drive to gather information into a local Btree OOBD
+*   includes stat for each file but not for folders.
+* 1000 worker threads compare the cached file entries checking for dates - looking for files to copy.
+
+Later versions
+
+* Notice disk activity with USB Drive Z and mirror activity to Remote Drive M 
+*   to keep drive M in-sync using WebDrive 8x

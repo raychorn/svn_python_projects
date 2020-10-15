@@ -1,0 +1,3 @@
+Your password for pyEggs is "{{ PRODUCT_PASSWORD }}" (without the quotes).
+
+Do not share your password with anyone.

@@ -1,0 +1,25 @@
+{% if error %}
+		<div style="text-align:center;"><b>FAILURE</b></div>
+	{% endif %}
+	{% if ok %}
+		<div style="text-align:center;"><b>SUCCESS ! :)</b></div>
+	{% endif %}
+	<form action="." method="POST"><input type="hidden" value="{{ hash }}" name="imghash">
+	<table width="*">
+		<tr>
+			<td valign="top">
+				<b>Text from the image</b>&nbsp;(<small>Use CAPITAL letters</small>)
+			</td>
+			<td>
+				<input type="text" size="20" name="imgtext" value="{{ imgtext }}">
+				<br />
+				<img src="{{ tempname }}">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="Send Form" class="actiontable">
+			</td>
+		</tr>
+	</table>
+	</form>

@@ -1,0 +1,1 @@
+Merge Cerializer into oodb and see if this makes the whole process run faster via a suitable subclass.

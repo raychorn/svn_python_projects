@@ -1,0 +1,3 @@
+update "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\vypercms2-globalNav_11"
+
+--address=127.0.0.1 --port=8888 "J:\@Vyper Logix Corp\@Projects\python-projects\_google_app_engine-projects\vypercms2-globalNav_11"

@@ -1,0 +1,2 @@
+WARNING  2008-07-07 08:01:59,736 config-hosts.py] Logging to "Z:\python projects\config-hosts\logs\config-hosts.log" using level of "info:.
+INFO     2008-07-07 08:02:02,096 config-hosts.py] host1 is "76.251.90.62", host2 is "".

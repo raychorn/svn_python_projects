@@ -1,0 +1,77 @@
+{# Copyright (c) 2006-2007, PreFab Software Inc. #}
+
+
+{% load blog_extras %}
+{% load prefab_tags %}
+
+{% if tag or query or taglist or search or userposts or year or month or day %}
+<div class="blog_nav">
+<div class="blog_nav_full">
+<span class='blog_nav_wo'>
+&nbsp;{% if tag or query %}{% if not object_list %}No entries found {% endif %}{% if object_list %}Entries {% endif %}{% endif %}
+{% if tag %}tagged as '{{ tag }}'
+{% else %}{% if query %}containing '{% for term in query %}{{ term }}{% if not forloop.last %}, {% endif %}{% endfor %}'
+{% else %}{% if year %}{{ year }} Archive
+{% else %}{% if month %}{{ month|date:"F Y" }} Archive
+{% else %}{% if day %}{{ day|date:"F Y" }}
+{% else %}{% if taglist %}Tag Archive
+{% else %}{% if search %}{{ search }}
+{% else %}{% if userposts and not object_list %}No entries found for user {{ postedby|title }}
+{% else %}{% if userposts and object_list %}Entries written by {{ postedby|title }}
+{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
+</span>
+</div>
+</div>
+
+{% else %}
+{% if object and not day and not month and not year and not query and not tag and not taglist and not search and not userposts %}
+<div class="blog_nav">
+<table cellspacing='0' cellpadding='0' class="no_border" width="100%">
+<tr>
+<td class="blog_nav_left">
+{% get_previous object.id previous_post %}
+{% if previous_post %}
+<a href='{{ previous_post.get_absolute_url }}' rel='previous' class='blog_nav'>&lt;&nbsp;{{ previous_post.headline }}</a>
+{% endif %}
+</td>
+<td class="blog_nav_right">
+{% get_next object.id next_post %}
+{% if next_post %}
+<a href='{{ next_post.get_absolute_url }}' rel='next' class='blog_nav'>{{ next_post.headline }}&nbsp;&gt;</a>
+{% endif %}
+</td>
+</tr>
+</table>
+</div>
+{% endif %}
+{% endif %}
+
+{% if day %}
+<div class="blog_nav">
+<table cellspacing='0' cellpadding='0' class="no_border">
+<tr>
+{% for d in days %}
+{% ifnotequal d "no" %}
+{% ifequal d "yes" %}
+<td class='blog_nav_yes{% if forloop.last %}_last{% endif %}'>
+<a href='{% setting 'BLOG_ROOT' %}{{ day|date:"Y/m" }}/{{ forloop.counter }}/' class='blog_nav_yes'>{{ forloop.counter }}</a>
+</td>
+{% endifequal %}
+{% ifequal d "current" %}
+<td class='blog_nav_current'>
+<span class='blog_nav_current'>{{ forloop.counter }}</span>
+</td>
+{% endifequal %}
+{% endifnotequal %}
+{% ifequal d "no" %}
+<td class='blog_nav_no{% if forloop.last %}_last{% endif %}'>
+<span class='blog_nav_no'>{{ forloop.counter }}</span>
+</td>
+{% endifequal %}
+{% endfor %}
+</tr>
+</table>
+</div>
+{% endif %}
+
+

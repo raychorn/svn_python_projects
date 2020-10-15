@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<resource>
+  <object class="wxMenuBar" name="topMenu">
+    <object class="wxMenu" name="Register">
+      <label>Register</label>
+      <object class="wxMenuItem" name="register_now_item">
+        <label>Register Now</label>
+      </object>
+    </object>
+  </object>
+</resource>

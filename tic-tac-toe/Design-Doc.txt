@@ -1,0 +1,7 @@
+AI Approach to a Random Failure to choose a winning move.
+
+Real Errors must be possible but at a very low rate determined by Time.
+
+Python get integer offset for the next failure +- 50% of a day.
+
+During most of the day there is no chance for an error and then it might happen during that time of the day when the AI system is most vulnerable to getting bored.

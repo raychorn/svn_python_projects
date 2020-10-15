@@ -1,0 +1,80 @@
+/*
+//------------------------------
+//  global
+//------------------------------
+*/
+/* CSS file */
+@font-face {
+	src: url("assets/fonts/NeoSansIntel.ttf");
+	fontFamily: NeoSansIntel;
+}
+
+@font-face {
+	src: url("assets/fonts/NeoSansIntel-Medium.ttf");
+	fontFamily: NeoSansIntelMedium;
+}
+
+@font-face {
+	src: url("assets/fonts/GARA.TTF");
+	fontFamily: Garamond;
+}
+
+@font-face {
+	src: url("assets/fonts/NeoSansIntel-Light.ttf");
+	fontFamily: NeoSansIntelLight;
+}
+
+global
+{
+ 	color: blue; 
+	fontFamily: Garamond;
+	fontSize: 14px;
+ 	themeColor: red; 
+}
+
+/*
+//------------------------------
+//  Application
+//------------------------------
+*/
+Application
+{
+	backgroundImage: Embed(source="assets/skins/styles.swf",symbol="BackgroundImage");
+	paddingTop: 0px;
+	paddingLeft: 0px;
+	paddingRight: 0px;
+	paddingBottom: 0px; 
+}
+
+TextArea { 
+	fontFamily: Garamond;
+	fontSize: 12;
+	fontWeight: bold;
+}
+
+Panel { 
+	cornerRadius: 10;
+	headerHeight: 30;
+	borderThickness: 2;
+	shadowDistance: 10;
+	shadowDirection: right;
+	dropShadowColor: #ff0000;
+	roundedBottomCorners: true;
+	textAlign: left;
+	backgroundAlpha: 0.25;
+	borderAlpha: 1;
+	highlightAlphas: 0.8, 0.19;
+	borderStyle: solid;
+	headerColors: #e20000, #ff2400;
+	titleStyleName: "myPanelTitleStyle";
+} 
+
+.myPanelTitleStyle {
+	fontFamily: NeoSansIntelMedium;
+	fontSize: 16;
+}
+
+.myHBoxStyle {
+	borderStyle: solid;
+	borderColor: red;
+}

@@ -1,0 +1,22 @@
+
+Z:\python projects\aardvark>if 1. == . goto end 
+
+Z:\python projects\aardvark>if 1. == 1v. goto method1v 
+
+Z:\python projects\aardvark>if 1. == 2. goto method2 
+
+Z:\python projects\aardvark>main.py --profile --psyco --input=Z:\project-aardvark\bigtest.txt 
+Using Method #1
+_lineCount=(499831)
+         3 function calls in 62.752 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   62.752   62.752 <string>:1(<module>)
+        1   62.752   62.752   62.752   62.752 main.py:16(main)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+
+Z:\python projects\aardvark>goto end 

@@ -1,0 +1,24 @@
+Thank you for submitting your Registration for the {{ PRODUCT_NAME }}.
+
+Please click the following link to activate your {{ PRODUCT_NAME }} License.
+
+{{ PRODUCT_LINK }}
+
+By clicking on the above link you do hereby agree to be bound by the terms of the EULA as stated below.
+
+In response to clicking the Activation Link above you will be sent via email a link you can use to download {{ PRODUCT_NAME }}.
+
+Do not share your password with anyone because your Account may not function if our servers determine your password has been shared with other parties.
+
+The {{ PRODUCT_NAME }} End User License Agreement states you may use a single instance of {{ PRODUCT_NAME }} at a time on any Windows platform you choose where {{ PRODUCT_NAME }} will run.
+
+You may return to {{ SITE_LINK }} to upgrade your {{ PRODUCT_NAME }} to take pyEggs&trade; to the next level whenever you wish.
+
+Please review the following EULA before installing and using {{ PRODUCT_NAME }}:
+
+{{ EULA }}
+
+Vyper Logix Corp.
+http://www.vyperlogix.com
+
+CONFIDENTIALITY NOTICE: This e-mail may contain information that is confidential and proprietary to Vyper Logix Corp., and we hereby designate the information in this e-mail as confidential. The information is intended only for the use of the individual(s) or entity named above. If you are not the intended recipient, you are hereby notified that any disclosure, copying, distribution or use of any of the information contained in this transmission is strictly prohibited and that you should immediately destroy this e-mail and its contents and notify the sender.

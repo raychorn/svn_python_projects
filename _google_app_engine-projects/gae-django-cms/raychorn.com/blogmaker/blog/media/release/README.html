@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.4: http://docutils.sourceforge.net/" />
+<title>Blogmaker™ blog application for Django</title>
+<style type="text/css">
+
+/*
+:Authors: Ian Bicking, Michael Foord, Kent Johnson
+:Contact: fuzzyman@voidspace.org.uk
+:Date: 2005/08/26 
+:Version: 0.1.0
+:Copyright: This stylesheet has been placed in the public domain.
+
+Stylesheet for Docutils.
+Based on ``voidspace.css`` by Ian Bicking and Michael Foord
+``blue_box.css`` by Ian Bicking
+and ``html4css1.css`` revision 1.46.
+*/
+
+@import url(http://rst2a.com/static/styles/html/default.css);
+
+body {
+  font-family: Verdana,"Lucida Grande",Lucida,sans-serif;;
+  font-size: 13px;
+}
+
+em, i {
+  /* Typically serif fonts have much nicer italics */
+  font-family: Times New Roman, Times, serif;
+}
+
+a.target {
+  color: blue;
+}
+
+a.target {
+  color: blue;
+}
+
+a.toc-backref {
+  text-decoration: none;
+  color: black;
+}
+
+a.toc-backref:hover {
+  background-color: inherit;
+}
+
+a:hover {
+  background-color: #cccccc;
+}
+
+div.attention, div.caution, div.danger, div.error, div.hint,
+div.important, div.note, div.tip, div.warning {
+  background-color: #cccccc;
+  padding: 3px;
+  width: 80%;
+}
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title  {
+  text-align: center;
+  background-color: #999999;
+  display: block;
+  margin: 0;
+}
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: #cc0000;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #999999;
+  display: block;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  border: thin solid black;
+  padding: 4px 4px 1px;
+}
+
+h1 {
+  background-color: #137DBF;
+  color: #ffffff;
+  font-size:20px;
+}
+
+h1 a.toc-backref, h2 a.toc-backref { 
+  color: #ffffff;
+}
+
+h2 {
+  background-color: #666666;
+  color: #ffffff;
+  border: medium solid black;
+}
+
+h3, h4, h5, h6 {
+  background-color: #cccccc;
+  color: #000000;
+}
+
+h3 a.toc-backref, h4 a.toc-backref, h5 a.toc-backref, 
+h6 a.toc-backref { 
+  color: #000000;
+}
+
+h1.title {
+  text-align: center;
+}
+
+table.footnote {
+  padding-left: 0.5ex;
+}
+
+table.citation {
+  padding-left: 0.5ex
+}
+
+pre.literal-block, pre.doctest-block {
+  border: thin black solid;
+  padding: 5px;
+}
+
+.image img { border-style : solid;
+            border-width : 2px;
+}
+
+h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
+  font-size: 100%;
+}
+
+code, tt {
+  color: #000066;
+}
+
+tt.docutils {
+  background-color:#FFFFFF;
+}
+</style>
+</head>
+<body>
+<div class="document" id="blogmaker-tm-blog-application-for-django">
+<h1 class="title">Blogmaker™ blog application for Django</h1>
+<p>Blogmaker 0.6, January 2008</p>
+<p>Blogmaker™ is a full-featured, production-quality blogging application for Django.
+It supports trackbacks, ping and comments with moderation and honeypot spam prevention.</p>
+<p>Blogmaker is released under a BSD license.  You may &quot;copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software&quot; (to borrow a phrase from the more-or-less equivalent &quot;MIT License&quot;).</p>
+<p>Caveat: the current release (including these docs) is for people who are already familiar with Django or willing to poke around a bit.  We developed Blogmaker for our own projects, though we hope it will help others leverage the awesome Django framework to create feature-rich blogs.  We have additional features planned, and welcome contributions from others.</p>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#features" id="id1" name="id1">Features</a></li>
+<li><a class="reference" href="#download-and-support" id="id2" name="id2">Download and support</a></li>
+<li><a class="reference" href="#credits" id="id3" name="id3">Credits</a></li>
+<li><a class="reference" href="#requirements" id="id4" name="id4">Requirements</a></li>
+<li><a class="reference" href="#settings" id="id5" name="id5">Settings</a></li>
+<li><a class="reference" href="#other-setup-and-tips" id="id6" name="id6">Other setup and tips</a></li>
+<li><a class="reference" href="#blogmaker-tools" id="id7" name="id7">Blogmaker Tools</a></li>
+<li><a class="reference" href="#other-blog-applications" id="id8" name="id8">Other blog applications</a></li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id1" id="features" name="features">Features</a></h1>
+<ul class="simple">
+<li>Create and edit blog entries with the Django admin interface or a custom interface with preview</li>
+<li>Blog entries may be marked up as HTML or <a class="reference" href="http://daringfireball.net/projects/markdown/">Markdown</a> text (using <a class="reference" href="http://www.freewisdom.org/projects/python-markdown/">python-markdown</a>)</li>
+<li>Comment on blog entries (based on django.contrib.comments)</li>
+<li>Comment honeypot for transparent spam protection, based on ideas from <a class="reference" href="http://www.nedbatchelder.com/text/stopbots.html">http://www.nedbatchelder.com/text/stopbots.html</a></li>
+<li>Comment moderation, based on James Bennett's <a class="reference" href="http://code.google.com/p/django-comment-utils/">comment_utils</a></li>
+<li>Ping other sites when blog entries are added (thanks to <a class="reference" href="http://www.imalm.com/blog/2007/feb/10/using-django-signals-ping-sites-update/">iMalm.com</a>)</li>
+<li>Post trackbacks to other blogs</li>
+<li>Receive trackbacks from other blogs, checking that the referring page does link to the referenced entry to reduce trackback spam</li>
+<li>Independent RSS feeds for posts and comments</li>
+<li>Archives by year, month and day; the day archive includes navigation links to every other day in the month which contains a post</li>
+<li>Tags, including a tag index page</li>
+<li>Sidebars for tags and recent posts</li>
+<li>Previous and next links include post titles</li>
+<li>Search blog entries</li>
+<li>Multiple authors and archive by author</li>
+<li>Scheduled posts</li>
+<li>Optionally host the blog from its own domain or subdomain</li>
+</ul>
+<p>Blogmaker is production-ready; it powers our two blogs at <a class="reference" href="http://blog.blogcosm.com/">http://blog.blogcosm.com/</a> and <a class="reference" href="http://prefabcosm.com/blog/">http://prefabcosm.com/blog/</a>.</p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="download-and-support" name="download-and-support">Download and support</a></h1>
+<p>The latest version of this document is available from <a class="reference" href="http://blogcosm.com/media/blog/release/README.html">http://blogcosm.com/media/blog/release/README.html</a>. Blogmaker can be downloaded from <a class="reference" href="http://blogcosm.com/media/blog/release/">http://blogcosm.com/media/blog/release/</a> or from the Google Code project at <a class="reference" href="http://code.google.com/p/blogmaker/">http://code.google.com/p/blogmaker/</a>. If you have any questions, comments or patches, please send email to the <a class="reference" href="http://groups.google.com/group/blogmaker-users">blogmaker-users</a> group.</p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="credits" name="credits">Credits</a></h1>
+<div class="line-block">
+<div class="line">Scott S. Lawton: product manager</div>
+<div class="line">Peter Bernheim: primary developer</div>
+<div class="line">Kent S Johnson: developer and in-house Python expert</div>
+</div>
+<p>Blogmaker is a trademark of PreFab Software, Inc.</p>
+<p>Portions of Blogmaker are based on the blog application example at <a class="reference" href="http://www.23excuses.com/2006/Jul/07/23-excuses-release-and-introduction/">23 excuses</a> and Copyright © 2006, Andrew Gwozdziewycz.</p>
+<p>Portions of blogmaker.comments are based on James Bennett's <a class="reference" href="http://code.google.com/p/django-comment-utils/">comment_utils</a> and Copyright © 2007, James Bennett.</p>
+<p>Portions of blogmaker.comments are based on django.contrib.comments and are Copyright © 2005, the Lawrence Journal-World.</p>
+<p>See the file LICENSE.txt for details.</p>
+<p>jQuery 1.2.1 is Copyright © 2007 John Resig (jquery.com) and Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses.  Blogmaker includes it under the provisions of the MIT license.</p>
+<p>feedparser is Copyright © 2002-2006, Mark Pilgrim, All rights reserved.</p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id4" id="requirements" name="requirements">Requirements</a></h1>
+<p>Blogmaker requires Python 2.5; earlier versions will not work. Blogmaker works with Django 0.96; it has not been tested with later releases.</p>
+<p>To include images in blog entries, you must have <a class="reference" href="http://www.pythonware.com/products/pil/">Python Imaging Library</a> installed. This is a requirement of Django's <a class="reference" href="http://www.djangoproject.com/documentation/0.96/model-api/#imagefield">ImageField</a>.</p>
+<p>In order to install Blogmaker, you must first set up a basic Django site with the usual settings file, base template, and primary urls.py. More information can be found at <a class="reference" href="http://www.djangoproject.com/">http://www.djangoproject.com/</a></p>
+<p>Blogmaker requires the installation of two (included) Django applications:</p>
+<ol class="arabic simple">
+<li>blogmaker.comments (which can be used on the non-blog portions of a site)</li>
+<li>blogmaker.util (a set of utilities shared internally with our unreleased non-blog code)</li>
+</ol>
+<p>Blogmaker uses <a class="reference" href="http://www.aswmc.com/dbmigration/">DbMigration</a> to update the database.  DbMigration is required only for future schema evolution; if there are future schema changes, we plan to include migrations to update the database as required. Although DbMigration works with any database, our usage is specific to PostgreSQL; using our migrations with other databases will require some changes.</p>
+<p>Other features of Blogmaker will work with any Django-compatible database engine.</p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id5" id="settings" name="settings">Settings</a></h1>
+<p>Blogmaker requires a number of settings to be defined in your settings file:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">INSTALLED_APPS</span></tt></dt>
+<dd>Add <tt class="docutils literal"><span class="pre">'blogmaker.blog'</span></tt>, <tt class="docutils literal"><span class="pre">'blogmaker.comments'</span></tt> and <tt class="docutils literal"><span class="pre">'blogmaker.util'</span></tt> to the list of installed applications. We also require some or all of these standard applications:</dd>
+</dl>
+<div class="line-block">
+<div class="line">django.contrib.auth</div>
+<div class="line">django.contrib.contenttypes</div>
+<div class="line">django.contrib.sessions</div>
+<div class="line">django.contrib.humanize</div>
+<div class="line">django.contrib.sites</div>
+<div class="line">django.contrib.markup</div>
+<div class="line">django.contrib.admin</div>
+</div>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">TEMPLATE_CONTEXT_PROCESSORS</span></tt></dt>
+<dd>Blogmaker's comment application requires that <tt class="docutils literal"><span class="pre">django.core.context_processors.request</span></tt> be one of your installed context processors. This puts a <tt class="docutils literal"><span class="pre">request</span></tt> object in the context. The comment honeypot uses this to access the IP address of a request.</dd>
+<dt><tt class="docutils literal"><span class="pre">DEFAULT_BLOG_USER</span></tt></dt>
+<dd>The id of the primary blog user, as defined by the Django Auth/User model.</dd>
+<dt><tt class="docutils literal"><span class="pre">LOG_DIRECTORY</span></tt></dt>
+<dd>The directory where log files will be written.</dd>
+<dt><tt class="docutils literal"><span class="pre">COPYRIGHT</span></tt></dt>
+<dd>Your copyright text, e.g. &quot;All contents Copyright 2007, Acme Inc.&quot;</dd>
+<dt><tt class="docutils literal"><span class="pre">SITE_ROOT</span></tt></dt>
+<dd>Defines the root URL of your site, e.g. <a class="reference" href="http://domain.com/">http://domain.com/</a></dd>
+<dt><tt class="docutils literal"><span class="pre">BLOG_MEDIA_PREFIX</span></tt></dt>
+<dd>URL prefix for where you will serve the media directory contained at blogmaker.blog.media.  Make sure to use a  trailing slash.
+Examples: &quot;/media/blog/&quot;, &quot;<a class="reference" href="http://foo.com/media/blog/">http://foo.com/media/blog/</a>&quot;</dd>
+<dt><tt class="docutils literal"><span class="pre">ADMIN_MEDIA_PREFIX</span></tt></dt>
+<dd>URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a trailing slash.
+Examples: &quot;/media/admin/&quot;, &quot;<a class="reference" href="http://foo.com/media/admin/">http://foo.com/media/admin/</a>&quot;</dd>
+<dt><tt class="docutils literal"><span class="pre">BLOG_ROOT</span></tt></dt>
+<dd>Defines the root URL for the blog path, e.g. if you want the blog to live at <a class="reference" href="http://domain.com/blog/">http://domain.com/blog/</a>, this variable would be set to '/blog/'. If you want the blog to live at a different subdomain than the rest of the site, you will need to set an absolute URL: '<a class="reference" href="http://blog.domain.com/">http://blog.domain.com/</a>'</dd>
+</dl>
+<p>If you include images in your blog entries, you should set <tt class="docutils literal"><span class="pre">MEDIA_ROOT</span></tt> and <tt class="docutils literal"><span class="pre">MEDIA_URL</span></tt> as described in the <a class="reference" href="http://www.djangoproject.com/documentation/0.96/settings/#media-root">Django documentation</a>. You must also configure your server to serve files from <tt class="docutils literal"><span class="pre">MEDIA_ROOT</span></tt> at <tt class="docutils literal"><span class="pre">MEDIA_URL</span></tt>.</p>
+<p>The following should be set if you enable email notification for comment/trackback features:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">MANAGERS</span></tt></dt>
+<dd>A list of <tt class="docutils literal"><span class="pre">('Name',</span> <span class="pre">'email</span> <span class="pre">address')</span></tt> tuples defining the people to whom notification emails will be sent.</dd>
+<dt><tt class="docutils literal"><span class="pre">DEFAULT_FROM_EMAIL</span></tt></dt>
+<dd>The default e-mail you would like e-mails to be sent from.</dd>
+</dl>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id6" id="other-setup-and-tips" name="other-setup-and-tips">Other setup and tips</a></h1>
+<p>Add a reference to <tt class="docutils literal"><span class="pre">blogmaker.blog.urls</span></tt> and <tt class="docutils literal"><span class="pre">blogmaker.blog.admin_urls</span></tt> to your <tt class="docutils literal"><span class="pre">urls.py</span></tt> with any desired prefix, for example:</p>
+<pre class="literal-block">
+(r'^blog/', include('blogmaker.blog.urls')),
+(r'^blogmaker/', include('blogmaker.blog.admin_urls')),
+</pre>
+<p>Comments are moderated using a version of <a class="reference" href="http://code.google.com/p/django-comment-utils/">comment_utils</a>. The setup is the same as for comment_utils. For example, to moderate first-time comments with email notification, include this code in your project:</p>
+<pre class="literal-block">
+from blogmaker.comments.moderation import ModerateFirstTimers, moderator
+from blogmaker.blog.models import Entry
+
+class Moderator(ModerateFirstTimers):
+    email_notification = True
+
+moderator.register(Entry, Moderator)
+</pre>
+<p>See the <a class="reference" href="http://django-comment-utils.googlecode.com/svn/trunk/docs/">comment_utils docs</a> for more options. This code must run once when your server starts up. <a class="reference" href="http://www.b-list.org/weblog/2007/nov/05/server-startup/">This blog post</a> has some suggestions of where to put startup code.</p>
+<p>Note: Blogmaker contains forked copies of both django.contrib.comments and comment_utils. You do not need to install the standard comments and comment_utils applications to use Blogmaker.</p>
+<p>Blog entries may be written in straight HTML or using <a class="reference" href="http://daringfireball.net/projects/markdown/">Markdown</a> markup. Blogmaker also defines a few shortcuts in the form <tt class="docutils literal"><span class="pre">%portal%</span></tt>. See <tt class="docutils literal"><span class="pre">expand_shortcuts()</span></tt> in <tt class="docutils literal"><span class="pre">util/__init__.py</span></tt> for the full list.</p>
+<p>Trackbacks to other blogs are not posted automatically. To post trackbacks, run <tt class="docutils literal"><span class="pre">blogmaker.blog.trackback_update.py</span></tt>. You may want to run this from a cron job.</p>
+<p>View, modify and post trackbacks for an individual blog entry by adding <tt class="docutils literal"><span class="pre">/postTrackbacks/</span></tt> to the public URL for the entry.</p>
+<p>Trackbacks may be posted to a Blogmaker entry using the public URL for the entry with the suffix <tt class="docutils literal"><span class="pre">/trackback/</span></tt>. To reduce trackback spam, any posted trackbacks are validated by fetching the contents of the referring page and verifying that the entry URL appears on the referring page. In addition, trackbacks are comments and may be moderated like any other comment.</p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id7" id="blogmaker-tools" name="blogmaker-tools">Blogmaker Tools</a></h1>
+<p>Blogmaker Tools adds a preview option and an improved list view as an alternative to Django's built-in admin site. The tools are accessed from the <tt class="docutils literal"><span class="pre">/tools/</span></tt> URL.</p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id8" id="other-blog-applications" name="other-blog-applications">Other blog applications</a></h1>
+<p>There are several other blogging applications for Django:</p>
+<ul class="simple">
+<li>The <a class="reference" href="http://www.23excuses.com/2006/Jul/07/23-excuses-release-and-introduction/">23 excuses</a> application that was the start of Blogmaker (version 1.0, 2006-07-07) (download link broken at the moment)</li>
+<li><a class="reference" href="https://launchpad.net/banjo">Banjo</a> - &quot;A Django blog with bells and whistles&quot; from Bruce Kroeze, <a class="reference" href="http://coderseye.com/">http://coderseye.com/</a>. Not yet available - &quot;nearing 0.1 release&quot; as of 2007-11-25.</li>
+<li><a class="reference" href="http://code.google.com/p/coltrane-blog/">Coltrane</a> by James Bennett, <a class="reference" href="http://www.b-list.org/">http://www.b-list.org/</a>. A bit empty as of 2007-12-05 but there is code if you look at svn.</li>
+<li><a class="reference" href="http://code.ibofobi.dk/public/wiki/ProjectIbofobiBlog">ibofobi</a> version 0.1, 2005-12-09</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

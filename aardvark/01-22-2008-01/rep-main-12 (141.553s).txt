@@ -1,0 +1,48 @@
+
+Z:\python projects\aardvark>if 1. == . goto end			REM does nothing... 
+
+Z:\python projects\aardvark>if 1. == 1. goto method1		REM does Method1 using Psyco... 
+
+Z:\python projects\aardvark>main.py --profile --psyco         --input=Bigtest.txt 
+Using Method #1
+_property_dict=({'18': 4L, '31': 1L, '27': 3L, '17': 2L})
+_handlers=({96514: <function handle_app_tracking at 0x00BD5370>, '27': <function handle_property at 0x00BD5130>, '17': <function handle_property at 0x00BD5130>, 82118: <function handle_installed_apps at 0x00BD5330>, '18': <function handle_property at 0x00BD5130>, '31': <function handle_property at 0x00BD5130>})
+_subMethod1=(2)
+et=(0.31200003624)
+Time spent doing I/O :: (0.31200003624), _ioBeginTime=([1192495459.8559999]), _ioEndTime=([1192495460.168])
+len(_list_Master)=(3)
+len(item)=(344180)
+len(item)=(0)
+len(item)=(0)
+         25 function calls in 141.553 CPU seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  141.553  141.553 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:48(normalize_encoding)
+        1    0.000    0.000    0.000    0.000 __init__.py:70(search_function)
+        1    0.000    0.000    0.000    0.000 codecs.py:77(__new__)
+        1  141.552  141.552  141.553  141.553 main.py:320(main)
+        1    0.000    0.000    0.000    0.000 string_escape.py:10(Codec)
+        1    0.000    0.000    0.000    0.000 string_escape.py:15(IncrementalEncoder)
+        1    0.000    0.000    0.000    0.000 string_escape.py:19(IncrementalDecoder)
+        1    0.000    0.000    0.000    0.000 string_escape.py:23(StreamWriter)
+        1    0.000    0.000    0.000    0.000 string_escape.py:26(StreamReader)
+        1    0.000    0.000    0.000    0.000 string_escape.py:29(getregentry)
+        1    0.000    0.000    0.000    0.000 string_escape.py:7(<module>)
+        1    0.000    0.000    0.000    0.000 {__import__}
+        1    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x1E1E7E18}
+        1    0.000    0.000    0.000    0.000 {isinstance}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        3    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.globals}
+        1    0.000    0.000    0.000    0.000 {psyco._psyco.locals}
+
+
+
+Z:\python projects\aardvark>goto end 

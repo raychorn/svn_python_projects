@@ -1,0 +1,157 @@
+pyui release notes:
+
+Version 0.95: January 30th 2003
+-------------------------------
+removed PIL dependency in Py3D renderer. uses pygame to load images
+use display lists for optimization in openGL renderers
+added distutils install script
+added hook for drawing background window
+added openGL 3D example
+moved "boat" and "database" to sandbox
+experimental true type font support in GL renderers
+experimental Nebula renderer
+	
+Version 0.93: October 10th 2002
+-------------------------------
+added "sheet" class for optimized tables
+added "boat" class for Twisted Row DB Access
+added NumberEdit box
+Layout manager bugfixes
+Removed Win32 Renderer for now...
+
+Version 0.92: September 19th 2002
+---------------------------------
+added file dialog
+added color picker dialog
+added support for double clicking
+improved list boxes
+fixed window sorting bug
+fixed dropdown list box bugs
+added internal handler method prefix of "_pyui"
+
+Version 0.91: May 28th 2002
+---------------------------
+added ability to do per-widget dirtying and re-drawing
+improved win32 renderer
+allow renderers to use native window frames
+added win2K theme and fixed theme switching
+fixed fonts in GL renderer
+editBox bugfixes
+
+Version 0.9: April 27th 2002
+----------------------------
+Added CheckBox widget
+Added SliderBar widget
+Added DropDownBox widget
+Added Entry widget
+Added FormPanel
+Added GridPanel
+Improved scrollbars
+Added intial Twisted Enterprise DBGrid
+Added TableLayoutManager
+Refactored pyui.core into pyui.desktop
+Optimizations of GL renderer
+Separated GLUT and PyGame GL renderers
+Update Tree images
+Exposed keyboard mods to mouse messages
+Allow unregistering for events
+
+	
+Version 0.8: November 17th 2001
+--------------------------------
+Keyboard navigation of widgets in Frames
+Improved look of default theme
+Simplified theme drawing interface
+Text wrapping in LineDisplay widget
+Improved event handling in Menus
+Schedulable gui callback events
+Win32 renderer uses HWNDs for each PyUI window
+Selection and mouse handling in Edit boxes
+Added "green" theme
+Added text metrics and timers to renderer interface
+Alpha blending in GL renderer
+Improved drawing of tabs
+Improved key mappings in renderers
+
+	
+Version 0.7: September 18th 2001
+--------------------------------
+Added win32 GDI renderer (needs work but is functional)
+Added TK renderer
+Added a tree widget and some examples that use it
+Added a unit test suite
+Enhancements to scroll bars and menu placements
+Optimizations to drawing code
+Added an images directory for common pyui images
+	
+Version 0.6: September 5th 2001
+-------------------------------
+Implemented "renderers" to isolate platform specific drawing and event handling code.
+PyOpenGL Renderer
+PyGame Renderer
+Re-worked all drawing to go through themes
+Re-worked all theme drawing to go through renderers
+
+Version 0.51: July 20th 2001
+----------------------------
+Re-integrated 2D optimizations
+fixed 2D clipping
+added glScissor clipping in openGL mode
+
+Version 0.5: July 13th 2001
+---------------------------
+Added OpenGL drawing implementation
+Reworked theme drawing so that all drawing goes through themes
+Opengl/pygame drawing switch is available (possibly temporary)
+added dependencies on PyOpenGL and PIL
+added waiting state and hourglass mouse cursor
+removed windowSurface for Window objects, all drawing is now direct to the screen	
+Images in the openGL implementation must have sizes that are powers of 2 (eg, 256x256)
+Uglytheme is gone for now
+Transparency is gone for now
+Clipping is broken, pending openGL implementation
+
+Version 0.4: June 7th 2001
+--------------------------
+Bug fixes for redrawing and background filling
+Dirty rectangle cleanup
+Themes now apply to full window frames, scrollbars, buttons, mouse cursors and tabs.
+Default "uglyTheme" with ugly programmer art.
+Available "simpleTheme" that uses flat rectangles (no bitmaps)
+
+
+Version 0.3: May 29th 2001
+---------------------------
+Added Frame class to break out window-type functionality from the doublebuffered
+drawing capability. "Window" now has no title or border.
+Changed the drawing code to use dirty rectangles for big performance gains.
+dynamic mouse cursors are temporarily gone pending more integration...
+widgets can no longer have no parent - all widgets must be inside a window derived class.
+
+Version 0.2: May 22nd 2001
+---------------------------
+added minesweeper example
+changed parameters to pyui.core.init()
+bug fixes
+widget level clipping changed to panel level clipping
+added to sourceforge CVS
+added gradient widget (requires pygame.surfarray and Numeric python)
+testGradient.py uses the optional gradient widget.
+
+Version 0.11: May 19th 2001
+---------------------------
+added close button to windows
+added better exception handing for event handling
+added python object viewer utility
+added splitter tabs
+changed window/panel interactions
+fixed listbox scrollbars
+	
+Version 0.1: May 2001
+----------------------
+Initial release. Contain alpha-level baseline functionality.
+Things that dont work:
+      mouse cusor in fullscreen mode
+      horizontal scroll bar
+      textarea widget
+This release was developed with version 2.1 of python and verion 1.0 of pygame.

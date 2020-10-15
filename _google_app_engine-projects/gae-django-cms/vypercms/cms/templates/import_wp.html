@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{% trans "Import from wordpress" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Import from wordpress" %}</h1>
+<form action="" method="post" enctype="multipart/form-data">
+<input name="test" type="hidden" value="test111" />
+<table>
+<tr><th><label for="id_xmlfile">{% trans "Select" %} wordpress_xml:</label></th><td><input type="file" name="xmlfile" id="id_xmlfile" /> <input type="submit" value="{% trans 'Upload' %}" />
+
+</td></tr>
+    <tr><td colspan="2">
+      
+    </td></tr>
+  </table>
+</form>
+{{ stage }}<br/>
+
+{% for i in additems %}
+{{ i }}<br/>
+{% endfor %}
+{% endblock %}

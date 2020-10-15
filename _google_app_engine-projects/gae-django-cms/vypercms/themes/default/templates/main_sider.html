@@ -1,0 +1,80 @@
+{% if user.is_authenticated %}<div id="main_sider_admin">
+    		<H2>Admin</H2>
+    		{{ user.username }} !
+    		{% if user.is_superuser %}
+  <a href="/admin/">admin</a> |
+  <a href="{% url cms.views.list_globalvar %}">{% trans "Basic" %}</a> |
+  <a href="{% url cms.views.list_allad %}">{% trans "Ad" %}</a> |
+  <a href="{% url cms.views.list_redirect %}">{% trans "Redirect" %}</a> |
+  <a href="{% url cms.views.list_article %}">{% trans "new Top100" %}</a> |
+  <a href="{% url cms.views.emptymem %}">{% trans "flush Cache" %}</a> |
+  <a href="{% url cms.views.import_wp %}">{% trans "Import" %}</a> |
+  <a href="{% url cms.views.list_links %}">{% trans "Links" %}</a> |
+  <a href="{% url cms.views.list_comment %}">{% trans "Comments" %}</a> |
+  <a href="{% url cms.views.list_categories %}">{% trans "Categories" %}</a> |
+  <a href="{% url cms.views.settheme %}">{% trans "Set theme" %}</a> |<br/>
+{% endif %}
+{% trans "Author" %}:{{ user.first_name }}{{ user.last_name }} !
+  <a href="{% url cms.views.add_article %}">{% trans "add new" %}</a> |
+  <a href="{% url cms.views.list_my_article %}">{% trans "my articles" %}</a> |
+  <a href="/admin/password_change/">{% trans 'Change password' %}</a> |
+  <a href="{% url django.contrib.auth.views.logout %}">{% trans "Logged out" %}</a> |
+    	</div>{% endif %}
+    	{% if right_ad_top %}<div id="main_sider_top_ad">{{ right_ad_top|safe }}</div>{% endif %}
+    	{% if all_tags %}<div id="main_sider_tags">
+    		<H2>{% trans "Tag Cloud" %}</H2>
+    		{% for each in all_tags %}<a title="{{ each.tag }}" href="{% url cms.views.show_tag_arts_list tag=each.tag %}" style='font-size:{{ each.tagcount|add:"98" }}%;'>{{ each.tag }}</a>
+    		{% endfor %}
+    	</div>{% endif %}
+    	{% if random_cate_arts.0.cate.name %}<div id="main_sider_randomcate">
+    		<H2>{{ random_cate_arts.0.cate.name|safe }}</H2>
+    		<UL>
+    			{% for each in random_cate_arts %}<LI><a title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}">{{ each.title }}</a></LI>
+    			{% endfor %}
+    		</UL>
+    	</div>{% endif %}
+    	<div id="main_sider_hot">
+    		<H2>{% trans "Hot Aticles" %}</H2>
+    		<UL>
+    			{% for each in hot_arts %}<LI><a title="{{ each.title }}" href="{% url cms.views.show_article keyid=each.key.id %}" target="_blank">{{ each.title }}</a></LI>
+    			{% endfor %}
+    		</UL>
+    	</div>
+    	{% if right_ad_mid %}<div id="main_sider_mid_ad">{{ right_ad_mid|safe }}</div>{% endif %}
+    	{% ifequal browse_stage 'home' %}{% if comments %}<div id="main_sider_comment">
+    		<H2>{% trans "New Comments" %}</H2>
+    		<UL>
+    			{% for each in comments %}<LI class="commentli">{% if each.site %}<a title="Link to {{ each.name }} site" href="{{ each.site }}" target="_blank" >{{ each.name|slice:":12" }}</a>{% else %}<span title="{{ each.name }}">{{ each.name|slice:":12" }}</span>{% endif %}: <a title="Post by {{ each.name }} at {{ each.EST_time|date:"Y-m-d H:i:s" }}&#13;{{ each.content }}" href="{% url cms.views.show_article keyid=each.article.key.id %}#{{ each.key.id }}" target="_blank">{{ each.content }}</a></LI>
+    			{% endfor %}
+    		</UL>
+    	</div>{% endif %}{% endifequal %}
+    	{% if links %}<div id="main_sider_links">
+    		<H2>{% trans "Links" %}</H2>
+    		<UL>
+    			{% for each in links %}<a title="{{ each.name }}" href="{{ each.url }}" target="_blank">{{ each.name }}</a>
+    			{% endfor %}
+    		</UL>
+    	</div>{% endif %}
+    	<div id="gg_search" align="center">        
+    	<form action="/search" id="cse-search-box" style="margin: 0px;pading:0px;">
+			<input type="hidden" name="cx" value="016876823373999327127:ft-wrlrsoqu" />
+			<input type="hidden" name="cof" value="FORID:11" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" size="21" id="s" onblur =" b;"/>
+			<input type="submit" name="sa" value="{% trans 'Search' %}" />    
+			</form>
+			<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang={% if USE_I18N %}zh-Hans{% else %}en{% endif %}"></script>
+           <script type="text/javascript">
+        (function(){        
+            var q = document.getElementById('s');
+            var b = function() { 
+                if (q.value == '') { 
+                    q.style.background = '#ffffff url(\x2Fmedia\x2Fimages\x2Fsearch_{% if USE_I18N %}cn{% else %}en{% endif %}.gif) left no-repeat'; 
+                } 
+            };
+            q.onblur = b;             
+            b();
+            })();          
+           </script>            
+        </div>
+    	{% if right_ad_bot %}<div id="main_sider_bot_ad">{{ right_ad_bot|safe }}</div>{% endif %}

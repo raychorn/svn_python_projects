@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block html-header %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+{% endblock %}
+{% block title %}(FaceBook v0.1){% endblock %}
+
+{% block extra-head %}
+{% if isJavaScriptOptimized %}
+    <script language="JavaScript1.2" type="text/javascript">
+    $js('/js/js/facebook.min.js',function(){});
+    </script>
+{% else %}
+    <script src="/js/js/facebook.min.js" type="text/javascript" language="JavaScript"></script>
+{% endif %}
+{% endblock %}
+
+{% block include-css %}{% endblock %}
+
+{% block navigation %}{% endblock %}
+
+{% block masthead %}
+<h1><a href="/facebook/">The Agile Developer's FaceBook App</a></h1>
+<div id="twitter-peeper"><a target="_blank" href="http://twitter.com/vyperlogix"><img border="0" src="/static/images/followme_right.png" alt="Follow us on Twitter" title="Follow Us On Twitter"></a></div>
+{% endblock %}
+
+{% block extra-top-left %}
+<div id="facebook-logout">
+    <button id="btn_submitFaceBookLogout" title="Logout from FaceBook"><img src="/static/images/facebook-logout-button.png"></button>
+</div>
+{% endblock %}
+
+{% block left_content %}
+    <BIG>Something useful will be coming to FaceBook soon...</BIG><BR/><BR/>
+    <p>This is where your FaceBook App could go if you were using VyperBlog&trade;.</p>
+    <p>VyperBlog&trade; supports and facilitates the development and deployment of FaceBook Apps.</p>
+    <p>As you can clearly see, VyperBlog&trade; knows how to interface with the FaceBook API and VyperBlog&trade; ships with FaceBook API Support.</p>
+    <p>Anythong you can do with FaceBook can be done using VyperBlog&trade; and since VyperBlog&trade; runs in the Google Cloud your FaceBook App can grow to handle all those millions of users who are right now using someone else's FaceBook App.</p>
+    <p>Want to launch your own Farmville just like Zynga ?</p>
+    <p>You can when you are using VyperBlog&trade; - VyperBlog&trade; ships with full Flash Support which means all you have to do is develop your slick Flash FaceBook game and then plug it onto this page and you are almost all the way there.</p>
+    <p>Come on and let VyperBlog&trade; set you free.</p>
+    {{ content }}
+{% endblock %}
+
+{% block right_content %}
+    <BIG>Stay Tuned...</BIG>
+{% endblock %}

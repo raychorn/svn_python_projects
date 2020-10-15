@@ -1,0 +1,517 @@
+{
+    "menu" : {
+        "menuitem" : [{
+            "url" : "http://www.verizonwireless.com/b2c/store/controller?item=phoneFirst%26action=viewStoreIndex",
+            "menuitem" : [{
+                "url" : "http://www.verizonwireless.com/b2c/store/controller?item=phoneFirst%26action=viewPhoneOverviewByDevice%26deviceType=Phones%26sortOption=priceSort",
+                "label" : "Cell Phones"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/store/controller?item=phoneFirst%26amp;action=viewPhoneOverviewByDevice%26amp;deviceType=BlackBerry%20Devices",
+                "label" : "BlackBerry"
+            },
+            {
+                "url" : "http://smartphones.verizonwireless.com/?lid=//global//phones+and+accessories//smartphone+resource+center",
+                "label" : "Smartphone Resource Center"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/store/controller?item=phoneFirst%26amp;action=viewPhoneOverviewByDevice%26amp;deviceType=PDA/SmartPhones",
+                "label" : "PDAs %26amp; Smartphones"
+            },
+            {
+                "url" : "http://smartphones.verizonwireless.com/",
+                "label" : "Smartphone Resource Center"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/hpnetbook/overview.jsp",
+                "label" : "Netbooks"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/mobilebroadband/",
+                "menuitem" : [{
+                    "body" : "Browse the Internet, download files and access email while youre on the go.",
+                    "label" : "Mobile Broadband Devices"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/mobilebroadband/?page=products_device",
+                    "label" : "Data+Cards+%26amp%3B+Modems"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/hpnetbook/overview.jsp",
+                    "label" : "Netbooks"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/mobilebroadband/",
+                    "label" : "Learn about Mobile Broadband "
+                }],
+                "label" : "Mobile Broadband Devices"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/store/accessories",
+                "label" : "Accessories"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/promotion/specialoffers.jsp",
+                "label" : "Online Deals"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/promotion/controller?promotionType=hotDeals%26action=viewHotDeals",
+                "label" : "New Products"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/store/controller?item=giftCardItem%26amp;action=viewGiftCards",
+                "menuitem" : [{
+                    "body" : "Take the stress out of finding the perfect present with a gift card.",
+                    "label" : "Gift Cards"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/store/controller?item=giftCardItem%26amp;action=viewGiftCards",
+                    "label" : "Buy a Gift Card"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/GiftCardControllerServlet",
+                    "label" : "Check Gift Card Balance"
+                }],
+                "label" : "Gift Cards"
+            }],
+            "label" : "Phones %26amp; Accessories"
+        },
+        {
+            "url" : "http://www.verizonwireless.com/b2c/store/controller?item=planFirst%26amp;action=viewPlanOverview",
+            "menuitem" : [{
+                "url" : "http://www.verizonwireless.com/b2c/store/controller?item=planFirst%26amp;action=viewPlanOverview%26amp;catType=voice",
+                "menuitem" : [{
+                    "body" : "Stay connected with the best network and calling plans for individuals and families.",
+                    "label" : "Voice Plans"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/splash/plansingleline.jsp",
+                    "label" : "Individual"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/splash/planfamily.jsp",
+                    "label" : "Family"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/splash/prepay.jsp",
+                    "label" : "Prepaid"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/store/controller?item=planFirst%26amp;action=viewPlanOverview%26amp;catType=voice",
+                    "label" : "View all Voice Plans"
+                }],
+                "label" : "Voice Plans"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/store/controller?item=planFirst%26amp;action=viewPlanOverview%26amp;catType=voiceData",
+                "label" : "Voice+%26amp%3B+Email+Plans"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/mobilebroadband/?page=plans",
+                "label" : "Mobile Broadband Plans"
+            },
+            {
+                "url" : "http://b2b.vzw.com/international/inside_us.html",
+                "label" : "International Services"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/CoverageLocatorController?requesttype=NEWREQUEST",
+                "label" : "Coverage Map"
+            }],
+            "label" : "Plans"
+        },
+        {
+            "url" : "https://products.vzw.com/index.aspx?id=fnd%26amp;lid=//global//entertainment+and+apps",
+            "menuitem" : [{
+                "url" : "http://mediastore.verizonwireless.com/?lid=//global//entertainment+and+apps//media+store",
+                "label" : "Media Store"
+            },
+            {
+                "url" : "http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//ringtones#MusicTones=home",
+                "label" : "Ringtones"
+            },
+            {
+                "url" : "http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//ringback+tones#MusicTones=home",
+                "label" : "Ringback Tones"
+            },
+            {
+                "url" : "https://products.vzw.com/index.aspx?id=fnd_music%26amp;lid=//global//entertainment+and+apps//music",
+                "menuitem" : [{
+                    "body" : "Download songs from your favorite artists to your phone.",
+                    "label" : "Music"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=fnd_music_howtobuy%26amp;lid=//global//entertainment+and+apps//music//how+to+get+music",
+                    "label" : "How to get Music"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=fnd_music_music%26amp;lid=//global//entertainment+and+apps//music//view+all",
+                    "label" : "View all Music"
+                },
+                {
+                    "url" : "http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//music//launch+media+store#MusicTones=home",
+                    "label" : "Launch Media Store"
+                },
+                {
+                    "url" : "http%3A%2F%2Fproducts.vzw.com%2Findex.aspx%3Fid%3Dfnd_vcast%26lid%3D%2F%2Fglobal%2F%2Fentertainment%2Band%2Bapps%2F%2Fmusic%2F%2Fwhat%2Bis%2Bvcast",
+                    "label" : "What is V CAST?"
+                }],
+                "label" : "Music"
+            },
+            {
+                "url" : "http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//games#games=home",
+                "label" : "Games"
+            },
+            {
+                "url" : "http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//apps#apps=home",
+                "label" : "Apps"
+            },
+            {
+                "url" : "http://mediastore.verizonwireless.com/onlineContentStore/index.html?lid=//global//entertainment+and+apps//wallpapers#wallpapers=home",
+                "label" : "Wallpapers"
+            },
+            {
+                "url" : "https://products.vzw.com/index.aspx?id=video%26amp;lid=//global//entertainment+and+apps//video+on+demand",
+                "menuitem" : [{
+                    "body" : "Get Favorite TV Shows, Sports, News, Live Events, Music Videos and more.",
+                    "label" : "V CAST Videos"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=video_how%26amp;lid=//global//entertainment+and+apps//video+on+demand//how+to+get",
+                    "label" : "How to get Video on Demand"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=video_browse%26amp;lid=//global//entertainment+and+apps//video+on+demand//view+all",
+                    "label" : "View all Video on Demand"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=fnd_vcast%26amp;lid=//global//entertainment+and+apps//video+on+demand//what+is+vcast",
+                    "label" : "What is V CAST?"
+                }],
+                "label" : "Video on Demand"
+            },
+            {
+                "url" : "https://products.vzw.com/index.aspx?id=mobileTV%26amp;lid=//global//entertainment+and+apps//mobiletv#overview",
+                "menuitem" : [{
+                    "body" : "Watch TV on your phone.",
+                    "label" : "V CAST Mobile TV"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=mobileTV%26amp;lid=//global//entertainment+and+apps//mobiletv//program+guide#grid",
+                    "label" : "Program Guide"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=mobileTV%26amp;lid=//global//entertainment+and+apps//mobiletv//how+to+get+mobile+tv#coverage",
+                    "label" : "How to get Mobile TV"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=fnd_vcast%26amp;lid=//global//entertainment+and+apps//mobiletv//what+is+vcast",
+                    "label" : "What is V CAST?"
+                }],
+                "label" : "Mobile TV"
+            },
+            {
+                "url" : "https://products.vzw.com/index.aspx?id=fnd_dashboardMobileWeb%26amp;lid=//global//entertainment+and+apps//mobile+web+and+dashboard",
+                "menuitem" : [{
+                    "body" : "Introducing two exciting ways to access the content on your phone and on the web.",
+                    "label" : "Mobile Web %26amp; Dashboard"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=fnd_mobileWeb%26amp;lid=//global//entertainment+and+apps//mobile+web+and+dashboard//mobile+web",
+                    "label" : "Mobile Web"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=fnd_dashboard%26amp;lid=//global//entertainment+and+apps//mobile+web+and+dashboard//dashboard",
+                    "label" : "Dashboard"
+                }],
+                "label" : "Mobile Web %26amp; Dashboard"
+            },
+            {
+                "url" : "http://vznavigator.vzw.com/?lid=//global//entertainment+and+apps//navigator",
+                "label" : "Navigator"
+            },
+            {
+                "url" : "https://products.vzw.com/index.aspx?id=fnd_familylocator%26amp;lid=//global//entertainment+and+apps//family+locator",
+                "label" : "Family Locator"
+            }],
+            "label" : "Entertainment+%26amp%3B+Apps"
+        },
+        {
+            "url" : "https://products.vzw.com/index.aspx?id=messaging%26amp;lid=//global//messaging",
+            "menuitem" : [{
+                "url" : "https://animated.messaging.vzw.com/vge/index.html?lid=//global//messaging//animated+messaging",
+                "label" : "Animated Messaging"
+            },
+            {
+                "url" : "https://text.vzw.com/customer_site/jsp/overview.jsp?lid=//global//messaging//text+messaging",
+                "menuitem" : [{
+                    "body" : "Text from your phone, via email, and from the web.",
+                    "label" : "Text Messaging"
+                },
+                {
+                    "url" : "https://text.vzw.com/customer_site/jsp/messaging_lo.jsp?lid=//global//messaging//text+messaging//send+message",
+                    "label" : "Send a Text Message"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=messaging_txt_how%26amp;lid=//global//messaging//text+messaging//how+to+text+message",
+                    "label" : "How to Text Message"
+                },
+                {
+                    "url" : "https://text1.vzw.com/text/jsp/txtintl_overview.jsp?lid=//global//messaging//text+messaging//international+messaging",
+                    "label" : "International Messaging"
+                }],
+                "label" : "Text Messaging"
+            },
+            {
+                "url" : "https://products.vzw.com/index.aspx?id=messaging_pictureVideo%26amp;lid=//global//messaging//picture+and+video+messaging",
+                "menuitem" : [{
+                    "body" : "Send full-color pictures, sounds, and text in one message.",
+                    "label" : "Picture %26amp; Video Messaging"
+                },
+                {
+                    "url" : "http://picture.vzw.com/pub/guestComposer/guestCreate.do?mediaType=free%26amp;lid=//global//messaging//picture+and+video+messaging//send+a+picture/video+message",
+                    "label" : "Send+a+Picture+%26amp%3B+Video+Message"
+                },
+                {
+                    "url" : "https://products.vzw.com/index.aspx?id=messaging_pixflix_pic_how%26amp;lid=//global//messaging//picture+and+video+messaging//picture+and+video+messaging+help",
+                    "label" : "How+to+Picture+%26amp%3B+Video+Message"
+                },
+                {
+                    "url" : "https://text1.vzw.com/text/jsp/txtintl_overview.jsp?lid=//global//messaging//picture+and+video+messaging//international+messaging",
+                    "label" : "International Messaging"
+                },
+                {
+                    "url" : "http://picture.vzw.com/pub/gallery.do?lid=//global//messaging//picture+and+video+messaging//manage+your+photo+albums",
+                    "label" : "Manage your Photo Albums"
+                }],
+                "label" : "Picture+%26amp%3B+Video+Messaging"
+            },
+            {
+                "url" : "https://products.vzw.com/index.aspx?id=messaging_im%26amp;lid=//global//messaging//mobile+im",
+                "label" : "Mobile IM"
+            },
+            {
+                "url" : "https://products.vzw.com/index.aspx?id=messaging_email%26amp;lid=//global//messaging//mobile+email",
+                "label" : "Mobile Email"
+            },
+            {
+                "url" : "https://alerts.vzw.com/guest/general/Overview.do?lid=//global//messaging//text+and+picture+alerts",
+                "menuitem" : [{
+                    "body" : "Get weather, traffic, sports, and stock updates on your phone.",
+                    "label" : "Text %26amp; Picture Alerts"
+                },
+                {
+                    "url" : "https://support.vzw.com/faqs/Features%20and%20Optional%20Services/alerts_text_and_picture.html?lid=//global//messaging//text+picture+alerts//get+alerts",
+                    "label" : "How to get Alerts"
+                },
+                {
+                    "url" : "https://alerts.vzw.com/guest/general/Browse/Categories.do?lid=//global//messaging//text+and+picture+alerts//view+all+alerts",
+                    "label" : "View all Alerts"
+                }],
+                "label" : "Text+%26amp%3B+Picture+Alerts"
+            }],
+            "label" : "Messaging"
+        },
+        {
+            "url" : "http://www.verizonwireless.com/b2c/index.html?tab=business%26amp;lid=//global//Business",
+            "menuitem" : [{
+                "url" : "http://b2b.vzw.com/productsservices/devices/?lid=//global//business//phones",
+                "label" : "Phones"
+            },
+            {
+                "url" : "http://b2b.vzw.com/productsservices/businesscallingplans/?lid=//global//business//business+plans",
+                "label" : "Business Plans"
+            },
+            {
+                "url" : "http://b2b.vzw.com/productsservices/?lid=//global//business//products+and+services",
+                "label" : "Products+%26amp%3B+Services"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/smb/?lid=//global//business//small+business",
+                "label" : "Small Business"
+            },
+            {
+                "url" : "http://b2b.vzw.com/govt/overview.html?lid=//global//business//government",
+                "label" : "Government"
+            },
+            {
+                "url" : "https://www.verizonwireless.com/b2c/employee/emaildomainauthentication.jsp?lid=//global//business//employee+discounts",
+                "label" : "Employee Discounts"
+            },
+            {
+                "url" : "http://b2b.vzw.com/productsservices/businesspromotions.html?lid=//global//business//current+promotions",
+                "label" : "Current Promotions"
+            }],
+            "label" : "Business"
+        },
+        {
+            "url" : "http://support.vzw.com/?lid=//global//support",
+            "menuitem" : [{
+                "url" : "http://support.vzw.com/billing/?lid=//global//support//billing+and+account",
+                "label" : "Billing+%26amp%3B+Account"
+            },
+            {
+                "url" : "http://support.vzw.com/phones/?lid=//global//support//phones+and+devices",
+                "label" : "Phones+%26amp%3B+Devices"
+            },
+            {
+                "url" : "http://support.vzw.com/features/?lid=//global//support//features+and+services",
+                "label" : "Features+%26amp%3B+Services"
+            },
+            {
+                "url" : "http://smartphones.verizonwireless.com/support?lid=//global//support//smartphone+resource+center",
+                "label" : "Smartphone Resource Center"
+            },
+            {
+                "url" : "http://support.vzw.com/faqs/index.html?lid=//global//support//faqs",
+                "label" : "FAQs"
+            },
+            {
+                "url" : "http://community.vzw.com/?lid=//global//support//customer+forums",
+                "label" : "Customer Forums"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/myaccount/welcome.jsp?lid=//global//support//new+customers",
+                "label" : "New Customers"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/orderstatus/OrderStatusForm?lid=//global//support//get+status",
+                "menuitem" : [{
+                    "body" : "Track your orders and rebates.",
+                    "label" : "Get Status"
+                },
+                {
+                    "url" : "http://www.yourwirelessrebatecenter.com/promocenter/verizonwireless/track.html?lid=//global//support//get+status//rebate+center",
+                    "label" : "Rebate Center"
+                },
+                {
+                    "url" : "http://www.verizonwireless.com/b2c/orderstatus/OrderStatusForm/?lid=//global//support//get+status//order+status",
+                    "label" : "Order Status"
+                }],
+                "label" : "Get Status"
+            },
+            {
+                "url" : "https://business.verizonwireless.com/b2b/jsp/popups/optin.jsp?sourceSite=Care%26amp;lid=//global//support//sign+up+for+email+updates",
+                "label" : "Sign Up for Email Updates"
+            },
+            {
+                "url" : "http://www.verizonwireless.com/b2c/vzwfly?go=/ContactUsControllerServlet?lid=//global//support//contact+us",
+                "label" : "Contact Us"
+            }],
+            "label" : "Support"
+        },
+        {
+            "url" : "http://www.verizonwireless.com/b2c/index.html",
+            "menuitem" : [{
+                "url" : "/vzw/accountholder/overview/Overview.action",
+                "label" : "Overview"
+            },
+            {
+                "url" : "/vzw/accountholder/mybill/BillingSummary.action",
+                "menuitem" : [{
+                    "body" : "",
+                    "label" : "My Bill"
+                },
+                {
+                    "url" : "/vzw/accountholder/mybill/BillingSummary.action",
+                    "label" : " Account Summary"
+                },
+                {
+                    "url" : "/vzw/accountholder/payment/displayPaymentPage.action",
+                    "label" : " Manage Payments"
+                }],
+                "label" : "My Bill"
+            },
+            {
+                "url" : "/vzw/accountholder/services/servicesoverview.action",
+                "menuitem" : [{
+                    "body" : "",
+                    "label" : "My Services"
+                },
+                {
+                    "url" : "/vzw/accountholder/services/myphone.action",
+                    "label" : " My Phone"
+                },
+                {
+                    "url" : "/vzw/accountholder/services/myplan.action",
+                    "label" : " My Plan"
+                },
+                {
+                    "url" : "/vzw/accountholder/services/myusage.action",
+                    "label" : " My Usage"
+                },
+                {
+                    "url" : "#",
+                    "label" : " My Contacts"
+                },
+                {
+                    "url" : "/vzw/secure/digitalocker/PurchaseHistory.action",
+                    "label" : " My Media"
+                },
+                {
+                    "url" : "/vzw/accountholder/uc/UCHome.action",
+                    "label" : " Verizon Safeguards"
+                }],
+                "label" : "My Services"
+            },
+            {
+                "url" : "/vzw/accountholder/profile/profile.action",
+                "menuitem" : [{
+                    "body" : "",
+                    "label" : "My Profile"
+                },
+                {
+                    "url" : "/vzw/accountholder/payment/autoPay-maint-view.action",
+                    "label" : " Auto Pay"
+                },
+                {
+                    "url" : "/vzw/accountholder/profile/Paperbill.action",
+                    "label" : " Paperless Billing"
+                },
+                {
+                    "url" : "/vzw/accountholder/payment/managePaymentAcctsOverview.action",
+                    "label" : " Payment Accounts"
+                },
+                {
+                    "url" : "/vzw/accountholder/profile/CellPhoneUsageAction.action",
+                    "label" : " Cell Phone Usage Addresses"
+                }],
+                "label" : "My Profile"
+            },
+            {
+                "url" : "/vzw/accountholder/customerservice/customerservice.action",
+                "label" : "Customer Service"
+            }],
+            "label" : "My Verizon"
+        }],
+        "meta" : [{
+            "id" : "id"
+        },
+        {
+            "label" : "label"
+        },
+        {
+            "url" : "url"
+        },
+        {
+            "type" : "type"
+        },
+        {
+            "data" : "data"
+        },
+        {
+            "body" : "body"
+        },
+        {
+            "target" : "target"
+        },
+        {
+            "hOrientation" : "-2"
+        },
+        {
+            "vOrientation" : "top"
+        }],
+        "metafield" : "meta",
+        "datafield" : "menuitem"
+    }
+}

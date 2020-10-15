@@ -1,0 +1,380 @@
+2009-08-17 18:22:35,743 INFO Start the vyperlogix.django.cherryPy.djangocerise server on 127.0.0.1:8888 logging to Z:\python projects\_django-projects\@projects\amfsample\django\djangocerise_1_2\logs\webserver_2009-08-17_182234_127_0_0_1_8888.log
+2009-08-17 18:22:44,605 DEBUG AMFMiddleware was initialized.
+2009-08-17 18:22:44,660 DEBUG AMF Type='10'
+2009-08-17 18:22:44,674 DEBUG read_data()
+2009-08-17 18:22:44,674 DEBUG AMF3 Type='10'
+2009-08-17 18:22:44,674 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,676 DEBUG amf3.read_integer() -- result='147'
+2009-08-17 18:22:44,676 DEBUG amf3.read_string()
+2009-08-17 18:22:44,677 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,677 DEBUG amf3.read_integer() -- result='77'
+2009-08-17 18:22:44,677 DEBUG add_string_reference('flex.messaging.messages.CommandMessage') -- index='0'
+2009-08-17 18:22:44,677 DEBUG amf3.read_string() -- result='flex.messaging.messages.CommandMessage'
+2009-08-17 18:22:44,678 DEBUG amf3.read_string()
+2009-08-17 18:22:44,680 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,680 DEBUG amf3.read_integer() -- result='19'
+2009-08-17 18:22:44,680 DEBUG add_string_reference('operation') -- index='1'
+2009-08-17 18:22:44,680 DEBUG amf3.read_string() -- result='operation'
+2009-08-17 18:22:44,681 DEBUG amf3.read_string()
+2009-08-17 18:22:44,681 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,683 DEBUG amf3.read_integer() -- result='27'
+2009-08-17 18:22:44,683 DEBUG add_string_reference('correlationId') -- index='2'
+2009-08-17 18:22:44,684 DEBUG amf3.read_string() -- result='correlationId'
+2009-08-17 18:22:44,684 DEBUG amf3.read_string()
+2009-08-17 18:22:44,684 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,684 DEBUG amf3.read_integer() -- result='19'
+2009-08-17 18:22:44,686 DEBUG add_string_reference('messageId') -- index='3'
+2009-08-17 18:22:44,686 DEBUG amf3.read_string() -- result='messageId'
+2009-08-17 18:22:44,687 DEBUG amf3.read_string()
+2009-08-17 18:22:44,687 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,687 DEBUG amf3.read_integer() -- result='9'
+2009-08-17 18:22:44,687 DEBUG add_string_reference('body') -- index='4'
+2009-08-17 18:22:44,688 DEBUG amf3.read_string() -- result='body'
+2009-08-17 18:22:44,688 DEBUG amf3.read_string()
+2009-08-17 18:22:44,690 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,690 DEBUG amf3.read_integer() -- result='15'
+2009-08-17 18:22:44,690 DEBUG add_string_reference('headers') -- index='5'
+2009-08-17 18:22:44,690 DEBUG amf3.read_string() -- result='headers'
+2009-08-17 18:22:44,691 DEBUG amf3.read_string()
+2009-08-17 18:22:44,691 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,693 DEBUG amf3.read_integer() -- result='17'
+2009-08-17 18:22:44,694 DEBUG add_string_reference('clientId') -- index='6'
+2009-08-17 18:22:44,694 DEBUG amf3.read_string() -- result='clientId'
+2009-08-17 18:22:44,694 DEBUG amf3.read_string()
+2009-08-17 18:22:44,694 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,696 DEBUG amf3.read_integer() -- result='21'
+2009-08-17 18:22:44,696 DEBUG add_string_reference('timeToLive') -- index='7'
+2009-08-17 18:22:44,697 DEBUG amf3.read_string() -- result='timeToLive'
+2009-08-17 18:22:44,697 DEBUG amf3.read_string()
+2009-08-17 18:22:44,697 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,697 DEBUG amf3.read_integer() -- result='19'
+2009-08-17 18:22:44,698 DEBUG add_string_reference('timestamp') -- index='8'
+2009-08-17 18:22:44,698 DEBUG amf3.read_string() -- result='timestamp'
+2009-08-17 18:22:44,700 DEBUG amf3.read_string()
+2009-08-17 18:22:44,700 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,700 DEBUG amf3.read_integer() -- result='23'
+2009-08-17 18:22:44,700 DEBUG add_string_reference('destination') -- index='9'
+2009-08-17 18:22:44,701 DEBUG amf3.read_string() -- result='destination'
+2009-08-17 18:22:44,703 DEBUG Class Definition={'dynamic': False, 'member_names': ['operation', 'correlationId', 'messageId', 'body', 'headers', 'clientId', 'timeToLive', 'timestamp', 'destination'], 'type': 'flex.messaging.messages.CommandMessage', 'num_of_members': 9, 'externalizable': False}
+2009-08-17 18:22:44,703 DEBUG add_class_def_reference({'dynamic': False, 'member_names': ['operation', 'correlationId', 'messageId', 'body', 'headers', 'clientId', 'timeToLive', 'timestamp', 'destination'], 'type': 'flex.messaging.messages.CommandMessage', 'num_of_members': 9, 'externalizable': False}) -- index='0'
+2009-08-17 18:22:44,704 DEBUG add_object_reference({}) -- index='0'
+2009-08-17 18:22:44,704 DEBUG read_data()
+2009-08-17 18:22:44,706 DEBUG AMF3 Type='4'
+2009-08-17 18:22:44,707 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,707 DEBUG amf3.read_integer() -- result='5'
+2009-08-17 18:22:44,707 DEBUG read_data()
+2009-08-17 18:22:44,707 DEBUG AMF3 Type='6'
+2009-08-17 18:22:44,709 DEBUG amf3.read_string()
+2009-08-17 18:22:44,709 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,710 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,710 DEBUG read_data()
+2009-08-17 18:22:44,710 DEBUG AMF3 Type='6'
+2009-08-17 18:22:44,711 DEBUG amf3.read_string()
+2009-08-17 18:22:44,711 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,713 DEBUG amf3.read_integer() -- result='73'
+2009-08-17 18:22:44,714 DEBUG add_string_reference('2E7BDD23-D0A2-E008-8839-2B1950867892') -- index='10'
+2009-08-17 18:22:44,714 DEBUG amf3.read_string() -- result='2E7BDD23-D0A2-E008-8839-2B1950867892'
+2009-08-17 18:22:44,716 DEBUG read_data()
+2009-08-17 18:22:44,716 DEBUG AMF3 Type='10'
+2009-08-17 18:22:44,717 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,717 DEBUG amf3.read_integer() -- result='11'
+2009-08-17 18:22:44,717 DEBUG amf3.read_string()
+2009-08-17 18:22:44,717 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,719 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,720 DEBUG Class Definition={'dynamic': True, 'member_names': [], 'type': '', 'num_of_members': 0, 'externalizable': False}
+2009-08-17 18:22:44,720 DEBUG add_class_def_reference({'dynamic': True, 'member_names': [], 'type': '', 'num_of_members': 0, 'externalizable': False}) -- index='1'
+2009-08-17 18:22:44,720 DEBUG add_object_reference({}) -- index='1'
+2009-08-17 18:22:44,720 DEBUG amf3.read_string()
+2009-08-17 18:22:44,721 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,721 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,723 DEBUG classcast(, {'_explicitType': ''})
+2009-08-17 18:22:44,723 DEBUG get_class() -- module='', class=''
+2009-08-17 18:22:44,723 DEBUG read_data()
+2009-08-17 18:22:44,723 DEBUG AMF3 Type='10'
+2009-08-17 18:22:44,724 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,724 DEBUG amf3.read_integer() -- result='5'
+2009-08-17 18:22:44,726 DEBUG get_class_def_reference(1) -- {'dynamic': True, 'member_names': [], 'type': '', 'num_of_members': 0, 'externalizable': False}
+2009-08-17 18:22:44,726 DEBUG add_object_reference({}) -- index='2'
+2009-08-17 18:22:44,726 DEBUG amf3.read_string()
+2009-08-17 18:22:44,726 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,727 DEBUG amf3.read_integer() -- result='37'
+2009-08-17 18:22:44,729 DEBUG add_string_reference('DSMessagingVersion') -- index='11'
+2009-08-17 18:22:44,729 DEBUG amf3.read_string() -- result='DSMessagingVersion'
+2009-08-17 18:22:44,730 DEBUG read_data()
+2009-08-17 18:22:44,730 DEBUG AMF3 Type='4'
+2009-08-17 18:22:44,730 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,730 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,732 DEBUG amf3.read_string()
+2009-08-17 18:22:44,732 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,733 DEBUG amf3.read_integer() -- result='9'
+2009-08-17 18:22:44,733 DEBUG add_string_reference('DSId') -- index='12'
+2009-08-17 18:22:44,733 DEBUG amf3.read_string() -- result='DSId'
+2009-08-17 18:22:44,733 DEBUG read_data()
+2009-08-17 18:22:44,734 DEBUG AMF3 Type='6'
+2009-08-17 18:22:44,734 DEBUG amf3.read_string()
+2009-08-17 18:22:44,736 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,736 DEBUG amf3.read_integer() -- result='7'
+2009-08-17 18:22:44,736 DEBUG add_string_reference('nil') -- index='13'
+2009-08-17 18:22:44,736 DEBUG amf3.read_string() -- result='nil'
+2009-08-17 18:22:44,737 DEBUG amf3.read_string()
+2009-08-17 18:22:44,739 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,739 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,740 DEBUG classcast(, {'DSMessagingVersion': 1, 'DSId': 'nil', '_explicitType': ''})
+2009-08-17 18:22:44,740 DEBUG get_class() -- module='', class=''
+2009-08-17 18:22:44,740 DEBUG read_data()
+2009-08-17 18:22:44,742 DEBUG AMF3 Type='1'
+2009-08-17 18:22:44,742 DEBUG read_data()
+2009-08-17 18:22:44,743 DEBUG AMF3 Type='4'
+2009-08-17 18:22:44,743 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,743 DEBUG amf3.read_integer() -- result='0'
+2009-08-17 18:22:44,743 DEBUG read_data()
+2009-08-17 18:22:44,744 DEBUG AMF3 Type='4'
+2009-08-17 18:22:44,744 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,746 DEBUG amf3.read_integer() -- result='0'
+2009-08-17 18:22:44,746 DEBUG read_data()
+2009-08-17 18:22:44,746 DEBUG AMF3 Type='6'
+2009-08-17 18:22:44,746 DEBUG amf3.read_string()
+2009-08-17 18:22:44,747 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,747 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,749 DEBUG classcast(flex.messaging.messages.CommandMessage, {'body': {'_explicitType': ''}, 'timestamp': 0, 'destination': '', 'clientId': None, 'headers': {'DSMessagingVersion': 1, 'DSId': 'nil', '_explicitType': ''}, 'timeToLive': 0, '_explicitType': 'flex.messaging.messages.CommandMessage', 'messageId': '2E7BDD23-D0A2-E008-8839-2B1950867892', 'operation': 5, 'correlationId': ''})
+2009-08-17 18:22:44,750 DEBUG get_class(amf.messaging.CommandMessage) -- module='amf.messaging', class='CommandMessage'
+2009-08-17 18:22:44,750 DEBUG amf0.write_int(3)
+2009-08-17 18:22:44,752 DEBUG amf0.write_int(0)
+2009-08-17 18:22:44,752 DEBUG amf0.write_int(1)
+2009-08-17 18:22:44,753 DEBUG amf0.write_utf('/1/onResult')
+2009-08-17 18:22:44,753 DEBUG amf0.write_int(11)
+2009-08-17 18:22:44,753 DEBUG amf0.write_utf('null')
+2009-08-17 18:22:44,753 DEBUG amf0.write_int(4)
+2009-08-17 18:22:44,755 DEBUG amf0.write_byte(17)
+2009-08-17 18:22:44,755 DEBUG amf3._write_data(<amf.messaging.AcknowledgeMessage object at 0x0317A1B0>)
+2009-08-17 18:22:44,756 DEBUG amf3.write_object(<amf.messaging.AcknowledgeMessage object at 0x0317A1B0>)
+2009-08-17 18:22:44,756 DEBUG amf0.write_byte(10)
+2009-08-17 18:22:44,756 DEBUG add_object_reference(<amf.messaging.AcknowledgeMessage object at 0x0317A1B0>) -- index='0'
+2009-08-17 18:22:44,757 DEBUG add_class_def_reference({'dynamic': False, 'member_names': ['body', 'timestamp', 'destination', 'clientId', 'headers', 'timeToLive', 'messageId', 'correlationId'], 'type': 'flex.messaging.messages.AcknowledgeMessage', 'num_of_members': 8, 'externalizable': False}) -- index='0'
+2009-08-17 18:22:44,759 DEBUG amf3._write_integer(131)
+2009-08-17 18:22:44,759 DEBUG amf0.write_byte(129)
+2009-08-17 18:22:44,759 DEBUG amf0.write_byte(3)
+2009-08-17 18:22:44,760 DEBUG amf3._write_string('flex.messaging.messages.AcknowledgeMessage')
+2009-08-17 18:22:44,760 DEBUG amf3._write_integer(85)
+2009-08-17 18:22:44,762 DEBUG amf0.write_byte(85)
+2009-08-17 18:22:44,762 DEBUG add_string_reference('flex.messaging.messages.AcknowledgeMessage') -- index='0'
+2009-08-17 18:22:44,763 DEBUG amf3._write_string('body')
+2009-08-17 18:22:44,763 DEBUG amf3._write_integer(9)
+2009-08-17 18:22:44,763 DEBUG amf0.write_byte(9)
+2009-08-17 18:22:44,763 DEBUG add_string_reference('body') -- index='1'
+2009-08-17 18:22:44,765 DEBUG amf3._write_string('timestamp')
+2009-08-17 18:22:44,765 DEBUG amf3._write_integer(19)
+2009-08-17 18:22:44,766 DEBUG amf0.write_byte(19)
+2009-08-17 18:22:44,766 DEBUG add_string_reference('timestamp') -- index='2'
+2009-08-17 18:22:44,766 DEBUG amf3._write_string('destination')
+2009-08-17 18:22:44,767 DEBUG amf3._write_integer(23)
+2009-08-17 18:22:44,767 DEBUG amf0.write_byte(23)
+2009-08-17 18:22:44,769 DEBUG add_string_reference('destination') -- index='3'
+2009-08-17 18:22:44,769 DEBUG amf3._write_string('clientId')
+2009-08-17 18:22:44,769 DEBUG amf3._write_integer(17)
+2009-08-17 18:22:44,769 DEBUG amf0.write_byte(17)
+2009-08-17 18:22:44,779 DEBUG add_string_reference('clientId') -- index='4'
+2009-08-17 18:22:44,779 DEBUG amf3._write_string('headers')
+2009-08-17 18:22:44,779 DEBUG amf3._write_integer(15)
+2009-08-17 18:22:44,780 DEBUG amf0.write_byte(15)
+2009-08-17 18:22:44,780 DEBUG add_string_reference('headers') -- index='5'
+2009-08-17 18:22:44,782 DEBUG amf3._write_string('timeToLive')
+2009-08-17 18:22:44,782 DEBUG amf3._write_integer(21)
+2009-08-17 18:22:44,782 DEBUG amf0.write_byte(21)
+2009-08-17 18:22:44,783 DEBUG add_string_reference('timeToLive') -- index='6'
+2009-08-17 18:22:44,783 DEBUG amf3._write_string('messageId')
+2009-08-17 18:22:44,785 DEBUG amf3._write_integer(19)
+2009-08-17 18:22:44,785 DEBUG amf0.write_byte(19)
+2009-08-17 18:22:44,786 DEBUG add_string_reference('messageId') -- index='7'
+2009-08-17 18:22:44,786 DEBUG amf3._write_string('correlationId')
+2009-08-17 18:22:44,786 DEBUG amf3._write_integer(27)
+2009-08-17 18:22:44,786 DEBUG amf0.write_byte(27)
+2009-08-17 18:22:44,788 DEBUG add_string_reference('correlationId') -- index='8'
+2009-08-17 18:22:44,788 DEBUG amf3._write_data({})
+2009-08-17 18:22:44,789 DEBUG amf3.write_dynamice_object({})
+2009-08-17 18:22:44,789 DEBUG amf0.write_byte(10)
+2009-08-17 18:22:44,789 DEBUG add_object_reference({}) -- index='1'
+2009-08-17 18:22:44,789 DEBUG add_class_def_reference({'dynamic': True, 'member_names': [], 'type': '', 'num_of_members': 0, 'externalizable': False}) -- index='1'
+2009-08-17 18:22:44,790 DEBUG amf0.write_byte(11)
+2009-08-17 18:22:44,790 DEBUG amf3._write_string('')
+2009-08-17 18:22:44,792 DEBUG amf3.write_null()
+2009-08-17 18:22:44,792 DEBUG amf0.write_byte(1)
+2009-08-17 18:22:44,792 DEBUG amf3._write_string('')
+2009-08-17 18:22:44,792 DEBUG amf3.write_null()
+2009-08-17 18:22:44,793 DEBUG amf0.write_byte(1)
+2009-08-17 18:22:44,793 DEBUG amf3._write_data(1250558564000.0)
+2009-08-17 18:22:44,795 DEBUG amf0.write_byte(5)
+2009-08-17 18:22:44,795 DEBUG amf0.write_double(1250558564000.0)
+2009-08-17 18:22:44,796 DEBUG amf3._write_data('')
+2009-08-17 18:22:44,796 DEBUG amf0.write_byte(6)
+2009-08-17 18:22:44,796 DEBUG amf3._write_string('')
+2009-08-17 18:22:44,798 DEBUG amf3.write_null()
+2009-08-17 18:22:44,798 DEBUG amf0.write_byte(1)
+2009-08-17 18:22:44,799 DEBUG amf3._write_data(None)
+2009-08-17 18:22:44,799 DEBUG amf3.write_null()
+2009-08-17 18:22:44,799 DEBUG amf0.write_byte(1)
+2009-08-17 18:22:44,801 DEBUG amf3._write_data({})
+2009-08-17 18:22:44,801 DEBUG amf3.write_dynamice_object({})
+2009-08-17 18:22:44,802 DEBUG amf0.write_byte(10)
+2009-08-17 18:22:44,802 DEBUG amf3._write_integer(2)
+2009-08-17 18:22:44,802 DEBUG amf0.write_byte(2)
+2009-08-17 18:22:44,802 DEBUG amf3._write_data(0)
+2009-08-17 18:22:44,803 DEBUG amf0.write_byte(4)
+2009-08-17 18:22:44,803 DEBUG amf3._write_integer(0)
+2009-08-17 18:22:44,805 DEBUG amf0.write_byte(0)
+2009-08-17 18:22:44,805 DEBUG amf3._write_data(None)
+2009-08-17 18:22:44,805 DEBUG amf3.write_null()
+2009-08-17 18:22:44,805 DEBUG amf0.write_byte(1)
+2009-08-17 18:22:44,806 DEBUG amf3._write_data('2E7BDD23-D0A2-E008-8839-2B1950867892')
+2009-08-17 18:22:44,806 DEBUG amf0.write_byte(6)
+2009-08-17 18:22:44,808 DEBUG amf3._write_string('2E7BDD23-D0A2-E008-8839-2B1950867892')
+2009-08-17 18:22:44,809 DEBUG amf3._write_integer(73)
+2009-08-17 18:22:44,809 DEBUG amf0.write_byte(73)
+2009-08-17 18:22:44,809 DEBUG add_string_reference('2E7BDD23-D0A2-E008-8839-2B1950867892') -- index='9'
+2009-08-17 18:22:44,812 DEBUG amf0.write_long(185)
+2009-08-17 18:22:44,913 DEBUG AMF Type='10'
+2009-08-17 18:22:44,913 DEBUG read_data()
+2009-08-17 18:22:44,914 DEBUG AMF3 Type='10'
+2009-08-17 18:22:44,914 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,914 DEBUG amf3.read_integer() -- result='147'
+2009-08-17 18:22:44,915 DEBUG amf3.read_string()
+2009-08-17 18:22:44,915 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,915 DEBUG amf3.read_integer() -- result='79'
+2009-08-17 18:22:44,917 DEBUG add_string_reference('flex.messaging.messages.RemotingMessage') -- index='0'
+2009-08-17 18:22:44,917 DEBUG amf3.read_string() -- result='flex.messaging.messages.RemotingMessage'
+2009-08-17 18:22:44,917 DEBUG amf3.read_string()
+2009-08-17 18:22:44,918 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,918 DEBUG amf3.read_integer() -- result='19'
+2009-08-17 18:22:44,920 DEBUG add_string_reference('operation') -- index='1'
+2009-08-17 18:22:44,920 DEBUG amf3.read_string() -- result='operation'
+2009-08-17 18:22:44,920 DEBUG amf3.read_string()
+2009-08-17 18:22:44,921 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,921 DEBUG amf3.read_integer() -- result='13'
+2009-08-17 18:22:44,921 DEBUG add_string_reference('source') -- index='2'
+2009-08-17 18:22:44,921 DEBUG amf3.read_string() -- result='source'
+2009-08-17 18:22:44,923 DEBUG amf3.read_string()
+2009-08-17 18:22:44,923 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,924 DEBUG amf3.read_integer() -- result='19'
+2009-08-17 18:22:44,924 DEBUG add_string_reference('messageId') -- index='3'
+2009-08-17 18:22:44,924 DEBUG amf3.read_string() -- result='messageId'
+2009-08-17 18:22:44,924 DEBUG amf3.read_string()
+2009-08-17 18:22:44,926 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,926 DEBUG amf3.read_integer() -- result='9'
+2009-08-17 18:22:44,927 DEBUG add_string_reference('body') -- index='4'
+2009-08-17 18:22:44,927 DEBUG amf3.read_string() -- result='body'
+2009-08-17 18:22:44,927 DEBUG amf3.read_string()
+2009-08-17 18:22:44,927 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,928 DEBUG amf3.read_integer() -- result='15'
+2009-08-17 18:22:44,928 DEBUG add_string_reference('headers') -- index='5'
+2009-08-17 18:22:44,930 DEBUG amf3.read_string() -- result='headers'
+2009-08-17 18:22:44,930 DEBUG amf3.read_string()
+2009-08-17 18:22:44,930 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,931 DEBUG amf3.read_integer() -- result='17'
+2009-08-17 18:22:44,931 DEBUG add_string_reference('clientId') -- index='6'
+2009-08-17 18:22:44,933 DEBUG amf3.read_string() -- result='clientId'
+2009-08-17 18:22:44,933 DEBUG amf3.read_string()
+2009-08-17 18:22:44,934 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,934 DEBUG amf3.read_integer() -- result='21'
+2009-08-17 18:22:44,934 DEBUG add_string_reference('timeToLive') -- index='7'
+2009-08-17 18:22:44,934 DEBUG amf3.read_string() -- result='timeToLive'
+2009-08-17 18:22:44,936 DEBUG amf3.read_string()
+2009-08-17 18:22:44,936 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,937 DEBUG amf3.read_integer() -- result='19'
+2009-08-17 18:22:44,937 DEBUG add_string_reference('timestamp') -- index='8'
+2009-08-17 18:22:44,937 DEBUG amf3.read_string() -- result='timestamp'
+2009-08-17 18:22:44,937 DEBUG amf3.read_string()
+2009-08-17 18:22:44,938 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,938 DEBUG amf3.read_integer() -- result='23'
+2009-08-17 18:22:44,940 DEBUG add_string_reference('destination') -- index='9'
+2009-08-17 18:22:44,940 DEBUG amf3.read_string() -- result='destination'
+2009-08-17 18:22:44,940 DEBUG Class Definition={'dynamic': False, 'member_names': ['operation', 'source', 'messageId', 'body', 'headers', 'clientId', 'timeToLive', 'timestamp', 'destination'], 'type': 'flex.messaging.messages.RemotingMessage', 'num_of_members': 9, 'externalizable': False}
+2009-08-17 18:22:44,940 DEBUG add_class_def_reference({'dynamic': False, 'member_names': ['operation', 'source', 'messageId', 'body', 'headers', 'clientId', 'timeToLive', 'timestamp', 'destination'], 'type': 'flex.messaging.messages.RemotingMessage', 'num_of_members': 9, 'externalizable': False}) -- index='0'
+2009-08-17 18:22:44,941 DEBUG add_object_reference({}) -- index='0'
+2009-08-17 18:22:44,941 DEBUG read_data()
+2009-08-17 18:22:44,943 DEBUG AMF3 Type='6'
+2009-08-17 18:22:44,943 DEBUG amf3.read_string()
+2009-08-17 18:22:44,944 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,944 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,944 DEBUG read_data()
+2009-08-17 18:22:44,944 DEBUG AMF3 Type='1'
+2009-08-17 18:22:44,946 DEBUG read_data()
+2009-08-17 18:22:44,946 DEBUG AMF3 Type='6'
+2009-08-17 18:22:44,947 DEBUG amf3.read_string()
+2009-08-17 18:22:44,947 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,947 DEBUG amf3.read_integer() -- result='73'
+2009-08-17 18:22:44,947 DEBUG add_string_reference('DACC2DC2-7AFF-2D47-E190-2B19507C6A4B') -- index='10'
+2009-08-17 18:22:44,948 DEBUG amf3.read_string() -- result='DACC2DC2-7AFF-2D47-E190-2B19507C6A4B'
+2009-08-17 18:22:44,948 DEBUG read_data()
+2009-08-17 18:22:44,950 DEBUG AMF3 Type='9'
+2009-08-17 18:22:44,950 DEBUG amf3.read_array()
+2009-08-17 18:22:44,950 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,951 DEBUG amf3.read_integer() -- result='3'
+2009-08-17 18:22:44,951 DEBUG amf3.read_array() -- count='1'
+2009-08-17 18:22:44,953 DEBUG add_object_reference(None) -- index='1'
+2009-08-17 18:22:44,953 DEBUG read_data()
+2009-08-17 18:22:44,953 DEBUG AMF3 Type='1'
+2009-08-17 18:22:44,953 DEBUG amf3.read_array() -- key=None
+2009-08-17 18:22:44,954 DEBUG read_data()
+2009-08-17 18:22:44,954 DEBUG AMF3 Type='9'
+2009-08-17 18:22:44,956 DEBUG amf3.read_array()
+2009-08-17 18:22:44,956 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,957 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,957 DEBUG amf3.read_array() -- count='0'
+2009-08-17 18:22:44,957 DEBUG add_object_reference(None) -- index='2'
+2009-08-17 18:22:44,957 DEBUG read_data()
+2009-08-17 18:22:44,959 DEBUG AMF3 Type='1'
+2009-08-17 18:22:44,959 DEBUG amf3.read_array() -- key=None
+2009-08-17 18:22:44,960 DEBUG amf3.read_array() -- [0]=[]
+2009-08-17 18:22:44,960 DEBUG read_data()
+2009-08-17 18:22:44,960 DEBUG AMF3 Type='10'
+2009-08-17 18:22:44,960 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,961 DEBUG amf3.read_integer() -- result='11'
+2009-08-17 18:22:44,961 DEBUG amf3.read_string()
+2009-08-17 18:22:44,963 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,963 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,963 DEBUG Class Definition={'dynamic': True, 'member_names': [], 'type': '', 'num_of_members': 0, 'externalizable': False}
+2009-08-17 18:22:44,963 DEBUG add_class_def_reference({'dynamic': True, 'member_names': [], 'type': '', 'num_of_members': 0, 'externalizable': False}) -- index='1'
+2009-08-17 18:22:44,964 DEBUG add_object_reference({}) -- index='3'
+2009-08-17 18:22:44,964 DEBUG amf3.read_string()
+2009-08-17 18:22:44,966 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,966 DEBUG amf3.read_integer() -- result='21'
+2009-08-17 18:22:44,967 DEBUG add_string_reference('DSEndpoint') -- index='11'
+2009-08-17 18:22:44,967 DEBUG amf3.read_string() -- result='DSEndpoint'
+2009-08-17 18:22:44,967 DEBUG read_data()
+2009-08-17 18:22:44,967 DEBUG AMF3 Type='1'
+2009-08-17 18:22:44,969 DEBUG amf3.read_string()
+2009-08-17 18:22:44,969 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,969 DEBUG amf3.read_integer() -- result='9'
+2009-08-17 18:22:44,970 DEBUG add_string_reference('DSId') -- index='12'
+2009-08-17 18:22:44,970 DEBUG amf3.read_string() -- result='DSId'
+2009-08-17 18:22:44,970 DEBUG read_data()
+2009-08-17 18:22:44,971 DEBUG AMF3 Type='6'
+2009-08-17 18:22:44,971 DEBUG amf3.read_string()
+2009-08-17 18:22:44,973 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,973 DEBUG amf3.read_integer() -- result='7'
+2009-08-17 18:22:44,973 DEBUG add_string_reference('nil') -- index='13'
+2009-08-17 18:22:44,973 DEBUG amf3.read_string() -- result='nil'
+2009-08-17 18:22:44,973 DEBUG amf3.read_string()
+2009-08-17 18:22:44,974 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,974 DEBUG amf3.read_integer() -- result='1'
+2009-08-17 18:22:44,976 DEBUG classcast(, {'DSId': 'nil', '_explicitType': '', 'DSEndpoint': None})
+2009-08-17 18:22:44,976 DEBUG get_class() -- module='', class=''
+2009-08-17 18:22:44,976 DEBUG read_data()
+2009-08-17 18:22:44,976 DEBUG AMF3 Type='1'
+2009-08-17 18:22:44,977 DEBUG read_data()
+2009-08-17 18:22:44,977 DEBUG AMF3 Type='4'
+2009-08-17 18:22:44,979 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,979 DEBUG amf3.read_integer() -- result='0'
+2009-08-17 18:22:44,980 DEBUG read_data()
+2009-08-17 18:22:44,980 DEBUG AMF3 Type='4'
+2009-08-17 18:22:44,980 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,980 DEBUG amf3.read_integer() -- result='0'
+2009-08-17 18:22:44,982 DEBUG read_data()
+2009-08-17 18:22:44,982 DEBUG AMF3 Type='6'
+2009-08-17 18:22:44,983 DEBUG amf3.read_string()
+2009-08-17 18:22:44,983 DEBUG amf3.read_integer()
+2009-08-17 18:22:44,983 DEBUG amf3.read_integer() -- result='37'
+2009-08-17 18:22:44,983 DEBUG add_string_reference('getCurrentDatetime') -- index='14'
+2009-08-17 18:22:44,984 DEBUG amf3.read_string() -- result='getCurrentDatetime'
+2009-08-17 18:22:44,984 DEBUG classcast(flex.messaging.messages.RemotingMessage, {'body': [[]], 'headers': {'DSId': 'nil', '_explicitType': '', 'DSEndpoint': None}, 'timestamp': 0, 'destination': 'getCurrentDatetime', 'clientId': None, 'source': None, 'timeToLive': 0, 'messageId': 'DACC2DC2-7AFF-2D47-E190-2B19507C6A4B', 'operation': '', '_explicitType': 'flex.messaging.messages.RemotingMessage'})
+2009-08-17 18:22:44,986 DEBUG get_class(amf.messaging.RemotingMessage) -- module='amf.messaging', class='RemotingMessage'

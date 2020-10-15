@@ -1,0 +1,1 @@
+python stop.pyc --kill=127.0.0.1:9000-9002

@@ -1,0 +1,13 @@
+Daemons:
+
+runs on computer by name = ['UNDEFINED3','MISHA-LAP','ubuntu']
+daemon name = 'www_monitor'
+run frequency in seconds = 30
+verbose logging = False
+
+Daemon Reporting:
+
+id = record id
+timestamp
+results = long text field
+

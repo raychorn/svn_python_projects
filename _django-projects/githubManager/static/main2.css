@@ -1,0 +1,16 @@
+@import url("main.css");
+
+.anchor_for_radio_button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+.anchor_for_input_field {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight:bold;
+	text-decoration:none;
+}
+

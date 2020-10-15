@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block html-header %}
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
+    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
+    lang="{% firstof LANGUAGE_CODE 'en' %}">
+{% endblock %}
+
+{% block title %}(VyperBlog&trade; v0.30){% endblock %}
+
+{% block extra-head %}
+{% if isJavaScriptOptimized %}
+    <script language="JavaScript1.2" type="text/javascript">
+    $js('/js/js/blog.min.js',function(){});
+    </script>
+{% else %}
+    <script src="/js/js/blog.min.js" type="text/javascript" language="JavaScript"></script>
+{% endif %}
+{% endblock %}
+
+{% block include-css %}{% endblock %}
+
+{% block navigation %}{% endblock %}
+
+{% block masthead %}
+<h1><NOBR><a href="/" target="_top">The Agile Developer's Blog</a></NOBR></h1>
+<h3>Agile Development with FaceBook, Twitter, AS3, Flash, Flex, JavaScript, jQuery, Python, Ruby, Lua and more...</h3>
+{% endblock %}
+
+{% block extra-top-left %}
+{% endblock %}
+
+{% block main-menu %}
+<ul class="menu">
+    <li><a href="#" class="parent"><span>Home</span></a></li>
+    <li><a href="#"><span>Categories</span></a></li>
+    <li><a href="#"><span>Tags</span></a></li>
+    <li class="last"><a href="#"><span>Languages</span></a></li>
+</ul>
+{% endblock %}
+
+{% block left_content %}
+{{ content }}
+{% endblock %}
+
+{% block right_content %}
+{% endblock %}
+
+{% block admin_content %}
+<div id="dialog" title="Admin Control Panel">
+    <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+{% endblock %}
