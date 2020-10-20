@@ -19,7 +19,7 @@ def AboutBoxFunc( parent, call_fit = True, set_sizer = True ):
     parent._sizer = item0
     
     item1 = wx.StaticText( parent, ID_TEXT, 
-        "(c). Copyright 1990-2008, Vyper Logix Corp., \n"
+        "(c). Copyright 1990-2020, Vyper Logix Corp., \n"
         "\n"
         "                   All Rights Reserved.\n"
         "\n"

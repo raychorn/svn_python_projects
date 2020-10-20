@@ -12,7 +12,7 @@ import wx
 from PDFexporter_wdr import *
 
 __copyright__ = """\
-(c). Copyright 1990-2008, Vyper Logix Corp., 
+(c). Copyright 1990-2020, Vyper Logix Corp., 
 
                    All Rights Reserved.
 

@@ -245,4 +245,4 @@ class XMLProcessor:
     persistDbName = property(get_persistDbName, set_persistDbName)
     connHandle = property(get_connHandle, set_connHandle)
 
-print '(c). Copyright 1990-2008, Hierarchical Applications Limited, Inc., All Rights Reserved.'
+print '(c). Copyright 1990-2020, Hierarchical Applications Limited, Inc., All Rights Reserved.'

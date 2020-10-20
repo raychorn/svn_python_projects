@@ -28,7 +28,7 @@ _data_path_prefix = products_data._data_path_prefix
 dbx_name = lambda name:oodb.dbx_name(name,_data_path)
 
 __copyright__ = """\
-(c). Copyright 1990-2008, Vyper Logix Corp., 
+(c). Copyright 1990-2020, Vyper Logix Corp., 
 
               All Rights Reserved.
 

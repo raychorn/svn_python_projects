@@ -1,6 +1,6 @@
 
 Z:\python projects\Vyper-Proxy>"Z:\python projects\Vyper-Proxy\dist\VyperProxy.exe" --stop 
-(c). Copyright 1990-2008, Vyper Logix Corp., 
+(c). Copyright 1990-2020, Vyper Logix Corp., 
 
                    All Rights Reserved.
 
